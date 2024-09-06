@@ -4,7 +4,8 @@
   "scripts": {
     "start": "concurrently \"npm run start:frontend\" \"npm run start:backend\"",
     "start:frontend": "npm --prefix ./landing-page-mobileFirst run dev",
-    "start:backend": "nodemon ./server/src/server.js"
+    "start:backend": "nodemon ./server/src/server.js",
+    "build": "vite build"
   },
   "devDependencies": {
     "concurrently": "^8.2.2",
