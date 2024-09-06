@@ -5,7 +5,7 @@
     "start": "concurrently \"npm run start:frontend\" \"npm run start:backend\"",
     "start:frontend": "npm --prefix ./landing-page-mobileFirst run dev",
     "start:backend": "nodemon ./server/src/server.js",
-    "build": "npm --prefix ./landing-page-mobileFirst run build"
+    "build": "npm --prefix ./Landing-page-mobileFirst run build"
   },
   "devDependencies": {
     "concurrently": "^8.2.2",

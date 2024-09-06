@@ -5,9 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm --prefix ./landing-page-mobileFirst run build",
-    "start:frontend": "npm --prefix ./landing-page-mobileFirst run dev",
-    "start": "concurrently \"npm run start:frontend\" \"npm run start:backend\"",
+    "build": "npm run build",
+    "start": "npm run dev",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
