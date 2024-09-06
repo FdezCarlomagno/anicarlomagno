@@ -2,7 +2,7 @@
     "version": 2,
     "builds": [
       {
-        "src": "landing-page-mobilefirst/package.json",
+        "src": "Landing-page-mobileFirst/package.json",
         "use": "@vercel/node"
       }
     ],
