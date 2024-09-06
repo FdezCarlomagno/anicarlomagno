@@ -1,0 +1,253 @@
+
+h1 {
+    text-align: center;
+}
+.myPaintingsTitle {
+    margin: 1rem;
+    font-size: 40px;
+}
+
+.cuadro {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    overflow: hidden;
+}
+
+.dot {
+    font-size: 40px;
+    transition: all 200ms ease-in-out;
+}
+.dot:hover {
+    color: rgb(174, 126, 219);
+}
+.dot:active {
+    color: blueviolet;
+}
+
+.paintingCard img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
+   
+}
+.paintingCard {
+    display: flex;
+    flex-direction: column;
+    margin: 10%;
+    margin-top: 3%;
+    margin-top: 3%;
+}
+
+.paintingContainer {
+    width: inherit;
+    background-color: aliceblue;
+    border-radius: 0 0 10px 10px;
+    padding-bottom: 20px;
+    overflow: auto;
+}
+.paintingContainer h1 {
+    font-size: 25px;
+    margin-top: 5px;
+    text-align: start;
+}
+.paintingContainer p {
+    width: 245px;
+    border-top: 2px solid blueviolet;
+    padding-top: 10px;
+    margin-top: 6px;
+    text-align: justify;
+}
+.paintingInfoContainer {
+    text-align: start;
+    margin-left: 10%;
+}
+.paintingInfoContainer p {
+    color: rgb(136, 136, 136);
+}
+.btnPriceContainer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.btnPriceContainer h3 {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.btnPriceContainer .addToCart {
+    background-color: blueviolet;
+    padding: 8px;
+    font-size: 15px;
+    border: none;
+    border-radius: 6px;
+}
+.hideInOffer {
+    display: none;
+}
+.showInOffer {
+    display: block;
+    position: absolute;
+    font-size: 20px;
+    color: yellow;
+    background-color: rgb(138, 0, 0);
+    border-radius: 5px;
+    padding: 3px;
+}
+.showInOffer p {
+    letter-spacing: 3px;
+    margin-left: 3px;
+    font-family: "Raleway", sans-serif;
+}
+.seeMoreBtn {
+    background-color: transparent;
+    font-size: 11px;
+    border: 2px solid black;
+    padding: 6px;
+    color: black;
+    border-radius: 5px;
+}
+
+.goBackButton {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    top: -5px;
+    background-color: transparent;
+    color: black;
+    border-radius: 50%;
+    padding: 20px;
+    width: 20px;
+    height: 20px;
+    font-size: 40px;
+}
+.sectionPaintingInfo {
+    margin-top: 32px;
+}   
+
+/*CHOOSE PAINTING STYLES*/
+
+.choosePainting {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 4%;
+}
+.choose-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: aliceblue;
+    padding: 2rem;
+    width: 250px;
+    border-radius: 6px;
+}
+.choosePainting-button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 5%;
+}
+.choosePainting-button-container button {
+    width: 200px; /* Ancho fijo */
+    padding: 10px 20px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: blueviolet;
+    transition: all 200ms ease-in-out;
+}
+.choosePainting-button-container button:hover {
+    transform: scale(1.03);
+    background-color: rgb(163, 74, 247);
+}
+#btnPainting {
+    margin-bottom: 2rem;
+    font-size: 24px;
+    transition: all 200ms ease-in-out;
+}
+#btnPainting:hover {
+    background-color: rgb(154, 77, 226);
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+/*DESKTOP STYLES*/
+
+@media(min-width: 768px){
+    #btnPainting { 
+        font-size: 3rem;
+    }
+    .cuadro {
+        display: flex;
+        align-items: flex-start;
+        height: fit-content;
+    }
+    .paintingsColumn {
+        width: 1250px;
+        margin: 20px auto;
+        columns: 3;
+        column-gap: 12px;
+    }
+    .sectionPaintingInfo {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .sectionPaintingInfo .paintingCard {
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+    }
+    .sectionPaintingInfo .paintingContainer {
+        display: flex;
+        flex-direction: column;
+    }
+    .paintingCard img {
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    .sectionPaintingInfo img {
+        height: 400px;
+        width: auto;
+    }
+    .showInOffer {
+        position: absolute;
+        left: 0;
+    }
+    .choosePainting {
+        margin: 4%;
+    }
+    .paintingContainer p {
+        width: 260px;
+    }
+    .choosePainting-button-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .choose-container {
+        width: 700px;
+    }
+    .choosePainting-button-container button {
+        width: 350px;
+        font-size: 24px;
+        font-weight: bold;
+    }
+}

@@ -1,0 +1,37 @@
+.chosen-lamina img {
+   width: 300px;
+   height: auto;
+   border-radius: 12px;
+}
+.laminas .dropDownAgendas {
+    background-color: aliceblue;    
+    padding: 8px;
+}
+.chosen-lamina {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.laminasContainer {
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem;
+}
+.laminasContainer button {
+    border: none;
+}
+.laminasContainer .chosen-lamina {
+    text-align: center;
+    padding: 30px;
+    background-color: aliceblue;
+    border-radius: 8px;
+}
+.lamina-price {
+    font-weight: bold;
+    border-radius: 6px;
+    background-color: aliceblue;
+    padding: 3px 24px 3px 24px;
+    border: 2px solid black;
+}

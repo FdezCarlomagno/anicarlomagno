@@ -1,0 +1,137 @@
+.custom-paintings {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.custom-painting-form-container h1 {
+    text-align: left;
+    font-size: 24px;
+}
+.custom-painting-form-container p {
+    color: gray;
+    margin-bottom: 2%;
+    font-size: 12px;
+}
+.custom-painting-form-container {
+    background-color: aliceblue;
+    width: 250px;
+    height: fit-content;
+    margin: 5%;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    padding-bottom: 6px;
+}
+.custom-painting-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-top: 1px solid rgba(128, 128, 128, 0.781);
+ 
+}
+.custom-painting-form label {
+    display: flex;
+    flex-direction: column;
+}
+.custom-painting-form  input {
+    background-color: transparent;
+    color: black;
+    border-radius: 6px;
+    padding: 6px;
+}
+.size-input-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.size-input-container input {
+    width: 90px;
+}
+.order-painting-btn {
+    width: 250px;
+}
+.customPhoto-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.footer-paintingText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin: 5%;
+    text-align: center;
+    line-height: 32px;
+    padding: 16px;
+    border-top: 2px solid blueviolet;
+    border-bottom: 2px solid blueviolet;
+}
+.footer-paintingText span {
+    color: blueviolet;
+    font-weight: bold;
+}
+.name-surname-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.size-description-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.custom-painting-btn,
+.my-paintings-choose-btn,
+.buy-book-btn,
+.btnAgenda,
+.addToCart {
+    color: aliceblue;
+}
+
+@media(min-width: 768px) {
+    .custom-painting-form-container {
+        width: 750px;
+    }
+    .name-surname-inputs {
+        width: 750px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .name-surname-inputs label {
+        width: 340px;
+    }
+    .size-input-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        gap: 10px;
+    }
+    .size-input-container input {
+        width: 150px;
+    }
+    .size-description-container {
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        justify-content: space-around;
+    }
+    .order-painting-btn {
+        width: 750px;
+        font-size: 24px;
+        transition: all 200ms ease-in-out;
+    }
+    .order-painting-btn:hover {
+        background-color: rgba(137, 43, 226, 0.795);
+        transform: scale(1.03);
+    }
+}
+

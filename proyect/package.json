@@ -1,0 +1,16 @@
+{
+  "name": "landing-page-mobile-first",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "concurrently \"npm run start:frontend\" \"npm run start:backend\"",
+    "start:frontend": "npm --prefix ./landing-page-mobileFirst run dev",
+    "start:backend": "nodemon ./server/src/server.js"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.0.1"
+  },
+  "dependencies": {
+    "react-spinners": "^0.14.1"
+  }
+}

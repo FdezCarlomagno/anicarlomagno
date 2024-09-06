@@ -1,0 +1,68 @@
+.personalBook {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5%;
+}
+.personalBook-container, .personalBook-img-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.personalBook-img-container {
+    position: relative;
+}
+.personalBook-container img {
+    width: 75%;
+    border-radius: 1rem;
+}
+.personalBook h3 {
+    font-family: "Dancing Script", cursive;
+    font-size: 32px;
+}
+.personalBook-price{
+    position: absolute;
+    top: 10px;
+    color: black;
+    font-size: 16px;
+    background-color: aliceblue;
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 12px;
+}
+
+@media(min-width: 768px){
+    .personalBook {
+        margin-left: 10%;
+        margin-right: 10%;
+        display: grid;
+        grid-template-areas: 
+        'c1 c3'
+        'c2 c2';
+        grid-row: 1fr 1fr;
+        grid-column: 1fr 1fr;
+        ;
+    }
+    .buy-book-btn {
+        transition: all 200ms ease-in-out;
+    }
+    .buy-book-btn:hover {
+        transform: scale(1.1);
+        background-color: rgba(137, 43, 226, 0.795);
+    }
+    .personalBook-img-container {
+        width: 400px;
+        height: auto;
+        grid-area: c1;
+    }
+    .personalBook-container h2 {
+        grid-area: c2;
+    }
+    .personalBook-container .section-agendaText-container {
+        grid-area: c3;
+    }
+
+
+}
