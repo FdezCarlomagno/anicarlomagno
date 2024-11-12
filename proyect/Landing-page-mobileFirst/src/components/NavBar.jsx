@@ -32,7 +32,7 @@ const NavBar = () => {
           <Link onClick={handleLink} to="/"><li><img className='svg' src={homeSvg} alt=""/>INICIO</li></Link>
           <Link onClick={handleLink} to="/elegir"><li><img className='svg' src={paintBrush} alt=""/>OBRAS</li></Link>
           <Link onClick={handleLink} to="/agendas"><li><img className='svg' src={bookSvg} alt=""/>AGENDAS Y CUADERNOS</li></Link>
-          <Link onClick={handleLink} to="/mi-libro"><li><img className='svg' src={Eye} alt=""/>LIBRO DE RELATOS</li></Link>
+          <Link onClick={handleLink} to="/mi-libro"><li><img className='svg' src={Eye} alt=""/>LIBROS</li></Link>
           <Link onClick={handleLink} to="/laminas"><li><img className='svg' src={Printer} alt=""/>LÁMINAS</li></Link>
           <Link onClick={handleLink} to="/sobre-mi"><li><img className='svg' src={diamondSvg} alt=""/>SOBRE MI</li></Link>
         </ul>

@@ -16,7 +16,7 @@ const FooterNavbar = () => {
                 <Link to="/"><li><img className='svg' src={homeSvg} alt="" />INICIO</li></Link>
                 <Link to="/elegir"><li><img className='svg' src={paintBrush} alt="" />OBRAS</li></Link>
                 <Link to="/agendas"><li><img className='svg' src={bookSvg} alt="" />AGENDAS Y CUADERNOS</li></Link>
-                <Link to="/mi-libro"><li><img className='svg' src={Eye} alt="" />LIBRO DE RELATOS</li></Link>
+                <Link to="/mi-libro"><li><img className='svg' src={Eye} alt="" />LIBROS</li></Link>
                 <Link to="/laminas"><li><img className='svg' src={Printer} alt="" />LÁMINAS</li></Link>
                 <Link to="/sobre-mi"><li><img className='svg' src={diamondSvg} alt="" />SOBRE MI</li></Link>
             </nav>

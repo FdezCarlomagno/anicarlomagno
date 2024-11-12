@@ -20,19 +20,25 @@
     font-size: 1rem;
     margin-top: 2rem;
 }
+.btnAgenda{
+    margin-top: 5rem;
+}
 
 .agendaCustomization {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 10%;
     gap: 32px;
+}
+.formContainer {
+    margin: 3rem;
 }
 .formContainer form {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 1rem;
-    align-items: start;
+    align-items: center;
     background-color: aliceblue;
     padding: 2rem;
     border-radius: 6px;
@@ -84,6 +90,10 @@ form button {
 
 .myAgenda-name-container h2 {
     font-size: 35px;
+}
+
+.customAgenda {
+    margin: 2rem;
 }
 
 .customAgenda h2 {

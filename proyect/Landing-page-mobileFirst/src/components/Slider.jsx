@@ -9,7 +9,7 @@ import cuadro3 from './imgs/cuadro3.jpg'
 import paintBrush from './assets/WhitePaintBrush.svg'
 import { useState } from 'react'
 import  video  from './assets/wspVideo-header.mp4'
-import { Link } from 'react-router-dom/cjs/react-router-dom.min'
+import { Link } from 'react-router-dom'
 import Spinner from './spinner.jsx'
 
 

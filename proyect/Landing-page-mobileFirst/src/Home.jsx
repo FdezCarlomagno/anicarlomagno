@@ -3,9 +3,7 @@ import './LandingPage.css'
 import FirstSection from './components/FirstSection.jsx'
 import SecondSection from './components/SecondSection.jsx'
 import AgendaSection from './components/AgendaSection.jsx'
-import igSvg from './components/assets/Instagram.svg'
-import PaintingSlider from './components/paintingsSlider.jsx'
-import paintings from './objects/paintings.jsx'
+import igSvg from './components/assets/blackInstagram.svg'
 import PaintingImgsSection from './components/paintingImgsSection.jsx'
 
 function Home() {

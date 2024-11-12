@@ -2,7 +2,7 @@
   "name": "landing-page-mobile-first",
   "version": "1.0.0",
   "scripts": {
-    "start": "concurrently \"npm run start:frontend\" \"npm run start:backend\"",
+    "start": "npm run start:frontend",
     "start:frontend": "npm --prefix ./landing-page-mobileFirst run dev",
     "start:backend": "nodemon ./server/src/server.js",
     "build": "npm --prefix ./Landing-page-mobileFirst run build"

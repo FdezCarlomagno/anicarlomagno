@@ -44,7 +44,7 @@ const Agendas = () => {
                             <h2>Páginas llenas de arte</h2>
                             <div className='section-agendaText-flex-column'>
                                 <p>
-                                    Tanto <span>agendas</span> como <span>cuadernos</span>, poseen tapa y contrapa dura con anillo doble de metal.
+                                    Tanto <span>agendas</span> como <span>cuadernos</span>, poseen tapa y contratapa dura con anillo doble de metal.
                                 </p>
                                 <p>
                                     En el interior encontrarás <span>frases</span> y <span>relatos</span> escritos por mi, especialmente dedicados a vos. Además, incluyen calendario, stickers, imágenes para colorear, sobre, cinta de razo, y señalador.

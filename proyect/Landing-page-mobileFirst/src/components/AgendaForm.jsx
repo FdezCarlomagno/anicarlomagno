@@ -36,13 +36,16 @@ const AgendaForm = () => {
         if (name === 'type') {
             switch (value) {
                 case 'agenda perpetua':
-                    setAgendaPrice('15900');
+                    setAgendaPrice('17900');
                     break;
                 case 'cuaderno':
-                    setAgendaPrice('11900');
+                    setAgendaPrice('12900');
                     break;
                 case 'agenda':
-                    setAgendaPrice('14900');
+                    setAgendaPrice('16900');
+                    break;
+                case 'agenda-docente':
+                    setAgendaPrice('17900');
                     break;
                 default:
                     setAgendaPrice('0');
@@ -52,7 +55,7 @@ const AgendaForm = () => {
 
     const handleFormSubmit = (e) => {
         e.preventDefault();
-        const message = `Hola!, me gustaría encargarte una agenda ${formData.type} de papel ${formData.paper}, con un fondo de tu obra ${name} con las siguientes especificaciones: 
+        const message = `Hola!, me gustaría encargarte una ${formData.type} de papel ${formData.paper}, con un fondo de tu obra ${name} con las siguientes especificaciones: 
         Nombre: ${formData.username}, en la parte ${formData.textDirection}, de color ${formData.fontColor}. 
         Comentarios aparte: ${formData.other}`;
 
@@ -95,7 +98,7 @@ const AgendaForm = () => {
                                             <option value="agenda perpetua">Perpetua</option>
                                             <option value="cuaderno">Cuaderno</option>
                                             <option value="agenda">Agenda semanal 2025</option>
-
+                                            <option value="agenda-docente">Agenda docente</option>
                                         </select>
                                     </label>
                                 </div>
