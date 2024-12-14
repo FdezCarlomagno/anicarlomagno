@@ -56,9 +56,6 @@
         grid-column: 1fr 1fr;
         ;
     }
-    .buy-book-btn {
-        transition: all 200ms ease-in-out;
-    }
     .buy-book-btn:hover {
         transform: scale(1.1);
         background-color: rgba(137, 43, 226, 0.795);

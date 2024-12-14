@@ -16,6 +16,7 @@ import ScrollToTopButton from './components/ScrollToTopButton.jsx';
 import Laminas from './pages/Laminas.jsx';
 import FooterNavbar from './components/FooterNavbar.jsx';
 import Envio from './components/Envio.jsx';
+import Contact from './components/contact/ContactSection.jsx'
 import './LandingPage.css';
 
 const LandingPage = () => {
@@ -37,6 +38,7 @@ const LandingPage = () => {
           <Route path="/laminas" element={<Laminas />} />
           <Route path="*" element={<Home />} /> {/* Ruta por defecto */}
         </Routes>
+        <Contact />
         <Envio />
         <FooterNavbar />
         <footer>

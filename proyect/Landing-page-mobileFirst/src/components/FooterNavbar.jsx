@@ -8,6 +8,7 @@ import paintBrush from './assets/PaintBrush.svg';
 import Eye from './assets/Eye.svg';
 import Printer from './assets/Printer.svg'
 
+
 const FooterNavbar = () => {
     return (
         <div className="footer-navbar">

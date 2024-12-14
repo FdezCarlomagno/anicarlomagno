@@ -1,0 +1,32 @@
+.contact-section {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .contact-section h2 {
+    text-align: left;
+    border-bottom: 2px solid gray;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  .contact-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  @media (min-width: 768px) {
+    .contact-content {
+      flex-direction: row;
+      padding: 2rem;
+    }
+    .contact-section h2 {
+      border-bottom: none;
+      text-align: center;
+    }
+  }
+  
+  

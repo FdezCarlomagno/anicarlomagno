@@ -73,7 +73,7 @@ const PaintingSlider = ({ paintings }) => {
     };
 
     return (
-        <div className="paintingSlider" style={sliderStyles}>
+        <section className="paintingSlider" style={sliderStyles}>
             <div style={leftArrowStyles} onClick={prevSlide}>❮</div>
             <div style={rightArrowStyles} onClick={nextSlide}>❯</div>
             
@@ -99,7 +99,7 @@ const PaintingSlider = ({ paintings }) => {
                     </div>
                 ))}
             </div>
-        </div>
+        </section>
     );
 }
 

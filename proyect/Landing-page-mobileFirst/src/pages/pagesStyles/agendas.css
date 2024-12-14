@@ -81,7 +81,9 @@ form button {
     width: 250px;
     align-items: center;
     justify-content: space-between;
-    
+}
+#btnSubmitAgenda {
+    padding: 8px;
 }
 .formContainer form input[type="color"] {
     width: 250px;

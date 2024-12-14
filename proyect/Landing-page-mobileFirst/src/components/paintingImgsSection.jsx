@@ -13,7 +13,7 @@ const PaintingImgsSection = () => {
     const displayedCuadros = useMemo(() => cuadros.slice(0, seeMore), [seeMore]);
 
     return (
-        <div>
+        <section>
             <div className='paintingImgs-section'>
                 <Link to="/obras-en-stock">
                     {displayedCuadros.map((cuadro, index) => (
@@ -27,7 +27,7 @@ const PaintingImgsSection = () => {
                 {seeMore < cuadros.length && <button className='linkTo-aboutMe-btn' onClick={(e) => handleSeeMore(e)}>Ver más</button>}
             </div>
 
-        </div>
+        </section>
     );
 };
 

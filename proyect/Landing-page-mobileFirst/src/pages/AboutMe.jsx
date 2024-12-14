@@ -1,25 +1,60 @@
-import React, { useState } from 'react'
-import './pagesStyles/aboutMe.css'
-import aboutMeImg from '../components/imgs/aniHeader2.jpg'
-import info1 from '../components/imgs/aniSection4.jpg'
-import info2 from '../components/imgs/aniSection6.jpg'
-
+import React from 'react';
+import './pagesStyles/aboutMe.css';
+import aboutMeImg from '../components/imgs/aniHeader2.jpg';
+import info1 from '../components/imgs/aniSection4.jpg';
+import info2 from '../components/imgs/aniSection6.jpg';
+import { useInView } from 'react-intersection-observer';
+import { motion } from 'framer-motion';
 
 const AboutMe = () => {
+    const { ref: titleRef, inView: titleInView } = useInView({
+        triggerOnce: true,
+        threshold: 0.1,
+    });
+
+    const { ref: headerImgRef, inView: headerImgInView } = useInView({
+        triggerOnce: true,
+        threshold: 0.1,
+    });
+
+    const { ref: firstSectionRef, inView: firstSectionInView } = useInView({
+        triggerOnce: true,
+        threshold: 0.1,
+    });
+
+    const { ref: secondSectionRef, inView: secondSectionInView } = useInView({
+        triggerOnce: true,
+        threshold: 0.1,
+    });
+
     return (
         <div>
             <div className="titleBg">
-                <h1 className='myPaintingsTitle'>Sobre mi</h1>
+                <motion.h1
+                    ref={titleRef}
+                    initial={{ opacity: 0, y: -50 }}
+                    animate={titleInView ? { opacity: 1, y: 0 } : {}}
+                    transition={{ duration: 0.5 }}
+                    className='myPaintingsTitle'
+                >
+                    Sobre mi
+                </motion.h1>
             </div>
             <main className="AboutMe">
-                <div className="header-aboutMe-img">
-                    <img src={aboutMeImg} alt="" />
+                <motion.div
+                    ref={headerImgRef}
+                    className="header-aboutMe-img"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={headerImgInView ? { opacity: 1, y: 0 } : {}}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                >
+                    <img src={aboutMeImg} alt="Analia Carlomagno" />
                     <h1>Analia Carlomagno</h1>
                     <div className="aboutMe-info">
                         <ul>
                             <h3>Experiencia</h3>
                             <li>+1000 obras vendidas</li>
-                            <li>+15 años expresando vivencias a traves de imágenes pictóricas</li>
+                            <li>+15 años expresando vivencias a través de imágenes pictóricas</li>
                             <li>+20 años en el mundo de la pintura</li>
                         </ul>
                         <ul>
@@ -42,8 +77,14 @@ const AboutMe = () => {
                             <li>Transformación de la imagen en poesía visual</li>
                         </ul>
                     </div>
-                </div>
-                <section className='aboutMe-firstSection'>
+                </motion.div>
+                <motion.section
+                    ref={firstSectionRef}
+                    className='aboutMe-firstSection'
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={firstSectionInView ? { opacity: 1, y: 0 } : {}}
+                    transition={{ duration: 0.5, delay: 0.4 }}
+                >
                     <div className='firstSection-title'>
                         <h2><span>Artista plástica </span>y Docente</h2>
                         <div className='cita'>
@@ -51,11 +92,16 @@ const AboutMe = () => {
                                 Bien bien lejos... Atraviesen fronteras y prejuicios...
                                 Permitir que muchas almas se vean
                                 a través de mis ojos grandes."</cite>
-                            <p> - Analia Carlomagno</p>
-                        </div>
+                            <p> - Analia Carlomagno</p>                        </div>
                     </div>
-                </section>
-                <section className='aboutMe-secondSection'>
+                </motion.section>
+                <motion.section
+                    ref={secondSectionRef}
+                    className='aboutMe-secondSection'
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={secondSectionInView ? { opacity: 1, y: 0 } : {}}
+                    transition={{ duration: 0.5, delay: 0.6 }}
+                >
                     <div className="firstSection-container" id='firstSection-container2'>
                         <img
                             className='imgAniSection2'
@@ -107,10 +153,10 @@ const AboutMe = () => {
                             </details>
                         </div>
                     </div>
-                </section>
+                </motion.section>
             </main>
         </div>
-    )
-}
+    );
+};
 
-export default AboutMe
+export default AboutMe;

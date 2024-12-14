@@ -2,8 +2,8 @@ import React from 'react'
 
 const SecondSection = () => {
     return (
-        <div className="secondSection">
-            <div className="secondSectionInfo">
+        <section className="secondSection">
+            <section className="secondSectionInfo">
                 <h2>Soñadora Compulsiva</h2>
                 <div className="flex-column">
                     <div>
@@ -28,8 +28,8 @@ const SecondSection = () => {
                     </div>
                 </div>
 
-            </div>
-        </div>
+            </section>
+        </section>
     )
 }
 

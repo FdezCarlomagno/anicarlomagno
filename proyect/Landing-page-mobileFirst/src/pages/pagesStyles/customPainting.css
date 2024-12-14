@@ -118,9 +118,13 @@
     .size-input-container input {
         width: 150px;
     }
-    .size-description-container {
+    .flex-row {
         display: flex;
         flex-direction: row;
+        gap: 10rem;
+    }
+    .size-description-container {
+        display: flex;
         align-items: start;
         justify-content: space-around;
     }

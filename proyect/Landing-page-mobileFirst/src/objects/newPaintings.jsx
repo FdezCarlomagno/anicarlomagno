@@ -36,9 +36,15 @@ import cuadro35 from '../pages/pagesStyles/paintingsImgs/nuevosCuadros/SYLVINE.j
 import cuadro36 from '../pages/pagesStyles/paintingsImgs/nuevosCuadros/SYLVINE2.jpg'
 import cuadro37 from '../pages/pagesStyles/paintingsImgs/nuevosCuadros/VALENTINA.jpg'
 import cuadro38 from '../pages/pagesStyles/paintingsImgs/nuevosCuadros/VIOLET.jpg'
+import cuadro39 from '../pages/pagesStyles/paintingsImgs/Aurora.jpg'
+import cuadro40 from '../pages/pagesStyles/paintingsImgs/VEIL.jpeg'
+import cuadro41 from '../pages/pagesStyles/paintingsImgs/EUPHORIA.jpeg'
 
 
 const cuadros = [
+    { src: cuadro39, title: 'Aurora'},
+    { src: cuadro40, title: 'Veil'},
+    { src: cuadro41, title: 'Euphoria'},
     { src: cuadro1, title: 'Esmeralda' },
     { src: cuadro2, title: 'Piscis' },
     { src: cuadro3, title: 'Hilo rojo' },

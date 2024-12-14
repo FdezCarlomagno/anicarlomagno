@@ -5,6 +5,9 @@ import SecondSection from './components/SecondSection.jsx'
 import AgendaSection from './components/AgendaSection.jsx'
 import igSvg from './components/assets/blackInstagram.svg'
 import PaintingImgsSection from './components/paintingImgsSection.jsx'
+import { motion } from 'framer-motion';
+
+
 
 function Home() {
 
@@ -18,7 +21,6 @@ function Home() {
           </div>
         </header>
         <section>
-    
           <FirstSection />
           <h2 className='titleAgendas'>Agendas</h2>
           <AgendaSection />
