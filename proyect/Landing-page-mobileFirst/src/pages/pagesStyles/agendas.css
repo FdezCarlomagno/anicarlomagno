@@ -234,6 +234,87 @@ form button {
     color: black;
 }
 
+.checkbox-agenda {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.saved-agendas {
+    text-align: center;
+}
+
+.agenda-count-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem auto; /* Centrar horizontalmente */
+    background-color: #f0f8ff; /* Color más suave */
+    border-radius: 12px; /* Bordes más redondeados */
+    padding: 1.5rem; /* Más espacio interno */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    max-width: 200px; /* Asegurarse de que no se desborde en pantallas pequeñas */
+    width: 100%; /* Ocupa todo el espacio posible */
+}
+.agenda-count-container h3 {
+    text-align: center;
+    margin-top: 1rem;
+    border-radius: 6px;
+    border: 2px solid gray;
+}
+
+.agenda-count {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centrado más preciso */
+    gap: 1.5rem; /* Mayor separación entre elementos */
+    flex-wrap: wrap; /* Permitir que los botones se envuelvan en pantallas pequeñas */
+}
+
+.agenda-count button {
+    flex: 1;
+    font-size: 1.5rem; /* Tamaño de texto responsivo */
+    background-color: #8a2be2; /* Azul violeta más vibrante */
+    color: white; /* Texto blanco para mejor contraste */
+    border-radius: 8px; /* Bordes más redondeados */
+    border: none;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Animaciones suaves */
+    cursor: pointer; /* Mostrar que es interactivo */
+    max-width: 150px; /* Limitar el ancho de los botones */
+    width: 100%; /* Adaptar al contenedor */
+}
+
+
+.agenda-count button:hover {
+    background-color: #7a26c2; /* Color más oscuro al pasar el mouse */
+    transform: scale(1.05); /* Aumentar ligeramente el tamaño */
+}
+
+.agenda-count button:active {
+    background-color: #6820a5; /* Color aún más oscuro al presionar */
+    transform: scale(0.95); /* Efecto de presión */
+}
+
+.align-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    text-align: left;
+}
+.delete-agenda {
+    padding: 6px;
+    border: none;
+    border-radius: 6px;
+    background-color: blueviolet;
+}
+
+.encargar {
+    margin: 2rem;
+}
+
+
 /*DESKTOP STYLES FOR AGENDAS*/
 @media(min-width: 768px){
     .agendas {
@@ -299,4 +380,22 @@ form button {
     .btnAgenda {
         font-size: 32px;
     }
+    .customAgenda {
+        width: fit-content;
+        
+    }
+    .saved-agendas-container {
+        margin: 20px auto;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        columns: 3;
+        column-gap: 12px;
+    }
+    .saved-agendas-container img {
+        width: 300px;
+        height: auto;
+        object-fit: cover;
+    }
+    
 }

@@ -7,6 +7,8 @@ import paintBrush from './assets/PaintBrush.svg';
 import Eye from './assets/Eye.svg';
 import Printer from './assets/Printer.svg';
 import { motion } from 'framer-motion';
+import toast, { Toaster } from 'react-hot-toast';
+
 
 const NavBar = () => {
   const [menu, setMenu] = useState(false);
@@ -21,6 +23,7 @@ const NavBar = () => {
 
   return (
     <nav className='navBar'>
+      <Toaster/>
       <Link to='/'>
         <div className="navLogo">
           <div className='contH1Nav'>

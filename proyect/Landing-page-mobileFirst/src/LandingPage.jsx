@@ -8,7 +8,7 @@ import Agendas from './pages/Agendas.jsx';
 import WhatsappIcon from './components/WhatsappIcon.jsx';
 import SocialMedia from './components/SocialMedia.jsx';
 import PaintingInfo from './components/PaintingInfo.jsx';
-import AgendaForm from './components/AgendaForm.jsx';
+import CustomAgenda from './components/customAgenda.jsx';
 import ChooseForm from './components/Choose.jsx';
 import CustomPainting from './components/customPainting.jsx';
 import PersonalBook from './pages/personalBook.jsx';
@@ -19,10 +19,12 @@ import Envio from './components/Envio.jsx';
 import Contact from './components/contact/ContactSection.jsx'
 import './LandingPage.css';
 
+
 const LandingPage = () => {
   return (
     <BrowserRouter>
       <div className="LandingPage">
+     
         <NavBar />
         <WhatsappIcon />
         <ScrollToTopButton />
@@ -33,7 +35,7 @@ const LandingPage = () => {
           <Route path="/elegir" element={<ChooseForm />} />
           <Route path="/agendas" element={<Agendas />} />
           <Route path="/sobre-mi" element={<AboutMe />} />
-          <Route path="/agenda-personalizada" element={<AgendaForm />} />
+          <Route path="/agenda-personalizada" element={<CustomAgenda />} />
           <Route path="/mi-libro" element={<PersonalBook />} />
           <Route path="/laminas" element={<Laminas />} />
           <Route path="*" element={<Home />} /> {/* Ruta por defecto */}
