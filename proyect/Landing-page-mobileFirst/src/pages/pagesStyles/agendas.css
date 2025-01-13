@@ -311,7 +311,14 @@ form button {
 }
 
 .encargar {
-    margin: 2rem;
+    margin-top: 3rem;
+    width: 80%;
+}
+
+.preview-text {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
 }
 
 

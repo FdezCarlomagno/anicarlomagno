@@ -13,7 +13,8 @@ const AgendaPreview = ({ formData, imgRef, imgInView, nameStyles, selectedImage 
                 initial={{ opacity: 0, y: 20 }}
                 animate={imgInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5 }}
-            >
+            >   
+                <p className='preview-text'>Vista previa</p>
                 <div className='customAgenda'>
                     {formData.type && <h2>Tu {formData.type}</h2>}
                     <div className='myAgenda-img-container'>

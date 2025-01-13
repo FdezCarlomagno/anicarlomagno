@@ -12,23 +12,27 @@ const CustomAgenda = () => {
     const [cantAgendas, setCantAgendas] = useState(1);
     const [agendas, setAgendas] = useState([]);
     const [selectedImage, setSelectedImage] = useState(null);  // State for selected image
-
     const isMounted = useRef(true);
+    const agendaRef = useRef(null)
+    const [pulse, setPulse] = useState(false);  // Estado para activar la animación de "pulse"
 
     useEffect(() => {
         const storedAgendas = JSON.parse(localStorage.getItem('agendas') || '[]');
         if (isMounted.current) {
             setAgendas(storedAgendas);
         }
-        //console.log(selectedImage);
         return () => {
             isMounted.current = false;
         };
-
     }, []);
 
     useEffect(() => {
         localStorage.setItem('agendas', JSON.stringify(agendas));
+        if (agendas.length > 0 && agendaRef.current) {
+            agendaRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            setPulse(true);  // Activamos el "pulse" cuando hay agendas
+            setTimeout(() => setPulse(false), 1000);  // Desactivamos después de 500ms
+        }
     }, [agendas]);
 
     const renderForms = () => {
@@ -43,15 +47,12 @@ const CustomAgenda = () => {
         setAgendas((prevAgenda) => [...prevAgenda, newAgenda]);
     };
 
-    const handleChange = (n) => {
-        setCantAgendas((prev) => Math.max(prev + n, 1));
-    };
     const toastDeleteNotification = () => {
         return toast((t) => (
             <p>
-              Pedido eliminado con <strong>éxito</strong>
+                Pedido eliminado con <strong>éxito</strong>
             </p>
-          ));
+        ));
     }
 
     const handleDeleteAgenda = (indexToDelete) => {
@@ -66,47 +67,45 @@ const CustomAgenda = () => {
             message += `- Tipo: ${agenda.type}\n`;
             message += `- Papel: ${agenda.paper}\n`;
             message += `- Fondo: ${agenda.name}\n`;
-            message += `- Nombre: ${agenda.username}\n`;
-            message += `- Dirección de texto: ${agenda.textDirection}\n`;
-            message += `- Color: ${agenda.fontColor}\n`;
+            if(agenda.username) message += `- Nombre: ${agenda.username}\n`;
+            if(agenda.textDirection) message += `- Dirección de texto: ${agenda.textDirection}\n`;
+            if(agenda.username) message += `- Color: ${agenda.fontColor}\n`;
             if (agenda.quote) message += `- Frase: ${agenda.quote}\n`;
             if (agenda.other) message += `- Comentarios: ${agenda.other}\n`;
             return acc + message + '\n';
         }, baseMessage);
-    
+
         const whatsappURL = `https://api.whatsapp.com/send?phone=542494245966&text=${encodeURIComponent(fullMessage)}`;
         window.open(whatsappURL, '_blank');
     };
-    
 
     return (
-        <div className='flex-column'>
+        <div className="flex-column">
             <div className="titleBg">
-                <h1 className='myPaintingsTitle'>Agenda personalizada</h1>
+                <h1 className="myPaintingsTitle">Agenda personalizada</h1>
             </div>
-            {/*<div className='agenda-count-container'>
-                <label htmlFor="agenda-count">
-                    Cantidad de agendas
-                    <div className='agenda-count' name='agenda-count'>
-                        <button className='btn-agenda-count' onClick={() => handleChange(1)}>+</button>
-                        <button className='btn-agenda-count' onClick={() => handleChange(-1)}>-</button>
-
-                    </div>
-                    <h3>{cantAgendas}</h3>
-                </label>
-            </div>*/}
-            {renderForms()}
+            {renderForms()} 
             {agendas.length > 0 && (
-                <div className='saved-agendas'>
+                <div className="saved-agendas"  ref={agendaRef}>
                     <h2>Tus agendas guardadas:</h2>
-                    <ul className='saved-agendas-container'>
+                    <motion.button
+                        animate={pulse ? { scale: 1.15 } : { scale: 1 }}  // Animación de "pulse"
+                        transition={{ type: 'spring', stiffness: 300 }}  // Ajuste de la transición
+                        whileHover={{ scale: 1.1 }}  // Levemente más grande en hover
+                        className="btnAgenda encargar"
+                        onClick={handleEncargue}
+                      
+                    >
+                        Encargar
+                    </motion.button>
+                    <ul className="saved-agendas-container">
                         {agendas.map((agenda, index) => (
-                            <SavedAgenda agenda={agenda} index={index} handleDeleteAgenda={handleDeleteAgenda}/>
+                            <SavedAgenda key={index} agenda={agenda} index={index} handleDeleteAgenda={handleDeleteAgenda} />
                         ))}
                     </ul>
                 </div>
             )}
-            {agendas.length > 0 && <button className='btnAgenda encargar' onClick={handleEncargue}>Encargar</button>}
+            <Toaster />
         </div>
     );
 };

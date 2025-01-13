@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import '../pages/pagesStyles/agendas.css';
 import DropDownImgs from './DropDownImgs';
 import { useInView } from 'react-intersection-observer';
@@ -6,10 +6,10 @@ import AgendaPreview from './AgendaPreview';
 import { motion } from 'framer-motion';
 import toast, { Toaster } from 'react-hot-toast';
 
-const AgendaForm = ( { cantAgendas, onSave, agendasGuardadas }) => {
+const AgendaForm = ({ cantAgendas, onSave, agendasGuardadas }) => {
     const [agendaPrice, setAgendaPrice] = useState(0);
     const [formQuote, setFormQuote] = useState(false);
-    const [name, setName] = useState('');
+    const [selectedImage, setSelectedImage] = useState(null);
     const [formData, setFormData] = useState({
         type: '',
         username: '',
@@ -20,11 +20,10 @@ const AgendaForm = ( { cantAgendas, onSave, agendasGuardadas }) => {
         bgImg: '',
         quote: null,
         price: agendaPrice,
-        name: name,
-        checkbox: false, 
+        checkbox: false,
+        name: selectedImage
     });
     const [dropDown, setDropDown] = useState(false);
-    const [selectedImage, setSelectedImage] = useState(null);
 
     const toggleDropDown = () => {
         setDropDown(!dropDown);
@@ -32,35 +31,32 @@ const AgendaForm = ( { cantAgendas, onSave, agendasGuardadas }) => {
 
     const handleImageClick = (image, nombre) => {
         setSelectedImage(image);
-        setName(nombre);
         setFormData((prevFormData) => ({
             ...prevFormData,
+            name: nombre,
             bgImg: image,
-            name: nombre
         }));
     };
-
 
     const handleChange = (e) => {
         const { name, value, checked } = e.target;
         setFormData((prevFormData) => {
-            // Actualizamos el estado del formulario
-            const updatedFormData = { ...prevFormData, [name]: name === 'checkbox' ? checked : value };
+            const updatedFormData = {
+                ...prevFormData,
+                [name]: name === 'checkbox' ? checked : value,
+            };
 
             if (name === 'type') {
-                // Actualizamos el precio según el tipo
                 switch (value) {
                     case 'agenda perpetua':
-                        setAgendaPrice(18900);
+                    case 'agenda':
+                        setAgendaPrice(18900)
+                        break;
+                    case 'agenda-docente':
+                        setAgendaPrice(20900);
                         break;
                     case 'cuaderno':
                         setAgendaPrice(13900);
-                        break;
-                    case 'agenda':
-                        setAgendaPrice(18900);
-                        break;
-                    case 'agenda-docente':
-                        setAgendaPrice(18900);
                         break;
                     default:
                         setAgendaPrice(0);
@@ -68,28 +64,40 @@ const AgendaForm = ( { cantAgendas, onSave, agendasGuardadas }) => {
             }
 
             if (name === 'checkbox') {
-                // Sumamos o restamos según el estado del checkbox
-                setAgendaPrice((prevPrice) => checked ? prevPrice + 1000 : prevPrice - 1000);
-                setFormQuote((prevValue) => checked ? true : false);
+                setAgendaPrice((prevPrice) => (checked ? prevPrice + 1000 : prevPrice - 1000));
+                setFormQuote(checked);
             }
-
 
             return updatedFormData;
         });
     };
 
-
     const handleFormSubmit = (e) => {
         e.preventDefault();
+
+        if (formData.username && (!formData.fontColor || !formData.textDirection)) {
+            toast.error('Si definís un nombre, también debes elegir un color y una dirección de texto.');
+            return;
+        }
+
+        if(formData.checkbox && !formData.quote){
+            toast.error('Si querés una frase, especifica cuál')
+            return;
+        }
+
+        if(!formData.bgImg){
+            toast.error('Por favor elegi una obra para el fondo')
+            return;
+        }
+        console.log(formData)
         try {
             onSave(formData);
             toast.success('Agenda guardada correctamente');
-        } catch (e){
+        } catch (e) {
             console.error(e);
             toast.error('No se pudo guardar la agenda, intente nuevamente');
-            
         }
-        // Restablecemos el estado a los valores iniciales
+
         setFormData({
             type: '',
             username: '',
@@ -100,25 +108,19 @@ const AgendaForm = ( { cantAgendas, onSave, agendasGuardadas }) => {
             bgImg: '',
             quote: null,
             price: 0,
-            name: '',
-            checkbox: false, 
+            checkbox: false,
+            name: selectedImage
         });
         setSelectedImage(null);
-        if(formQuote){
-            setAgendaPrice(1000);
-        } else {
-            setAgendaPrice(0);
-        }
-   
+        setAgendaPrice(0);
         setFormQuote(false);
     };
 
     const nameStyles = {
         color: formData.fontColor || '#000000',
-        fontFamily: 'Dancing Script'
+        fontFamily: 'Dancing Script',
     };
 
-    // Set up useInView for animation
     const { ref: formRef, inView: formInView } = useInView({
         triggerOnce: true,
         threshold: 0.1,
@@ -170,7 +172,6 @@ const AgendaForm = ( { cantAgendas, onSave, agendasGuardadas }) => {
                                             value={formData.paper}
                                             onChange={handleChange}
                                             required
-                                            aria-label="Seleccione el tipo de agenda"
                                         >
                                             <option value="">Seleccione...</option>
                                             <option value="blanco">Blanco 80 gramos</option>
@@ -200,7 +201,7 @@ const AgendaForm = ( { cantAgendas, onSave, agendasGuardadas }) => {
                                 </div>
                                 <div>
                                     <label>
-                                        Nombre
+                                        Nombre (opcional)
                                         <input
                                             type="text"
                                             name="username"
@@ -209,39 +210,40 @@ const AgendaForm = ( { cantAgendas, onSave, agendasGuardadas }) => {
                                             maxLength={12}
                                             value={formData.username}
                                             onChange={handleChange}
-                                            required
                                         />
                                     </label>
                                 </div>
-                                <div className='formColor'>
-                                    <label>
-                                        Color de texto
-                                        <input
-                                            type="color"
-                                            name="fontColor"
-                                            value={formData.fontColor}
-                                            onChange={handleChange}
-                                            required
-                                        />
-                                    </label>
-                                </div>
-                                <div>
-                                    <label>
-                                        Dirección de texto
-                                        <select
-                                            name="textDirection"
-                                            value={formData.textDirection}
-                                            onChange={handleChange}
-                                            required
-                                        >
-                                            <option value="">Seleccione...</option>
-                                            <option value="arriba-derecha">Arriba-Derecha</option>
-                                            <option value="arriba-izquierda">Arriba-Izquierda</option>
-                                            <option value="abajo-derecha">Abajo-Derecha</option>
-                                            <option value="abajo-izquierda">Abajo-Izquierda</option>
-                                        </select>
-                                    </label>
-                                </div>
+                                {formData.username && (
+                                    <>
+                                        <div className='formColor'>
+                                            <label>
+                                                Color de texto
+                                                <input
+                                                    type="color"
+                                                    name="fontColor"
+                                                    value={formData.fontColor}
+                                                    onChange={handleChange}
+                                                />
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <label>
+                                                Dirección de texto
+                                                <select
+                                                    name="textDirection"
+                                                    value={formData.textDirection}
+                                                    onChange={handleChange}
+                                                >
+                                                    <option value="">Seleccione...</option>
+                                                    <option value="arriba-derecha">Arriba-Derecha</option>
+                                                    <option value="arriba-izquierda">Arriba-Izquierda</option>
+                                                    <option value="abajo-derecha">Abajo-Derecha</option>
+                                                    <option value="abajo-izquierda">Abajo-Izquierda</option>
+                                                </select>
+                                            </label>
+                                        </div>
+                                    </>
+                                )}
                                 <div>
                                     <label className='checkbox-agenda'>
                                         <div>
@@ -250,7 +252,7 @@ const AgendaForm = ( { cantAgendas, onSave, agendasGuardadas }) => {
                                         <div>
                                             <input type="checkbox"
                                                 name="checkbox"
-                                                value={formQuote}
+                                                checked={formData.checkbox}
                                                 onChange={handleChange}
                                             />
                                         </div>
@@ -289,7 +291,7 @@ const AgendaForm = ( { cantAgendas, onSave, agendasGuardadas }) => {
                     </div>
                 </div>
             </motion.div>
-            <AgendaPreview formData={formData} imgRef={imgRef} imgInView={imgInView} nameStyles={nameStyles} selectedImage={selectedImage}/>
+            <AgendaPreview formData={formData} imgRef={imgRef} imgInView={imgInView} nameStyles={nameStyles} selectedImage={selectedImage} />
         </main>
     );
 };
