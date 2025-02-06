@@ -39,9 +39,13 @@ import cuadro38 from '../pages/pagesStyles/paintingsImgs/nuevosCuadros/VIOLET.jp
 import cuadro39 from '../pages/pagesStyles/paintingsImgs/Aurora.jpg'
 import cuadro40 from '../pages/pagesStyles/paintingsImgs/VEIL.jpeg'
 import cuadro41 from '../pages/pagesStyles/paintingsImgs/EUPHORIA.jpeg'
+import cuadro42 from '../pages/pagesStyles/paintingsImgs/Nerea.jpeg'
+import cuadro43 from '../pages/pagesStyles/paintingsImgs/Vanessa.jpeg'
 
 
 const cuadros = [
+    { src: cuadro42, title: 'Nerea'},
+    { src: cuadro43, title: 'Vanessa'},
     { src: cuadro39, title: 'Aurora'},
     { src: cuadro40, title: 'Veil'},
     { src: cuadro41, title: 'Euphoria'},
