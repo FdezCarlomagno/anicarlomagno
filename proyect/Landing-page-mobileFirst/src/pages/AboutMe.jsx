@@ -5,6 +5,8 @@ import info1 from '../components/imgs/aniSection4.jpg';
 import info2 from '../components/imgs/aniSection6.jpg';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
+import { Image } from '@unpic/react'
+
 
 const AboutMe = () => {
     const { ref: titleRef, inView: titleInView } = useInView({
@@ -48,7 +50,7 @@ const AboutMe = () => {
                     animate={headerImgInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.5, delay: 0.2 }}
                 >
-                    <img src={aboutMeImg} alt="Analia Carlomagno" />
+                    <Image src={aboutMeImg} alt="Analia Carlomagno" />
                     <h1>Analia Carlomagno</h1>
                     <div className="aboutMe-info">
                         <ul>
@@ -103,7 +105,7 @@ const AboutMe = () => {
                     transition={{ duration: 0.5, delay: 0.6 }}
                 >
                     <div className="firstSection-container" id='firstSection-container2'>
-                        <img
+                        <Image
                             className='imgAniSection2'
                             src={info2} />
                         <div className="firstSection-info">
@@ -127,7 +129,7 @@ const AboutMe = () => {
                         </div>
                     </div>
                     <div className="firstSection-container">
-                        <img
+                        <Image
                             className='imgAniSection1'
                             src={info1} />
                         <div className="firstSection-info">

@@ -13,6 +13,7 @@ import a7 from '../components/imgs/agenda7.jpg';
 import a8 from '../components/imgs/agenda8.jpg';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
+import { Image } from '@unpic/react'
 
 
 const Agendas = () => {
@@ -89,14 +90,14 @@ const Agendas = () => {
             </main>
             <div className='paintingImgs-section'>
                 <Link to="/agenda-personalizada">
-                    <div className='paintingImgs-box'><img src={a1} /></div>
-                    <div className='paintingImgs-box'><img src={a2} /></div>
-                    <div className='paintingImgs-box'><img src={a3} /></div>
-                    <div className='paintingImgs-box'><img src={a4} /></div>
-                    <div className='paintingImgs-box'><img src={a5} /></div>
-                    <div className='paintingImgs-box'><img src={a6} /></div>
-                    <div className='paintingImgs-box'><img src={a7} /></div>
-                    <div className='paintingImgs-box'><img src={a8} /></div>
+                    <div className='paintingImgs-box'><Image src={a1} /></div>
+                    <div className='paintingImgs-box'><Image src={a2} /></div>
+                    <div className='paintingImgs-box'><Image src={a3} /></div>
+                    <div className='paintingImgs-box'><Image src={a4} /></div>
+                    <div className='paintingImgs-box'><Image src={a5} /></div>
+                    <div className='paintingImgs-box'><Image src={a6} /></div>
+                    <div className='paintingImgs-box'><Image src={a7} /></div>
+                    <div className='paintingImgs-box'><Image src={a8} /></div>
                 </Link>
             </div>
         </div>

@@ -2,6 +2,8 @@ import React from 'react';
 import paintings from '../objects/paintings';
 import Cuadro from './Cuadro';
 import { Link } from 'react-router-dom'
+import { Image } from '@unpic/react'
+
 
 
 const PaintingInfo = (props) => {
@@ -25,7 +27,7 @@ const PaintingInfo = (props) => {
             <div className={cuadro.offer ? 'showInOffer' : 'hideInOffer'}>
             <p>{cuadro.sold ? "VENDIDO" : "40% OFF"}</p>
             </div>
-            <img src={cuadro.src} alt={cuadro.name} />
+            <Image src={cuadro.src} alt={cuadro.name} />
             <div className='paintingContainer'>
                 <div className='paintingInfoContainer'>
                     <h1>{cuadro.name}</h1>

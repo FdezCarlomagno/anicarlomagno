@@ -87,7 +87,6 @@ const CustomAgenda = () => {
             {renderForms()} 
             {agendas.length > 0 && (
                 <div className="saved-agendas"  ref={agendaRef}>
-                    <h2>Tus agendas guardadas:</h2>
                     <motion.button
                         animate={pulse ? { scale: 1.15 } : { scale: 1 }}  // Animación de "pulse"
                         transition={{ type: 'spring', stiffness: 300 }}  // Ajuste de la transición
@@ -98,7 +97,9 @@ const CustomAgenda = () => {
                     >
                         Encargar
                     </motion.button>
+                    <h2 className='m-2'>Tus agendas guardadas:</h2>
                     <ul className="saved-agendas-container">
+                
                         {agendas.map((agenda, index) => (
                             <SavedAgenda key={index} agenda={agenda} index={index} handleDeleteAgenda={handleDeleteAgenda} />
                         ))}

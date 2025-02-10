@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import cuadro1 from './imgs/cuadro1.jpg'
 import cuadro2 from './imgs/cuadro2.jpg'
 import cuadro3 from './imgs/cuadro3.jpg'
+import { Image } from '@unpic/react'
+
 
 const PaintingSlider = ({ paintings }) => {
     const [currentIndex, setCurrentIndex] = useState(0)
@@ -78,7 +80,7 @@ const PaintingSlider = ({ paintings }) => {
             <div style={rightArrowStyles} onClick={nextSlide}>❯</div>
             
             <div className='paintingContainerSlider' style={paintingsStyles}>
-                <img
+                <Image
                     src={paintings[currentIndex].src}
                     alt={`Painting ${currentIndex + 1}`}
                     style={imageStyles}

@@ -1,5 +1,6 @@
 import React from 'react'
 import wspIcon from './assets/wspIcon.svg'
+import { Image } from '@unpic/react'
 
 const WhatsappIcon = () => {
 
@@ -10,7 +11,7 @@ const WhatsappIcon = () => {
     }
     return (
         <div className="whatsappIcon" onClick={handleClickWsp}>
-            <img src={wspIcon} />
+            <Image src={wspIcon} />
         </div>
     )
 }

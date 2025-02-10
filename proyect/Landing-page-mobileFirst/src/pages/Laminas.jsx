@@ -3,7 +3,7 @@ import Imgs from '../components/DropDownImgs.jsx';
 import '../pages/pagesStyles/laminas.css';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
-
+import { Image } from '@unpic/react'
 const Laminas = () => {
     const [dropDown, setDropDown] = useState(false);
     const [selectedImage, setSelectedImage] = useState(null);
@@ -102,7 +102,7 @@ const Laminas = () => {
                         transition={{ duration: 0.5, delay: 0.4 }}
                     >
                         <h2>Lámina elegida: {lamina.name}</h2>
-                        <img src={lamina.src} alt={lamina.name} />
+                        <Image src={lamina.src} alt={lamina.name} />
                         <button className='buy-book-btn' onClick={(e) => handleLaminaBtn(e)}>
                             Comprar lámina de {lamina.name}
                         </button>

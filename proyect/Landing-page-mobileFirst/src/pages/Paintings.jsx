@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './pagesStyles/paintings.css';
 import Cuadro from '../components/Cuadro.jsx';
 import paintings from '../objects/paintings.jsx';
@@ -6,22 +6,8 @@ import { Link } from 'react-router-dom';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 
+
 const Paintings = () => {
-    /*const [filterPaintings, setFilterPaintings] = useState([...paintings]);
-    const [showUnsold, setShowUnsold] = useState(false); // State to track checkbox
-
-    // Function to handle checkbox filter
-    const handleFilter = (event) => {
-        const isChecked = event.target.checked;
-        setShowUnsold(isChecked);
-
-        // Filter paintings based on checkbox
-        if (isChecked) {
-            setFilterPaintings(paintings.filter(painting => !painting.sold)); // Show only unsold paintings
-        } else {
-            setFilterPaintings(paintings); // Show all paintings
-        }
-    }*/
 
     return (
         <main className="paintings">
@@ -29,16 +15,6 @@ const Paintings = () => {
                 <h1 className='myPaintingsTitle'>Obras en stock</h1>
             </div>
             <div className="paintingsColumn">
-                {/*<div className="filterSection">
-                    <label className="filterLabel">
-                        <input
-                            type="checkbox"
-                            checked={showUnsold}
-                            onChange={handleFilter}
-                        />
-                        Mostrar obras no vendidas
-                    </label>
-                </div>*/}
                 {paintings.map((cuadro, index) => {
                     const { ref, inView } = useInView({
                         threshold: 0.05, 

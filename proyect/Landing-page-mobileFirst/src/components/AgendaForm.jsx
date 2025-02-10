@@ -147,6 +147,7 @@ const AgendaForm = ({ cantAgendas, onSave, agendasGuardadas }) => {
                                     <div className='title-agenda-customization'>
                                         <h1>Customizá tu agenda o cuaderno</h1>
                                         <p>Completá los campos de abajo para personalizarla a tu gusto.</p>
+                                        
                                     </div>
                                     <label>
                                         Tipo de agenda

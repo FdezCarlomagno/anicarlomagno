@@ -10,6 +10,8 @@ import paintBrush from './assets/WhitePaintBrush.svg';
 import video from './assets/wspVideo-header.mp4';
 import { Link } from 'react-router-dom';
 import { motion, useInView } from 'framer-motion';
+import { Image } from '@unpic/react'
+
 
 const Slider = () => {
     const sliderRef = useRef(null);
@@ -62,7 +64,7 @@ const Slider = () => {
                                 whileHover={{ scale: 1.1 }}
                                 whileTap={{ scale: 0.95 }}
                             >
-                                Mis obras <img src={paintBrush} alt="Paintbrush logo" />
+                                Mis obras <Image src={paintBrush} alt="Paintbrush logo" />
                             </motion.button>
                         </motion.div>
                     </Link>

@@ -6,7 +6,7 @@ import AgendaSection from './components/AgendaSection.jsx'
 import igSvg from './components/assets/blackInstagram.svg'
 import PaintingImgsSection from './components/paintingImgsSection.jsx'
 import { motion } from 'framer-motion';
-
+import { Image } from '@unpic/react'
 
 
 function Home() {
@@ -25,7 +25,7 @@ function Home() {
           <h2 className='titleAgendas'>Agendas</h2>
           <AgendaSection />
           <div className="viewOnInstagram">
-            <button className='btnViewOnInstagram'><a href="https://www.instagram.com/stories/highlights/17931595102459109/" target='blank'><img src={igSvg} />Ver en instagram</a></button>
+            <button className='btnViewOnInstagram'><a href="https://www.instagram.com/stories/highlights/17931595102459109/" target='blank'><Image src={igSvg} />Ver en instagram</a></button>
           </div>
           
         </section>

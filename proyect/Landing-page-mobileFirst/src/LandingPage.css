@@ -642,6 +642,16 @@ textarea {
     color: blueviolet;
 }
 
+.text-left {
+    text-align: left;
+    margin: 1rem;
+}
+
+.m-2 {
+    margin: 2rem;
+}
+
+
 /*RESPONSIVE DESIGN*/
 
 @media(min-width: 768px) {

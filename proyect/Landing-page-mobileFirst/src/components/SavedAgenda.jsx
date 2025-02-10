@@ -1,4 +1,5 @@
 
+import { Image } from '@unpic/react'
 
 const SavedAgenda = ({agenda, index, handleDeleteAgenda}) => {
     return (
@@ -6,7 +7,7 @@ const SavedAgenda = ({agenda, index, handleDeleteAgenda}) => {
         {agenda.type && <h2>{agenda.type}</h2>}
         <div className='myAgenda-img-container'>
             {agenda.bgImg && (
-                <img
+                <Image
                     className='imgAgenda-preview'
                     src={agenda.bgImg}
                     alt={agenda.bgImg ? agenda.bgImg : 'Seleccioná una obra con el selector del formulario'}

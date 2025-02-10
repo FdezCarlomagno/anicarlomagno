@@ -3,23 +3,25 @@ import '../pages/pagesStyles/agendas.css';
 import DropDownImgs from './DropDownImgs';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
+import { Image } from "@unpic/react";
 
 
 const AgendaPreview = ({ formData, imgRef, imgInView, nameStyles, selectedImage }) => {
     return (
         <>
-             <motion.div
+            <motion.div
                 ref={imgRef}
                 initial={{ opacity: 0, y: 20 }}
                 animate={imgInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5 }}
-            >   
+            >
                 <p className='preview-text'>Vista previa</p>
+
                 <div className='customAgenda'>
                     {formData.type && <h2>Tu {formData.type}</h2>}
                     <div className='myAgenda-img-container'>
                         {selectedImage && (
-                            <img
+                            <Image
                                 src={selectedImage}
                                 alt={formData.bgImg ? formData.bgImg : 'Seleccioná una obra con el selector del formulario'}
                             />
@@ -29,7 +31,13 @@ const AgendaPreview = ({ formData, imgRef, imgInView, nameStyles, selectedImage 
                         </div>
                         <div>
                         </div>
-                        {formData.type && <span>OFERTA DE LANZAMIENTO</span>}
+                        {selectedImage && <>
+                            <p className='text-left'>
+                                <p>Medida de {formData.type}: <span>15.5cm x 21.5cm</span></p>
+                                <p>N° de Hojas: <span>100</span></p>
+                            </p>
+                        </>
+                        }
                     </div>
                 </div>
             </motion.div>
