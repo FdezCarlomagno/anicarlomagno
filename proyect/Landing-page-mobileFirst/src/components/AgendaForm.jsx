@@ -50,13 +50,13 @@ const AgendaForm = ({ cantAgendas, onSave, agendasGuardadas }) => {
                 switch (value) {
                     case 'agenda perpetua':
                     case 'agenda':
-                        setAgendaPrice(18900)
+                        setAgendaPrice(19900)
                         break;
                     case 'agenda-docente':
-                        setAgendaPrice(20900);
+                        setAgendaPrice(21900);
                         break;
                     case 'cuaderno':
-                        setAgendaPrice(13900);
+                        setAgendaPrice(14900);
                         break;
                     default:
                         setAgendaPrice(0);

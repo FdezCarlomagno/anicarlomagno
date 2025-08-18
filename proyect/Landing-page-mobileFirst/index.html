@@ -2,11 +2,11 @@
 <html lang="es" translate="no">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <meta name="google" content="notranslate">
   <meta http-equiv="Content-Language" content="es">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  
+
   <!-- Preconexiones optimizadas -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,23 +14,25 @@
   <!-- Fuentes combinadas en un solo request -->
   <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Dancing+Script:wght@400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-  <!-- Meta tags esenciales SEO -->
-  <title>Analía Carlomagno | Artista Plástica</title>
-  <meta name="description" content="Página oficial de Analía Carlomagno, artista plástica. Obras, exposiciones y biografía.">
+  <!-- Meta tags SEO -->
+  <title>Analía Carlomagno | Artista Plástica Argentina</title>
+  <meta name="description" content="Sitio oficial de Analía Carlomagno, artista plástica argentina. Explora su obra: pinturas, esculturas y exposiciones internacionales.">
+  <meta name="keywords" content="Analía Carlomagno, artista plástica, arte contemporáneo, pinturas, esculturas, exposiciones de arte, arte argentino">
   <meta name="author" content="Analía Carlomagno">
-  
+  <meta name="robots" content="index, follow">
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://anicarlomagno.vercel.app">
-  <meta property="og:title" content="Analía Carlomagno | Artista Plástica">
-  <meta property="og:description" content="Explora el mundo artístico de Analía Carlomagno. Obras únicas y exposiciones destacadas.">
+  <meta property="og:url" content="https://anicarlomagno.vercel.app/">
+  <meta property="og:title" content="Analía Carlomagno | Artista Plástica Argentina">
+  <meta property="og:description" content="Explora el universo artístico de Analía Carlomagno. Obras únicas, pinturas, esculturas y exposiciones destacadas.">
   <meta property="og:image" content="https://anicarlomagno.vercel.app/images/og-image.jpg">
   <meta property="og:locale" content="es_ES">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Analía Carlomagno | Artista Plástica">
-  <meta name="twitter:description" content="Descubre la obra artística de Analía Carlomagno. Pinturas, esculturas y exposiciones.">
+  <meta name="twitter:title" content="Analía Carlomagno | Artista Plástica Argentina">
+  <meta name="twitter:description" content="Descubre la obra artística de Analía Carlomagno: pinturas, esculturas y exposiciones en Argentina y el mundo.">
   <meta name="twitter:image" content="https://anicarlomagno.vercel.app/images/twitter-image.jpg">
   <meta name="twitter:site" content="@anicarlomagno">
 
@@ -38,11 +40,31 @@
   <meta name="theme-color" content="#ffffff">
 
   <!-- Canonical URL -->
-  <link rel="canonical" href="https://anicarlomagno.vercel.app">
+  <link rel="canonical" href="https://anicarlomagno.vercel.app/">
+
+  <!-- Schema.org JSON-LD: Perfil de artista -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Analía Carlomagno",
+    "alternateName": "Analia Carlomagno",
+    "jobTitle": "Artista Plástica",
+    "description": "Artista plástica argentina reconocida por sus pinturas, esculturas y exposiciones de arte contemporáneo.",
+    "url": "https://anicarlomagno.vercel.app/",
+    "image": "https://anicarlomagno.vercel.app/images/og-image.jpg",
+    "sameAs": [
+      "https://www.instagram.com/anicarlomagno",
+      "https://www.facebook.com/anicarlomagno",
+      "https://twitter.com/anicarlomagno"
+    ],
+    "nationality": "Argentina"
+  }
+  </script>
 </head>
 
 <body class="no-translate">
-  <div id="root" role="main"></div>
+  <div id="root" role="main" aria-label="Sitio oficial de la artista plástica Analía Carlomagno"></div>
   <script type="module" src="/src/main.jsx"></script>
 </body>
 </html>

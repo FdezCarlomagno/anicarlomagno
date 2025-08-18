@@ -8,7 +8,7 @@ const Laminas = () => {
     const [dropDown, setDropDown] = useState(false);
     const [selectedImage, setSelectedImage] = useState(null);
     const [name, setName] = useState('');
-    const precio = 5900;
+    const precio = 6900;
 
     const lamina = {
         src: selectedImage,

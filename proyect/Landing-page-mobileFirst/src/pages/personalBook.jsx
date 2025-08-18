@@ -7,7 +7,7 @@ import imgs_Libro_Colorear from '../objects/libro-colorear.jsx';
 import imgs_Libro_Miradas from '../objects/libro-miradas.jsx';
 
 const PersonalBook = () => {
-    const precioLibros = 16900;
+    const precioLibros = 17900;
     const { ref: titleRef, inView: titleInView } = useInView({
         triggerOnce: true,
         threshold: 0.1,
