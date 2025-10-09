@@ -41,9 +41,19 @@ import cuadro40 from '../pages/pagesStyles/paintingsImgs/VEIL.jpeg'
 import cuadro41 from '../pages/pagesStyles/paintingsImgs/EUPHORIA.jpeg'
 import cuadro42 from '../pages/pagesStyles/paintingsImgs/Nerea.jpeg'
 import cuadro43 from '../pages/pagesStyles/paintingsImgs/Vanessa.jpeg'
+import cuadro44 from '../pages/pagesStyles/paintingsImgs/Butterfly-Queen.jpeg'
+import cuadro45 from '../pages/pagesStyles/paintingsImgs/Lucia.jpeg'
+import cuadro46 from '../pages/pagesStyles/paintingsImgs/Princesa-azul.jpeg'
+import cuadro47 from '../pages/pagesStyles/paintingsImgs/Scarlet.jpeg'
+import cuadro48 from '../pages/pagesStyles/paintingsImgs/El-velo-dorado.jpeg'
 
 
 const cuadros = [
+    { src: cuadro44, title: "Butterfly Queen"},
+    { src: cuadro45, title: "Lucio"},
+    { src: cuadro46, title: "Princesa Azul"},
+    { src: cuadro47, title: "Scarlet"},
+    { src: cuadro48, title: "El Velo Dorado"},
     { src: cuadro42, title: 'Nerea'},
     { src: cuadro43, title: 'Vanessa'},
     { src: cuadro39, title: 'Aurora'},

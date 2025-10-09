@@ -52,6 +52,7 @@ const PaintingSlider = ({ paintings }) => {
     const dotStyle = {
         margin: "0 3px",
         cursor: "pointer",
+        width: "20px"
     };
 
     const goToSlide = (slideIndex) => {
