@@ -191,7 +191,7 @@ form button {
     padding-bottom: 20px;
 }
 .section-agendaText-container p {
-    line-height: 40px;
+    line-height: 2;
 }
 .section-agendaText-flex-column {
     display: flex;

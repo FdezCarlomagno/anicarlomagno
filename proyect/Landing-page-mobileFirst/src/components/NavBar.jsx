@@ -8,6 +8,7 @@ import Eye from './assets/Eye.svg';
 import Printer from './assets/Printer.svg';
 import { motion } from 'framer-motion';
 import toast, { Toaster } from 'react-hot-toast';
+import contactSvg from './assets/contact.svg'
 import { Image } from '@unpic/react'
 
 
@@ -54,12 +55,13 @@ const NavBar = () => {
           animate={menu ? { opacity: 1, height: 'auto' } : { opacity: 1, height: 20}}
           transition={{ duration: 0.5 }}
         >
-          <Link onClick={handleLink} to="/"><motion.li><Image className='svg' src={homeSvg} alt="Home svg"/>INICIO</motion.li></Link>
-          <Link onClick={handleLink} to="/elegir"><motion.li><Image className='svg' src={paintBrush} alt="Paintbrush svg"/>OBRAS</motion.li></Link>
-          <Link onClick={handleLink} to="/agendas"><motion.li><Image className='svg' src={bookSvg} alt="Book svg"/>AGENDAS Y CUADERNOS</motion.li></Link>
-          <Link onClick={handleLink} to="/mi-libro"><motion.li><Image className='svg' src={Eye} alt="Eye svg"/>LIBROS</motion.li></Link>
-          <Link onClick={handleLink} to="/laminas"><motion.li><Image className='svg' src={Printer} alt="Printer svg"/>LÁMINAS</motion.li></Link>
-          <Link onClick={handleLink} to="/sobre-mi"><motion.li><Image className='svg' src={diamondSvg} alt="Diamond svg"/>SOBRE MI</motion.li></Link>
+          <Link onClick={handleLink} to="/"><motion.li><Image className='svg' src={homeSvg} alt="Home svg"/>Inicio</motion.li></Link>
+          <Link onClick={handleLink} to="/elegir"><motion.li><Image className='svg' src={paintBrush} alt="Paintbrush svg"/>Obras</motion.li></Link>
+          <Link onClick={handleLink} to="/agendas"><motion.li><Image className='svg' src={bookSvg} alt="Book svg"/>Agendas y cuadernos</motion.li></Link>
+          <Link onClick={handleLink} to="/mi-libro"><motion.li><Image className='svg' src={Eye} alt="Eye svg"/>Libros</motion.li></Link>
+          <Link onClick={handleLink} to="/laminas"><motion.li><Image className='svg' src={Printer} alt="Printer svg"/>Láminas</motion.li></Link>
+          <Link onClick={handleLink} to="/sobre-mi"><motion.li><Image className='svg' src={diamondSvg} alt="Diamond svg"/>Sobre mí</motion.li></Link>
+          <Link onClick={handleLink} to="/contacto"><motion.li><Image className='svg' src={contactSvg} alt="Diamond svg"/>Contacto</motion.li></Link>
         </motion.ul>
       </motion.div>
     </nav>

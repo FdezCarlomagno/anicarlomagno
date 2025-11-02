@@ -38,9 +38,9 @@ const LandingPage = () => {
           <Route path="/agenda-personalizada" element={<CustomAgenda />} />
           <Route path="/mi-libro" element={<PersonalBook />} />
           <Route path="/laminas" element={<Laminas />} />
+          <Route path='/contacto' element={<Contact />}/>
           <Route path="*" element={<Home />} /> {/* Ruta por defecto */}
         </Routes>
-        <Contact />
         <Envio />
         <FooterNavbar />
         <footer>
