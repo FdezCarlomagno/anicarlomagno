@@ -1,0 +1,7 @@
+export const agendaPrices = {
+    AGENDA_PERPETUA: 25900,
+    AGENDA_DOCENTE: 25900,
+    AGENDA_SEMANAL: 23900,
+    CUADERNO: 16900,
+    SIN_PRECIO: 0
+}

@@ -5,6 +5,7 @@ import { useInView } from 'react-intersection-observer';
 import AgendaPreview from './AgendaPreview';
 import { motion } from 'framer-motion';
 import toast, { Toaster } from 'react-hot-toast';
+import { agendaPrices } from './config/AgendaPrices';
 
 const AgendaForm = ({ cantAgendas, onSave, agendasGuardadas }) => {
     const [agendaPrice, setAgendaPrice] = useState(0);
@@ -49,17 +50,19 @@ const AgendaForm = ({ cantAgendas, onSave, agendasGuardadas }) => {
             if (name === 'type') {
                 switch (value) {
                     case 'agenda perpetua':
+                        setAgendaPrice(agendaPrices.AGENDA_PERPETUA);
+                        break;
                     case 'agenda':
-                        setAgendaPrice(19900)
+                        setAgendaPrice(agendaPrices.AGENDA_SEMANAL);
                         break;
                     case 'agenda-docente':
-                        setAgendaPrice(21900);
+                        setAgendaPrice(agendaPrices.AGENDA_DOCENTE);
                         break;
                     case 'cuaderno':
-                        setAgendaPrice(14900);
+                        setAgendaPrice(agendaPrices.CUADERNO);
                         break;
                     default:
-                        setAgendaPrice(0);
+                        setAgendaPrice(agendaPrices.SIN_PRECIO);
                 }
             }
 
@@ -160,7 +163,7 @@ const AgendaForm = ({ cantAgendas, onSave, agendasGuardadas }) => {
                                             <option value="">Seleccione...</option>
                                             <option value="agenda perpetua">Perpetua</option>
                                             <option value="cuaderno">Cuaderno</option>
-                                            <option value="agenda">Agenda semanal 2025</option>
+                                            <option value="agenda">Agenda semanal {new Date().getFullYear() + 1}</option>
                                             <option value="agenda-docente">Agenda docente</option>
                                         </select>
                                     </label>
