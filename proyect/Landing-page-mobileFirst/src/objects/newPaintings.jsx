@@ -50,7 +50,7 @@ import cuadro48 from '../pages/pagesStyles/paintingsImgs/El-velo-dorado.jpeg'
 
 const cuadros = [
     { src: cuadro44, title: "Butterfly Queen"},
-    { src: cuadro45, title: "Lucio"},
+    { src: cuadro45, title: "Lucía"},
     { src: cuadro46, title: "Princesa Azul"},
     { src: cuadro47, title: "Scarlet"},
     { src: cuadro48, title: "El Velo Dorado"},
