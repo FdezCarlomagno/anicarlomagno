@@ -22,6 +22,7 @@ const Slider = () => {
         <div className="container">
             <div className="slider" ref={sliderRef}>
                 {/** Apply animation only if in view */}
+                <div class="video-wrapper">
                 <motion.video
                     loop="loop"
                     src={video}
@@ -36,6 +37,7 @@ const Slider = () => {
                         filter: isVideoLoaded ? 'blur(0px)' : 'blur(8px)', // Apply blur dynamically
                     }}
                 ></motion.video>
+                </div>
 
                 {/* Name and Logo Section */}
                 <div className="nameLogo">

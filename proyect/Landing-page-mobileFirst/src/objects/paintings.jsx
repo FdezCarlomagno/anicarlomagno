@@ -45,7 +45,7 @@ const paintings = [
 
     { src: cuadro19, name: 'Pricesa Azul', price: `$${1231}`, offer: true, description: 'Cuadro en acrilico, realizado sobre bastidor de madera.', size: '50x70', sold: true },
 
-    { src: cuadro20, name: 'Scarlet', price: `$${1231}`, offer: false, description: 'Cuadro en acrilico, realizado sobre bastidor de madera.', size: '45x55', sold: false },
+    { src: cuadro20, name: 'Scarlet', price: `$${1231}`, offer: true, description: 'Cuadro en acrilico, realizado sobre bastidor de madera.', size: '45x55', sold: true },
 
     { src: cuadro21, name: 'El Velo Dorado', price: `$${1231}`, offer: true, description: 'Cuadro en acrilico, realizado sobre bastidor de madera. Fondo realizado con tecnica de stencil y manchas con foil laminador dorado.', size: '60x50', sold: true },
     ,

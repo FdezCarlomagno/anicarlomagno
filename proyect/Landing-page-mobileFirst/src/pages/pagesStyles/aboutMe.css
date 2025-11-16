@@ -1,139 +1,445 @@
-.AboutMe {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 5%;
-    gap: 30px;
-}
-.header-aboutMe-img  img{
+.about-me-wrapper {
     width: 100%;
-    height: 100%;
-    border-radius: 8px; /*50% ?????*/
+    min-height: 100vh;
+}
 
+.titleBg {
+    padding: 38px;
 }
-.header-aboutMe-img h1 {
-    text-align: center;
-    color: blueviolet;
-    margin-bottom: 1rem;
+
+.page-title {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
-.header-aboutMe-img {
-    border-top: 3px solid blueviolet;
-    border-bottom: 3px solid blueviolet;
-    padding: 24px;
-    width: 300px;
-    height: auto;
-    text-align: center;
+
+.about-me-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
-.aboutMe-info {
+
+/* Hero Section */
+.hero-section {
     display: flex;
     flex-direction: column;
+    gap: 30px;
+    margin: 40px 0;
+    background: white;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
-.aboutMe-info li {
-    list-style-type: disc;
-    margin: 5%;
-    margin-left: 10%;
+
+.hero-image-container {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
 }
-.aboutMe-info ul {
-    list-style: none;
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.hero-badge {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    background: linear-gradient(135deg, #a518cf 0%, #764ba2 100%);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 12px blueviolet;
+}
+
+.hero-text {
+    text-align: center;
+}
+
+.hero-name {
+    font-size: 2rem;
+    color: blueviolet;
+    text-align: left;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.hero-quote {
+    font-style: italic;
+    line-height: 1.6;
+    color: #444;
+    border-left: 4px solid blueviolet;
+    padding-left: 20px;
+    margin: 20px 0;
     text-align: left;
 }
-.firstSection-title {
-    width: 300px;
+
+/* Stats Section */
+.stats-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin: 60px 0;
+}
+
+.stat-card {
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(135deg, #a518cf 0%, #764ba2 100%);
+    color: white;
+    padding: 12px;
+    border-radius: 16px;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    box-shadow: 0 8px 24px blueviolet;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.firstSection-title span {
-    color: blueviolet;
-    font-size: 30px;
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 32px rgba(102, 126, 234, 0.4);
 }
-.aboutMe-firstSection {
-    display: flex;
-    flex-direction: column;
+
+.stat-icon {
+    width: 50px;
+    display: block;
 }
-.cita {
-    margin-top: 16px;
-    width: 300px;
+
+.stat-icon img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    display: block;
 }
-.cita p {
-    font-weight: bold;
+
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 10px 0;
 }
-.aboutMe-secondSection {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+.stat-label {
+    font-size: 1rem;
+    opacity: 0.95;
+    font-weight: 500;
+}
+
+/* Style Section */
+.style-section {
+    margin: 60px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 40px;
+    font-weight: 700;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(135deg, #a518cf 0%, #764ba2 100%);
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+.style-grid {
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 20px;
 }
 
-.aboutMe-secondSection details[open] {
-   background-color: aliceblue;
-   padding: 1rem;
-   margin: 1rem;
-   border-radius: 8px;
-   width: 300px;
-}
-.flex-column {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-}
-.flex-column span {
-    font-weight: bold;
-    color: blueviolet;
-}
-summary {
-    font-weight: bold;
-}
-@media(min-width: 768px){
-  .AboutMe .firstSection-container, .AboutMe #firstSection-container2 {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .aboutMe-secondSection details[open] {
-    width: fit-content;
-  }
-  .aboutMe-secondSection  {
-    display: flex;
-    flex-direction: row;
-    align-items: start;
-  }
-  .header-aboutMe-img {
-    width: 1100px;
-  }
-  .header-aboutMe-img img {
-    width: 300px;
-  }
-  .header-aboutMe-img ul {
-    border-bottom: 2px solid gray;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-  
-  }
-  .aboutMe-info li {
-    margin-left: 16px;
-    margin: 32px;
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-    width: inherit;
-  }
- 
- .firstSection-container details p, .AboutMe .firstSection-info div {
-    font-size: 16px;
-  }
-  .header-aboutMe-img h3 {
-    width: 200px;
-  }
-  .firstSection-title .cita {
-    width: 700px;
-  }
-
-
-
-
+.style-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    border: 2px solid #f0f0f0;
+    transition: all 0.3s ease;
 }
 
+.style-card:hover {
+    border-color: #667eea;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.15);
+}
+
+.style-card-title {
+    color: #667eea;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.style-card-description {
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Journey Timeline */
+.journey-section {
+    margin: 60px 0;
+    background: white;
+    padding: 40px 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(135deg, #a518cf 0%, #764ba2 100%);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.timeline-marker {
+    display: none;
+    position: absolute;
+    left: -26px;
+    top: 5px;
+    width: 16px;
+    height: 16px;
+    background: #667eea;
+    border: 3px solid white;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.2);
+}
+
+.timeline-content {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-content {
+    background: #f0f4ff;
+    transform: translateX(5px);
+}
+
+.timeline-year {
+    display: inline-block;
+    background: linear-gradient(135deg, #a518cf 0%, #764ba2 100%);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.timeline-title {
+    color: #333;
+    font-size: 1.2rem;
+    margin: 10px 0;
+    font-weight: 600;
+}
+
+.timeline-description {
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Stories Section */
+.stories-section {
+    margin: 60px 0;
+}
+
+.stories-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.story-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.story-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+.story-image-wrapper {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.story-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.story-card:hover .story-image {
+    transform: scale(1.05);
+}
+
+.story-content {
+    padding: 25px;
+}
+
+.story-title {
+    color: #667eea;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.story-text {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    color: #444;
+    line-height: 1.7;
+}
+
+.story-text.expanded {
+    max-height: 1000px;
+}
+
+.story-text p {
+    margin-bottom: 15px;
+}
+
+.story-text strong {
+    color: #667eea;
+    font-weight: 600;
+}
+
+.story-toggle {
+    background: linear-gradient(135deg, #a518cf 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.story-toggle:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px blueviolet;
+}
+
+.story-toggle:active {
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .page-title {
+        font-size: 3rem;
+    }
+
+    .hero-section {
+        flex-direction: row;
+        align-items: center;
+        gap: 50px;
+        padding: 50px;
+    }
+
+    .hero-image-container {
+        max-width: 350px;
+    }
+
+    .hero-text {
+        flex: 1;
+        text-align: left;
+    }
+
+    .hero-quote {
+        font-size: 1.1rem;
+    }
+
+    .stats-section {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    .style-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .timeline {
+        padding-left: 50px;
+    }
+
+    .timeline::before {
+        left: 15px;
+    }
+
+    .timeline-marker {
+        left: -31px;
+        width: 20px;
+        height: 20px;
+    }
+
+    .stories-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .about-me-content {
+        padding: 40px;
+    }
+
+    .hero-section {
+        padding: 60px;
+    }
+
+    .hero-image-container {
+        max-width: 400px;
+    }
+
+    .style-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

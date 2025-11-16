@@ -1,151 +1,775 @@
+/* Mobile-first approach con diseño mejorado */
+
+/* Variables CSS para consistencia */
+:root {
+    --primary-color: blueviolet;
+    --primary-hover: rgba(137, 43, 226, 0.85);
+    --background-light: aliceblue;
+    --text-dark: #333;
+    --text-gray: #666;
+    --text-light-gray: gray;
+    --border-color: #ddd;
+    --error-color: #e74c3c;
+    --success-color: #27ae60;
+    --border-radius: 8px;
+    --border-radius-small: 6px;
+    --spacing-unit: 1rem;
+}
+
+/* Reset y estilos base */
+* {
+    box-sizing: border-box;
+}
+
+/* Estilos para toast notification */
+.toast-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    font-weight: 600;
+    font-size: 1rem;
+    min-width: 280px;
+    max-width: 400px;
+    animation: slideInRight 400ms ease, fadeOut 500ms ease 3s forwards;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        transform: translateX(400px);
+    }
+}
+
+/* Toast en móvil centrado arriba */
+@media (max-width: 768px) {
+    .toast-notification {
+        top: 20px;
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+        min-width: auto;
+        width: calc(100% - 40px);
+        max-width: 350px;
+        animation: slideInDown 400ms ease, fadeOut 500ms ease 3s forwards;
+    }
+
+    @keyframes slideInDown {
+        from {
+            transform: translate(-50%, -100px);
+            opacity: 0;
+        }
+        to {
+            transform: translate(-50%, 0);
+            opacity: 1;
+        }
+    }
+}
+
+/* MOBILE FIRST - Estilos base para móvil */
 .agendas {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    padding: 1rem;
 }
 
 .titleAndbtn {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 1rem;
 }
 
-.btnAgenda, .buy-book-btn {
-    padding: 70px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+/* Botones con diseño consistente */
+.btnAgenda, .buy-book-btn, .btn-submit {
+    padding: 12px 40px;
     border: none;
     border-radius: 50px;
-    background: blueviolet;
+    background: var(--primary-color);
+    color: white;
     font-size: 1rem;
-    margin-top: 2rem;
-}
-.btnAgenda{
-    margin-top: 5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+    box-shadow: 0 2px 8px rgba(137, 43, 226, 0.3);
 }
 
+.btnAgenda {
+    margin-top: 2rem;
+    transition: all 100ms ease-in-out;
+}
+
+.btnAgenda:hover, .buy-book-btn:hover, .btn-submit:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(137, 43, 226, 0.4);
+}
+
+.btnAgenda:active, .buy-book-btn:active, .btn-submit:active {
+    transform: translateY(0);
+}
+
+/* Botón disabled con estilos apropiados */
+.btn-submit:disabled {
+    background-color: #ccc;
+    color: #888;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+    opacity: 0.6;
+}
+
+.btn-submit:disabled:hover {
+    background-color: #ccc;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Contenedor del formulario mejorado */
 .agendaCustomization {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 32px;
+    gap: 2rem;
+    padding: 1rem;
 }
+
+.form-section {
+    width: 100%;
+    max-width: 600px;
+}
+
 .formContainer {
-    margin: 3rem;
+    margin: 0;
+    width: 100%;
 }
+
 .formContainer form {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 1rem;
-    align-items: center;
-    background-color: aliceblue;
-    padding: 2rem;
-    border-radius: 6px;
+    gap: 1.5rem;
+    background-color: var(--background-light);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
 }
-form label {
-    width: 250px;
+
+/* Título y descripción del formulario */
+.title-agenda-customization {
+    text-align: center;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.title-agenda-customization h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+.title-agenda-customization p {
+    color: var(--text-gray);
+    font-size: 0.9rem;
+}
+
+/* Grupos de formulario con mejor espaciado */
+.form-group {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-}
-form input, form select, textarea{
-    padding: 6px;
-    background-color: aliceblue;
-    border-radius: 6px;
-    margin-top: 2%;
-    color: black;
+    gap: 0.5rem;
 }
 
-form h1 {
-    font-size: 20px;
-}
-.title-agenda-customization {
-    margin-bottom: 32px;
-}
-.title-agenda-customization h1, .title-agenda-customization p {
-    text-align: start;
-}
-.title-agenda-customization p {
-    color: gray;
-    font-size: 13px;
-}
-form button {
-    background-color: blueviolet;
-    padding: 6px;
-    border-radius: 6px;
-    border: none;
-}
-.btnSubmitContainer {
+.form-label {
+    font-weight: 600;
+    color: var(--text-dark);
+    font-size: 0.95rem;
     display: flex;
-    width: 250px;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.required {
+    color: var(--error-color);
+    font-weight: bold;
+}
+
+.help-text {
+    font-size: 0.8rem;
+    font-weight: normal;
+    color: var(--text-gray);
+}
+
+/* Inputs con mejor diseño y feedback visual */
+.form-input, .form-textarea {
+    padding: 12px;
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius-small);
+    background-color: white;
+    color: var(--text-dark);
+    font-size: 0.95rem;
+    transition: all 200ms ease;
+}
+
+.form-input:focus, .form-textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(137, 43, 226, 0.1);
+}
+
+.form-input::placeholder, .form-textarea::placeholder {
+    color: var(--text-light-gray);
+}
+
+/* Estados de validación visual */
+.input-error {
+    border-color: var(--error-color);
+}
+
+.input-error:focus {
+    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+}
+
+.input-success {
+    border-color: var(--success-color);
+}
+
+.error-message {
+    color: var(--error-color);
+    font-size: 0.85rem;
+    display: flex;
     align-items: center;
+    gap: 0.25rem;
+}
+
+.error-message::before {
+    content: '⚠';
+}
+
+/* Input de color personalizado */
+.form-input-color {
+    width: 100%;
+    height: 50px;
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius-small);
+    cursor: pointer;
+    transition: all 200ms ease;
+}
+
+.form-input-color:hover {
+    border-color: var(--primary-color);
+}
+
+/* Fieldset y legend estilizados */
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+legend {
+    font-weight: 600;
+    color: var(--text-dark);
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+}
+
+/* Radio buttons con diseño card */
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius-small);
+    background-color: white;
+    cursor: pointer;
+    transition: all 200ms ease;
+    position: relative;
+}
+
+.radio-option:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 2px 8px rgba(137, 43, 226, 0.15);
+}
+
+.radio-option input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 0.75rem;
+    cursor: pointer;
+    accent-color: var(--primary-color);
+}
+
+.radio-option input[type="radio"]:checked ~ .radio-content {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.radio-option:has(input[type="radio"]:checked) {
+    border-color: var(--primary-color);
+    background-color: rgba(137, 43, 226, 0.05);
+}
+
+.radio-content {
+    display: flex;
     justify-content: space-between;
-}
-#btnSubmitAgenda {
-    padding: 8px;
-}
-.formContainer form input[type="color"] {
-    width: 250px;
-    border: 2px solid gray;
+    align-items: center;
+    flex: 1;
 }
 
-.myAgenda-name-container h2 {
-    font-size: 35px;
+.radio-label {
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
+.radio-price {
+    font-weight: 700;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+/* Badge NUEVO llamativo */
+.badge-new {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a6f);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.radio-option-new {
+    border-color: #ff6b6b;
+    background: linear-gradient(to right, rgba(255, 107, 107, 0.05), transparent);
+}
+
+.radio-option-new:hover {
+    border-color: #ee5a6f;
+    box-shadow: 0 2px 12px rgba(255, 107, 107, 0.3);
+}
+
+/* Radio buttons compactos para papel */
+.radio-group-compact {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.radio-option-small {
+    padding: 0.75rem 1rem;
+    flex: 1;
+    min-width: 140px;
+}
+
+.radio-option-small input[type="radio"] {
+    width: 18px;
+    height: 18px;
+}
+
+/* Grid para ubicación del nombre */
+.radio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+}
+
+/* Checkbox mejorado */
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    background-color: white;
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius-small);
+    cursor: pointer;
+    transition: all 200ms ease;
+}
+
+.checkbox-label:hover {
+    border-color: var(--primary-color);
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: var(--primary-color);
+}
+
+.checkbox-label:has(input[type="checkbox"]:checked) {
+    border-color: var(--primary-color);
+    background-color: rgba(137, 43, 226, 0.05);
+}
+
+/* Campos condicionales con animación */
+.conditional-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: rgba(137, 43, 226, 0.03);
+    border-left: 3px solid var(--primary-color);
+    border-radius: var(--border-radius-small);
+    animation: slideDown 300ms ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Feedback visual de obra seleccionada */
+.selected-artwork {
+    padding: 0.75rem;
+    background-color: rgba(39, 174, 96, 0.1);
+    border: 1px solid var(--success-color);
+    border-radius: var(--border-radius-small);
+    color: var(--success-color);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* Botón de envío con precio */
+.form-submit {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+    margin-top: 1rem;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 14px;
+    font-size: 1.05rem;
+}
+
+.price-display {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: white;
+    border: 2px solid var(--primary-color);
+    border-radius: var(--border-radius-small);
+}
+
+.price-label {
+    font-size: 0.95rem;
+    color: var(--text-gray);
+    font-weight: 600;
+}
+
+.price-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+/* Nueva sección NUEVO: Cuaderno A4 */
+.new-product-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 1rem;
+}
+
+.new-product-banner {
+    background: linear-gradient(135deg, rgba(137, 43, 226, 0.1), rgba(255, 107, 107, 0.1));
+    border: 3px solid var(--primary-color);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.new-product-banner::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(137, 43, 226, 0.05) 0%, transparent 70%);
+    animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.badge-new-large {
+    display: inline-block;
+    background: linear-gradient(135deg, #ff6b6b, #ee5a6f);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+    position: relative;
+    z-index: 1;
+}
+
+.new-product-banner h2 {
+    font-size: 2rem;
+    margin: 1rem 0;
+    color: var(--text-dark);
+    position: relative;
+    z-index: 1;
+}
+
+.new-product-banner > p {
+    font-size: 1.1rem;
+    color: var(--text-gray);
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.new-product-features {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 2rem 0;
+    position: relative;
+    z-index: 1;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.feature-icon {
+    font-size: 1.5rem;
+}
+
+.feature span:last-child {
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.new-product-price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-top: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* Nuevos estilos para la galería de imágenes del Cuaderno A4 */
+.cuaderno-gallery {
+    margin: 2rem 0;
+    position: relative;
+    z-index: 1;
+}
+
+.gallery-main-image {
+    width: 100%;
+    max-width: 300px;
+    max-height: 400px;
+    margin: 0 auto;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    background-color: white;
+    padding: 1rem;
+    transition: transform 300ms ease;
+}
+
+.gallery-main-image:hover {
+    transform: scale(1.02);
+}
+
+.gallery-main-image img {
+    width: 100%;
+    height: auto;
+    max-height: 350px;
+    display: block;
+    border-radius: 12px;
+    object-fit: contain;
+}
+
+.gallery-thumbnails {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+    padding: 0 1rem;
+}
+
+.gallery-thumbnail {
+    width: 50px;
+    height: 65px;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 3px solid transparent;
+    transition: all 250ms ease;
+    background-color: white;
+    padding: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-thumbnail:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(137, 43, 226, 0.3);
+    border-color: var(--primary-color);
+}
+
+.gallery-thumbnail.active {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(137, 43, 226, 0.2);
+    transform: scale(1.05);
+}
+
+.gallery-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* Animación de entrada para la galería */
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.cuaderno-gallery {
+    animation: fadeInScale 500ms ease;
+}
+
+/* Estilos existentes mantenidos */
 .customAgenda {
-    margin: 2rem;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: var(--background-light);
+    padding: 1rem;
+    border-radius: var(--border-radius);
 }
 
 .customAgenda h2 {
     font-family: 'Dancing Script', cursive;
-    font-size: 30px;
+    font-size: 1.5rem;
     text-align: center;
 }
+
+.customAgenda img {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--border-radius-small);
+}
+
+.myAgenda-img-container {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+}
+
 .arriba-derecha, .arriba-izquierda, .abajo-derecha, .abajo-izquierda {
     position: absolute;
+    font-size: 1.2rem;
 }
+
 .arriba-derecha {
     top: 2%;
     right: 5%;
 }
+
 .arriba-izquierda {
     top: 2%;
     left: 5%;
 }
+
 .abajo-izquierda {
     bottom: 8%;
     left: 5%;
 }
+
 .abajo-derecha {
     bottom: 8%;
     right: 5%;
 }
-.myAgenda-img-container {
-    position: relative;
-}
-.customAgenda img {
-    width: 100%;
-    height: 100%;
-    border-radius: 6px;
-}
-.customAgenda {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    background-color: aliceblue;
-    padding: 1rem;
-    border-radius: 8px;
-}
-
-
-
 
 .agenda-price-container h3 {
-   font-family: 'Dancing Script';
-   font-size: 25px;
+    font-family: 'Dancing Script';
+    font-size: 1.5rem;
 }
 
 .agendaPageContainer {
@@ -153,147 +777,183 @@ form button {
     flex-direction: column;
     align-items: center;
     gap: 30px;
-    margin: 10%;
+    padding: 1rem;
+    margin-bottom: 2rem;
 }
+
 .agendaPageContainer img {
     width: 100%;
     height: 100%;
-    border-radius: 12px 0px 0 12px;
+    border-radius: 12px;
     border: none;
 }
-.agendaPageContainer .agendaContainer {
+
+.agendaContainer {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: start;
-    height: 300px;
-    width: auto;
-    padding: 0px;
-    padding-right: 5rem;
-    background-color: aliceblue;
+    width: 100%;
+    background-color: var(--background-light);
+    border-radius: var(--border-radius);
 }
+
 .section-agendaText {
-    margin: 5%;
-    margin-top: 10%;
+    margin: 1rem;
 }
-.section-agendaText-container h2 {
-    font-family: 'Dancing Script', cursive;
-    font-size: 38px;
-}
+
 .section-agendaText-container {
-    display:flex;
+    display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    border-top: 3px solid blueviolet;
-    border-bottom: 3px solid blueviolet;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    border-top: 3px solid var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+    padding: 20px;
 }
+
+.section-agendaText-container h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+}
+
 .section-agendaText-container p {
-    line-height: 2;
+    line-height: 1.8;
 }
+
 .section-agendaText-flex-column {
     display: flex;
     flex-direction: column;
     gap: 30px;
-
 }
-.section-agendaText-flex-column  span {
+
+.section-agendaText-flex-column span {
     font-weight: bold;
-    color: blueviolet;
+    color: var(--primary-color);
 }
 
+/* Dropdown de imágenes mejorado */
 .dropDownImgs-container {
-    height: 250px;
-    border-radius: 12px;
-    padding: 12px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow-x: scroll;
+    max-height: 300px;
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 1rem;
+    overflow-y: auto;
+    background-color: white;
 }
+
 .dropDownImgs-container img {
-    width: 150px;
-    height: auto;
-    border-radius: 12px;
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: var(--border-radius-small);
+    cursor: pointer;
+    transition: all 200ms ease;
+    border: 2px solid transparent;
 }
+
+.dropDownImgs-container img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-color: var(--primary-color);
+}
+
+.dropDownImgs-container img.selected {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(137, 43, 226, 0.2);
+}
+
 .dropDownAgendas {
-    border: 2px solid gray;
-    padding: 4px;
-    border-radius: 8px;
+    border: 2px solid var(--border-color);
+    padding: 0.5rem;
+    border-radius: var(--border-radius-small);
+    background-color: white;
 }
+
 .dropDownArrow {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-}
-.dropDownAgendas-btn {
-    background-color: transparent;
-    color: black;
+    cursor: pointer;
 }
 
-.checkbox-agenda {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    margin-bottom: 10px;
+.dropDownArrow p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--text-gray);
+}
+
+.dropDownAgendas-btn {
+    background-color: transparent;
+    color: var(--text-dark);
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    transition: transform 200ms ease;
+}
+
+.dropDownAgendas-btn:hover {
+    transform: scale(1.1);
 }
 
 .saved-agendas {
     text-align: center;
+    margin: 2rem 0;
 }
 
 .agenda-count-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 1rem auto; /* Centrar horizontalmente */
-    background-color: #f0f8ff; /* Color más suave */
-    border-radius: 12px; /* Bordes más redondeados */
-    padding: 1.5rem; /* Más espacio interno */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    max-width: 200px; /* Asegurarse de que no se desborde en pantallas pequeñas */
-    width: 100%; /* Ocupa todo el espacio posible */
+    margin: 1.5rem auto;
+    background-color: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    width: 100%;
 }
+
 .agenda-count-container h3 {
     text-align: center;
     margin-top: 1rem;
-    border-radius: 6px;
-    border: 2px solid gray;
+    padding: 0.75rem;
+    border-radius: var(--border-radius-small);
+    border: 2px solid var(--border-color);
 }
 
 .agenda-count {
     display: flex;
     align-items: center;
-    justify-content: center; /* Centrado más preciso */
-    gap: 1.5rem; /* Mayor separación entre elementos */
-    flex-wrap: wrap; /* Permitir que los botones se envuelvan en pantallas pequeñas */
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
 }
 
 .agenda-count button {
-    flex: 1;
-    font-size: 1.5rem; /* Tamaño de texto responsivo */
-    background-color: #8a2be2; /* Azul violeta más vibrante */
-    color: white; /* Texto blanco para mejor contraste */
-    border-radius: 8px; /* Bordes más redondeados */
+    padding: 0.75rem 1.5rem;
+    font-size: 1.2rem;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: var(--border-radius);
     border: none;
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Animaciones suaves */
-    cursor: pointer; /* Mostrar que es interactivo */
-    max-width: 150px; /* Limitar el ancho de los botones */
-    width: 100%; /* Adaptar al contenedor */
+    transition: all 200ms ease;
+    cursor: pointer;
+    min-width: 50px;
 }
 
-
 .agenda-count button:hover {
-    background-color: #7a26c2; /* Color más oscuro al pasar el mouse */
-    transform: scale(1.05); /* Aumentar ligeramente el tamaño */
+    background-color: var(--primary-hover);
+    transform: scale(1.05);
 }
 
 .agenda-count button:active {
-    background-color: #6820a5; /* Color aún más oscuro al presionar */
-    transform: scale(0.95); /* Efecto de presión */
+    transform: scale(0.95);
 }
 
 .align-left {
@@ -303,106 +963,217 @@ form button {
     gap: 1rem;
     text-align: left;
 }
+
 .delete-agenda {
-    padding: 6px;
+    padding: 0.5rem 1rem;
     border: none;
-    border-radius: 6px;
-    background-color: blueviolet;
+    border-radius: var(--border-radius-small);
+    background-color: var(--error-color);
+    color: white;
+    cursor: pointer;
+    transition: all 200ms ease;
+}
+
+.delete-agenda:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
 }
 
 .encargar {
     margin-top: 3rem;
-    width: 80%;
+    width: 100%;
+    max-width: 400px;
 }
 
 .preview-text {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
     text-align: center;
+    margin: 1rem 0;
 }
 
-
-/*DESKTOP STYLES FOR AGENDAS*/
-@media(min-width: 768px){
+/* TABLET - 768px+ */
+@media(min-width: 768px) {
     .agendas {
-        display: flex;
         flex-direction: row;
         align-items: center;
-        margin-right: 8%;
-        margin-left: 8%;
+        padding: 2rem;
     }
-    .agendaPageContainer {
-        margin: 3%;
-    }
-    .agendas button {
-        transition: all 200ms ease-in-out;
-    }
-    .agendas button:hover {
-        background-color: rgba(137, 43, 226, 0.726);
-        transform: scale(1.04);
-    }
+
     .agendaCustomization {
-        display: flex;
         flex-direction: row;
-        align-items: center;
-        gap: 100px;
-        margin-left: 20%;
-        margin-right: 15%;
-        margin-top: 3rem;
-    }
-    .agendaCustomization img {
-        height: 400px;
-        width: auto;
-        object-fit: cover;
-    }
-    .agendaCustomization form {
-        width: 250px;
-    }
-    .dropDownImgs-container img {
-        width: 150px;
-        height: auto;
-        border-radius: 12px;
-        object-fit: cover;
-    }
-    .dropDownAgendas {
-        border: 2px solid gray;
-        padding: 4px;
-        
-        border-radius: 8px;
-    }
-    .dropDownImgs-container {
-        overflow-x: hidden !important;
-    }
-    
-    .dropDownArrow {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .dropDownAgendas-btn {
-        background-color: transparent;
-        color: black;
-    }
-    .btnAgenda {
-        font-size: 32px;
-    }
-    .customAgenda {
-        width: fit-content;
-        
-    }
-    .saved-agendas-container {
-        margin: 20px auto;
-        display: flex;
         justify-content: center;
-        flex-wrap: wrap;
-        columns: 3;
-        column-gap: 12px;
+        gap: 3rem;
+        padding: 2rem;
     }
-    .saved-agendas-container img {
-        width: 300px;
-        height: auto;
-        object-fit: cover;
+
+    .form-section {
+        flex: 1;
+        max-width: 500px;
+    }
+
+    .formContainer form {
+        padding: 2rem;
+    }
+
+    .title-agenda-customization h1 {
+        font-size: 1.75rem;
+    }
+
+    .customAgenda {
+        flex: 1;
+        max-width: 500px;
+    }
+
+    .myAgenda-img-container {
+        max-width: 400px;
+    }
+
+    .customAgenda h2 {
+        font-size: 2rem;
+    }
+
+    .new-product-features {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .feature {
+        flex-direction: column;
+        flex: 1;
+    }
+
+    .form-submit {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .btn-submit {
+        flex: 1;
+    }
+
+    .price-display {
+        flex: 0 0 auto;
+        min-width: 150px;
+    }
+
+    .agendaContainer {
+        flex-direction: row;
+    }
+
+    .dropDownImgs-container {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .dropDownImgs-container img {
+        height: 150px;
+    }
+
+    /* Responsive para la galería */
+    .gallery-main-image {
+        max-width: 350px;
+        max-height: 450px;
     }
     
+    .gallery-main-image img {
+        max-height: 400px;
+    }
+    
+    .gallery-thumbnails {
+        gap: 1rem;
+    }
+    
+    .gallery-thumbnail {
+        width: 60px;
+        height: 80px;
+    }
+}
+
+/* DESKTOP - 1024px+ */
+@media(min-width: 1024px) {
+    .agendaCustomization {
+        gap: 5rem;
+    }
+
+    .btnAgenda {
+        font-size: 1.5rem;
+        padding: 14px 60px;
+    }
+
+    .title-agenda-customization h1 {
+        font-size: 2rem;
+    }
+
+    .new-product-banner h2 {
+        font-size: 2.5rem;
+    }
+
+    .new-product-banner > p {
+        font-size: 1.2rem;
+    }
+
+    .dropDownImgs-container {
+        max-height: 400px;
+    }
+
+    .customAgenda img {
+        max-width: 450px;
+    }
+
+    /* Responsive para la galería */
+    .gallery-main-image {
+        max-width: 400px;
+        max-height: 500px;
+    }
+    
+    .gallery-main-image img {
+        max-height: 450px;
+    }
+    
+    .gallery-thumbnail {
+        width: 70px;
+        height: 90px;
+    }
+}
+
+/* Scrollbar personalizado para dropdown */
+.dropDownImgs-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.dropDownImgs-container::-webkit-scrollbar-track {
+    background: var(--background-light);
+    border-radius: 4px;
+}
+
+.dropDownImgs-container::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 4px;
+}
+
+.dropDownImgs-container::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-hover);
+}
+
+/* Animaciones de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-group {
+    animation: fadeIn 400ms ease;
+}
+
+/* Print styles */
+@media print {
+    .formContainer, .new-product-section {
+        display: none;
+    }
 }

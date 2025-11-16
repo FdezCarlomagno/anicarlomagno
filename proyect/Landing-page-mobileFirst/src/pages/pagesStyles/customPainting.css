@@ -1,141 +1,285 @@
+/* Reset y estilos base mejorados */
 .custom-paintings {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
-.custom-painting-form-container h1 {
-    text-align: left;
-    font-size: 24px;
-}
-.custom-painting-form-container p {
-    color: gray;
-    margin-bottom: 2%;
-    font-size: 12px;
-}
+
 .custom-painting-form-container {
     background-color: aliceblue;
-    width: 250px;
+    width: 100%;
+    max-width: 400px;
     height: fit-content;
-    margin: 5%;
+    margin: 20px auto;
     border: none;
-    border-radius: 8px;
+    border-radius: 12px;
     display: flex;
     flex-direction: column;
     padding: 24px;
-    padding-bottom: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
+
+.custom-painting-form-container h1 {
+    text-align: left;
+    font-size: 24px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.form-subtitle {
+    color: #666;
+    margin-bottom: 16px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
 .custom-painting-form form {
     display: flex;
     flex-direction: column;
-    gap: 16px;
-    padding-top: 16px;
-    padding-bottom: 16px;
-    border-top: 1px solid rgba(128, 128, 128, 0.781);
- 
+    gap: 24px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(128, 128, 128, 0.3);
 }
-.custom-painting-form label {
+
+/* Estilos para campos de formulario con validación */
+.form-field {
     display: flex;
     flex-direction: column;
+    gap: 6px;
 }
-.custom-painting-form  input {
-    background-color: transparent;
-    color: black;
-    border-radius: 6px;
-    padding: 6px;
-}
-.size-input-container {
+
+.form-field label,
+.section-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     align-items: center;
+    gap: 4px;
 }
-.size-input-container input {
-    width: 90px;
+
+.required {
+    color: #e74c3c;
+    font-weight: bold;
 }
-.order-painting-btn {
-    width: 250px;
+
+.help-text {
+    font-size: 12px;
+    color: #666;
+    margin: 0;
+    margin-top: -2px;
 }
-.customPhoto-container {
+
+.form-field input,
+.form-field textarea {
+    background-color: white;
+    color: #333;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    font-family: inherit;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+    outline: none;
+    border-color: blueviolet;
+    box-shadow: 0 0 0 3px rgba(138, 43, 226, 0.1);
+}
+
+/* Estados de validación con feedback visual */
+.field-valid {
+    border-color: #27ae60 !important;
+}
+
+.field-error {
+    border-color: #e74c3c !important;
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 12px;
+    margin-top: 4px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    align-items: center;
+    gap: 4px;
 }
+
+.error-message::before {
+    content: "⚠";
+}
+
+/* Estilos para nombre y apellido sin zig-zag */
+.name-surname-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Sección de dimensiones mejorada */
+.size-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.size-inputs-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.size-field {
+    flex: 1;
+}
+
+.size-field input {
+    width: 100%;
+}
+
+.size-separator {
+    font-size: 24px;
+    font-weight: bold;
+    color: #666;
+    margin-top: 28px;
+}
+
+/* Contador de caracteres */
+.char-counter {
+    font-size: 12px;
+    color: #666;
+    text-align: right;
+    margin-top: 4px;
+}
+
+/* Checkbox mejorado con mejor diseño */
+.custom-photo-option {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 8px;
+    padding: 16px;
+    border: 2px solid #dee2e6;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    cursor: pointer;
+    margin: 0;
+}
+
+.custom-checkbox {
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.checkbox-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.checkbox-text strong {
+    color: #333;
+    font-size: 14px;
+}
+
+.checkbox-subtext {
+    font-size: 12px;
+    color: #666;
+}
+
+/* Botón mejorado con estados */
+.submit-btn {
+    background: linear-gradient(135deg, blueviolet 0%, #9b4dca 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 14px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 8px;
+    box-shadow: 0 4px 12px rgba(138, 43, 226, 0.3);
+}
+
+.submit-btn:hover:not(.btn-disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(138, 43, 226, 0.4);
+}
+
+.btn-disabled {
+    background: linear-gradient(135deg, #ccc 0%, #999 100%);
+    cursor: not-allowed;
+    box-shadow: none;
+    opacity: 0.6;
+}
+
+/* Footer */
 .footer-paintingText {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 12px;
-    margin: 5%;
+    margin: 40px 20px;
     text-align: center;
-    line-height: 2;
-    padding: 16px;
+    line-height: 1.8;
+    padding: 20px;
     border-top: 2px solid blueviolet;
     border-bottom: 2px solid blueviolet;
 }
+
 .footer-paintingText span {
     color: blueviolet;
     font-weight: bold;
 }
-.name-surname-inputs {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-.size-description-container {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-.custom-painting-btn,
-.my-paintings-choose-btn,
-.buy-book-btn,
-.btnAgenda,
-.addToCart {
-    color: aliceblue;
-}
 
-@media(min-width: 768px) {
+/* Media queries para responsive design */
+@media (min-width: 640px) {
     .custom-painting-form-container {
-        width: 750px;
+        max-width: 600px;
+        padding: 32px;
     }
+
     .name-surname-inputs {
-        width: 750px;
-        display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        gap: 16px;
     }
-    .name-surname-inputs label {
-        width: 340px;
-    }
-    .size-input-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        align-items: start;
-        gap: 10px;
-    }
-    .size-input-container input {
-        width: 150px;
-    }
-    .flex-row {
-        display: flex;
-        flex-direction: row;
-        gap: 10rem;
-    }
-    .size-description-container {
-        display: flex;
-        align-items: start;
-        justify-content: space-around;
-    }
-    .order-painting-btn {
-        width: 750px;
-        font-size: 24px;
-        transition: all 200ms ease-in-out;
-    }
-    .order-painting-btn:hover {
-        background-color: rgba(137, 43, 226, 0.795);
-        transform: scale(1.03);
+
+    .name-surname-inputs .form-field {
+        flex: 1;
     }
 }
 
+@media (min-width: 768px) {
+    .custom-painting-form-container {
+        max-width: 700px;
+    }
+
+    .custom-painting-form-container h1 {
+        font-size: 28px;
+    }
+
+    .form-subtitle {
+        font-size: 15px;
+    }
+
+    .submit-btn {
+        font-size: 18px;
+        padding: 16px 32px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .custom-painting-form-container {
+        max-width: 800px;
+    }
+}

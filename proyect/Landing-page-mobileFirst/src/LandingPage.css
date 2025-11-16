@@ -25,7 +25,6 @@
 body {
     overflow-x: hidden;
     min-height: 100vh;
-    min-width: 100vw;
 }
 
 * {
@@ -43,6 +42,7 @@ nav {
     position: sticky;
     top: 0;
     display: flex;
+    z-index: 9999;
     /*flex-direction: row-reverse;*/
     justify-content: space-between;
     align-items: center;
@@ -118,7 +118,7 @@ nav li {
     padding: 6px;
     padding-bottom: 15px;
     border-radius: 0 0 5px 5px;
-    z-index: 999;
+    z-index: 99999;
     border-top: 4px solid blueviolet;
     box-shadow: 1px 22px 34px 0px rgba(163, 6, 240, 0.75);
     -webkit-box-shadow: 1px 22px 34px 0px rgba(163, 6, 240, 0.75);
@@ -140,7 +140,6 @@ a {
 .container {
     max-width: 768px;
     width: 100%;
-    z-index: 10;
 }
 
 .column {
@@ -172,6 +171,7 @@ a {
     width: 100%;
 }
 
+
 .nameLogo {
     display: flex;
     justify-content: center;
@@ -198,8 +198,9 @@ a {
     margin-top: -20px;
     font-family: "Dancing Script";
     font-size: 30px;
-    color: blueviolet;
     margin-bottom: 12px;
+    color: rgb(202, 152, 248);
+
 }
 
 .btnMyPaintings {
@@ -225,7 +226,7 @@ a {
     justify-content: center;
     align-items: center;
     margin-top: 8px;
-    gap: 12px;
+    gap: 1rem;
 }
 
 
@@ -401,9 +402,7 @@ footer p {
 
 .agendaContainer img {
     border: none;
-    border-radius: 16px 16px 0 0;
-    width: 100%;
-    margin-bottom: 10px;
+    border-radius: 16px;
     height: 100%;
 }
 
@@ -411,8 +410,6 @@ footer p {
     background-color: rgba(137, 43, 226, 0.274);
     border-radius: 10px;
     height: 200px;
-    width: 100px;
-    padding-bottom: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -437,9 +434,7 @@ footer p {
     padding: 10px;
 }
 
-.firstSectionContainer,
 #firstSection-container2,
-section,
 .titleAgendas,
 .secondSection,
 .secondSectionInfo,
@@ -464,8 +459,34 @@ section,
     display: block;
 }
 
-video {
+.video-wrapper {
+    position: relative;
     width: 100%;
+}
+
+.video-wrapper video {
+    width: 100%;
+    display: block;
+    position: relative;
+}
+
+
+/* Overlay sutil */
+.video-wrapper::after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.25) 0%,
+        rgba(0, 0, 0, 0.486) 100%
+    );
+
 }
 
 
@@ -568,6 +589,7 @@ video {
     color: black;
     padding-left: 12px;
     padding-right: 12px;
+    margin-top: 1rem;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -690,6 +712,14 @@ textarea {
 }
 
 
+.firstSection-info span {
+    color: blueviolet;
+    font-weight: bold;
+}
+
+
+
+
 /*RESPONSIVE DESIGN*/
 
 @media(min-width: 768px) {
@@ -731,6 +761,7 @@ textarea {
         position: -webkit-sticky;
         position: sticky;
         top: 0;
+        height: 70px;
     }
 
     .navBar h1 {
@@ -774,8 +805,8 @@ textarea {
     }
 
     .container {
-        max-width: 1350px;
-        height: 350px;
+        max-width: 100%;
+        height: 400px;
         overflow: hidden;
         position: relative;
     }
@@ -812,7 +843,6 @@ textarea {
 
     .nameLogo h2 {
         font-size: 40px;
-        color: blueviolet;
     }
 
     .firstSection {
@@ -830,6 +860,7 @@ textarea {
         justify-content: center;
         flex-direction: row;
         gap: 40px;
+        margin-top: 1rem;
     }
 
     .firstSection-container img {
@@ -947,10 +978,13 @@ textarea {
     }
 
     .agendaContainer img {
+    width: 100%;
         border: none;
-        width: 100%;
-        margin-bottom: 10px;
-        height: 100%;
+    }
+    
+    .agendaContainer:hover {
+        cursor: pointer;
+        transform: scale(1.04) !important;
     }
 
     .agendaContainer {

@@ -11,9 +11,9 @@ const AgendaPreview = ({ formData, imgRef, imgInView, nameStyles, selectedImage 
         <>
             <motion.div
                 ref={imgRef}
-                initial={{ opacity: 0, y: 20 }}
-                animate={imgInView ? { opacity: 1, y: 0 } : {}}
+        
                 transition={{ duration: 0.5 }}
+                className='agenda-preview'
             >
                 <p className='preview-text'>Vista previa</p>
 
