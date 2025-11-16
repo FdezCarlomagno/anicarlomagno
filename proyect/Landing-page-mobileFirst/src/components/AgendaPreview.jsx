@@ -32,9 +32,9 @@ const AgendaPreview = ({ formData, imgRef, imgInView, nameStyles, selectedImage 
                         <div>
                         </div>
                         {selectedImage && <>
-                            <p className='text-left'>
-                                <p>Medida de {formData.type}: <span>15.5cm x 21.5cm</span></p>
-                                <p>N° de Hojas: <span>100</span></p>
+                           <p className='text-left'>
+                             Medida de {formData.type}: <span>{formData.type === 'cuaderno-a4' ? '21cm x 29,7cm' : '15.5cm x 21.5cm'}</span><br />
+                             N° de Hojas: <span>100</span>
                             </p>
                         </>
                         }
