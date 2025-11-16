@@ -23,8 +23,14 @@
 
 /*APP*/
 body {
-    overflow-x: hidden;
+    overflow: hidden;
     min-height: 100vh;
+    overscroll-behavior: none;
+}
+
+html {
+    overscroll-behavior: none;
+    overflow: hidden;
 }
 
 * {
