@@ -361,7 +361,7 @@ legend {
 
 /* Badge NUEVO llamativo */
 .badge-new {
-    background: linear-gradient(135deg, #ff6b6b, #ee5a6f);
+    background: linear-gradient(135deg, #35f59b, #5aeebd);
     color: white;
     padding: 2px 8px;
     border-radius: 4px;
@@ -381,13 +381,13 @@ legend {
 }
 
 .radio-option-new {
-    border-color: #ff6b6b;
+    border-color: #1be44d;
     background: linear-gradient(to right, rgba(255, 107, 107, 0.05), transparent);
 }
 
 .radio-option-new:hover {
-    border-color: #ee5a6f;
-    box-shadow: 0 2px 12px rgba(255, 107, 107, 0.3);
+    border-color: #018f24;
+    box-shadow: 0 2px 12px rgba(119, 255, 107, 0.3);
 }
 
 /* Radio buttons compactos para papel */
@@ -555,7 +555,7 @@ legend {
 
 .badge-new-large {
     display: inline-block;
-    background: linear-gradient(135deg, #ff6b6b, #ee5a6f);
+    background: linear-gradient(135deg, #35f59b, #5aeebd);
     color: white;
     padding: 8px 20px;
     border-radius: 25px;
@@ -565,7 +565,6 @@ legend {
     margin-bottom: 1rem;
     box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
     position: relative;
-    z-index: 1;
 }
 
 .new-product-banner h2 {
@@ -573,7 +572,6 @@ legend {
     margin: 1rem 0;
     color: var(--text-dark);
     position: relative;
-    z-index: 1;
 }
 
 .new-product-banner > p {
@@ -581,7 +579,6 @@ legend {
     color: var(--text-gray);
     margin-bottom: 1.5rem;
     position: relative;
-    z-index: 1;
 }
 
 .new-product-features {
@@ -590,7 +587,6 @@ legend {
     gap: 1rem;
     margin: 2rem 0;
     position: relative;
-    z-index: 1;
 }
 
 .feature {
@@ -619,14 +615,12 @@ legend {
     color: var(--primary-color);
     margin-top: 1.5rem;
     position: relative;
-    z-index: 1;
 }
 
 /* Nuevos estilos para la galería de imágenes del Cuaderno A4 */
 .cuaderno-gallery {
     margin: 2rem 0;
     position: relative;
-    z-index: 1;
 }
 
 .gallery-main-image {

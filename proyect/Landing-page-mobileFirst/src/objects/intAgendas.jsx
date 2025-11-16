@@ -18,9 +18,7 @@ import Agenda17 from '../objects/intAgendas/intAgenda17.jpeg'
 
 
 const intAgendas = [
-    {
-        src: Agenda8
-    },
+
     {
         src: Agenda9
     },
