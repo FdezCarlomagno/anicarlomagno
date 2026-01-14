@@ -200,62 +200,69 @@ const AgendaForm = () => {
         return encodeURIComponent(message);
     };
 
-    const handleFormSubmit = async (e) => {
-        e.preventDefault();
+    const handleFormSubmit = (e) => {
+  e.preventDefault();
 
-        const newErrors = {};
-        Object.keys(formData).forEach(key => {
-            const error = validateField(key, formData[key]);
-            if (error) newErrors[key] = error;
-        });
+  // 🔎 Validaciones
+  const newErrors = {};
+  Object.keys(formData).forEach((key) => {
+    const error = validateField(key, formData[key]);
+    if (error) newErrors[key] = error;
+  });
 
-        if (!formData.type || !formData.paper) {
-            showToastMessage('❌ Por favor completa todos los campos obligatorios');
-            return;
-        }
+  if (!formData.type || !formData.paper) {
+    showToastMessage('❌ Por favor completa todos los campos obligatorios');
+    return;
+  }
 
-        if (Object.keys(newErrors).length > 0) {
-            setErrors(newErrors);
-            setTouched(Object.keys(formData).reduce((acc, key) => ({ ...acc, [key]: true }), {}));
-            showToastMessage('❌ Por favor corrige los errores en el formulario');
-            return;
-        }
+  if (Object.keys(newErrors).length > 0) {
+    setErrors(newErrors);
+    setTouched(
+      Object.keys(formData).reduce(
+        (acc, key) => ({ ...acc, [key]: true }),
+        {}
+      )
+    );
+    showToastMessage('❌ Por favor corrige los errores en el formulario');
+    return;
+  }
 
-        setIsProcessing(true);
-        showToastMessage('⏳ Preparando tu pedido...');
+  // ⏳ Feedback inmediato
+  setIsProcessing(true);
+  showToastMessage('⏳ Preparando tu pedido...');
 
-        setTimeout(() => {
-            showToastMessage('✅ ¡Pedido listo! Redirigiendo a WhatsApp...');
-            playSuccessSound();
+  // 🔑 ABRIR WHATSAPP INMEDIATAMENTE (evita popup blocked)
+  const whatsappURL = `https://api.whatsapp.com/send?phone=542494245966&text=${buildWhatsAppMessage()}`;
+  window.open(whatsappURL, '_blank');
 
-            setTimeout(() => {
-                const whatsappURL = `https://api.whatsapp.com/send?phone=542494245966&text=${buildWhatsAppMessage()}`;
-                window.open(whatsappURL, '_blank');
-                setIsProcessing(false);
+  // ✅ Feedback posterior + reset
+  setTimeout(() => {
+    showToastMessage('✅ ¡Pedido enviado!');
+    playSuccessSound();
+    setIsProcessing(false);
 
-                // Reset form
-                setFormData({
-                    type: '',
-                    username: '',
-                    paper: '',
-                    fontColor: '#000000',
-                    textDirection: '',
-                    other: '',
-                    bgImg: '',
-                    quote: null,
-                    price: 0,
-                    checkbox: false,
-                    name: null
-                });
-                setSelectedImage(null);
-                setAgendaPrice(0);
-                setFormQuote(false);
-                setErrors({});
-                setTouched({});
+    // 🔄 Reset form
+    setFormData({
+      type: '',
+      username: '',
+      paper: '',
+      fontColor: '#000000',
+      textDirection: '',
+      other: '',
+      bgImg: '',
+      quote: null,
+      price: 0,
+      checkbox: false,
+      name: null
+    });
 
-            }, 2000);
-        }, 3000);
-    };
+    setSelectedImage(null);
+    setAgendaPrice(0);
+    setFormQuote(false);
+    setErrors({});
+    setTouched({});
+  }, 2000);
+};
 
 
     const nameStyles = {
