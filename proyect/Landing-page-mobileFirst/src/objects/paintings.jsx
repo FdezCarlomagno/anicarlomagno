@@ -14,9 +14,12 @@ import cuadro18 from '../pages/pagesStyles/paintingsImgs/Lucia.jpeg'
 import cuadro19 from '../pages/pagesStyles/paintingsImgs/Princesa-azul.jpeg'
 import cuadro20 from '../pages/pagesStyles/paintingsImgs/Scarlet.jpeg'
 import cuadro21 from '../pages/pagesStyles/paintingsImgs/El-velo-dorado.jpeg'
+import cuadro22 from '../pages/pagesStyles/paintingsImgs/Iris.jpeg'
 
 
 const paintings = [
+    { src: cuadro22, name: 'Iris', price: `$${1231}`, offer: true, description: 'Cuadro en acrilico, realizado sobre bastidor circular de madera.', size: '60x60', sold: false },
+
     { src: cuadro7, name: 'Cáncer', price: `$${4635}`, offer: true, description: 'Cuadro en acrilico, realizado sobre bastidor de madera. Detalles en dorado.', size: '80x50', sold: false },
 
     { src: cuadro11, name: 'La Dama de Rosa', price: `$${23427}`, offer: true, description: 'Cuadro en acrilico, realizado sobre bastidor de madera. Fondo realizado con manchas en foil laminador dorado. Detalles con lentejuelas.', size: '80x60', sold: false },
@@ -48,7 +51,8 @@ const paintings = [
     { src: cuadro20, name: 'Scarlet', price: `$${1231}`, offer: true, description: 'Cuadro en acrilico, realizado sobre bastidor de madera.', size: '45x55', sold: true },
 
     { src: cuadro21, name: 'El Velo Dorado', price: `$${1231}`, offer: true, description: 'Cuadro en acrilico, realizado sobre bastidor de madera. Fondo realizado con tecnica de stencil y manchas con foil laminador dorado.', size: '60x50', sold: true },
-    ,
+
+
 ]
 
 export default paintings
