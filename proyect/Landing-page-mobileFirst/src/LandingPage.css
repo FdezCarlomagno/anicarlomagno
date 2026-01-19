@@ -25,7 +25,6 @@
 body {
     overflow-x: hidden;
     min-height: 100vh;
-    overscroll-behavior: none;
 }
 
 html {
@@ -370,7 +369,7 @@ footer,
 }
 
 .titleBg h1 {
-    font-size: 28px;
+    font-size: 24px;
     color: aliceblue;
 }
 
@@ -764,7 +763,6 @@ textarea {
     }
 
     .navBar {
-        position: -webkit-sticky;
         position: sticky;
         top: 0;
         height: 70px;

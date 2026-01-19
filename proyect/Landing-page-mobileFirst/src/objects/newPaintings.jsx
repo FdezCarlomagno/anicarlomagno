@@ -46,10 +46,22 @@ import cuadro45 from '../pages/pagesStyles/paintingsImgs/Lucia.jpeg'
 import cuadro46 from '../pages/pagesStyles/paintingsImgs/Princesa-azul.jpeg'
 import cuadro47 from '../pages/pagesStyles/paintingsImgs/Scarlet.jpeg'
 import cuadro48 from '../pages/pagesStyles/paintingsImgs/El-velo-dorado.jpeg'
+import cuadro49 from '../pages/pagesStyles/paintingsImgs/Iris.jpeg'
+import cuadro50 from '../pages/pagesStyles/paintingsImgs/Helena.jpeg'
+import cuadro51 from '../pages/pagesStyles/paintingsImgs/la-culpable-flores.jpeg'
+import cuadro52 from '../pages/pagesStyles/paintingsImgs/la-culpable-mariposas.jpeg'
+import cuadro53 from '../pages/pagesStyles/paintingsImgs/la-dama-de-rosa-mariposas.jpeg'
+
+
 
 
 const cuadros = [
+    { src: cuadro49, title: "Iris"},
     { src: cuadro44, title: "Butterfly Queen"},
+    { src: cuadro50, title: "Helena"},
+    { src: cuadro51, title: "La Culpable (con flores)"},
+    { src: cuadro52, title: "La Culpable (con mariposas)"},
+    { src: cuadro53, title: "La Dama de Rosa (con mariposas)"},
     { src: cuadro45, title: "Lucía"},
     { src: cuadro46, title: "Princesa Azul"},
     { src: cuadro47, title: "Scarlet"},

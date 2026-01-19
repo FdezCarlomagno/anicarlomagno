@@ -101,44 +101,58 @@ const AgendaForm = () => {
         setErrors({ ...errors, bgImg: error });
     };
 
+        const calculatePrice = (type, hasQuote) => {
+        let basePrice = 0;
+
+        switch (type) {
+            case 'agenda-perpetua':
+                basePrice = agendaPrices.AGENDA_PERPETUA;
+                break;
+            case 'agenda-semanal':
+                basePrice = agendaPrices.AGENDA_SEMANAL;
+                break;
+            case 'agenda-docente':
+                basePrice = agendaPrices.AGENDA_DOCENTE;
+                break;
+            case 'cuaderno':
+                basePrice = agendaPrices.CUADERNO;
+                break;
+            case 'cuaderno-a4':
+                basePrice = agendaPrices.CUADERNO_A4;
+                break;
+            default:
+                basePrice = 0;
+        }
+
+        if (hasQuote) {
+            basePrice += agendaPrices.ADICION_DE_FRASE;
+        }
+
+        return basePrice;
+    };
+
+
     const handleChange = (e) => {
         const { name, value, checked } = e.target;
 
         setFormData((prevFormData) => {
-            const updatedFormData = {
+            const updated = {
                 ...prevFormData,
                 [name]: name === 'checkbox' ? checked : value,
             };
 
-            if (name === 'type') {
-                let newPrice = 0;
-                switch (value) {
-                    case 'agenda-perpetua':
-                        newPrice = agendaPrices.AGENDA_PERPETUA;
-                        break;
-                    case 'agenda-semanal':
-                        newPrice = agendaPrices.AGENDA_SEMANAL;
-                        break;
-                    case 'agenda-docente':
-                        newPrice = agendaPrices.AGENDA_DOCENTE;
-                        break;
-                    case 'cuaderno':
-                        newPrice = agendaPrices.CUADERNO;
-                        break;
-                    case 'cuaderno-a4':
-                        newPrice = agendaPrices.CUADERNO_A4;
-                        break;
-                    default:
-                        newPrice = 0;
-                }
-                setAgendaPrice(checked ? newPrice : newPrice);
-            }
+            const newPrice = calculatePrice(
+            name === 'type' ? value : updated.type,
+            name === 'checkbox' ? checked : updated.checkbox
+        );
 
             if (name === 'checkbox') {
                 setFormQuote(checked);
             }
 
-            return updatedFormData;
+            setAgendaPrice(newPrice);
+
+            return updated;
         });
 
         // Validación inline al escribir
