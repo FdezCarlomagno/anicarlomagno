@@ -15,10 +15,16 @@ import cuadro19 from '../pages/pagesStyles/paintingsImgs/Princesa-azul.jpeg'
 import cuadro20 from '../pages/pagesStyles/paintingsImgs/Scarlet.jpeg'
 import cuadro21 from '../pages/pagesStyles/paintingsImgs/El-velo-dorado.jpeg'
 import cuadro22 from '../pages/pagesStyles/paintingsImgs/Iris.jpeg'
+import cuadro23 from '../pages/pagesStyles/paintingsImgs/la-dama-dorada.jpeg'
+import cuadro24 from '../pages/pagesStyles/paintingsImgs/la-dame-fleurie.jpeg'
 
 
 const paintings = [
-    { src: cuadro22, name: 'Iris', price: `$${1231}`, offer: true, description: 'Cuadro en acrilico, realizado sobre bastidor circular de madera.', size: '60x60', sold: false },
+    { src: cuadro24, name: 'La Dame Fleurie', price: `$${4635}`, offer: false, description: 'Cuadro en acrilico, realizado sobre bastidor circular de madera. Diametro: 52cm', size: '', sold: false },
+
+    { src: cuadro23, name: 'La Dama Dorada', price: `$${4635}`, offer: false, description: 'Cuadro en acrilico, realizado sobre bastidor de madera. Detalles en dorado.', size: '80x60', sold: false },
+
+    { src: cuadro22, name: 'Iris', price: `$${1231}`, offer: true, description: 'Cuadro en acrilico, realizado sobre bastidor circular de madera. Diametro: 60cm', size: '', sold: false },
 
     { src: cuadro7, name: 'Cáncer', price: `$${4635}`, offer: true, description: 'Cuadro en acrilico, realizado sobre bastidor de madera. Detalles en dorado.', size: '80x50', sold: false },
 

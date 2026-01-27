@@ -1,7 +1,6 @@
 import cuadro1 from '../pages/pagesStyles/paintingsImgs/cuadro1.jpg'
 import cuadro2 from '../pages/pagesStyles/paintingsImgs/cuadro2.jpg'
 import cuadro3 from '../pages/pagesStyles/paintingsImgs/cuadro3.jpg'
-import cuadro4 from '../pages/pagesStyles/paintingsImgs/cuadro4.jpeg'
 import cuadro5 from '../pages/pagesStyles/paintingsImgs/cuadro5.jpeg'
 import cuadro6 from '../pages/pagesStyles/paintingsImgs/cuadro6.jpeg'
 import cuadro7 from '../pages/pagesStyles/paintingsImgs/cuadro7.jpeg'
@@ -46,16 +45,18 @@ import cuadro45 from '../pages/pagesStyles/paintingsImgs/Lucia.jpeg'
 import cuadro46 from '../pages/pagesStyles/paintingsImgs/Princesa-azul.jpeg'
 import cuadro47 from '../pages/pagesStyles/paintingsImgs/Scarlet.jpeg'
 import cuadro48 from '../pages/pagesStyles/paintingsImgs/El-velo-dorado.jpeg'
-import cuadro49 from '../pages/pagesStyles/paintingsImgs/Iris.jpeg'
+import cuadro49 from '../pages/pagesStyles/paintingsImgs/Iris-agenda.jpeg'
 import cuadro50 from '../pages/pagesStyles/paintingsImgs/Helena.jpeg'
 import cuadro51 from '../pages/pagesStyles/paintingsImgs/la-culpable-flores.jpeg'
 import cuadro52 from '../pages/pagesStyles/paintingsImgs/la-culpable-mariposas.jpeg'
 import cuadro53 from '../pages/pagesStyles/paintingsImgs/la-dama-de-rosa-mariposas.jpeg'
-
-
+import cuadro54 from '../pages/pagesStyles/paintingsImgs/la-dama-dorada.jpeg'
+import cuadro55 from '../pages/pagesStyles/paintingsImgs/la-dame-fleurie.jpeg'
 
 
 const cuadros = [
+    { src: cuadro54, title: "La Dama Dorada"},
+    { src: cuadro55, title: "La Dame Fleurie"},
     { src: cuadro49, title: "Iris"},
     { src: cuadro44, title: "Butterfly Queen"},
     { src: cuadro50, title: "Helena"},
