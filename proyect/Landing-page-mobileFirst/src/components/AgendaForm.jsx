@@ -335,7 +335,7 @@ const AgendaForm = () => {
                                             onChange={handleChange}
                                         />
                                         <div className='radio-content'>
-                                            <span className='radio-label'>Semanal {new Date().getFullYear() + 1}</span>
+                                            <span className='radio-label'>Semanal {new Date().getFullYear()}</span>
                                             <span className='radio-price'>${agendaPrices.AGENDA_SEMANAL}</span>
                                         </div>
                                     </label>
