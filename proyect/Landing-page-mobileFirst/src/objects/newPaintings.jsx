@@ -52,9 +52,16 @@ import cuadro52 from '../pages/pagesStyles/paintingsImgs/la-culpable-mariposas.j
 import cuadro53 from '../pages/pagesStyles/paintingsImgs/la-dama-de-rosa-mariposas.jpeg'
 import cuadro54 from '../pages/pagesStyles/paintingsImgs/la-dama-dorada.jpeg'
 import cuadro55 from '../pages/pagesStyles/paintingsImgs/la-dame-fleurie.jpeg'
+import cuadro56 from '../pages/pagesStyles/paintingsImgs/femme-deau-agenda.jpeg'
+import cuadro57 from '../pages/pagesStyles/paintingsImgs/Creacion.jpeg'
+import cuadro58 from '../pages/pagesStyles/paintingsImgs/Bahia.jpeg'
+
 
 
 const cuadros = [
+    {src: cuadro56, title: "Femme d'eau"},
+    {src: cuadro57, title: "Creación"},
+    {src: cuadro58, title: "Bahía"},
     { src: cuadro54, title: "La Dama Dorada"},
     { src: cuadro55, title: "La Dame Fleurie"},
     { src: cuadro49, title: "Iris"},

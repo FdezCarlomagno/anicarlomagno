@@ -17,16 +17,22 @@ import cuadro21 from '../pages/pagesStyles/paintingsImgs/El-velo-dorado.jpeg'
 import cuadro22 from '../pages/pagesStyles/paintingsImgs/Iris.jpeg'
 import cuadro23 from '../pages/pagesStyles/paintingsImgs/la-dama-dorada.jpeg'
 import cuadro24 from '../pages/pagesStyles/paintingsImgs/la-dame-fleurie.jpeg'
+import cuadro25 from '../pages/pagesStyles/paintingsImgs/femme-deau-cuadro.jpeg'
+import cuadro26 from '../pages/pagesStyles/paintingsImgs/Creacion.jpeg'
+import cuadro27 from '../pages/pagesStyles/paintingsImgs/Bahia.jpeg'
 
 
 const paintings = [
+    { src: cuadro25, name: 'Femme d\'eau', price: `$${4635}`, offer: false, description: 'Acuarela sobre papel enmarcada con vidrio.', size: '50x70', sold: false },
+    { src: cuadro26, name: 'Creación', price: `$${4635}`, offer: true, description: 'Cuadro en acrilico, realizado sobre bastidor de madera.', size: '60x70', sold: true },
+    { src: cuadro27, name: 'Bahía', price: `$${4635}`, offer: false, description: 'Cuadro en acrilico, realizado sobre bastidor de madera.', size: '80x60', sold: false },
     { src: cuadro24, name: 'La Dame Fleurie', price: `$${4635}`, offer: false, description: 'Cuadro en acrilico, realizado sobre bastidor circular de madera. Diametro: 52cm', size: '', sold: false },
 
     { src: cuadro23, name: 'La Dama Dorada', price: `$${4635}`, offer: false, description: 'Cuadro en acrilico, realizado sobre bastidor de madera. Detalles en dorado.', size: '80x60', sold: false },
 
     { src: cuadro22, name: 'Iris', price: `$${1231}`, offer: true, description: 'Cuadro en acrilico, realizado sobre bastidor circular de madera. Diametro: 60cm', size: '', sold: false },
 
-    { src: cuadro7, name: 'Cáncer', price: `$${4635}`, offer: true, description: 'Cuadro en acrilico, realizado sobre bastidor de madera. Detalles en dorado.', size: '80x50', sold: false },
+    { src: cuadro7, name: 'Cáncer', price: `$${4635}`, offer: true, description: 'Cuadro en acrilico, realizado sobre bastidor de madera. Detalles en dorado.', size: '80x50', sold: true },
 
     { src: cuadro11, name: 'La Dama de Rosa', price: `$${23427}`, offer: true, description: 'Cuadro en acrilico, realizado sobre bastidor de madera. Fondo realizado con manchas en foil laminador dorado. Detalles con lentejuelas.', size: '80x60', sold: false },
 
