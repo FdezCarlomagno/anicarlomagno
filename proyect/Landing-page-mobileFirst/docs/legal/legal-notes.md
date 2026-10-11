@@ -24,8 +24,7 @@ El sitio no usa cookies, `localStorage` ni analítica (medido en `design/audits/
 
 ## Pendientes
 
-- `[PENDIENTE: email de contacto para privacidad]` en `src/content/legal/contact.js` (`CONTACT_EMAIL`). Aparece en ambas
-  páginas y en el footer. **No mergear a `main` con el marcador.**
+- ~~`[PENDIENTE: email de contacto para privacidad]`~~ **Resuelto el 2026-10-11:** `CONTACT_EMAIL = anicarlomagnopainting@gmail.com` en `src/content/legal/contact.js` (aparece en ambas páginas y en el footer).
 - Confirmar con Ani la frase "No uso tus datos para mandarte publicidad ni se los vendo a nadie" (refleja el sitio hoy,
   pero es un compromiso).
 - Actualizar `LEGAL_UPDATED` en `contact.js` con la fecha real de publicación.

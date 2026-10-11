@@ -70,7 +70,7 @@ const LandingPage = () => {
             <p className="footer-contact">
               {OWNER_NAME} · <WhatsappLink /> · <EmailLink />
             </p>
-            <p>Copyright © {new Date().getFullYear()} Analia Carlomagno</p>
+            <p>Copyright © {new Date().getFullYear()} Analía Carlomagno</p>
           </footer>
         </div>
       </MotionConfig>
