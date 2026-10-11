@@ -459,7 +459,7 @@ footer p {
 }
 
 .viewOnInstagram,
-.viewOnInstagram button a {
+.viewOnInstagram .btnViewOnInstagram {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -467,11 +467,12 @@ footer p {
     color: black;
 }
 
-.viewOnInstagram button {
+.viewOnInstagram .btnViewOnInstagram {
     background-color: rgba(137, 43, 226, 0.274);
-    border: none;
     border-radius: 5px;
     padding: 10px;
+    font-size: 13.3333px;
+    line-height: normal;
 }
 
 #firstSection-container2,
@@ -934,13 +935,13 @@ textarea {
     }
 
     .agendaContainer,
-    .viewOnInstagram button,
+    .viewOnInstagram .btnViewOnInstagram,
     .socialMedia-section li {
         transition: all 200ms ease-in-out;
     }
 
     .agendaContainer:hover,
-    .viewOnInstagram button:hover,
+    .viewOnInstagram .btnViewOnInstagram:hover,
     .socialMedia-section li:hover {
         background-color: rgb(186, 112, 255);
         transform: scale(1.04);
