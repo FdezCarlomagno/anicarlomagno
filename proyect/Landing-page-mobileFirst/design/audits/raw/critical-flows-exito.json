@@ -1,0 +1,141 @@
+{
+  "chrome": "Chrome/154.0.8037.93",
+  "base": "http://localhost:4173",
+  "date": "2026-10-11T20:05:33.912Z",
+  "flows": {
+    "contacto-emailjs-exito-simulado": {
+      "initial": {
+        "valid": false,
+        "firstInvalid": "nombre",
+        "validationMessage": "Please fill out this field.",
+        "button": "Enviar",
+        "disabled": false,
+        "values": {
+          "nombre": "",
+          "apellido": "",
+          "email": "",
+          "mensaje": ""
+        },
+        "toasts": []
+      },
+      "emptySubmit": {
+        "valid": false,
+        "firstInvalid": "nombre",
+        "validationMessage": "Please fill out this field.",
+        "button": "Enviar",
+        "disabled": false,
+        "values": {
+          "nombre": "",
+          "apellido": "",
+          "email": "",
+          "mensaje": ""
+        },
+        "toasts": [],
+        "emailjsRequests": 0
+      },
+      "invalidEmailSubmit": {
+        "valid": false,
+        "firstInvalid": "email",
+        "validationMessage": "Please enter a part following '@'. 'prueba@' is incomplete.",
+        "button": "Enviar",
+        "disabled": false,
+        "values": {
+          "nombre": "Prueba",
+          "apellido": "Fase Cero",
+          "email": "prueba@",
+          "mensaje": "Mensaje de prueba local, no enviar."
+        },
+        "toasts": [],
+        "emailjsRequests": 0
+      },
+      "duringSubmit": {
+        "valid": true,
+        "firstInvalid": null,
+        "validationMessage": null,
+        "button": "Enviando...",
+        "disabled": true,
+        "values": {
+          "nombre": "Prueba",
+          "apellido": "Fase Cero",
+          "email": "prueba@example.com",
+          "mensaje": "Mensaje de prueba local, no enviar."
+        },
+        "toasts": []
+      },
+      "afterInterceptedResponse": {
+        "valid": false,
+        "firstInvalid": "nombre",
+        "validationMessage": "Please fill out this field.",
+        "button": "Enviar",
+        "disabled": false,
+        "values": {
+          "nombre": "",
+          "apellido": "",
+          "email": "",
+          "mensaje": ""
+        },
+        "toasts": [
+          "¡Mensaje enviado con éxito!"
+        ]
+      },
+      "emailjsIntercepted": [
+        {
+          "url": "https://api.emailjs.com/api/v1.0/email/send",
+          "method": "OPTIONS",
+          "bodyKeys": [],
+          "templateParamsKeys": []
+        },
+        {
+          "url": "https://api.emailjs.com/api/v1.0/email/send",
+          "method": "POST",
+          "bodyKeys": [
+            "lib_version",
+            "user_id",
+            "service_id",
+            "template_id",
+            "template_params"
+          ],
+          "templateParamsKeys": [
+            "nombre",
+            "apellido",
+            "email",
+            "mensaje"
+          ]
+        }
+      ],
+      "labels": [
+        {
+          "for": "nombre",
+          "text": "Nombre:"
+        },
+        {
+          "for": "apellido",
+          "text": "Apellido:"
+        },
+        {
+          "for": "email",
+          "text": "Email:"
+        },
+        {
+          "for": "mensaje",
+          "text": "Mensaje:"
+        }
+      ],
+      "autocomplete": [
+        {
+          "id": "nombre",
+          "autocomplete": null
+        },
+        {
+          "id": "apellido",
+          "autocomplete": null
+        },
+        {
+          "id": "email",
+          "autocomplete": null
+        }
+      ]
+    }
+  },
+  "failed": []
+}

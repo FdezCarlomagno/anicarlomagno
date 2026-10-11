@@ -1,0 +1,4491 @@
+{
+  "chrome": "Chrome/154.0.8037.93",
+  "base": "http://localhost:5173",
+  "date": "2026-10-11T19:59:07.460Z",
+  "routes": {
+    "home-390": {
+      "url": "/",
+      "title": "Analía Carlomagno | Artista Plástica Argentina",
+      "lang": "es",
+      "viewportMeta": "width=device-width, initial-scale=1.0, user-scalable=no",
+      "headings": [
+        "H1: anicarlomagno",
+        "H2: artista plástica",
+        "H1: anicarlomagno",
+        "H2: artista plástica",
+        "H3: Quién soy",
+        "H3: Mis pasiones",
+        "H2: Agendas",
+        "H2: Soñadora Compulsiva",
+        "H3: Seguime en mis redes sociales"
+      ],
+      "h1Count": 2,
+      "mainLandmarks": 2,
+      "images": 41,
+      "imgsWithoutAlt": [
+        "svg>",
+        "svg>"
+      ],
+      "imgsEmptyAlt": 3,
+      "imgsAltSamples": [
+        "Home svg",
+        "Paintbrush svg",
+        "Book svg",
+        "Eye svg",
+        "Printer svg",
+        "Diamond svg",
+        "Paintbrush logo",
+        "Artistic representation",
+        "Artistic passion",
+        "Diseño 1",
+        "Diseño 2",
+        "Diseño 4",
+        "Diseño 6",
+        "Diseño 7",
+        "Femme d'eau",
+        "Creación",
+        "Bahía",
+        "La Dama Dorada",
+        "La Dame Fleurie",
+        "Iris",
+        "Butterfly Queen",
+        "Helena",
+        "La Culpable (con flores)",
+        "La Culpable (con mariposas)",
+        "La Dama de Rosa (con mariposas)",
+        "Lucía",
+        "truck svg"
+      ],
+      "imgsWithoutWidthHeightAttrs": 41,
+      "imgsLazy": 0,
+      "imgsLoaded": 41,
+      "videos": [
+        {
+          "src": "wspVideo-header.mp4",
+          "preload": "none",
+          "autoplay": true,
+          "muted": true,
+          "poster": null
+        }
+      ],
+      "iframes": [],
+      "nestedInteractive": [
+        "button:Mis obras",
+        "button:Saber más",
+        "button:Saber más",
+        "a:Ver en instagram"
+      ],
+      "buttonsWithoutName": 0,
+      "linksTarget": [
+        {
+          "href": "https://www.instagram.com/stories/highlights/17931595102459109/",
+          "target": "blank",
+          "rel": ""
+        },
+        {
+          "href": "https://www.instagram.com/anicarlomagno_painting/",
+          "target": "blank",
+          "rel": ""
+        },
+        {
+          "href": "https://www.tiktok.com/@anicarlomagno_painting?_t=8pSFiI1eHB7&_r=1",
+          "target": "blank",
+          "rel": ""
+        },
+        {
+          "href": "https://www.facebook.com/anicarlomagno",
+          "target": "blank",
+          "rel": ""
+        }
+      ],
+      "smallTargets": [
+        {
+          "tag": "button",
+          "text": "☰",
+          "w": 22,
+          "h": 32
+        },
+        {
+          "tag": "a",
+          "text": "Mis obras",
+          "w": 109,
+          "h": 32
+        },
+        {
+          "tag": "button",
+          "text": "Mis obras",
+          "w": 109,
+          "h": 32
+        },
+        {
+          "tag": "a",
+          "text": "Saber más",
+          "w": 312,
+          "h": 32
+        },
+        {
+          "tag": "button",
+          "text": "Saber más",
+          "w": 93,
+          "h": 32
+        },
+        {
+          "tag": "a",
+          "text": "Saber más",
+          "w": 312,
+          "h": 32
+        },
+        {
+          "tag": "button",
+          "text": "Saber más",
+          "w": 93,
+          "h": 32
+        },
+        {
+          "tag": "a",
+          "text": "Ver en instagram",
+          "w": 135,
+          "h": 24
+        },
+        {
+          "tag": "button",
+          "text": "Ver más",
+          "w": 78,
+          "h": 32
+        },
+        {
+          "tag": "a",
+          "text": "",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "INICIO",
+          "w": 44,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "OBRAS",
+          "w": 50,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "AGENDAS Y CUADERNOS",
+          "w": 180,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "LIBROS",
+          "w": 53,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "LÁMINAS",
+          "w": 66,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "SOBRE MI",
+          "w": 70,
+          "h": 23
+        }
+      ],
+      "clickableNonSemantic": [],
+      "inputsFontSizeUnder16": [],
+      "docScrollWidth": 390,
+      "clientWidth": 390,
+      "overflowingElements": [
+        {
+          "tag": "a",
+          "cls": "",
+          "right": 446
+        },
+        {
+          "tag": "article",
+          "cls": "agendaContainer",
+          "right": 446
+        },
+        {
+          "tag": "img",
+          "cls": "imgAgenda1",
+          "right": 446
+        },
+        {
+          "tag": "a",
+          "cls": "",
+          "right": 582
+        },
+        {
+          "tag": "img",
+          "cls": "imgAgenda2",
+          "right": 571
+        },
+        {
+          "tag": "a",
+          "cls": "",
+          "right": 719
+        },
+        {
+          "tag": "img",
+          "cls": "imgAgenda4",
+          "right": 707
+        },
+        {
+          "tag": "a",
+          "cls": "",
+          "right": 855
+        }
+      ],
+      "pageHeight": 4473,
+      "imgsLoadedAtLoad": 41,
+      "consoleMessages": [
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s class className at div at div at div at Slider (http://localhost:5173/src/components/Slider.jsx:37:23) at div at header at main at Home at RenderedRoute (http://localhost:5173/node_mo",
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s stroke-linecap strokeLinecap at path at svg at button at ScrollToTopButton (http://localhost:5173/src/components/ScrollToTopButton.jsx:27:41) at div at Router (http://localhost:5173/n",
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s stroke-linejoin strokeLinejoin at path at svg at button at ScrollToTopButton (http://localhost:5173/src/components/ScrollToTopButton.jsx:27:41) at div at Router (http://localhost:5173",
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s stroke-width strokeWidth at svg at button at ScrollToTopButton (http://localhost:5173/src/components/ScrollToTopButton.jsx:27:41) at div at Router (http://localhost:5173/node_modules/"
+      ],
+      "menuOpen": {
+        "buttonText": "☰",
+        "ariaLabel": null,
+        "ariaExpanded": null,
+        "ariaControls": null,
+        "btnSize": [
+          22,
+          32
+        ],
+        "links": [
+          {
+            "text": "Inicio",
+            "h": 24,
+            "w": 270
+          },
+          {
+            "text": "Obras",
+            "h": 24,
+            "w": 270
+          },
+          {
+            "text": "Agendas y cuadernos",
+            "h": 24,
+            "w": 270
+          },
+          {
+            "text": "Libros",
+            "h": 24,
+            "w": 270
+          },
+          {
+            "text": "Láminas",
+            "h": 24,
+            "w": 270
+          },
+          {
+            "text": "Sobre mí",
+            "h": 24,
+            "w": 270
+          },
+          {
+            "text": "Contacto",
+            "h": 24,
+            "w": 270
+          }
+        ]
+      }
+    },
+    "elegir-390": {
+      "url": "/elegir",
+      "title": "Analía Carlomagno | Artista Plástica Argentina",
+      "lang": "es",
+      "viewportMeta": "width=device-width, initial-scale=1.0, user-scalable=no",
+      "headings": [
+        "H1: anicarlomagno",
+        "H2: artista plástica",
+        "H1: Elegí que te gustaría",
+        "H3: Seguime en mis redes sociales"
+      ],
+      "h1Count": 2,
+      "mainLandmarks": 2,
+      "images": 18,
+      "imgsWithoutAlt": [
+        "svg>"
+      ],
+      "imgsEmptyAlt": 3,
+      "imgsAltSamples": [
+        "Home svg",
+        "Paintbrush svg",
+        "Book svg",
+        "Eye svg",
+        "Printer svg",
+        "Diamond svg",
+        "truck svg"
+      ],
+      "imgsWithoutWidthHeightAttrs": 18,
+      "imgsLazy": 0,
+      "imgsLoaded": 18,
+      "videos": [],
+      "iframes": [],
+      "nestedInteractive": [
+        "button:Obra personalizada",
+        "button:Obras en stock"
+      ],
+      "buttonsWithoutName": 0,
+      "linksTarget": [
+        {
+          "href": "https://www.instagram.com/anicarlomagno_painting/",
+          "target": "blank",
+          "rel": ""
+        },
+        {
+          "href": "https://www.tiktok.com/@anicarlomagno_painting?_t=8pSFiI1eHB7&_r=1",
+          "target": "blank",
+          "rel": ""
+        },
+        {
+          "href": "https://www.facebook.com/anicarlomagno",
+          "target": "blank",
+          "rel": ""
+        }
+      ],
+      "smallTargets": [
+        {
+          "tag": "button",
+          "text": "☰",
+          "w": 22,
+          "h": 32
+        },
+        {
+          "tag": "a",
+          "text": "Obra personalizada",
+          "w": 200,
+          "h": 19
+        },
+        {
+          "tag": "button",
+          "text": "Obra personalizada",
+          "w": 200,
+          "h": 36
+        },
+        {
+          "tag": "a",
+          "text": "Obras en stock",
+          "w": 200,
+          "h": 19
+        },
+        {
+          "tag": "button",
+          "text": "Obras en stock",
+          "w": 200,
+          "h": 36
+        },
+        {
+          "tag": "a",
+          "text": "",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "INICIO",
+          "w": 44,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "OBRAS",
+          "w": 50,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "AGENDAS Y CUADERNOS",
+          "w": 180,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "LIBROS",
+          "w": 53,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "LÁMINAS",
+          "w": 66,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "SOBRE MI",
+          "w": 70,
+          "h": 23
+        }
+      ],
+      "clickableNonSemantic": [],
+      "inputsFontSizeUnder16": [],
+      "docScrollWidth": 390,
+      "clientWidth": 390,
+      "overflowingElements": [],
+      "pageHeight": 1384,
+      "imgsLoadedAtLoad": 18,
+      "consoleMessages": [
+        "error: Warning: validateDOMNesting(...): %s cannot appear as a descendant of <%s>.%s <p> p at p at p at section at FooterPaintingText at div at MotionComponent (http://localhost:5173/node_modules/.vite/deps/framer-motion.js?v=6805bf61:7176:35) at ",
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s stroke-linecap strokeLinecap at path at svg at button at ScrollToTopButton (http://localhost:5173/src/components/ScrollToTopButton.jsx:27:41) at div at Router (http://localhost:5173/n",
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s stroke-linejoin strokeLinejoin at path at svg at button at ScrollToTopButton (http://localhost:5173/src/components/ScrollToTopButton.jsx:27:41) at div at Router (http://localhost:5173",
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s stroke-width strokeWidth at svg at button at ScrollToTopButton (http://localhost:5173/src/components/ScrollToTopButton.jsx:27:41) at div at Router (http://localhost:5173/node_modules/",
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s class className at svg at button at ScrollToTopButton (http://localhost:5173/src/components/ScrollToTopButton.jsx:27:41) at div at Router (http://localhost:5173/node_modules/.vite/dep"
+      ]
+    },
+    "obras-en-stock-390": {
+      "url": "/obras-en-stock",
+      "title": "Analía Carlomagno | Artista Plástica Argentina",
+      "lang": "es",
+      "viewportMeta": "width=device-width, initial-scale=1.0, user-scalable=no",
+      "headings": [
+        "H1: anicarlomagno",
+        "H2: artista plástica",
+        "H1: Obras en stock",
+        "H1: Femme d'eau",
+        "H3: 50x70",
+        "H1: Creación",
+        "H3: 60x70",
+        "H1: Bahía",
+        "H3: 80x60",
+        "H1: La Dame Fleurie",
+        "H3: ",
+        "H1: La Dama Dorada",
+        "H3: 80x60",
+        "H1: Iris",
+        "H3: ",
+        "H1: Cáncer",
+        "H3: 80x50",
+        "H1: La Dama de Rosa",
+        "H3: 80x60",
+        "H1: Nerea",
+        "H3: 60x60",
+        "H1: Vanessa",
+        "H3: 60x60",
+        "H1: Aurora",
+        "H3: 80x60",
+        "H1: Katrina",
+        "H3: 60x35",
+        "H1: Unidad",
+        "H3: 60x60",
+        "H1: Enigma",
+        "H3: 90x60",
+        "H1: Veil",
+        "H3: 80x60",
+        "H1: Euphoria",
+        "H3: 60x60",
+        "H1: La Culpable",
+        "H3: 80x80",
+        "H1: Butterfly Queen",
+        "H3: 80x80",
+        "H1: Lucía",
+        "H3: 60x60",
+        "H1: Pricesa Azul",
+        "H3: 50x70",
+        "H1: Scarlet",
+        "H3: 45x55",
+        "H1: El Velo Dorado",
+        "H3: 60x50",
+        "H3: Seguime en mis redes sociales"
+      ],
+      "h1Count": 24,
+      "mainLandmarks": 2,
+      "images": 40,
+      "imgsWithoutAlt": [
+        "svg>"
+      ],
+      "imgsEmptyAlt": 3,
+      "imgsAltSamples": [
+        "Home svg",
+        "Paintbrush svg",
+        "Book svg",
+        "Eye svg",
+        "Printer svg",
+        "Diamond svg",
+        "Femme d'eau",
+        "Creación",
+        "Bahía",
+        "La Dame Fleurie",
+        "La Dama Dorada",
+        "Iris",
+        "Cáncer",
+        "La Dama de Rosa",
+        "Nerea",
+        "Vanessa",
+        "Aurora",
+        "Katrina",
+        "Unidad",
+        "Enigma",
+        "Veil",
+        "Euphoria",
+        "La Culpable",
+        "Butterfly Queen",
+        "Lucía",
+        "Pricesa Azul",
+        "Scarlet",
+        "El Velo Dorado",
+        "truck svg"
+      ],
+      "imgsWithoutWidthHeightAttrs": 40,
+      "imgsLazy": 0,
+      "imgsLoaded": 40,
+      "videos": [],
+      "iframes": [],
+      "nestedInteractive": [
+        "button:Quiero mi obra"
+      ],
+      "buttonsWithoutName": 0,
+      "linksTarget": [
+        {
+          "href": "https://www.instagram.com/anicarlomagno_painting/",
+          "target": "blank",
+          "rel": ""
+        },
+        {
+          "href": "https://www.tiktok.com/@anicarlomagno_painting?_t=8pSFiI1eHB7&_r=1",
+          "target": "blank",
+          "rel": ""
+        },
+        {
+          "href": "https://www.facebook.com/anicarlomagno",
+          "target": "blank",
+          "rel": ""
+        }
+      ],
+      "smallTargets": [
+        {
+          "tag": "button",
+          "text": "☰",
+          "w": 22,
+          "h": 32
+        },
+        {
+          "tag": "button",
+          "text": "Todas las obras",
+          "w": 200,
+          "h": 38
+        },
+        {
+          "tag": "button",
+          "text": "Disponibles",
+          "w": 200,
+          "h": 38
+        },
+        {
+          "tag": "button",
+          "text": "Vendidas",
+          "w": 200,
+          "h": 38
+        },
+        {
+          "tag": "button",
+          "text": "Consultar",
+          "w": 83,
+          "h": 34
+        },
+        {
+          "tag": "button",
+          "text": "Consultar",
+          "w": 83,
+          "h": 34
+        },
+        {
+          "tag": "button",
+          "text": "Consultar",
+          "w": 83,
+          "h": 34
+        },
+        {
+          "tag": "button",
+          "text": "Consultar",
+          "w": 83,
+          "h": 34
+        },
+        {
+          "tag": "button",
+          "text": "Consultar",
+          "w": 83,
+          "h": 34
+        },
+        {
+          "tag": "button",
+          "text": "Consultar",
+          "w": 83,
+          "h": 34
+        },
+        {
+          "tag": "button",
+          "text": "Consultar",
+          "w": 83,
+          "h": 34
+        },
+        {
+          "tag": "button",
+          "text": "Consultar",
+          "w": 83,
+          "h": 34
+        },
+        {
+          "tag": "button",
+          "text": "Consultar",
+          "w": 83,
+          "h": 34
+        },
+        {
+          "tag": "button",
+          "text": "Consultar",
+          "w": 83,
+          "h": 34
+        },
+        {
+          "tag": "button",
+          "text": "Consultar",
+          "w": 83,
+          "h": 34
+        },
+        {
+          "tag": "button",
+          "text": "Consultar",
+          "w": 83,
+          "h": 34
+        },
+        {
+          "tag": "button",
+          "text": "Consultar",
+          "w": 83,
+          "h": 34
+        },
+        {
+          "tag": "button",
+          "text": "Consultar",
+          "w": 83,
+          "h": 34
+        },
+        {
+          "tag": "button",
+          "text": "Consultar",
+          "w": 83,
+          "h": 34
+        },
+        {
+          "tag": "button",
+          "text": "Consultar",
+          "w": 83,
+          "h": 34
+        },
+        {
+          "tag": "button",
+          "text": "Consultar",
+          "w": 83,
+          "h": 34
+        },
+        {
+          "tag": "button",
+          "text": "Consultar",
+          "w": 82,
+          "h": 34
+        },
+        {
+          "tag": "button",
+          "text": "Consultar",
+          "w": 80,
+          "h": 33
+        },
+        {
+          "tag": "button",
+          "text": "Consultar",
+          "w": 75,
+          "h": 31
+        },
+        {
+          "tag": "button",
+          "text": "Consultar",
+          "w": 64,
+          "h": 26
+        },
+        {
+          "tag": "button",
+          "text": "Consultar",
+          "w": 47,
+          "h": 19
+        },
+        {
+          "tag": "a",
+          "text": "",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "INICIO",
+          "w": 44,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "OBRAS",
+          "w": 50,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "AGENDAS Y CUADERNOS",
+          "w": 180,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "LIBROS",
+          "w": 53,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "LÁMINAS",
+          "w": 66,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "SOBRE MI",
+          "w": 70,
+          "h": 23
+        }
+      ],
+      "clickableNonSemantic": [],
+      "inputsFontSizeUnder16": [],
+      "docScrollWidth": 390,
+      "clientWidth": 390,
+      "overflowingElements": [],
+      "pageHeight": 15319,
+      "imgsLoadedAtLoad": 40,
+      "consoleMessages": [
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s stroke-linecap strokeLinecap at path at svg at button at ScrollToTopButton (http://localhost:5173/src/components/ScrollToTopButton.jsx:27:41) at div at Router (http://localhost:5173/n",
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s stroke-linejoin strokeLinejoin at path at svg at button at ScrollToTopButton (http://localhost:5173/src/components/ScrollToTopButton.jsx:27:41) at div at Router (http://localhost:5173",
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s stroke-width strokeWidth at svg at button at ScrollToTopButton (http://localhost:5173/src/components/ScrollToTopButton.jsx:27:41) at div at Router (http://localhost:5173/node_modules/",
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s class className at svg at button at ScrollToTopButton (http://localhost:5173/src/components/ScrollToTopButton.jsx:27:41) at div at Router (http://localhost:5173/node_modules/.vite/dep"
+      ]
+    },
+    "obra-personalizada-390": {
+      "url": "/obra-personalizada",
+      "title": "Analía Carlomagno | Artista Plástica Argentina",
+      "lang": "es",
+      "viewportMeta": "width=device-width, initial-scale=1.0, user-scalable=no",
+      "headings": [
+        "H1: anicarlomagno",
+        "H2: artista plástica",
+        "H1: Obra personalizada",
+        "H1: Pedí tu obra personalizada",
+        "H3: Seguime en mis redes sociales"
+      ],
+      "h1Count": 3,
+      "mainLandmarks": 2,
+      "images": 18,
+      "imgsWithoutAlt": [
+        "svg>"
+      ],
+      "imgsEmptyAlt": 3,
+      "imgsAltSamples": [
+        "Home svg",
+        "Paintbrush svg",
+        "Book svg",
+        "Eye svg",
+        "Printer svg",
+        "Diamond svg",
+        "truck svg"
+      ],
+      "imgsWithoutWidthHeightAttrs": 18,
+      "imgsLazy": 0,
+      "imgsLoaded": 18,
+      "videos": [],
+      "iframes": [],
+      "nestedInteractive": [],
+      "buttonsWithoutName": 0,
+      "linksTarget": [
+        {
+          "href": "https://www.instagram.com/anicarlomagno_painting/",
+          "target": "blank",
+          "rel": ""
+        },
+        {
+          "href": "https://www.tiktok.com/@anicarlomagno_painting?_t=8pSFiI1eHB7&_r=1",
+          "target": "blank",
+          "rel": ""
+        },
+        {
+          "href": "https://www.facebook.com/anicarlomagno",
+          "target": "blank",
+          "rel": ""
+        }
+      ],
+      "smallTargets": [
+        {
+          "tag": "button",
+          "text": "☰",
+          "w": 22,
+          "h": 32
+        },
+        {
+          "tag": "input",
+          "text": "on",
+          "w": 20,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "INICIO",
+          "w": 44,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "OBRAS",
+          "w": 50,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "AGENDAS Y CUADERNOS",
+          "w": 180,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "LIBROS",
+          "w": 53,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "LÁMINAS",
+          "w": 66,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "SOBRE MI",
+          "w": 70,
+          "h": 23
+        }
+      ],
+      "clickableNonSemantic": [],
+      "inputsFontSizeUnder16": [
+        {
+          "id": "name",
+          "fs": "14px"
+        },
+        {
+          "id": "surname",
+          "fs": "14px"
+        },
+        {
+          "id": "size1",
+          "fs": "14px"
+        },
+        {
+          "id": "size2",
+          "fs": "14px"
+        },
+        {
+          "id": "description",
+          "fs": "14px"
+        },
+        {
+          "id": "customPhoto",
+          "fs": "13.3333px"
+        }
+      ],
+      "docScrollWidth": 390,
+      "clientWidth": 390,
+      "overflowingElements": [],
+      "pageHeight": 2227,
+      "imgsLoadedAtLoad": 18,
+      "consoleMessages": [
+        "error: Warning: validateDOMNesting(...): %s cannot appear as a descendant of <%s>.%s <p> p at p at p at section at FooterPaintingText at div at CustomPainting (http://localhost:5173/src/components/customPainting.jsx:29:37) at RenderedRoute (http:/",
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s stroke-linecap strokeLinecap at path at svg at button at ScrollToTopButton (http://localhost:5173/src/components/ScrollToTopButton.jsx:27:41) at div at Router (http://localhost:5173/n",
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s stroke-linejoin strokeLinejoin at path at svg at button at ScrollToTopButton (http://localhost:5173/src/components/ScrollToTopButton.jsx:27:41) at div at Router (http://localhost:5173",
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s stroke-width strokeWidth at svg at button at ScrollToTopButton (http://localhost:5173/src/components/ScrollToTopButton.jsx:27:41) at div at Router (http://localhost:5173/node_modules/",
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s class className at svg at button at ScrollToTopButton (http://localhost:5173/src/components/ScrollToTopButton.jsx:27:41) at div at Router (http://localhost:5173/node_modules/.vite/dep"
+      ]
+    },
+    "agendas-390": {
+      "url": "/agendas",
+      "title": "Analía Carlomagno | Artista Plástica Argentina",
+      "lang": "es",
+      "viewportMeta": "width=device-width, initial-scale=1.0, user-scalable=no",
+      "headings": [
+        "H1: anicarlomagno",
+        "H2: artista plástica",
+        "H1: Agendas y cuadernos",
+        "H1: Quiero mi agenda/cuaderno",
+        "H2: Páginas llenas de arte",
+        "H3: Seguime en mis redes sociales"
+      ],
+      "h1Count": 3,
+      "mainLandmarks": 2,
+      "images": 27,
+      "imgsWithoutAlt": [
+        "svg>",
+        "agenda1.jpg",
+        "agenda2.jpg",
+        "agenda3.jpg",
+        "agenda4.jpg",
+        "agenda5.jpg",
+        "agenda6.jpg",
+        "agenda7.jpg",
+        "agenda8.jpg"
+      ],
+      "imgsEmptyAlt": 3,
+      "imgsAltSamples": [
+        "Home svg",
+        "Paintbrush svg",
+        "Book svg",
+        "Eye svg",
+        "Printer svg",
+        "Diamond svg",
+        "Painting 1",
+        "truck svg"
+      ],
+      "imgsWithoutWidthHeightAttrs": 27,
+      "imgsLazy": 0,
+      "imgsLoaded": 27,
+      "videos": [],
+      "iframes": [],
+      "nestedInteractive": [
+        "button:Quiero mi agenda/cuaderno"
+      ],
+      "buttonsWithoutName": 0,
+      "linksTarget": [
+        {
+          "href": "https://www.instagram.com/anicarlomagno_painting/",
+          "target": "blank",
+          "rel": ""
+        },
+        {
+          "href": "https://www.tiktok.com/@anicarlomagno_painting?_t=8pSFiI1eHB7&_r=1",
+          "target": "blank",
+          "rel": ""
+        },
+        {
+          "href": "https://www.facebook.com/anicarlomagno",
+          "target": "blank",
+          "rel": ""
+        }
+      ],
+      "smallTargets": [
+        {
+          "tag": "button",
+          "text": "☰",
+          "w": 22,
+          "h": 32
+        },
+        {
+          "tag": "button",
+          "text": "Quiero mi agenda/cuaderno",
+          "w": 297,
+          "h": 43
+        },
+        {
+          "tag": "a",
+          "text": "",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "INICIO",
+          "w": 44,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "OBRAS",
+          "w": 50,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "AGENDAS Y CUADERNOS",
+          "w": 180,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "LIBROS",
+          "w": 53,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "LÁMINAS",
+          "w": 66,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "SOBRE MI",
+          "w": 70,
+          "h": 23
+        }
+      ],
+      "clickableNonSemantic": [
+        {
+          "tag": "div",
+          "cls": "",
+          "text": "❮",
+          "tabIndex": -1
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "text": "❯",
+          "tabIndex": -1
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "text": "●",
+          "tabIndex": -1
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "text": "●",
+          "tabIndex": -1
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "text": "●",
+          "tabIndex": -1
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "text": "●",
+          "tabIndex": -1
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "text": "●",
+          "tabIndex": -1
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "text": "●",
+          "tabIndex": -1
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "text": "●",
+          "tabIndex": -1
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "text": "●",
+          "tabIndex": -1
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "text": "●",
+          "tabIndex": -1
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "text": "●",
+          "tabIndex": -1
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "text": "●",
+          "tabIndex": -1
+        }
+      ],
+      "inputsFontSizeUnder16": [],
+      "docScrollWidth": 390,
+      "clientWidth": 390,
+      "overflowingElements": [],
+      "pageHeight": 3285,
+      "imgsLoadedAtLoad": 27,
+      "consoleMessages": [
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s stroke-linecap strokeLinecap at path at svg at button at ScrollToTopButton (http://localhost:5173/src/components/ScrollToTopButton.jsx:27:41) at div at Router (http://localhost:5173/n",
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s stroke-linejoin strokeLinejoin at path at svg at button at ScrollToTopButton (http://localhost:5173/src/components/ScrollToTopButton.jsx:27:41) at div at Router (http://localhost:5173",
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s stroke-width strokeWidth at svg at button at ScrollToTopButton (http://localhost:5173/src/components/ScrollToTopButton.jsx:27:41) at div at Router (http://localhost:5173/node_modules/",
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s class className at svg at button at ScrollToTopButton (http://localhost:5173/src/components/ScrollToTopButton.jsx:27:41) at div at Router (http://localhost:5173/node_modules/.vite/dep"
+      ]
+    },
+    "agenda-personalizada-390": {
+      "url": "/agenda-personalizada",
+      "title": "Analía Carlomagno | Artista Plástica Argentina",
+      "lang": "es",
+      "viewportMeta": "width=device-width, initial-scale=1.0, user-scalable=no",
+      "headings": [
+        "H1: anicarlomagno",
+        "H2: artista plástica",
+        "H1: Agenda personalizada",
+        "H1: Personaliza tu agenda o cuaderno",
+        "H2: ",
+        "H2: Cuaderno A4",
+        "H3: Seguime en mis redes sociales"
+      ],
+      "h1Count": 3,
+      "mainLandmarks": 2,
+      "images": 32,
+      "imgsWithoutAlt": [
+        "svg>"
+      ],
+      "imgsEmptyAlt": 3,
+      "imgsAltSamples": [
+        "Home svg",
+        "Paintbrush svg",
+        "Book svg",
+        "Eye svg",
+        "Printer svg",
+        "Diamond svg",
+        "Cuadro 1",
+        "Cuadro 2",
+        "Cuadro 3",
+        "Cuadro 4",
+        "Cuadro 5",
+        "Cuadro 6",
+        "Cuaderno A4 - Vista 1",
+        "Cuaderno A4 - Vista 2",
+        "Cuaderno A4 - Vista 3",
+        "Cuaderno A4 - Vista 4",
+        "Cuaderno A4 - Vista 5",
+        "Cuaderno A4 - Vista 6",
+        "Cuaderno A4 - Vista 7",
+        "truck svg"
+      ],
+      "imgsWithoutWidthHeightAttrs": 32,
+      "imgsLazy": 0,
+      "imgsLoaded": 32,
+      "videos": [],
+      "iframes": [],
+      "nestedInteractive": [],
+      "buttonsWithoutName": 0,
+      "linksTarget": [
+        {
+          "href": "https://www.instagram.com/anicarlomagno_painting/",
+          "target": "blank",
+          "rel": ""
+        },
+        {
+          "href": "https://www.tiktok.com/@anicarlomagno_painting?_t=8pSFiI1eHB7&_r=1",
+          "target": "blank",
+          "rel": ""
+        },
+        {
+          "href": "https://www.facebook.com/anicarlomagno",
+          "target": "blank",
+          "rel": ""
+        }
+      ],
+      "smallTargets": [
+        {
+          "tag": "button",
+          "text": "☰",
+          "w": 22,
+          "h": 32
+        },
+        {
+          "tag": "input",
+          "text": "agenda-perpetua",
+          "w": 20,
+          "h": 20
+        },
+        {
+          "tag": "input",
+          "text": "agenda-semanal",
+          "w": 20,
+          "h": 20
+        },
+        {
+          "tag": "input",
+          "text": "agenda-docente",
+          "w": 20,
+          "h": 20
+        },
+        {
+          "tag": "input",
+          "text": "cuaderno",
+          "w": 20,
+          "h": 20
+        },
+        {
+          "tag": "input",
+          "text": "cuaderno-a4",
+          "w": 20,
+          "h": 20
+        },
+        {
+          "tag": "input",
+          "text": "blanco",
+          "w": 18,
+          "h": 18
+        },
+        {
+          "tag": "input",
+          "text": "natural",
+          "w": 18,
+          "h": 18
+        },
+        {
+          "tag": "button",
+          "text": "Ver más",
+          "w": 129,
+          "h": 32
+        },
+        {
+          "tag": "input",
+          "text": "username",
+          "w": 310,
+          "h": 37
+        },
+        {
+          "tag": "input",
+          "text": "on",
+          "w": 20,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "INICIO",
+          "w": 44,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "OBRAS",
+          "w": 50,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "AGENDAS Y CUADERNOS",
+          "w": 180,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "LIBROS",
+          "w": 53,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "LÁMINAS",
+          "w": 66,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "SOBRE MI",
+          "w": 70,
+          "h": 23
+        }
+      ],
+      "clickableNonSemantic": [
+        {
+          "tag": "img",
+          "cls": "",
+          "text": "",
+          "tabIndex": -1
+        },
+        {
+          "tag": "img",
+          "cls": "",
+          "text": "",
+          "tabIndex": -1
+        },
+        {
+          "tag": "img",
+          "cls": "",
+          "text": "",
+          "tabIndex": -1
+        },
+        {
+          "tag": "img",
+          "cls": "",
+          "text": "",
+          "tabIndex": -1
+        },
+        {
+          "tag": "img",
+          "cls": "",
+          "text": "",
+          "tabIndex": -1
+        },
+        {
+          "tag": "img",
+          "cls": "",
+          "text": "",
+          "tabIndex": -1
+        },
+        {
+          "tag": "div",
+          "cls": "gallery-thumbnail active",
+          "text": "Cuaderno A4 - Vista 1",
+          "tabIndex": -1
+        },
+        {
+          "tag": "div",
+          "cls": "gallery-thumbnail ",
+          "text": "Cuaderno A4 - Vista 2",
+          "tabIndex": -1
+        },
+        {
+          "tag": "div",
+          "cls": "gallery-thumbnail ",
+          "text": "Cuaderno A4 - Vista 3",
+          "tabIndex": -1
+        },
+        {
+          "tag": "div",
+          "cls": "gallery-thumbnail ",
+          "text": "Cuaderno A4 - Vista 4",
+          "tabIndex": -1
+        },
+        {
+          "tag": "div",
+          "cls": "gallery-thumbnail ",
+          "text": "Cuaderno A4 - Vista 5",
+          "tabIndex": -1
+        },
+        {
+          "tag": "div",
+          "cls": "gallery-thumbnail ",
+          "text": "Cuaderno A4 - Vista 6",
+          "tabIndex": -1
+        },
+        {
+          "tag": "div",
+          "cls": "gallery-thumbnail ",
+          "text": "Cuaderno A4 - Vista 7",
+          "tabIndex": -1
+        }
+      ],
+      "inputsFontSizeUnder16": [],
+      "docScrollWidth": 390,
+      "clientWidth": 390,
+      "overflowingElements": [],
+      "pageHeight": 3866,
+      "imgsLoadedAtLoad": 32,
+      "consoleMessages": [
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s stroke-linecap strokeLinecap at path at svg at button at ScrollToTopButton (http://localhost:5173/src/components/ScrollToTopButton.jsx:27:41) at div at Router (http://localhost:5173/n",
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s stroke-linejoin strokeLinejoin at path at svg at button at ScrollToTopButton (http://localhost:5173/src/components/ScrollToTopButton.jsx:27:41) at div at Router (http://localhost:5173",
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s stroke-width strokeWidth at svg at button at ScrollToTopButton (http://localhost:5173/src/components/ScrollToTopButton.jsx:27:41) at div at Router (http://localhost:5173/node_modules/",
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s class className at svg at button at ScrollToTopButton (http://localhost:5173/src/components/ScrollToTopButton.jsx:27:41) at div at Router (http://localhost:5173/node_modules/.vite/dep"
+      ]
+    },
+    "mi-libro-390": {
+      "url": "/mi-libro",
+      "title": "Analía Carlomagno | Artista Plástica Argentina",
+      "lang": "es",
+      "viewportMeta": "width=device-width, initial-scale=1.0, user-scalable=no",
+      "headings": [
+        "H1: anicarlomagno",
+        "H2: artista plástica",
+        "H1: Libros",
+        "H4: $25900",
+        "H2: COMPRAR",
+        "H3: \"Miradas que narran\"",
+        "H4: $25900",
+        "H2: COMPRAR",
+        "H3: \"Colores que cuentan historias\"",
+        "H3: Seguime en mis redes sociales"
+      ],
+      "h1Count": 2,
+      "mainLandmarks": 3,
+      "images": 20,
+      "imgsWithoutAlt": [
+        "svg>"
+      ],
+      "imgsEmptyAlt": 3,
+      "imgsAltSamples": [
+        "Home svg",
+        "Paintbrush svg",
+        "Book svg",
+        "Eye svg",
+        "Printer svg",
+        "Diamond svg",
+        "Painting 1",
+        "truck svg"
+      ],
+      "imgsWithoutWidthHeightAttrs": 20,
+      "imgsLazy": 0,
+      "imgsLoaded": 20,
+      "videos": [],
+      "iframes": [],
+      "nestedInteractive": [
+        "button:COMPRAR",
+        "button:COMPRAR"
+      ],
+      "buttonsWithoutName": 0,
+      "linksTarget": [
+        {
+          "href": "https://www.instagram.com/anicarlomagno_painting/",
+          "target": "blank",
+          "rel": ""
+        },
+        {
+          "href": "https://www.tiktok.com/@anicarlomagno_painting?_t=8pSFiI1eHB7&_r=1",
+          "target": "blank",
+          "rel": ""
+        },
+        {
+          "href": "https://www.facebook.com/anicarlomagno",
+          "target": "blank",
+          "rel": ""
+        }
+      ],
+      "smallTargets": [
+        {
+          "tag": "button",
+          "text": "☰",
+          "w": 22,
+          "h": 32
+        },
+        {
+          "tag": "button",
+          "text": "COMPRAR",
+          "w": 159,
+          "h": 43
+        },
+        {
+          "tag": "button",
+          "text": "COMPRAR",
+          "w": 159,
+          "h": 43
+        },
+        {
+          "tag": "a",
+          "text": "",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "INICIO",
+          "w": 44,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "OBRAS",
+          "w": 50,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "AGENDAS Y CUADERNOS",
+          "w": 180,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "LIBROS",
+          "w": 53,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "LÁMINAS",
+          "w": 66,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "SOBRE MI",
+          "w": 70,
+          "h": 23
+        }
+      ],
+      "clickableNonSemantic": [
+        {
+          "tag": "div",
+          "cls": "",
+          "text": "❮",
+          "tabIndex": -1
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "text": "❯",
+          "tabIndex": -1
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "text": "●",
+          "tabIndex": -1
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "text": "●",
+          "tabIndex": -1
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "text": "❮",
+          "tabIndex": -1
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "text": "❯",
+          "tabIndex": -1
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "text": "●",
+          "tabIndex": -1
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "text": "●",
+          "tabIndex": -1
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "text": "●",
+          "tabIndex": -1
+        }
+      ],
+      "inputsFontSizeUnder16": [],
+      "docScrollWidth": 390,
+      "clientWidth": 390,
+      "overflowingElements": [],
+      "pageHeight": 2944,
+      "imgsLoadedAtLoad": 20,
+      "consoleMessages": [
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s stroke-linecap strokeLinecap at path at svg at button at ScrollToTopButton (http://localhost:5173/src/components/ScrollToTopButton.jsx:27:41) at div at Router (http://localhost:5173/n",
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s stroke-linejoin strokeLinejoin at path at svg at button at ScrollToTopButton (http://localhost:5173/src/components/ScrollToTopButton.jsx:27:41) at div at Router (http://localhost:5173",
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s stroke-width strokeWidth at svg at button at ScrollToTopButton (http://localhost:5173/src/components/ScrollToTopButton.jsx:27:41) at div at Router (http://localhost:5173/node_modules/",
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s class className at svg at button at ScrollToTopButton (http://localhost:5173/src/components/ScrollToTopButton.jsx:27:41) at div at Router (http://localhost:5173/node_modules/.vite/dep"
+      ]
+    },
+    "laminas-390": {
+      "url": "/laminas",
+      "title": "Analía Carlomagno | Artista Plástica Argentina",
+      "lang": "es",
+      "viewportMeta": "width=device-width, initial-scale=1.0, user-scalable=no",
+      "headings": [
+        "H1: anicarlomagno",
+        "H2: artista plástica",
+        "H1: Láminas",
+        "H2: Seleccione una lámina",
+        "H2: Láminas",
+        "H3: Seguime en mis redes sociales"
+      ],
+      "h1Count": 2,
+      "mainLandmarks": 2,
+      "images": 18,
+      "imgsWithoutAlt": [
+        "svg>"
+      ],
+      "imgsEmptyAlt": 3,
+      "imgsAltSamples": [
+        "Home svg",
+        "Paintbrush svg",
+        "Book svg",
+        "Eye svg",
+        "Printer svg",
+        "Diamond svg",
+        "truck svg"
+      ],
+      "imgsWithoutWidthHeightAttrs": 18,
+      "imgsLazy": 0,
+      "imgsLoaded": 18,
+      "videos": [],
+      "iframes": [],
+      "nestedInteractive": [],
+      "buttonsWithoutName": 0,
+      "linksTarget": [
+        {
+          "href": "https://www.instagram.com/anicarlomagno_painting/",
+          "target": "blank",
+          "rel": ""
+        },
+        {
+          "href": "https://www.tiktok.com/@anicarlomagno_painting?_t=8pSFiI1eHB7&_r=1",
+          "target": "blank",
+          "rel": ""
+        },
+        {
+          "href": "https://www.facebook.com/anicarlomagno",
+          "target": "blank",
+          "rel": ""
+        }
+      ],
+      "smallTargets": [
+        {
+          "tag": "button",
+          "text": "☰",
+          "w": 22,
+          "h": 32
+        },
+        {
+          "tag": "button",
+          "text": "▼",
+          "w": 30,
+          "h": 33
+        },
+        {
+          "tag": "a",
+          "text": "",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "INICIO",
+          "w": 44,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "OBRAS",
+          "w": 50,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "AGENDAS Y CUADERNOS",
+          "w": 180,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "LIBROS",
+          "w": 53,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "LÁMINAS",
+          "w": 66,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "SOBRE MI",
+          "w": 70,
+          "h": 23
+        }
+      ],
+      "clickableNonSemantic": [],
+      "inputsFontSizeUnder16": [],
+      "docScrollWidth": 390,
+      "clientWidth": 390,
+      "overflowingElements": [],
+      "pageHeight": 1117,
+      "imgsLoadedAtLoad": 18,
+      "consoleMessages": []
+    },
+    "sobre-mi-390": {
+      "url": "/sobre-mi",
+      "title": "Analía Carlomagno | Artista Plástica Argentina",
+      "lang": "es",
+      "viewportMeta": "width=device-width, initial-scale=1.0, user-scalable=no",
+      "headings": [
+        "H1: anicarlomagno",
+        "H2: artista plástica",
+        "H1: Sobre mi",
+        "H1: Analia Carlomagno",
+        "H3: +1000",
+        "H3: +20",
+        "H3: +15",
+        "H2: Mi Estilo Artístico",
+        "H3: Colores Saturados",
+        "H3: Alto Contraste",
+        "H3: Texturas Ricas",
+        "H3: Poesía Visual",
+        "H2: Mi Trayectoria",
+        "H3: Centro Polivalente de Arte",
+        "H3: Nace mi estilo único",
+        "H3: La Noche de Los Museos",
+        "H3: Arte sin fronteras",
+        "H2: Mi Historia",
+        "H3: Familia",
+        "H3: Deseos...",
+        "H3: Seguime en mis redes sociales"
+      ],
+      "h1Count": 3,
+      "mainLandmarks": 2,
+      "images": 24,
+      "imgsWithoutAlt": [
+        "svg>"
+      ],
+      "imgsEmptyAlt": 3,
+      "imgsAltSamples": [
+        "Home svg",
+        "Paintbrush svg",
+        "Book svg",
+        "Eye svg",
+        "Printer svg",
+        "Diamond svg",
+        "Analia Carlomagno",
+        "Obras vendidas",
+        "Años creando",
+        "Años enseñando",
+        "Familia",
+        "Deseos",
+        "truck svg"
+      ],
+      "imgsWithoutWidthHeightAttrs": 24,
+      "imgsLazy": 0,
+      "imgsLoaded": 24,
+      "videos": [],
+      "iframes": [],
+      "nestedInteractive": [],
+      "buttonsWithoutName": 0,
+      "linksTarget": [
+        {
+          "href": "https://www.instagram.com/anicarlomagno_painting/",
+          "target": "blank",
+          "rel": ""
+        },
+        {
+          "href": "https://www.tiktok.com/@anicarlomagno_painting?_t=8pSFiI1eHB7&_r=1",
+          "target": "blank",
+          "rel": ""
+        },
+        {
+          "href": "https://www.facebook.com/anicarlomagno",
+          "target": "blank",
+          "rel": ""
+        }
+      ],
+      "smallTargets": [
+        {
+          "tag": "button",
+          "text": "☰",
+          "w": 22,
+          "h": 32
+        },
+        {
+          "tag": "button",
+          "text": "Leer más",
+          "w": 126,
+          "h": 42
+        },
+        {
+          "tag": "button",
+          "text": "Leer más",
+          "w": 126,
+          "h": 42
+        },
+        {
+          "tag": "a",
+          "text": "",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "INICIO",
+          "w": 44,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "OBRAS",
+          "w": 50,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "AGENDAS Y CUADERNOS",
+          "w": 180,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "LIBROS",
+          "w": 53,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "LÁMINAS",
+          "w": 66,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "SOBRE MI",
+          "w": 70,
+          "h": 23
+        }
+      ],
+      "clickableNonSemantic": [
+        {
+          "tag": "div",
+          "cls": "story-card ",
+          "text": "Familia Terminé mis estudios en el Centr",
+          "tabIndex": -1
+        },
+        {
+          "tag": "div",
+          "cls": "story-card ",
+          "text": "Deseos... Deseo, deseo... que mis mujere",
+          "tabIndex": -1
+        }
+      ],
+      "inputsFontSizeUnder16": [],
+      "docScrollWidth": 390,
+      "clientWidth": 390,
+      "overflowingElements": [],
+      "pageHeight": 4958,
+      "imgsLoadedAtLoad": 24,
+      "consoleMessages": [
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s stroke-linecap strokeLinecap at path at svg at button at ScrollToTopButton (http://localhost:5173/src/components/ScrollToTopButton.jsx:27:41) at div at Router (http://localhost:5173/n",
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s stroke-linejoin strokeLinejoin at path at svg at button at ScrollToTopButton (http://localhost:5173/src/components/ScrollToTopButton.jsx:27:41) at div at Router (http://localhost:5173",
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s stroke-width strokeWidth at svg at button at ScrollToTopButton (http://localhost:5173/src/components/ScrollToTopButton.jsx:27:41) at div at Router (http://localhost:5173/node_modules/",
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s class className at svg at button at ScrollToTopButton (http://localhost:5173/src/components/ScrollToTopButton.jsx:27:41) at div at Router (http://localhost:5173/node_modules/.vite/dep"
+      ]
+    },
+    "contacto-390": {
+      "url": "/contacto",
+      "title": "Analía Carlomagno | Artista Plástica Argentina",
+      "lang": "es",
+      "viewportMeta": "width=device-width, initial-scale=1.0, user-scalable=no",
+      "headings": [
+        "H1: anicarlomagno",
+        "H2: artista plástica",
+        "H2: Contacto",
+        "H3: Seguime en mis redes sociales"
+      ],
+      "h1Count": 1,
+      "mainLandmarks": 1,
+      "images": 18,
+      "imgsWithoutAlt": [
+        "svg>"
+      ],
+      "imgsEmptyAlt": 3,
+      "imgsAltSamples": [
+        "Home svg",
+        "Paintbrush svg",
+        "Book svg",
+        "Eye svg",
+        "Printer svg",
+        "Diamond svg",
+        "truck svg"
+      ],
+      "imgsWithoutWidthHeightAttrs": 18,
+      "imgsLazy": 0,
+      "imgsLoaded": 18,
+      "videos": [],
+      "iframes": [
+        {
+          "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3172.3",
+          "loading": "lazy",
+          "title": "Mapa de la ubicación de Analía Carlomagno, artista plástica"
+        }
+      ],
+      "nestedInteractive": [],
+      "buttonsWithoutName": 0,
+      "linksTarget": [
+        {
+          "href": "https://www.instagram.com/anicarlomagno_painting/",
+          "target": "blank",
+          "rel": ""
+        },
+        {
+          "href": "https://www.tiktok.com/@anicarlomagno_painting?_t=8pSFiI1eHB7&_r=1",
+          "target": "blank",
+          "rel": ""
+        },
+        {
+          "href": "https://www.facebook.com/anicarlomagno",
+          "target": "blank",
+          "rel": ""
+        }
+      ],
+      "smallTargets": [
+        {
+          "tag": "button",
+          "text": "☰",
+          "w": 22,
+          "h": 32
+        },
+        {
+          "tag": "input",
+          "text": "nombre",
+          "w": 326,
+          "h": 37
+        },
+        {
+          "tag": "input",
+          "text": "apellido",
+          "w": 326,
+          "h": 37
+        },
+        {
+          "tag": "input",
+          "text": "email",
+          "w": 326,
+          "h": 37
+        },
+        {
+          "tag": "a",
+          "text": "",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "INICIO",
+          "w": 44,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "OBRAS",
+          "w": 50,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "AGENDAS Y CUADERNOS",
+          "w": 180,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "LIBROS",
+          "w": 53,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "LÁMINAS",
+          "w": 66,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "SOBRE MI",
+          "w": 70,
+          "h": 23
+        }
+      ],
+      "clickableNonSemantic": [],
+      "inputsFontSizeUnder16": [],
+      "docScrollWidth": 390,
+      "clientWidth": 390,
+      "overflowingElements": [],
+      "pageHeight": 1381,
+      "imgsLoadedAtLoad": 18,
+      "consoleMessages": [
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s stroke-linecap strokeLinecap at path at svg at button at ScrollToTopButton (http://localhost:5173/src/components/ScrollToTopButton.jsx:27:41) at div at Router (http://localhost:5173/n",
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s stroke-linejoin strokeLinejoin at path at svg at button at ScrollToTopButton (http://localhost:5173/src/components/ScrollToTopButton.jsx:27:41) at div at Router (http://localhost:5173",
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s stroke-width strokeWidth at svg at button at ScrollToTopButton (http://localhost:5173/src/components/ScrollToTopButton.jsx:27:41) at div at Router (http://localhost:5173/node_modules/",
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s class className at svg at button at ScrollToTopButton (http://localhost:5173/src/components/ScrollToTopButton.jsx:27:41) at div at Router (http://localhost:5173/node_modules/.vite/dep"
+      ]
+    },
+    "home-1280": {
+      "url": "/",
+      "title": "Analía Carlomagno | Artista Plástica Argentina",
+      "lang": "es",
+      "viewportMeta": "width=device-width, initial-scale=1.0, user-scalable=no",
+      "headings": [
+        "H1: anicarlomagno",
+        "H2: artista plástica",
+        "H1: anicarlomagno",
+        "H2: artista plástica",
+        "H3: Quién soy",
+        "H3: Mis pasiones",
+        "H2: Agendas",
+        "H2: Soñadora Compulsiva",
+        "H3: Seguime en mis redes sociales"
+      ],
+      "h1Count": 2,
+      "mainLandmarks": 2,
+      "images": 41,
+      "imgsWithoutAlt": [
+        "svg>",
+        "svg>"
+      ],
+      "imgsEmptyAlt": 3,
+      "imgsAltSamples": [
+        "Home svg",
+        "Paintbrush svg",
+        "Book svg",
+        "Eye svg",
+        "Printer svg",
+        "Diamond svg",
+        "Paintbrush logo",
+        "Artistic representation",
+        "Artistic passion",
+        "Diseño 1",
+        "Diseño 2",
+        "Diseño 4",
+        "Diseño 6",
+        "Diseño 7",
+        "Femme d'eau",
+        "Creación",
+        "Bahía",
+        "La Dama Dorada",
+        "La Dame Fleurie",
+        "Iris",
+        "Butterfly Queen",
+        "Helena",
+        "La Culpable (con flores)",
+        "La Culpable (con mariposas)",
+        "La Dama de Rosa (con mariposas)",
+        "Lucía",
+        "truck svg"
+      ],
+      "imgsWithoutWidthHeightAttrs": 41,
+      "imgsLazy": 0,
+      "imgsLoaded": 41,
+      "videos": [
+        {
+          "src": "wspVideo-header.mp4",
+          "preload": "none",
+          "autoplay": true,
+          "muted": true,
+          "poster": null
+        }
+      ],
+      "iframes": [],
+      "nestedInteractive": [
+        "button:Mis obras",
+        "button:Saber más",
+        "button:Saber más",
+        "a:Ver en instagram"
+      ],
+      "buttonsWithoutName": 0,
+      "linksTarget": [
+        {
+          "href": "https://www.instagram.com/stories/highlights/17931595102459109/",
+          "target": "blank",
+          "rel": ""
+        },
+        {
+          "href": "https://www.instagram.com/anicarlomagno_painting/",
+          "target": "blank",
+          "rel": ""
+        },
+        {
+          "href": "https://www.tiktok.com/@anicarlomagno_painting?_t=8pSFiI1eHB7&_r=1",
+          "target": "blank",
+          "rel": ""
+        },
+        {
+          "href": "https://www.facebook.com/anicarlomagno",
+          "target": "blank",
+          "rel": ""
+        }
+      ],
+      "smallTargets": [
+        {
+          "tag": "a",
+          "text": "Inicio",
+          "w": 60,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Obras",
+          "w": 64,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Agendas y cuadernos",
+          "w": 166,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Libros",
+          "w": 66,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Láminas",
+          "w": 80,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Sobre mí",
+          "w": 84,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Contacto",
+          "w": 85,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Saber más",
+          "w": 677,
+          "h": 32
+        },
+        {
+          "tag": "button",
+          "text": "Saber más",
+          "w": 93,
+          "h": 32
+        },
+        {
+          "tag": "a",
+          "text": "Saber más",
+          "w": 544,
+          "h": 32
+        },
+        {
+          "tag": "button",
+          "text": "Saber más",
+          "w": 93,
+          "h": 32
+        },
+        {
+          "tag": "a",
+          "text": "Ver en instagram",
+          "w": 135,
+          "h": 24
+        },
+        {
+          "tag": "button",
+          "text": "Ver más",
+          "w": 78,
+          "h": 32
+        },
+        {
+          "tag": "a",
+          "text": "",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "INICIO",
+          "w": 44,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "OBRAS",
+          "w": 50,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "AGENDAS Y CUADERNOS",
+          "w": 180,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "LIBROS",
+          "w": 53,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "LÁMINAS",
+          "w": 66,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "SOBRE MI",
+          "w": 70,
+          "h": 23
+        }
+      ],
+      "clickableNonSemantic": [],
+      "inputsFontSizeUnder16": [],
+      "docScrollWidth": 1280,
+      "clientWidth": 1280,
+      "overflowingElements": [],
+      "pageHeight": 4728,
+      "imgsLoadedAtLoad": 41,
+      "consoleMessages": [
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s class className at div at div at div at Slider (http://localhost:5173/src/components/Slider.jsx:37:23) at div at header at main at Home at RenderedRoute (http://localhost:5173/node_mo",
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s stroke-linecap strokeLinecap at path at svg at button at ScrollToTopButton (http://localhost:5173/src/components/ScrollToTopButton.jsx:27:41) at div at Router (http://localhost:5173/n",
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s stroke-linejoin strokeLinejoin at path at svg at button at ScrollToTopButton (http://localhost:5173/src/components/ScrollToTopButton.jsx:27:41) at div at Router (http://localhost:5173",
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s stroke-width strokeWidth at svg at button at ScrollToTopButton (http://localhost:5173/src/components/ScrollToTopButton.jsx:27:41) at div at Router (http://localhost:5173/node_modules/"
+      ]
+    },
+    "elegir-1280": {
+      "url": "/elegir",
+      "title": "Analía Carlomagno | Artista Plástica Argentina",
+      "lang": "es",
+      "viewportMeta": "width=device-width, initial-scale=1.0, user-scalable=no",
+      "headings": [
+        "H1: anicarlomagno",
+        "H2: artista plástica",
+        "H1: Elegí que te gustaría",
+        "H3: Seguime en mis redes sociales"
+      ],
+      "h1Count": 2,
+      "mainLandmarks": 2,
+      "images": 18,
+      "imgsWithoutAlt": [
+        "svg>"
+      ],
+      "imgsEmptyAlt": 3,
+      "imgsAltSamples": [
+        "Home svg",
+        "Paintbrush svg",
+        "Book svg",
+        "Eye svg",
+        "Printer svg",
+        "Diamond svg",
+        "truck svg"
+      ],
+      "imgsWithoutWidthHeightAttrs": 18,
+      "imgsLazy": 0,
+      "imgsLoaded": 18,
+      "videos": [],
+      "iframes": [],
+      "nestedInteractive": [
+        "button:Obra personalizada",
+        "button:Obras en stock"
+      ],
+      "buttonsWithoutName": 0,
+      "linksTarget": [
+        {
+          "href": "https://www.instagram.com/anicarlomagno_painting/",
+          "target": "blank",
+          "rel": ""
+        },
+        {
+          "href": "https://www.tiktok.com/@anicarlomagno_painting?_t=8pSFiI1eHB7&_r=1",
+          "target": "blank",
+          "rel": ""
+        },
+        {
+          "href": "https://www.facebook.com/anicarlomagno",
+          "target": "blank",
+          "rel": ""
+        }
+      ],
+      "smallTargets": [
+        {
+          "tag": "a",
+          "text": "Inicio",
+          "w": 60,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Obras",
+          "w": 64,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Agendas y cuadernos",
+          "w": 166,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Libros",
+          "w": 66,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Láminas",
+          "w": 80,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Sobre mí",
+          "w": 84,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Contacto",
+          "w": 85,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Obra personalizada",
+          "w": 200,
+          "h": 19
+        },
+        {
+          "tag": "a",
+          "text": "Obras en stock",
+          "w": 200,
+          "h": 19
+        },
+        {
+          "tag": "a",
+          "text": "",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "INICIO",
+          "w": 44,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "OBRAS",
+          "w": 50,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "AGENDAS Y CUADERNOS",
+          "w": 180,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "LIBROS",
+          "w": 53,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "LÁMINAS",
+          "w": 66,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "SOBRE MI",
+          "w": 70,
+          "h": 23
+        }
+      ],
+      "clickableNonSemantic": [],
+      "inputsFontSizeUnder16": [],
+      "docScrollWidth": 1280,
+      "clientWidth": 1280,
+      "overflowingElements": [],
+      "pageHeight": 1078,
+      "imgsLoadedAtLoad": 18,
+      "consoleMessages": [
+        "error: Warning: validateDOMNesting(...): %s cannot appear as a descendant of <%s>.%s <p> p at p at p at section at FooterPaintingText at div at MotionComponent (http://localhost:5173/node_modules/.vite/deps/framer-motion.js?v=6805bf61:7176:35) at "
+      ]
+    },
+    "obras-en-stock-1280": {
+      "url": "/obras-en-stock",
+      "title": "Analía Carlomagno | Artista Plástica Argentina",
+      "lang": "es",
+      "viewportMeta": "width=device-width, initial-scale=1.0, user-scalable=no",
+      "headings": [
+        "H1: anicarlomagno",
+        "H2: artista plástica",
+        "H1: Obras en stock",
+        "H1: Femme d'eau",
+        "H3: 50x70",
+        "H1: Creación",
+        "H3: 60x70",
+        "H1: Bahía",
+        "H3: 80x60",
+        "H1: La Dame Fleurie",
+        "H3: ",
+        "H1: La Dama Dorada",
+        "H3: 80x60",
+        "H1: Iris",
+        "H3: ",
+        "H1: Cáncer",
+        "H3: 80x50",
+        "H1: La Dama de Rosa",
+        "H3: 80x60",
+        "H1: Nerea",
+        "H3: 60x60",
+        "H1: Vanessa",
+        "H3: 60x60",
+        "H1: Aurora",
+        "H3: 80x60",
+        "H1: Katrina",
+        "H3: 60x35",
+        "H1: Unidad",
+        "H3: 60x60",
+        "H1: Enigma",
+        "H3: 90x60",
+        "H1: Veil",
+        "H3: 80x60",
+        "H1: Euphoria",
+        "H3: 60x60",
+        "H1: La Culpable",
+        "H3: 80x80",
+        "H1: Butterfly Queen",
+        "H3: 80x80",
+        "H1: Lucía",
+        "H3: 60x60",
+        "H1: Pricesa Azul",
+        "H3: 50x70",
+        "H1: Scarlet",
+        "H3: 45x55",
+        "H1: El Velo Dorado",
+        "H3: 60x50",
+        "H3: Seguime en mis redes sociales"
+      ],
+      "h1Count": 24,
+      "mainLandmarks": 2,
+      "images": 40,
+      "imgsWithoutAlt": [
+        "svg>"
+      ],
+      "imgsEmptyAlt": 3,
+      "imgsAltSamples": [
+        "Home svg",
+        "Paintbrush svg",
+        "Book svg",
+        "Eye svg",
+        "Printer svg",
+        "Diamond svg",
+        "Femme d'eau",
+        "Creación",
+        "Bahía",
+        "La Dame Fleurie",
+        "La Dama Dorada",
+        "Iris",
+        "Cáncer",
+        "La Dama de Rosa",
+        "Nerea",
+        "Vanessa",
+        "Aurora",
+        "Katrina",
+        "Unidad",
+        "Enigma",
+        "Veil",
+        "Euphoria",
+        "La Culpable",
+        "Butterfly Queen",
+        "Lucía",
+        "Pricesa Azul",
+        "Scarlet",
+        "El Velo Dorado",
+        "truck svg"
+      ],
+      "imgsWithoutWidthHeightAttrs": 40,
+      "imgsLazy": 0,
+      "imgsLoaded": 40,
+      "videos": [],
+      "iframes": [],
+      "nestedInteractive": [
+        "button:Quiero mi obra"
+      ],
+      "buttonsWithoutName": 0,
+      "linksTarget": [
+        {
+          "href": "https://www.instagram.com/anicarlomagno_painting/",
+          "target": "blank",
+          "rel": ""
+        },
+        {
+          "href": "https://www.tiktok.com/@anicarlomagno_painting?_t=8pSFiI1eHB7&_r=1",
+          "target": "blank",
+          "rel": ""
+        },
+        {
+          "href": "https://www.facebook.com/anicarlomagno",
+          "target": "blank",
+          "rel": ""
+        }
+      ],
+      "smallTargets": [
+        {
+          "tag": "a",
+          "text": "Inicio",
+          "w": 60,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Obras",
+          "w": 64,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Agendas y cuadernos",
+          "w": 166,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Libros",
+          "w": 66,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Láminas",
+          "w": 80,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Sobre mí",
+          "w": 84,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Contacto",
+          "w": 85,
+          "h": 20
+        },
+        {
+          "tag": "button",
+          "text": "Consultar",
+          "w": 83,
+          "h": 34
+        },
+        {
+          "tag": "button",
+          "text": "Consultar",
+          "w": 83,
+          "h": 34
+        },
+        {
+          "tag": "button",
+          "text": "Consultar",
+          "w": 83,
+          "h": 34
+        },
+        {
+          "tag": "button",
+          "text": "Consultar",
+          "w": 83,
+          "h": 34
+        },
+        {
+          "tag": "button",
+          "text": "Consultar",
+          "w": 83,
+          "h": 34
+        },
+        {
+          "tag": "button",
+          "text": "Consultar",
+          "w": 83,
+          "h": 34
+        },
+        {
+          "tag": "button",
+          "text": "Consultar",
+          "w": 83,
+          "h": 34
+        },
+        {
+          "tag": "button",
+          "text": "Consultar",
+          "w": 83,
+          "h": 34
+        },
+        {
+          "tag": "button",
+          "text": "Consultar",
+          "w": 83,
+          "h": 34
+        },
+        {
+          "tag": "button",
+          "text": "Consultar",
+          "w": 83,
+          "h": 34
+        },
+        {
+          "tag": "button",
+          "text": "Consultar",
+          "w": 83,
+          "h": 34
+        },
+        {
+          "tag": "button",
+          "text": "Consultar",
+          "w": 83,
+          "h": 34
+        },
+        {
+          "tag": "button",
+          "text": "Consultar",
+          "w": 83,
+          "h": 34
+        },
+        {
+          "tag": "button",
+          "text": "Consultar",
+          "w": 82,
+          "h": 34
+        },
+        {
+          "tag": "button",
+          "text": "Consultar",
+          "w": 83,
+          "h": 34
+        },
+        {
+          "tag": "button",
+          "text": "Consultar",
+          "w": 83,
+          "h": 34
+        },
+        {
+          "tag": "button",
+          "text": "Consultar",
+          "w": 83,
+          "h": 34
+        },
+        {
+          "tag": "button",
+          "text": "Consultar",
+          "w": 83,
+          "h": 34
+        },
+        {
+          "tag": "button",
+          "text": "Consultar",
+          "w": 83,
+          "h": 34
+        },
+        {
+          "tag": "button",
+          "text": "Consultar",
+          "w": 83,
+          "h": 34
+        },
+        {
+          "tag": "button",
+          "text": "Consultar",
+          "w": 83,
+          "h": 34
+        },
+        {
+          "tag": "button",
+          "text": "Consultar",
+          "w": 79,
+          "h": 33
+        },
+        {
+          "tag": "a",
+          "text": "",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "INICIO",
+          "w": 44,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "OBRAS",
+          "w": 50,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "AGENDAS Y CUADERNOS",
+          "w": 180,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "LIBROS",
+          "w": 53,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "LÁMINAS",
+          "w": 66,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "SOBRE MI",
+          "w": 70,
+          "h": 23
+        }
+      ],
+      "clickableNonSemantic": [],
+      "inputsFontSizeUnder16": [],
+      "docScrollWidth": 1280,
+      "clientWidth": 1280,
+      "overflowingElements": [],
+      "pageHeight": 5952,
+      "imgsLoadedAtLoad": 40,
+      "consoleMessages": [
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s stroke-linecap strokeLinecap at path at svg at button at ScrollToTopButton (http://localhost:5173/src/components/ScrollToTopButton.jsx:27:41) at div at Router (http://localhost:5173/n",
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s stroke-linejoin strokeLinejoin at path at svg at button at ScrollToTopButton (http://localhost:5173/src/components/ScrollToTopButton.jsx:27:41) at div at Router (http://localhost:5173",
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s stroke-width strokeWidth at svg at button at ScrollToTopButton (http://localhost:5173/src/components/ScrollToTopButton.jsx:27:41) at div at Router (http://localhost:5173/node_modules/",
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s class className at svg at button at ScrollToTopButton (http://localhost:5173/src/components/ScrollToTopButton.jsx:27:41) at div at Router (http://localhost:5173/node_modules/.vite/dep"
+      ]
+    },
+    "obra-personalizada-1280": {
+      "url": "/obra-personalizada",
+      "title": "Analía Carlomagno | Artista Plástica Argentina",
+      "lang": "es",
+      "viewportMeta": "width=device-width, initial-scale=1.0, user-scalable=no",
+      "headings": [
+        "H1: anicarlomagno",
+        "H2: artista plástica",
+        "H1: Obra personalizada",
+        "H1: Pedí tu obra personalizada",
+        "H3: Seguime en mis redes sociales"
+      ],
+      "h1Count": 3,
+      "mainLandmarks": 2,
+      "images": 18,
+      "imgsWithoutAlt": [
+        "svg>"
+      ],
+      "imgsEmptyAlt": 3,
+      "imgsAltSamples": [
+        "Home svg",
+        "Paintbrush svg",
+        "Book svg",
+        "Eye svg",
+        "Printer svg",
+        "Diamond svg",
+        "truck svg"
+      ],
+      "imgsWithoutWidthHeightAttrs": 18,
+      "imgsLazy": 0,
+      "imgsLoaded": 18,
+      "videos": [],
+      "iframes": [],
+      "nestedInteractive": [],
+      "buttonsWithoutName": 0,
+      "linksTarget": [
+        {
+          "href": "https://www.instagram.com/anicarlomagno_painting/",
+          "target": "blank",
+          "rel": ""
+        },
+        {
+          "href": "https://www.tiktok.com/@anicarlomagno_painting?_t=8pSFiI1eHB7&_r=1",
+          "target": "blank",
+          "rel": ""
+        },
+        {
+          "href": "https://www.facebook.com/anicarlomagno",
+          "target": "blank",
+          "rel": ""
+        }
+      ],
+      "smallTargets": [
+        {
+          "tag": "a",
+          "text": "Inicio",
+          "w": 60,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Obras",
+          "w": 64,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Agendas y cuadernos",
+          "w": 166,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Libros",
+          "w": 66,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Láminas",
+          "w": 80,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Sobre mí",
+          "w": 84,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Contacto",
+          "w": 85,
+          "h": 20
+        },
+        {
+          "tag": "input",
+          "text": "on",
+          "w": 20,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "INICIO",
+          "w": 44,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "OBRAS",
+          "w": 50,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "AGENDAS Y CUADERNOS",
+          "w": 180,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "LIBROS",
+          "w": 53,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "LÁMINAS",
+          "w": 66,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "SOBRE MI",
+          "w": 70,
+          "h": 23
+        }
+      ],
+      "clickableNonSemantic": [],
+      "inputsFontSizeUnder16": [
+        {
+          "id": "name",
+          "fs": "14px"
+        },
+        {
+          "id": "surname",
+          "fs": "14px"
+        },
+        {
+          "id": "size1",
+          "fs": "14px"
+        },
+        {
+          "id": "size2",
+          "fs": "14px"
+        },
+        {
+          "id": "description",
+          "fs": "14px"
+        },
+        {
+          "id": "customPhoto",
+          "fs": "13.3333px"
+        }
+      ],
+      "docScrollWidth": 1280,
+      "clientWidth": 1280,
+      "overflowingElements": [],
+      "pageHeight": 1728,
+      "imgsLoadedAtLoad": 18,
+      "consoleMessages": [
+        "error: Warning: validateDOMNesting(...): %s cannot appear as a descendant of <%s>.%s <p> p at p at p at section at FooterPaintingText at div at CustomPainting (http://localhost:5173/src/components/customPainting.jsx:29:37) at RenderedRoute (http:/",
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s stroke-linecap strokeLinecap at path at svg at button at ScrollToTopButton (http://localhost:5173/src/components/ScrollToTopButton.jsx:27:41) at div at Router (http://localhost:5173/n",
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s stroke-linejoin strokeLinejoin at path at svg at button at ScrollToTopButton (http://localhost:5173/src/components/ScrollToTopButton.jsx:27:41) at div at Router (http://localhost:5173",
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s stroke-width strokeWidth at svg at button at ScrollToTopButton (http://localhost:5173/src/components/ScrollToTopButton.jsx:27:41) at div at Router (http://localhost:5173/node_modules/",
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s class className at svg at button at ScrollToTopButton (http://localhost:5173/src/components/ScrollToTopButton.jsx:27:41) at div at Router (http://localhost:5173/node_modules/.vite/dep"
+      ]
+    },
+    "agendas-1280": {
+      "url": "/agendas",
+      "title": "Analía Carlomagno | Artista Plástica Argentina",
+      "lang": "es",
+      "viewportMeta": "width=device-width, initial-scale=1.0, user-scalable=no",
+      "headings": [
+        "H1: anicarlomagno",
+        "H2: artista plástica",
+        "H1: Agendas y cuadernos",
+        "H1: Quiero mi agenda/cuaderno",
+        "H2: Páginas llenas de arte",
+        "H3: Seguime en mis redes sociales"
+      ],
+      "h1Count": 3,
+      "mainLandmarks": 2,
+      "images": 27,
+      "imgsWithoutAlt": [
+        "svg>",
+        "agenda1.jpg",
+        "agenda2.jpg",
+        "agenda3.jpg",
+        "agenda4.jpg",
+        "agenda5.jpg",
+        "agenda6.jpg",
+        "agenda7.jpg",
+        "agenda8.jpg"
+      ],
+      "imgsEmptyAlt": 3,
+      "imgsAltSamples": [
+        "Home svg",
+        "Paintbrush svg",
+        "Book svg",
+        "Eye svg",
+        "Printer svg",
+        "Diamond svg",
+        "Painting 1",
+        "truck svg"
+      ],
+      "imgsWithoutWidthHeightAttrs": 27,
+      "imgsLazy": 0,
+      "imgsLoaded": 27,
+      "videos": [],
+      "iframes": [],
+      "nestedInteractive": [
+        "button:Quiero mi agenda/cuaderno"
+      ],
+      "buttonsWithoutName": 0,
+      "linksTarget": [
+        {
+          "href": "https://www.instagram.com/anicarlomagno_painting/",
+          "target": "blank",
+          "rel": ""
+        },
+        {
+          "href": "https://www.tiktok.com/@anicarlomagno_painting?_t=8pSFiI1eHB7&_r=1",
+          "target": "blank",
+          "rel": ""
+        },
+        {
+          "href": "https://www.facebook.com/anicarlomagno",
+          "target": "blank",
+          "rel": ""
+        }
+      ],
+      "smallTargets": [
+        {
+          "tag": "a",
+          "text": "Inicio",
+          "w": 60,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Obras",
+          "w": 64,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Agendas y cuadernos",
+          "w": 166,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Libros",
+          "w": 66,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Láminas",
+          "w": 80,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Sobre mí",
+          "w": 84,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Contacto",
+          "w": 85,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "INICIO",
+          "w": 44,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "OBRAS",
+          "w": 50,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "AGENDAS Y CUADERNOS",
+          "w": 180,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "LIBROS",
+          "w": 53,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "LÁMINAS",
+          "w": 66,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "SOBRE MI",
+          "w": 70,
+          "h": 23
+        }
+      ],
+      "clickableNonSemantic": [
+        {
+          "tag": "div",
+          "cls": "",
+          "text": "❮",
+          "tabIndex": -1
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "text": "❯",
+          "tabIndex": -1
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "text": "●",
+          "tabIndex": -1
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "text": "●",
+          "tabIndex": -1
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "text": "●",
+          "tabIndex": -1
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "text": "●",
+          "tabIndex": -1
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "text": "●",
+          "tabIndex": -1
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "text": "●",
+          "tabIndex": -1
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "text": "●",
+          "tabIndex": -1
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "text": "●",
+          "tabIndex": -1
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "text": "●",
+          "tabIndex": -1
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "text": "●",
+          "tabIndex": -1
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "text": "●",
+          "tabIndex": -1
+        }
+      ],
+      "inputsFontSizeUnder16": [],
+      "docScrollWidth": 1280,
+      "clientWidth": 1280,
+      "overflowingElements": [],
+      "pageHeight": 3289,
+      "imgsLoadedAtLoad": 27,
+      "consoleMessages": [
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s stroke-linecap strokeLinecap at path at svg at button at ScrollToTopButton (http://localhost:5173/src/components/ScrollToTopButton.jsx:27:41) at div at Router (http://localhost:5173/n",
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s stroke-linejoin strokeLinejoin at path at svg at button at ScrollToTopButton (http://localhost:5173/src/components/ScrollToTopButton.jsx:27:41) at div at Router (http://localhost:5173",
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s stroke-width strokeWidth at svg at button at ScrollToTopButton (http://localhost:5173/src/components/ScrollToTopButton.jsx:27:41) at div at Router (http://localhost:5173/node_modules/",
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s class className at svg at button at ScrollToTopButton (http://localhost:5173/src/components/ScrollToTopButton.jsx:27:41) at div at Router (http://localhost:5173/node_modules/.vite/dep"
+      ]
+    },
+    "agenda-personalizada-1280": {
+      "url": "/agenda-personalizada",
+      "title": "Analía Carlomagno | Artista Plástica Argentina",
+      "lang": "es",
+      "viewportMeta": "width=device-width, initial-scale=1.0, user-scalable=no",
+      "headings": [
+        "H1: anicarlomagno",
+        "H2: artista plástica",
+        "H1: Agenda personalizada",
+        "H1: Personaliza tu agenda o cuaderno",
+        "H2: ",
+        "H2: Cuaderno A4",
+        "H3: Seguime en mis redes sociales"
+      ],
+      "h1Count": 3,
+      "mainLandmarks": 2,
+      "images": 32,
+      "imgsWithoutAlt": [
+        "svg>"
+      ],
+      "imgsEmptyAlt": 3,
+      "imgsAltSamples": [
+        "Home svg",
+        "Paintbrush svg",
+        "Book svg",
+        "Eye svg",
+        "Printer svg",
+        "Diamond svg",
+        "Cuadro 1",
+        "Cuadro 2",
+        "Cuadro 3",
+        "Cuadro 4",
+        "Cuadro 5",
+        "Cuadro 6",
+        "Cuaderno A4 - Vista 1",
+        "Cuaderno A4 - Vista 2",
+        "Cuaderno A4 - Vista 3",
+        "Cuaderno A4 - Vista 4",
+        "Cuaderno A4 - Vista 5",
+        "Cuaderno A4 - Vista 6",
+        "Cuaderno A4 - Vista 7",
+        "truck svg"
+      ],
+      "imgsWithoutWidthHeightAttrs": 32,
+      "imgsLazy": 0,
+      "imgsLoaded": 32,
+      "videos": [],
+      "iframes": [],
+      "nestedInteractive": [],
+      "buttonsWithoutName": 0,
+      "linksTarget": [
+        {
+          "href": "https://www.instagram.com/anicarlomagno_painting/",
+          "target": "blank",
+          "rel": ""
+        },
+        {
+          "href": "https://www.tiktok.com/@anicarlomagno_painting?_t=8pSFiI1eHB7&_r=1",
+          "target": "blank",
+          "rel": ""
+        },
+        {
+          "href": "https://www.facebook.com/anicarlomagno",
+          "target": "blank",
+          "rel": ""
+        }
+      ],
+      "smallTargets": [
+        {
+          "tag": "a",
+          "text": "Inicio",
+          "w": 60,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Obras",
+          "w": 64,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Agendas y cuadernos",
+          "w": 166,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Libros",
+          "w": 66,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Láminas",
+          "w": 80,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Sobre mí",
+          "w": 84,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Contacto",
+          "w": 85,
+          "h": 20
+        },
+        {
+          "tag": "input",
+          "text": "agenda-perpetua",
+          "w": 20,
+          "h": 20
+        },
+        {
+          "tag": "input",
+          "text": "agenda-semanal",
+          "w": 20,
+          "h": 20
+        },
+        {
+          "tag": "input",
+          "text": "agenda-docente",
+          "w": 20,
+          "h": 20
+        },
+        {
+          "tag": "input",
+          "text": "cuaderno",
+          "w": 20,
+          "h": 20
+        },
+        {
+          "tag": "input",
+          "text": "cuaderno-a4",
+          "w": 20,
+          "h": 20
+        },
+        {
+          "tag": "input",
+          "text": "blanco",
+          "w": 18,
+          "h": 18
+        },
+        {
+          "tag": "input",
+          "text": "natural",
+          "w": 18,
+          "h": 18
+        },
+        {
+          "tag": "button",
+          "text": "Ver más",
+          "w": 192,
+          "h": 32
+        },
+        {
+          "tag": "input",
+          "text": "username",
+          "w": 436,
+          "h": 37
+        },
+        {
+          "tag": "input",
+          "text": "on",
+          "w": 20,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "INICIO",
+          "w": 44,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "OBRAS",
+          "w": 50,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "AGENDAS Y CUADERNOS",
+          "w": 180,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "LIBROS",
+          "w": 53,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "LÁMINAS",
+          "w": 66,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "SOBRE MI",
+          "w": 70,
+          "h": 23
+        }
+      ],
+      "clickableNonSemantic": [
+        {
+          "tag": "img",
+          "cls": "",
+          "text": "",
+          "tabIndex": -1
+        },
+        {
+          "tag": "img",
+          "cls": "",
+          "text": "",
+          "tabIndex": -1
+        },
+        {
+          "tag": "img",
+          "cls": "",
+          "text": "",
+          "tabIndex": -1
+        },
+        {
+          "tag": "img",
+          "cls": "",
+          "text": "",
+          "tabIndex": -1
+        },
+        {
+          "tag": "img",
+          "cls": "",
+          "text": "",
+          "tabIndex": -1
+        },
+        {
+          "tag": "img",
+          "cls": "",
+          "text": "",
+          "tabIndex": -1
+        },
+        {
+          "tag": "div",
+          "cls": "gallery-thumbnail active",
+          "text": "Cuaderno A4 - Vista 1",
+          "tabIndex": -1
+        },
+        {
+          "tag": "div",
+          "cls": "gallery-thumbnail ",
+          "text": "Cuaderno A4 - Vista 2",
+          "tabIndex": -1
+        },
+        {
+          "tag": "div",
+          "cls": "gallery-thumbnail ",
+          "text": "Cuaderno A4 - Vista 3",
+          "tabIndex": -1
+        },
+        {
+          "tag": "div",
+          "cls": "gallery-thumbnail ",
+          "text": "Cuaderno A4 - Vista 4",
+          "tabIndex": -1
+        },
+        {
+          "tag": "div",
+          "cls": "gallery-thumbnail ",
+          "text": "Cuaderno A4 - Vista 5",
+          "tabIndex": -1
+        },
+        {
+          "tag": "div",
+          "cls": "gallery-thumbnail ",
+          "text": "Cuaderno A4 - Vista 6",
+          "tabIndex": -1
+        },
+        {
+          "tag": "div",
+          "cls": "gallery-thumbnail ",
+          "text": "Cuaderno A4 - Vista 7",
+          "tabIndex": -1
+        }
+      ],
+      "inputsFontSizeUnder16": [],
+      "docScrollWidth": 1280,
+      "clientWidth": 1280,
+      "overflowingElements": [],
+      "pageHeight": 3610,
+      "imgsLoadedAtLoad": 32,
+      "consoleMessages": [
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s stroke-linecap strokeLinecap at path at svg at button at ScrollToTopButton (http://localhost:5173/src/components/ScrollToTopButton.jsx:27:41) at div at Router (http://localhost:5173/n",
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s stroke-linejoin strokeLinejoin at path at svg at button at ScrollToTopButton (http://localhost:5173/src/components/ScrollToTopButton.jsx:27:41) at div at Router (http://localhost:5173",
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s stroke-width strokeWidth at svg at button at ScrollToTopButton (http://localhost:5173/src/components/ScrollToTopButton.jsx:27:41) at div at Router (http://localhost:5173/node_modules/",
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s class className at svg at button at ScrollToTopButton (http://localhost:5173/src/components/ScrollToTopButton.jsx:27:41) at div at Router (http://localhost:5173/node_modules/.vite/dep"
+      ]
+    },
+    "mi-libro-1280": {
+      "url": "/mi-libro",
+      "title": "Analía Carlomagno | Artista Plástica Argentina",
+      "lang": "es",
+      "viewportMeta": "width=device-width, initial-scale=1.0, user-scalable=no",
+      "headings": [
+        "H1: anicarlomagno",
+        "H2: artista plástica",
+        "H1: Libros",
+        "H4: $25900",
+        "H2: COMPRAR",
+        "H3: \"Miradas que narran\"",
+        "H4: $25900",
+        "H2: COMPRAR",
+        "H3: \"Colores que cuentan historias\"",
+        "H3: Seguime en mis redes sociales"
+      ],
+      "h1Count": 2,
+      "mainLandmarks": 3,
+      "images": 20,
+      "imgsWithoutAlt": [
+        "svg>"
+      ],
+      "imgsEmptyAlt": 3,
+      "imgsAltSamples": [
+        "Home svg",
+        "Paintbrush svg",
+        "Book svg",
+        "Eye svg",
+        "Printer svg",
+        "Diamond svg",
+        "Painting 1",
+        "truck svg"
+      ],
+      "imgsWithoutWidthHeightAttrs": 20,
+      "imgsLazy": 0,
+      "imgsLoaded": 20,
+      "videos": [],
+      "iframes": [],
+      "nestedInteractive": [
+        "button:COMPRAR",
+        "button:COMPRAR"
+      ],
+      "buttonsWithoutName": 0,
+      "linksTarget": [
+        {
+          "href": "https://www.instagram.com/anicarlomagno_painting/",
+          "target": "blank",
+          "rel": ""
+        },
+        {
+          "href": "https://www.tiktok.com/@anicarlomagno_painting?_t=8pSFiI1eHB7&_r=1",
+          "target": "blank",
+          "rel": ""
+        },
+        {
+          "href": "https://www.facebook.com/anicarlomagno",
+          "target": "blank",
+          "rel": ""
+        }
+      ],
+      "smallTargets": [
+        {
+          "tag": "a",
+          "text": "Inicio",
+          "w": 60,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Obras",
+          "w": 64,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Agendas y cuadernos",
+          "w": 166,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Libros",
+          "w": 66,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Láminas",
+          "w": 80,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Sobre mí",
+          "w": 84,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Contacto",
+          "w": 85,
+          "h": 20
+        },
+        {
+          "tag": "button",
+          "text": "COMPRAR",
+          "w": 159,
+          "h": 43
+        },
+        {
+          "tag": "button",
+          "text": "COMPRAR",
+          "w": 159,
+          "h": 43
+        },
+        {
+          "tag": "a",
+          "text": "",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "INICIO",
+          "w": 44,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "OBRAS",
+          "w": 50,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "AGENDAS Y CUADERNOS",
+          "w": 180,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "LIBROS",
+          "w": 53,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "LÁMINAS",
+          "w": 66,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "SOBRE MI",
+          "w": 70,
+          "h": 23
+        }
+      ],
+      "clickableNonSemantic": [
+        {
+          "tag": "div",
+          "cls": "",
+          "text": "❮",
+          "tabIndex": -1
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "text": "❯",
+          "tabIndex": -1
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "text": "●",
+          "tabIndex": -1
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "text": "●",
+          "tabIndex": -1
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "text": "❮",
+          "tabIndex": -1
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "text": "❯",
+          "tabIndex": -1
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "text": "●",
+          "tabIndex": -1
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "text": "●",
+          "tabIndex": -1
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "text": "●",
+          "tabIndex": -1
+        }
+      ],
+      "inputsFontSizeUnder16": [],
+      "docScrollWidth": 1280,
+      "clientWidth": 1280,
+      "overflowingElements": [],
+      "pageHeight": 1985,
+      "imgsLoadedAtLoad": 20,
+      "consoleMessages": [
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s stroke-linecap strokeLinecap at path at svg at button at ScrollToTopButton (http://localhost:5173/src/components/ScrollToTopButton.jsx:27:41) at div at Router (http://localhost:5173/n",
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s stroke-linejoin strokeLinejoin at path at svg at button at ScrollToTopButton (http://localhost:5173/src/components/ScrollToTopButton.jsx:27:41) at div at Router (http://localhost:5173",
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s stroke-width strokeWidth at svg at button at ScrollToTopButton (http://localhost:5173/src/components/ScrollToTopButton.jsx:27:41) at div at Router (http://localhost:5173/node_modules/",
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s class className at svg at button at ScrollToTopButton (http://localhost:5173/src/components/ScrollToTopButton.jsx:27:41) at div at Router (http://localhost:5173/node_modules/.vite/dep"
+      ]
+    },
+    "laminas-1280": {
+      "url": "/laminas",
+      "title": "Analía Carlomagno | Artista Plástica Argentina",
+      "lang": "es",
+      "viewportMeta": "width=device-width, initial-scale=1.0, user-scalable=no",
+      "headings": [
+        "H1: anicarlomagno",
+        "H2: artista plástica",
+        "H1: Láminas",
+        "H2: Seleccione una lámina",
+        "H2: Láminas",
+        "H3: Seguime en mis redes sociales"
+      ],
+      "h1Count": 2,
+      "mainLandmarks": 2,
+      "images": 18,
+      "imgsWithoutAlt": [
+        "svg>"
+      ],
+      "imgsEmptyAlt": 3,
+      "imgsAltSamples": [
+        "Home svg",
+        "Paintbrush svg",
+        "Book svg",
+        "Eye svg",
+        "Printer svg",
+        "Diamond svg",
+        "truck svg"
+      ],
+      "imgsWithoutWidthHeightAttrs": 18,
+      "imgsLazy": 0,
+      "imgsLoaded": 18,
+      "videos": [],
+      "iframes": [],
+      "nestedInteractive": [],
+      "buttonsWithoutName": 0,
+      "linksTarget": [
+        {
+          "href": "https://www.instagram.com/anicarlomagno_painting/",
+          "target": "blank",
+          "rel": ""
+        },
+        {
+          "href": "https://www.tiktok.com/@anicarlomagno_painting?_t=8pSFiI1eHB7&_r=1",
+          "target": "blank",
+          "rel": ""
+        },
+        {
+          "href": "https://www.facebook.com/anicarlomagno",
+          "target": "blank",
+          "rel": ""
+        }
+      ],
+      "smallTargets": [
+        {
+          "tag": "a",
+          "text": "Inicio",
+          "w": 60,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Obras",
+          "w": 64,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Agendas y cuadernos",
+          "w": 166,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Libros",
+          "w": 66,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Láminas",
+          "w": 80,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Sobre mí",
+          "w": 84,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Contacto",
+          "w": 85,
+          "h": 20
+        },
+        {
+          "tag": "button",
+          "text": "▼",
+          "w": 30,
+          "h": 33
+        },
+        {
+          "tag": "a",
+          "text": "",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "INICIO",
+          "w": 44,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "OBRAS",
+          "w": 50,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "AGENDAS Y CUADERNOS",
+          "w": 180,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "LIBROS",
+          "w": 53,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "LÁMINAS",
+          "w": 66,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "SOBRE MI",
+          "w": 70,
+          "h": 23
+        }
+      ],
+      "clickableNonSemantic": [],
+      "inputsFontSizeUnder16": [],
+      "docScrollWidth": 1280,
+      "clientWidth": 1280,
+      "overflowingElements": [],
+      "pageHeight": 966,
+      "imgsLoadedAtLoad": 18,
+      "consoleMessages": []
+    },
+    "sobre-mi-1280": {
+      "url": "/sobre-mi",
+      "title": "Analía Carlomagno | Artista Plástica Argentina",
+      "lang": "es",
+      "viewportMeta": "width=device-width, initial-scale=1.0, user-scalable=no",
+      "headings": [
+        "H1: anicarlomagno",
+        "H2: artista plástica",
+        "H1: Sobre mi",
+        "H1: Analia Carlomagno",
+        "H3: +1000",
+        "H3: +20",
+        "H3: +15",
+        "H2: Mi Estilo Artístico",
+        "H3: Colores Saturados",
+        "H3: Alto Contraste",
+        "H3: Texturas Ricas",
+        "H3: Poesía Visual",
+        "H2: Mi Trayectoria",
+        "H3: Centro Polivalente de Arte",
+        "H3: Nace mi estilo único",
+        "H3: La Noche de Los Museos",
+        "H3: Arte sin fronteras",
+        "H2: Mi Historia",
+        "H3: Familia",
+        "H3: Deseos...",
+        "H3: Seguime en mis redes sociales"
+      ],
+      "h1Count": 3,
+      "mainLandmarks": 2,
+      "images": 24,
+      "imgsWithoutAlt": [
+        "svg>"
+      ],
+      "imgsEmptyAlt": 3,
+      "imgsAltSamples": [
+        "Home svg",
+        "Paintbrush svg",
+        "Book svg",
+        "Eye svg",
+        "Printer svg",
+        "Diamond svg",
+        "Analia Carlomagno",
+        "Obras vendidas",
+        "Años creando",
+        "Años enseñando",
+        "Familia",
+        "Deseos",
+        "truck svg"
+      ],
+      "imgsWithoutWidthHeightAttrs": 24,
+      "imgsLazy": 0,
+      "imgsLoaded": 24,
+      "videos": [],
+      "iframes": [],
+      "nestedInteractive": [],
+      "buttonsWithoutName": 0,
+      "linksTarget": [
+        {
+          "href": "https://www.instagram.com/anicarlomagno_painting/",
+          "target": "blank",
+          "rel": ""
+        },
+        {
+          "href": "https://www.tiktok.com/@anicarlomagno_painting?_t=8pSFiI1eHB7&_r=1",
+          "target": "blank",
+          "rel": ""
+        },
+        {
+          "href": "https://www.facebook.com/anicarlomagno",
+          "target": "blank",
+          "rel": ""
+        }
+      ],
+      "smallTargets": [
+        {
+          "tag": "a",
+          "text": "Inicio",
+          "w": 60,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Obras",
+          "w": 64,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Agendas y cuadernos",
+          "w": 166,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Libros",
+          "w": 66,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Láminas",
+          "w": 80,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Sobre mí",
+          "w": 84,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Contacto",
+          "w": 85,
+          "h": 20
+        },
+        {
+          "tag": "button",
+          "text": "Leer más",
+          "w": 126,
+          "h": 42
+        },
+        {
+          "tag": "button",
+          "text": "Leer más",
+          "w": 126,
+          "h": 42
+        },
+        {
+          "tag": "a",
+          "text": "",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "INICIO",
+          "w": 44,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "OBRAS",
+          "w": 50,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "AGENDAS Y CUADERNOS",
+          "w": 180,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "LIBROS",
+          "w": 53,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "LÁMINAS",
+          "w": 66,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "SOBRE MI",
+          "w": 70,
+          "h": 23
+        }
+      ],
+      "clickableNonSemantic": [
+        {
+          "tag": "div",
+          "cls": "story-card ",
+          "text": "Familia Terminé mis estudios en el Centr",
+          "tabIndex": -1
+        },
+        {
+          "tag": "div",
+          "cls": "story-card ",
+          "text": "Deseos... Deseo, deseo... que mis mujere",
+          "tabIndex": -1
+        }
+      ],
+      "inputsFontSizeUnder16": [],
+      "docScrollWidth": 1280,
+      "clientWidth": 1280,
+      "overflowingElements": [],
+      "pageHeight": 3431,
+      "imgsLoadedAtLoad": 24,
+      "consoleMessages": [
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s stroke-linecap strokeLinecap at path at svg at button at ScrollToTopButton (http://localhost:5173/src/components/ScrollToTopButton.jsx:27:41) at div at Router (http://localhost:5173/n",
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s stroke-linejoin strokeLinejoin at path at svg at button at ScrollToTopButton (http://localhost:5173/src/components/ScrollToTopButton.jsx:27:41) at div at Router (http://localhost:5173",
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s stroke-width strokeWidth at svg at button at ScrollToTopButton (http://localhost:5173/src/components/ScrollToTopButton.jsx:27:41) at div at Router (http://localhost:5173/node_modules/",
+        "error: Warning: Invalid DOM property `%s`. Did you mean `%s`?%s class className at svg at button at ScrollToTopButton (http://localhost:5173/src/components/ScrollToTopButton.jsx:27:41) at div at Router (http://localhost:5173/node_modules/.vite/dep"
+      ]
+    },
+    "contacto-1280": {
+      "url": "/contacto",
+      "title": "Analía Carlomagno | Artista Plástica Argentina",
+      "lang": "es",
+      "viewportMeta": "width=device-width, initial-scale=1.0, user-scalable=no",
+      "headings": [
+        "H1: anicarlomagno",
+        "H2: artista plástica",
+        "H2: Contacto",
+        "H3: Seguime en mis redes sociales"
+      ],
+      "h1Count": 1,
+      "mainLandmarks": 1,
+      "images": 18,
+      "imgsWithoutAlt": [
+        "svg>"
+      ],
+      "imgsEmptyAlt": 3,
+      "imgsAltSamples": [
+        "Home svg",
+        "Paintbrush svg",
+        "Book svg",
+        "Eye svg",
+        "Printer svg",
+        "Diamond svg",
+        "truck svg"
+      ],
+      "imgsWithoutWidthHeightAttrs": 18,
+      "imgsLazy": 0,
+      "imgsLoaded": 18,
+      "videos": [],
+      "iframes": [
+        {
+          "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3172.3",
+          "loading": "lazy",
+          "title": "Mapa de la ubicación de Analía Carlomagno, artista plástica"
+        }
+      ],
+      "nestedInteractive": [],
+      "buttonsWithoutName": 0,
+      "linksTarget": [
+        {
+          "href": "https://www.instagram.com/anicarlomagno_painting/",
+          "target": "blank",
+          "rel": ""
+        },
+        {
+          "href": "https://www.tiktok.com/@anicarlomagno_painting?_t=8pSFiI1eHB7&_r=1",
+          "target": "blank",
+          "rel": ""
+        },
+        {
+          "href": "https://www.facebook.com/anicarlomagno",
+          "target": "blank",
+          "rel": ""
+        }
+      ],
+      "smallTargets": [
+        {
+          "tag": "a",
+          "text": "Inicio",
+          "w": 60,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Obras",
+          "w": 64,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Agendas y cuadernos",
+          "w": 166,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Libros",
+          "w": 66,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Láminas",
+          "w": 80,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Sobre mí",
+          "w": 84,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Contacto",
+          "w": 85,
+          "h": 20
+        },
+        {
+          "tag": "input",
+          "text": "nombre",
+          "w": 520,
+          "h": 37
+        },
+        {
+          "tag": "input",
+          "text": "apellido",
+          "w": 520,
+          "h": 37
+        },
+        {
+          "tag": "input",
+          "text": "email",
+          "w": 520,
+          "h": 37
+        },
+        {
+          "tag": "a",
+          "text": "",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "INICIO",
+          "w": 44,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "OBRAS",
+          "w": 50,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "AGENDAS Y CUADERNOS",
+          "w": 180,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "LIBROS",
+          "w": 53,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "LÁMINAS",
+          "w": 66,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "SOBRE MI",
+          "w": 70,
+          "h": 23
+        }
+      ],
+      "clickableNonSemantic": [],
+      "inputsFontSizeUnder16": [],
+      "docScrollWidth": 1280,
+      "clientWidth": 1280,
+      "overflowingElements": [],
+      "pageHeight": 1199,
+      "imgsLoadedAtLoad": 18,
+      "consoleMessages": []
+    }
+  },
+  "failed": []
+}

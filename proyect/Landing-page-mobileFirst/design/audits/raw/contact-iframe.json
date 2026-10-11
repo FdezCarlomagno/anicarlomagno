@@ -1,0 +1,108 @@
+{
+  "chrome": "Chrome/154.0.8037.93",
+  "base": "http://localhost:4173",
+  "date": "2026-10-11T20:03:17.561Z",
+  "hosts": {
+    "top -> localhost:4173": {
+      "count": 5,
+      "phases": [
+        "carga"
+      ],
+      "types": [
+        "Document",
+        "Script",
+        "Stylesheet",
+        "Image",
+        "Other"
+      ],
+      "firstMs": 23
+    },
+    "top -> fonts.googleapis.com": {
+      "count": 1,
+      "phases": [
+        "carga"
+      ],
+      "types": [
+        "Stylesheet"
+      ],
+      "firstMs": 55
+    },
+    "top -> fonts.gstatic.com": {
+      "count": 2,
+      "phases": [
+        "carga"
+      ],
+      "types": [
+        "Font"
+      ],
+      "firstMs": 396
+    },
+    "top -> www.google.com": {
+      "count": 1,
+      "phases": [
+        "carga"
+      ],
+      "types": [
+        "Document"
+      ],
+      "firstMs": 402
+    },
+    "iframe:iframe -> maps.gstatic.com": {
+      "count": 1,
+      "phases": [
+        "carga"
+      ],
+      "types": [
+        "Script"
+      ],
+      "firstMs": 694
+    },
+    "iframe:iframe -> maps.googleapis.com": {
+      "count": 17,
+      "phases": [
+        "carga"
+      ],
+      "types": [
+        "Script",
+        "XHR",
+        "Image",
+        "Other"
+      ],
+      "firstMs": 695
+    },
+    "iframe:iframe -> www.google.com": {
+      "count": 3,
+      "phases": [
+        "carga"
+      ],
+      "types": [
+        "Image",
+        "XHR"
+      ],
+      "firstMs": 1301
+    },
+    "iframe:iframe -> fonts.googleapis.com": {
+      "count": 2,
+      "phases": [
+        "carga"
+      ],
+      "types": [
+        "Stylesheet"
+      ],
+      "firstMs": 1735
+    },
+    "iframe:iframe -> fonts.gstatic.com": {
+      "count": 2,
+      "phases": [
+        "carga"
+      ],
+      "types": [
+        "Font"
+      ],
+      "firstMs": 1872
+    }
+  },
+  "cookieEvents": [],
+  "cookiesAtLoad": [],
+  "cookiesEnd": []
+}

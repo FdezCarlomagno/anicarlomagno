@@ -1,0 +1,789 @@
+{
+  "chrome": "Chrome/154.0.8037.93",
+  "base": "http://localhost:4173",
+  "date": "2026-10-11T20:02:18.962Z",
+  "flows": {
+    "agenda-1-perpetua-blanco-sin-extras": {
+      "cfg": {
+        "type": "agenda-perpetua",
+        "paper": "blanco",
+        "obra": 0
+      },
+      "steps": {
+        "initial": {
+          "submitDisabled": true,
+          "submitText": "🛒 Encargar pedido",
+          "total": "$0",
+          "toast": null,
+          "errors": [],
+          "previewAlt": null
+        },
+        "afterType": {
+          "submitDisabled": true,
+          "submitText": "🛒 Encargar pedido",
+          "total": "$25900",
+          "toast": null,
+          "errors": [],
+          "previewAlt": null
+        },
+        "beforeSubmit": {
+          "submitDisabled": false,
+          "submitText": "🛒 Encargar pedido",
+          "total": "$25900",
+          "toast": null,
+          "errors": [],
+          "previewAlt": "/assets/femme-deau-agenda-ip8wioXf.jpeg"
+        },
+        "justAfterSubmit": {
+          "submitDisabled": true,
+          "submitText": "⏳ Procesando...",
+          "total": "$25900",
+          "toast": "⏳ Preparando tu pedido...",
+          "errors": [],
+          "previewAlt": "/assets/femme-deau-agenda-ip8wioXf.jpeg"
+        },
+        "after2600ms": {
+          "submitDisabled": true,
+          "submitText": "🛒 Encargar pedido",
+          "total": "$0",
+          "toast": "✅ ¡Pedido enviado!",
+          "errors": [],
+          "previewAlt": null
+        }
+      },
+      "whatsapp": [
+        {
+          "host": "api.whatsapp.com",
+          "phone": "542494245966",
+          "target": "_blank",
+          "text": "¡Hola! Me gustaría encargar:\n\n📋 *Tipo:* AGENDA PERPETUA\n📄 *Papel:* Blanco 80g\n🎨 *Obra:* Femme d'eau\n\n💰 *Total: $25900*"
+        }
+      ],
+      "console": []
+    },
+    "agenda-2-semanal-natural-nombre-frase": {
+      "cfg": {
+        "type": "agenda-semanal",
+        "paper": "natural",
+        "obra": 1,
+        "username": "María",
+        "color": "#8a2be2",
+        "position": "arriba-derecha",
+        "quote": "Creer es crear"
+      },
+      "steps": {
+        "initial": {
+          "submitDisabled": true,
+          "submitText": "🛒 Encargar pedido",
+          "total": "$0",
+          "toast": null,
+          "errors": [],
+          "previewAlt": null
+        },
+        "afterType": {
+          "submitDisabled": true,
+          "submitText": "🛒 Encargar pedido",
+          "total": "$23900",
+          "toast": null,
+          "errors": [],
+          "previewAlt": null
+        },
+        "beforeSubmit": {
+          "submitDisabled": false,
+          "submitText": "🛒 Encargar pedido",
+          "total": "$26900",
+          "toast": null,
+          "errors": [],
+          "previewAlt": "/assets/Creacion-C1ppXBTI.jpeg"
+        },
+        "justAfterSubmit": {
+          "submitDisabled": true,
+          "submitText": "⏳ Procesando...",
+          "total": "$26900",
+          "toast": "⏳ Preparando tu pedido...",
+          "errors": [],
+          "previewAlt": "/assets/Creacion-C1ppXBTI.jpeg"
+        },
+        "after2600ms": {
+          "submitDisabled": true,
+          "submitText": "🛒 Encargar pedido",
+          "total": "$0",
+          "toast": "✅ ¡Pedido enviado!",
+          "errors": [],
+          "previewAlt": null
+        }
+      },
+      "whatsapp": [
+        {
+          "host": "api.whatsapp.com",
+          "phone": "542494245966",
+          "target": "_blank",
+          "text": "¡Hola! Me gustaría encargar:\n\n📋 *Tipo:* AGENDA SEMANAL\n📄 *Papel:* Natural 80g\n🎨 *Obra:* Creación\n✏️ *Nombre:* María\n🎨 *Color nombre:* #8a2be2\n📍 *Ubicación:* arriba derecha\n💭 *Frase:* Creer es crear\n\n💰 *Total: $26900*"
+        }
+      ],
+      "console": []
+    },
+    "agenda-3-cuadernoA4-blanco-nombre-comentario": {
+      "cfg": {
+        "type": "cuaderno-a4",
+        "paper": "blanco",
+        "obra": 2,
+        "username": "Sol",
+        "position": "abajo-izquierda",
+        "other": "Es para regalo"
+      },
+      "steps": {
+        "initial": {
+          "submitDisabled": true,
+          "submitText": "🛒 Encargar pedido",
+          "total": "$0",
+          "toast": null,
+          "errors": [],
+          "previewAlt": null
+        },
+        "afterType": {
+          "submitDisabled": true,
+          "submitText": "🛒 Encargar pedido",
+          "total": "$35900",
+          "toast": null,
+          "errors": [],
+          "previewAlt": null
+        },
+        "beforeSubmit": {
+          "submitDisabled": false,
+          "submitText": "🛒 Encargar pedido",
+          "total": "$35900",
+          "toast": null,
+          "errors": [],
+          "previewAlt": "/assets/Bahia-CY0C2V4F.jpeg"
+        },
+        "justAfterSubmit": {
+          "submitDisabled": true,
+          "submitText": "⏳ Procesando...",
+          "total": "$35900",
+          "toast": "⏳ Preparando tu pedido...",
+          "errors": [],
+          "previewAlt": "/assets/Bahia-CY0C2V4F.jpeg"
+        },
+        "after2600ms": {
+          "submitDisabled": true,
+          "submitText": "🛒 Encargar pedido",
+          "total": "$0",
+          "toast": "✅ ¡Pedido enviado!",
+          "errors": [],
+          "previewAlt": null
+        }
+      },
+      "whatsapp": [
+        {
+          "host": "api.whatsapp.com",
+          "phone": "542494245966",
+          "target": "_blank",
+          "text": "¡Hola! Me gustaría encargar:\n\n📋 *Tipo:* CUADERNO A4\n📄 *Papel:* Blanco 80g\n🎨 *Obra:* Bahía\n✏️ *Nombre:* Sol\n🎨 *Color nombre:* #000000\n📍 *Ubicación:* abajo izquierda\n💬 *Comentarios:* Es para regalo\n\n💰 *Total: $35900*"
+        }
+      ],
+      "console": []
+    },
+    "agenda-borde-frase-tildada-y-destildada": {
+      "cfg": {
+        "type": "cuaderno",
+        "paper": "blanco",
+        "obra": 3,
+        "quote": "Frase que no debería cobrarse",
+        "uncheckQuoteAfter": true
+      },
+      "steps": {
+        "initial": {
+          "submitDisabled": true,
+          "submitText": "🛒 Encargar pedido",
+          "total": "$0",
+          "toast": null,
+          "errors": [],
+          "previewAlt": null
+        },
+        "afterType": {
+          "submitDisabled": true,
+          "submitText": "🛒 Encargar pedido",
+          "total": "$16900",
+          "toast": null,
+          "errors": [],
+          "previewAlt": null
+        },
+        "withQuoteChecked": {
+          "submitDisabled": false,
+          "submitText": "🛒 Encargar pedido",
+          "total": "$19900",
+          "toast": null,
+          "errors": [],
+          "previewAlt": "/assets/la-dama-dorada-CIBqHebY.jpeg"
+        },
+        "beforeSubmit": {
+          "submitDisabled": false,
+          "submitText": "🛒 Encargar pedido",
+          "total": "$16900",
+          "toast": null,
+          "errors": [],
+          "previewAlt": "/assets/la-dama-dorada-CIBqHebY.jpeg"
+        },
+        "justAfterSubmit": {
+          "submitDisabled": true,
+          "submitText": "⏳ Procesando...",
+          "total": "$16900",
+          "toast": "⏳ Preparando tu pedido...",
+          "errors": [],
+          "previewAlt": "/assets/la-dama-dorada-CIBqHebY.jpeg"
+        },
+        "after2600ms": {
+          "submitDisabled": true,
+          "submitText": "🛒 Encargar pedido",
+          "total": "$0",
+          "toast": "✅ ¡Pedido enviado!",
+          "errors": [],
+          "previewAlt": null
+        }
+      },
+      "whatsapp": [
+        {
+          "host": "api.whatsapp.com",
+          "phone": "542494245966",
+          "target": "_blank",
+          "text": "¡Hola! Me gustaría encargar:\n\n📋 *Tipo:* CUADERNO\n📄 *Papel:* Blanco 80g\n🎨 *Obra:* La Dama Dorada\n💭 *Frase:* Frase que no debería cobrarse\n\n💰 *Total: $16900*"
+        }
+      ],
+      "console": []
+    },
+    "agenda-validacion-nombre-corto": {
+      "initial": {
+        "submitDisabled": true,
+        "submitText": "🛒 Encargar pedido",
+        "total": "$0",
+        "toast": null,
+        "errors": [],
+        "previewAlt": null
+      },
+      "beforeSubmit": {
+        "submitDisabled": false,
+        "submitText": "🛒 Encargar pedido",
+        "total": "$25900",
+        "toast": null,
+        "errors": [
+          "El nombre debe tener entre 3 y 12 caracteres"
+        ],
+        "previewAlt": "/assets/femme-deau-agenda-ip8wioXf.jpeg"
+      },
+      "afterSubmit": {
+        "submitDisabled": false,
+        "submitText": "🛒 Encargar pedido",
+        "total": "$25900",
+        "toast": null,
+        "errors": [
+          "El nombre debe tener entre 3 y 12 caracteres"
+        ],
+        "previewAlt": "/assets/femme-deau-agenda-ip8wioXf.jpeg"
+      },
+      "a11y": {
+        "ariaInvalid": null,
+        "ariaDescribedby": null,
+        "toastRole": null
+      },
+      "whatsapp": []
+    },
+    "consultar-obra": {
+      "catalog": {
+        "cards": 22,
+        "soldBadges": 16,
+        "offerBadges": 2,
+        "soldWithConsultButton": 16,
+        "first": {
+          "name": "Femme d'eau",
+          "size": "50x70"
+        }
+      },
+      "filterCounts": {
+        "available": 6,
+        "sold": 16
+      },
+      "filterA11y": [
+        {
+          "text": "Todas las obras",
+          "ariaPressed": null
+        },
+        {
+          "text": "Disponibles",
+          "ariaPressed": null
+        },
+        {
+          "text": "Vendidas",
+          "ariaPressed": null
+        }
+      ],
+      "whatsapp": [
+        {
+          "host": "api.whatsapp.com",
+          "phone": "542494245966",
+          "target": "_blank",
+          "text": "Hola!, estoy interesado en Femme d'eau, me gustaria saber el precio de esta obra, Ani."
+        }
+      ]
+    },
+    "obra-personalizada": {
+      "initial": {
+        "submitDisabled": true,
+        "submitText": "Completá los campos requeridos",
+        "errors": []
+      },
+      "sizeTooSmall": {
+        "submitDisabled": true,
+        "submitText": "Completá los campos requeridos",
+        "errors": [
+          "Mínimo 10cm"
+        ]
+      },
+      "a11y": {
+        "ariaInvalid": null,
+        "ariaDescribedby": null,
+        "errorRole": null
+      },
+      "beforeSubmit": {
+        "submitDisabled": false,
+        "submitText": "Pedir presupuesto",
+        "errors": []
+      },
+      "afterSubmit": {
+        "submitDisabled": false,
+        "submitText": "Pedir presupuesto",
+        "errors": []
+      },
+      "formKeptValuesAfterSubmit": "Lucía",
+      "whatsapp": [
+        {
+          "host": "api.whatsapp.com",
+          "phone": "542494245966",
+          "target": "_blank",
+          "text": "Hola! Ani Soy Lucía Pérez. Me gustaría encargarte una obra de estas dimensiones: 50cm X 70cm. Retrato de mi abuela con flores y tonos cálidos. Me gustaría agregar una foto. Muchas gracias!"
+        }
+      ]
+    },
+    "contacto-emailjs-falla-simulada": {
+      "initial": {
+        "valid": false,
+        "firstInvalid": "nombre",
+        "validationMessage": "Please fill out this field.",
+        "button": "Enviar",
+        "disabled": false,
+        "values": {
+          "nombre": "",
+          "apellido": "",
+          "email": "",
+          "mensaje": ""
+        },
+        "toasts": []
+      },
+      "emptySubmit": {
+        "valid": false,
+        "firstInvalid": "nombre",
+        "validationMessage": "Please fill out this field.",
+        "button": "Enviar",
+        "disabled": false,
+        "values": {
+          "nombre": "",
+          "apellido": "",
+          "email": "",
+          "mensaje": ""
+        },
+        "toasts": [],
+        "emailjsRequests": 0
+      },
+      "invalidEmailSubmit": {
+        "valid": false,
+        "firstInvalid": "email",
+        "validationMessage": "Please enter a part following '@'. 'prueba@' is incomplete.",
+        "button": "Enviar",
+        "disabled": false,
+        "values": {
+          "nombre": "Prueba",
+          "apellido": "Fase Cero",
+          "email": "prueba@",
+          "mensaje": "Mensaje de prueba local, no enviar."
+        },
+        "toasts": [],
+        "emailjsRequests": 0
+      },
+      "duringSubmit": {
+        "valid": true,
+        "firstInvalid": null,
+        "validationMessage": null,
+        "button": "Enviando...",
+        "disabled": true,
+        "values": {
+          "nombre": "Prueba",
+          "apellido": "Fase Cero",
+          "email": "prueba@example.com",
+          "mensaje": "Mensaje de prueba local, no enviar."
+        },
+        "toasts": []
+      },
+      "afterInterceptedResponse": {
+        "valid": false,
+        "firstInvalid": "nombre",
+        "validationMessage": "Please fill out this field.",
+        "button": "Enviar",
+        "disabled": false,
+        "values": {
+          "nombre": "",
+          "apellido": "",
+          "email": "",
+          "mensaje": ""
+        },
+        "toasts": [
+          "Error al enviar el mensaje. Inténtalo de nuevo."
+        ]
+      },
+      "emailjsIntercepted": [
+        {
+          "url": "https://api.emailjs.com/api/v1.0/email/send",
+          "method": "OPTIONS",
+          "bodyKeys": [],
+          "templateParamsKeys": []
+        }
+      ],
+      "labels": [
+        {
+          "for": "nombre",
+          "text": "Nombre:"
+        },
+        {
+          "for": "apellido",
+          "text": "Apellido:"
+        },
+        {
+          "for": "email",
+          "text": "Email:"
+        },
+        {
+          "for": "mensaje",
+          "text": "Mensaje:"
+        }
+      ],
+      "autocomplete": [
+        {
+          "id": "nombre",
+          "autocomplete": null
+        },
+        {
+          "id": "apellido",
+          "autocomplete": null
+        },
+        {
+          "id": "email",
+          "autocomplete": null
+        }
+      ]
+    },
+    "contacto-emailjs-exito-simulado": {
+      "initial": {
+        "valid": false,
+        "firstInvalid": "nombre",
+        "validationMessage": "Please fill out this field.",
+        "button": "Enviar",
+        "disabled": false,
+        "values": {
+          "nombre": "",
+          "apellido": "",
+          "email": "",
+          "mensaje": ""
+        },
+        "toasts": []
+      },
+      "emptySubmit": {
+        "valid": false,
+        "firstInvalid": "nombre",
+        "validationMessage": "Please fill out this field.",
+        "button": "Enviar",
+        "disabled": false,
+        "values": {
+          "nombre": "",
+          "apellido": "",
+          "email": "",
+          "mensaje": ""
+        },
+        "toasts": [],
+        "emailjsRequests": 0
+      },
+      "invalidEmailSubmit": {
+        "valid": false,
+        "firstInvalid": "email",
+        "validationMessage": "Please enter a part following '@'. 'prueba@' is incomplete.",
+        "button": "Enviar",
+        "disabled": false,
+        "values": {
+          "nombre": "Prueba",
+          "apellido": "Fase Cero",
+          "email": "prueba@",
+          "mensaje": "Mensaje de prueba local, no enviar."
+        },
+        "toasts": [],
+        "emailjsRequests": 0
+      },
+      "duringSubmit": {
+        "valid": true,
+        "firstInvalid": null,
+        "validationMessage": null,
+        "button": "Enviando...",
+        "disabled": true,
+        "values": {
+          "nombre": "Prueba",
+          "apellido": "Fase Cero",
+          "email": "prueba@example.com",
+          "mensaje": "Mensaje de prueba local, no enviar."
+        },
+        "toasts": []
+      },
+      "afterInterceptedResponse": {
+        "valid": false,
+        "firstInvalid": "nombre",
+        "validationMessage": "Please fill out this field.",
+        "button": "Enviar",
+        "disabled": false,
+        "values": {
+          "nombre": "",
+          "apellido": "",
+          "email": "",
+          "mensaje": ""
+        },
+        "toasts": [
+          "Error al enviar el mensaje. Inténtalo de nuevo."
+        ]
+      },
+      "emailjsIntercepted": [
+        {
+          "url": "https://api.emailjs.com/api/v1.0/email/send",
+          "method": "OPTIONS",
+          "bodyKeys": [],
+          "templateParamsKeys": []
+        }
+      ],
+      "labels": [
+        {
+          "for": "nombre",
+          "text": "Nombre:"
+        },
+        {
+          "for": "apellido",
+          "text": "Apellido:"
+        },
+        {
+          "for": "email",
+          "text": "Email:"
+        },
+        {
+          "for": "mensaje",
+          "text": "Mensaje:"
+        }
+      ],
+      "autocomplete": [
+        {
+          "id": "nombre",
+          "autocomplete": null
+        },
+        {
+          "id": "apellido",
+          "autocomplete": null
+        },
+        {
+          "id": "email",
+          "autocomplete": null
+        }
+      ]
+    },
+    "boton-flotante": {
+      "info": {
+        "tag": "div",
+        "role": null,
+        "tabIndex": -1,
+        "ariaLabel": null,
+        "imgAlt": "(sin atributo alt)",
+        "rect": {
+          "x": 15,
+          "y": 779,
+          "w": 50,
+          "h": 50
+        }
+      },
+      "whatsapp": [
+        {
+          "host": "api.whatsapp.com",
+          "phone": "542494245966",
+          "target": "_blank",
+          "text": "Hola Ani, Fui redireccionado/a de tu pagina web hacia tu contacto, como estas?"
+        }
+      ],
+      "keyboardReachableIn60Tabs": false,
+      "firstTabStops": [
+        {
+          "tag": "a",
+          "text": "Mis obras",
+          "isWsp": false,
+          "outline": "auto 1px rgb(16, 16, 16)"
+        },
+        {
+          "tag": "button",
+          "text": "Mis obras",
+          "isWsp": false,
+          "outline": "auto 1px rgb(16, 16, 16)"
+        },
+        {
+          "tag": "a",
+          "text": "Saber más",
+          "isWsp": false,
+          "outline": "auto 1px rgb(16, 16, 16)"
+        },
+        {
+          "tag": "button",
+          "text": "Saber más",
+          "isWsp": false,
+          "outline": "auto 1px rgb(16, 16, 16)"
+        },
+        {
+          "tag": "a",
+          "text": "Saber más",
+          "isWsp": false,
+          "outline": "auto 1px rgb(16, 16, 16)"
+        },
+        {
+          "tag": "button",
+          "text": "Saber más",
+          "isWsp": false,
+          "outline": "auto 1px rgb(16, 16, 16)"
+        },
+        {
+          "tag": "a",
+          "text": "Diseño 1",
+          "isWsp": false,
+          "outline": "auto 1px rgb(16, 16, 16)"
+        },
+        {
+          "tag": "a",
+          "text": "Diseño 1",
+          "isWsp": false,
+          "outline": "auto 1px rgb(16, 16, 16)"
+        },
+        {
+          "tag": "a",
+          "text": "Diseño 1",
+          "isWsp": false,
+          "outline": "auto 1px rgb(16, 16, 16)"
+        },
+        {
+          "tag": "a",
+          "text": "Diseño 2",
+          "isWsp": false,
+          "outline": "auto 1px rgb(16, 16, 16)"
+        },
+        {
+          "tag": "a",
+          "text": "Diseño 4",
+          "isWsp": false,
+          "outline": "auto 1px rgb(16, 16, 16)"
+        },
+        {
+          "tag": "a",
+          "text": "Diseño 6",
+          "isWsp": false,
+          "outline": "auto 1px rgb(16, 16, 16)"
+        },
+        {
+          "tag": "a",
+          "text": "Diseño 7",
+          "isWsp": false,
+          "outline": "auto 1px rgb(16, 16, 16)"
+        },
+        {
+          "tag": "button",
+          "text": "Ver en instagram",
+          "isWsp": false,
+          "outline": "auto 1px rgb(16, 16, 16)"
+        }
+      ]
+    },
+    "lamina": {
+      "before": {
+        "price": "$6900",
+        "toggle": "▼",
+        "toggleAria": null
+      },
+      "optionsAlts": [
+        "Cuadro 1",
+        "Cuadro 2",
+        "Cuadro 3",
+        "Cuadro 4",
+        "Cuadro 5",
+        "Cuadro 6"
+      ],
+      "chosen": {
+        "heading": "Lámina elegida: Femme d'eau",
+        "button": "Comprar lámina de Femme d'eau"
+      },
+      "whatsapp": [
+        {
+          "host": "api.whatsapp.com",
+          "phone": "542494245966",
+          "target": "_blank",
+          "text": "Hola! Ani, me gustaría encargarte una lámina de Femme d'eau. Muchas gracias!"
+        }
+      ]
+    },
+    "libros": {
+      "prices": [
+        "$25900",
+        "$25900"
+      ],
+      "whatsapp": [
+        {
+          "host": "api.whatsapp.com",
+          "phone": "542494245966",
+          "target": "_blank",
+          "text": "Hola! Ani, me gustaría encargarte tu Libro de relatos. Muchas gracias!"
+        },
+        {
+          "host": "api.whatsapp.com",
+          "phone": "542494245966",
+          "target": "_blank",
+          "text": "Hola! Ani, me gustaría encargarte tu Libro para colorear. Muchas gracias!"
+        }
+      ]
+    },
+    "reduced-motion": {
+      "mediaMatches": true,
+      "h1Samples": [
+        null,
+        {
+          "t": 312,
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, -50)"
+        },
+        {
+          "t": 439,
+          "opacity": "0.374303",
+          "transform": "matrix(1, 0, 0, 1, 0, -31.2218)"
+        },
+        {
+          "t": 563,
+          "opacity": "0.663781",
+          "transform": "matrix(1, 0, 0, 1, 0, -16.7362)"
+        },
+        {
+          "t": 698,
+          "opacity": "0.904775",
+          "transform": "matrix(1, 0, 0, 1, 0, -4.73767)"
+        },
+        {
+          "t": 823,
+          "opacity": "1",
+          "transform": "none"
+        }
+      ]
+    }
+  },
+  "failed": []
+}

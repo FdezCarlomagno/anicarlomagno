@@ -1,0 +1,53 @@
+{
+  "chrome": "Chrome/154.0.8037.93",
+  "base": "http://localhost:4173",
+  "date": "2026-10-11T20:22:42.629Z",
+  "flows": {
+    "obra-personalizada": {
+      "initial": {
+        "submitDisabled": true,
+        "submitText": "Completá los campos requeridos",
+        "errors": []
+      },
+      "sizeTooSmall": {
+        "submitDisabled": true,
+        "submitText": "Completá los campos requeridos",
+        "errors": [
+          "Mínimo 10cm"
+        ]
+      },
+      "a11y": {
+        "ariaInvalid": null,
+        "ariaDescribedby": null,
+        "errorRole": null
+      },
+      "beforeSubmit": {
+        "submitDisabled": false,
+        "submitText": "Pedir presupuesto",
+        "errors": []
+      },
+      "afterSubmit": {
+        "submitDisabled": false,
+        "submitText": "Pedir presupuesto",
+        "errors": []
+      },
+      "formKeptValuesAfterSubmit": "Lucía",
+      "secondSubmitPhotoChecked": false,
+      "whatsapp": [
+        {
+          "host": "api.whatsapp.com",
+          "phone": "542494245966",
+          "target": "_blank",
+          "text": "Hola! Ani Soy Lucía Pérez. Me gustaría encargarte una obra de estas dimensiones: 50cm X 70cm. Retrato de mi abuela con flores y tonos cálidos. Me gustaría agregar una foto. Muchas gracias!"
+        },
+        {
+          "host": "api.whatsapp.com",
+          "phone": "542494245966",
+          "target": "_blank",
+          "text": "Hola! Ani Soy Lucía Pérez. Me gustaría encargarte una obra de estas dimensiones: 50cm X 70cm. Retrato de mi abuela con flores y tonos cálidos. . Muchas gracias!"
+        }
+      ]
+    }
+  },
+  "failed": []
+}

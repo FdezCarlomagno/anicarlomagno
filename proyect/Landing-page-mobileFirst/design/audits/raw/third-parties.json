@@ -1,0 +1,521 @@
+{
+  "chrome": "Chrome/154.0.8037.93",
+  "base": "http://localhost:4173",
+  "date": "2026-10-11T20:00:35.610Z",
+  "routes": {
+    "/": {
+      "totalRequests": 30,
+      "firstPartyRequests": 27,
+      "thirdPartyByHost": {
+        "fonts.googleapis.com": {
+          "count": 1,
+          "phases": [
+            "carga"
+          ],
+          "types": [
+            "Stylesheet"
+          ],
+          "samplePaths": [
+            "/css2"
+          ]
+        },
+        "fonts.gstatic.com": {
+          "count": 2,
+          "phases": [
+            "carga"
+          ],
+          "types": [
+            "Font"
+          ],
+          "samplePaths": [
+            "/s/dancingscript/v29/If2RXTr6YS-zF4S-kcSWSVi_szLgiuE.woff2",
+            "/s/raleway/v37/1Ptug8zYS_SKggPNyC0ITw.woff2"
+          ]
+        }
+      },
+      "cookiesAtLoad": [],
+      "cookiesAfterScroll": [],
+      "setCookieResponses": [],
+      "storageAtLoad": {
+        "localStorage": [],
+        "sessionStorage": [],
+        "indexedDB": [],
+        "cacheStorage": [],
+        "serviceWorkers": 0,
+        "documentCookie": ""
+      },
+      "storageAfterScroll": {
+        "localStorage": [],
+        "sessionStorage": [],
+        "indexedDB": [],
+        "cacheStorage": [],
+        "serviceWorkers": 0,
+        "documentCookie": ""
+      }
+    },
+    "/elegir": {
+      "totalRequests": 8,
+      "firstPartyRequests": 5,
+      "thirdPartyByHost": {
+        "fonts.googleapis.com": {
+          "count": 1,
+          "phases": [
+            "carga"
+          ],
+          "types": [
+            "Stylesheet"
+          ],
+          "samplePaths": [
+            "/css2"
+          ]
+        },
+        "fonts.gstatic.com": {
+          "count": 2,
+          "phases": [
+            "carga"
+          ],
+          "types": [
+            "Font"
+          ],
+          "samplePaths": [
+            "/s/dancingscript/v29/If2RXTr6YS-zF4S-kcSWSVi_szLgiuE.woff2",
+            "/s/raleway/v37/1Ptug8zYS_SKggPNyC0ITw.woff2"
+          ]
+        }
+      },
+      "cookiesAtLoad": [],
+      "cookiesAfterScroll": [],
+      "setCookieResponses": [],
+      "storageAtLoad": {
+        "localStorage": [],
+        "sessionStorage": [],
+        "indexedDB": [],
+        "cacheStorage": [],
+        "serviceWorkers": 0,
+        "documentCookie": ""
+      },
+      "storageAfterScroll": {
+        "localStorage": [],
+        "sessionStorage": [],
+        "indexedDB": [],
+        "cacheStorage": [],
+        "serviceWorkers": 0,
+        "documentCookie": ""
+      }
+    },
+    "/obras-en-stock": {
+      "totalRequests": 30,
+      "firstPartyRequests": 27,
+      "thirdPartyByHost": {
+        "fonts.googleapis.com": {
+          "count": 1,
+          "phases": [
+            "carga"
+          ],
+          "types": [
+            "Stylesheet"
+          ],
+          "samplePaths": [
+            "/css2"
+          ]
+        },
+        "fonts.gstatic.com": {
+          "count": 2,
+          "phases": [
+            "carga"
+          ],
+          "types": [
+            "Font"
+          ],
+          "samplePaths": [
+            "/s/dancingscript/v29/If2RXTr6YS-zF4S-kcSWSVi_szLgiuE.woff2",
+            "/s/raleway/v37/1Ptug8zYS_SKggPNyC0ITw.woff2"
+          ]
+        }
+      },
+      "cookiesAtLoad": [],
+      "cookiesAfterScroll": [],
+      "setCookieResponses": [],
+      "storageAtLoad": {
+        "localStorage": [],
+        "sessionStorage": [],
+        "indexedDB": [],
+        "cacheStorage": [],
+        "serviceWorkers": 0,
+        "documentCookie": ""
+      },
+      "storageAfterScroll": {
+        "localStorage": [],
+        "sessionStorage": [],
+        "indexedDB": [],
+        "cacheStorage": [],
+        "serviceWorkers": 0,
+        "documentCookie": ""
+      }
+    },
+    "/obra-personalizada": {
+      "totalRequests": 8,
+      "firstPartyRequests": 5,
+      "thirdPartyByHost": {
+        "fonts.googleapis.com": {
+          "count": 1,
+          "phases": [
+            "carga"
+          ],
+          "types": [
+            "Stylesheet"
+          ],
+          "samplePaths": [
+            "/css2"
+          ]
+        },
+        "fonts.gstatic.com": {
+          "count": 2,
+          "phases": [
+            "carga"
+          ],
+          "types": [
+            "Font"
+          ],
+          "samplePaths": [
+            "/s/raleway/v37/1Ptug8zYS_SKggPNyC0ITw.woff2",
+            "/s/dancingscript/v29/If2RXTr6YS-zF4S-kcSWSVi_szLgiuE.woff2"
+          ]
+        }
+      },
+      "cookiesAtLoad": [],
+      "cookiesAfterScroll": [],
+      "setCookieResponses": [],
+      "storageAtLoad": {
+        "localStorage": [],
+        "sessionStorage": [],
+        "indexedDB": [],
+        "cacheStorage": [],
+        "serviceWorkers": 0,
+        "documentCookie": ""
+      },
+      "storageAfterScroll": {
+        "localStorage": [],
+        "sessionStorage": [],
+        "indexedDB": [],
+        "cacheStorage": [],
+        "serviceWorkers": 0,
+        "documentCookie": ""
+      }
+    },
+    "/agendas": {
+      "totalRequests": 17,
+      "firstPartyRequests": 14,
+      "thirdPartyByHost": {
+        "fonts.googleapis.com": {
+          "count": 1,
+          "phases": [
+            "carga"
+          ],
+          "types": [
+            "Stylesheet"
+          ],
+          "samplePaths": [
+            "/css2"
+          ]
+        },
+        "fonts.gstatic.com": {
+          "count": 2,
+          "phases": [
+            "carga"
+          ],
+          "types": [
+            "Font"
+          ],
+          "samplePaths": [
+            "/s/dancingscript/v29/If2RXTr6YS-zF4S-kcSWSVi_szLgiuE.woff2",
+            "/s/raleway/v37/1Ptug8zYS_SKggPNyC0ITw.woff2"
+          ]
+        }
+      },
+      "cookiesAtLoad": [],
+      "cookiesAfterScroll": [],
+      "setCookieResponses": [],
+      "storageAtLoad": {
+        "localStorage": [],
+        "sessionStorage": [],
+        "indexedDB": [],
+        "cacheStorage": [],
+        "serviceWorkers": 0,
+        "documentCookie": ""
+      },
+      "storageAfterScroll": {
+        "localStorage": [],
+        "sessionStorage": [],
+        "indexedDB": [],
+        "cacheStorage": [],
+        "serviceWorkers": 0,
+        "documentCookie": ""
+      }
+    },
+    "/agenda-personalizada": {
+      "totalRequests": 21,
+      "firstPartyRequests": 18,
+      "thirdPartyByHost": {
+        "fonts.googleapis.com": {
+          "count": 1,
+          "phases": [
+            "carga"
+          ],
+          "types": [
+            "Stylesheet"
+          ],
+          "samplePaths": [
+            "/css2"
+          ]
+        },
+        "fonts.gstatic.com": {
+          "count": 2,
+          "phases": [
+            "carga"
+          ],
+          "types": [
+            "Font"
+          ],
+          "samplePaths": [
+            "/s/raleway/v37/1Ptug8zYS_SKggPNyC0ITw.woff2",
+            "/s/dancingscript/v29/If2RXTr6YS-zF4S-kcSWSVi_szLgiuE.woff2"
+          ]
+        }
+      },
+      "cookiesAtLoad": [],
+      "cookiesAfterScroll": [],
+      "setCookieResponses": [],
+      "storageAtLoad": {
+        "localStorage": [],
+        "sessionStorage": [],
+        "indexedDB": [],
+        "cacheStorage": [],
+        "serviceWorkers": 0,
+        "documentCookie": ""
+      },
+      "storageAfterScroll": {
+        "localStorage": [],
+        "sessionStorage": [],
+        "indexedDB": [],
+        "cacheStorage": [],
+        "serviceWorkers": 0,
+        "documentCookie": ""
+      }
+    },
+    "/mi-libro": {
+      "totalRequests": 10,
+      "firstPartyRequests": 7,
+      "thirdPartyByHost": {
+        "fonts.googleapis.com": {
+          "count": 1,
+          "phases": [
+            "carga"
+          ],
+          "types": [
+            "Stylesheet"
+          ],
+          "samplePaths": [
+            "/css2"
+          ]
+        },
+        "fonts.gstatic.com": {
+          "count": 2,
+          "phases": [
+            "carga"
+          ],
+          "types": [
+            "Font"
+          ],
+          "samplePaths": [
+            "/s/dancingscript/v29/If2RXTr6YS-zF4S-kcSWSVi_szLgiuE.woff2",
+            "/s/raleway/v37/1Ptug8zYS_SKggPNyC0ITw.woff2"
+          ]
+        }
+      },
+      "cookiesAtLoad": [],
+      "cookiesAfterScroll": [],
+      "setCookieResponses": [],
+      "storageAtLoad": {
+        "localStorage": [],
+        "sessionStorage": [],
+        "indexedDB": [],
+        "cacheStorage": [],
+        "serviceWorkers": 0,
+        "documentCookie": ""
+      },
+      "storageAfterScroll": {
+        "localStorage": [],
+        "sessionStorage": [],
+        "indexedDB": [],
+        "cacheStorage": [],
+        "serviceWorkers": 0,
+        "documentCookie": ""
+      }
+    },
+    "/laminas": {
+      "totalRequests": 8,
+      "firstPartyRequests": 5,
+      "thirdPartyByHost": {
+        "fonts.googleapis.com": {
+          "count": 1,
+          "phases": [
+            "carga"
+          ],
+          "types": [
+            "Stylesheet"
+          ],
+          "samplePaths": [
+            "/css2"
+          ]
+        },
+        "fonts.gstatic.com": {
+          "count": 2,
+          "phases": [
+            "carga"
+          ],
+          "types": [
+            "Font"
+          ],
+          "samplePaths": [
+            "/s/dancingscript/v29/If2RXTr6YS-zF4S-kcSWSVi_szLgiuE.woff2",
+            "/s/raleway/v37/1Ptug8zYS_SKggPNyC0ITw.woff2"
+          ]
+        }
+      },
+      "cookiesAtLoad": [],
+      "cookiesAfterScroll": [],
+      "setCookieResponses": [],
+      "storageAtLoad": {
+        "localStorage": [],
+        "sessionStorage": [],
+        "indexedDB": [],
+        "cacheStorage": [],
+        "serviceWorkers": 0,
+        "documentCookie": ""
+      },
+      "storageAfterScroll": {
+        "localStorage": [],
+        "sessionStorage": [],
+        "indexedDB": [],
+        "cacheStorage": [],
+        "serviceWorkers": 0,
+        "documentCookie": ""
+      }
+    },
+    "/sobre-mi": {
+      "totalRequests": 13,
+      "firstPartyRequests": 9,
+      "thirdPartyByHost": {
+        "fonts.googleapis.com": {
+          "count": 1,
+          "phases": [
+            "carga"
+          ],
+          "types": [
+            "Stylesheet"
+          ],
+          "samplePaths": [
+            "/css2"
+          ]
+        },
+        "fonts.gstatic.com": {
+          "count": 3,
+          "phases": [
+            "carga"
+          ],
+          "types": [
+            "Font"
+          ],
+          "samplePaths": [
+            "/s/dancingscript/v29/If2RXTr6YS-zF4S-kcSWSVi_szLgiuE.woff2",
+            "/s/raleway/v37/1Ptug8zYS_SKggPNyC0ITw.woff2",
+            "/s/raleway/v37/1Ptsg8zYS_SKggPNyCg4TYFq.woff2"
+          ]
+        }
+      },
+      "cookiesAtLoad": [],
+      "cookiesAfterScroll": [],
+      "setCookieResponses": [],
+      "storageAtLoad": {
+        "localStorage": [],
+        "sessionStorage": [],
+        "indexedDB": [],
+        "cacheStorage": [],
+        "serviceWorkers": 0,
+        "documentCookie": ""
+      },
+      "storageAfterScroll": {
+        "localStorage": [],
+        "sessionStorage": [],
+        "indexedDB": [],
+        "cacheStorage": [],
+        "serviceWorkers": 0,
+        "documentCookie": ""
+      }
+    },
+    "/contacto": {
+      "totalRequests": 9,
+      "firstPartyRequests": 5,
+      "thirdPartyByHost": {
+        "fonts.googleapis.com": {
+          "count": 1,
+          "phases": [
+            "carga"
+          ],
+          "types": [
+            "Stylesheet"
+          ],
+          "samplePaths": [
+            "/css2"
+          ]
+        },
+        "fonts.gstatic.com": {
+          "count": 2,
+          "phases": [
+            "carga"
+          ],
+          "types": [
+            "Font"
+          ],
+          "samplePaths": [
+            "/s/raleway/v37/1Ptug8zYS_SKggPNyC0ITw.woff2",
+            "/s/dancingscript/v29/If2RXTr6YS-zF4S-kcSWSVi_szLgiuE.woff2"
+          ]
+        },
+        "www.google.com": {
+          "count": 1,
+          "phases": [
+            "carga"
+          ],
+          "types": [
+            "Document"
+          ],
+          "samplePaths": [
+            "/maps/embed"
+          ]
+        }
+      },
+      "cookiesAtLoad": [],
+      "cookiesAfterScroll": [],
+      "setCookieResponses": [],
+      "storageAtLoad": {
+        "localStorage": [],
+        "sessionStorage": [],
+        "indexedDB": [],
+        "cacheStorage": [],
+        "serviceWorkers": 0,
+        "documentCookie": ""
+      },
+      "storageAfterScroll": {
+        "localStorage": [],
+        "sessionStorage": [],
+        "indexedDB": [],
+        "cacheStorage": [],
+        "serviceWorkers": 0,
+        "documentCookie": ""
+      }
+    }
+  },
+  "failed": []
+}

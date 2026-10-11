@@ -1,0 +1,162 @@
+{
+  "chrome": "Chrome/154.0.8037.93",
+  "url": "http://localhost:4173/",
+  "viewport": "390x844 (mobile emulation, sin throttling de red)",
+  "date": "2026-10-11T20:08:59.490Z",
+  "bytesInitialNoScroll": 14144360,
+  "bytesAfterFullScroll": 14144706,
+  "mbInitial": 13.49,
+  "mbTotal": 13.49,
+  "requests": 44,
+  "byType": {
+    "Document": {
+      "count": 1,
+      "bytes": 1547
+    },
+    "Stylesheet": {
+      "count": 2,
+      "bytes": 10295
+    },
+    "Script": {
+      "count": 1,
+      "bytes": 132205
+    },
+    "Image": {
+      "count": 36,
+      "bytes": 5840110
+    },
+    "Font": {
+      "count": 2,
+      "bytes": 91036
+    },
+    "Media": {
+      "count": 1,
+      "bytes": 8064995
+    },
+    "Other": {
+      "count": 1,
+      "bytes": 4518
+    }
+  },
+  "top": [
+    {
+      "file": "wspVideo-header-FNowFYaa.mp4",
+      "type": "Media",
+      "phase": "inicial",
+      "kb": 7876,
+      "encoding": null
+    },
+    {
+      "file": "la-dama-dorada-CIBqHebY.jpeg",
+      "type": "Image",
+      "phase": "inicial",
+      "kb": 488,
+      "encoding": null
+    },
+    {
+      "file": "la-culpable-flores-BZn-LZJo.jpeg",
+      "type": "Image",
+      "phase": "inicial",
+      "kb": 482,
+      "encoding": null
+    },
+    {
+      "file": "Butterfly-Queen-ClUbu-tu.jpeg",
+      "type": "Image",
+      "phase": "inicial",
+      "kb": 428,
+      "encoding": null
+    },
+    {
+      "file": "la-culpable-mariposas-CfhbBGX8.jpeg",
+      "type": "Image",
+      "phase": "inicial",
+      "kb": 412,
+      "encoding": null
+    },
+    {
+      "file": "Creacion-C1ppXBTI.jpeg",
+      "type": "Image",
+      "phase": "inicial",
+      "kb": 397,
+      "encoding": null
+    },
+    {
+      "file": "femme-deau-agenda-ip8wioXf.jpeg",
+      "type": "Image",
+      "phase": "inicial",
+      "kb": 357,
+      "encoding": null
+    },
+    {
+      "file": "la-dama-de-rosa-mariposas-C1jVicYZ.jpeg",
+      "type": "Image",
+      "phase": "inicial",
+      "kb": 335,
+      "encoding": null
+    },
+    {
+      "file": "Lucia-MbVr-zc7.jpeg",
+      "type": "Image",
+      "phase": "inicial",
+      "kb": 298,
+      "encoding": null
+    },
+    {
+      "file": "Bahia-CY0C2V4F.jpeg",
+      "type": "Image",
+      "phase": "inicial",
+      "kb": 280,
+      "encoding": null
+    },
+    {
+      "file": "Helena-8fD9iI7y.jpeg",
+      "type": "Image",
+      "phase": "inicial",
+      "kb": 252,
+      "encoding": null
+    },
+    {
+      "file": "aniSection3-VRj2jrxT.jpg",
+      "type": "Image",
+      "phase": "inicial",
+      "kb": 191,
+      "encoding": null
+    }
+  ],
+  "vitalsUnthrottled": {
+    "lcp": {
+      "t": 688,
+      "el": "VIDEO.",
+      "url": "wspVideo-header-FNowFYaa.mp4",
+      "size": 104520
+    },
+    "cls": 0
+  },
+  "labInteractionEvents4xCPU": [
+    {
+      "name": "pointerdown",
+      "d": 160
+    },
+    {
+      "name": "pointerup",
+      "d": 160
+    },
+    {
+      "name": "click",
+      "d": 160
+    },
+    {
+      "name": "pointerdown",
+      "d": 24
+    },
+    {
+      "name": "pointerup",
+      "d": 24
+    },
+    {
+      "name": "click",
+      "d": 24
+    }
+  ]
+}
