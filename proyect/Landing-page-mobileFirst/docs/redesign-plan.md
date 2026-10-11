@@ -88,6 +88,7 @@ no como estética a copiar. Ver skill `apple-design`. Orden de autoridad: `DESIG
 | 3 | SEO técnico | Que Google y las redes vean cada página | ⚪ | M |
 | 4 | Tokens (sin cambio visual) | `DESIGN.md` + `tokens.css` que reproducen el look actual | ⚪ | M |
 | 4b | **Dirección de arte** | Explorar 2–3 propuestas premium de la Home mobile y elegir una | ⚪ (prototipos) | M |
+| 4c | **Dirección C (inmersiva)** | Profundizar la dirección inmersiva con 2 variantes y obras elegidas por criterio | ⚪ (prototipos) | S |
 | 5 | Imágenes y rendimiento | Pasar de ~43 MB de originales a imágenes responsivas | ⚪ | M–L |
 | 6 | Shell: navegación, flotantes, footer | Mejor navegación mobile y fin de solapamientos | 🟠 | M |
 | 7 | Home **premium** | Hero cinematográfico con la obra, jerarquía clara, scroll narrativo, un CTA | 🟠 | L |
@@ -207,6 +208,18 @@ no como estética a copiar. Ver skill `apple-design`. Orden de autoridad: `DESIG
 **Skills/agentes:** `frontend-design`, `apple-design`, `design-lead`, `design:design-critique`, `ux-a11y-reviewer` (contraste y legibilidad del prototipo).
 **Listo cuando:** Ani y Valentín eligen una dirección viendo los prototipos HTML en su propio navegador/celular (el agente no toma capturas); `DESIGN.md` refleja la decisión; las fases 7, 8 y 10b se escriben contra ese prototipo.
 **Riesgo:** bajo técnico; alto en subjetividad → limitar a una ronda de feedback y una de ajustes.
+
+### Fase 4c — Dirección C (inmersiva)
+**Objetivo:** ampliar la Fase 4b con la dirección que prefiere Valentín (la C, inmersiva), probada en dos variantes y con obras elegidas por criterio, para decidir con algo concreto.
+**Se hace en paralelo a la 4b**, en su propia rama (`fase-4c-inmersiva`) y carpeta (`design/art-direction/4c/`, copia en `public/prototipos/4c/`); no toca `DESIGN.md` ni el decision-log. La dirección final se registra una sola vez (DL-013) al integrar ambas.
+**Hacer**
+- **Elegir las obras** con criterio escrito (`design/art-direction/4c/obras.md`): relación de aspecto vertical/casi cuadrada para mobile, calidad (≥ 1080 px de ancho, sin artefactos), impacto, y al menos una obra de cada etapa (naif y neoexpresionista) para "Mi recorrido".
+- Dos prototipos: `c1-oscura` (oscuridad parcial solo detrás de la obra) y `c2-clara` (fondo claro), con hero, obras destacadas, tarjeta de obra, CTA de WhatsApp, menú abierto y "Mi recorrido".
+- Verificar los riesgos de la C: recorte de la obra a pantalla completa en 360–1280 px, peso del hero, `prefers-reduced-motion`, contraste AA sobre fondo oscuro, targets de 44 px.
+- `recomendacion.md` con qué variante conviene; **elige Valentín con Ani**.
+**Skills/agentes:** `frontend-design`, `apple-design`, `design-lead`, `design:design-critique`, `ux-a11y-reviewer`.
+**Listo cuando:** Valentín y Ani ven ambas variantes en el celular (o en el preview de la rama) y deciden junto con los resultados de la 4b.
+**Riesgo:** bajo. `public/prototipos/` es público en el preview: lleva `noindex` y **no se mergea a `main`**.
 
 ### Fase 5 — Imágenes y rendimiento
 **Objetivo:** que el sitio cargue rápido en celular con datos móviles, sin que la obra pierda calidad.
