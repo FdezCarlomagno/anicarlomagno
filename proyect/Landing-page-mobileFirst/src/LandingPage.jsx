@@ -20,6 +20,9 @@ import Envio from './components/Envio.jsx';
 import Contact from './components/contact/ContactSection.jsx'
 import { EmailLink, WhatsappLink } from './content/legal/ContactLinks.jsx';
 import { OWNER_NAME } from './content/legal/contact.js';
+import { privacidad } from './content/legal/privacidad.jsx';
+import { terminos } from './content/legal/terminos.jsx';
+import LegalPage from './pages/LegalPage.jsx';
 import './LandingPage.css';
 
 
@@ -50,6 +53,8 @@ const LandingPage = () => {
               <Route path="/mi-libro" element={<PersonalBook />} />
               <Route path="/laminas" element={<Laminas />} />
               <Route path='/contacto' element={<Contact />}/>
+              <Route path="/privacidad" element={<LegalPage content={privacidad} />} />
+              <Route path="/terminos" element={<LegalPage content={terminos} />} />
               <Route path="*" element={<Home />} /> {/* Ruta por defecto */}
             </Routes>
           </main>
