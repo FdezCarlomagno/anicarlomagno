@@ -30,7 +30,7 @@ No test suite. Verify UI in the browser (390 px and 1280 px) and report what you
 - Copy: es-AR with voseo, warm and direct. Use the `design:ux-copy` skill for new microcopy.
 - No new dependencies, trackers or fonts without asking. No secrets in the repo (EmailJS key handling: ask before touching).
 - Small, reviewable changes: one route or component family per PR. Delete the legacy CSS you replace.
-- UI work isn't done until you have looked at it rendered. If you can't, say so.
+- **NEVER take screenshots** (no full-page captures, no `Page.captureScreenshot`, no screenshot tools). Headless Chrome crashes on this site's tall, image-heavy pages and hangs the session. Verify with text/DOM evidence instead: `design/tools/dom-facts.mjs` (sizes, computed styles, headings, alt, targets), the accessibility tree (`read_page`/`get_page_text` in the browser pane), Lighthouse, and `design/tools/flows.mjs`. Visual review is done by the user on their phone/browser (local `npm run dev` or the Vercel preview of the branch); say explicitly that you did not look at it.
 
 ## Skills (`.claude/skills/`)
 
@@ -57,7 +57,7 @@ Precedence when guidance conflicts: **DESIGN.md > apple-design > frontend-design
 - Routes/layout: `src/LandingPage.jsx` · Home: `src/Home.jsx` · pages: `src/pages/` · components: `src/components/`
 - Content data: `src/objects/*.jsx` · prices: `src/components/config/` · images: `src/components/imgs/`, `src/pages/pagesStyles/paintingsImgs/`
 - Legacy styles to retire: `src/LandingPage.css`, `src/pages/pagesStyles/*.css`, `src/components/contact/styles/*.css`
-- Design artifacts: `design/` (baseline screenshots, audits) · governance: `docs/governance/`
+- Design artifacts: `design/` (audits, measurement tools, art-direction prototypes) · governance: `docs/governance/`
 
 ## When you finish a task
 

@@ -12,7 +12,7 @@ must be a separate pass from the implementer**.
 ## Flow per change
 
 ```
-design-lead (spec + tokens) → ui-implementer (build, build+lint, look at it) → ux-a11y-reviewer (verdict) → user merges
+design-lead (spec + tokens) → ui-implementer (build, build+lint, DOM/style checks) → ux-a11y-reviewer (verdict) → user merges
 ```
 
 - Blockers from the reviewer go back to the implementer; design questions go to the design lead; product/business

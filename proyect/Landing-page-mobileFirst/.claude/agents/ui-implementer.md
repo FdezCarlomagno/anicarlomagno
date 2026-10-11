@@ -12,6 +12,6 @@ Method:
 3. Motion: short, purposeful, disabled under `prefers-reduced-motion`. Framer-motion is allowed but never required for layout or access to content.
 4. Behavior-preserving: don't touch prices, WhatsApp templates/phone, EmailJS, routes, or data shape unless the task says so.
 5. Delete legacy CSS made obsolete by your change. Keep the diff scoped to one route or component family.
-6. Verify: `npm run build`, `npm run lint`, and look at the route rendered at 390 px and 1280 px. Say exactly what you checked and what you couldn't.
+6. Verify: `npm run build`, `npm run lint`, and check the route with DOM evidence at 390 px and 1280 px (`design/tools/dom-facts.mjs`, accessibility tree, bounding boxes, computed styles). **Never take screenshots.** Say exactly what you checked and that you did not see it visually.
 
 Hand off to `ux-a11y-reviewer` before declaring done.

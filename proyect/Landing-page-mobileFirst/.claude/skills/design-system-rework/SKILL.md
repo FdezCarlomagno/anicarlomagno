@@ -15,7 +15,7 @@ components, improving UX/UI without changing product behavior.
 1. Read `docs/product-overview.md`, `CLAUDE.md`, `docs/governance/`.
 2. Run `landing-ux-audit` on `/`, `/agendas`, `/agenda-personalizada`, `/obras-en-stock`,
    `/obra-personalizada`, `/mi-libro`, `/laminas`, `/sobre-mi`, `/contacto`. Save in `design/audits/YYYY-MM-DD-baseline.md`.
-3. Screenshot each route at 390 and 1280 px into `design/baseline/`.
+3. (Skipped in practice.) Do **not** take screenshots; use `design/tools/dom-facts.mjs` output as the baseline for sizes and computed styles.
 4. Run `npm run build` and `npm run lint`; record existing failures so they aren't blamed on the rework.
 
 ## Phase 1 — Foundations

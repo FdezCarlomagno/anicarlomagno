@@ -42,6 +42,10 @@ Ese "premium" sale de la **presentación**, no de cambiar la marca:
 
 Todo con su violeta, su script y su calidez. Antes de construir se **elige una dirección de arte** (Fase 4b) con vos y con Ani.
 
+### Regla de verificación: sin capturas
+
+Los agentes **no toman capturas de pantalla** en ninguna fase: las páginas largas con imágenes pesadas hacen caer Chrome headless y cuelgan la sesión. La verificación es por evidencia de texto/DOM (`design/tools/dom-facts.mjs`, árbol de accesibilidad, bounding boxes, Lighthouse y `flows.mjs`). La revisión visual la hace el usuario en su celular o en el preview de Vercel de la rama.
+
 ### Cómo se usa "Apple" aquí
 
 Como **vara de calidad estructural** (la obra es la protagonista, el UI se retira, un solo acento, mucho aire, tipografía ajustada),
@@ -78,7 +82,7 @@ no como estética a copiar. Ver skill `apple-design`. Orden de autoridad: `DESIG
 
 | # | Fase | Objetivo en una línea | Visual | Esf. |
 |---|---|---|---|---|
-| 0 | Línea base y red de seguridad | Medir y capturar el estado actual | ⚪ | S |
+| 0 | Línea base y red de seguridad | Medir el estado actual | ⚪ | S |
 | 1 | Accesibilidad y higiene "invisible" | Arreglar lo que daña sin cambiar el look | ⚪ | S |
 | 2 | Legales y transparencia | Privacidad, cookies, términos, datos de contacto | 🟡 | M |
 | 3 | SEO técnico | Que Google y las redes vean cada página | ⚪ | M |
@@ -102,7 +106,7 @@ no como estética a copiar. Ver skill `apple-design`. Orden de autoridad: `DESIG
 **Objetivo:** saber exactamente de dónde partimos para poder demostrar mejora y detectar regresiones.
 **Hacer**
 - `npm run build` y `npm run lint`; anotar errores existentes (no se arreglan acá).
-- Capturas de cada ruta a 390 y 1280 px en `design/baseline/`. Rutas: `/`, `/elegir`, `/obras-en-stock`, `/obra-personalizada`, `/agendas`, `/agenda-personalizada`, `/mi-libro`, `/laminas`, `/sobre-mi`, `/contacto`.
+- ~~Capturas de cada ruta~~ **No se toman capturas** (cierran Chrome headless y cuelgan al agente). Quedaron 3 de la primera tanda y alcanzan como referencia; la línea base se mide con `design/tools/dom-facts.mjs` (tamaños, estilos calculados, encabezados, alt, objetivos táctiles).
 - Auditoría con `landing-ux-audit` por ruta → `design/audits/2026-10-baseline.md`.
 - Lighthouse mobile por ruta principal (Perf/A11y/Best Practices/SEO) y Core Web Vitals (LCP, CLS, INP).
 - Escaneo de cookies/requests de terceros (DevTools → Application/Network) → insumo de la fase 2.
@@ -125,7 +129,7 @@ no como estética a copiar. Ver skill `apple-design`. Orden de autoridad: `DESIG
 - `prefers-reduced-motion`: desactivar animaciones de framer-motion (`MotionConfig reducedMotion="user"` en `LandingPage.jsx`) y las CSS.
 - `lang="es-AR"`; `role="main"` sobre `#root` en `index.html` se reemplaza por `<main>` real por página.
 **Skills/agentes:** `web-design-guidelines`, `design:accessibility-review`, `ui-implementer`, `ux-a11y-reviewer`.
-**Listo cuando:** mismo aspecto (diff de capturas sin cambios apreciables), Lighthouse A11y ≥ 95 en las rutas auditadas, navegación completa solo con teclado.
+**Listo cuando:** mismo aspecto (diff de estilos calculados y tamaños con `dom-facts.mjs` sin cambios apreciables; revisión visual del usuario en el celular), Lighthouse A11y ≥ 95 en las rutas auditadas, navegación completa solo con teclado.
 **Riesgo:** bajo. Cuidado con estilos que dependan de `h1` en `Cuadro` (revisar `paintings.css`).
 
 ### Fase 2 — Legales y transparencia
@@ -185,7 +189,7 @@ no como estética a copiar. Ver skill `apple-design`. Orden de autoridad: `DESIG
 - Lint del `DESIGN.md` con `npx @google/design.md lint DESIGN.md` (puede requerir que lo corra Valentín).
 **Decisiones a cerrar (decision-log):** acento exacto, escala tipográfica base (mobile 16 px mínimo), radios, curva y duración de movimiento.
 **Skills/agentes:** `design-md`, `apple-design`, `design-lead`.
-**Listo cuando:** diff de capturas vs. baseline ≈ 0; no quedan hex/px de diseño nuevos fuera de tokens; lint sin errores.
+**Listo cuando:** diff de estilos calculados vs. línea base (`dom-facts.mjs`) ≈ 0; no quedan hex/px de diseño nuevos fuera de tokens; lint sin errores.
 **Riesgo:** bajo si se hace archivo por archivo.
 
 ### Fase 4b — Dirección de arte
@@ -200,7 +204,7 @@ no como estética a copiar. Ver skill `apple-design`. Orden de autoridad: `DESIG
 - Cada prototipo muestra: hero, una sección de serie/obras destacadas, tarjeta de obra, CTA de WhatsApp y el menú abierto. Evaluar contra los principios de [design-principles.md](governance/design-principles.md) y contraste AA.
 - Elegir una dirección y registrarla en el decision-log (DL-002) con: escala tipográfica, uso del acento, proporciones de imagen, movimiento permitido y qué **no** se hace. Ajustar `DESIGN.md` en consecuencia.
 **Skills/agentes:** `frontend-design`, `apple-design`, `design-lead`, `design:design-critique`, `ux-a11y-reviewer` (contraste y legibilidad del prototipo).
-**Listo cuando:** Ani y Valentín eligen una dirección con capturas a 390 px; `DESIGN.md` refleja la decisión; las fases 7, 8 y 10b se escriben contra ese prototipo.
+**Listo cuando:** Ani y Valentín eligen una dirección viendo los prototipos HTML en su propio navegador/celular (el agente no toma capturas); `DESIGN.md` refleja la decisión; las fases 7, 8 y 10b se escriben contra ese prototipo.
 **Riesgo:** bajo técnico; alto en subjetividad → limitar a una ronda de feedback y una de ajustes.
 
 ### Fase 5 — Imágenes y rendimiento
@@ -240,7 +244,7 @@ no como estética a copiar. Ver skill `apple-design`. Orden de autoridad: `DESIG
 - Un único CTA primario repetido de forma consistente.
 **Skills/agentes:** `frontend-design` (momento de carácter: cómo presentar la obra), `apple-design`, `design:ux-copy`, `design:design-critique`.
 **Listo cuando:** auditoría de Home sin P0/P1; LCP dentro de presupuesto; Ani aprueba que "sigue siendo ella".
-**Riesgo:** medio-alto en percepción (es la página más vista) → mostrar capturas/prototipo a Ani antes de mergear.
+**Riesgo:** medio-alto en percepción (es la página más vista) → mostrar a Ani el preview de la rama (Vercel) o el prototipo antes de mergear.
 
 ### Fase 8 — Catálogo y experiencia de obra
 **Objetivo:** tarjetas consistentes, la información de compra donde se decide y una forma de mirar la obra digna de una galería.
@@ -352,9 +356,9 @@ no como estética a copiar. Ver skill `apple-design`. Orden de autoridad: `DESIG
 | Riesgo | Control |
 |---|---|
 | Romper el pedido por WhatsApp (pérdida de ventas) | Lista de "no romper" desde la Fase 0; comparar mensaje/total antes y después; fase 9 en PRs separados |
-| Perder la esencia | Sección 1 como contrato; capturas a Ani antes de mergear Home/Catálogo; tokens que parten del look actual |
+| Perder la esencia | Sección 1 como contrato; preview de la rama a Ani antes de mergear Home/Catálogo; tokens que parten del look actual |
 | Fases grandes que se alargan | Si una fase supera 3 días, se parte en dos PRs |
-| Regresiones visuales | Capturas baseline por ruta y viewport; comparación en cada PR |
+| Regresiones visuales | Sin capturas de agentes: diff de estilos calculados y tamaños (`dom-facts.mjs`) en cada PR + revisión visual del usuario en celular/preview |
 | Dependencias nuevas | Siempre con aprobación explícita (README de gobernanza, regla 2) |
 | Legal | Revisión profesional; el plan solo prepara el borrador y la implementación |
 | Skills de terceros | `web-design-guidelines` baja reglas remotas: es asesor, no autoridad ([third-party-skills.md](governance/third-party-skills.md)) |

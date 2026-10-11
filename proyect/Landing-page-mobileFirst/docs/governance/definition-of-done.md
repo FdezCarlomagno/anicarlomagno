@@ -9,7 +9,8 @@ Tick every item or write why it doesn't apply.
 - [ ] Prices, WhatsApp URLs/templates, EmailJS, routes unchanged (or change explicitly approved).
 
 **Responsive & visual**
-- [ ] Seen rendered at 360/390, 768 and 1280 px: no horizontal scroll, clipping or overlap (check floating WhatsApp / scroll-to-top / nav).
+- [ ] DOM checks at 360/390, 768 and 1280 px with `design/tools/dom-facts.mjs` (no horizontal overflow, nothing clipped, no overlap between floating WhatsApp / scroll-to-top / nav by bounding boxes). **No screenshots.**
+- [ ] Visual review by the user on a phone or the branch preview (the agent states it did not see it).
 - [ ] Artwork unaltered, correct aspect ratio, `alt` present, width/height set, lazy-loaded below the fold.
 - [ ] Hover, focus, active, disabled and loading states exist for every interactive element.
 
