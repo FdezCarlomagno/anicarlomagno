@@ -93,7 +93,7 @@ const Agendas = () => {
                 </div>
             </main>
             <div className='paintingImgs-section'>
-                <Link to="/agenda-personalizada">
+                <Link to="/agenda-personalizada" aria-label="Quiero mi agenda o cuaderno personalizado">
                     <div className='paintingImgs-box'><Image src={a1} /></div>
                     <div className='paintingImgs-box'><Image src={a2} /></div>
                     <div className='paintingImgs-box'><Image src={a3} /></div>

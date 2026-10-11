@@ -11,9 +11,9 @@ const SocialMedia = () => {
             <h3>Seguime en mis redes sociales</h3>
             <div className="socialMedia-container">
                 <ul>
-                    <a href="https://www.instagram.com/anicarlomagno_painting/" target='blank'><li><Image src={instagramSvg} alt="" /></li></a>
-                    <a href="https://www.tiktok.com/@anicarlomagno_painting?_t=8pSFiI1eHB7&_r=1" target='blank'><li><Image src={TikTokSvg} alt="" /></li></a>
-                    <a href="https://www.facebook.com/anicarlomagno"  target='blank'><li><Image src={faceBookSvg} alt="" /></li></a>
+                    <a href="https://www.instagram.com/anicarlomagno_painting/" target='blank' aria-label="Instagram de Ani (se abre en una pestaña nueva)"><li><Image src={instagramSvg} alt="" /></li></a>
+                    <a href="https://www.tiktok.com/@anicarlomagno_painting?_t=8pSFiI1eHB7&_r=1" target='blank' aria-label="TikTok de Ani (se abre en una pestaña nueva)"><li><Image src={TikTokSvg} alt="" /></li></a>
+                    <a href="https://www.facebook.com/anicarlomagno"  target='blank' aria-label="Facebook de Ani (se abre en una pestaña nueva)"><li><Image src={faceBookSvg} alt="" /></li></a>
                 </ul>
             </div>
         </div>

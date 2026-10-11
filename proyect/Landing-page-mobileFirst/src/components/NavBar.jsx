@@ -42,7 +42,14 @@ const NavBar = () => {
           >artista plástica</motion.h2>
         </div>
       </Link>
-      <button className='btnDisplayMenu' onClick={toggleMenu}>☰</button>
+      <button
+        type="button"
+        className='btnDisplayMenu'
+        onClick={toggleMenu}
+        aria-label="Menú"
+        aria-expanded={menu}
+        aria-controls="menu-principal"
+      >☰</button>
       <motion.div
         className={menu ? 'displayMenu' : 'closedMenu'}
         initial={{ opacity: 0, height: 0 }}
@@ -50,6 +57,7 @@ const NavBar = () => {
         transition={{ duration: 0.5 }}
       >
         <motion.ul
+          id="menu-principal"
           className={menu ? 'openMenu' : 'closedMenu'}
           initial={{ opacity: 0, height: 0 }}
           animate={menu ? { opacity: 1, height: 'auto' } : { opacity: 1, height: 20}}
