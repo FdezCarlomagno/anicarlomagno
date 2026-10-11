@@ -36,7 +36,7 @@ Métrica del plan "fallas de accesibilidad críticas": **2** (zoom deshabilitado
 
 | # | Sev. | Problema | Fase sugerida |
 |---|---|---|---|
-| 1 | P0 | La frase destildada se envía en el mensaje sin cobrarse los $3000 (`AgendaForm.jsx:204-206`) | 9, o antes si se aprueba (cambia el mensaje) |
+| 1 | P0 | **[RESUELTO 2026-10-11, DL-003]** Se cobra $3000 por la frase y la regla de negocio es que la frase es gratis** (decisión del 2026-10-11): `AgendaPrices.js:8`, `AgendaForm.jsx:127-129`. El total mostrado y enviado por WhatsApp queda inflado | 9, o antes si se aprueba (cambia precio y mensaje) |
 | 2 | P0 | Elegir la obra (agenda y lámina) es imposible con teclado o lector de pantalla (`DropDownImgs.jsx:18`) | 1 |
 | 3 | P0 | Home pesa 14,1 MB al entrar en celular: video de 7,7 MB + imágenes sin lazy | 5 (y póster del video antes, si se aprueba) |
 | 4 | P0 | Zoom deshabilitado en todo el sitio (`index.html:5`), junto con inputs de 14 px | 1 |
@@ -143,7 +143,7 @@ Quedan fuera del top 10, pero listos para el backlog: Google Maps al cargar `/co
 ### `/agenda-personalizada` — LH 79/77/100/85, 4.242 KiB
 | Severidad | Dónde | Problema | Fix |
 |---|---|---|---|
-| P0 | `AgendaForm.jsx:127-129,144-147` vs `204-206` | **Frase destildada se envía sin cobrar**: con la casilla destildada el total baja a $16900 pero el mensaje incluye "💭 *Frase:* …" (flujo, caso borde) | Incluir la frase solo si `formData.checkbox`; **cambia el mensaje → requiere aprobación** (Fase 9 o antes) |
+| P0 | `AgendaPrices.js:8`, `AgendaForm.jsx:127-129` | **[RESUELTO 2026-10-11]** **Cobro de la frase contra la regla de negocio**: la frase no tiene costo adicional, pero tildar "Agregar frase personalizada" suma +$3000 al total (y no hay ningún texto que lo explique en la UI) (flujo, combinaciones 2 y 3) | Poner `ADICION_DE_FRASE` en 0 y quitar la suma; **cambia precio → requiere aprobación** (Fase 9 o antes). Secundario (P2): al destildar la casilla el texto de la frase igual se envía; incluirla solo si `formData.checkbox` |
 | P0 | `DropDownImgs.jsx:18-19` | Elegir la obra de fondo (obligatoria, `AgendaForm.jsx:73-76`) solo con mouse/toque: `<div onClick>` sin foco, rol ni estado seleccionado; `alt` "Cuadro N" (DOM: 13 clickeables no semánticos) → **un usuario de teclado o lector de pantalla no puede completar el pedido**. Además el componente recibe `selectedImage` (`AgendaForm.jsx:422`) pero lo ignora: la obra elegida no se marca en la grilla (`.selected` existe en `agendas.css:858` sin uso) | Radiogroup de imágenes (`<input type="radio">` + `<label>`) con el nombre de la obra y estado seleccionado visible |
 | P1 | `AgendaForm.jsx:250-278` | Tras `window.open` muestra "✅ ¡Pedido enviado!" y **resetea todo** aunque WhatsApp no se haya abierto (flujo: `window.open` devolvió `null` y el reset ocurrió igual). El pedido no está "enviado" hasta que la persona lo manda en WhatsApp | Revisar el resultado de `window.open`, ofrecer enlace de respaldo y no resetear hasta confirmar (Fase 9) |
 | P1 | `AgendaForm.jsx` (toast propio), `agendas.css:25-30` | El aviso no tiene `role="status"`/`aria-live` (flujo); texto blanco sobre degradado que arranca en #667eea (≈ 3,66:1 en ese extremo) | Usar `react-hot-toast` (ya instalado) o `aria-live`; fondo ≥ 4,5:1 |

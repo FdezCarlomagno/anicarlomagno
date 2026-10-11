@@ -38,7 +38,8 @@ Prices live in `src/components/config/AgendaPrices.js` and `LibrosPrice.js` (sin
 never duplicate prices in copy or components):
 
 - Agenda perpetua 25 900 · Agenda docente 25 900 · Agenda semanal 23 900
-- Cuaderno 16 900 · Cuaderno A4 35 900 · Add custom quote +3 000
+- Cuaderno 16 900 · Cuaderno A4 35 900
+- **La frase personalizada no tiene costo adicional** (decisión de negocio, 2026-10-11). Corregido el 2026-10-11 (DL-003): se eliminó `ADICION_DE_FRASE` y el total no cambia al tildar la frase; la frase solo viaja en el mensaje si la casilla está tildada.
 - Libros: 25 900 each
 
 ## Core flows (what must never break)

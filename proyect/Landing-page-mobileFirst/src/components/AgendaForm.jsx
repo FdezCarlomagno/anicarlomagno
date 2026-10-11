@@ -101,7 +101,7 @@ const AgendaForm = () => {
         setErrors({ ...errors, bgImg: error });
     };
 
-        const calculatePrice = (type, hasQuote) => {
+        const calculatePrice = (type) => {
         let basePrice = 0;
 
         switch (type) {
@@ -124,9 +124,6 @@ const AgendaForm = () => {
                 basePrice = 0;
         }
 
-        if (hasQuote) {
-            basePrice += agendaPrices.ADICION_DE_FRASE;
-        }
 
         return basePrice;
     };
@@ -141,10 +138,7 @@ const AgendaForm = () => {
                 [name]: name === 'checkbox' ? checked : value,
             };
 
-            const newPrice = calculatePrice(
-            name === 'type' ? value : updated.type,
-            name === 'checkbox' ? checked : updated.checkbox
-        );
+            const newPrice = calculatePrice(name === 'type' ? value : updated.type);
 
             if (name === 'checkbox') {
                 setFormQuote(checked);
@@ -201,7 +195,7 @@ const AgendaForm = () => {
             message += `📍 *Ubicación:* ${formData.textDirection.replace('-', ' ')}\n`;
         }
 
-        if (formData.quote) {
+        if (formData.checkbox && formData.quote) {
             message += `💭 *Frase:* ${formData.quote}\n`;
         }
 

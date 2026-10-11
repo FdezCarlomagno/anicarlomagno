@@ -23,7 +23,7 @@ Leyenda: **[medido]** / **[inferido]**. ✅ funciona como hoy se espera · ⚠�
 ## 1. Encargo de agenda (`/agenda-personalizada`)
 
 Precios de referencia (`src/components/config/AgendaPrices.js`): perpetua 25900 · docente 25900 · semanal 23900 · cuaderno 16900 ·
-cuaderno A4 35900 · frase +3000.
+cuaderno A4 35900 · frase +3000 (**el código la cobra, pero la regla de negocio es que la frase es gratis**, decisión del 2026-10-11: los totales con frase de este informe reflejan el comportamiento actual, no el correcto).
 
 | Paso | Resultado observado |
 |---|---|
@@ -80,7 +80,11 @@ cuaderno A4 35900 · frase +3000.
 💰 *Total: $35900*
 ```
 
-### Caso borde — frase tildada, escrita y luego destildada → ❌ **defecto**
+### Caso borde — frase tildada, escrita y luego destildada → ⚠️ defecto menor (P2)
+
+> **Resuelto el 2026-10-11 (DL-003):** tras el arreglo, con la frase tildada el total queda igual al precio base (cuaderno $16900, agenda semanal con nombre y frase $23900) y al destildar la casilla la frase no se envía. Verificado con `design/tools/flows.mjs` sobre el build.
+>
+> Actualización 2026-10-11: la frase no debe tener costo, así que "se envía sin cobrarse" deja de ser un problema de precio. Queda solo que el texto se envíe aunque la casilla esté destildada. El problema de precio real es el contrario: hoy se cobra +$3000 al tildarla.
 
 Cuaderno, papel blanco, "La Dama Dorada". Con la casilla de frase tildada el total pasa a $19900; al destildarla vuelve a $16900,
 pero **el texto de la frase queda en el estado y se envía igual, sin cobrarse**:
