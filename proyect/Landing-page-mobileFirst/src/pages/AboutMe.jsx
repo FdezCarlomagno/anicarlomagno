@@ -103,7 +103,7 @@ const AboutMe = () => {
                         <div className="hero-badge">Artista Plástica</div>
                     </div>
                     <div className="hero-text">
-                        <h1 className="hero-name">Analia Carlomagno</h1>
+                        <h2 className="hero-name">Analia Carlomagno</h2>
                         <p className="hero-subtitle">Artista Plástica y Docente</p>
                         <blockquote className="hero-quote">
                             "Mi deseo es que mis obras y mis palabras lleguen lejos... Bien bien lejos...
@@ -132,7 +132,7 @@ const AboutMe = () => {
                                 <img src={stat.icon} alt="" />
                             </span>
 
-                            <h3 className="stat-number">{stat.number}</h3>
+                            <p className="stat-number">{stat.number}</p>
                             <p className="stat-label">{stat.label}</p>
                         </motion.div>
                     ))}

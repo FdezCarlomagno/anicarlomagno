@@ -4,7 +4,7 @@
     margin: 0 auto;
   }
   
-  .contact-section h2 {
+  .contact-section .contact-title {
     text-align: left;
     border-bottom: 2px solid gray;
     margin-bottom: 2rem;
@@ -23,7 +23,7 @@
       flex-direction: row;
       padding: 2rem;
     }
-    .contact-section h2 {
+    .contact-section .contact-title {
       border-bottom: none;
       text-align: center;
     }

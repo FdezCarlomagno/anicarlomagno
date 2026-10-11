@@ -67,7 +67,7 @@ const PersonalBook = () => {
             <main className="personalBook">
                 <div className='personalBook-container'>
                     <div className='personalBook-img-container' ref={sliderRef1}>
-                        <div className='personalBook-price'><h4>${librosPrice.MIRADAS_QUE_NARRAN}</h4></div>
+                        <div className='personalBook-price'><p className='personalBook-price-value'>${librosPrice.MIRADAS_QUE_NARRAN}</p></div>
                         <motion.div
                             initial={{ opacity: 0, x: -100 }}
                             animate={sliderInView1 ? { opacity: 1, x: 0 } : {}}
@@ -76,7 +76,8 @@ const PersonalBook = () => {
                             <PaintingSlider paintings={fotosLibroMiradas} />
                         </motion.div>
                     </div>
-                    <motion.h2
+                    <motion.div
+                        className='buy-book-cta'
                         ref={button1}
                         onClick={(e) => handleSubmit(e, "Libro de relatos")}
                         initial={{ opacity: 0, x: -20 }}
@@ -91,11 +92,11 @@ const PersonalBook = () => {
                         >
                             COMPRAR
                         </motion.button>
-                    </motion.h2>
+                    </motion.div>
                 </div>
                 <section className='section-agendaText'>
                     <div className='section-agendaText-container'>
-                        <h3>"Miradas que narran"</h3>
+                        <h2 className='book-title'>"Miradas que narran"</h2>
                         <div className='section-agendaText-flex-column'>
                             <motion.p
                                 initial={{ opacity: 0, y: 20 }}
@@ -127,7 +128,7 @@ const PersonalBook = () => {
             <main className="personalBook section2">
                 <div className='personalBook-container'>
                     <div className='personalBook-img-container' ref={sliderRef2}>
-                        <div className='personalBook-price'><h4>${librosPrice.LIBRO_PARA_COLOREAR}</h4></div>
+                        <div className='personalBook-price'><p className='personalBook-price-value'>${librosPrice.LIBRO_PARA_COLOREAR}</p></div>
                         <motion.div
                             initial={{ opacity: 0, x: -100 }}
                             animate={sliderInView2 ? { opacity: 1, x: 0 } : {}}
@@ -136,7 +137,8 @@ const PersonalBook = () => {
                             <PaintingSlider paintings={fotosLibroColorear} />
                         </motion.div>
                     </div>
-                    <motion.h2
+                    <motion.div
+                        className='buy-book-cta'
                         ref={button2}
                         onClick={(e) => handleSubmit(e, "Libro para colorear")}
                         initial={{ opacity: 0, x: 20 }}
@@ -151,11 +153,11 @@ const PersonalBook = () => {
                         >
                             COMPRAR
                         </motion.button>
-                    </motion.h2>
+                    </motion.div>
                 </div>
                 <section className='section-agendaText'>
                     <div className='section-agendaText-container'>
-                        <h3>"Colores que cuentan historias"</h3>
+                        <h2 className='book-title'>"Colores que cuentan historias"</h2>
                         <div className='section-agendaText-flex-column'>
                             <motion.p
                                 initial={{ opacity: 0, y: 20 }}

@@ -8,7 +8,7 @@ import { Image } from '@unpic/react'
 const SocialMedia = () => {
     return (
         <div className="socialMedia-section">
-            <h3>Seguime en mis redes sociales</h3>
+            <h2 className="social-title">Seguime en mis redes sociales</h2>
             <div className="socialMedia-container">
                 <ul>
                     <a href="https://www.instagram.com/anicarlomagno_painting/" target='blank' aria-label="Instagram de Ani (se abre en una pestaña nueva)"><li><Image src={instagramSvg} alt="" /></li></a>

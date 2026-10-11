@@ -53,7 +53,8 @@ const Agendas = () => {
                 <div className='btn-section-agenda-container'>
                     <div className='titleAndbtn'>
                         <Link to='/agenda-personalizada'>
-                            <motion.h1
+                            <motion.div
+                                className='agendas-cta'
                                 initial={{ opacity: 0, x: 50 }} // Initial state
                                 animate={textInView ? { opacity: 1, x: 0 } : {}} // Animate when in view
                                 transition={{ duration: 0.5 }} // Transition duration
@@ -62,7 +63,7 @@ const Agendas = () => {
                                        whileHover={{ scale: 1.1 }}
                                        whileTap={{ scale: 0.95 }}
                                 className='btnAgenda'>Quiero mi agenda/cuaderno</motion.button>
-                            </motion.h1>
+                            </motion.div>
                         </Link>
                     </div>
                     <section className='section-agendaText' ref={textRef}>

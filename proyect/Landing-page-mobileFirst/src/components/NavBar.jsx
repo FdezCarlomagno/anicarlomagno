@@ -29,17 +29,19 @@ const NavBar = () => {
       <Link to='/'>
         <div className="navLogo">
           <div className='contH1Nav'>
-            <motion.h1
+            <motion.p
+              className="navLogo-name"
               initial={{ scale: 0, x: -100 }}
               animate={{ scale: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-            >anicarlomagno</motion.h1>
+            >anicarlomagno</motion.p>
           </div>
-          <motion.h2
+          <motion.p
+            className="navLogo-subtitle"
             initial={{ scale: 0, x: 100 }}
             animate={{ scale: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-          >artista plástica</motion.h2>
+          >artista plástica</motion.p>
         </div>
       </Link>
       <button

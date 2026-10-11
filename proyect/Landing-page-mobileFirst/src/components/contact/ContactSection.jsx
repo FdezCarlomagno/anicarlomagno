@@ -18,7 +18,7 @@ const ContactSection = () => {
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.5 }}
       >
-        <h2>Contacto</h2>
+        <h1 className="contact-title">Contacto</h1>
         <div className="contact-content">
           <ContactForm />
           <GoogleMap />

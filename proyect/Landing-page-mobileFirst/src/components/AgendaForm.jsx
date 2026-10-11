@@ -298,7 +298,7 @@ const AgendaForm = () => {
                     <div className='formContainer'>
                         <form onSubmit={handleFormSubmit}>
                             <div className='title-agenda-customization'>
-                                <h1>Personaliza tu agenda o cuaderno</h1>
+                                <h2 className='agenda-form-title'>Personaliza tu agenda o cuaderno</h2>
                                 <p>Completa los campos para crear tu diseño único</p>
                             </div>
 

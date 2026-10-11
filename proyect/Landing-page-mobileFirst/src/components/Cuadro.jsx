@@ -23,7 +23,7 @@ const Cuadro = ({ painting }) => {
                 />
                 <div className='paintingContainer'>
                     <div className='paintingInfoContainer'>
-                        <h1>{painting.name}</h1>
+                        <h2 className="painting-title">{painting.name}</h2>
                         <p>{painting.description}</p>
                     </div>
                     <div className="btnPriceContainer">

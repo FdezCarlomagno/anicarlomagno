@@ -81,15 +81,17 @@ nav {
     text-align: center;
 }
 
-.navLogo h1 {
+.navLogo-name {
     font-family: "Dancing Script", cursive;
     font-size: 16px;
+    font-weight: bold;
 }
 
-.navLogo h2 {
+.navLogo-subtitle {
     font-size: 12px;
     color: blueviolet;
     font-family: "Dancing Script";
+    font-weight: bold;
 }
 
 .contH1Nav {
@@ -341,6 +343,11 @@ a {
     margin-bottom: 4rem;
     margin-top: 2rem;
     gap: 0.5rem;
+}
+
+.social-title {
+    font-size: 1.17em;
+    font-weight: bold;
 }
 
 .socialMedia-container ul {
@@ -780,11 +787,11 @@ textarea {
         height: 70px;
     }
 
-    .navBar h1 {
+    .navBar .navLogo-name {
         font-size: 24px;
     }
 
-    .navBar h2 {
+    .navBar .navLogo-subtitle {
         font-size: 16px;
     }
 
