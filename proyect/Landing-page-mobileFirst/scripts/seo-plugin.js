@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { routes, notFound, absoluteUrl, OG_IMAGE, SITE_NAME } from '../src/seo/routes.js';
+import { structuredData } from '../src/seo/structuredData.js';
 
 const START = '<!-- seo:start -->';
 const END = '<!-- seo:end -->';
@@ -32,6 +33,7 @@ const renderHead = (meta, { indexable }) => {
     `<meta name="twitter:description" content="${esc(meta.description)}">`,
     `<meta name="twitter:image" content="${image}">`,
     `<meta name="twitter:image:alt" content="${esc(OG_IMAGE.alt)}">`,
+    indexable && `<script type="application/ld+json">${JSON.stringify(structuredData(meta)).replace(/</g, '\\u003c')}</script>`,
   ].filter(Boolean);
   return `${START}\n  ${tags.join('\n  ')}\n  ${END}`;
 };
