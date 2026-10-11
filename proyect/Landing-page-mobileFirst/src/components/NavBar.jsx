@@ -65,13 +65,13 @@ const NavBar = () => {
           animate={menu ? { opacity: 1, height: 'auto' } : { opacity: 1, height: 20}}
           transition={{ duration: 0.5 }}
         >
-          <Link onClick={handleLink} to="/"><motion.li><Image className='svg' src={homeSvg} alt=""/>Inicio</motion.li></Link>
-          <Link onClick={handleLink} to="/elegir"><motion.li><Image className='svg' src={paintBrush} alt=""/>Obras</motion.li></Link>
-          <Link onClick={handleLink} to="/agendas"><motion.li><Image className='svg' src={bookSvg} alt=""/>Agendas y cuadernos</motion.li></Link>
-          <Link onClick={handleLink} to="/mi-libro"><motion.li><Image className='svg' src={Eye} alt=""/>Libros</motion.li></Link>
-          <Link onClick={handleLink} to="/laminas"><motion.li><Image className='svg' src={Printer} alt=""/>Láminas</motion.li></Link>
-          <Link onClick={handleLink} to="/sobre-mi"><motion.li><Image className='svg' src={diamondSvg} alt=""/>Sobre mí</motion.li></Link>
-          <Link onClick={handleLink} to="/contacto"><motion.li><Image className='svg' src={contactSvg} alt=""/>Contacto</motion.li></Link>
+          <motion.li><Link onClick={handleLink} to="/"><Image className='svg' src={homeSvg} alt=""/>Inicio</Link></motion.li>
+          <motion.li><Link onClick={handleLink} to="/elegir"><Image className='svg' src={paintBrush} alt=""/>Obras</Link></motion.li>
+          <motion.li><Link onClick={handleLink} to="/agendas"><Image className='svg' src={bookSvg} alt=""/>Agendas y cuadernos</Link></motion.li>
+          <motion.li><Link onClick={handleLink} to="/mi-libro"><Image className='svg' src={Eye} alt=""/>Libros</Link></motion.li>
+          <motion.li><Link onClick={handleLink} to="/laminas"><Image className='svg' src={Printer} alt=""/>Láminas</Link></motion.li>
+          <motion.li><Link onClick={handleLink} to="/sobre-mi"><Image className='svg' src={diamondSvg} alt=""/>Sobre mí</Link></motion.li>
+          <motion.li><Link onClick={handleLink} to="/contacto"><Image className='svg' src={contactSvg} alt=""/>Contacto</Link></motion.li>
         </motion.ul>
       </motion.div>
     </nav>

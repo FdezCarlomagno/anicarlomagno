@@ -119,6 +119,13 @@ nav li {
     align-items: center;
 }
 
+/* The link fills its list item so the tap area stays the whole row */
+nav li a {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
 .btnDisplayMenu {
     font-size: 24px;
     margin-right: 24px;
@@ -361,9 +368,14 @@ a {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    padding: 0.5rem;
     list-style-type: none;
 
+}
+
+.socialMedia-container a {
+    display: flex;
+    padding: 0.5rem;
+    border-radius: 50%;
 }
 
 .svg,
@@ -697,10 +709,16 @@ textarea {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    gap: 10px;
     margin: 2rem;
     background-color: transparent;
     color: aliceblue;
+}
+
+.footer-navbar-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
 .footer-navbar a:hover {
@@ -758,9 +776,13 @@ textarea {
     .footer-navbar .navbar {
         display: flex;
         flex-direction: row;
-        gap: 20px;
         background-color: transparent;
         color: aliceblue;
+    }
+
+    .footer-navbar-list {
+        flex-direction: row;
+        gap: 20px;
     }
 
     .footer-navbar {
