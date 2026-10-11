@@ -17,14 +17,21 @@
     width: 75%;
     border-radius: 1rem;
 }
-.personalBook h3 {
+.personalBook .book-title {
     font-family: "Dancing Script", cursive;
     font-size: 32px;
+    font-weight: bold;
 }
 
-.personalBook-price h4 {
+.personalBook-price .personalBook-price-value {
     font-family: "Raleway", sans-serif;
     text-align: center;
+    font-weight: bold;
+}
+
+.buy-book-cta {
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
 .personalBook-price{
@@ -70,7 +77,7 @@
         height: auto;
         grid-area: c1;
     }
-    .personalBook-container h2 {
+    .personalBook-container .buy-book-cta {
         grid-area: c2;
     }
     .personalBook-container .section-agendaText-container {

@@ -155,18 +155,19 @@ const CustomPainting = () => {
                     Obra personalizada
                 </motion.h1>
             </div>
-            <main className='custom-paintings'>
+            <div className='custom-paintings'>
                 <motion.div 
                     animate={titleInView ? { y: 0 } : {}}
                     transition={{ duration: 0.5, delay: 0.2 }}
                     className='custom-painting-form-container'>
-                    <motion.h1
+                    <motion.h2
+                        className="custom-painting-form-title"
                         initial={{ opacity: 0, x: 50 }}
                         animate={titleInView ? { opacity: 1, x: 0 } : {}}
                         transition={{ duration: 0.5, delay: 0.2 }}
                     >
                         Pedí tu obra personalizada
-                    </motion.h1>
+                    </motion.h2>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         animate={titleInView ? { opacity: 1, y: 0 } : {}}
@@ -326,7 +327,7 @@ const CustomPainting = () => {
                         </form>
                     </motion.div>
                 </motion.div>
-            </main>
+            </div>
             <FooterPaintingText />
         </div>
     );

@@ -21,11 +21,12 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.custom-painting-form-container h1 {
+.custom-painting-form-title {
     text-align: left;
     font-size: 24px;
     margin-bottom: 8px;
     color: #333;
+    font-weight: bold;
 }
 
 .form-subtitle {
@@ -79,7 +80,7 @@
     border: 2px solid #ddd;
     border-radius: 8px;
     padding: 12px;
-    font-size: 14px;
+    font-size: 16px;
     transition: all 0.2s ease;
     font-family: inherit;
 }
@@ -264,7 +265,7 @@
         max-width: 700px;
     }
 
-    .custom-painting-form-container h1 {
+    .custom-painting-form-title {
         font-size: 28px;
     }
 

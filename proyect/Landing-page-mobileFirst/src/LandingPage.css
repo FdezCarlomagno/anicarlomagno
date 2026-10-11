@@ -41,6 +41,63 @@ html {
     padding: 0;
 }
 
+/* Resets UA button styles; component rules declared later must still win */
+.btn-reset {
+    appearance: none;
+    background: none;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    text-align: inherit;
+    cursor: pointer;
+}
+
+/*FOCUS*/
+:root {
+    --focus-ring: blueviolet;
+}
+
+/* Over the photo backgrounds a violet ring would not stand out */
+.footer-navbar,
+.nameLogo {
+    --focus-ring: aliceblue;
+}
+
+:focus-visible {
+    outline: 3px solid var(--focus-ring);
+    outline-offset: 2px;
+}
+
+#contenido:focus {
+    outline: none;
+}
+
+.skip-link {
+    position: fixed;
+    top: 8px;
+    left: 8px;
+    z-index: 100000;
+    padding: 12px 16px;
+    border-radius: 5px;
+    background-color: blueviolet;
+    color: aliceblue;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.skip-link:not(:focus) {
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
 nav {
     height: 50px;
     background-color: rgba(240, 248, 255, 0.836);
@@ -66,15 +123,17 @@ nav {
     text-align: center;
 }
 
-.navLogo h1 {
+.navLogo-name {
     font-family: "Dancing Script", cursive;
     font-size: 16px;
+    font-weight: bold;
 }
 
-.navLogo h2 {
+.navLogo-subtitle {
     font-size: 12px;
     color: blueviolet;
     font-family: "Dancing Script";
+    font-weight: bold;
 }
 
 .contH1Nav {
@@ -100,6 +159,13 @@ nav li {
     font-size: 15px;
     display: flex;
     align-items: center;
+}
+
+/* The link fills its list item so the tap area stays the whole row */
+nav li a {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
 }
 
 .btnDisplayMenu {
@@ -328,6 +394,11 @@ a {
     gap: 0.5rem;
 }
 
+.social-title {
+    font-size: 1.17em;
+    font-weight: bold;
+}
+
 .socialMedia-container ul {
     display: flex;
     gap: 2rem;
@@ -339,9 +410,14 @@ a {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    padding: 0.5rem;
     list-style-type: none;
 
+}
+
+.socialMedia-container a {
+    display: flex;
+    padding: 0.5rem;
+    border-radius: 50%;
 }
 
 .svg,
@@ -425,7 +501,7 @@ footer p {
 }
 
 .viewOnInstagram,
-.viewOnInstagram button a {
+.viewOnInstagram .btnViewOnInstagram {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -433,11 +509,12 @@ footer p {
     color: black;
 }
 
-.viewOnInstagram button {
+.viewOnInstagram .btnViewOnInstagram {
     background-color: rgba(137, 43, 226, 0.274);
-    border: none;
     border-radius: 5px;
     padding: 10px;
+    font-size: 13.3333px;
+    line-height: normal;
 }
 
 #firstSection-container2,
@@ -658,6 +735,28 @@ textarea {
 }
 
 
+@media (prefers-reduced-motion: reduce) {
+    /* Delays stay: the toasts rely on them to disappear after 3s */
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    /* Scroll-driven reveal ignores duration, so it is switched off */
+    #firstSection-container2,
+    .titleAgendas,
+    .viewOnInstagram,
+    .cuadro,
+    .paintingImgs-box {
+        animation-name: none;
+    }
+}
+
+
 /*FOOTER NAVBAR*/
 .footer-navbar {
     display: flex;
@@ -675,10 +774,16 @@ textarea {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    gap: 10px;
     margin: 2rem;
     background-color: transparent;
     color: aliceblue;
+}
+
+.footer-navbar-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
 .footer-navbar a:hover {
@@ -736,9 +841,13 @@ textarea {
     .footer-navbar .navbar {
         display: flex;
         flex-direction: row;
-        gap: 20px;
         background-color: transparent;
         color: aliceblue;
+    }
+
+    .footer-navbar-list {
+        flex-direction: row;
+        gap: 20px;
     }
 
     .footer-navbar {
@@ -765,11 +874,11 @@ textarea {
         height: 70px;
     }
 
-    .navBar h1 {
+    .navBar .navLogo-name {
         font-size: 24px;
     }
 
-    .navBar h2 {
+    .navBar .navLogo-subtitle {
         font-size: 16px;
     }
 
@@ -890,13 +999,13 @@ textarea {
     }
 
     .agendaContainer,
-    .viewOnInstagram button,
+    .viewOnInstagram .btnViewOnInstagram,
     .socialMedia-section li {
         transition: all 200ms ease-in-out;
     }
 
     .agendaContainer:hover,
-    .viewOnInstagram button:hover,
+    .viewOnInstagram .btnViewOnInstagram:hover,
     .socialMedia-section li:hover {
         background-color: rgb(186, 112, 255);
         transform: scale(1.04);

@@ -25,3 +25,4 @@ dist-ssr
 
 # Phase 0: heavy Lighthouse HTML/JSON reports (regenerable, see design/audits/2026-10-metrics.md)
 design/audits/raw/lighthouse/
+design/audits/raw/phase-1/

@@ -26,7 +26,7 @@ const FirstSection = () => {
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={inView1 ? { opacity: 1, scale: 1 } : {}}
                     transition={{ duration: 1 }}
-                    alt="Artistic representation"
+                    alt="Ani pintando el retrato de una mujer con pañuelo verde en su taller"
                 />
                 <motion.div
                     className="firstSection-info"
@@ -74,7 +74,7 @@ const FirstSection = () => {
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={inView2 ? { opacity: 1, scale: 1 } : {}}
                     transition={{ duration: 1 }}
-                    alt="Artistic passion"
+                    alt="Ani pintando los ojos de una mujer con una mariposa azul en el pelo"
                 />
                 <motion.div
                     className="firstSection-info"

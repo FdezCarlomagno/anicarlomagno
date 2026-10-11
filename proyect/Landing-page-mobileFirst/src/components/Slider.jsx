@@ -9,7 +9,7 @@ import cuadro3 from './imgs/cuadro3.jpg';
 import paintBrush from './assets/WhitePaintBrush.svg';
 import video from './assets/wspVideo-header.mp4';
 import { Link } from 'react-router-dom';
-import { motion, useInView } from 'framer-motion';
+import { motion, useInView, useReducedMotion } from 'framer-motion';
 import { Image } from '@unpic/react'
 
 
@@ -17,19 +17,22 @@ const Slider = () => {
     const sliderRef = useRef(null);
     const isInView = useInView(sliderRef, { once: true, amount: 0.5 });
     const [isVideoLoaded, setIsVideoLoaded] = useState(false); // State to track video load status
+    const reduceMotion = useReducedMotion();
 
     return (
         <div className="container">
             <div className="slider" ref={sliderRef}>
                 {/** Apply animation only if in view */}
                 <div class="video-wrapper">
+                {/* With reduced motion it stays on its first frame; #t= makes the browser load and paint that frame */}
                 <motion.video
-                    loop="loop"
-                    src={video}
-                    autoPlay
+                    key={reduceMotion ? 'still' : 'playing'}
+                    loop={!reduceMotion}
+                    src={reduceMotion ? `${video}#t=0.001` : video}
+                    autoPlay={!reduceMotion}
                     playsInline
                     muted
-                    preload="none"
+                    preload={reduceMotion ? 'metadata' : 'none'}
                     onLoadedData={() => setIsVideoLoaded(true)} // Update state when video loads
                     style={{
                         transition: 'filter 1.5s ease, opacity 1.5s ease',
@@ -66,7 +69,7 @@ const Slider = () => {
                                 whileHover={{ scale: 1.1 }}
                                 whileTap={{ scale: 0.95 }}
                             >
-                                Mis obras <Image src={paintBrush} alt="Paintbrush logo" />
+                                Mis obras <Image src={paintBrush} alt="" />
                             </motion.button>
                         </motion.div>
                     </Link>

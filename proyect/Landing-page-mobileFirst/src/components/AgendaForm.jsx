@@ -293,12 +293,12 @@ const AgendaForm = () => {
                 </div>
             )}
 
-            <main className='agendaCustomization'>
+            <div className='agendaCustomization'>
                 <div className='form-section'>
                     <div className='formContainer'>
                         <form onSubmit={handleFormSubmit}>
                             <div className='title-agenda-customization'>
-                                <h1>Personaliza tu agenda o cuaderno</h1>
+                                <h2 className='agenda-form-title'>Personaliza tu agenda o cuaderno</h2>
                                 <p>Completa los campos para crear tu diseño único</p>
                             </div>
 
@@ -587,7 +587,7 @@ const AgendaForm = () => {
                     nameStyles={nameStyles}
                     selectedImage={selectedImage}
                 />
-            </main>
+            </div>
 
             <section className='new-product-section'>
                 <div className='new-product-banner'>
@@ -605,13 +605,16 @@ const AgendaForm = () => {
 
                         <div className='gallery-thumbnails'>
                             {cuadernoA4Images.map((image, index) => (
-                                <div
+                                <button
                                     key={index}
-                                    className={`gallery-thumbnail ${selectedGalleryImage === index ? 'active' : ''}`}
+                                    type="button"
+                                    className={`gallery-thumbnail btn-reset ${selectedGalleryImage === index ? 'active' : ''}`}
                                     onClick={() => setSelectedGalleryImage(index)}
+                                    aria-label={`Ver foto ${index + 1}`}
+                                    aria-pressed={selectedGalleryImage === index}
                                 >
                                     <img src={image.src || "/placeholder.svg"} alt={image.alt} />
-                                </div>
+                                </button>
                             ))}
                         </div>
                     </div>

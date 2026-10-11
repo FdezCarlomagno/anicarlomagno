@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { MotionConfig } from 'framer-motion';
 import Home from './Home.jsx';
 import NavBar from './components/NavBar.jsx';
 import Paintings from './pages/Paintings.jsx';
@@ -20,33 +21,43 @@ import Contact from './components/contact/ContactSection.jsx'
 import './LandingPage.css';
 
 
+// Focus moves in script so the URL keeps no #hash and the router does not see a navigation.
+const skipToContent = (e) => {
+  e.preventDefault();
+  document.getElementById('contenido')?.focus();
+};
+
 const LandingPage = () => {
   return (
     <BrowserRouter>
-      <div className="LandingPage">
-     
-        <NavBar />
-        <WhatsappIcon />
-        <ScrollToTopButton />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/obras-en-stock" element={<Paintings />} />
-          <Route path="/obra-personalizada" element={<CustomPainting />} />
-          <Route path="/elegir" element={<ChooseForm />} />
-          <Route path="/agendas" element={<Agendas />} />
-          <Route path="/sobre-mi" element={<AboutMe />} />
-          <Route path="/agenda-personalizada" element={<CustomAgenda />} />
-          <Route path="/mi-libro" element={<PersonalBook />} />
-          <Route path="/laminas" element={<Laminas />} />
-          <Route path='/contacto' element={<Contact />}/>
-          <Route path="*" element={<Home />} /> {/* Ruta por defecto */}
-        </Routes>
-        <Envio />
-        <FooterNavbar />
-        <footer>
-          <p>Copyright © {new Date().getFullYear()} Analia Carlomagno</p>
-        </footer>
-      </div>
+      <MotionConfig reducedMotion="user">
+        <div className="LandingPage">
+          <a className="skip-link" href="#contenido" onClick={skipToContent}>Saltar al contenido</a>
+          <NavBar />
+          <WhatsappIcon />
+          <ScrollToTopButton />
+          <main id="contenido" tabIndex={-1}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/obras-en-stock" element={<Paintings />} />
+              <Route path="/obra-personalizada" element={<CustomPainting />} />
+              <Route path="/elegir" element={<ChooseForm />} />
+              <Route path="/agendas" element={<Agendas />} />
+              <Route path="/sobre-mi" element={<AboutMe />} />
+              <Route path="/agenda-personalizada" element={<CustomAgenda />} />
+              <Route path="/mi-libro" element={<PersonalBook />} />
+              <Route path="/laminas" element={<Laminas />} />
+              <Route path='/contacto' element={<Contact />}/>
+              <Route path="*" element={<Home />} /> {/* Ruta por defecto */}
+            </Routes>
+          </main>
+          <Envio />
+          <FooterNavbar />
+          <footer>
+            <p>Copyright © {new Date().getFullYear()} Analia Carlomagno</p>
+          </footer>
+        </div>
+      </MotionConfig>
     </BrowserRouter>
   );
 };

@@ -10,6 +10,7 @@ import agenda7 from './imgs/agenda7.jpg';
 import agenda8 from './imgs/agenda8.jpg';
 import { Link } from 'react-router-dom';
 import { Image } from "@unpic/react";
+import agendaAlts from './agendaAlts.js';
 
 const Agenda = ({ source, imgNumber, agendaName, index }) => {
     const ref = React.useRef(null);
@@ -32,13 +33,13 @@ const Agenda = ({ source, imgNumber, agendaName, index }) => {
 
 const AgendaSection = () => {
     const agendas = [
-        { source: agenda1, imgNumber: 1, agendaName: 'Diseño 1' },
-        { source: agenda3, imgNumber: 1, agendaName: 'Diseño 1' },
-        { source: agenda5, imgNumber: 1, agendaName: 'Diseño 1' },
-        { source: agenda2, imgNumber: 2, agendaName: 'Diseño 2' },
-        { source: agenda4, imgNumber: 4, agendaName: 'Diseño 4' },
-        { source: agenda6, imgNumber: 6, agendaName: 'Diseño 6' },
-        { source: agenda7, imgNumber: 7, agendaName: 'Diseño 7' },
+        { source: agenda1, imgNumber: 1, agendaName: agendaAlts[1] },
+        { source: agenda3, imgNumber: 1, agendaName: agendaAlts[3] },
+        { source: agenda5, imgNumber: 1, agendaName: agendaAlts[5] },
+        { source: agenda2, imgNumber: 2, agendaName: agendaAlts[2] },
+        { source: agenda4, imgNumber: 4, agendaName: agendaAlts[4] },
+        { source: agenda6, imgNumber: 6, agendaName: agendaAlts[6] },
+        { source: agenda7, imgNumber: 7, agendaName: agendaAlts[7] },
     ];
 
     return (

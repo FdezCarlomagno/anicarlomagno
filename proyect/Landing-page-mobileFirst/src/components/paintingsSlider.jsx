@@ -5,6 +5,7 @@ import cuadro2 from './imgs/cuadro2.jpg'
 import cuadro3 from './imgs/cuadro3.jpg'
 import { Image } from '@unpic/react'
 
+const slideAlt = (painting, index) => painting.alt || `Painting ${index + 1}`;
 
 const PaintingSlider = ({ paintings }) => {
     const [currentIndex, setCurrentIndex] = useState(0)
@@ -75,31 +76,37 @@ const PaintingSlider = ({ paintings }) => {
         transition: '0.3s ease-in-out',
     };
 
+    const currentPainting = paintings[currentIndex];
+
     return (
         <section className="paintingSlider" style={sliderStyles}>
-            <div style={leftArrowStyles} onClick={prevSlide}>❮</div>
-            <div style={rightArrowStyles} onClick={nextSlide}>❯</div>
+            <button type="button" className="btn-reset" style={leftArrowStyles} onClick={prevSlide} aria-label="Foto anterior"><span aria-hidden="true">❮</span></button>
+            <button type="button" className="btn-reset" style={rightArrowStyles} onClick={nextSlide} aria-label="Foto siguiente"><span aria-hidden="true">❯</span></button>
             
             <div className='paintingContainerSlider' style={paintingsStyles}>
                 <Image
-                    src={paintings[currentIndex].src}
-                    alt={`Painting ${currentIndex + 1}`}
+                    src={currentPainting.src}
+                    alt={slideAlt(currentPainting, currentIndex)}
                     style={imageStyles}
                 />
             </div>
             
             <div style={dotsContainerStyles}>
                 {paintings.map((cuadro, index) => (
-                    <div
+                    <button
                         key={index}
+                        type="button"
+                        className="btn-reset"
                         style={{
                             ...dotStyle,
                             color: currentIndex === index ? 'blueviolet' : '#888',
                         }}
                         onClick={() => goToSlide(index)}
+                        aria-label={`Ir a la foto ${index + 1}`}
+                        aria-current={currentIndex === index ? 'true' : undefined}
                     >
-                        <div className='dot'>●</div>
-                    </div>
+                        <span className='dot' aria-hidden="true" style={{ display: 'block' }}>●</span>
+                    </button>
                 ))}
             </div>
         </section>

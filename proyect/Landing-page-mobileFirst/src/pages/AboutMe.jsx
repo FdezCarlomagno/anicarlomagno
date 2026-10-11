@@ -89,7 +89,7 @@ const AboutMe = () => {
                 </motion.h1>
             </div>
 
-            <main className="about-me-content">
+            <div className="about-me-content">
                 {/* Hero Section */}
                 <motion.section
                     ref={heroRef}
@@ -103,7 +103,7 @@ const AboutMe = () => {
                         <div className="hero-badge">Artista Plástica</div>
                     </div>
                     <div className="hero-text">
-                        <h1 className="hero-name">Analia Carlomagno</h1>
+                        <h2 className="hero-name">Analia Carlomagno</h2>
                         <p className="hero-subtitle">Artista Plástica y Docente</p>
                         <blockquote className="hero-quote">
                             "Mi deseo es que mis obras y mis palabras lleguen lejos... Bien bien lejos...
@@ -129,10 +129,10 @@ const AboutMe = () => {
                             transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
                         >
                             <span className="stat-icon">
-                                <img src={stat.icon} alt={stat.label} />
+                                <img src={stat.icon} alt="" />
                             </span>
 
-                            <h3 className="stat-number">{stat.number}</h3>
+                            <p className="stat-number">{stat.number}</p>
                             <p className="stat-label">{stat.label}</p>
                         </motion.div>
                     ))}
@@ -200,7 +200,7 @@ const AboutMe = () => {
                             </div>
                             <div className="story-content">
                                 <h3 className="story-title">Familia</h3>
-                                <div className={`story-text ${activeStory === 'familia' ? 'expanded' : ''}`}>
+                                <div id="historia-familia" className={`story-text ${activeStory === 'familia' ? 'expanded' : ''}`}>
                                     <p>
                                         Terminé mis estudios en el Centro Polivalente de Arte, una escuela donde se
                                         respiraba arte y donde conocí el amor con el que he compartido <strong>mi vida</strong> durante
@@ -221,7 +221,12 @@ const AboutMe = () => {
                                         alcanzar y resonar en los <strong>corazones ajenos</strong>.
                                     </p>
                                 </div>
-                                <button className="story-toggle">
+                                <button
+                                    type="button"
+                                    className="story-toggle"
+                                    aria-expanded={activeStory === 'familia'}
+                                    aria-controls="historia-familia"
+                                >
                                     {activeStory === 'familia' ? 'Leer menos' : 'Leer más'}
                                 </button>
                             </div>
@@ -236,7 +241,7 @@ const AboutMe = () => {
                             </div>
                             <div className="story-content">
                                 <h3 className="story-title">Deseos...</h3>
-                                <div className={`story-text ${activeStory === 'deseo' ? 'expanded' : ''}`}>
+                                <div id="historia-deseo" className={`story-text ${activeStory === 'deseo' ? 'expanded' : ''}`}>
                                     <p>
                                         <strong>Deseo, deseo...</strong> que mis mujeres y que mis relatos traspasen la frontera,
                                         y que antes que mi piel se arrugue demasiado poder ver concretarse todo lo que anhelo.
@@ -253,14 +258,19 @@ const AboutMe = () => {
                                         que <strong>ama lo que hace</strong> y que se apasiona con todo lo que emprende.
                                     </p>
                                 </div>
-                                <button className="story-toggle">
+                                <button
+                                    type="button"
+                                    className="story-toggle"
+                                    aria-expanded={activeStory === 'deseo'}
+                                    aria-controls="historia-deseo"
+                                >
                                     {activeStory === 'deseo' ? 'Leer menos' : 'Leer más'}
                                 </button>
                             </div>
                         </div>
                     </div>
                 </motion.section>
-            </main>
+            </div>
         </div>
     );
 };

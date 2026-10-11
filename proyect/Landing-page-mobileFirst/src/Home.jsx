@@ -14,7 +14,7 @@ function Home() {
 
   return (
     <>
-      <main>
+      <div>
         <header>
           <div className="imageSlider">
             <Slider />
@@ -25,7 +25,7 @@ function Home() {
           <h2 className='titleAgendas'>Agendas</h2>
           <AgendaSection />
           <div className="viewOnInstagram">
-            <button className='btnViewOnInstagram'><a href="https://www.instagram.com/stories/highlights/17931595102459109/" target='blank'><Image src={igSvg} />Ver en instagram</a></button>
+            <a className='btnViewOnInstagram' href="https://www.instagram.com/stories/highlights/17931595102459109/" target="_blank" rel="noopener noreferrer" aria-label="Ver en instagram (se abre en una pestaña nueva)"><Image src={igSvg} alt="" />Ver en instagram</a>
           </div>
           
         </section>
@@ -33,7 +33,7 @@ function Home() {
         <PaintingImgsSection />
         </section>
         <SecondSection />
-      </main>
+      </div>
     </>
   )
 }

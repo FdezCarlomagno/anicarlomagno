@@ -11,10 +11,15 @@ import a5 from '../components/imgs/agenda5.jpg';
 import a6 from '../components/imgs/agenda6.jpg';
 import a7 from '../components/imgs/agenda7.jpg';
 import a8 from '../components/imgs/agenda8.jpg';
+import agendaAlts from '../components/agendaAlts.js';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 import { Image } from '@unpic/react'
 
+const fotosAgendas = intAgendas.map((foto, i, arr) => ({
+    ...foto,
+    alt: `Agendas y cuadernos, foto ${i + 1} de ${arr.length}`,
+}));
 
 const Agendas = () => {
     const containerStyles = {
@@ -35,20 +40,21 @@ const Agendas = () => {
             <div className="titleBg">
                 <h1 className='myPaintingsTitle'>Agendas y cuadernos</h1>
             </div>
-            <main className="agendas">
+            <div className="agendas">
                 <div className='agendaPageContainer'>
                     <motion.div 
                         initial={{opacity: 0, x: -100}}
                         animate={{opacity: 1, x: 0}}
                         transition={{ duration: 0.5, delay: 0.2}}
                     className='paintingSliderContainer' style={containerStyles}>
-                        <PaintingSlider paintings={intAgendas} />
+                        <PaintingSlider paintings={fotosAgendas} />
                     </motion.div>
                 </div>
                 <div className='btn-section-agenda-container'>
                     <div className='titleAndbtn'>
                         <Link to='/agenda-personalizada'>
-                            <motion.h1
+                            <motion.div
+                                className='agendas-cta'
                                 initial={{ opacity: 0, x: 50 }} // Initial state
                                 animate={textInView ? { opacity: 1, x: 0 } : {}} // Animate when in view
                                 transition={{ duration: 0.5 }} // Transition duration
@@ -57,7 +63,7 @@ const Agendas = () => {
                                        whileHover={{ scale: 1.1 }}
                                        whileTap={{ scale: 0.95 }}
                                 className='btnAgenda'>Quiero mi agenda/cuaderno</motion.button>
-                            </motion.h1>
+                            </motion.div>
                         </Link>
                     </div>
                     <section className='section-agendaText' ref={textRef}>
@@ -87,17 +93,17 @@ const Agendas = () => {
                         </motion.div>
                     </section>
                 </div>
-            </main>
+            </div>
             <div className='paintingImgs-section'>
-                <Link to="/agenda-personalizada">
-                    <div className='paintingImgs-box'><Image src={a1} /></div>
-                    <div className='paintingImgs-box'><Image src={a2} /></div>
-                    <div className='paintingImgs-box'><Image src={a3} /></div>
-                    <div className='paintingImgs-box'><Image src={a4} /></div>
-                    <div className='paintingImgs-box'><Image src={a5} /></div>
-                    <div className='paintingImgs-box'><Image src={a6} /></div>
-                    <div className='paintingImgs-box'><Image src={a7} /></div>
-                    <div className='paintingImgs-box'><Image src={a8} /></div>
+                <Link to="/agenda-personalizada" aria-label="Quiero mi agenda o cuaderno personalizado">
+                    <div className='paintingImgs-box'><Image src={a1} alt={agendaAlts[1]} /></div>
+                    <div className='paintingImgs-box'><Image src={a2} alt={agendaAlts[2]} /></div>
+                    <div className='paintingImgs-box'><Image src={a3} alt={agendaAlts[3]} /></div>
+                    <div className='paintingImgs-box'><Image src={a4} alt={agendaAlts[4]} /></div>
+                    <div className='paintingImgs-box'><Image src={a5} alt={agendaAlts[5]} /></div>
+                    <div className='paintingImgs-box'><Image src={a6} alt={agendaAlts[6]} /></div>
+                    <div className='paintingImgs-box'><Image src={a7} alt={agendaAlts[7]} /></div>
+                    <div className='paintingImgs-box'><Image src={a8} alt={agendaAlts[8]} /></div>
                 </Link>
             </div>
         </div>

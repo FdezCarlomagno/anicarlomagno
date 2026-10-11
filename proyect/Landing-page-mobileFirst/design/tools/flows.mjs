@@ -1,12 +1,14 @@
 // Phase 0: critical "do not break" flows. Captures the generated WhatsApp URLs WITHOUT opening them,
 // and intercepts EmailJS locally (requests never leave the browser).
-// Usage: node design/tools/flows.mjs [baseUrl]   (default http://localhost:4173)
+// Usage: node design/tools/flows.mjs [baseUrl] [outFile]
+//        (defaults: http://localhost:4173, design/audits/raw/critical-flows[-$ONLY].json)
 import { writeFileSync, mkdirSync } from 'node:fs';
+import { dirname } from 'node:path';
 import { launch, newPage, setViewport, goto, evaluate, click, type, pressKey, sleep } from './cdp.mjs';
 
 const BASE = process.argv[2] || 'http://localhost:4173';
-const RAW = 'design/audits/raw';
-mkdirSync(RAW, { recursive: true });
+const OUT = process.argv[3] || `design/audits/raw/critical-flows${process.env.ONLY ? '-' + process.env.ONLY : ''}.json`;
+mkdirSync(dirname(OUT), { recursive: true });
 
 const GUARD = `
   window.__opens = [];
@@ -15,7 +17,7 @@ const GUARD = `
 
 let browser = await launch({ port: 9335 });
 const out = { chrome: browser.version.Browser, base: BASE, date: new Date().toISOString(), flows: {}, failed: [] };
-const save = () => writeFileSync(`${RAW}/critical-flows${process.env.ONLY ? '-' + process.env.ONLY : ''}.json`, JSON.stringify(out, null, 2));
+const save = () => writeFileSync(OUT, JSON.stringify(out, null, 2));
 
 async function openPage(path, { width = 390, emailjs } = {}) {
   const page = await newPage(browser);

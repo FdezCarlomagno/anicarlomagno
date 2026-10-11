@@ -52,10 +52,11 @@ h1 {
     overflow: auto;
 }
 
-.paintingContainer h1 {
+.paintingContainer .painting-title {
     font-size: 25px;
     margin-top: 5px;
     text-align: start;
+    font-weight: bold;
 }
 
 .paintingContainer p {

@@ -103,6 +103,12 @@
     gap: 1rem;
 }
 
+.agendas-cta {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+}
+
 /* Botones con diseño consistente */
 .btnAgenda, .buy-book-btn, .btn-submit {
     padding: 12px 40px;
@@ -185,10 +191,11 @@
     border-bottom: 2px solid var(--primary-color);
 }
 
-.title-agenda-customization h1 {
+.agenda-form-title {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
     color: var(--text-dark);
+    font-weight: bold;
 }
 
 .title-agenda-customization p {
@@ -1010,7 +1017,7 @@ legend {
         padding: 2rem;
     }
 
-    .title-agenda-customization h1 {
+    .agenda-form-title {
         font-size: 1.75rem;
     }
 
@@ -1094,7 +1101,7 @@ legend {
         padding: 14px 60px;
     }
 
-    .title-agenda-customization h1 {
+    .agenda-form-title {
         font-size: 2rem;
     }
 
