@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Imgs from '../components/DropDownImgs.jsx';
 import '../pages/pagesStyles/laminas.css';
 import { useInView } from 'react-intersection-observer';
@@ -8,6 +8,7 @@ const Laminas = () => {
     const [dropDown, setDropDown] = useState(false);
     const [selectedImage, setSelectedImage] = useState(null);
     const [name, setName] = useState('');
+    const toggleBtnRef = useRef(null);
     const precio = 6900;
 
     const lamina = {
@@ -22,6 +23,16 @@ const Laminas = () => {
     const handleImageClick = (image, nombre) => {
         setSelectedImage(image);
         setName(nombre);
+        setDropDown(false);
+        if (toggleBtnRef.current) toggleBtnRef.current.focus();
+    };
+
+    const handleDropDownKeyDown = (e) => {
+        if (e.key === 'Escape' && dropDown) {
+            e.preventDefault();
+            setDropDown(false);
+            if (toggleBtnRef.current) toggleBtnRef.current.focus();
+        }
     };
 
     const handleLaminaBtn = (e) => {
@@ -79,14 +90,23 @@ const Laminas = () => {
                             animate={dropDownInView ? { opacity: 1, y: 0 } : {}}
                             transition={{ duration: 0.5, delay: 0.4 }}
                             className="dropDownAgendas"
+                            onKeyDown={handleDropDownKeyDown}
                         >
                             <div className="dropDownArrow">
                                 <p>Seleccione </p>
-                                <button className='dropDownAgendas-btn' onClick={(e) => {
-                                    e.preventDefault();
-                                    toggleDropDown();
-                                }}>
-                                    ▼
+                                <button
+                                    ref={toggleBtnRef}
+                                    type="button"
+                                    className='dropDownAgendas-btn'
+                                    aria-label="Elegir lámina"
+                                    aria-expanded={dropDown}
+                                    aria-controls="opciones-obras"
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        toggleDropDown();
+                                    }}
+                                >
+                                    <span aria-hidden="true">▼</span>
                                 </button>
                             </div>
                             {dropDown && <Imgs onImageClick={handleImageClick} />}

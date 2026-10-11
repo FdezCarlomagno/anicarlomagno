@@ -41,6 +41,21 @@ html {
     padding: 0;
 }
 
+/* Resets UA button styles; component rules declared later must still win */
+.btn-reset {
+    appearance: none;
+    background: none;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    text-align: inherit;
+    cursor: pointer;
+}
+
 nav {
     height: 50px;
     background-color: rgba(240, 248, 255, 0.836);
