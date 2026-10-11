@@ -4,34 +4,34 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: var(--space-legacy-20);
 }
 
 .custom-painting-form-container {
-    background-color: aliceblue;
+    background-color: var(--color-surface);
     width: 100%;
     max-width: 400px;
     height: fit-content;
-    margin: 20px auto;
+    margin: var(--space-legacy-20) auto;
     border: none;
-    border-radius: 12px;
+    border-radius: var(--radius-xl);
     display: flex;
     flex-direction: column;
-    padding: 24px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: var(--space-legacy-24);
+    box-shadow: var(--shadow-sm);
 }
 
 .custom-painting-form-title {
     text-align: left;
     font-size: 24px;
-    margin-bottom: 8px;
-    color: #333;
+    margin-bottom: var(--space-legacy-8);
+    color: var(--color-gray-800);
     font-weight: bold;
 }
 
 .form-subtitle {
-    color: #666;
-    margin-bottom: 16px;
+    color: var(--color-gray-600);
+    margin-bottom: var(--space-legacy-16);
     font-size: 14px;
     line-height: 1.5;
 }
@@ -39,8 +39,8 @@
 .custom-painting-form form {
     display: flex;
     flex-direction: column;
-    gap: 24px;
-    padding-top: 20px;
+    gap: var(--space-legacy-24);
+    padding-top: var(--space-legacy-20);
     border-top: 1px solid rgba(128, 128, 128, 0.3);
 }
 
@@ -48,66 +48,66 @@
 .form-field {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: var(--space-legacy-6);
 }
 
 .form-field label,
 .section-label {
     font-size: 14px;
     font-weight: 600;
-    color: #333;
+    color: var(--color-gray-800);
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: var(--space-legacy-4);
 }
 
 .required {
-    color: #e74c3c;
+    color: var(--color-error);
     font-weight: bold;
 }
 
 .help-text {
     font-size: 12px;
-    color: #666;
+    color: var(--color-gray-600);
     margin: 0;
     margin-top: -2px;
 }
 
 .form-field input,
 .form-field textarea {
-    background-color: white;
-    color: #333;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    padding: 12px;
+    background-color: var(--color-white);
+    color: var(--color-gray-800);
+    border: 2px solid var(--color-gray-200);
+    border-radius: var(--radius-md);
+    padding: var(--space-legacy-12);
     font-size: 16px;
-    transition: all 0.2s ease;
+    transition: all var(--duration-200) var(--ease-default);
     font-family: inherit;
 }
 
 .form-field input:focus,
 .form-field textarea:focus {
     outline: none;
-    border-color: blueviolet;
+    border-color: var(--color-accent);
     box-shadow: 0 0 0 3px rgba(138, 43, 226, 0.1);
 }
 
 /* Estados de validación con feedback visual */
 .field-valid {
-    border-color: #27ae60 !important;
+    border-color: var(--color-success) !important;
 }
 
 .field-error {
-    border-color: #e74c3c !important;
+    border-color: var(--color-error) !important;
 }
 
 .error-message {
-    color: #e74c3c;
+    color: var(--color-error);
     font-size: 12px;
-    margin-top: 4px;
+    margin-top: var(--space-legacy-4);
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: var(--space-legacy-4);
 }
 
 .error-message::before {
@@ -118,20 +118,20 @@
 .name-surname-inputs {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: var(--space-legacy-20);
 }
 
 /* Sección de dimensiones mejorada */
 .size-section {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: var(--space-legacy-8);
 }
 
 .size-inputs-row {
     display: flex;
     align-items: flex-start;
-    gap: 12px;
+    gap: var(--space-legacy-12);
 }
 
 .size-field {
@@ -145,30 +145,30 @@
 .size-separator {
     font-size: 24px;
     font-weight: bold;
-    color: #666;
+    color: var(--color-gray-600);
     margin-top: 28px;
 }
 
 /* Contador de caracteres */
 .char-counter {
     font-size: 12px;
-    color: #666;
+    color: var(--color-gray-600);
     text-align: right;
-    margin-top: 4px;
+    margin-top: var(--space-legacy-4);
 }
 
 /* Checkbox mejorado con mejor diseño */
 .custom-photo-option {
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    border-radius: 8px;
-    padding: 16px;
+    background: linear-gradient(135deg, var(--color-gray-50) 0%, #e9ecef 100%);
+    border-radius: var(--radius-md);
+    padding: var(--space-legacy-16);
     border: 2px solid #dee2e6;
 }
 
 .checkbox-label {
     display: flex;
     align-items: flex-start;
-    gap: 12px;
+    gap: var(--space-legacy-12);
     cursor: pointer;
     margin: 0;
 }
@@ -176,7 +176,7 @@
 .custom-checkbox {
     width: 20px;
     height: 20px;
-    margin-top: 2px;
+    margin-top: var(--space-legacy-2);
     cursor: pointer;
     flex-shrink: 0;
 }
@@ -184,31 +184,31 @@
 .checkbox-text {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: var(--space-legacy-4);
 }
 
 .checkbox-text strong {
-    color: #333;
+    color: var(--color-gray-800);
     font-size: 14px;
 }
 
 .checkbox-subtext {
     font-size: 12px;
-    color: #666;
+    color: var(--color-gray-600);
 }
 
 /* Botón mejorado con estados */
 .submit-btn {
-    background: linear-gradient(135deg, blueviolet 0%, #9b4dca 100%);
-    color: white;
+    background: linear-gradient(135deg, var(--color-accent) 0%, #9b4dca 100%);
+    color: var(--color-white);
     border: none;
-    border-radius: 8px;
-    padding: 14px 24px;
+    border-radius: var(--radius-md);
+    padding: var(--space-legacy-14) var(--space-legacy-24);
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.2s ease;
-    margin-top: 8px;
+    transition: all var(--duration-200) var(--ease-default);
+    margin-top: var(--space-legacy-8);
     box-shadow: 0 4px 12px rgba(138, 43, 226, 0.3);
 }
 
@@ -218,7 +218,7 @@
 }
 
 .btn-disabled {
-    background: linear-gradient(135deg, #ccc 0%, #999 100%);
+    background: linear-gradient(135deg, var(--color-gray-300) 0%, #999 100%);
     cursor: not-allowed;
     box-shadow: none;
     opacity: 0.6;
@@ -229,17 +229,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
-    margin: 40px 20px;
+    gap: var(--space-legacy-12);
+    margin: var(--space-legacy-40) var(--space-legacy-20);
     text-align: center;
     line-height: 1.8;
-    padding: 20px;
-    border-top: 2px solid blueviolet;
-    border-bottom: 2px solid blueviolet;
+    padding: var(--space-legacy-20);
+    border-top: 2px solid var(--color-accent);
+    border-bottom: 2px solid var(--color-accent);
 }
 
 .footer-paintingText span {
-    color: blueviolet;
+    color: var(--color-accent);
     font-weight: bold;
 }
 
@@ -247,12 +247,12 @@
 @media (min-width: 640px) {
     .custom-painting-form-container {
         max-width: 600px;
-        padding: 32px;
+        padding: var(--space-legacy-32);
     }
 
     .name-surname-inputs {
         flex-direction: row;
-        gap: 16px;
+        gap: var(--space-legacy-16);
     }
 
     .name-surname-inputs .form-field {
@@ -275,7 +275,7 @@
 
     .submit-btn {
         font-size: 18px;
-        padding: 16px 32px;
+        padding: var(--space-legacy-16) var(--space-legacy-32);
     }
 }
 
