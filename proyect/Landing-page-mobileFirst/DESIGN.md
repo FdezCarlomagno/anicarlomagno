@@ -214,6 +214,8 @@ Es la casa de una artista, no una tienda genérica. Ani pinta mujeres de ojos gr
 contraste y textura; cada venta se cierra en una conversación de WhatsApp. El sitio tiene que sentirse cálido,
 cercano y cuidado, como entrar a su taller o a una galería chica, y nunca competir con la obra.
 
+Su obra pasó de un estilo **naif** a uno **neoexpresionista**: más gesto, más intensidad, más emoción, con las mismas mujeres de ojos grandes y el mismo color. Ese recorrido es parte de la identidad y se cuenta en el sitio (`docs/artist-story.md`); el diseño habla con la época actual sin renegar de la anterior.
+
 Lo que no se toca sin aprobación explícita:
 
 - **La firma.** "anicarlomagno — artista plástica" en **Dancing Script**: es su logo y su voz manuscrita.

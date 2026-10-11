@@ -8,6 +8,7 @@ Context for humans and agents. Facts were taken from the code (October 2026 snap
 Personal website and storefront of **Analía "Ani" Carlomagno**, a visual artist and teacher from
 Tandil, Argentina. She paints women with large eyes ("mujeres de ojos grandes") in saturated, high-contrast,
 textured, poetic style, and also sells agendas/notebooks printed with her art, art prints and two books.
+Her work evolved from a **naif** style to a **neoexpressionist** one; that arc is part of her story and is shown on the site (see `docs/artist-story.md`).
 There is no checkout, cart or payments: **every sale is closed in a WhatsApp conversation**.
 
 Locale: Spanish (es-AR), voseo ("Elegí", "Consultá"). Currency: ARS. Ships to all of Argentina.

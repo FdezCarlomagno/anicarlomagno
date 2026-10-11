@@ -195,6 +195,7 @@ no como estética a copiar. Ver skill `apple-design`. Orden de autoridad: `DESIG
 ### Fase 4b — Dirección de arte
 **Objetivo:** decidir cómo se ve y se siente "premium" **antes** de construirlo, con la identidad de Ani como límite.
 **Hacer**
+- Tener presente que el estilo actual es **neoexpresionista** y el anterior **naif** (`docs/artist-story.md`): los prototipos incluyen un bloque "Mi recorrido".
 - Reunir referencias con Valentín y Ani: 3–5 sitios de artistas/galerías que les gusten y qué les gusta de cada uno (tipografía, aire, ritmo, cómo muestran la obra). **Sin referencia concreta, esta fase no arranca.**
 - Prototipar **2–3 direcciones** de la Home en mobile (390 px) como páginas HTML estáticas en `design/art-direction/` (sin tocar `src/`), usando obras reales de Ani y los tokens de la Fase 4:
   - A. *Galería silenciosa*: fondo claro, obra a sangre, tipografía mínima.
@@ -283,7 +284,7 @@ no como estética a copiar. Ver skill `apple-design`. Orden de autoridad: `DESIG
 ### Fase 10 — Sobre mí y Contacto
 **Objetivo:** que la historia de Ani se lea bien y contactarla sea inmediato.
 **Hacer**
-- Sobre mí: retrato/obra de apertura, párrafos con largo de línea cómodo (≤ 70 caracteres), cifras (+1000 obras, +20 años, +15 enseñando) con contexto, línea de tiempo accesible (lista ordenada), citas/imágenes sin texto encima.
+- Sobre mí: **"Mi recorrido"** (del naif al neoexpresionismo, ver `docs/artist-story.md`) con obras de cada etapa intactas y relato en las palabras de Ani; retrato/obra de apertura, párrafos con largo de línea cómodo (≤ 70 caracteres), cifras (+1000 obras, +20 años, +15 enseñando) con contexto, línea de tiempo accesible (lista ordenada), citas/imágenes sin texto encima.
 - Contacto: opciones claras (WhatsApp, formulario, Instagram), mapa con click para cargar (Fase 2), horarios/zona de envío **(confirmar con Ani)**.
 - Tono: conservar sus textos; solo edición de claridad y puntuación con su visto bueno.
 **Skills/agentes:** `frontend-design`, `apple-design`, `design:ux-copy`, `design:design-critique`.
@@ -293,6 +294,7 @@ no como estética a copiar. Ver skill `apple-design`. Orden de autoridad: `DESIG
 ### Fase 10b — Prestigio y confianza
 **Objetivo:** que quien llega por primera vez perciba trayectoria y pueda confiar en comprar a distancia.
 **Hacer**
+- Las **etapas de Ani** (naif → neoexpresionista, `docs/artist-story.md`) funcionan como marco de la Trayectoria.
 - Sección **"Trayectoria"** reutilizable (Home y Sobre mí): exposiciones y eventos (el código ya menciona *Centro Polivalente de Arte*, *La Noche de los Museos*, *Arte sin fronteras*), premios, menciones en prensa y colaboraciones, con año y lugar. **Ani aporta fechas, enlaces y material de prensa**; no se inventa ni se exagera nada.
 - **Testimonios** de clientas/alumnas reales (texto corto, nombre o inicial, producto, foto si dan permiso por escrito). Si no hay, usar capturas reales de mensajes **con consentimiento** y datos personales tapados.
 - **Proceso de trabajo:** cómo nace una obra o una agenda personalizada (fotos/video corto del taller), plazos y packaging; reduce dudas antes del WhatsApp.
