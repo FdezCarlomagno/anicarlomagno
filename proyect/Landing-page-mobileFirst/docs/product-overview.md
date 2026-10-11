@@ -72,11 +72,13 @@ Navigation labels: Inicio · Obras · Agendas y cuadernos · Libros · Láminas 
 - React 18 + Vite 5 (SWC), `react-router-dom` 7 (BrowserRouter; one prerendered HTML per public route + real 404, see `docs/seo-notes.md`), `framer-motion` for animation,
   `@unpic/react` `<Image>`, `react-hot-toast`, `lucide-react`, `react-intersection-observer`, `@emailjs/browser`.
 - **Plain CSS**, no Tailwind/CSS-in-JS: global `src/LandingPage.css`, per-page `src/pages/pagesStyles/*.css`,
-  `src/components/contact/styles/*.css`. No design tokens yet (one local set of vars in `agendas.css`).
+  `src/components/contact/styles/*.css`. Design tokens in `src/styles/tokens.css` (imported first in `src/main.jsx`),
+  documented in `DESIGN.md`; they reproduce the current look 1:1 (Phase 4, DL-011). Font sizes are not tokenized yet (DL-007).
 - Content is data in code: `src/objects/*.jsx` (paintings, agendas, books); images are imported from `src/**/imgs`
   (bundled by Vite, many are large JPEGs).
 - No tests, no TypeScript, ESLint only (`npm run lint`). Deploy: Vercel.
-- Fonts today: Raleway (body), Dancing Script (logo/headings), Cedarville Cursive loaded, Inter in `:root`.
+- Fonts today: Raleway (body) and Dancing Script (logo/headings), self-hosted in `public/fonts/` (`src/styles/fonts.css`).
+  No Google Fonts. Only stray font: Arial on the painting size in `/obras-en-stock` (DL-007).
 - Current visual identity: white / aliceblue backgrounds, `blueviolet` accent, script logo "anicarlomagno — artista plástica".
 
 ## Known UX/UI problems driving the rework

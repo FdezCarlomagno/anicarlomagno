@@ -1,21 +1,5 @@
 /* Mobile-first approach con diseño mejorado */
 
-/* Variables CSS para consistencia */
-:root {
-    --primary-color: blueviolet;
-    --primary-hover: rgba(137, 43, 226, 0.85);
-    --background-light: aliceblue;
-    --text-dark: #333;
-    --text-gray: #666;
-    --text-light-gray: gray;
-    --border-color: #ddd;
-    --error-color: #e74c3c;
-    --success-color: #27ae60;
-    --border-radius: 8px;
-    --border-radius-small: 6px;
-    --spacing-unit: 1rem;
-}
-
 /* Reset y estilos base */
 * {
     box-sizing: border-box;
@@ -26,20 +10,20 @@
     position: fixed;
     top: 20px;
     right: 20px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    padding: 1rem 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, var(--color-periwinkle) 0%, var(--color-plum) 100%);
+    color: var(--color-white);
+    padding: var(--space-4) var(--space-6);
+    border-radius: var(--radius-xl);
+    box-shadow: 0 10px 40px var(--color-black-a30);
     z-index: 9999;
     font-weight: 600;
     font-size: 1rem;
     min-width: 280px;
     max-width: 400px;
-    animation: slideInRight 400ms ease, fadeOut 500ms ease 3s forwards;
+    animation: slideInRight var(--duration-400) var(--ease-default), fadeOut var(--duration-500) var(--ease-default) var(--duration-toast) forwards;
     display: flex;
     align-items: center;
-    gap: 0.75rem;
+    gap: var(--space-3);
 }
 
 @keyframes slideInRight {
@@ -73,7 +57,7 @@
         min-width: auto;
         width: calc(100% - 40px);
         max-width: 350px;
-        animation: slideInDown 400ms ease, fadeOut 500ms ease 3s forwards;
+        animation: slideInDown var(--duration-400) var(--ease-default), fadeOut var(--duration-500) var(--ease-default) var(--duration-toast) forwards;
     }
 
     @keyframes slideInDown {
@@ -93,14 +77,14 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    padding: 1rem;
+    padding: var(--space-4);
 }
 
 .titleAndbtn {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: var(--space-4);
 }
 
 .agendas-cta {
@@ -111,25 +95,25 @@
 
 /* Botones con diseño consistente */
 .btnAgenda, .buy-book-btn, .btn-submit {
-    padding: 12px 40px;
+    padding: var(--space-legacy-12) var(--space-legacy-40);
     border: none;
     border-radius: 50px;
-    background: var(--primary-color);
-    color: white;
+    background: var(--color-accent);
+    color: var(--color-white);
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
-    transition: all 200ms ease-in-out;
-    box-shadow: 0 2px 8px rgba(137, 43, 226, 0.3);
+    transition: all var(--duration-200) var(--ease-in-out);
+    box-shadow: 0 2px 8px var(--color-accent-a30);
 }
 
 .btnAgenda {
-    margin-top: 2rem;
-    transition: all 100ms ease-in-out;
+    margin-top: var(--space-8);
+    transition: all var(--duration-100) var(--ease-in-out);
 }
 
 .btnAgenda:hover, .buy-book-btn:hover, .btn-submit:hover {
-    background-color: var(--primary-hover);
+    background-color: var(--color-accent-a85);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(137, 43, 226, 0.4);
 }
@@ -140,8 +124,8 @@
 
 /* Botón disabled con estilos apropiados */
 .btn-submit:disabled {
-    background-color: #ccc;
-    color: #888;
+    background-color: var(--color-gray-300);
+    color: var(--color-gray-500);
     cursor: not-allowed;
     box-shadow: none;
     transform: none;
@@ -149,7 +133,7 @@
 }
 
 .btn-submit:disabled:hover {
-    background-color: #ccc;
+    background-color: var(--color-gray-300);
     transform: none;
     box-shadow: none;
 }
@@ -159,8 +143,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
-    padding: 1rem;
+    gap: var(--space-8);
+    padding: var(--space-4);
 }
 
 .form-section {
@@ -176,30 +160,30 @@
 .formContainer form {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    background-color: var(--background-light);
-    padding: 1.5rem;
-    border-radius: var(--border-radius);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    gap: var(--space-6);
+    background-color: var(--color-surface);
+    padding: var(--space-6);
+    border-radius: var(--radius-md);
+    box-shadow: 0 2px 10px var(--color-black-a08);
 }
 
 /* Título y descripción del formulario */
 .title-agenda-customization {
     text-align: center;
-    margin-bottom: 1rem;
-    padding-bottom: 1rem;
-    border-bottom: 2px solid var(--primary-color);
+    margin-bottom: var(--space-4);
+    padding-bottom: var(--space-4);
+    border-bottom: 2px solid var(--color-accent);
 }
 
 .agenda-form-title {
     font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    color: var(--text-dark);
+    margin-bottom: var(--space-2);
+    color: var(--color-gray-800);
     font-weight: bold;
 }
 
 .title-agenda-customization p {
-    color: var(--text-gray);
+    color: var(--color-gray-600);
     font-size: 0.9rem;
 }
 
@@ -207,69 +191,69 @@
 .form-group {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: var(--space-2);
 }
 
 .form-label {
     font-weight: 600;
-    color: var(--text-dark);
+    color: var(--color-gray-800);
     font-size: 0.95rem;
     display: flex;
     flex-direction: column;
-    gap: 0.25rem;
+    gap: var(--space-1);
 }
 
 .required {
-    color: var(--error-color);
+    color: var(--color-error);
     font-weight: bold;
 }
 
 .help-text {
     font-size: 0.8rem;
     font-weight: normal;
-    color: var(--text-gray);
+    color: var(--color-gray-600);
 }
 
 /* Inputs con mejor diseño y feedback visual */
 .form-input, .form-textarea {
-    padding: 12px;
-    border: 2px solid var(--border-color);
-    border-radius: var(--border-radius-small);
-    background-color: white;
-    color: var(--text-dark);
+    padding: var(--space-legacy-12);
+    border: 2px solid var(--color-gray-200);
+    border-radius: var(--radius-sm);
+    background-color: var(--color-white);
+    color: var(--color-gray-800);
     font-size: 0.95rem;
-    transition: all 200ms ease;
+    transition: all var(--duration-200) var(--ease-default);
 }
 
 .form-input:focus, .form-textarea:focus {
     outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(137, 43, 226, 0.1);
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px var(--color-accent-a10);
 }
 
 .form-input::placeholder, .form-textarea::placeholder {
-    color: var(--text-light-gray);
+    color: var(--color-gray-550);
 }
 
 /* Estados de validación visual */
 .input-error {
-    border-color: var(--error-color);
+    border-color: var(--color-error);
 }
 
 .input-error:focus {
-    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+    box-shadow: 0 0 0 3px var(--color-error-a10);
 }
 
 .input-success {
-    border-color: var(--success-color);
+    border-color: var(--color-success);
 }
 
 .error-message {
-    color: var(--error-color);
+    color: var(--color-error);
     font-size: 0.85rem;
     display: flex;
     align-items: center;
-    gap: 0.25rem;
+    gap: var(--space-1);
 }
 
 .error-message::before {
@@ -280,14 +264,14 @@
 .form-input-color {
     width: 100%;
     height: 50px;
-    border: 2px solid var(--border-color);
-    border-radius: var(--border-radius-small);
+    border: 2px solid var(--color-gray-200);
+    border-radius: var(--radius-sm);
     cursor: pointer;
-    transition: all 200ms ease;
+    transition: all var(--duration-200) var(--ease-default);
 }
 
 .form-input-color:hover {
-    border-color: var(--primary-color);
+    border-color: var(--color-accent);
 }
 
 /* Fieldset y legend estilizados */
@@ -299,51 +283,51 @@ fieldset {
 
 legend {
     font-weight: 600;
-    color: var(--text-dark);
+    color: var(--color-gray-800);
     font-size: 0.95rem;
-    margin-bottom: 0.75rem;
+    margin-bottom: var(--space-3);
 }
 
 /* Radio buttons con diseño card */
 .radio-group {
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: var(--space-3);
 }
 
 .radio-option {
     display: flex;
     align-items: center;
-    padding: 1rem;
-    border: 2px solid var(--border-color);
-    border-radius: var(--border-radius-small);
-    background-color: white;
+    padding: var(--space-4);
+    border: 2px solid var(--color-gray-200);
+    border-radius: var(--radius-sm);
+    background-color: var(--color-white);
     cursor: pointer;
-    transition: all 200ms ease;
+    transition: all var(--duration-200) var(--ease-default);
     position: relative;
 }
 
 .radio-option:hover {
-    border-color: var(--primary-color);
+    border-color: var(--color-accent);
     box-shadow: 0 2px 8px rgba(137, 43, 226, 0.15);
 }
 
 .radio-option input[type="radio"] {
     width: 20px;
     height: 20px;
-    margin-right: 0.75rem;
+    margin-right: var(--space-3);
     cursor: pointer;
-    accent-color: var(--primary-color);
+    accent-color: var(--color-accent);
 }
 
 .radio-option input[type="radio"]:checked ~ .radio-content {
-    color: var(--primary-color);
+    color: var(--color-accent);
     font-weight: 600;
 }
 
 .radio-option:has(input[type="radio"]:checked) {
-    border-color: var(--primary-color);
-    background-color: rgba(137, 43, 226, 0.05);
+    border-color: var(--color-accent);
+    background-color: var(--color-accent-a05);
 }
 
 .radio-content {
@@ -357,21 +341,21 @@ legend {
     font-size: 0.95rem;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: var(--space-2);
 }
 
 .radio-price {
     font-weight: 700;
-    color: var(--primary-color);
+    color: var(--color-accent);
     font-size: 1.1rem;
 }
 
 /* Badge NUEVO llamativo */
 .badge-new {
-    background: linear-gradient(135deg, #35f59b, #5aeebd);
-    color: white;
-    padding: 2px 8px;
-    border-radius: 4px;
+    background: linear-gradient(135deg, var(--color-mint), var(--color-mint-light));
+    color: var(--color-white);
+    padding: var(--space-legacy-2) var(--space-legacy-8);
+    border-radius: var(--radius-2xs);
     font-size: 0.7rem;
     font-weight: bold;
     letter-spacing: 0.5px;
@@ -401,11 +385,11 @@ legend {
 .radio-group-compact {
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: var(--space-2);
 }
 
 .radio-option-small {
-    padding: 0.75rem 1rem;
+    padding: var(--space-3) var(--space-4);
     flex: 1;
     min-width: 140px;
 }
@@ -419,48 +403,48 @@ legend {
 .radio-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 0.5rem;
+    gap: var(--space-2);
 }
 
 /* Checkbox mejorado */
 .checkbox-label {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
-    padding: 1rem;
-    background-color: white;
-    border: 2px solid var(--border-color);
-    border-radius: var(--border-radius-small);
+    gap: var(--space-3);
+    padding: var(--space-4);
+    background-color: var(--color-white);
+    border: 2px solid var(--color-gray-200);
+    border-radius: var(--radius-sm);
     cursor: pointer;
-    transition: all 200ms ease;
+    transition: all var(--duration-200) var(--ease-default);
 }
 
 .checkbox-label:hover {
-    border-color: var(--primary-color);
+    border-color: var(--color-accent);
 }
 
 .checkbox-label input[type="checkbox"] {
     width: 20px;
     height: 20px;
     cursor: pointer;
-    accent-color: var(--primary-color);
+    accent-color: var(--color-accent);
 }
 
 .checkbox-label:has(input[type="checkbox"]:checked) {
-    border-color: var(--primary-color);
-    background-color: rgba(137, 43, 226, 0.05);
+    border-color: var(--color-accent);
+    background-color: var(--color-accent-a05);
 }
 
 /* Campos condicionales con animación */
 .conditional-fields {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    padding: 1rem;
+    gap: var(--space-4);
+    padding: var(--space-4);
     background-color: rgba(137, 43, 226, 0.03);
-    border-left: 3px solid var(--primary-color);
-    border-radius: var(--border-radius-small);
-    animation: slideDown 300ms ease;
+    border-left: 3px solid var(--color-accent);
+    border-radius: var(--radius-sm);
+    animation: slideDown var(--duration-300) var(--ease-default);
 }
 
 @keyframes slideDown {
@@ -476,11 +460,11 @@ legend {
 
 /* Feedback visual de obra seleccionada */
 .selected-artwork {
-    padding: 0.75rem;
-    background-color: rgba(39, 174, 96, 0.1);
-    border: 1px solid var(--success-color);
-    border-radius: var(--border-radius-small);
-    color: var(--success-color);
+    padding: var(--space-3);
+    background-color: var(--color-success-a10);
+    border: 1px solid var(--color-success);
+    border-radius: var(--radius-sm);
+    color: var(--color-success);
     font-size: 0.9rem;
     font-weight: 600;
 }
@@ -489,14 +473,14 @@ legend {
 .form-submit {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: var(--space-4);
     align-items: stretch;
-    margin-top: 1rem;
+    margin-top: var(--space-4);
 }
 
 .btn-submit {
     width: 100%;
-    padding: 14px;
+    padding: var(--space-legacy-14);
     font-size: 1.05rem;
 }
 
@@ -504,37 +488,37 @@ legend {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
-    background-color: white;
-    border: 2px solid var(--primary-color);
-    border-radius: var(--border-radius-small);
+    padding: var(--space-4);
+    background-color: var(--color-white);
+    border: 2px solid var(--color-accent);
+    border-radius: var(--radius-sm);
 }
 
 .price-label {
     font-size: 0.95rem;
-    color: var(--text-gray);
+    color: var(--color-gray-600);
     font-weight: 600;
 }
 
 .price-value {
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--primary-color);
+    color: var(--color-accent);
 }
 
 /* Nueva sección NUEVO: Cuaderno A4 */
 .new-product-section {
     width: 100%;
     max-width: 1200px;
-    margin: 3rem auto;
-    padding: 1rem;
+    margin: var(--space-12) auto;
+    padding: var(--space-4);
 }
 
 .new-product-banner {
-    background: linear-gradient(135deg, rgba(137, 43, 226, 0.1), rgba(255, 107, 107, 0.1));
-    border: 3px solid var(--primary-color);
-    border-radius: 16px;
-    padding: 2rem;
+    background: linear-gradient(135deg, var(--color-accent-a10), rgba(255, 107, 107, 0.1));
+    border: 3px solid var(--color-accent);
+    border-radius: var(--radius-2xl);
+    padding: var(--space-8);
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -547,7 +531,7 @@ legend {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle, rgba(137, 43, 226, 0.05) 0%, transparent 70%);
+    background: radial-gradient(circle, var(--color-accent-a05) 0%, transparent 70%);
     animation: rotate 20s linear infinite;
 }
 
@@ -562,37 +546,37 @@ legend {
 
 .badge-new-large {
     display: inline-block;
-    background: linear-gradient(135deg, #35f59b, #5aeebd);
-    color: white;
-    padding: 8px 20px;
-    border-radius: 25px;
+    background: linear-gradient(135deg, var(--color-mint), var(--color-mint-light));
+    color: var(--color-white);
+    padding: var(--space-legacy-8) var(--space-legacy-20);
+    border-radius: var(--radius-pill);
     font-size: 0.9rem;
     font-weight: bold;
     letter-spacing: 1px;
-    margin-bottom: 1rem;
+    margin-bottom: var(--space-4);
     box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
     position: relative;
 }
 
 .new-product-banner h2 {
     font-size: 2rem;
-    margin: 1rem 0;
-    color: var(--text-dark);
+    margin: var(--space-4) 0;
+    color: var(--color-gray-800);
     position: relative;
 }
 
 .new-product-banner > p {
     font-size: 1.1rem;
-    color: var(--text-gray);
-    margin-bottom: 1.5rem;
+    color: var(--color-gray-600);
+    margin-bottom: var(--space-6);
     position: relative;
 }
 
 .new-product-features {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    margin: 2rem 0;
+    gap: var(--space-4);
+    margin: var(--space-8) 0;
     position: relative;
 }
 
@@ -600,11 +584,11 @@ legend {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.75rem;
-    padding: 1rem;
-    background-color: white;
-    border-radius: var(--border-radius);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    gap: var(--space-3);
+    padding: var(--space-4);
+    background-color: var(--color-white);
+    border-radius: var(--radius-md);
+    box-shadow: 0 2px 8px var(--color-black-a08);
 }
 
 .feature-icon {
@@ -613,20 +597,20 @@ legend {
 
 .feature span:last-child {
     font-weight: 600;
-    color: var(--text-dark);
+    color: var(--color-gray-800);
 }
 
 .new-product-price {
     font-size: 2rem;
     font-weight: 700;
-    color: var(--primary-color);
-    margin-top: 1.5rem;
+    color: var(--color-accent);
+    margin-top: var(--space-6);
     position: relative;
 }
 
 /* Nuevos estilos para la galería de imágenes del Cuaderno A4 */
 .cuaderno-gallery {
-    margin: 2rem 0;
+    margin: var(--space-8) 0;
     position: relative;
 }
 
@@ -635,12 +619,12 @@ legend {
     max-width: 300px;
     max-height: 400px;
     margin: 0 auto;
-    border-radius: 16px;
+    border-radius: var(--radius-2xl);
     overflow: hidden;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
-    background-color: white;
-    padding: 1rem;
-    transition: transform 300ms ease;
+    box-shadow: 0 10px 40px var(--color-black-a15);
+    background-color: var(--color-white);
+    padding: var(--space-4);
+    transition: transform var(--duration-300) var(--ease-default);
 }
 
 .gallery-main-image:hover {
@@ -652,41 +636,41 @@ legend {
     height: auto;
     max-height: 350px;
     display: block;
-    border-radius: 12px;
+    border-radius: var(--radius-xl);
     object-fit: contain;
 }
 
 .gallery-thumbnails {
     display: flex;
-    gap: 0.75rem;
+    gap: var(--space-3);
     justify-content: center;
-    margin-top: 1.5rem;
+    margin-top: var(--space-6);
     flex-wrap: wrap;
-    padding: 0 1rem;
+    padding: 0 var(--space-4);
 }
 
 .gallery-thumbnail {
     width: 50px;
     height: 65px;
-    border-radius: 8px;
+    border-radius: var(--radius-md);
     overflow: hidden;
     cursor: pointer;
     border: 3px solid transparent;
-    transition: all 250ms ease;
-    background-color: white;
-    padding: 4px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 250ms var(--ease-default);
+    background-color: var(--color-white);
+    padding: var(--space-legacy-4);
+    box-shadow: var(--shadow-sm);
 }
 
 .gallery-thumbnail:hover {
     transform: translateY(-4px);
-    box-shadow: 0 6px 16px rgba(137, 43, 226, 0.3);
-    border-color: var(--primary-color);
+    box-shadow: 0 6px 16px var(--color-accent-a30);
+    border-color: var(--color-accent);
 }
 
 .gallery-thumbnail.active {
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 4px rgba(137, 43, 226, 0.2);
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 4px var(--color-accent-a20);
     transform: scale(1.05);
 }
 
@@ -694,7 +678,7 @@ legend {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 4px;
+    border-radius: var(--radius-2xs);
 }
 
 /* Animación de entrada para la galería */
@@ -710,23 +694,23 @@ legend {
 }
 
 .cuaderno-gallery {
-    animation: fadeInScale 500ms ease;
+    animation: fadeInScale var(--duration-500) var(--ease-default);
 }
 
 /* Estilos existentes mantenidos */
 .customAgenda {
-    margin: 1rem;
+    margin: var(--space-4);
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background-color: var(--background-light);
-    padding: 1rem;
-    border-radius: var(--border-radius);
+    background-color: var(--color-surface);
+    padding: var(--space-4);
+    border-radius: var(--radius-md);
 }
 
 .customAgenda h2 {
-    font-family: 'Dancing Script', cursive;
+    font-family: var(--font-script);
     font-size: 1.5rem;
     text-align: center;
 }
@@ -734,7 +718,7 @@ legend {
 .customAgenda img {
     width: 100%;
     height: 100%;
-    border-radius: var(--border-radius-small);
+    border-radius: var(--radius-sm);
 }
 
 .myAgenda-img-container {
@@ -769,7 +753,7 @@ legend {
 }
 
 .agenda-price-container h3 {
-    font-family: 'Dancing Script';
+    font-family: var(--font-script-bare);
     font-size: 1.5rem;
 }
 
@@ -777,15 +761,15 @@ legend {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
-    padding: 1rem;
-    margin-bottom: 2rem;
+    gap: var(--space-legacy-30);
+    padding: var(--space-4);
+    margin-bottom: var(--space-8);
 }
 
 .agendaPageContainer img {
     width: 100%;
     height: 100%;
-    border-radius: 12px;
+    border-radius: var(--radius-xl);
     border: none;
 }
 
@@ -794,12 +778,12 @@ legend {
     flex-direction: column;
     align-items: start;
     width: 100%;
-    background-color: var(--background-light);
-    border-radius: var(--border-radius);
+    background-color: var(--color-surface);
+    border-radius: var(--radius-md);
 }
 
 .section-agendaText {
-    margin: 1rem;
+    margin: var(--space-4);
 }
 
 .section-agendaText-container {
@@ -808,13 +792,13 @@ legend {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    border-top: 3px solid var(--primary-color);
-    border-bottom: 3px solid var(--primary-color);
-    padding: 20px;
+    border-top: 3px solid var(--color-accent);
+    border-bottom: 3px solid var(--color-accent);
+    padding: var(--space-legacy-20);
 }
 
 .section-agendaText-container h2 {
-    font-family: 'Dancing Script', cursive;
+    font-family: var(--font-script);
     font-size: 2rem;
 }
 
@@ -825,53 +809,53 @@ legend {
 .section-agendaText-flex-column {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: var(--space-legacy-30);
 }
 
 .section-agendaText-flex-column span {
     font-weight: bold;
-    color: var(--primary-color);
+    color: var(--color-accent);
 }
 
 /* Dropdown de imágenes mejorado */
 .dropDownImgs-container {
     max-height: 300px;
-    border: 2px solid var(--border-color);
-    border-radius: var(--border-radius);
-    padding: 1rem;
+    border: 2px solid var(--color-gray-200);
+    border-radius: var(--radius-md);
+    padding: var(--space-4);
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    gap: 1rem;
+    gap: var(--space-4);
     overflow-y: auto;
-    background-color: white;
+    background-color: var(--color-white);
 }
 
 .dropDownImgs-container img {
     width: 100%;
     height: 120px;
     object-fit: cover;
-    border-radius: var(--border-radius-small);
+    border-radius: var(--radius-sm);
     cursor: pointer;
-    transition: all 200ms ease;
+    transition: all var(--duration-200) var(--ease-default);
     border: 2px solid transparent;
 }
 
 .dropDownImgs-container img:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    border-color: var(--primary-color);
+    box-shadow: 0 4px 12px var(--color-black-a15);
+    border-color: var(--color-accent);
 }
 
 .dropDownImgs-container img.selected {
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(137, 43, 226, 0.2);
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px var(--color-accent-a20);
 }
 
 .dropDownAgendas {
-    border: 2px solid var(--border-color);
-    padding: 0.5rem;
-    border-radius: var(--border-radius-small);
-    background-color: white;
+    border: 2px solid var(--color-gray-200);
+    padding: var(--space-2);
+    border-radius: var(--radius-sm);
+    background-color: var(--color-white);
 }
 
 .dropDownArrow {
@@ -885,17 +869,17 @@ legend {
 .dropDownArrow p {
     margin: 0;
     font-size: 0.95rem;
-    color: var(--text-gray);
+    color: var(--color-gray-600);
 }
 
 .dropDownAgendas-btn {
     background-color: transparent;
-    color: var(--text-dark);
+    color: var(--color-gray-800);
     border: none;
     cursor: pointer;
-    padding: 0.5rem;
+    padding: var(--space-2);
     font-size: 0.9rem;
-    transition: transform 200ms ease;
+    transition: transform var(--duration-200) var(--ease-default);
 }
 
 .dropDownAgendas-btn:hover {
@@ -904,52 +888,52 @@ legend {
 
 .saved-agendas {
     text-align: center;
-    margin: 2rem 0;
+    margin: var(--space-8) 0;
 }
 
 .agenda-count-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 1.5rem auto;
-    background-color: white;
-    border-radius: 12px;
-    padding: 1.5rem;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin: var(--space-6) auto;
+    background-color: var(--color-white);
+    border-radius: var(--radius-xl);
+    padding: var(--space-6);
+    box-shadow: 0px 4px 10px var(--color-black-a10);
     max-width: 300px;
     width: 100%;
 }
 
 .agenda-count-container h3 {
     text-align: center;
-    margin-top: 1rem;
-    padding: 0.75rem;
-    border-radius: var(--border-radius-small);
-    border: 2px solid var(--border-color);
+    margin-top: var(--space-4);
+    padding: var(--space-3);
+    border-radius: var(--radius-sm);
+    border: 2px solid var(--color-gray-200);
 }
 
 .agenda-count {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1.5rem;
+    gap: var(--space-6);
     flex-wrap: wrap;
 }
 
 .agenda-count button {
-    padding: 0.75rem 1.5rem;
+    padding: var(--space-3) var(--space-6);
     font-size: 1.2rem;
-    background-color: var(--primary-color);
-    color: white;
-    border-radius: var(--border-radius);
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    border-radius: var(--radius-md);
     border: none;
-    transition: all 200ms ease;
+    transition: all var(--duration-200) var(--ease-default);
     cursor: pointer;
     min-width: 50px;
 }
 
 .agenda-count button:hover {
-    background-color: var(--primary-hover);
+    background-color: var(--color-accent-a85);
     transform: scale(1.05);
 }
 
@@ -961,27 +945,27 @@ legend {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 1rem;
+    gap: var(--space-4);
     text-align: left;
 }
 
 .delete-agenda {
-    padding: 0.5rem 1rem;
+    padding: var(--space-2) var(--space-4);
     border: none;
-    border-radius: var(--border-radius-small);
-    background-color: var(--error-color);
-    color: white;
+    border-radius: var(--radius-sm);
+    background-color: var(--color-error);
+    color: var(--color-white);
     cursor: pointer;
-    transition: all 200ms ease;
+    transition: all var(--duration-200) var(--ease-default);
 }
 
 .delete-agenda:hover {
-    background-color: #c0392b;
+    background-color: var(--color-error-hover);
     transform: translateY(-2px);
 }
 
 .encargar {
-    margin-top: 3rem;
+    margin-top: var(--space-12);
     width: 100%;
     max-width: 400px;
 }
@@ -990,7 +974,7 @@ legend {
     font-size: 1.5rem;
     font-weight: bold;
     text-align: center;
-    margin: 1rem 0;
+    margin: var(--space-4) 0;
 }
 
 /* TABLET - 768px+ */
@@ -998,14 +982,14 @@ legend {
     .agendas {
         flex-direction: row;
         align-items: center;
-        padding: 2rem;
+        padding: var(--space-8);
     }
 
     .agendaCustomization {
         flex-direction: row;
         justify-content: center;
-        gap: 3rem;
-        padding: 2rem;
+        gap: var(--space-12);
+        padding: var(--space-8);
     }
 
     .form-section {
@@ -1014,7 +998,7 @@ legend {
     }
 
     .formContainer form {
-        padding: 2rem;
+        padding: var(--space-8);
     }
 
     .agenda-form-title {
@@ -1081,7 +1065,7 @@ legend {
     }
     
     .gallery-thumbnails {
-        gap: 1rem;
+        gap: var(--space-4);
     }
     
     .gallery-thumbnail {
@@ -1098,7 +1082,7 @@ legend {
 
     .btnAgenda {
         font-size: 1.5rem;
-        padding: 14px 60px;
+        padding: var(--space-legacy-14) var(--space-legacy-60);
     }
 
     .agenda-form-title {
@@ -1143,17 +1127,17 @@ legend {
 }
 
 .dropDownImgs-container::-webkit-scrollbar-track {
-    background: var(--background-light);
-    border-radius: 4px;
+    background: var(--color-surface);
+    border-radius: var(--radius-2xs);
 }
 
 .dropDownImgs-container::-webkit-scrollbar-thumb {
-    background: var(--primary-color);
-    border-radius: 4px;
+    background: var(--color-accent);
+    border-radius: var(--radius-2xs);
 }
 
 .dropDownImgs-container::-webkit-scrollbar-thumb:hover {
-    background: var(--primary-hover);
+    background: var(--color-accent-a85);
 }
 
 /* Animaciones de entrada */
@@ -1169,7 +1153,7 @@ legend {
 }
 
 .form-group {
-    animation: fadeIn 400ms ease;
+    animation: fadeIn var(--duration-400) var(--ease-default);
 }
 
 /* Print styles */

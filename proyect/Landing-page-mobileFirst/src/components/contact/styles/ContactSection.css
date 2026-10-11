@@ -1,27 +1,27 @@
 .contact-section {
-    padding: 2rem;
+    padding: var(--space-8);
     max-width: 1200px;
     margin: 0 auto;
   }
   
   .contact-section .contact-title {
     text-align: left;
-    border-bottom: 2px solid gray;
-    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--color-gray-550);
+    margin-bottom: var(--space-8);
     font-size: 2rem;
-    color: #333;
+    color: var(--color-gray-800);
   }
   
   .contact-content {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: var(--space-8);
   }
   
   @media (min-width: 768px) {
     .contact-content {
       flex-direction: row;
-      padding: 2rem;
+      padding: var(--space-8);
     }
     .contact-section .contact-title {
       border-bottom: none;

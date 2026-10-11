@@ -3,7 +3,7 @@ h1 {
 }
 
 .myPaintingsTitle {
-    margin: 1rem;
+    margin: var(--space-4);
     font-size: 40px;
 }
 
@@ -16,7 +16,7 @@ h1 {
 
 .dot {
     font-size: 40px;
-    transition: all 200ms ease-in-out;
+    transition: all var(--duration-200) var(--ease-in-out);
 }
 
 .dot:hover {
@@ -24,13 +24,13 @@ h1 {
 }
 
 .dot:active {
-    color: blueviolet;
+    color: var(--color-accent);
 }
 
 .paintingCard img {
     width: 100%;
     height: 100%;
-    border-radius: 10px 10px 0 0;
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
     object-fit: cover;
 
 }
@@ -46,24 +46,24 @@ h1 {
 
 .paintingContainer {
     width: inherit;
-    background-color: aliceblue;
-    border-radius: 0 0 10px 10px;
-    padding-bottom: 20px;
+    background-color: var(--color-surface);
+    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+    padding-bottom: var(--space-legacy-20);
     overflow: auto;
 }
 
 .paintingContainer .painting-title {
     font-size: 25px;
-    margin-top: 5px;
+    margin-top: var(--space-legacy-5);
     text-align: start;
     font-weight: bold;
 }
 
 .paintingContainer p {
     width: 245px;
-    border-top: 2px solid blueviolet;
-    padding-top: 10px;
-    margin-top: 6px;
+    border-top: 2px solid var(--color-accent);
+    padding-top: var(--space-legacy-10);
+    margin-top: var(--space-legacy-6);
     text-align: justify;
 }
 
@@ -73,11 +73,11 @@ h1 {
 }
 
 .paintingInfoContainer p {
-    color: rgb(136, 136, 136);
+    color: var(--color-gray-500);
 }
 
 .btnPriceContainer {
-    margin-top: 20px;
+    margin-top: var(--space-legacy-20);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -92,11 +92,11 @@ h1 {
 }
 
 .btnPriceContainer .addToCart {
-    background-color: blueviolet;
-    padding: 8px;
+    background-color: var(--color-accent);
+    padding: var(--space-legacy-8);
     font-size: 15px;
     border: none;
-    border-radius: 6px;
+    border-radius: var(--radius-sm);
 }
 
 .hideInOffer {
@@ -109,23 +109,23 @@ h1 {
     font-size: 20px;
     color: yellow;
     background-color: rgb(138, 0, 0);
-    border-radius: 5px;
-    padding: 3px;
+    border-radius: var(--radius-xs);
+    padding: var(--space-legacy-3);
 }
 
 .showInOffer p {
     letter-spacing: 3px;
-    margin-left: 3px;
-    font-family: "Raleway", sans-serif;
+    margin-left: var(--space-legacy-3);
+    font-family: var(--font-body);
 }
 
 .seeMoreBtn {
     background-color: transparent;
     font-size: 11px;
-    border: 2px solid black;
-    padding: 6px;
-    color: black;
-    border-radius: 5px;
+    border: 2px solid var(--color-black);
+    padding: var(--space-legacy-6);
+    color: var(--color-black);
+    border-radius: var(--radius-xs);
 }
 
 .goBackButton {
@@ -136,16 +136,16 @@ h1 {
     border: none;
     top: -5px;
     background-color: transparent;
-    color: black;
-    border-radius: 50%;
-    padding: 20px;
+    color: var(--color-black);
+    border-radius: var(--radius-round);
+    padding: var(--space-legacy-20);
     width: 20px;
     height: 20px;
     font-size: 40px;
 }
 
 .sectionPaintingInfo {
-    margin-top: 32px;
+    margin-top: var(--space-legacy-32);
 }
 
 /*CHOOSE PAINTING STYLES*/
@@ -162,10 +162,10 @@ h1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: aliceblue;
-    padding: 2rem;
+    background-color: var(--color-surface);
+    padding: var(--space-8);
     width: 250px;
-    border-radius: 6px;
+    border-radius: var(--radius-sm);
 }
 
 .choosePainting-button-container {
@@ -173,20 +173,20 @@ h1 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: var(--space-4);
     margin-top: 5%;
 }
 
 .choosePainting-button-container button {
     width: 200px;
     /* Ancho fijo */
-    padding: 10px 20px;
+    padding: var(--space-legacy-10) var(--space-legacy-20);
     text-align: center;
     border: none;
-    border-radius: 5px;
+    border-radius: var(--radius-xs);
     cursor: pointer;
-    background-color: blueviolet;
-    transition: all 200ms ease-in-out;
+    background-color: var(--color-accent);
+    transition: all var(--duration-200) var(--ease-in-out);
 }
 
 .choosePainting-button-container button:hover {
@@ -195,9 +195,9 @@ h1 {
 }
 
 #btnPainting {
-    margin-bottom: 2rem;
+    margin-bottom: var(--space-8);
     font-size: 24px;
-    transition: all 200ms ease-in-out;
+    transition: all var(--duration-200) var(--ease-in-out);
 }
 
 #btnPainting:hover {
@@ -210,46 +210,46 @@ h1 {
 .filters-container {
     display: flex;
     justify-content: center;
-    gap: 1rem;
-    margin: 2rem 0;
-    padding: 0 1rem;
+    gap: var(--space-4);
+    margin: var(--space-8) 0;
+    padding: 0 var(--space-4);
     flex-wrap: wrap;
 }
 
 .filter-btn {
-    padding: 0.8rem 1.5rem;
-    border: 2px solid #333;
+    padding: 0.8rem var(--space-6);
+    border: 2px solid var(--color-gray-800);
     background-color: transparent;
-    color: #333;
-    border-radius: 25px;
+    color: var(--color-gray-800);
+    border-radius: var(--radius-pill);
     cursor: pointer;
     font-weight: 600;
-    transition: all 0.3s ease;
+    transition: all var(--duration-300) var(--ease-default);
     font-size: 0.9rem;
 }
 
 .filter-btn:hover {
-    background-color: #f0f0f0;
+    background-color: var(--color-gray-100);
     transform: translateY(-2px);
 }
 
 .filter-btn.active {
-    background-color: #333;
-    color: white;
-    border-color: #333;
+    background-color: var(--color-gray-800);
+    color: var(--color-white);
+    border-color: var(--color-gray-800);
 }
 
 .no-results {
     text-align: center;
-    padding: 3rem;
-    color: #666;
+    padding: var(--space-12);
+    color: var(--color-gray-600);
     font-size: 1.1rem;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
     .filters-container {
-        gap: 0.5rem;
+        gap: var(--space-2);
     }
     
     .filter-btn {
@@ -286,9 +286,9 @@ h1 {
 
     .paintingsColumn {
         width: 1250px;
-        margin: 20px auto;
+        margin: var(--space-legacy-20) auto;
         columns: 3;
-        column-gap: 12px;
+        column-gap: var(--space-legacy-12);
     }
 
     .sectionPaintingInfo {
@@ -305,7 +305,7 @@ h1 {
     .paintingCard:hover {
         cursor: pointer;
         transform: scale(1.02);
-        transition: all 200ms;
+        transition: all var(--duration-200);
     }
 
     .sectionPaintingInfo .paintingContainer {
@@ -348,8 +348,8 @@ h1 {
     }
 
     .choosePainting-button-container button {
-        padding-left: 1rem;
-        padding-right: 1rem;
+        padding-left: var(--space-4);
+        padding-right: var(--space-4);
         font-size: 24px;
         font-weight: bold;
     }
