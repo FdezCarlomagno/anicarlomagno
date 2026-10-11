@@ -1,9 +1,21 @@
 // Phase 0: per-route DOM facts (a11y, headings, alt, targets, overflow) + console messages. No screenshots.
 // Usage: node design/tools/dom-facts.mjs [baseUrl] [outFile]
 //        (defaults: http://localhost:5173, design/audits/raw/dom-facts.json)
-import { writeFileSync, mkdirSync } from 'node:fs';
+// Phase 4: computed styles of every element (and ::before/::after) to prove token refactors change nothing.
+//        node design/tools/dom-facts.mjs --styles <out.json> [baseUrl]
+//        node design/tools/dom-facts.mjs --styles-diff <before.json> <after.json>
+import { writeFileSync, readFileSync, mkdirSync } from 'node:fs';
 import { dirname } from 'node:path';
 import { launch, newPage, setViewport, goto, autoScroll, evaluate, click, sleep } from './cdp.mjs';
+
+if (process.argv[2] === '--styles-diff') {
+  stylesDiff(process.argv[3], process.argv[4]);
+  process.exit(0);
+}
+if (process.argv[2] === '--styles') {
+  await stylesSnapshot(process.argv[3] || 'design/audits/raw/phase-4/styles.json', process.argv[4] || 'http://localhost:5173');
+  process.exit(0);
+}
 
 const BASE = process.argv[2] || 'http://localhost:5173';
 const OUT = process.argv[3] || 'design/audits/raw/dom-facts.json';
@@ -132,3 +144,95 @@ for (const width of [390, 1280]) {
 
 await browser.close();
 console.log(`done; failed=${results.failed.length}`);
+
+// Transform/opacity/scale are left out on purpose: framer-motion and scroll-driven reveals set them per frame.
+// Functions (not consts) because the --styles modes run before the Phase 0 code above.
+function styleProps() { return ['display', 'position', 'color', 'backgroundColor', 'backgroundImage', 'backgroundSize', 'backgroundPosition',
+  'borderTopWidth', 'borderRightWidth', 'borderBottomWidth', 'borderLeftWidth', 'borderTopStyle', 'borderBottomStyle',
+  'borderTopColor', 'borderRightColor', 'borderBottomColor', 'borderLeftColor',
+  'borderTopLeftRadius', 'borderTopRightRadius', 'borderBottomRightRadius', 'borderBottomLeftRadius',
+  'boxShadow', 'textShadow', 'outlineStyle', 'outlineWidth', 'outlineColor', 'outlineOffset',
+  'fontFamily', 'fontSize', 'fontWeight', 'fontStyle', 'lineHeight', 'letterSpacing', 'textAlign', 'textDecorationLine', 'textTransform',
+  'marginTop', 'marginRight', 'marginBottom', 'marginLeft', 'paddingTop', 'paddingRight', 'paddingBottom', 'paddingLeft',
+  'rowGap', 'columnGap', 'columnCount', 'maxWidth', 'minWidth', 'maxHeight', 'minHeight', 'zIndex', 'top', 'right', 'bottom', 'left',
+  'transitionProperty', 'transitionDuration', 'transitionTimingFunction', 'transitionDelay',
+  'animationName', 'animationDuration', 'animationTimingFunction', 'animationDelay', 'animationIterationCount',
+  'accentColor', 'caretColor', 'cursor', 'objectFit', 'content']; }
+
+function stylesScript() { return `(() => {
+  const props = ${JSON.stringify(styleProps())};
+  const pick = (s) => props.map((p) => s[p]).join('|');
+  const path = (el) => { const parts = []; for (let n = el; n && n.nodeType === 1; n = n.parentElement) {
+      const i = n.parentElement ? [...n.parentElement.children].indexOf(n) + 1 : 1;
+      parts.unshift(n.tagName.toLowerCase() + ':' + i + (n.classList.length ? '.' + [...n.classList].join('.') : '')); }
+    return parts.join('>'); };
+  const out = {};
+  for (const el of document.querySelectorAll('html, body, body *')) {
+    if (el.closest('script,style,noscript,svg')) continue;
+    const k = path(el);
+    out[k] = pick(getComputedStyle(el));
+    for (const pseudo of ['::before', '::after']) {
+      const s = getComputedStyle(el, pseudo);
+      if (s.content && s.content !== 'none' && s.content !== 'normal') out[k + pseudo] = pick(s);
+    }
+    if (el.matches('input,textarea')) out[k + '::placeholder'] = pick(getComputedStyle(el, '::placeholder'));
+  }
+  return out;
+})()`; }
+
+async function stylesSnapshot(outFile, base) {
+  const routes = ['/', '/agendas', '/obras-en-stock', '/privacidad', '/elegir', '/obra-personalizada', '/agenda-personalizada',
+    '/mi-libro', '/laminas', '/sobre-mi', '/contacto', '/terminos', '/no-existe'];
+  mkdirSync(dirname(outFile), { recursive: true });
+  let browser = await launch({ port: 9351 });
+  const result = { base, date: new Date().toISOString(), chrome: browser.version.Browser, props: styleProps(), pages: {}, failed: [] };
+  for (const width of [390, 1280]) {
+    for (const path of routes) {
+      const k = `${path}@${width}`;
+      for (let attempt = 1; attempt <= 2; attempt++) {
+        const page = await newPage(browser);
+        try {
+          await setViewport(page, width);
+          await goto(page, base + path, { maxMs: 15000 });
+          await sleep(1500);
+          await autoScroll(page, { stepMs: 150 });
+          result.pages[k] = await evaluate(page, stylesScript());
+          console.log(`ok ${k}: ${Object.keys(result.pages[k]).length} nodes`);
+          break;
+        } catch (e) {
+          console.log(`fail ${k} attempt ${attempt}: ${e.message}`);
+          if (attempt === 2) result.failed.push({ page: k, error: e.message });
+          await browser.close().catch(() => {});
+          browser = await launch({ port: 9351 });
+        } finally {
+          await page.close().catch(() => {});
+        }
+      }
+      writeFileSync(outFile, JSON.stringify(result));
+    }
+  }
+  await browser.close();
+  console.log(`saved ${outFile}; failed=${result.failed.length}`);
+}
+
+function stylesDiff(beforeFile, afterFile) {
+  const A = JSON.parse(readFileSync(beforeFile, 'utf8'));
+  const B = JSON.parse(readFileSync(afterFile, 'utf8'));
+  let total = 0;
+  for (const page of Object.keys({ ...A.pages, ...B.pages })) {
+    const a = A.pages[page] || {}, b = B.pages[page] || {};
+    const lines = [];
+    for (const k of Object.keys({ ...a, ...b })) {
+      if (!(k in a)) { lines.push(`+ ${k}`); continue; }
+      if (!(k in b)) { lines.push(`- ${k}`); continue; }
+      if (a[k] === b[k]) continue;
+      const va = a[k].split('|'), vb = b[k].split('|');
+      const changes = A.props.map((p, i) => (va[i] !== vb[i] ? `${p}: ${va[i]} -> ${vb[i]}` : null)).filter(Boolean);
+      lines.push(`~ ${k}\n      ${changes.join('\n      ')}`);
+    }
+    total += lines.length;
+    console.log(`\n## ${page}: ${Object.keys(a).length} vs ${Object.keys(b).length} nodes, ${lines.length ? lines.length + ' differences' : 'identical'}`);
+    for (const l of lines) console.log('  ' + l);
+  }
+  console.log(`\nTOTAL differences: ${total}`);
+}
