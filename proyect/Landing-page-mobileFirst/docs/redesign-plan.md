@@ -206,6 +206,7 @@ no como estética a copiar. Ver skill `apple-design`. Orden de autoridad: `DESIG
 - Cada prototipo muestra: hero, una sección de serie/obras destacadas, tarjeta de obra, CTA de WhatsApp y el menú abierto. Evaluar contra los principios de [design-principles.md](governance/design-principles.md) y contraste AA.
 - Elegir una dirección y registrarla en el decision-log (DL-002) con: escala tipográfica, uso del acento, proporciones de imagen, movimiento permitido y qué **no** se hace. Ajustar `DESIGN.md` en consecuencia.
 **Skills/agentes:** `frontend-design`, `apple-design`, `design-lead`, `design:design-critique`, `ux-a11y-reviewer` (contraste y legibilidad del prototipo).
+**Resultado:** Valentín eligió la **C, Inmersiva** (DL-013); falta el visto bueno de Ani.
 **Listo cuando:** Ani y Valentín eligen una dirección viendo los prototipos HTML en su propio navegador/celular (el agente no toma capturas); `DESIGN.md` refleja la decisión; las fases 7, 8 y 10b se escriben contra ese prototipo.
 **Riesgo:** bajo técnico; alto en subjetividad → limitar a una ronda de feedback y una de ajustes.
 

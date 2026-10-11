@@ -216,6 +216,8 @@ cercano y cuidado, como entrar a su taller o a una galería chica, y nunca compe
 
 Su obra pasó de un estilo **naif** a uno **neoexpresionista**: más gesto, más intensidad, más emoción, con las mismas mujeres de ojos grandes y el mismo color. Ese recorrido es parte de la identidad y se cuenta en el sitio (`docs/artist-story.md`); el diseño habla con la época actual sin renegar de la anterior.
 
+**Dirección de arte (DL-013): C, Inmersiva.** La obra ocupa la primera pantalla y el relato avanza escena por escena. El fondo oscuro (`ink`) va solo detrás de la obra (hero, serie, paspartú, menú, pie); el texto vive en lienzos claros. El violeta se usa solo en zonas claras y la obra nunca lleva texto encima. Prototipo de referencia: `design/art-direction/c-inmersiva.html`.
+
 Lo que no se toca sin aprobación explícita:
 
 - **La firma.** "anicarlomagno — artista plástica" en **Dancing Script**: es su logo y su voz manuscrita.
