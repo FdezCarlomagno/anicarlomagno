@@ -37,8 +37,8 @@ const ScrollToTopButton = () => {
 
     return (
         showButton && (
-            <button onClick={scrollToTop} className="scrollToTopBtn">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 my-icon">
+            <button onClick={scrollToTop} className="scrollToTopBtn" aria-label="Volver arriba">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 my-icon" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
                 </svg>
             </button>

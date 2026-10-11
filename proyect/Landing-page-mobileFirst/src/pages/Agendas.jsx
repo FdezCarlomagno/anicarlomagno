@@ -15,6 +15,10 @@ import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 import { Image } from '@unpic/react'
 
+const fotosAgendas = intAgendas.map((foto, i, arr) => ({
+    ...foto,
+    alt: `Agendas y cuadernos, foto ${i + 1} de ${arr.length}`,
+}));
 
 const Agendas = () => {
     const containerStyles = {
@@ -42,7 +46,7 @@ const Agendas = () => {
                         animate={{opacity: 1, x: 0}}
                         transition={{ duration: 0.5, delay: 0.2}}
                     className='paintingSliderContainer' style={containerStyles}>
-                        <PaintingSlider paintings={intAgendas} />
+                        <PaintingSlider paintings={fotosAgendas} />
                     </motion.div>
                 </div>
                 <div className='btn-section-agenda-container'>

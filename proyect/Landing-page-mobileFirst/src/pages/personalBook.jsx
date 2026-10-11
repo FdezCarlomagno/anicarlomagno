@@ -7,6 +7,16 @@ import imgs_Libro_Colorear from '../objects/libro-colorear.jsx';
 import imgs_Libro_Miradas from '../objects/libro-miradas.jsx';
 import { librosPrice } from '../components/config/LibrosPrice.js'
 
+const fotosLibroMiradas = imgs_Libro_Miradas.map((foto, i, arr) => ({
+    ...foto,
+    alt: `Libro «Miradas que narran», foto ${i + 1} de ${arr.length}`,
+}));
+
+const fotosLibroColorear = imgs_Libro_Colorear.map((foto, i, arr) => ({
+    ...foto,
+    alt: `Libro «Colores que cuentan historias», foto ${i + 1} de ${arr.length}`,
+}));
+
 const PersonalBook = () => {
     const { ref: titleRef, inView: titleInView } = useInView({
         triggerOnce: true,
@@ -63,7 +73,7 @@ const PersonalBook = () => {
                             animate={sliderInView1 ? { opacity: 1, x: 0 } : {}}
                             transition={{ duration: 0.5 }}
                         >
-                            <PaintingSlider paintings={imgs_Libro_Miradas} />
+                            <PaintingSlider paintings={fotosLibroMiradas} />
                         </motion.div>
                     </div>
                     <motion.h2
@@ -123,7 +133,7 @@ const PersonalBook = () => {
                             animate={sliderInView2 ? { opacity: 1, x: 0 } : {}}
                             transition={{ duration: 0.5 }}
                         >
-                            <PaintingSlider paintings={imgs_Libro_Colorear} />
+                            <PaintingSlider paintings={fotosLibroColorear} />
                         </motion.div>
                     </div>
                     <motion.h2

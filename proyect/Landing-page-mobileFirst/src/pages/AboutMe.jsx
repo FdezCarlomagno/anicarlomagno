@@ -200,7 +200,7 @@ const AboutMe = () => {
                             </div>
                             <div className="story-content">
                                 <h3 className="story-title">Familia</h3>
-                                <div className={`story-text ${activeStory === 'familia' ? 'expanded' : ''}`}>
+                                <div id="historia-familia" className={`story-text ${activeStory === 'familia' ? 'expanded' : ''}`}>
                                     <p>
                                         Terminé mis estudios en el Centro Polivalente de Arte, una escuela donde se
                                         respiraba arte y donde conocí el amor con el que he compartido <strong>mi vida</strong> durante
@@ -221,7 +221,12 @@ const AboutMe = () => {
                                         alcanzar y resonar en los <strong>corazones ajenos</strong>.
                                     </p>
                                 </div>
-                                <button className="story-toggle">
+                                <button
+                                    type="button"
+                                    className="story-toggle"
+                                    aria-expanded={activeStory === 'familia'}
+                                    aria-controls="historia-familia"
+                                >
                                     {activeStory === 'familia' ? 'Leer menos' : 'Leer más'}
                                 </button>
                             </div>
@@ -236,7 +241,7 @@ const AboutMe = () => {
                             </div>
                             <div className="story-content">
                                 <h3 className="story-title">Deseos...</h3>
-                                <div className={`story-text ${activeStory === 'deseo' ? 'expanded' : ''}`}>
+                                <div id="historia-deseo" className={`story-text ${activeStory === 'deseo' ? 'expanded' : ''}`}>
                                     <p>
                                         <strong>Deseo, deseo...</strong> que mis mujeres y que mis relatos traspasen la frontera,
                                         y que antes que mi piel se arrugue demasiado poder ver concretarse todo lo que anhelo.
@@ -253,7 +258,12 @@ const AboutMe = () => {
                                         que <strong>ama lo que hace</strong> y que se apasiona con todo lo que emprende.
                                     </p>
                                 </div>
-                                <button className="story-toggle">
+                                <button
+                                    type="button"
+                                    className="story-toggle"
+                                    aria-expanded={activeStory === 'deseo'}
+                                    aria-controls="historia-deseo"
+                                >
                                     {activeStory === 'deseo' ? 'Leer menos' : 'Leer más'}
                                 </button>
                             </div>

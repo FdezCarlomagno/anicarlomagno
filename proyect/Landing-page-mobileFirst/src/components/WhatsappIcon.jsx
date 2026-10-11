@@ -10,9 +10,9 @@ const WhatsappIcon = () => {
         window.open(whatsappURL, `_blank`)
     }
     return (
-        <div className="whatsappIcon" onClick={handleClickWsp}>
-            <Image src={wspIcon} />
-        </div>
+        <button type="button" className="whatsappIcon btn-reset" onClick={handleClickWsp} aria-label="Escribile a Ani por WhatsApp">
+            <Image src={wspIcon} alt="" />
+        </button>
     )
 }
 

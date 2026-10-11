@@ -605,13 +605,16 @@ const AgendaForm = () => {
 
                         <div className='gallery-thumbnails'>
                             {cuadernoA4Images.map((image, index) => (
-                                <div
+                                <button
                                     key={index}
-                                    className={`gallery-thumbnail ${selectedGalleryImage === index ? 'active' : ''}`}
+                                    type="button"
+                                    className={`gallery-thumbnail btn-reset ${selectedGalleryImage === index ? 'active' : ''}`}
                                     onClick={() => setSelectedGalleryImage(index)}
+                                    aria-label={`Ver foto ${index + 1}`}
+                                    aria-pressed={selectedGalleryImage === index}
                                 >
                                     <img src={image.src || "/placeholder.svg"} alt={image.alt} />
-                                </div>
+                                </button>
                             ))}
                         </div>
                     </div>
