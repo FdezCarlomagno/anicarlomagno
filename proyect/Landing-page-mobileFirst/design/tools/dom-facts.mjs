@@ -1,11 +1,13 @@
 // Phase 0: per-route DOM facts (a11y, headings, alt, targets, overflow) + console messages. No screenshots.
-// Usage: node design/tools/dom-facts.mjs [baseUrl]   (default http://localhost:5173)
+// Usage: node design/tools/dom-facts.mjs [baseUrl] [outFile]
+//        (defaults: http://localhost:5173, design/audits/raw/dom-facts.json)
 import { writeFileSync, mkdirSync } from 'node:fs';
+import { dirname } from 'node:path';
 import { launch, newPage, setViewport, goto, autoScroll, evaluate, click, sleep } from './cdp.mjs';
 
 const BASE = process.argv[2] || 'http://localhost:5173';
-const RAW = 'design/audits/raw';
-mkdirSync(RAW, { recursive: true });
+const OUT = process.argv[3] || 'design/audits/raw/dom-facts.json';
+mkdirSync(dirname(OUT), { recursive: true });
 
 const ROUTES = [
   ['/', 'home'],
@@ -71,7 +73,7 @@ const withTimeout = (p, ms, what) =>
 
 let browser = await launch();
 const results = { chrome: browser.version.Browser, base: BASE, date: new Date().toISOString(), routes: {}, failed: [] };
-const save = () => writeFileSync(`${RAW}/dom-facts.json`, JSON.stringify(results, null, 2));
+const save = () => writeFileSync(OUT, JSON.stringify(results, null, 2));
 
 async function measure(path, name, width) {
   const page = await newPage(browser);
