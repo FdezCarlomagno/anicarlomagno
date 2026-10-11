@@ -66,7 +66,7 @@ const Slider = () => {
                                 whileHover={{ scale: 1.1 }}
                                 whileTap={{ scale: 0.95 }}
                             >
-                                Mis obras <Image src={paintBrush} alt="Paintbrush logo" />
+                                Mis obras <Image src={paintBrush} alt="" />
                             </motion.button>
                         </motion.div>
                     </Link>

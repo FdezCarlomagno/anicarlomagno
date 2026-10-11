@@ -11,6 +11,7 @@ import a5 from '../components/imgs/agenda5.jpg';
 import a6 from '../components/imgs/agenda6.jpg';
 import a7 from '../components/imgs/agenda7.jpg';
 import a8 from '../components/imgs/agenda8.jpg';
+import agendaAlts from '../components/agendaAlts.js';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 import { Image } from '@unpic/react'
@@ -94,14 +95,14 @@ const Agendas = () => {
             </main>
             <div className='paintingImgs-section'>
                 <Link to="/agenda-personalizada" aria-label="Quiero mi agenda o cuaderno personalizado">
-                    <div className='paintingImgs-box'><Image src={a1} /></div>
-                    <div className='paintingImgs-box'><Image src={a2} /></div>
-                    <div className='paintingImgs-box'><Image src={a3} /></div>
-                    <div className='paintingImgs-box'><Image src={a4} /></div>
-                    <div className='paintingImgs-box'><Image src={a5} /></div>
-                    <div className='paintingImgs-box'><Image src={a6} /></div>
-                    <div className='paintingImgs-box'><Image src={a7} /></div>
-                    <div className='paintingImgs-box'><Image src={a8} /></div>
+                    <div className='paintingImgs-box'><Image src={a1} alt={agendaAlts[1]} /></div>
+                    <div className='paintingImgs-box'><Image src={a2} alt={agendaAlts[2]} /></div>
+                    <div className='paintingImgs-box'><Image src={a3} alt={agendaAlts[3]} /></div>
+                    <div className='paintingImgs-box'><Image src={a4} alt={agendaAlts[4]} /></div>
+                    <div className='paintingImgs-box'><Image src={a5} alt={agendaAlts[5]} /></div>
+                    <div className='paintingImgs-box'><Image src={a6} alt={agendaAlts[6]} /></div>
+                    <div className='paintingImgs-box'><Image src={a7} alt={agendaAlts[7]} /></div>
+                    <div className='paintingImgs-box'><Image src={a8} alt={agendaAlts[8]} /></div>
                 </Link>
             </div>
         </div>

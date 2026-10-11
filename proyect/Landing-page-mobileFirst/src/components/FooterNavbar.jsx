@@ -15,12 +15,12 @@ const FooterNavbar = () => {
         <div className="footer-navbar">
             <SocialMedia></SocialMedia>
             <nav className='navbar'>
-                <Link to="/"><li><Image className='svg' src={homeSvg} alt="Home svg" />INICIO</li></Link>
-                <Link to="/elegir"><li><Image className='svg' src={paintBrush} alt="Paintbrush svg" />OBRAS</li></Link>
-                <Link to="/agendas"><li><Image className='svg' src={bookSvg} alt="Book svg" />AGENDAS Y CUADERNOS</li></Link>
-                <Link to="/mi-libro"><li><Image className='svg' src={Eye} alt="Eye svg" />LIBROS</li></Link>
-                <Link to="/laminas"><li><Image className='svg' src={Printer} alt="Printer svg" />LÁMINAS</li></Link>
-                <Link to="/sobre-mi"><li><Image className='svg' src={diamondSvg} alt="Diamond svg" />SOBRE MI</li></Link>
+                <Link to="/"><li><Image className='svg' src={homeSvg} alt="" />INICIO</li></Link>
+                <Link to="/elegir"><li><Image className='svg' src={paintBrush} alt="" />OBRAS</li></Link>
+                <Link to="/agendas"><li><Image className='svg' src={bookSvg} alt="" />AGENDAS Y CUADERNOS</li></Link>
+                <Link to="/mi-libro"><li><Image className='svg' src={Eye} alt="" />LIBROS</li></Link>
+                <Link to="/laminas"><li><Image className='svg' src={Printer} alt="" />LÁMINAS</li></Link>
+                <Link to="/sobre-mi"><li><Image className='svg' src={diamondSvg} alt="" />SOBRE MI</li></Link>
             </nav>
         </div>
     )

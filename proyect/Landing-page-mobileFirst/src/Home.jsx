@@ -25,7 +25,7 @@ function Home() {
           <h2 className='titleAgendas'>Agendas</h2>
           <AgendaSection />
           <div className="viewOnInstagram">
-            <button className='btnViewOnInstagram'><a href="https://www.instagram.com/stories/highlights/17931595102459109/" target='blank'><Image src={igSvg} />Ver en instagram</a></button>
+            <button className='btnViewOnInstagram'><a href="https://www.instagram.com/stories/highlights/17931595102459109/" target='blank'><Image src={igSvg} alt="" />Ver en instagram</a></button>
           </div>
           
         </section>

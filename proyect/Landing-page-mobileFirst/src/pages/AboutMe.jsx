@@ -129,7 +129,7 @@ const AboutMe = () => {
                             transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
                         >
                             <span className="stat-icon">
-                                <img src={stat.icon} alt={stat.label} />
+                                <img src={stat.icon} alt="" />
                             </span>
 
                             <h3 className="stat-number">{stat.number}</h3>
