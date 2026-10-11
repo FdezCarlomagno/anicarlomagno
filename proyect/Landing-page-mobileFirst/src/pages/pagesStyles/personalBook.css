@@ -18,13 +18,13 @@
     border-radius: 1rem;
 }
 .personalBook .book-title {
-    font-family: "Dancing Script", cursive;
+    font-family: var(--font-script);
     font-size: 32px;
     font-weight: bold;
 }
 
 .personalBook-price .personalBook-price-value {
-    font-family: "Raleway", sans-serif;
+    font-family: var(--font-body);
     text-align: center;
     font-weight: bold;
 }
@@ -41,8 +41,8 @@
     color: rgb(255, 255, 83);
     font-size: 20px;
     background-color: rgba(184, 29, 29, 0.842);
-    padding: 6px 20px;
-    border-radius: 8px;
+    padding: var(--space-legacy-6) var(--space-legacy-20);
+    border-radius: var(--radius-md);
     z-index: 1;
 }
 
@@ -50,7 +50,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 1rem;
+    margin: var(--space-4);
 }
 .admin-price-container input {
     border: none;  
@@ -70,7 +70,7 @@
     }
     .buy-book-btn:hover {
         transform: scale(1.1);
-        background-color: rgba(137, 43, 226, 0.795);
+        background-color: var(--color-accent-a80);
     }
     .personalBook-img-container {
         width: 400px;
