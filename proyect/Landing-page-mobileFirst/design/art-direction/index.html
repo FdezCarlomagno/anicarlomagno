@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Fase 4b: direcciones de arte | anicarlomagno</title>
+<!-- El plugin SEO de Vite exige estos marcadores en todo HTML que sirve; dentro de <template> lo que inyecta queda inerte. -->
+<template><!-- seo:start --><!-- seo:end --></template>
+<link rel="stylesheet" href="../../src/styles/fonts.css">
+<link rel="stylesheet" href="../../src/styles/tokens.css">
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-ink);
+    background: var(--color-white);
+  }
+  main { max-width: 40rem; margin-inline: auto; padding: var(--space-8) var(--space-5) var(--space-12); }
+  h1 { font-size: 1.5rem; line-height: 1.25; margin: 0 0 var(--space-3); }
+  h2 { font-size: 1.25rem; line-height: 1.3; margin: 0 0 var(--space-2); }
+  p { margin: 0 0 var(--space-4); }
+  a { color: var(--color-accent); text-underline-offset: 0.2em; }
+  a:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 3px; }
+  ol { list-style: none; margin: var(--space-8) 0; padding: 0; display: grid; gap: var(--space-4); }
+  li { border: 1px solid var(--color-gray-300); border-radius: var(--radius-md); padding: var(--space-5); }
+  .abrir { display: inline-flex; align-items: center; min-height: 44px; font-weight: 600; font-size: 1.125rem; }
+  .menu { display: inline-flex; align-items: center; min-height: 44px; margin-left: var(--space-4); }
+  .nota { background: var(--color-aliceblue); border-radius: var(--radius-md); padding: var(--space-5); }
+  code { font-size: 1rem; overflow-wrap: anywhere; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Tres direcciones para la Home</h1>
+  <p>Prototipos estáticos de la Fase 4b, pensados para el celular. Mismo contenido en los tres, así se compara solo la presentación. Lo marcado como Provisorio lo completa Ani.</p>
+
+  <ol>
+    <li>
+      <h2>A. Galería silenciosa</h2>
+      <p>Fondo blanco, la obra a lo ancho y una cartela de museo debajo de cada una. La firma queda en el logo; todo lo demás es Raleway.</p>
+      <a class="abrir" href="a-galeria.html">Abrir A</a><a class="menu" href="a-galeria.html#menu">Ver A con el menú abierto</a>
+    </li>
+    <li>
+      <h2>B. Editorial</h2>
+      <p>La firma en grande como título, capítulos en Dancing Script y obras corridas a un lado y al otro, como una revista de arte.</p>
+      <a class="abrir" href="b-editorial.html">Abrir B</a><a class="menu" href="b-editorial.html#menu">Ver B con el menú abierto</a>
+    </li>
+    <li>
+      <h2>C. Inmersiva</h2>
+      <p>Abre con una obra sobre fondo oscuro a pantalla completa y alterna escenas claras y oscuras. Es la única con un movimiento suave al aparecer las obras.</p>
+      <a class="abrir" href="c-inmersiva.html">Abrir C</a><a class="menu" href="c-inmersiva.html#menu">Ver C con el menú abierto</a>
+    </li>
+  </ol>
+
+  <div class="nota">
+    <h2>Cómo verlas en el celular</h2>
+    <p>En la compu, desde la carpeta del proyecto: <code>npm run dev -- --host</code>. Vite muestra una dirección “Network”; en el celular, conectado al mismo wifi, abrí esa dirección agregando <code>/design/art-direction/</code> al final.</p>
+    <p>La vista previa de Vercel no incluye esta carpeta.</p>
+  </div>
+</main>
+</body>
+</html>

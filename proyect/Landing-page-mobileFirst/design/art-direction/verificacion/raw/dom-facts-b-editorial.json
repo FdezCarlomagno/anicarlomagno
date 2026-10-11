@@ -1,0 +1,1560 @@
+{
+  "chrome": "Chrome/154.0.8037.93",
+  "base": "http://localhost:5173/design/art-direction/b-editorial.html?ruta=",
+  "date": "2026-10-11T23:41:58.468Z",
+  "routes": {
+    "home-390": {
+      "url": "/design/art-direction/b-editorial.html",
+      "title": "Prototipo B: Editorial | anicarlomagno",
+      "lang": "es-AR",
+      "viewportMeta": "width=device-width, initial-scale=1",
+      "headings": [
+        "H1: anicarlomagno artista plástica",
+        "H2: Mariposas",
+        "H2: Obra disponible",
+        "H3: Bahía",
+        "H2: Mi recorrido",
+        "H3: [Nombre de la primera etapa] Provisorio",
+        "H3: [Nombre de la etapa actual] Provisorio",
+        "H2: ¿Te gustó una obra?"
+      ],
+      "h1Count": 1,
+      "mainLandmarks": 1,
+      "images": 9,
+      "imgsWithoutAlt": [],
+      "imgsEmptyAlt": 0,
+      "imgsAltSamples": [
+        "Esmeralda: mujer de ojos verdes con pañuelo verde sobre un fondo rojo con manchas doradas.",
+        "Veil: mujer de pelo largo con mariposas celestes y naranjas que le cubren los ojos, sobre un fondo de trazos rojizos.",
+        "Vanessa: mujer con mariposas azules y amarillas sobre los ojos, pintada con trazos gruesos de colores sobre fondo negro.",
+        "Violet: mujer de pelo violeta con una mariposa rosa sobre un ojo y la mano en los labios, rodeada de mariposas.",
+        "Bahía: mujer de rostro hecho de manchas de color, con caracoles en el pelo, turbante a rayas y collares, sobre un fondo de trazos azules con estrellas de mar.",
+        "Joven Frida: retrato de mujer con trenzas y moño rojo, cejas juntas y collar, sobre un fondo verde con rosas y mariposas monarca.",
+        "Selva: mujer con una corona de flores enormes y una rosa azul que le tapa un ojo, sobre un fondo rojo.",
+        "Euphoria: rostro de mujer de grandes ojos marrones, pintado con espátula en pinceladas gruesas de rosa, fucsia, celeste y negro.",
+        "Princesa Azul: mujer de ojos celestes con corona y aros dorados, entre chorreados turquesa y un fondo negro."
+      ],
+      "imgsWithoutWidthHeightAttrs": 0,
+      "imgsLazy": 8,
+      "imgsLoaded": 9,
+      "videos": [],
+      "iframes": [],
+      "nestedInteractive": [],
+      "buttonsWithoutName": 0,
+      "linksTarget": [
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola%20Ani%2C%20",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola!%2C%20estoy",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola%20Ani%2C%20",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.instagram.com/anicarlomagno_painting/",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola%20Ani%2C%20",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      ],
+      "smallTargets": [],
+      "clickableNonSemantic": [],
+      "inputsFontSizeUnder16": [],
+      "docScrollWidth": 390,
+      "clientWidth": 390,
+      "overflowingElements": [],
+      "pageHeight": 5996,
+      "imgsLoadedAtLoad": 3,
+      "consoleMessages": [],
+      "menuOpen": {
+        "buttonText": "Menú",
+        "ariaLabel": null,
+        "ariaExpanded": "true",
+        "ariaControls": "menu",
+        "btnSize": [
+          77,
+          44
+        ],
+        "links": [
+          {
+            "text": "Inicio",
+            "h": 56,
+            "w": 350
+          },
+          {
+            "text": "Obras",
+            "h": 56,
+            "w": 350
+          },
+          {
+            "text": "Agendas y cuadernos",
+            "h": 56,
+            "w": 350
+          },
+          {
+            "text": "Libros",
+            "h": 56,
+            "w": 350
+          },
+          {
+            "text": "Láminas",
+            "h": 56,
+            "w": 350
+          },
+          {
+            "text": "Sobre mí",
+            "h": 56,
+            "w": 350
+          },
+          {
+            "text": "Contacto",
+            "h": 56,
+            "w": 350
+          },
+          {
+            "text": "Escribime por WhatsApp\n(se abre en una pestaña nueva)",
+            "h": 50,
+            "w": 235
+          }
+        ]
+      }
+    },
+    "elegir-390": {
+      "url": "/design/art-direction/b-editorial.html",
+      "title": "Prototipo B: Editorial | anicarlomagno",
+      "lang": "es-AR",
+      "viewportMeta": "width=device-width, initial-scale=1",
+      "headings": [
+        "H1: anicarlomagno artista plástica",
+        "H2: Mariposas",
+        "H2: Obra disponible",
+        "H3: Bahía",
+        "H2: Mi recorrido",
+        "H3: [Nombre de la primera etapa] Provisorio",
+        "H3: [Nombre de la etapa actual] Provisorio",
+        "H2: ¿Te gustó una obra?"
+      ],
+      "h1Count": 1,
+      "mainLandmarks": 1,
+      "images": 9,
+      "imgsWithoutAlt": [],
+      "imgsEmptyAlt": 0,
+      "imgsAltSamples": [
+        "Esmeralda: mujer de ojos verdes con pañuelo verde sobre un fondo rojo con manchas doradas.",
+        "Veil: mujer de pelo largo con mariposas celestes y naranjas que le cubren los ojos, sobre un fondo de trazos rojizos.",
+        "Vanessa: mujer con mariposas azules y amarillas sobre los ojos, pintada con trazos gruesos de colores sobre fondo negro.",
+        "Violet: mujer de pelo violeta con una mariposa rosa sobre un ojo y la mano en los labios, rodeada de mariposas.",
+        "Bahía: mujer de rostro hecho de manchas de color, con caracoles en el pelo, turbante a rayas y collares, sobre un fondo de trazos azules con estrellas de mar.",
+        "Joven Frida: retrato de mujer con trenzas y moño rojo, cejas juntas y collar, sobre un fondo verde con rosas y mariposas monarca.",
+        "Selva: mujer con una corona de flores enormes y una rosa azul que le tapa un ojo, sobre un fondo rojo.",
+        "Euphoria: rostro de mujer de grandes ojos marrones, pintado con espátula en pinceladas gruesas de rosa, fucsia, celeste y negro.",
+        "Princesa Azul: mujer de ojos celestes con corona y aros dorados, entre chorreados turquesa y un fondo negro."
+      ],
+      "imgsWithoutWidthHeightAttrs": 0,
+      "imgsLazy": 8,
+      "imgsLoaded": 9,
+      "videos": [],
+      "iframes": [],
+      "nestedInteractive": [],
+      "buttonsWithoutName": 0,
+      "linksTarget": [
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola%20Ani%2C%20",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola!%2C%20estoy",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola%20Ani%2C%20",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.instagram.com/anicarlomagno_painting/",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola%20Ani%2C%20",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      ],
+      "smallTargets": [],
+      "clickableNonSemantic": [],
+      "inputsFontSizeUnder16": [],
+      "docScrollWidth": 390,
+      "clientWidth": 390,
+      "overflowingElements": [],
+      "pageHeight": 5996,
+      "imgsLoadedAtLoad": 3,
+      "consoleMessages": []
+    },
+    "obras-en-stock-390": {
+      "url": "/design/art-direction/b-editorial.html",
+      "title": "Prototipo B: Editorial | anicarlomagno",
+      "lang": "es-AR",
+      "viewportMeta": "width=device-width, initial-scale=1",
+      "headings": [
+        "H1: anicarlomagno artista plástica",
+        "H2: Mariposas",
+        "H2: Obra disponible",
+        "H3: Bahía",
+        "H2: Mi recorrido",
+        "H3: [Nombre de la primera etapa] Provisorio",
+        "H3: [Nombre de la etapa actual] Provisorio",
+        "H2: ¿Te gustó una obra?"
+      ],
+      "h1Count": 1,
+      "mainLandmarks": 1,
+      "images": 9,
+      "imgsWithoutAlt": [],
+      "imgsEmptyAlt": 0,
+      "imgsAltSamples": [
+        "Esmeralda: mujer de ojos verdes con pañuelo verde sobre un fondo rojo con manchas doradas.",
+        "Veil: mujer de pelo largo con mariposas celestes y naranjas que le cubren los ojos, sobre un fondo de trazos rojizos.",
+        "Vanessa: mujer con mariposas azules y amarillas sobre los ojos, pintada con trazos gruesos de colores sobre fondo negro.",
+        "Violet: mujer de pelo violeta con una mariposa rosa sobre un ojo y la mano en los labios, rodeada de mariposas.",
+        "Bahía: mujer de rostro hecho de manchas de color, con caracoles en el pelo, turbante a rayas y collares, sobre un fondo de trazos azules con estrellas de mar.",
+        "Joven Frida: retrato de mujer con trenzas y moño rojo, cejas juntas y collar, sobre un fondo verde con rosas y mariposas monarca.",
+        "Selva: mujer con una corona de flores enormes y una rosa azul que le tapa un ojo, sobre un fondo rojo.",
+        "Euphoria: rostro de mujer de grandes ojos marrones, pintado con espátula en pinceladas gruesas de rosa, fucsia, celeste y negro.",
+        "Princesa Azul: mujer de ojos celestes con corona y aros dorados, entre chorreados turquesa y un fondo negro."
+      ],
+      "imgsWithoutWidthHeightAttrs": 0,
+      "imgsLazy": 8,
+      "imgsLoaded": 9,
+      "videos": [],
+      "iframes": [],
+      "nestedInteractive": [],
+      "buttonsWithoutName": 0,
+      "linksTarget": [
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola%20Ani%2C%20",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola!%2C%20estoy",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola%20Ani%2C%20",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.instagram.com/anicarlomagno_painting/",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola%20Ani%2C%20",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      ],
+      "smallTargets": [],
+      "clickableNonSemantic": [],
+      "inputsFontSizeUnder16": [],
+      "docScrollWidth": 390,
+      "clientWidth": 390,
+      "overflowingElements": [],
+      "pageHeight": 5996,
+      "imgsLoadedAtLoad": 3,
+      "consoleMessages": []
+    },
+    "obra-personalizada-390": {
+      "url": "/design/art-direction/b-editorial.html",
+      "title": "Prototipo B: Editorial | anicarlomagno",
+      "lang": "es-AR",
+      "viewportMeta": "width=device-width, initial-scale=1",
+      "headings": [
+        "H1: anicarlomagno artista plástica",
+        "H2: Mariposas",
+        "H2: Obra disponible",
+        "H3: Bahía",
+        "H2: Mi recorrido",
+        "H3: [Nombre de la primera etapa] Provisorio",
+        "H3: [Nombre de la etapa actual] Provisorio",
+        "H2: ¿Te gustó una obra?"
+      ],
+      "h1Count": 1,
+      "mainLandmarks": 1,
+      "images": 9,
+      "imgsWithoutAlt": [],
+      "imgsEmptyAlt": 0,
+      "imgsAltSamples": [
+        "Esmeralda: mujer de ojos verdes con pañuelo verde sobre un fondo rojo con manchas doradas.",
+        "Veil: mujer de pelo largo con mariposas celestes y naranjas que le cubren los ojos, sobre un fondo de trazos rojizos.",
+        "Vanessa: mujer con mariposas azules y amarillas sobre los ojos, pintada con trazos gruesos de colores sobre fondo negro.",
+        "Violet: mujer de pelo violeta con una mariposa rosa sobre un ojo y la mano en los labios, rodeada de mariposas.",
+        "Bahía: mujer de rostro hecho de manchas de color, con caracoles en el pelo, turbante a rayas y collares, sobre un fondo de trazos azules con estrellas de mar.",
+        "Joven Frida: retrato de mujer con trenzas y moño rojo, cejas juntas y collar, sobre un fondo verde con rosas y mariposas monarca.",
+        "Selva: mujer con una corona de flores enormes y una rosa azul que le tapa un ojo, sobre un fondo rojo.",
+        "Euphoria: rostro de mujer de grandes ojos marrones, pintado con espátula en pinceladas gruesas de rosa, fucsia, celeste y negro.",
+        "Princesa Azul: mujer de ojos celestes con corona y aros dorados, entre chorreados turquesa y un fondo negro."
+      ],
+      "imgsWithoutWidthHeightAttrs": 0,
+      "imgsLazy": 8,
+      "imgsLoaded": 9,
+      "videos": [],
+      "iframes": [],
+      "nestedInteractive": [],
+      "buttonsWithoutName": 0,
+      "linksTarget": [
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola%20Ani%2C%20",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola!%2C%20estoy",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola%20Ani%2C%20",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.instagram.com/anicarlomagno_painting/",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola%20Ani%2C%20",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      ],
+      "smallTargets": [],
+      "clickableNonSemantic": [],
+      "inputsFontSizeUnder16": [],
+      "docScrollWidth": 390,
+      "clientWidth": 390,
+      "overflowingElements": [],
+      "pageHeight": 5996,
+      "imgsLoadedAtLoad": 3,
+      "consoleMessages": []
+    },
+    "agendas-390": {
+      "url": "/design/art-direction/b-editorial.html",
+      "title": "Prototipo B: Editorial | anicarlomagno",
+      "lang": "es-AR",
+      "viewportMeta": "width=device-width, initial-scale=1",
+      "headings": [
+        "H1: anicarlomagno artista plástica",
+        "H2: Mariposas",
+        "H2: Obra disponible",
+        "H3: Bahía",
+        "H2: Mi recorrido",
+        "H3: [Nombre de la primera etapa] Provisorio",
+        "H3: [Nombre de la etapa actual] Provisorio",
+        "H2: ¿Te gustó una obra?"
+      ],
+      "h1Count": 1,
+      "mainLandmarks": 1,
+      "images": 9,
+      "imgsWithoutAlt": [],
+      "imgsEmptyAlt": 0,
+      "imgsAltSamples": [
+        "Esmeralda: mujer de ojos verdes con pañuelo verde sobre un fondo rojo con manchas doradas.",
+        "Veil: mujer de pelo largo con mariposas celestes y naranjas que le cubren los ojos, sobre un fondo de trazos rojizos.",
+        "Vanessa: mujer con mariposas azules y amarillas sobre los ojos, pintada con trazos gruesos de colores sobre fondo negro.",
+        "Violet: mujer de pelo violeta con una mariposa rosa sobre un ojo y la mano en los labios, rodeada de mariposas.",
+        "Bahía: mujer de rostro hecho de manchas de color, con caracoles en el pelo, turbante a rayas y collares, sobre un fondo de trazos azules con estrellas de mar.",
+        "Joven Frida: retrato de mujer con trenzas y moño rojo, cejas juntas y collar, sobre un fondo verde con rosas y mariposas monarca.",
+        "Selva: mujer con una corona de flores enormes y una rosa azul que le tapa un ojo, sobre un fondo rojo.",
+        "Euphoria: rostro de mujer de grandes ojos marrones, pintado con espátula en pinceladas gruesas de rosa, fucsia, celeste y negro.",
+        "Princesa Azul: mujer de ojos celestes con corona y aros dorados, entre chorreados turquesa y un fondo negro."
+      ],
+      "imgsWithoutWidthHeightAttrs": 0,
+      "imgsLazy": 8,
+      "imgsLoaded": 9,
+      "videos": [],
+      "iframes": [],
+      "nestedInteractive": [],
+      "buttonsWithoutName": 0,
+      "linksTarget": [
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola%20Ani%2C%20",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola!%2C%20estoy",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola%20Ani%2C%20",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.instagram.com/anicarlomagno_painting/",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola%20Ani%2C%20",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      ],
+      "smallTargets": [],
+      "clickableNonSemantic": [],
+      "inputsFontSizeUnder16": [],
+      "docScrollWidth": 390,
+      "clientWidth": 390,
+      "overflowingElements": [],
+      "pageHeight": 5996,
+      "imgsLoadedAtLoad": 3,
+      "consoleMessages": []
+    },
+    "agenda-personalizada-390": {
+      "url": "/design/art-direction/b-editorial.html",
+      "title": "Prototipo B: Editorial | anicarlomagno",
+      "lang": "es-AR",
+      "viewportMeta": "width=device-width, initial-scale=1",
+      "headings": [
+        "H1: anicarlomagno artista plástica",
+        "H2: Mariposas",
+        "H2: Obra disponible",
+        "H3: Bahía",
+        "H2: Mi recorrido",
+        "H3: [Nombre de la primera etapa] Provisorio",
+        "H3: [Nombre de la etapa actual] Provisorio",
+        "H2: ¿Te gustó una obra?"
+      ],
+      "h1Count": 1,
+      "mainLandmarks": 1,
+      "images": 9,
+      "imgsWithoutAlt": [],
+      "imgsEmptyAlt": 0,
+      "imgsAltSamples": [
+        "Esmeralda: mujer de ojos verdes con pañuelo verde sobre un fondo rojo con manchas doradas.",
+        "Veil: mujer de pelo largo con mariposas celestes y naranjas que le cubren los ojos, sobre un fondo de trazos rojizos.",
+        "Vanessa: mujer con mariposas azules y amarillas sobre los ojos, pintada con trazos gruesos de colores sobre fondo negro.",
+        "Violet: mujer de pelo violeta con una mariposa rosa sobre un ojo y la mano en los labios, rodeada de mariposas.",
+        "Bahía: mujer de rostro hecho de manchas de color, con caracoles en el pelo, turbante a rayas y collares, sobre un fondo de trazos azules con estrellas de mar.",
+        "Joven Frida: retrato de mujer con trenzas y moño rojo, cejas juntas y collar, sobre un fondo verde con rosas y mariposas monarca.",
+        "Selva: mujer con una corona de flores enormes y una rosa azul que le tapa un ojo, sobre un fondo rojo.",
+        "Euphoria: rostro de mujer de grandes ojos marrones, pintado con espátula en pinceladas gruesas de rosa, fucsia, celeste y negro.",
+        "Princesa Azul: mujer de ojos celestes con corona y aros dorados, entre chorreados turquesa y un fondo negro."
+      ],
+      "imgsWithoutWidthHeightAttrs": 0,
+      "imgsLazy": 8,
+      "imgsLoaded": 9,
+      "videos": [],
+      "iframes": [],
+      "nestedInteractive": [],
+      "buttonsWithoutName": 0,
+      "linksTarget": [
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola%20Ani%2C%20",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola!%2C%20estoy",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola%20Ani%2C%20",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.instagram.com/anicarlomagno_painting/",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola%20Ani%2C%20",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      ],
+      "smallTargets": [],
+      "clickableNonSemantic": [],
+      "inputsFontSizeUnder16": [],
+      "docScrollWidth": 390,
+      "clientWidth": 390,
+      "overflowingElements": [],
+      "pageHeight": 5996,
+      "imgsLoadedAtLoad": 3,
+      "consoleMessages": []
+    },
+    "mi-libro-390": {
+      "url": "/design/art-direction/b-editorial.html",
+      "title": "Prototipo B: Editorial | anicarlomagno",
+      "lang": "es-AR",
+      "viewportMeta": "width=device-width, initial-scale=1",
+      "headings": [
+        "H1: anicarlomagno artista plástica",
+        "H2: Mariposas",
+        "H2: Obra disponible",
+        "H3: Bahía",
+        "H2: Mi recorrido",
+        "H3: [Nombre de la primera etapa] Provisorio",
+        "H3: [Nombre de la etapa actual] Provisorio",
+        "H2: ¿Te gustó una obra?"
+      ],
+      "h1Count": 1,
+      "mainLandmarks": 1,
+      "images": 9,
+      "imgsWithoutAlt": [],
+      "imgsEmptyAlt": 0,
+      "imgsAltSamples": [
+        "Esmeralda: mujer de ojos verdes con pañuelo verde sobre un fondo rojo con manchas doradas.",
+        "Veil: mujer de pelo largo con mariposas celestes y naranjas que le cubren los ojos, sobre un fondo de trazos rojizos.",
+        "Vanessa: mujer con mariposas azules y amarillas sobre los ojos, pintada con trazos gruesos de colores sobre fondo negro.",
+        "Violet: mujer de pelo violeta con una mariposa rosa sobre un ojo y la mano en los labios, rodeada de mariposas.",
+        "Bahía: mujer de rostro hecho de manchas de color, con caracoles en el pelo, turbante a rayas y collares, sobre un fondo de trazos azules con estrellas de mar.",
+        "Joven Frida: retrato de mujer con trenzas y moño rojo, cejas juntas y collar, sobre un fondo verde con rosas y mariposas monarca.",
+        "Selva: mujer con una corona de flores enormes y una rosa azul que le tapa un ojo, sobre un fondo rojo.",
+        "Euphoria: rostro de mujer de grandes ojos marrones, pintado con espátula en pinceladas gruesas de rosa, fucsia, celeste y negro.",
+        "Princesa Azul: mujer de ojos celestes con corona y aros dorados, entre chorreados turquesa y un fondo negro."
+      ],
+      "imgsWithoutWidthHeightAttrs": 0,
+      "imgsLazy": 8,
+      "imgsLoaded": 9,
+      "videos": [],
+      "iframes": [],
+      "nestedInteractive": [],
+      "buttonsWithoutName": 0,
+      "linksTarget": [
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola%20Ani%2C%20",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola!%2C%20estoy",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola%20Ani%2C%20",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.instagram.com/anicarlomagno_painting/",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola%20Ani%2C%20",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      ],
+      "smallTargets": [],
+      "clickableNonSemantic": [],
+      "inputsFontSizeUnder16": [],
+      "docScrollWidth": 390,
+      "clientWidth": 390,
+      "overflowingElements": [],
+      "pageHeight": 5996,
+      "imgsLoadedAtLoad": 3,
+      "consoleMessages": []
+    },
+    "laminas-390": {
+      "url": "/design/art-direction/b-editorial.html",
+      "title": "Prototipo B: Editorial | anicarlomagno",
+      "lang": "es-AR",
+      "viewportMeta": "width=device-width, initial-scale=1",
+      "headings": [
+        "H1: anicarlomagno artista plástica",
+        "H2: Mariposas",
+        "H2: Obra disponible",
+        "H3: Bahía",
+        "H2: Mi recorrido",
+        "H3: [Nombre de la primera etapa] Provisorio",
+        "H3: [Nombre de la etapa actual] Provisorio",
+        "H2: ¿Te gustó una obra?"
+      ],
+      "h1Count": 1,
+      "mainLandmarks": 1,
+      "images": 9,
+      "imgsWithoutAlt": [],
+      "imgsEmptyAlt": 0,
+      "imgsAltSamples": [
+        "Esmeralda: mujer de ojos verdes con pañuelo verde sobre un fondo rojo con manchas doradas.",
+        "Veil: mujer de pelo largo con mariposas celestes y naranjas que le cubren los ojos, sobre un fondo de trazos rojizos.",
+        "Vanessa: mujer con mariposas azules y amarillas sobre los ojos, pintada con trazos gruesos de colores sobre fondo negro.",
+        "Violet: mujer de pelo violeta con una mariposa rosa sobre un ojo y la mano en los labios, rodeada de mariposas.",
+        "Bahía: mujer de rostro hecho de manchas de color, con caracoles en el pelo, turbante a rayas y collares, sobre un fondo de trazos azules con estrellas de mar.",
+        "Joven Frida: retrato de mujer con trenzas y moño rojo, cejas juntas y collar, sobre un fondo verde con rosas y mariposas monarca.",
+        "Selva: mujer con una corona de flores enormes y una rosa azul que le tapa un ojo, sobre un fondo rojo.",
+        "Euphoria: rostro de mujer de grandes ojos marrones, pintado con espátula en pinceladas gruesas de rosa, fucsia, celeste y negro.",
+        "Princesa Azul: mujer de ojos celestes con corona y aros dorados, entre chorreados turquesa y un fondo negro."
+      ],
+      "imgsWithoutWidthHeightAttrs": 0,
+      "imgsLazy": 8,
+      "imgsLoaded": 9,
+      "videos": [],
+      "iframes": [],
+      "nestedInteractive": [],
+      "buttonsWithoutName": 0,
+      "linksTarget": [
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola%20Ani%2C%20",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola!%2C%20estoy",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola%20Ani%2C%20",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.instagram.com/anicarlomagno_painting/",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola%20Ani%2C%20",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      ],
+      "smallTargets": [],
+      "clickableNonSemantic": [],
+      "inputsFontSizeUnder16": [],
+      "docScrollWidth": 390,
+      "clientWidth": 390,
+      "overflowingElements": [],
+      "pageHeight": 5996,
+      "imgsLoadedAtLoad": 3,
+      "consoleMessages": []
+    },
+    "sobre-mi-390": {
+      "url": "/design/art-direction/b-editorial.html",
+      "title": "Prototipo B: Editorial | anicarlomagno",
+      "lang": "es-AR",
+      "viewportMeta": "width=device-width, initial-scale=1",
+      "headings": [
+        "H1: anicarlomagno artista plástica",
+        "H2: Mariposas",
+        "H2: Obra disponible",
+        "H3: Bahía",
+        "H2: Mi recorrido",
+        "H3: [Nombre de la primera etapa] Provisorio",
+        "H3: [Nombre de la etapa actual] Provisorio",
+        "H2: ¿Te gustó una obra?"
+      ],
+      "h1Count": 1,
+      "mainLandmarks": 1,
+      "images": 9,
+      "imgsWithoutAlt": [],
+      "imgsEmptyAlt": 0,
+      "imgsAltSamples": [
+        "Esmeralda: mujer de ojos verdes con pañuelo verde sobre un fondo rojo con manchas doradas.",
+        "Veil: mujer de pelo largo con mariposas celestes y naranjas que le cubren los ojos, sobre un fondo de trazos rojizos.",
+        "Vanessa: mujer con mariposas azules y amarillas sobre los ojos, pintada con trazos gruesos de colores sobre fondo negro.",
+        "Violet: mujer de pelo violeta con una mariposa rosa sobre un ojo y la mano en los labios, rodeada de mariposas.",
+        "Bahía: mujer de rostro hecho de manchas de color, con caracoles en el pelo, turbante a rayas y collares, sobre un fondo de trazos azules con estrellas de mar.",
+        "Joven Frida: retrato de mujer con trenzas y moño rojo, cejas juntas y collar, sobre un fondo verde con rosas y mariposas monarca.",
+        "Selva: mujer con una corona de flores enormes y una rosa azul que le tapa un ojo, sobre un fondo rojo.",
+        "Euphoria: rostro de mujer de grandes ojos marrones, pintado con espátula en pinceladas gruesas de rosa, fucsia, celeste y negro.",
+        "Princesa Azul: mujer de ojos celestes con corona y aros dorados, entre chorreados turquesa y un fondo negro."
+      ],
+      "imgsWithoutWidthHeightAttrs": 0,
+      "imgsLazy": 8,
+      "imgsLoaded": 9,
+      "videos": [],
+      "iframes": [],
+      "nestedInteractive": [],
+      "buttonsWithoutName": 0,
+      "linksTarget": [
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola%20Ani%2C%20",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola!%2C%20estoy",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola%20Ani%2C%20",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.instagram.com/anicarlomagno_painting/",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola%20Ani%2C%20",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      ],
+      "smallTargets": [],
+      "clickableNonSemantic": [],
+      "inputsFontSizeUnder16": [],
+      "docScrollWidth": 390,
+      "clientWidth": 390,
+      "overflowingElements": [],
+      "pageHeight": 5996,
+      "imgsLoadedAtLoad": 3,
+      "consoleMessages": []
+    },
+    "contacto-390": {
+      "url": "/design/art-direction/b-editorial.html",
+      "title": "Prototipo B: Editorial | anicarlomagno",
+      "lang": "es-AR",
+      "viewportMeta": "width=device-width, initial-scale=1",
+      "headings": [
+        "H1: anicarlomagno artista plástica",
+        "H2: Mariposas",
+        "H2: Obra disponible",
+        "H3: Bahía",
+        "H2: Mi recorrido",
+        "H3: [Nombre de la primera etapa] Provisorio",
+        "H3: [Nombre de la etapa actual] Provisorio",
+        "H2: ¿Te gustó una obra?"
+      ],
+      "h1Count": 1,
+      "mainLandmarks": 1,
+      "images": 9,
+      "imgsWithoutAlt": [],
+      "imgsEmptyAlt": 0,
+      "imgsAltSamples": [
+        "Esmeralda: mujer de ojos verdes con pañuelo verde sobre un fondo rojo con manchas doradas.",
+        "Veil: mujer de pelo largo con mariposas celestes y naranjas que le cubren los ojos, sobre un fondo de trazos rojizos.",
+        "Vanessa: mujer con mariposas azules y amarillas sobre los ojos, pintada con trazos gruesos de colores sobre fondo negro.",
+        "Violet: mujer de pelo violeta con una mariposa rosa sobre un ojo y la mano en los labios, rodeada de mariposas.",
+        "Bahía: mujer de rostro hecho de manchas de color, con caracoles en el pelo, turbante a rayas y collares, sobre un fondo de trazos azules con estrellas de mar.",
+        "Joven Frida: retrato de mujer con trenzas y moño rojo, cejas juntas y collar, sobre un fondo verde con rosas y mariposas monarca.",
+        "Selva: mujer con una corona de flores enormes y una rosa azul que le tapa un ojo, sobre un fondo rojo.",
+        "Euphoria: rostro de mujer de grandes ojos marrones, pintado con espátula en pinceladas gruesas de rosa, fucsia, celeste y negro.",
+        "Princesa Azul: mujer de ojos celestes con corona y aros dorados, entre chorreados turquesa y un fondo negro."
+      ],
+      "imgsWithoutWidthHeightAttrs": 0,
+      "imgsLazy": 8,
+      "imgsLoaded": 9,
+      "videos": [],
+      "iframes": [],
+      "nestedInteractive": [],
+      "buttonsWithoutName": 0,
+      "linksTarget": [
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola%20Ani%2C%20",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola!%2C%20estoy",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola%20Ani%2C%20",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.instagram.com/anicarlomagno_painting/",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola%20Ani%2C%20",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      ],
+      "smallTargets": [],
+      "clickableNonSemantic": [],
+      "inputsFontSizeUnder16": [],
+      "docScrollWidth": 390,
+      "clientWidth": 390,
+      "overflowingElements": [],
+      "pageHeight": 5996,
+      "imgsLoadedAtLoad": 3,
+      "consoleMessages": []
+    },
+    "home-1280": {
+      "url": "/design/art-direction/b-editorial.html",
+      "title": "Prototipo B: Editorial | anicarlomagno",
+      "lang": "es-AR",
+      "viewportMeta": "width=device-width, initial-scale=1",
+      "headings": [
+        "H1: anicarlomagno artista plástica",
+        "H2: Mariposas",
+        "H2: Obra disponible",
+        "H3: Bahía",
+        "H2: Mi recorrido",
+        "H3: [Nombre de la primera etapa] Provisorio",
+        "H3: [Nombre de la etapa actual] Provisorio",
+        "H2: ¿Te gustó una obra?"
+      ],
+      "h1Count": 1,
+      "mainLandmarks": 1,
+      "images": 9,
+      "imgsWithoutAlt": [],
+      "imgsEmptyAlt": 0,
+      "imgsAltSamples": [
+        "Esmeralda: mujer de ojos verdes con pañuelo verde sobre un fondo rojo con manchas doradas.",
+        "Veil: mujer de pelo largo con mariposas celestes y naranjas que le cubren los ojos, sobre un fondo de trazos rojizos.",
+        "Vanessa: mujer con mariposas azules y amarillas sobre los ojos, pintada con trazos gruesos de colores sobre fondo negro.",
+        "Violet: mujer de pelo violeta con una mariposa rosa sobre un ojo y la mano en los labios, rodeada de mariposas.",
+        "Bahía: mujer de rostro hecho de manchas de color, con caracoles en el pelo, turbante a rayas y collares, sobre un fondo de trazos azules con estrellas de mar.",
+        "Joven Frida: retrato de mujer con trenzas y moño rojo, cejas juntas y collar, sobre un fondo verde con rosas y mariposas monarca.",
+        "Selva: mujer con una corona de flores enormes y una rosa azul que le tapa un ojo, sobre un fondo rojo.",
+        "Euphoria: rostro de mujer de grandes ojos marrones, pintado con espátula en pinceladas gruesas de rosa, fucsia, celeste y negro.",
+        "Princesa Azul: mujer de ojos celestes con corona y aros dorados, entre chorreados turquesa y un fondo negro."
+      ],
+      "imgsWithoutWidthHeightAttrs": 0,
+      "imgsLazy": 8,
+      "imgsLoaded": 9,
+      "videos": [],
+      "iframes": [],
+      "nestedInteractive": [],
+      "buttonsWithoutName": 0,
+      "linksTarget": [
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola%20Ani%2C%20",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola!%2C%20estoy",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola%20Ani%2C%20",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.instagram.com/anicarlomagno_painting/",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola%20Ani%2C%20",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      ],
+      "smallTargets": [],
+      "clickableNonSemantic": [],
+      "inputsFontSizeUnder16": [],
+      "docScrollWidth": 1280,
+      "clientWidth": 1280,
+      "overflowingElements": [],
+      "pageHeight": 4583,
+      "imgsLoadedAtLoad": 5,
+      "consoleMessages": []
+    },
+    "elegir-1280": {
+      "url": "/design/art-direction/b-editorial.html",
+      "title": "Prototipo B: Editorial | anicarlomagno",
+      "lang": "es-AR",
+      "viewportMeta": "width=device-width, initial-scale=1",
+      "headings": [
+        "H1: anicarlomagno artista plástica",
+        "H2: Mariposas",
+        "H2: Obra disponible",
+        "H3: Bahía",
+        "H2: Mi recorrido",
+        "H3: [Nombre de la primera etapa] Provisorio",
+        "H3: [Nombre de la etapa actual] Provisorio",
+        "H2: ¿Te gustó una obra?"
+      ],
+      "h1Count": 1,
+      "mainLandmarks": 1,
+      "images": 9,
+      "imgsWithoutAlt": [],
+      "imgsEmptyAlt": 0,
+      "imgsAltSamples": [
+        "Esmeralda: mujer de ojos verdes con pañuelo verde sobre un fondo rojo con manchas doradas.",
+        "Veil: mujer de pelo largo con mariposas celestes y naranjas que le cubren los ojos, sobre un fondo de trazos rojizos.",
+        "Vanessa: mujer con mariposas azules y amarillas sobre los ojos, pintada con trazos gruesos de colores sobre fondo negro.",
+        "Violet: mujer de pelo violeta con una mariposa rosa sobre un ojo y la mano en los labios, rodeada de mariposas.",
+        "Bahía: mujer de rostro hecho de manchas de color, con caracoles en el pelo, turbante a rayas y collares, sobre un fondo de trazos azules con estrellas de mar.",
+        "Joven Frida: retrato de mujer con trenzas y moño rojo, cejas juntas y collar, sobre un fondo verde con rosas y mariposas monarca.",
+        "Selva: mujer con una corona de flores enormes y una rosa azul que le tapa un ojo, sobre un fondo rojo.",
+        "Euphoria: rostro de mujer de grandes ojos marrones, pintado con espátula en pinceladas gruesas de rosa, fucsia, celeste y negro.",
+        "Princesa Azul: mujer de ojos celestes con corona y aros dorados, entre chorreados turquesa y un fondo negro."
+      ],
+      "imgsWithoutWidthHeightAttrs": 0,
+      "imgsLazy": 8,
+      "imgsLoaded": 9,
+      "videos": [],
+      "iframes": [],
+      "nestedInteractive": [],
+      "buttonsWithoutName": 0,
+      "linksTarget": [
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola%20Ani%2C%20",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola!%2C%20estoy",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola%20Ani%2C%20",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.instagram.com/anicarlomagno_painting/",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola%20Ani%2C%20",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      ],
+      "smallTargets": [],
+      "clickableNonSemantic": [],
+      "inputsFontSizeUnder16": [],
+      "docScrollWidth": 1280,
+      "clientWidth": 1280,
+      "overflowingElements": [],
+      "pageHeight": 4583,
+      "imgsLoadedAtLoad": 5,
+      "consoleMessages": []
+    },
+    "obras-en-stock-1280": {
+      "url": "/design/art-direction/b-editorial.html",
+      "title": "Prototipo B: Editorial | anicarlomagno",
+      "lang": "es-AR",
+      "viewportMeta": "width=device-width, initial-scale=1",
+      "headings": [
+        "H1: anicarlomagno artista plástica",
+        "H2: Mariposas",
+        "H2: Obra disponible",
+        "H3: Bahía",
+        "H2: Mi recorrido",
+        "H3: [Nombre de la primera etapa] Provisorio",
+        "H3: [Nombre de la etapa actual] Provisorio",
+        "H2: ¿Te gustó una obra?"
+      ],
+      "h1Count": 1,
+      "mainLandmarks": 1,
+      "images": 9,
+      "imgsWithoutAlt": [],
+      "imgsEmptyAlt": 0,
+      "imgsAltSamples": [
+        "Esmeralda: mujer de ojos verdes con pañuelo verde sobre un fondo rojo con manchas doradas.",
+        "Veil: mujer de pelo largo con mariposas celestes y naranjas que le cubren los ojos, sobre un fondo de trazos rojizos.",
+        "Vanessa: mujer con mariposas azules y amarillas sobre los ojos, pintada con trazos gruesos de colores sobre fondo negro.",
+        "Violet: mujer de pelo violeta con una mariposa rosa sobre un ojo y la mano en los labios, rodeada de mariposas.",
+        "Bahía: mujer de rostro hecho de manchas de color, con caracoles en el pelo, turbante a rayas y collares, sobre un fondo de trazos azules con estrellas de mar.",
+        "Joven Frida: retrato de mujer con trenzas y moño rojo, cejas juntas y collar, sobre un fondo verde con rosas y mariposas monarca.",
+        "Selva: mujer con una corona de flores enormes y una rosa azul que le tapa un ojo, sobre un fondo rojo.",
+        "Euphoria: rostro de mujer de grandes ojos marrones, pintado con espátula en pinceladas gruesas de rosa, fucsia, celeste y negro.",
+        "Princesa Azul: mujer de ojos celestes con corona y aros dorados, entre chorreados turquesa y un fondo negro."
+      ],
+      "imgsWithoutWidthHeightAttrs": 0,
+      "imgsLazy": 8,
+      "imgsLoaded": 9,
+      "videos": [],
+      "iframes": [],
+      "nestedInteractive": [],
+      "buttonsWithoutName": 0,
+      "linksTarget": [
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola%20Ani%2C%20",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola!%2C%20estoy",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola%20Ani%2C%20",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.instagram.com/anicarlomagno_painting/",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola%20Ani%2C%20",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      ],
+      "smallTargets": [],
+      "clickableNonSemantic": [],
+      "inputsFontSizeUnder16": [],
+      "docScrollWidth": 1280,
+      "clientWidth": 1280,
+      "overflowingElements": [],
+      "pageHeight": 4583,
+      "imgsLoadedAtLoad": 5,
+      "consoleMessages": []
+    },
+    "obra-personalizada-1280": {
+      "url": "/design/art-direction/b-editorial.html",
+      "title": "Prototipo B: Editorial | anicarlomagno",
+      "lang": "es-AR",
+      "viewportMeta": "width=device-width, initial-scale=1",
+      "headings": [
+        "H1: anicarlomagno artista plástica",
+        "H2: Mariposas",
+        "H2: Obra disponible",
+        "H3: Bahía",
+        "H2: Mi recorrido",
+        "H3: [Nombre de la primera etapa] Provisorio",
+        "H3: [Nombre de la etapa actual] Provisorio",
+        "H2: ¿Te gustó una obra?"
+      ],
+      "h1Count": 1,
+      "mainLandmarks": 1,
+      "images": 9,
+      "imgsWithoutAlt": [],
+      "imgsEmptyAlt": 0,
+      "imgsAltSamples": [
+        "Esmeralda: mujer de ojos verdes con pañuelo verde sobre un fondo rojo con manchas doradas.",
+        "Veil: mujer de pelo largo con mariposas celestes y naranjas que le cubren los ojos, sobre un fondo de trazos rojizos.",
+        "Vanessa: mujer con mariposas azules y amarillas sobre los ojos, pintada con trazos gruesos de colores sobre fondo negro.",
+        "Violet: mujer de pelo violeta con una mariposa rosa sobre un ojo y la mano en los labios, rodeada de mariposas.",
+        "Bahía: mujer de rostro hecho de manchas de color, con caracoles en el pelo, turbante a rayas y collares, sobre un fondo de trazos azules con estrellas de mar.",
+        "Joven Frida: retrato de mujer con trenzas y moño rojo, cejas juntas y collar, sobre un fondo verde con rosas y mariposas monarca.",
+        "Selva: mujer con una corona de flores enormes y una rosa azul que le tapa un ojo, sobre un fondo rojo.",
+        "Euphoria: rostro de mujer de grandes ojos marrones, pintado con espátula en pinceladas gruesas de rosa, fucsia, celeste y negro.",
+        "Princesa Azul: mujer de ojos celestes con corona y aros dorados, entre chorreados turquesa y un fondo negro."
+      ],
+      "imgsWithoutWidthHeightAttrs": 0,
+      "imgsLazy": 8,
+      "imgsLoaded": 9,
+      "videos": [],
+      "iframes": [],
+      "nestedInteractive": [],
+      "buttonsWithoutName": 0,
+      "linksTarget": [
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola%20Ani%2C%20",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola!%2C%20estoy",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola%20Ani%2C%20",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.instagram.com/anicarlomagno_painting/",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola%20Ani%2C%20",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      ],
+      "smallTargets": [],
+      "clickableNonSemantic": [],
+      "inputsFontSizeUnder16": [],
+      "docScrollWidth": 1280,
+      "clientWidth": 1280,
+      "overflowingElements": [],
+      "pageHeight": 4583,
+      "imgsLoadedAtLoad": 5,
+      "consoleMessages": []
+    },
+    "agendas-1280": {
+      "url": "/design/art-direction/b-editorial.html",
+      "title": "Prototipo B: Editorial | anicarlomagno",
+      "lang": "es-AR",
+      "viewportMeta": "width=device-width, initial-scale=1",
+      "headings": [
+        "H1: anicarlomagno artista plástica",
+        "H2: Mariposas",
+        "H2: Obra disponible",
+        "H3: Bahía",
+        "H2: Mi recorrido",
+        "H3: [Nombre de la primera etapa] Provisorio",
+        "H3: [Nombre de la etapa actual] Provisorio",
+        "H2: ¿Te gustó una obra?"
+      ],
+      "h1Count": 1,
+      "mainLandmarks": 1,
+      "images": 9,
+      "imgsWithoutAlt": [],
+      "imgsEmptyAlt": 0,
+      "imgsAltSamples": [
+        "Esmeralda: mujer de ojos verdes con pañuelo verde sobre un fondo rojo con manchas doradas.",
+        "Veil: mujer de pelo largo con mariposas celestes y naranjas que le cubren los ojos, sobre un fondo de trazos rojizos.",
+        "Vanessa: mujer con mariposas azules y amarillas sobre los ojos, pintada con trazos gruesos de colores sobre fondo negro.",
+        "Violet: mujer de pelo violeta con una mariposa rosa sobre un ojo y la mano en los labios, rodeada de mariposas.",
+        "Bahía: mujer de rostro hecho de manchas de color, con caracoles en el pelo, turbante a rayas y collares, sobre un fondo de trazos azules con estrellas de mar.",
+        "Joven Frida: retrato de mujer con trenzas y moño rojo, cejas juntas y collar, sobre un fondo verde con rosas y mariposas monarca.",
+        "Selva: mujer con una corona de flores enormes y una rosa azul que le tapa un ojo, sobre un fondo rojo.",
+        "Euphoria: rostro de mujer de grandes ojos marrones, pintado con espátula en pinceladas gruesas de rosa, fucsia, celeste y negro.",
+        "Princesa Azul: mujer de ojos celestes con corona y aros dorados, entre chorreados turquesa y un fondo negro."
+      ],
+      "imgsWithoutWidthHeightAttrs": 0,
+      "imgsLazy": 8,
+      "imgsLoaded": 9,
+      "videos": [],
+      "iframes": [],
+      "nestedInteractive": [],
+      "buttonsWithoutName": 0,
+      "linksTarget": [
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola%20Ani%2C%20",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola!%2C%20estoy",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola%20Ani%2C%20",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.instagram.com/anicarlomagno_painting/",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola%20Ani%2C%20",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      ],
+      "smallTargets": [],
+      "clickableNonSemantic": [],
+      "inputsFontSizeUnder16": [],
+      "docScrollWidth": 1280,
+      "clientWidth": 1280,
+      "overflowingElements": [],
+      "pageHeight": 4583,
+      "imgsLoadedAtLoad": 5,
+      "consoleMessages": []
+    },
+    "agenda-personalizada-1280": {
+      "url": "/design/art-direction/b-editorial.html",
+      "title": "Prototipo B: Editorial | anicarlomagno",
+      "lang": "es-AR",
+      "viewportMeta": "width=device-width, initial-scale=1",
+      "headings": [
+        "H1: anicarlomagno artista plástica",
+        "H2: Mariposas",
+        "H2: Obra disponible",
+        "H3: Bahía",
+        "H2: Mi recorrido",
+        "H3: [Nombre de la primera etapa] Provisorio",
+        "H3: [Nombre de la etapa actual] Provisorio",
+        "H2: ¿Te gustó una obra?"
+      ],
+      "h1Count": 1,
+      "mainLandmarks": 1,
+      "images": 9,
+      "imgsWithoutAlt": [],
+      "imgsEmptyAlt": 0,
+      "imgsAltSamples": [
+        "Esmeralda: mujer de ojos verdes con pañuelo verde sobre un fondo rojo con manchas doradas.",
+        "Veil: mujer de pelo largo con mariposas celestes y naranjas que le cubren los ojos, sobre un fondo de trazos rojizos.",
+        "Vanessa: mujer con mariposas azules y amarillas sobre los ojos, pintada con trazos gruesos de colores sobre fondo negro.",
+        "Violet: mujer de pelo violeta con una mariposa rosa sobre un ojo y la mano en los labios, rodeada de mariposas.",
+        "Bahía: mujer de rostro hecho de manchas de color, con caracoles en el pelo, turbante a rayas y collares, sobre un fondo de trazos azules con estrellas de mar.",
+        "Joven Frida: retrato de mujer con trenzas y moño rojo, cejas juntas y collar, sobre un fondo verde con rosas y mariposas monarca.",
+        "Selva: mujer con una corona de flores enormes y una rosa azul que le tapa un ojo, sobre un fondo rojo.",
+        "Euphoria: rostro de mujer de grandes ojos marrones, pintado con espátula en pinceladas gruesas de rosa, fucsia, celeste y negro.",
+        "Princesa Azul: mujer de ojos celestes con corona y aros dorados, entre chorreados turquesa y un fondo negro."
+      ],
+      "imgsWithoutWidthHeightAttrs": 0,
+      "imgsLazy": 8,
+      "imgsLoaded": 9,
+      "videos": [],
+      "iframes": [],
+      "nestedInteractive": [],
+      "buttonsWithoutName": 0,
+      "linksTarget": [
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola%20Ani%2C%20",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola!%2C%20estoy",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola%20Ani%2C%20",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.instagram.com/anicarlomagno_painting/",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola%20Ani%2C%20",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      ],
+      "smallTargets": [],
+      "clickableNonSemantic": [],
+      "inputsFontSizeUnder16": [],
+      "docScrollWidth": 1280,
+      "clientWidth": 1280,
+      "overflowingElements": [],
+      "pageHeight": 4583,
+      "imgsLoadedAtLoad": 5,
+      "consoleMessages": []
+    },
+    "mi-libro-1280": {
+      "url": "/design/art-direction/b-editorial.html",
+      "title": "Prototipo B: Editorial | anicarlomagno",
+      "lang": "es-AR",
+      "viewportMeta": "width=device-width, initial-scale=1",
+      "headings": [
+        "H1: anicarlomagno artista plástica",
+        "H2: Mariposas",
+        "H2: Obra disponible",
+        "H3: Bahía",
+        "H2: Mi recorrido",
+        "H3: [Nombre de la primera etapa] Provisorio",
+        "H3: [Nombre de la etapa actual] Provisorio",
+        "H2: ¿Te gustó una obra?"
+      ],
+      "h1Count": 1,
+      "mainLandmarks": 1,
+      "images": 9,
+      "imgsWithoutAlt": [],
+      "imgsEmptyAlt": 0,
+      "imgsAltSamples": [
+        "Esmeralda: mujer de ojos verdes con pañuelo verde sobre un fondo rojo con manchas doradas.",
+        "Veil: mujer de pelo largo con mariposas celestes y naranjas que le cubren los ojos, sobre un fondo de trazos rojizos.",
+        "Vanessa: mujer con mariposas azules y amarillas sobre los ojos, pintada con trazos gruesos de colores sobre fondo negro.",
+        "Violet: mujer de pelo violeta con una mariposa rosa sobre un ojo y la mano en los labios, rodeada de mariposas.",
+        "Bahía: mujer de rostro hecho de manchas de color, con caracoles en el pelo, turbante a rayas y collares, sobre un fondo de trazos azules con estrellas de mar.",
+        "Joven Frida: retrato de mujer con trenzas y moño rojo, cejas juntas y collar, sobre un fondo verde con rosas y mariposas monarca.",
+        "Selva: mujer con una corona de flores enormes y una rosa azul que le tapa un ojo, sobre un fondo rojo.",
+        "Euphoria: rostro de mujer de grandes ojos marrones, pintado con espátula en pinceladas gruesas de rosa, fucsia, celeste y negro.",
+        "Princesa Azul: mujer de ojos celestes con corona y aros dorados, entre chorreados turquesa y un fondo negro."
+      ],
+      "imgsWithoutWidthHeightAttrs": 0,
+      "imgsLazy": 8,
+      "imgsLoaded": 9,
+      "videos": [],
+      "iframes": [],
+      "nestedInteractive": [],
+      "buttonsWithoutName": 0,
+      "linksTarget": [
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola%20Ani%2C%20",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola!%2C%20estoy",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola%20Ani%2C%20",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.instagram.com/anicarlomagno_painting/",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola%20Ani%2C%20",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      ],
+      "smallTargets": [],
+      "clickableNonSemantic": [],
+      "inputsFontSizeUnder16": [],
+      "docScrollWidth": 1280,
+      "clientWidth": 1280,
+      "overflowingElements": [],
+      "pageHeight": 4583,
+      "imgsLoadedAtLoad": 5,
+      "consoleMessages": []
+    },
+    "laminas-1280": {
+      "url": "/design/art-direction/b-editorial.html",
+      "title": "Prototipo B: Editorial | anicarlomagno",
+      "lang": "es-AR",
+      "viewportMeta": "width=device-width, initial-scale=1",
+      "headings": [
+        "H1: anicarlomagno artista plástica",
+        "H2: Mariposas",
+        "H2: Obra disponible",
+        "H3: Bahía",
+        "H2: Mi recorrido",
+        "H3: [Nombre de la primera etapa] Provisorio",
+        "H3: [Nombre de la etapa actual] Provisorio",
+        "H2: ¿Te gustó una obra?"
+      ],
+      "h1Count": 1,
+      "mainLandmarks": 1,
+      "images": 9,
+      "imgsWithoutAlt": [],
+      "imgsEmptyAlt": 0,
+      "imgsAltSamples": [
+        "Esmeralda: mujer de ojos verdes con pañuelo verde sobre un fondo rojo con manchas doradas.",
+        "Veil: mujer de pelo largo con mariposas celestes y naranjas que le cubren los ojos, sobre un fondo de trazos rojizos.",
+        "Vanessa: mujer con mariposas azules y amarillas sobre los ojos, pintada con trazos gruesos de colores sobre fondo negro.",
+        "Violet: mujer de pelo violeta con una mariposa rosa sobre un ojo y la mano en los labios, rodeada de mariposas.",
+        "Bahía: mujer de rostro hecho de manchas de color, con caracoles en el pelo, turbante a rayas y collares, sobre un fondo de trazos azules con estrellas de mar.",
+        "Joven Frida: retrato de mujer con trenzas y moño rojo, cejas juntas y collar, sobre un fondo verde con rosas y mariposas monarca.",
+        "Selva: mujer con una corona de flores enormes y una rosa azul que le tapa un ojo, sobre un fondo rojo.",
+        "Euphoria: rostro de mujer de grandes ojos marrones, pintado con espátula en pinceladas gruesas de rosa, fucsia, celeste y negro.",
+        "Princesa Azul: mujer de ojos celestes con corona y aros dorados, entre chorreados turquesa y un fondo negro."
+      ],
+      "imgsWithoutWidthHeightAttrs": 0,
+      "imgsLazy": 8,
+      "imgsLoaded": 9,
+      "videos": [],
+      "iframes": [],
+      "nestedInteractive": [],
+      "buttonsWithoutName": 0,
+      "linksTarget": [
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola%20Ani%2C%20",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola!%2C%20estoy",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola%20Ani%2C%20",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.instagram.com/anicarlomagno_painting/",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola%20Ani%2C%20",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      ],
+      "smallTargets": [],
+      "clickableNonSemantic": [],
+      "inputsFontSizeUnder16": [],
+      "docScrollWidth": 1280,
+      "clientWidth": 1280,
+      "overflowingElements": [],
+      "pageHeight": 4583,
+      "imgsLoadedAtLoad": 5,
+      "consoleMessages": []
+    },
+    "sobre-mi-1280": {
+      "url": "/design/art-direction/b-editorial.html",
+      "title": "Prototipo B: Editorial | anicarlomagno",
+      "lang": "es-AR",
+      "viewportMeta": "width=device-width, initial-scale=1",
+      "headings": [
+        "H1: anicarlomagno artista plástica",
+        "H2: Mariposas",
+        "H2: Obra disponible",
+        "H3: Bahía",
+        "H2: Mi recorrido",
+        "H3: [Nombre de la primera etapa] Provisorio",
+        "H3: [Nombre de la etapa actual] Provisorio",
+        "H2: ¿Te gustó una obra?"
+      ],
+      "h1Count": 1,
+      "mainLandmarks": 1,
+      "images": 9,
+      "imgsWithoutAlt": [],
+      "imgsEmptyAlt": 0,
+      "imgsAltSamples": [
+        "Esmeralda: mujer de ojos verdes con pañuelo verde sobre un fondo rojo con manchas doradas.",
+        "Veil: mujer de pelo largo con mariposas celestes y naranjas que le cubren los ojos, sobre un fondo de trazos rojizos.",
+        "Vanessa: mujer con mariposas azules y amarillas sobre los ojos, pintada con trazos gruesos de colores sobre fondo negro.",
+        "Violet: mujer de pelo violeta con una mariposa rosa sobre un ojo y la mano en los labios, rodeada de mariposas.",
+        "Bahía: mujer de rostro hecho de manchas de color, con caracoles en el pelo, turbante a rayas y collares, sobre un fondo de trazos azules con estrellas de mar.",
+        "Joven Frida: retrato de mujer con trenzas y moño rojo, cejas juntas y collar, sobre un fondo verde con rosas y mariposas monarca.",
+        "Selva: mujer con una corona de flores enormes y una rosa azul que le tapa un ojo, sobre un fondo rojo.",
+        "Euphoria: rostro de mujer de grandes ojos marrones, pintado con espátula en pinceladas gruesas de rosa, fucsia, celeste y negro.",
+        "Princesa Azul: mujer de ojos celestes con corona y aros dorados, entre chorreados turquesa y un fondo negro."
+      ],
+      "imgsWithoutWidthHeightAttrs": 0,
+      "imgsLazy": 8,
+      "imgsLoaded": 9,
+      "videos": [],
+      "iframes": [],
+      "nestedInteractive": [],
+      "buttonsWithoutName": 0,
+      "linksTarget": [
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola%20Ani%2C%20",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola!%2C%20estoy",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola%20Ani%2C%20",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.instagram.com/anicarlomagno_painting/",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola%20Ani%2C%20",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      ],
+      "smallTargets": [],
+      "clickableNonSemantic": [],
+      "inputsFontSizeUnder16": [],
+      "docScrollWidth": 1280,
+      "clientWidth": 1280,
+      "overflowingElements": [],
+      "pageHeight": 4583,
+      "imgsLoadedAtLoad": 5,
+      "consoleMessages": []
+    },
+    "contacto-1280": {
+      "url": "/design/art-direction/b-editorial.html",
+      "title": "Prototipo B: Editorial | anicarlomagno",
+      "lang": "es-AR",
+      "viewportMeta": "width=device-width, initial-scale=1",
+      "headings": [
+        "H1: anicarlomagno artista plástica",
+        "H2: Mariposas",
+        "H2: Obra disponible",
+        "H3: Bahía",
+        "H2: Mi recorrido",
+        "H3: [Nombre de la primera etapa] Provisorio",
+        "H3: [Nombre de la etapa actual] Provisorio",
+        "H2: ¿Te gustó una obra?"
+      ],
+      "h1Count": 1,
+      "mainLandmarks": 1,
+      "images": 9,
+      "imgsWithoutAlt": [],
+      "imgsEmptyAlt": 0,
+      "imgsAltSamples": [
+        "Esmeralda: mujer de ojos verdes con pañuelo verde sobre un fondo rojo con manchas doradas.",
+        "Veil: mujer de pelo largo con mariposas celestes y naranjas que le cubren los ojos, sobre un fondo de trazos rojizos.",
+        "Vanessa: mujer con mariposas azules y amarillas sobre los ojos, pintada con trazos gruesos de colores sobre fondo negro.",
+        "Violet: mujer de pelo violeta con una mariposa rosa sobre un ojo y la mano en los labios, rodeada de mariposas.",
+        "Bahía: mujer de rostro hecho de manchas de color, con caracoles en el pelo, turbante a rayas y collares, sobre un fondo de trazos azules con estrellas de mar.",
+        "Joven Frida: retrato de mujer con trenzas y moño rojo, cejas juntas y collar, sobre un fondo verde con rosas y mariposas monarca.",
+        "Selva: mujer con una corona de flores enormes y una rosa azul que le tapa un ojo, sobre un fondo rojo.",
+        "Euphoria: rostro de mujer de grandes ojos marrones, pintado con espátula en pinceladas gruesas de rosa, fucsia, celeste y negro.",
+        "Princesa Azul: mujer de ojos celestes con corona y aros dorados, entre chorreados turquesa y un fondo negro."
+      ],
+      "imgsWithoutWidthHeightAttrs": 0,
+      "imgsLazy": 8,
+      "imgsLoaded": 9,
+      "videos": [],
+      "iframes": [],
+      "nestedInteractive": [],
+      "buttonsWithoutName": 0,
+      "linksTarget": [
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola%20Ani%2C%20",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola!%2C%20estoy",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola%20Ani%2C%20",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.instagram.com/anicarlomagno_painting/",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://api.whatsapp.com/send?phone=542494245966&text=Hola%20Ani%2C%20",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      ],
+      "smallTargets": [],
+      "clickableNonSemantic": [],
+      "inputsFontSizeUnder16": [],
+      "docScrollWidth": 1280,
+      "clientWidth": 1280,
+      "overflowingElements": [],
+      "pageHeight": 4583,
+      "imgsLoadedAtLoad": 5,
+      "consoleMessages": []
+    }
+  },
+  "failed": []
+}

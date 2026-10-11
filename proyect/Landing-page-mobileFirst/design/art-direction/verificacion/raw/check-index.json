@@ -1,0 +1,198 @@
+{
+  "360": {
+    "title": "Fase 4b: direcciones de arte | anicarlomagno",
+    "lang": "es-AR",
+    "h1": 1,
+    "headings": [
+      "H1: Tres direcciones para la Home",
+      "H2: A. Galería silenciosa",
+      "H2: B. Editorial",
+      "H2: C. Inmersiva",
+      "H2: Cómo verlas en el celular"
+    ],
+    "scrollWidth": 360,
+    "clientWidth": 360,
+    "overflowing": [],
+    "textUnder16": [],
+    "smallTargets": [],
+    "contrastFails": [],
+    "contrastOnImage": [],
+    "contrastAll": [
+      {
+        "text": "Tres direcciones para la Home",
+        "color": "rgb(36, 36, 36)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 24,
+        "weight": 700,
+        "ratio": 15.52,
+        "min": 3,
+        "pass": true,
+        "onImage": false
+      },
+      {
+        "text": "Prototipos estáticos de la Fase 4b, pensados para ",
+        "color": "rgb(36, 36, 36)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 15.52,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false
+      },
+      {
+        "text": "Abrir A",
+        "color": "rgb(138, 43, 226)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 18,
+        "weight": 600,
+        "ratio": 5.96,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false
+      }
+    ],
+    "minContrast": 5.96,
+    "images": [],
+    "imgProblems": [],
+    "fixed": [],
+    "pageHeight": 1429,
+    "floating": {
+      "fixed": [],
+      "coveredWhileScrolling": {},
+      "coveredAtPageEnd": []
+    },
+    "motion": []
+  },
+  "390": {
+    "title": "Fase 4b: direcciones de arte | anicarlomagno",
+    "lang": "es-AR",
+    "h1": 1,
+    "headings": [
+      "H1: Tres direcciones para la Home",
+      "H2: A. Galería silenciosa",
+      "H2: B. Editorial",
+      "H2: C. Inmersiva",
+      "H2: Cómo verlas en el celular"
+    ],
+    "scrollWidth": 390,
+    "clientWidth": 390,
+    "overflowing": [],
+    "textUnder16": [],
+    "smallTargets": [],
+    "contrastFails": [],
+    "contrastOnImage": [],
+    "contrastAll": [
+      {
+        "text": "Tres direcciones para la Home",
+        "color": "rgb(36, 36, 36)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 24,
+        "weight": 700,
+        "ratio": 15.52,
+        "min": 3,
+        "pass": true,
+        "onImage": false
+      },
+      {
+        "text": "Prototipos estáticos de la Fase 4b, pensados para ",
+        "color": "rgb(36, 36, 36)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 15.52,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false
+      },
+      {
+        "text": "Abrir A",
+        "color": "rgb(138, 43, 226)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 18,
+        "weight": 600,
+        "ratio": 5.96,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false
+      }
+    ],
+    "minContrast": 5.96,
+    "images": [],
+    "imgProblems": [],
+    "fixed": [],
+    "pageHeight": 1322,
+    "floating": {
+      "fixed": [],
+      "coveredWhileScrolling": {},
+      "coveredAtPageEnd": []
+    },
+    "motion": []
+  },
+  "1280": {
+    "title": "Fase 4b: direcciones de arte | anicarlomagno",
+    "lang": "es-AR",
+    "h1": 1,
+    "headings": [
+      "H1: Tres direcciones para la Home",
+      "H2: A. Galería silenciosa",
+      "H2: B. Editorial",
+      "H2: C. Inmersiva",
+      "H2: Cómo verlas en el celular"
+    ],
+    "scrollWidth": 1280,
+    "clientWidth": 1280,
+    "overflowing": [],
+    "textUnder16": [],
+    "smallTargets": [],
+    "contrastFails": [],
+    "contrastOnImage": [],
+    "contrastAll": [
+      {
+        "text": "Tres direcciones para la Home",
+        "color": "rgb(36, 36, 36)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 24,
+        "weight": 700,
+        "ratio": 15.52,
+        "min": 3,
+        "pass": true,
+        "onImage": false
+      },
+      {
+        "text": "Prototipos estáticos de la Fase 4b, pensados para ",
+        "color": "rgb(36, 36, 36)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 15.52,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false
+      },
+      {
+        "text": "Abrir A",
+        "color": "rgb(138, 43, 226)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 18,
+        "weight": 600,
+        "ratio": 5.96,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false
+      }
+    ],
+    "minContrast": 5.96,
+    "images": [],
+    "imgProblems": [],
+    "fixed": [],
+    "pageHeight": 1091,
+    "floating": {
+      "fixed": [],
+      "coveredWhileScrolling": {},
+      "coveredAtPageEnd": []
+    },
+    "motion": []
+  },
+  "reducedMotion": []
+}

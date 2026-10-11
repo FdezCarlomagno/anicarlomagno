@@ -1,0 +1,1351 @@
+{
+  "360": {
+    "title": "Prototipo A: Galería silenciosa | anicarlomagno",
+    "lang": "es-AR",
+    "h1": 1,
+    "headings": [
+      "H1: Ani Carlomagno, artista plástica en Tandil",
+      "H2: Mariposas",
+      "H2: Obra disponible",
+      "H3: Bahía",
+      "H2: Mi recorrido",
+      "H3: [Nombre de la primera etapa] Provisorio",
+      "H3: [Nombre de la etapa actual] Provisorio",
+      "H2: ¿Te gustó una obra?"
+    ],
+    "scrollWidth": 360,
+    "clientWidth": 360,
+    "overflowing": [],
+    "textUnder16": [],
+    "smallTargets": [],
+    "contrastFails": [],
+    "contrastOnImage": [],
+    "contrastAll": [
+      {
+        "text": "Saltar al contenido",
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgb(138, 43, 226)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 5.96,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false
+      },
+      {
+        "text": "Prototipo A, Galería silenciosa. Lo marcado como P",
+        "color": "rgb(68, 68, 68)",
+        "bg": "rgb(240, 240, 240)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 8.55,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false
+      },
+      {
+        "text": "Provisorio",
+        "color": "rgb(36, 36, 36)",
+        "bg": "rgb(240, 240, 240)",
+        "size": 16,
+        "weight": 600,
+        "ratio": 13.62,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false
+      },
+      {
+        "text": "Ver las tres direcciones",
+        "color": "rgb(138, 43, 226)",
+        "bg": "rgb(240, 240, 240)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 5.23,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false
+      },
+      {
+        "text": "anicarlomagno",
+        "color": "rgb(36, 36, 36)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 28,
+        "weight": 700,
+        "ratio": 15.52,
+        "min": 3,
+        "pass": true,
+        "onImage": false
+      },
+      {
+        "text": "artista plástica",
+        "color": "rgb(138, 43, 226)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 5.96,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false
+      },
+      {
+        "text": "Menú",
+        "color": "rgb(36, 36, 36)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 16,
+        "weight": 600,
+        "ratio": 15.52,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false
+      },
+      {
+        "text": "Acrílico sobre bastidor de madera, detalles en dor",
+        "color": "rgb(102, 102, 102)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 5.74,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false
+      },
+      {
+        "text": "Serie de ejemplo armada para el prototipo. Ani def",
+        "color": "rgb(68, 68, 68)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 9.74,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false
+      },
+      {
+        "text": "¿Te gustó una obra?",
+        "color": "rgb(36, 36, 36)",
+        "bg": "rgb(240, 248, 255)",
+        "size": 20,
+        "weight": 600,
+        "ratio": 14.47,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false
+      }
+    ],
+    "minContrast": 5.23,
+    "images": [
+      {
+        "src": "la-dama-dorada.jpeg",
+        "alt": "La Dama Dorada: mujer de ojos grandes con corona dorada y mariposas doradas, sobre un fondo turquesa con manchas de oro.",
+        "wAttr": "1200",
+        "hAttr": "1600",
+        "loading": "auto",
+        "rendered": [
+          360,
+          480
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "textOver": []
+      },
+      {
+        "src": "VEIL.jpeg",
+        "alt": "Veil: mujer de pelo largo con mariposas celestes y naranjas que le cubren los ojos, sobre un fondo de trazos rojizos.",
+        "wAttr": "1180",
+        "hAttr": "1600",
+        "loading": "lazy",
+        "rendered": [
+          360,
+          488
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "textOver": []
+      },
+      {
+        "src": "Vanessa.jpeg",
+        "alt": "Vanessa: mujer con mariposas azules y amarillas sobre los ojos, pintada con trazos gruesos de colores sobre fondo negro.",
+        "wAttr": "1598",
+        "hAttr": "1600",
+        "loading": "lazy",
+        "rendered": [
+          360,
+          360
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "textOver": []
+      },
+      {
+        "src": "VIOLET.jpg",
+        "alt": "Violet: mujer de pelo violeta con una mariposa rosa sobre un ojo y la mano en los labios, rodeada de mariposas.",
+        "wAttr": "2043",
+        "hAttr": "2775",
+        "loading": "lazy",
+        "rendered": [
+          360,
+          489
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "textOver": []
+      },
+      {
+        "src": "Bahia.jpeg",
+        "alt": "Bahía: mujer de rostro hecho de manchas de color, con caracoles en el pelo, turbante a rayas y collares, sobre un fondo de trazos azules con estrellas de mar.",
+        "wAttr": "937",
+        "hAttr": "1280",
+        "loading": "lazy",
+        "rendered": [
+          360,
+          492
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "textOver": []
+      },
+      {
+        "src": "JOVEN FRIDA.jpg",
+        "alt": "Joven Frida: retrato de mujer con trenzas y moño rojo, cejas juntas y collar, sobre un fondo verde con rosas y mariposas monarca.",
+        "wAttr": "2043",
+        "hAttr": "2775",
+        "loading": "lazy",
+        "rendered": [
+          176,
+          239
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "textOver": []
+      },
+      {
+        "src": "SELVA.jpg",
+        "alt": "Selva: mujer con una corona de flores enormes y una rosa azul que le tapa un ojo, sobre un fondo rojo.",
+        "wAttr": "2481",
+        "hAttr": "3509",
+        "loading": "lazy",
+        "rendered": [
+          176,
+          249
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "textOver": []
+      },
+      {
+        "src": "EUPHORIA.jpeg",
+        "alt": "Euphoria: rostro de mujer de grandes ojos marrones, pintado con espátula en pinceladas gruesas de rosa, fucsia, celeste y negro.",
+        "wAttr": "1600",
+        "hAttr": "1576",
+        "loading": "lazy",
+        "rendered": [
+          176,
+          173
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "textOver": []
+      },
+      {
+        "src": "Princesa-azul.jpeg",
+        "alt": "Princesa Azul: mujer de ojos celestes con corona y aros dorados, entre chorreados turquesa y un fondo negro.",
+        "wAttr": "957",
+        "hAttr": "1280",
+        "loading": "lazy",
+        "rendered": [
+          176,
+          235
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "textOver": []
+      }
+    ],
+    "imgProblems": [],
+    "fixed": [
+      {
+        "tag": "a",
+        "cls": "wsp"
+      }
+    ],
+    "pageHeight": 5773,
+    "floating": {
+      "fixed": [
+        "wsp"
+      ],
+      "coveredWhileScrolling": {
+        "span: 80 × 60 cm, disponible": 1,
+        "a: Agendas y cuadernos": 1,
+        "img: Veil: mujer de pelo largo con ": 2,
+        "img: Vanessa: mujer con mariposas a": 2,
+        "img: Violet: mujer de pelo violeta ": 2,
+        "h2: Obra disponible": 1,
+        "img: Bahía: mujer de rostro hecho d": 2,
+        "h3: Bahía": 1,
+        "p: Te paso el precio y cómo es el envío a todo el paí": 1,
+        "h3: [Nombre de la primera etapa] Provisorio": 1,
+        "img: Selva: mujer con una corona de": 1,
+        "p: [Años] [Dos líneas de Ani sobre lo que cambió: el ": 1,
+        "img: Princesa Azul: mujer de ojos c": 1,
+        "span: Princesa Azul": 1,
+        "span: Obras elegidas por nosotros como ejemplo: Ani conf": 1,
+        "h2: ¿Te gustó una obra?": 1,
+        "p: Envíos a todo el país.": 1
+      },
+      "coveredAtPageEnd": []
+    },
+    "motion": []
+  },
+  "390": {
+    "title": "Prototipo A: Galería silenciosa | anicarlomagno",
+    "lang": "es-AR",
+    "h1": 1,
+    "headings": [
+      "H1: Ani Carlomagno, artista plástica en Tandil",
+      "H2: Mariposas",
+      "H2: Obra disponible",
+      "H3: Bahía",
+      "H2: Mi recorrido",
+      "H3: [Nombre de la primera etapa] Provisorio",
+      "H3: [Nombre de la etapa actual] Provisorio",
+      "H2: ¿Te gustó una obra?"
+    ],
+    "scrollWidth": 390,
+    "clientWidth": 390,
+    "overflowing": [],
+    "textUnder16": [],
+    "smallTargets": [],
+    "contrastFails": [],
+    "contrastOnImage": [],
+    "contrastAll": [
+      {
+        "text": "Saltar al contenido",
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgb(138, 43, 226)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 5.96,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false
+      },
+      {
+        "text": "Prototipo A, Galería silenciosa. Lo marcado como P",
+        "color": "rgb(68, 68, 68)",
+        "bg": "rgb(240, 240, 240)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 8.55,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false
+      },
+      {
+        "text": "Provisorio",
+        "color": "rgb(36, 36, 36)",
+        "bg": "rgb(240, 240, 240)",
+        "size": 16,
+        "weight": 600,
+        "ratio": 13.62,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false
+      },
+      {
+        "text": "Ver las tres direcciones",
+        "color": "rgb(138, 43, 226)",
+        "bg": "rgb(240, 240, 240)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 5.23,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false
+      },
+      {
+        "text": "anicarlomagno",
+        "color": "rgb(36, 36, 36)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 28,
+        "weight": 700,
+        "ratio": 15.52,
+        "min": 3,
+        "pass": true,
+        "onImage": false
+      },
+      {
+        "text": "artista plástica",
+        "color": "rgb(138, 43, 226)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 5.96,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false
+      },
+      {
+        "text": "Menú",
+        "color": "rgb(36, 36, 36)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 16,
+        "weight": 600,
+        "ratio": 15.52,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false
+      },
+      {
+        "text": "Acrílico sobre bastidor de madera, detalles en dor",
+        "color": "rgb(102, 102, 102)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 5.74,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false
+      },
+      {
+        "text": "Serie de ejemplo armada para el prototipo. Ani def",
+        "color": "rgb(68, 68, 68)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 9.74,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false
+      },
+      {
+        "text": "¿Te gustó una obra?",
+        "color": "rgb(36, 36, 36)",
+        "bg": "rgb(240, 248, 255)",
+        "size": 20,
+        "weight": 600,
+        "ratio": 14.47,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false
+      }
+    ],
+    "minContrast": 5.23,
+    "images": [
+      {
+        "src": "la-dama-dorada.jpeg",
+        "alt": "La Dama Dorada: mujer de ojos grandes con corona dorada y mariposas doradas, sobre un fondo turquesa con manchas de oro.",
+        "wAttr": "1200",
+        "hAttr": "1600",
+        "loading": "auto",
+        "rendered": [
+          390,
+          520
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "textOver": []
+      },
+      {
+        "src": "VEIL.jpeg",
+        "alt": "Veil: mujer de pelo largo con mariposas celestes y naranjas que le cubren los ojos, sobre un fondo de trazos rojizos.",
+        "wAttr": "1180",
+        "hAttr": "1600",
+        "loading": "lazy",
+        "rendered": [
+          390,
+          529
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "textOver": []
+      },
+      {
+        "src": "Vanessa.jpeg",
+        "alt": "Vanessa: mujer con mariposas azules y amarillas sobre los ojos, pintada con trazos gruesos de colores sobre fondo negro.",
+        "wAttr": "1598",
+        "hAttr": "1600",
+        "loading": "lazy",
+        "rendered": [
+          390,
+          390
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "textOver": []
+      },
+      {
+        "src": "VIOLET.jpg",
+        "alt": "Violet: mujer de pelo violeta con una mariposa rosa sobre un ojo y la mano en los labios, rodeada de mariposas.",
+        "wAttr": "2043",
+        "hAttr": "2775",
+        "loading": "lazy",
+        "rendered": [
+          390,
+          530
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "textOver": []
+      },
+      {
+        "src": "Bahia.jpeg",
+        "alt": "Bahía: mujer de rostro hecho de manchas de color, con caracoles en el pelo, turbante a rayas y collares, sobre un fondo de trazos azules con estrellas de mar.",
+        "wAttr": "937",
+        "hAttr": "1280",
+        "loading": "lazy",
+        "rendered": [
+          390,
+          533
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "textOver": []
+      },
+      {
+        "src": "JOVEN FRIDA.jpg",
+        "alt": "Joven Frida: retrato de mujer con trenzas y moño rojo, cejas juntas y collar, sobre un fondo verde con rosas y mariposas monarca.",
+        "wAttr": "2043",
+        "hAttr": "2775",
+        "loading": "lazy",
+        "rendered": [
+          191,
+          259
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "textOver": []
+      },
+      {
+        "src": "SELVA.jpg",
+        "alt": "Selva: mujer con una corona de flores enormes y una rosa azul que le tapa un ojo, sobre un fondo rojo.",
+        "wAttr": "2481",
+        "hAttr": "3509",
+        "loading": "lazy",
+        "rendered": [
+          191,
+          270
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "textOver": []
+      },
+      {
+        "src": "EUPHORIA.jpeg",
+        "alt": "Euphoria: rostro de mujer de grandes ojos marrones, pintado con espátula en pinceladas gruesas de rosa, fucsia, celeste y negro.",
+        "wAttr": "1600",
+        "hAttr": "1576",
+        "loading": "lazy",
+        "rendered": [
+          191,
+          188
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "textOver": []
+      },
+      {
+        "src": "Princesa-azul.jpeg",
+        "alt": "Princesa Azul: mujer de ojos celestes con corona y aros dorados, entre chorreados turquesa y un fondo negro.",
+        "wAttr": "957",
+        "hAttr": "1280",
+        "loading": "lazy",
+        "rendered": [
+          191,
+          255
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "textOver": []
+      }
+    ],
+    "imgProblems": [],
+    "fixed": [
+      {
+        "tag": "a",
+        "cls": "wsp"
+      }
+    ],
+    "pageHeight": 5956,
+    "floating": {
+      "fixed": [
+        "wsp"
+      ],
+      "coveredWhileScrolling": {
+        "span: Acrílico sobre bastidor de madera, detalles en dor": 1,
+        "span: 80 × 60 cm, disponible": 1,
+        "a: Agendas y cuadernos": 1,
+        "img: Veil: mujer de pelo largo con ": 2,
+        "span: Veil": 1,
+        "span: Acrílico con espátula, 80 × 60 cm": 1,
+        "img: Vanessa: mujer con mariposas a": 1,
+        "img: Violet: mujer de pelo violeta ": 3,
+        "span: Violet": 1,
+        "img: Bahía: mujer de rostro hecho d": 2,
+        "dd: Acrílico sobre bastidor de madera": 1,
+        "dd: 80 × 60 cm": 1,
+        "dd: Disponible": 1,
+        "h2: Mi recorrido": 1,
+        "img: Selva: mujer con una corona de": 2,
+        "span: Selva": 1,
+        "img: Princesa Azul: mujer de ojos c": 1,
+        "span: Obras elegidas por nosotros como ejemplo: Ani conf": 1,
+        "p: Escribime por WhatsApp y te paso precio, medidas y": 1
+      },
+      "coveredAtPageEnd": []
+    },
+    "motion": [],
+    "menuOpen": {
+      "ariaExpanded": "true",
+      "panelVisible": true,
+      "role": "dialog",
+      "ariaModal": "true",
+      "coversViewport": true,
+      "focused": "button: Cerrar",
+      "mainInert": true,
+      "links": [
+        {
+          "text": "Cerrar",
+          "w": 81,
+          "h": 44
+        },
+        {
+          "text": "Inicio",
+          "w": 350,
+          "h": 56
+        },
+        {
+          "text": "Obras",
+          "w": 350,
+          "h": 56
+        },
+        {
+          "text": "Agendas y cuadernos",
+          "w": 350,
+          "h": 56
+        },
+        {
+          "text": "Libros",
+          "w": 350,
+          "h": 56
+        },
+        {
+          "text": "Láminas",
+          "w": 350,
+          "h": 56
+        },
+        {
+          "text": "Sobre mí",
+          "w": 350,
+          "h": 56
+        },
+        {
+          "text": "Contacto",
+          "w": 350,
+          "h": 56
+        },
+        {
+          "text": "Escribime por WhatsApp (se abre en una pestaña nue",
+          "w": 235,
+          "h": 50
+        }
+      ],
+      "scrollWidth": 390,
+      "clientWidth": 390
+    },
+    "menuAfterEsc": {
+      "ariaExpanded": "false",
+      "panelVisible": false,
+      "role": "dialog",
+      "ariaModal": "true",
+      "coversViewport": false,
+      "focused": "button: Menú",
+      "mainInert": false,
+      "links": [
+        {
+          "text": "Cerrar",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Inicio",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Obras",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Agendas y cuadernos",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Libros",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Láminas",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Sobre mí",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Contacto",
+          "w": 0,
+          "h": 0
+        },
+        {
+          "text": "Escribime por WhatsApp (se abre en una pestaña nue",
+          "w": 0,
+          "h": 0
+        }
+      ],
+      "scrollWidth": 390,
+      "clientWidth": 390
+    }
+  },
+  "768": {
+    "title": "Prototipo A: Galería silenciosa | anicarlomagno",
+    "lang": "es-AR",
+    "h1": 1,
+    "headings": [
+      "H1: Ani Carlomagno, artista plástica en Tandil",
+      "H2: Mariposas",
+      "H2: Obra disponible",
+      "H3: Bahía",
+      "H2: Mi recorrido",
+      "H3: [Nombre de la primera etapa] Provisorio",
+      "H3: [Nombre de la etapa actual] Provisorio",
+      "H2: ¿Te gustó una obra?"
+    ],
+    "scrollWidth": 768,
+    "clientWidth": 768,
+    "overflowing": [],
+    "textUnder16": [],
+    "smallTargets": [],
+    "contrastFails": [],
+    "contrastOnImage": [],
+    "contrastAll": [
+      {
+        "text": "Saltar al contenido",
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgb(138, 43, 226)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 5.96,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false
+      },
+      {
+        "text": "Prototipo A, Galería silenciosa. Lo marcado como P",
+        "color": "rgb(68, 68, 68)",
+        "bg": "rgb(240, 240, 240)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 8.55,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false
+      },
+      {
+        "text": "Provisorio",
+        "color": "rgb(36, 36, 36)",
+        "bg": "rgb(240, 240, 240)",
+        "size": 16,
+        "weight": 600,
+        "ratio": 13.62,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false
+      },
+      {
+        "text": "Ver las tres direcciones",
+        "color": "rgb(138, 43, 226)",
+        "bg": "rgb(240, 240, 240)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 5.23,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false
+      },
+      {
+        "text": "anicarlomagno",
+        "color": "rgb(36, 36, 36)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 28,
+        "weight": 700,
+        "ratio": 15.52,
+        "min": 3,
+        "pass": true,
+        "onImage": false
+      },
+      {
+        "text": "artista plástica",
+        "color": "rgb(138, 43, 226)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 5.96,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false
+      },
+      {
+        "text": "Menú",
+        "color": "rgb(36, 36, 36)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 16,
+        "weight": 600,
+        "ratio": 15.52,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false
+      },
+      {
+        "text": "Acrílico sobre bastidor de madera, detalles en dor",
+        "color": "rgb(102, 102, 102)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 5.74,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false
+      },
+      {
+        "text": "Serie de ejemplo armada para el prototipo. Ani def",
+        "color": "rgb(68, 68, 68)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 9.74,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false
+      },
+      {
+        "text": "¿Te gustó una obra?",
+        "color": "rgb(36, 36, 36)",
+        "bg": "rgb(240, 248, 255)",
+        "size": 20,
+        "weight": 600,
+        "ratio": 14.47,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false
+      }
+    ],
+    "minContrast": 5.23,
+    "images": [
+      {
+        "src": "la-dama-dorada.jpeg",
+        "alt": "La Dama Dorada: mujer de ojos grandes con corona dorada y mariposas doradas, sobre un fondo turquesa con manchas de oro.",
+        "wAttr": "1200",
+        "hAttr": "1600",
+        "loading": "auto",
+        "rendered": [
+          768,
+          1024
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "textOver": []
+      },
+      {
+        "src": "VEIL.jpeg",
+        "alt": "Veil: mujer de pelo largo con mariposas celestes y naranjas que le cubren los ojos, sobre un fondo de trazos rojizos.",
+        "wAttr": "1180",
+        "hAttr": "1600",
+        "loading": "lazy",
+        "rendered": [
+          213,
+          289
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "textOver": []
+      },
+      {
+        "src": "Vanessa.jpeg",
+        "alt": "Vanessa: mujer con mariposas azules y amarillas sobre los ojos, pintada con trazos gruesos de colores sobre fondo negro.",
+        "wAttr": "1598",
+        "hAttr": "1600",
+        "loading": "lazy",
+        "rendered": [
+          213,
+          214
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "textOver": []
+      },
+      {
+        "src": "VIOLET.jpg",
+        "alt": "Violet: mujer de pelo violeta con una mariposa rosa sobre un ojo y la mano en los labios, rodeada de mariposas.",
+        "wAttr": "2043",
+        "hAttr": "2775",
+        "loading": "lazy",
+        "rendered": [
+          213,
+          290
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "textOver": []
+      },
+      {
+        "src": "Bahia.jpeg",
+        "alt": "Bahía: mujer de rostro hecho de manchas de color, con caracoles en el pelo, turbante a rayas y collares, sobre un fondo de trazos azules con estrellas de mar.",
+        "wAttr": "937",
+        "hAttr": "1280",
+        "loading": "lazy",
+        "rendered": [
+          336,
+          459
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "textOver": []
+      },
+      {
+        "src": "JOVEN FRIDA.jpg",
+        "alt": "Joven Frida: retrato de mujer con trenzas y moño rojo, cejas juntas y collar, sobre un fondo verde con rosas y mariposas monarca.",
+        "wAttr": "2043",
+        "hAttr": "2775",
+        "loading": "lazy",
+        "rendered": [
+          164,
+          223
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "textOver": []
+      },
+      {
+        "src": "SELVA.jpg",
+        "alt": "Selva: mujer con una corona de flores enormes y una rosa azul que le tapa un ojo, sobre un fondo rojo.",
+        "wAttr": "2481",
+        "hAttr": "3509",
+        "loading": "lazy",
+        "rendered": [
+          164,
+          232
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "textOver": []
+      },
+      {
+        "src": "EUPHORIA.jpeg",
+        "alt": "Euphoria: rostro de mujer de grandes ojos marrones, pintado con espátula en pinceladas gruesas de rosa, fucsia, celeste y negro.",
+        "wAttr": "1600",
+        "hAttr": "1576",
+        "loading": "lazy",
+        "rendered": [
+          164,
+          162
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "textOver": []
+      },
+      {
+        "src": "Princesa-azul.jpeg",
+        "alt": "Princesa Azul: mujer de ojos celestes con corona y aros dorados, entre chorreados turquesa y un fondo negro.",
+        "wAttr": "957",
+        "hAttr": "1280",
+        "loading": "lazy",
+        "rendered": [
+          164,
+          219
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "textOver": []
+      }
+    ],
+    "imgProblems": [],
+    "fixed": [
+      {
+        "tag": "a",
+        "cls": "wsp"
+      }
+    ],
+    "pageHeight": 4123,
+    "floating": {
+      "fixed": [
+        "wsp"
+      ],
+      "coveredWhileScrolling": {
+        "img: La Dama Dorada: mujer de ojos ": 2,
+        "span: 80 × 60 cm, disponible": 1,
+        "img: Violet: mujer de pelo violeta ": 1,
+        "span: Violet": 1,
+        "dd: Acrílico sobre bastidor de madera": 1,
+        "dd: 80 × 60 cm": 1,
+        "dd: Disponible": 1,
+        "p: [Años] [Dos líneas de Ani sobre lo que cambió: el ": 1,
+        "img: Princesa Azul: mujer de ojos c": 1,
+        "span: Princesa Azul": 1,
+        "h2: ¿Te gustó una obra?": 1,
+        "p: Envíos a todo el país.": 1
+      },
+      "coveredAtPageEnd": []
+    },
+    "motion": []
+  },
+  "1280": {
+    "title": "Prototipo A: Galería silenciosa | anicarlomagno",
+    "lang": "es-AR",
+    "h1": 1,
+    "headings": [
+      "H1: Ani Carlomagno, artista plástica en Tandil",
+      "H2: Mariposas",
+      "H2: Obra disponible",
+      "H3: Bahía",
+      "H2: Mi recorrido",
+      "H3: [Nombre de la primera etapa] Provisorio",
+      "H3: [Nombre de la etapa actual] Provisorio",
+      "H2: ¿Te gustó una obra?"
+    ],
+    "scrollWidth": 1280,
+    "clientWidth": 1280,
+    "overflowing": [],
+    "textUnder16": [],
+    "smallTargets": [],
+    "contrastFails": [],
+    "contrastOnImage": [],
+    "contrastAll": [
+      {
+        "text": "Saltar al contenido",
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgb(138, 43, 226)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 5.96,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false
+      },
+      {
+        "text": "Prototipo A, Galería silenciosa. Lo marcado como P",
+        "color": "rgb(68, 68, 68)",
+        "bg": "rgb(240, 240, 240)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 8.55,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false
+      },
+      {
+        "text": "Provisorio",
+        "color": "rgb(36, 36, 36)",
+        "bg": "rgb(240, 240, 240)",
+        "size": 16,
+        "weight": 600,
+        "ratio": 13.62,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false
+      },
+      {
+        "text": "Ver las tres direcciones",
+        "color": "rgb(138, 43, 226)",
+        "bg": "rgb(240, 240, 240)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 5.23,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false
+      },
+      {
+        "text": "anicarlomagno",
+        "color": "rgb(36, 36, 36)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 28,
+        "weight": 700,
+        "ratio": 15.52,
+        "min": 3,
+        "pass": true,
+        "onImage": false
+      },
+      {
+        "text": "artista plástica",
+        "color": "rgb(138, 43, 226)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 5.96,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false
+      },
+      {
+        "text": "Menú",
+        "color": "rgb(36, 36, 36)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 16,
+        "weight": 600,
+        "ratio": 15.52,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false
+      },
+      {
+        "text": "Acrílico sobre bastidor de madera, detalles en dor",
+        "color": "rgb(102, 102, 102)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 5.74,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false
+      },
+      {
+        "text": "Serie de ejemplo armada para el prototipo. Ani def",
+        "color": "rgb(68, 68, 68)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 9.74,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false
+      },
+      {
+        "text": "¿Te gustó una obra?",
+        "color": "rgb(36, 36, 36)",
+        "bg": "rgb(240, 248, 255)",
+        "size": 20,
+        "weight": 600,
+        "ratio": 14.47,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false
+      }
+    ],
+    "minContrast": 5.23,
+    "images": [
+      {
+        "src": "la-dama-dorada.jpeg",
+        "alt": "La Dama Dorada: mujer de ojos grandes con corona dorada y mariposas doradas, sobre un fondo turquesa con manchas de oro.",
+        "wAttr": "1200",
+        "hAttr": "1600",
+        "loading": "auto",
+        "rendered": [
+          492,
+          656
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "textOver": []
+      },
+      {
+        "src": "VEIL.jpeg",
+        "alt": "Veil: mujer de pelo largo con mariposas celestes y naranjas que le cubren los ojos, sobre un fondo de trazos rojizos.",
+        "wAttr": "1180",
+        "hAttr": "1600",
+        "loading": "lazy",
+        "rendered": [
+          384,
+          521
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "textOver": []
+      },
+      {
+        "src": "Vanessa.jpeg",
+        "alt": "Vanessa: mujer con mariposas azules y amarillas sobre los ojos, pintada con trazos gruesos de colores sobre fondo negro.",
+        "wAttr": "1598",
+        "hAttr": "1600",
+        "loading": "lazy",
+        "rendered": [
+          384,
+          384
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "textOver": []
+      },
+      {
+        "src": "VIOLET.jpg",
+        "alt": "Violet: mujer de pelo violeta con una mariposa rosa sobre un ojo y la mano en los labios, rodeada de mariposas.",
+        "wAttr": "2043",
+        "hAttr": "2775",
+        "loading": "lazy",
+        "rendered": [
+          384,
+          522
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "textOver": []
+      },
+      {
+        "src": "Bahia.jpeg",
+        "alt": "Bahía: mujer de rostro hecho de manchas de color, con caracoles en el pelo, turbante a rayas y collares, sobre un fondo de trazos azules con estrellas de mar.",
+        "wAttr": "937",
+        "hAttr": "1280",
+        "loading": "lazy",
+        "rendered": [
+          498,
+          680
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "textOver": []
+      },
+      {
+        "src": "JOVEN FRIDA.jpg",
+        "alt": "Joven Frida: retrato de mujer con trenzas y moño rojo, cejas juntas y collar, sobre un fondo verde con rosas y mariposas monarca.",
+        "wAttr": "2043",
+        "hAttr": "2775",
+        "loading": "lazy",
+        "rendered": [
+          292,
+          397
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "textOver": []
+      },
+      {
+        "src": "SELVA.jpg",
+        "alt": "Selva: mujer con una corona de flores enormes y una rosa azul que le tapa un ojo, sobre un fondo rojo.",
+        "wAttr": "2481",
+        "hAttr": "3509",
+        "loading": "lazy",
+        "rendered": [
+          292,
+          413
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "textOver": []
+      },
+      {
+        "src": "EUPHORIA.jpeg",
+        "alt": "Euphoria: rostro de mujer de grandes ojos marrones, pintado con espátula en pinceladas gruesas de rosa, fucsia, celeste y negro.",
+        "wAttr": "1600",
+        "hAttr": "1576",
+        "loading": "lazy",
+        "rendered": [
+          292,
+          288
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "textOver": []
+      },
+      {
+        "src": "Princesa-azul.jpeg",
+        "alt": "Princesa Azul: mujer de ojos celestes con corona y aros dorados, entre chorreados turquesa y un fondo negro.",
+        "wAttr": "957",
+        "hAttr": "1280",
+        "loading": "lazy",
+        "rendered": [
+          292,
+          391
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "textOver": []
+      }
+    ],
+    "imgProblems": [],
+    "fixed": [
+      {
+        "tag": "a",
+        "cls": "wsp"
+      }
+    ],
+    "pageHeight": 4099,
+    "floating": {
+      "fixed": [
+        "wsp"
+      ],
+      "coveredWhileScrolling": {
+        "p: Pinto mujeres de ojos grandes, un símbolo de mi pr": 1,
+        "img: Violet: mujer de pelo violeta ": 2,
+        "p: Te paso el precio y cómo es el envío a todo el paí": 1,
+        "img: Princesa Azul: mujer de ojos c": 1,
+        "h2: ¿Te gustó una obra?": 1,
+        "p: Envíos a todo el país.": 1
+      },
+      "coveredAtPageEnd": []
+    },
+    "motion": []
+  },
+  "reducedMotion": [],
+  "menuFromHash": {
+    "ariaExpanded": "true",
+    "panelVisible": true,
+    "role": "dialog",
+    "ariaModal": "true",
+    "coversViewport": true,
+    "focused": "body: Saltar al contenido Prototipo A, Galería silencios",
+    "mainInert": true,
+    "links": [
+      {
+        "text": "Cerrar",
+        "w": 81,
+        "h": 44
+      },
+      {
+        "text": "Inicio",
+        "w": 350,
+        "h": 56
+      },
+      {
+        "text": "Obras",
+        "w": 350,
+        "h": 56
+      },
+      {
+        "text": "Agendas y cuadernos",
+        "w": 350,
+        "h": 56
+      },
+      {
+        "text": "Libros",
+        "w": 350,
+        "h": 56
+      },
+      {
+        "text": "Láminas",
+        "w": 350,
+        "h": 56
+      },
+      {
+        "text": "Sobre mí",
+        "w": 350,
+        "h": 56
+      },
+      {
+        "text": "Contacto",
+        "w": 350,
+        "h": 56
+      },
+      {
+        "text": "Escribime por WhatsApp (se abre en una pestaña nue",
+        "w": 235,
+        "h": 50
+      }
+    ],
+    "scrollWidth": 390,
+    "clientWidth": 390
+  }
+}
