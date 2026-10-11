@@ -5,7 +5,7 @@ description: Step-by-step playbook to migrate this app from its legacy ad-hoc CS
 
 # Design-system rework playbook
 
-> The detailed incremental plan is `docs/redesign-plan.md` (phases 0–11); it supersedes the phase order below. Work one phase per PR.
+> The detailed incremental plan is `docs/redesign-plan.md` (phases 0–11 plus 4b, 10b, 10c); it supersedes the phase order below. Work one phase per PR.
 
 Goal: replace per-page CSS (`src/LandingPage.css`, `src/pages/pagesStyles/*.css`,
 `src/components/contact/styles/*.css`) with one tokenized system and a small set of shared

@@ -4,7 +4,7 @@ Personal site + WhatsApp-driven shop of an Argentine artist. React 18 + Vite, pl
 We are doing a **complete design-system rework and UX/UI improvement**. Read first, in this order:
 
 1. `docs/product-overview.md` — what the product is, flows that must not break.
-1b. `docs/redesign-plan.md` — the incremental phase plan (0–11); work on ONE phase at a time.
+1b. `docs/redesign-plan.md` — the incremental phase plan (0–11 plus 4b, 10b, 10c); work on ONE phase at a time.
 2. `docs/governance/README.md` — rules, roles, definition of done, decision log.
 3. `DESIGN.md` (when it exists) — the single source of truth for visual tokens.
 

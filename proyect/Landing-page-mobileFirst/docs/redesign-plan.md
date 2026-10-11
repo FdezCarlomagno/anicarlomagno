@@ -29,6 +29,19 @@ No es un rediseño de marca. Es una **mejora de la experiencia, la accesibilidad
 Estructura y jerarquía, espacios y ritmo vertical, escala tipográfica, consistencia de componentes, movimiento (menos y con propósito),
 accesibilidad, peso de imágenes, SEO técnico, páginas legales, claridad de la información de compra.
 
+### Ambición: una experiencia premium, a la altura de una artista importante
+
+La meta no es solo una landing prolija: es que **destaque** y que en el celular se sienta como entrar a una galería.
+Ese "premium" sale de la **presentación**, no de cambiar la marca:
+
+- la obra a gran escala, con mucho aire y sin competir con el UI;
+- tipografía editorial con una escala protagonista (el script de Ani como firma, Raleway para leer);
+- una experiencia de obra tipo galería (visor, series, ficha con su historia);
+- señales de prestigio y confianza (exposiciones, prensa, testimonios, proceso);
+- movimiento sutil y táctil, pensado para el pulgar.
+
+Todo con su violeta, su script y su calidez. Antes de construir se **elige una dirección de arte** (Fase 4b) con vos y con Ani.
+
 ### Cómo se usa "Apple" aquí
 
 Como **vara de calidad estructural** (la obra es la protagonista, el UI se retira, un solo acento, mucho aire, tipografía ajustada),
@@ -38,7 +51,7 @@ no como estética a copiar. Ver skill `apple-design`. Orden de autoridad: `DESIG
 
 ## 2. Cómo funciona el plan incremental
 
-- **12 fases (0–11)**, cada una es **un PR chico**, desplegable por sí solo y reversible (`git revert`).
+- **15 fases (0–11 más 4b, 10b y 10c**, que se insertaron después para sumar dirección de arte, prestigio y pulido de interacción sin renumerar), cada una es **un PR chico**, desplegable por sí solo y reversible (`git revert`).
 - Ninguna fase depende de las posteriores para que el sitio quede mejor que antes.
 - Las primeras fases son **invisibles o casi invisibles** (seguridad de red): accesibilidad básica, legal, SEO, tokens que replican el look actual.
   Los cambios visibles llegan después, ya con tokens, imágenes livianas y una línea base para comparar.
@@ -54,7 +67,7 @@ no como estética a copiar. Ver skill `apple-design`. Orden de autoridad: `DESIG
 | `web-design-guidelines` + `design:accessibility-review` | Fases 1, 6–10 (revisión) y 11 (cierre) |
 | `design-md` | Fase 4 (autoría, lint y export de tokens) |
 | `apple-design` | Fases 4, 6, 7, 8: calidad de tipografía, espacios, componentes |
-| `frontend-design` | Fase 7 (Home) y 10 (Sobre mí): momentos de carácter sin caer en plantilla |
+| `frontend-design` | Fases 4b (dirección de arte), 7 (Home), 8 (visor de obra), 10 (Sobre mí) y 10b: carácter y presentación premium sin caer en plantilla |
 | `design-system-rework` | Guía transversal; este plan lo **detalla y reemplaza en orden** |
 | `design:ux-copy` | Fases 2, 8, 9 (textos legales amigables, CTAs, errores de formulario) |
 | `design-lead` / `ui-implementer` / `ux-a11y-reviewer` | Ciclo de cada fase |
@@ -70,12 +83,15 @@ no como estética a copiar. Ver skill `apple-design`. Orden de autoridad: `DESIG
 | 2 | Legales y transparencia | Privacidad, cookies, términos, datos de contacto | 🟡 | M |
 | 3 | SEO técnico | Que Google y las redes vean cada página | ⚪ | M |
 | 4 | Tokens (sin cambio visual) | `DESIGN.md` + `tokens.css` que reproducen el look actual | ⚪ | M |
+| 4b | **Dirección de arte** | Explorar 2–3 propuestas premium de la Home mobile y elegir una | ⚪ (prototipos) | M |
 | 5 | Imágenes y rendimiento | Pasar de ~43 MB de originales a imágenes responsivas | ⚪ | M–L |
 | 6 | Shell: navegación, flotantes, footer | Mejor navegación mobile y fin de solapamientos | 🟠 | M |
-| 7 | Home | Jerarquía clara, obra protagonista, un CTA | 🟠 | L |
-| 8 | Catálogo (obras, láminas, libros, agendas) | Información de compra clara y tarjetas consistentes | 🟠 | L |
+| 7 | Home **premium** | Hero cinematográfico con la obra, jerarquía clara, scroll narrativo, un CTA | 🟠 | L |
+| 8 | Catálogo y **experiencia de obra** | Tarjetas consistentes, visor tipo galería, series y ficha de obra | 🟠 | L |
 | 9 | Flujos de conversión (formularios) | Pedir una agenda/obra más fácil y sin errores | 🟠 | L |
 | 10 | Sobre mí y Contacto | Contar la historia mejor y contactar sin fricción | 🟡 | M |
+| 10b | **Prestigio y confianza** | Exposiciones, prensa, testimonios y proceso de trabajo | 🟠 | M |
+| 10c | **Pulido de interacción** | Transiciones entre páginas, micro-interacciones y gestos mobile | 🟡 | M |
 | 11 | Cierre y hardening | Lighthouse, a11y final, limpieza de CSS, medición | ⚪ | M |
 
 ---
@@ -172,6 +188,21 @@ no como estética a copiar. Ver skill `apple-design`. Orden de autoridad: `DESIG
 **Listo cuando:** diff de capturas vs. baseline ≈ 0; no quedan hex/px de diseño nuevos fuera de tokens; lint sin errores.
 **Riesgo:** bajo si se hace archivo por archivo.
 
+### Fase 4b — Dirección de arte
+**Objetivo:** decidir cómo se ve y se siente "premium" **antes** de construirlo, con la identidad de Ani como límite.
+**Hacer**
+- Reunir referencias con Valentín y Ani: 3–5 sitios de artistas/galerías que les gusten y qué les gusta de cada uno (tipografía, aire, ritmo, cómo muestran la obra). **Sin referencia concreta, esta fase no arranca.**
+- Prototipar **2–3 direcciones** de la Home en mobile (390 px) como páginas HTML estáticas en `design/art-direction/` (sin tocar `src/`), usando obras reales de Ani y los tokens de la Fase 4:
+  - A. *Galería silenciosa*: fondo claro, obra a sangre, tipografía mínima.
+  - B. *Editorial*: titulares grandes en Dancing Script/Raleway, composición asimétrica, series como capítulos.
+  - C. *Inmersiva*: hero a pantalla completa con obra, scroll narrativo, oscuridad parcial solo detrás de la obra si realza el color.
+  (Las letras son puntos de partida; el `design-lead` puede proponer otras.)
+- Cada prototipo muestra: hero, una sección de serie/obras destacadas, tarjeta de obra, CTA de WhatsApp y el menú abierto. Evaluar contra los principios de [design-principles.md](governance/design-principles.md) y contraste AA.
+- Elegir una dirección y registrarla en el decision-log (DL-002) con: escala tipográfica, uso del acento, proporciones de imagen, movimiento permitido y qué **no** se hace. Ajustar `DESIGN.md` en consecuencia.
+**Skills/agentes:** `frontend-design`, `apple-design`, `design-lead`, `design:design-critique`, `ux-a11y-reviewer` (contraste y legibilidad del prototipo).
+**Listo cuando:** Ani y Valentín eligen una dirección con capturas a 390 px; `DESIGN.md` refleja la decisión; las fases 7, 8 y 10b se escriben contra ese prototipo.
+**Riesgo:** bajo técnico; alto en subjetividad → limitar a una ronda de feedback y una de ajustes.
+
 ### Fase 5 — Imágenes y rendimiento
 **Objetivo:** que el sitio cargue rápido en celular con datos móviles, sin que la obra pierda calidad.
 **Hacer**
@@ -196,9 +227,13 @@ no como estética a copiar. Ver skill `apple-design`. Orden de autoridad: `DESIG
 **Listo cuando:** DoD completo a 360/390/768/1280; ningún solapamiento entre flotantes; menú operable por teclado y lector de pantalla.
 **Riesgo:** medio (afecta todas las páginas) → desplegar con la lista de "no romper" de la Fase 0.
 
-### Fase 7 — Home
-**Objetivo:** que en 5 segundos se entienda quién es Ani, qué vende y cuál es el siguiente paso.
-**Hacer**
+### Fase 7 — Home premium
+**Objetivo:** que en 5 segundos se entienda quién es Ani, qué vende y cuál es el siguiente paso, y que la primera pantalla en el celular impacte.
+**Hacer (implementa la dirección elegida en la Fase 4b)**
+- **Primera pantalla (390×844):** la obra a gran escala ocupando el viewport, el logo/firma de Ani, un titular fuerte y un CTA; sin cajas ni decoración compitiendo. La imagen principal respeta presupuesto de la Fase 5 (LCP).
+- **Scroll narrativo:** cada sección es un "capítulo" con un único mensaje; la obra entra con una revelación suave (desactivable), nunca bloquea el scroll.
+- **Series destacadas**: 2–3 series/colecciones con una obra emblemática cada una y enlace a su listado (se completa en Fase 8).
+- **Tipografía editorial:** escala protagonista para titulares, largo de línea cómodo, cifras (+1000 obras, +20 años) solo si aportan, no como bloque genérico de estadísticas.
 - Hero: la obra protagonista + una línea clara (propuesta: *"Arte pintado a mano en Tandil — obras, agendas y láminas con alma"* **(copy a validar con Ani)**) + CTA principal ("Ver agendas") y secundario ("Ver obras"). Evaluar si el slider se mantiene (autoplay pausable, con controles accesibles) o se reemplaza por una obra destacada.
 - Secuencia: Hero → Agendas y cuadernos (qué se puede personalizar, desde qué precio usando `agendaPrices`) → Obras destacadas → "Quién soy" + "Mis pasiones" condensadas con la frase de los ojos grandes → Cómo comprar (3 pasos, solo porque es una secuencia real: elegís → me escribís por WhatsApp → lo recibís en todo el país) → Instagram.
 - Ritmo vertical con lienzos alternos (claro/aliceblue) en lugar de cajas; animaciones solo de entrada suaves y desactivables.
@@ -207,9 +242,15 @@ no como estética a copiar. Ver skill `apple-design`. Orden de autoridad: `DESIG
 **Listo cuando:** auditoría de Home sin P0/P1; LCP dentro de presupuesto; Ani aprueba que "sigue siendo ella".
 **Riesgo:** medio-alto en percepción (es la página más vista) → mostrar capturas/prototipo a Ani antes de mergear.
 
-### Fase 8 — Catálogo: obras, láminas, libros, agendas
-**Objetivo:** tarjetas consistentes y la información de compra donde se decide.
-**Hacer**
+### Fase 8 — Catálogo y experiencia de obra
+**Objetivo:** tarjetas consistentes, la información de compra donde se decide y una forma de mirar la obra digna de una galería.
+**Hacer (experiencia de obra)**
+- **Visor tipo galería** (pantalla completa, zoom con pellizco/doble toque, deslizar entre obras, cierre con Esc/gesto, foco atrapado, `alt` y nombre de la obra). Reemplaza al lightbox simple.
+- **Series/colecciones:** agrupar obras por serie o época (p. ej. "Mujeres de ojos grandes", mariposas, etc. **(Ani define las series)**) con una página o sección por serie y un texto breve curatorial. Las URLs actuales no cambian; se agregan nuevas (`/obras/serie/<slug>`) y entran al sitemap.
+- **Ficha de obra:** título, año, técnica, medidas, estado, historia/inspiración en 2–3 líneas, CTA "Consultar esta obra" (mismo mensaje de WhatsApp) y obras relacionadas. Datos de ficha en el archivo de datos (`objects/*`), **la información que falta la aporta Ani**.
+- **Obra en contexto (opcional):** imagen de la obra en una pared/ambiente o escala de referencia para entender el tamaño. Solo con material real o mockups claramente indicados; nunca alterar la obra.
+- Compartir una obra (enlace con OG propio, resuelto en Fase 3).
+**Hacer (catálogo)**
 - Componente `ArtworkCard` único (Obras, Láminas, Libros): imagen con proporción estable, título, medida, estado (disponible / vendido / oferta), CTA "Consultar".
 - Obras: filtros (todas/disponibles/vendidas) como control accesible con `aria-pressed`, estado vacío amable, paginación o "ver más" si hay muchas; ordenar para mostrar disponibles primero **(confirmar con Ani)**.
 - Mensaje de cómo comprar y envíos visible en la tarjeta o encima del listado ("Consultame el precio por WhatsApp · Envíos a todo el país").
@@ -245,6 +286,31 @@ no como estética a copiar. Ver skill `apple-design`. Orden de autoridad: `DESIG
 **Listo cuando:** DoD completo; Ani confirma que los textos suenan a ella.
 **Riesgo:** bajo.
 
+### Fase 10b — Prestigio y confianza
+**Objetivo:** que quien llega por primera vez perciba trayectoria y pueda confiar en comprar a distancia.
+**Hacer**
+- Sección **"Trayectoria"** reutilizable (Home y Sobre mí): exposiciones y eventos (el código ya menciona *Centro Polivalente de Arte*, *La Noche de los Museos*, *Arte sin fronteras*), premios, menciones en prensa y colaboraciones, con año y lugar. **Ani aporta fechas, enlaces y material de prensa**; no se inventa ni se exagera nada.
+- **Testimonios** de clientas/alumnas reales (texto corto, nombre o inicial, producto, foto si dan permiso por escrito). Si no hay, usar capturas reales de mensajes **con consentimiento** y datos personales tapados.
+- **Proceso de trabajo:** cómo nace una obra o una agenda personalizada (fotos/video corto del taller), plazos y packaging; reduce dudas antes del WhatsApp.
+- **Garantías claras:** envíos a todo el país, cómo se despacha, tiempos, cuidado de la obra, política de cambios (alineado con Fase 2).
+- Señales de actividad: enlace a Instagram con últimas publicaciones **sin cargar scripts de terceros que usen cookies** (imágenes propias seleccionadas con enlace), para no reabrir el problema de privacidad de la Fase 2.
+- Todo con jerarquía discreta: confianza como apoyo, no como publicidad.
+**Skills/agentes:** `frontend-design`, `apple-design`, `design:ux-copy`, `landing-ux-audit` (lente 1: confianza en el punto de decisión), `ux-a11y-reviewer`.
+**Listo cuando:** cada afirmación tiene respaldo aportado por Ani; testimonios con consentimiento; la sección es accesible y liviana.
+**Riesgo:** bajo técnico; **depende de contenido** de Ani → pedirlo al inicio de la Fase 4b para no frenar.
+
+### Fase 10c — Pulido de interacción
+**Objetivo:** que el sitio *se sienta* cuidado al tocarlo, sin sacrificar rendimiento ni accesibilidad.
+**Hacer**
+- **Transiciones entre páginas** suaves (View Transitions API con fallback a navegación normal; ver `react-view-transitions` solo como referencia, sin instalar sin aprobación) y restauración de scroll correcta (incluido "volver").
+- **Micro-interacciones** con propósito: respuesta al toque (estado pressed), feedback de carga en CTAs, aparición escalonada y sutil de tarjetas, indicador de progreso en formularios por pasos.
+- **Gestos mobile:** deslizar en el visor y las series, hoja inferior (bottom sheet) para filtros/menú si mejora el alcance del pulgar, `touch-action` y zonas muertas revisados.
+- **Presupuesto de movimiento:** solo `transform`/`opacity`, 150–300 ms, ≤ 1 animación destacada por pantalla, todo desactivado con `prefers-reduced-motion`; verificar sin jank en un Android gama media **(confirmar con dispositivo real)**.
+- Estados de carga elegantes (esqueletos/blur-up de la Fase 5) en vez de saltos de layout.
+**Skills/agentes:** `apple-design` (principios de movimiento), `web-design-guidelines`, `design:accessibility-review`, `ux-a11y-reviewer`.
+**Listo cuando:** INP < 200 ms y CLS < 0.1 se mantienen; reduced-motion verificado; ninguna interacción depende de hover; Ani/Valentín confirman que "se siente premium" en un celular real.
+**Riesgo:** medio (se acumula jank fácilmente) → si empeora una métrica, se recorta la animación, no la métrica.
+
 ### Fase 11 — Cierre y hardening
 **Objetivo:** consolidar, medir y dejar el sistema mantenible por una persona.
 **Hacer**
@@ -272,9 +338,12 @@ no como estética a copiar. Ver skill `apple-design`. Orden de autoridad: `DESIG
 | 2 | Datos legales a publicar (nombre/razón social, CUIT, domicilio), condición fiscal, plazos de producción y envío, política de cambios; contratar revisión legal |
 | 3 | ¿Aprobás agregar `react-helmet-async` y evaluar prerender? ¿Cuáles son las redes oficiales (`anicarlomagno` vs `anicarlomagno_painting`)? |
 | 4 | Acento exacto y fuentes finales (propuesta: conservar violeta, Dancing Script + Raleway) |
+| 4b | **Referencias** de 3–5 sitios de artistas/galerías que les gusten; elegir una de las 2–3 direcciones; pedir ya a Ani el material de la Fase 10b (exposiciones, prensa, testimonios, fotos del taller) |
 | 5 | Herramienta de optimización de imágenes (nueva dependencia) y ubicación de los originales |
 | 7 | Hero: ¿slider o una obra destacada? Frase principal |
-| 8 | Orden del catálogo y si se muestran obras vendidas |
+| 8 | Orden del catálogo y si se muestran obras vendidas; **series/colecciones** y datos de ficha (año, técnica, historia) que aporta Ani; ¿se muestra la obra "en contexto"? |
+| 10b | Qué exposiciones, premios y menciones publicar; testimonios con consentimiento por escrito; plazos y garantías reales |
+| 10c | ¿Aprobás usar View Transitions u otra librería de transición? (nueva dependencia si no es nativa) |
 | 9 | ¿Pasamos de `window.open` a enlace `wa.me`/`api.whatsapp.com`? |
 | 11 | ¿Analítica sin cookies, sí o no? |
 
@@ -298,5 +367,6 @@ no como estética a copiar. Ver skill `apple-design`. Orden de autoridad: `DESIG
 | LCP / CLS / INP (móvil) | medir en Fase 0 | < 2.5 s / < 0.1 / < 200 ms |
 | Peso de Home transferido | medir en Fase 0 | < 1.5 MB |
 | Páginas con title/description/canonical propios | 1 de 10 | 10 de 10 |
+| Percepción "premium" (test con 5 personas ajenas al proyecto en un celular: ¿qué tipo de artista es?, ¿lo comprarías/recomendarías?, ¿confiás?) | sin medir; hacerlo en Fase 0 con el sitio actual | mejora clara frente a la línea base, sin perder el reconocimiento de la marca |
 | Fallas de accesibilidad críticas | medir en Fase 0 | 0 |
 | Consultas por WhatsApp desde el sitio | sin medición | línea base tras Fase 11 (si se aprueba analítica) |

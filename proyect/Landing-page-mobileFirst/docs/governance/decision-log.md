@@ -25,3 +25,9 @@ Consequences: Project `DESIGN.md` + `src/styles/tokens.css` to be created in Pha
 - [ ] Radius and elevation scale
 - [ ] Motion language and reduced-motion policy
 - [ ] Home hero concept (slider vs. single featured work)
+
+## DL-002 — Ambición premium y dirección de arte previa (2026-10-11)
+Status: accepted (direction itself pending, Phase 4b)
+Context: The goal is not only a tidy landing but a premium, gallery-like mobile experience that makes Ani stand out, while keeping her brand essence.
+Decision: Added phases 4b (art direction, 2–3 prototypes, one chosen before building), 10b (prestige and trust) and 10c (interaction polish); reinforced 7 (premium Home) and 8 (gallery viewer, series, artwork pages). Premium comes from presentation, not rebranding.
+Consequences: Phases 7, 8, 10b are written against the Phase 4b prototype; Ani must supply content (series, exhibitions, press, testimonials, workshop photos).
