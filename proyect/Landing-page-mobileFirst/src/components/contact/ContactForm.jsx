@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
+import { Link } from 'react-router-dom';
 import './styles/ContactForm.css';
 import toast, { Toaster } from 'react-hot-toast';
 
@@ -141,6 +142,9 @@ const ContactForm = () => {
         >
           {isSubmitting ? 'Enviando...' : 'Enviar'}
         </motion.button>
+        <p className="form-privacy-notice">
+          Al enviar aceptás la <Link to="/privacidad">Política de privacidad</Link>.
+        </p>
       </motion.form>
     </>
   );

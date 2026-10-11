@@ -98,6 +98,15 @@ html {
     white-space: nowrap;
 }
 
+.visually-hidden {
+    position: absolute;
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
 nav {
     height: 50px;
     background-color: rgba(240, 248, 255, 0.836);
@@ -455,6 +464,50 @@ footer p {
     text-align: center;
     color: rgba(240, 248, 255, 0.685);
     font-size: 13px;
+}
+
+footer {
+    height: auto;
+    min-height: 60px;
+    flex-direction: column;
+    padding: 0.5rem 1rem 1rem;
+    --focus-ring: aliceblue;
+}
+
+/* Undo the global sticky `nav` bar styles */
+.footer-legal {
+    position: static;
+    height: auto;
+    padding: 0;
+    background: none;
+    z-index: auto;
+}
+
+.footer-legal ul {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-legal li {
+    font-size: 14px;
+}
+
+.footer-legal a {
+    padding: 12px 4px;
+    min-height: 44px;
+    color: aliceblue;
+    text-decoration: underline;
+}
+
+footer .footer-contact {
+    width: 90%;
+    margin-bottom: 0.5rem;
+    line-height: 1.8;
+}
+
+.footer-contact a {
+    color: aliceblue;
+    text-decoration: underline;
 }
 
 /*SECTION AGENDA*/

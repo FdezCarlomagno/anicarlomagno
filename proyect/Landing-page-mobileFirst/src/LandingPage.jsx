@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import { MotionConfig } from 'framer-motion';
 import Home from './Home.jsx';
 import NavBar from './components/NavBar.jsx';
@@ -18,6 +18,11 @@ import Laminas from './pages/Laminas.jsx';
 import FooterNavbar from './components/FooterNavbar.jsx';
 import Envio from './components/Envio.jsx';
 import Contact from './components/contact/ContactSection.jsx'
+import { EmailLink, WhatsappLink } from './content/legal/ContactLinks.jsx';
+import { OWNER_NAME } from './content/legal/contact.js';
+import { privacidad } from './content/legal/privacidad.jsx';
+import { terminos } from './content/legal/terminos.jsx';
+import LegalPage from './pages/LegalPage.jsx';
 import './LandingPage.css';
 
 
@@ -48,13 +53,24 @@ const LandingPage = () => {
               <Route path="/mi-libro" element={<PersonalBook />} />
               <Route path="/laminas" element={<Laminas />} />
               <Route path='/contacto' element={<Contact />}/>
+              <Route path="/privacidad" element={<LegalPage content={privacidad} />} />
+              <Route path="/terminos" element={<LegalPage content={terminos} />} />
               <Route path="*" element={<Home />} /> {/* Ruta por defecto */}
             </Routes>
           </main>
           <Envio />
           <FooterNavbar />
           <footer>
-            <p>Copyright © {new Date().getFullYear()} Analia Carlomagno</p>
+            <nav className="footer-legal" aria-label="Legales">
+              <ul>
+                <li><Link to="/privacidad">Privacidad</Link></li>
+                <li><Link to="/terminos">Términos</Link></li>
+              </ul>
+            </nav>
+            <p className="footer-contact">
+              {OWNER_NAME} · <WhatsappLink /> · <EmailLink />
+            </p>
+            <p>Copyright © {new Date().getFullYear()} Analía Carlomagno</p>
           </footer>
         </div>
       </MotionConfig>
