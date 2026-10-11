@@ -1,15 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './pagesStyles/legal.css';
 
 const LegalPage = ({ content }) => {
-  useEffect(() => {
-    const previousTitle = document.title;
-    document.title = content.documentTitle;
-    return () => {
-      document.title = previousTitle;
-    };
-  }, [content.documentTitle]);
-
   return (
     <article className="legal-page">
       <h1 className="legal-title">{content.title}</h1>
