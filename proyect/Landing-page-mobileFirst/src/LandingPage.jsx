@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import { MotionConfig } from 'framer-motion';
 import Home from './Home.jsx';
 import NavBar from './components/NavBar.jsx';
@@ -18,6 +18,8 @@ import Laminas from './pages/Laminas.jsx';
 import FooterNavbar from './components/FooterNavbar.jsx';
 import Envio from './components/Envio.jsx';
 import Contact from './components/contact/ContactSection.jsx'
+import { EmailLink, WhatsappLink } from './content/legal/ContactLinks.jsx';
+import { OWNER_NAME } from './content/legal/contact.js';
 import './LandingPage.css';
 
 
@@ -54,6 +56,15 @@ const LandingPage = () => {
           <Envio />
           <FooterNavbar />
           <footer>
+            <nav className="footer-legal" aria-label="Legales">
+              <ul>
+                <li><Link to="/privacidad">Privacidad</Link></li>
+                <li><Link to="/terminos">Términos</Link></li>
+              </ul>
+            </nav>
+            <p className="footer-contact">
+              {OWNER_NAME} · <WhatsappLink /> · <EmailLink />
+            </p>
             <p>Copyright © {new Date().getFullYear()} Analia Carlomagno</p>
           </footer>
         </div>
