@@ -23,6 +23,8 @@ import { OWNER_NAME } from './content/legal/contact.js';
 import { privacidad } from './content/legal/privacidad.jsx';
 import { terminos } from './content/legal/terminos.jsx';
 import LegalPage from './pages/LegalPage.jsx';
+import NotFound from './pages/NotFound.jsx';
+import RouteMeta from './seo/RouteMeta.jsx';
 import './LandingPage.css';
 
 
@@ -35,6 +37,7 @@ const skipToContent = (e) => {
 const LandingPage = () => {
   return (
     <BrowserRouter>
+      <RouteMeta />
       <MotionConfig reducedMotion="user">
         <div className="LandingPage">
           <a className="skip-link" href="#contenido" onClick={skipToContent}>Saltar al contenido</a>
@@ -55,7 +58,7 @@ const LandingPage = () => {
               <Route path='/contacto' element={<Contact />}/>
               <Route path="/privacidad" element={<LegalPage content={privacidad} />} />
               <Route path="/terminos" element={<LegalPage content={terminos} />} />
-              <Route path="*" element={<Home />} /> {/* Ruta por defecto */}
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
           <Envio />

@@ -4,7 +4,6 @@ import { EmailLink, WhatsappLink } from './ContactLinks';
 import { LEGAL_UPDATED, OWNER_NAME } from './contact';
 
 export const terminos = {
-  documentTitle: 'Términos y condiciones | Analía Carlomagno',
   title: 'Términos y condiciones',
   updated: LEGAL_UPDATED,
   intro: (

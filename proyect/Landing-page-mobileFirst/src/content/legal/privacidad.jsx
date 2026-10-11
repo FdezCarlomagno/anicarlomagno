@@ -3,7 +3,6 @@ import { EmailLink, WhatsappLink } from './ContactLinks';
 import { LEGAL_UPDATED, OWNER_NAME } from './contact';
 
 export const privacidad = {
-  documentTitle: 'Política de privacidad | Analía Carlomagno',
   title: 'Política de privacidad',
   updated: LEGAL_UPDATED,
   intro: (

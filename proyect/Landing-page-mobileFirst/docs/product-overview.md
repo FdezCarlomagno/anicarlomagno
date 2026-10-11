@@ -69,7 +69,7 @@ Navigation labels: Inicio · Obras · Agendas y cuadernos · Libros · Láminas 
 
 ## Tech facts
 
-- React 18 + Vite 5 (SWC), `react-router-dom` 6 (BrowserRouter; Vercel rewrites everything to `/`), `framer-motion` for animation,
+- React 18 + Vite 5 (SWC), `react-router-dom` 7 (BrowserRouter; one prerendered HTML per public route + real 404, see `docs/seo-notes.md`), `framer-motion` for animation,
   `@unpic/react` `<Image>`, `react-hot-toast`, `lucide-react`, `react-intersection-observer`, `@emailjs/browser`.
 - **Plain CSS**, no Tailwind/CSS-in-JS: global `src/LandingPage.css`, per-page `src/pages/pagesStyles/*.css`,
   `src/components/contact/styles/*.css`. No design tokens yet (one local set of vars in `agendas.css`).
