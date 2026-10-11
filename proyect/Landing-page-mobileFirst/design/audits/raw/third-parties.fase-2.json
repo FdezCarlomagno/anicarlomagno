@@ -1,0 +1,248 @@
+{
+  "chrome": "Chrome/154.0.8037.93",
+  "base": "http://localhost:4173",
+  "date": "2026-10-11T22:23:32.379Z",
+  "routes": {
+    "/": {
+      "totalRequests": 29,
+      "firstPartyRequests": 29,
+      "thirdPartyByHost": {},
+      "cookiesAtLoad": [],
+      "cookiesAfterScroll": [],
+      "setCookieResponses": [],
+      "storageAtLoad": {
+        "localStorage": [],
+        "sessionStorage": [],
+        "indexedDB": [],
+        "cacheStorage": [],
+        "serviceWorkers": 0,
+        "documentCookie": ""
+      },
+      "storageAfterScroll": {
+        "localStorage": [],
+        "sessionStorage": [],
+        "indexedDB": [],
+        "cacheStorage": [],
+        "serviceWorkers": 0,
+        "documentCookie": ""
+      }
+    },
+    "/elegir": {
+      "totalRequests": 7,
+      "firstPartyRequests": 7,
+      "thirdPartyByHost": {},
+      "cookiesAtLoad": [],
+      "cookiesAfterScroll": [],
+      "setCookieResponses": [],
+      "storageAtLoad": {
+        "localStorage": [],
+        "sessionStorage": [],
+        "indexedDB": [],
+        "cacheStorage": [],
+        "serviceWorkers": 0,
+        "documentCookie": ""
+      },
+      "storageAfterScroll": {
+        "localStorage": [],
+        "sessionStorage": [],
+        "indexedDB": [],
+        "cacheStorage": [],
+        "serviceWorkers": 0,
+        "documentCookie": ""
+      }
+    },
+    "/obras-en-stock": {
+      "totalRequests": 29,
+      "firstPartyRequests": 29,
+      "thirdPartyByHost": {},
+      "cookiesAtLoad": [],
+      "cookiesAfterScroll": [],
+      "setCookieResponses": [],
+      "storageAtLoad": {
+        "localStorage": [],
+        "sessionStorage": [],
+        "indexedDB": [],
+        "cacheStorage": [],
+        "serviceWorkers": 0,
+        "documentCookie": ""
+      },
+      "storageAfterScroll": {
+        "localStorage": [],
+        "sessionStorage": [],
+        "indexedDB": [],
+        "cacheStorage": [],
+        "serviceWorkers": 0,
+        "documentCookie": ""
+      }
+    },
+    "/obra-personalizada": {
+      "totalRequests": 7,
+      "firstPartyRequests": 7,
+      "thirdPartyByHost": {},
+      "cookiesAtLoad": [],
+      "cookiesAfterScroll": [],
+      "setCookieResponses": [],
+      "storageAtLoad": {
+        "localStorage": [],
+        "sessionStorage": [],
+        "indexedDB": [],
+        "cacheStorage": [],
+        "serviceWorkers": 0,
+        "documentCookie": ""
+      },
+      "storageAfterScroll": {
+        "localStorage": [],
+        "sessionStorage": [],
+        "indexedDB": [],
+        "cacheStorage": [],
+        "serviceWorkers": 0,
+        "documentCookie": ""
+      }
+    },
+    "/agendas": {
+      "totalRequests": 16,
+      "firstPartyRequests": 16,
+      "thirdPartyByHost": {},
+      "cookiesAtLoad": [],
+      "cookiesAfterScroll": [],
+      "setCookieResponses": [],
+      "storageAtLoad": {
+        "localStorage": [],
+        "sessionStorage": [],
+        "indexedDB": [],
+        "cacheStorage": [],
+        "serviceWorkers": 0,
+        "documentCookie": ""
+      },
+      "storageAfterScroll": {
+        "localStorage": [],
+        "sessionStorage": [],
+        "indexedDB": [],
+        "cacheStorage": [],
+        "serviceWorkers": 0,
+        "documentCookie": ""
+      }
+    },
+    "/agenda-personalizada": {
+      "totalRequests": 20,
+      "firstPartyRequests": 20,
+      "thirdPartyByHost": {},
+      "cookiesAtLoad": [],
+      "cookiesAfterScroll": [],
+      "setCookieResponses": [],
+      "storageAtLoad": {
+        "localStorage": [],
+        "sessionStorage": [],
+        "indexedDB": [],
+        "cacheStorage": [],
+        "serviceWorkers": 0,
+        "documentCookie": ""
+      },
+      "storageAfterScroll": {
+        "localStorage": [],
+        "sessionStorage": [],
+        "indexedDB": [],
+        "cacheStorage": [],
+        "serviceWorkers": 0,
+        "documentCookie": ""
+      }
+    },
+    "/mi-libro": {
+      "totalRequests": 9,
+      "firstPartyRequests": 9,
+      "thirdPartyByHost": {},
+      "cookiesAtLoad": [],
+      "cookiesAfterScroll": [],
+      "setCookieResponses": [],
+      "storageAtLoad": {
+        "localStorage": [],
+        "sessionStorage": [],
+        "indexedDB": [],
+        "cacheStorage": [],
+        "serviceWorkers": 0,
+        "documentCookie": ""
+      },
+      "storageAfterScroll": {
+        "localStorage": [],
+        "sessionStorage": [],
+        "indexedDB": [],
+        "cacheStorage": [],
+        "serviceWorkers": 0,
+        "documentCookie": ""
+      }
+    },
+    "/laminas": {
+      "totalRequests": 7,
+      "firstPartyRequests": 7,
+      "thirdPartyByHost": {},
+      "cookiesAtLoad": [],
+      "cookiesAfterScroll": [],
+      "setCookieResponses": [],
+      "storageAtLoad": {
+        "localStorage": [],
+        "sessionStorage": [],
+        "indexedDB": [],
+        "cacheStorage": [],
+        "serviceWorkers": 0,
+        "documentCookie": ""
+      },
+      "storageAfterScroll": {
+        "localStorage": [],
+        "sessionStorage": [],
+        "indexedDB": [],
+        "cacheStorage": [],
+        "serviceWorkers": 0,
+        "documentCookie": ""
+      }
+    },
+    "/sobre-mi": {
+      "totalRequests": 12,
+      "firstPartyRequests": 12,
+      "thirdPartyByHost": {},
+      "cookiesAtLoad": [],
+      "cookiesAfterScroll": [],
+      "setCookieResponses": [],
+      "storageAtLoad": {
+        "localStorage": [],
+        "sessionStorage": [],
+        "indexedDB": [],
+        "cacheStorage": [],
+        "serviceWorkers": 0,
+        "documentCookie": ""
+      },
+      "storageAfterScroll": {
+        "localStorage": [],
+        "sessionStorage": [],
+        "indexedDB": [],
+        "cacheStorage": [],
+        "serviceWorkers": 0,
+        "documentCookie": ""
+      }
+    },
+    "/contacto": {
+      "totalRequests": 7,
+      "firstPartyRequests": 7,
+      "thirdPartyByHost": {},
+      "cookiesAtLoad": [],
+      "cookiesAfterScroll": [],
+      "setCookieResponses": [],
+      "storageAtLoad": {
+        "localStorage": [],
+        "sessionStorage": [],
+        "indexedDB": [],
+        "cacheStorage": [],
+        "serviceWorkers": 0,
+        "documentCookie": ""
+      },
+      "storageAfterScroll": {
+        "localStorage": [],
+        "sessionStorage": [],
+        "indexedDB": [],
+        "cacheStorage": [],
+        "serviceWorkers": 0,
+        "documentCookie": ""
+      }
+    }
+  },
+  "failed": []
+}

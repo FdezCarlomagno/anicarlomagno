@@ -37,3 +37,10 @@ Status: accepted; implemented 2026-10-11
 Context: La Fase 0 detectó que `ADICION_DE_FRASE: 3000` se suma al total cuando se tilda "Agregar frase personalizada" (`AgendaForm.jsx:127-129`), y que al destildar la casilla el texto de la frase igual viaja en el mensaje.
 Decision: Regla de negocio (Valentín/Ani): la frase es gratis. El comportamiento actual (cobrar $3000) es incorrecto.
 Consequences: Corregido en `AgendaPrices.js` y `AgendaForm.jsx` (precio y mensaje), verificando antes/después con los 3 casos de `design/audits/2026-10-critical-flows.md`; incluir la frase en el mensaje solo si la casilla está tildada. Actualizar `product-overview.md` al aplicar el cambio.
+
+## DL-004 — Sin banner de cookies; legales de alcance reducido (2026-10-11)
+Status: accepted (Fase 2)
+Context: El sitio no guarda cookies ni storage, pero enviaba datos a Google al cargar (Google Fonts en todas las rutas, Maps en `/contacto`).
+Decision: No necesitar banner: fuentes autoalojadas (Raleway y Dancing Script variables, `public/fonts/`, se quitó Cedarville Cursive sin uso) y mapa con "clic para cargar". Privacidad y términos breves en `/privacidad` y `/terminos`; solo se publican nombre y contacto (WhatsApp y email).
+Alternatives: Banner de consentimiento (rechazado: no hay cookies propias ni analítica). Publicar CUIT, domicilio, pagos, envíos, devoluciones, arrepentimiento y leyenda de Defensa del Consumidor (fuera de alcance por decisión del dueño; ver `docs/legal/legal-notes.md`).
+Consequences: Si se agrega analítica o cualquier script con cookies no esenciales, hace falta banner con consentimiento previo. Email de contacto pendiente: no mergear a `main` con `[PENDIENTE]`.
