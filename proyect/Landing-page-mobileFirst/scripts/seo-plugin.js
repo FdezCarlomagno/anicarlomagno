@@ -69,6 +69,8 @@ export default function seoPlugin() {
         fs.mkdirSync(dir, { recursive: true });
         fs.writeFileSync(path.join(dir, 'index.html'), template.replace(BLOCK, () => renderHead(route, { indexable: true })));
       }
+      // Vercel serves 404.html with status 404 for any path without a file (no catch-all rewrite).
+      fs.writeFileSync(path.join(outDir, '404.html'), template.replace(BLOCK, () => renderHead(notFound, { indexable: false })));
       fs.writeFileSync(path.join(outDir, 'sitemap.xml'), sitemapXml());
     },
   };
