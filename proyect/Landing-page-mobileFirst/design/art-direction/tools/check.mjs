@@ -9,7 +9,7 @@ import { launch, newPage, setViewport, goto, autoScroll, evaluate, sleep, click,
 
 const BASE = process.argv[2] || 'http://localhost:5173/design/art-direction/';
 const PAGES = process.argv[3] ? process.argv[3].split(',') : ['a-galeria.html', 'b-editorial.html', 'c-inmersiva.html'];
-const WIDTHS = [360, 390, 1280];
+const WIDTHS = [360, 390, 768, 1280];
 const OUT_DIR = 'design/art-direction/verificacion/raw';
 mkdirSync(OUT_DIR, { recursive: true });
 
