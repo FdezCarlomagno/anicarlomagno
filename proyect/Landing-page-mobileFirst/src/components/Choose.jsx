@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 const ChooseForm = () => {
     return (
-        <main className='choosePainting'>
+        <div className='choosePainting'>
             <div className='choose-container'>
                 <motion.h1
                     initial={{ opacity: 0, y: -50 }}
@@ -43,7 +43,7 @@ const ChooseForm = () => {
             >
                 <FooterPaintingText />
             </motion.div>
-        </main>
+        </div>
     );
 }
 

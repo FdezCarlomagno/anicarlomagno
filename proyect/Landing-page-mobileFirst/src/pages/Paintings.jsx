@@ -52,7 +52,7 @@ const Paintings = () => {
     }, []);
 
     return (
-        <main className="paintings">
+        <div className="paintings">
             <div className="titleBg">
                 <h1 className='myPaintingsTitle'>Obras en stock</h1>
             </div>
@@ -99,7 +99,7 @@ const Paintings = () => {
                     <button className='btnAgenda' id='btnPainting'>Quiero mi obra</button>
                 </Link>
             </div>
-        </main>
+        </div>
     );
 }
 

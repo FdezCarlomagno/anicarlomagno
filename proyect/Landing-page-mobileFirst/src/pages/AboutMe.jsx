@@ -89,7 +89,7 @@ const AboutMe = () => {
                 </motion.h1>
             </div>
 
-            <main className="about-me-content">
+            <div className="about-me-content">
                 {/* Hero Section */}
                 <motion.section
                     ref={heroRef}
@@ -270,7 +270,7 @@ const AboutMe = () => {
                         </div>
                     </div>
                 </motion.section>
-            </main>
+            </div>
         </div>
     );
 };

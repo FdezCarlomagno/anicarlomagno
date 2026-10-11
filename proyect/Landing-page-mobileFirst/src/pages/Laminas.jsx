@@ -64,7 +64,7 @@ const Laminas = () => {
     });
 
     return (
-        <main className="laminas">
+        <div className="laminas">
             <div className="titleBg">
                 <motion.h1
                     ref={titleRef}
@@ -158,7 +158,7 @@ const Laminas = () => {
                     </div>
                 </div>
             </motion.div>
-        </main>
+        </div>
     );
 };
 

@@ -64,7 +64,7 @@ const PersonalBook = () => {
                     Libros
                 </motion.h1>
             </div>
-            <main className="personalBook">
+            <div className="personalBook">
                 <div className='personalBook-container'>
                     <div className='personalBook-img-container' ref={sliderRef1}>
                         <div className='personalBook-price'><p className='personalBook-price-value'>${librosPrice.MIRADAS_QUE_NARRAN}</p></div>
@@ -124,8 +124,8 @@ const PersonalBook = () => {
                         </div>
                     </div>
                 </section>
-            </main>
-            <main className="personalBook section2">
+            </div>
+            <div className="personalBook section2">
                 <div className='personalBook-container'>
                     <div className='personalBook-img-container' ref={sliderRef2}>
                         <div className='personalBook-price'><p className='personalBook-price-value'>${librosPrice.LIBRO_PARA_COLOREAR}</p></div>
@@ -185,7 +185,7 @@ const PersonalBook = () => {
                         </div>
                     </div>
                 </section>
-            </main>
+            </div>
         </div>
     );
 };

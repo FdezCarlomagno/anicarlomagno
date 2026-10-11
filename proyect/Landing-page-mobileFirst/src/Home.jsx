@@ -14,7 +14,7 @@ function Home() {
 
   return (
     <>
-      <main>
+      <div>
         <header>
           <div className="imageSlider">
             <Slider />
@@ -33,7 +33,7 @@ function Home() {
         <PaintingImgsSection />
         </section>
         <SecondSection />
-      </main>
+      </div>
     </>
   )
 }

@@ -40,7 +40,7 @@ const Agendas = () => {
             <div className="titleBg">
                 <h1 className='myPaintingsTitle'>Agendas y cuadernos</h1>
             </div>
-            <main className="agendas">
+            <div className="agendas">
                 <div className='agendaPageContainer'>
                     <motion.div 
                         initial={{opacity: 0, x: -100}}
@@ -93,7 +93,7 @@ const Agendas = () => {
                         </motion.div>
                     </section>
                 </div>
-            </main>
+            </div>
             <div className='paintingImgs-section'>
                 <Link to="/agenda-personalizada" aria-label="Quiero mi agenda o cuaderno personalizado">
                     <div className='paintingImgs-box'><Image src={a1} alt={agendaAlts[1]} /></div>

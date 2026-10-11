@@ -293,7 +293,7 @@ const AgendaForm = () => {
                 </div>
             )}
 
-            <main className='agendaCustomization'>
+            <div className='agendaCustomization'>
                 <div className='form-section'>
                     <div className='formContainer'>
                         <form onSubmit={handleFormSubmit}>
@@ -587,7 +587,7 @@ const AgendaForm = () => {
                     nameStyles={nameStyles}
                     selectedImage={selectedImage}
                 />
-            </main>
+            </div>
 
             <section className='new-product-section'>
                 <div className='new-product-banner'>
