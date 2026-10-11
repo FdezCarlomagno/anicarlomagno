@@ -83,7 +83,7 @@ const DropDownImgs = ({ onImageClick }) => {
                     <Image src={cuadro.src} alt={cuadro.title?.trim() || `Obra ${index + 1}`} />
                 </button>
             ))}
-            {seeMore < cuadros.length && <button type="button" className='linkTo-aboutMe-btn' onClick={(e) => handleSeeMore(e)}>Ver más</button>}
+            {seeMore < cuadros.length && <button className='linkTo-aboutMe-btn' onClick={(e) => handleSeeMore(e)}>Ver más</button>}
         </div>
     );
 };
