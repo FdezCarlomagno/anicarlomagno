@@ -735,6 +735,28 @@ textarea {
 }
 
 
+@media (prefers-reduced-motion: reduce) {
+    /* Delays stay: the toasts rely on them to disappear after 3s */
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    /* Scroll-driven reveal ignores duration, so it is switched off */
+    #firstSection-container2,
+    .titleAgendas,
+    .viewOnInstagram,
+    .cuadro,
+    .paintingImgs-box {
+        animation-name: none;
+    }
+}
+
+
 /*FOOTER NAVBAR*/
 .footer-navbar {
     display: flex;

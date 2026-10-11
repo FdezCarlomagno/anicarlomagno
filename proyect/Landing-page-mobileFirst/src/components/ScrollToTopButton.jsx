@@ -31,7 +31,7 @@ const ScrollToTopButton = () => {
     const scrollToTop = () => {
         window.scrollTo({
             top: 0,
-            behavior: 'smooth', // Hace que el scroll sea suave
+            behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', // Hace que el scroll sea suave
         });
     };
 
