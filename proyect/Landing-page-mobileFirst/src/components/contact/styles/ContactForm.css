@@ -49,6 +49,18 @@
     background-color: rgba(156, 82, 224, 0.699);
   }
 
+  .form-privacy-notice {
+    margin-top: -0.25rem;
+    color: #333;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .form-privacy-notice a {
+    color: blueviolet;
+    text-decoration: underline;
+  }
+
   .success-message {
     background-color: #d4edda; /* Color de fondo verde claro */
     color: #155724; /* Color de texto verde oscuro */
