@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Prototipo B: Editorial | anicarlomagno</title>
+<!-- El plugin SEO de Vite exige estos marcadores en todo HTML que sirve; dentro de <template> lo que inyecta queda inerte. -->
+<template><!-- seo:start --><!-- seo:end --></template>
+<link rel="stylesheet" href="../../src/styles/fonts.css">
+<link rel="stylesheet" href="../../src/styles/tokens.css">
+<style>
+  /*
+   * Dirección B: Editorial. La firma manuscrita a escala de titular, la voz de Ani como bajada,
+   * obras corridas hacia un borde y las series como capítulos. Solo tokens de src/styles/tokens.css;
+   * la escala tipográfica es la propuesta de este prototipo (DL-007).
+   */
+  :root {
+    --text-base: 1rem;
+    --text-lg: 1.125rem;
+    --text-lead: 1.375rem;
+    --text-2xl: 1.5rem;
+    --text-3xl: 2rem;
+    --text-script: 3rem;
+    --text-wordmark: clamp(3rem, 14vw, 7rem);
+    --gutter: var(--space-5);
+    --section: calc(var(--space-12) * 2);
+    --measure: 34rem;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  html.menu-abierto { overflow: hidden; }
+  body {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    line-height: 1.6;
+    color: var(--color-ink);
+    background: var(--color-white);
+  }
+  img { display: block; max-width: 100%; height: auto; }
+  h1, h2, h3, p, ol, figure, dl, dd { margin: 0; }
+  a { color: var(--color-accent); text-underline-offset: 0.2em; }
+  :focus-visible { outline: 3px solid var(--color-accent); outline-offset: 3px; }
+
+  .sr-only {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+  }
+  .skip-link {
+    position: absolute; left: var(--gutter); top: var(--space-2); z-index: 30;
+    padding: var(--space-3) var(--space-4); background: var(--color-accent); color: var(--color-white);
+    transform: translateY(-200%);
+  }
+  .skip-link:focus { transform: none; }
+
+  .proto-nota { padding: var(--space-3) var(--gutter); background: var(--color-gray-100); color: var(--color-gray-700); }
+  .proto-nota a { display: inline-block; min-height: 44px; padding-block: var(--space-2); }
+  .prov {
+    display: inline-block; padding: 0 var(--space-2);
+    border: 1px dashed var(--color-gray-600); border-radius: var(--radius-2xs);
+    background: var(--color-gray-100); color: var(--color-ink);
+    font: 600 var(--text-base)/1.6 var(--font-body);
+  }
+  .placeholder { color: var(--color-gray-700); }
+
+  .barra { display: flex; justify-content: flex-end; padding: var(--space-3) var(--gutter) 0; }
+  .btn-menu {
+    min-width: 44px; min-height: 44px; padding: var(--space-2) var(--space-4);
+    border: 1px solid var(--color-ink); border-radius: var(--radius-pill);
+    background: transparent; color: var(--color-ink);
+    font: 600 var(--text-base)/1 var(--font-body); cursor: pointer;
+  }
+
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; min-height: 48px;
+    padding: var(--space-3) var(--space-6); border-radius: var(--radius-pill);
+    background: var(--color-accent); color: var(--color-white); font-weight: 600; text-decoration: none;
+  }
+  .link { display: inline-flex; align-items: center; min-height: 44px; font-weight: 600; }
+  .acciones { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-4); margin-top: var(--space-6); }
+
+  /* Obra corrida hacia un borde: a sangre de un lado, aire del otro */
+  .obra img { width: 100%; }
+  .a-derecha { margin-left: 16%; }
+  .a-izquierda { margin-right: 16%; }
+  .angosta.a-derecha { margin-left: 30%; }
+  .angosta.a-izquierda { margin-right: 30%; }
+  .cartela { display: grid; padding: var(--space-3) var(--gutter) 0; color: var(--color-gray-600); }
+  .a-derecha .cartela { padding-left: 0; }
+  .cartela-titulo { font-family: var(--font-script); font-size: var(--text-2xl); font-weight: 700; line-height: 1.2; color: var(--color-ink); }
+
+  /* Hero */
+  .hero { padding-top: var(--space-4); }
+  .hero-texto { padding: 0 var(--gutter); }
+  .wordmark { font-family: var(--font-script); font-weight: 700; line-height: 0.95; }
+  .wordmark-nombre { display: block; font-size: var(--text-wordmark); }
+  .wordmark-sub { display: block; margin-top: var(--space-2); font-size: var(--text-2xl); color: var(--color-accent); }
+  .bajada { margin-top: var(--space-8); max-width: 22ch; font-size: var(--text-lead); line-height: 1.4; font-weight: 500; }
+  .hero .obra { margin-top: var(--space-8); }
+  .hero .acciones { padding: 0 var(--gutter); }
+
+  /* Capítulos */
+  .capitulo { padding: var(--section) 0; }
+  .capitulo + .capitulo { padding-top: var(--section); }
+  .lienzo { background: var(--color-surface); }
+  .capitulo-cabeza { padding: 0 var(--gutter); max-width: var(--measure); }
+  .titulo-script { font-family: var(--font-script); font-size: var(--text-script); font-weight: 700; line-height: 1.05; }
+  .titulo-fuerte { font-size: var(--text-3xl); line-height: 1.15; font-weight: 700; letter-spacing: -0.01em; }
+  .capitulo-cabeza p { margin-top: var(--space-4); max-width: 28rem; }
+  .capitulo-obras { display: grid; gap: var(--space-12); margin-top: var(--space-12); }
+  .capitulo-pie { padding: var(--space-8) var(--gutter) 0; }
+
+  /* Tarjeta de obra */
+  .ficha { margin-top: var(--space-8); }
+  .ficha .obra { padding: 0 var(--gutter); }
+  .ficha-datos { padding: var(--space-4) var(--gutter) 0; }
+  .ficha-datos h3 { font-family: var(--font-script); font-size: var(--text-3xl); font-weight: 700; line-height: 1.1; }
+  .ficha-datos dl { display: grid; grid-template-columns: auto 1fr; gap: var(--space-1) var(--space-4); margin-top: var(--space-4); }
+  .ficha-datos dt { color: var(--color-gray-600); }
+  .ficha-nota { margin-top: var(--space-3); color: var(--color-gray-600); }
+
+  /* Mi recorrido: la línea vertical une las dos etapas porque son una secuencia */
+  .recorrido-lista { list-style: none; margin: var(--space-12) var(--gutter) 0; padding: 0 0 0 var(--space-6); border-left: 2px solid var(--color-ink); display: grid; gap: var(--space-12); }
+  .etapa { position: relative; }
+  .etapa::before {
+    content: ""; position: absolute; left: calc(-1 * var(--space-6) - 7px); top: 0.55em;
+    width: 12px; height: 12px; border-radius: var(--radius-round); background: var(--color-ink);
+  }
+  .etapa h3 { font-size: var(--text-2xl); line-height: 1.25; font-weight: 700; }
+  .etapa > p { margin-top: var(--space-2); }
+  .etapa-obras { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); align-items: start; margin-top: var(--space-6); }
+  .etapa-obras .obra:nth-child(2) { margin-top: var(--space-12); }
+  .etapa-obras .cartela { padding-inline: 0; }
+  .recorrido-nota { padding: var(--space-8) var(--gutter) 0; max-width: var(--measure); }
+
+  /* Cierre con WhatsApp */
+  .contacto { padding: var(--section) var(--gutter); }
+  .contacto p { margin-top: var(--space-4); max-width: var(--measure); font-size: var(--text-lg); }
+
+  .pie { padding: var(--space-8) var(--gutter) calc(var(--space-12) + var(--space-12)); background: var(--color-surface); color: var(--color-gray-700); }
+  .pie-firma { font-family: var(--font-script); font-size: var(--text-2xl); font-weight: 700; color: var(--color-ink); }
+  .pie ul { list-style: none; padding: 0; margin: var(--space-4) 0 0; display: flex; flex-wrap: wrap; gap: 0 var(--space-6); }
+  .pie a { display: inline-flex; align-items: center; min-height: 44px; }
+
+  .wsp {
+    position: fixed; right: var(--space-4); bottom: calc(var(--space-4) + env(safe-area-inset-bottom)); z-index: 10;
+    display: grid; place-items: center; width: 56px; height: 56px; border-radius: var(--radius-round);
+    background: var(--color-whatsapp); color: var(--color-ink); box-shadow: var(--shadow-sm);
+  }
+  .wsp svg { width: 30px; height: 30px; fill: currentColor; }
+
+  /* Menú abierto */
+  .menu { position: fixed; inset: 0; z-index: 20; overflow-y: auto; padding: var(--space-3) var(--gutter) var(--space-8); background: var(--color-surface); }
+  .menu[hidden] { display: none; }
+  .menu-cabeza { display: flex; justify-content: flex-end; }
+  .menu ul { list-style: none; padding: 0; margin: var(--space-6) 0 0; }
+  .menu ul a {
+    display: flex; align-items: center; min-height: 56px;
+    color: var(--color-ink); text-decoration: none; font-size: var(--text-3xl); font-weight: 700; letter-spacing: -0.01em;
+  }
+  .menu ul a[aria-current="page"] { color: var(--color-accent); text-decoration: underline; text-decoration-thickness: 2px; }
+  .menu-firma { margin-top: var(--space-8); font-family: var(--font-script); font-size: var(--text-2xl); font-weight: 700; }
+
+  @media (min-width: 768px) {
+    :root { --gutter: var(--space-8); --text-script: 4rem; }
+    .capitulo-obras { grid-template-columns: repeat(3, 1fr); gap: var(--space-8); align-items: start; padding: 0 var(--gutter); }
+    .capitulo-obras .obra { margin: 0; }
+    .capitulo-obras .obra:nth-child(2) { margin-top: calc(var(--space-12) * 2); }
+    .capitulo-obras .obra:nth-child(3) { margin-top: var(--space-12); }
+    .capitulo-obras .cartela { padding-inline: 0; }
+    .ficha { display: grid; grid-template-columns: 7fr 5fr; gap: var(--space-8); align-items: center; padding: 0 var(--gutter); }
+    .ficha .obra, .ficha-datos { padding: 0; }
+    .recorrido-lista { grid-template-columns: 1fr 1fr; gap: var(--space-12); border-left: 0; border-top: 2px solid var(--color-ink); padding: var(--space-8) 0 0; }
+    .etapa::before { left: 0; top: calc(-1 * var(--space-8) - 7px); }
+  }
+
+  @media (min-width: 1024px) {
+    .barra, .proto-nota, main, .pie-contenido { max-width: 80rem; margin-inline: auto; }
+    .hero { display: grid; grid-template-columns: 5fr 7fr; gap: var(--space-8); align-items: end; }
+    .hero-texto { padding-bottom: var(--space-12); }
+    .hero .acciones { padding: 0; }
+    .hero .obra { margin: 0; grid-row: span 2; }
+    .hero .obra.a-derecha { margin-left: 0; }
+    .hero .obra img { width: auto; max-height: 85vh; margin-left: auto; }
+    .hero .cartela { justify-items: end; padding-right: var(--gutter); }
+    .bajada { max-width: 24ch; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+<p class="proto-nota" data-inert-con-menu>Prototipo B, Editorial. Lo marcado como <span class="prov">Provisorio</span> lo completa Ani. <a href="./">Ver las tres direcciones</a></p>
+
+<header class="barra" data-inert-con-menu>
+  <button class="btn-menu btnDisplayMenu" type="button" data-menu-button aria-expanded="false" aria-controls="menu">Menú</button>
+</header>
+
+<div class="menu displayMenu" id="menu" role="dialog" aria-modal="true" aria-label="Menú" hidden>
+  <div class="menu-cabeza">
+    <button class="btn-menu" type="button" data-menu-close>Cerrar</button>
+  </div>
+  <nav aria-label="Principal">
+    <ul>
+      <li><a href="/" aria-current="page">Inicio</a></li>
+      <li><a href="/elegir">Obras</a></li>
+      <li><a href="/agendas">Agendas y cuadernos</a></li>
+      <li><a href="/mi-libro">Libros</a></li>
+      <li><a href="/laminas">Láminas</a></li>
+      <li><a href="/sobre-mi">Sobre mí</a></li>
+      <li><a href="/contacto">Contacto</a></li>
+    </ul>
+  </nav>
+  <div class="acciones">
+    <a class="btn" href="https://api.whatsapp.com/send?phone=542494245966&amp;text=Hola%20Ani%2C%20Fui%20redireccionado%2Fa%20de%20tu%20pagina%20web%20hacia%20tu%20contacto%2C%20como%20estas%3F" target="_blank" rel="noopener noreferrer">Escribime por WhatsApp<span class="sr-only"> (se abre en una pestaña nueva)</span></a>
+  </div>
+  <p class="menu-firma" aria-hidden="true">anicarlomagno</p>
+</div>
+
+<main id="contenido" data-inert-con-menu>
+  <section class="hero" aria-labelledby="titulo">
+    <div class="hero-texto">
+      <h1 id="titulo" class="wordmark">
+        <span class="wordmark-nombre">anicarlomagno</span>
+        <span class="wordmark-sub">artista plástica</span>
+      </h1>
+      <p class="bajada">Pinto mujeres de ojos grandes, un símbolo de mi propio camino hacia la visibilidad y la expresión.</p>
+    </div>
+    <figure class="obra a-derecha">
+      <img src="../../src/pages/pagesStyles/paintingsImgs/cuadro1.jpg" width="1280" height="1266" fetchpriority="high"
+        alt="Esmeralda: mujer de ojos verdes con pañuelo verde sobre un fondo rojo con manchas doradas.">
+      <figcaption class="cartela"><span class="cartela-titulo">Esmeralda</span></figcaption>
+    </figure>
+    <div class="acciones">
+      <a class="btn" href="/elegir">Ver obras</a>
+      <a class="link" href="/agendas">Agendas y cuadernos</a>
+    </div>
+  </section>
+
+  <section class="capitulo lienzo" aria-labelledby="serie">
+    <div class="capitulo-cabeza">
+      <h2 id="serie" class="titulo-script">Mariposas</h2>
+      <p><span class="prov">Provisorio</span> <span class="placeholder">Serie de ejemplo armada para el prototipo. Ani define las series y escribe dos o tres líneas sobre cada una.</span></p>
+    </div>
+    <div class="capitulo-obras">
+      <figure class="obra a-izquierda">
+        <img src="../../src/pages/pagesStyles/paintingsImgs/VEIL.jpeg" width="1180" height="1600" loading="lazy" decoding="async"
+          alt="Veil: mujer de pelo largo con mariposas celestes y naranjas que le cubren los ojos, sobre un fondo de trazos rojizos.">
+        <figcaption class="cartela"><span class="cartela-titulo">Veil</span><span>Acrílico con espátula, 80 × 60 cm</span></figcaption>
+      </figure>
+      <figure class="obra angosta a-derecha">
+        <img src="../../src/pages/pagesStyles/paintingsImgs/Vanessa.jpeg" width="1598" height="1600" loading="lazy" decoding="async"
+          alt="Vanessa: mujer con mariposas azules y amarillas sobre los ojos, pintada con trazos gruesos de colores sobre fondo negro.">
+        <figcaption class="cartela"><span class="cartela-titulo">Vanessa</span><span>Acrílico con espátula, 60 × 60 cm</span></figcaption>
+      </figure>
+      <figure class="obra a-izquierda">
+        <img src="../../src/pages/pagesStyles/paintingsImgs/nuevosCuadros/VIOLET.jpg" width="2043" height="2775" loading="lazy" decoding="async"
+          alt="Violet: mujer de pelo violeta con una mariposa rosa sobre un ojo y la mano en los labios, rodeada de mariposas.">
+        <figcaption class="cartela"><span class="cartela-titulo">Violet</span></figcaption>
+      </figure>
+    </div>
+    <p class="capitulo-pie"><a class="link" href="/obras-en-stock">Ver todas las obras</a></p>
+  </section>
+
+  <section class="capitulo" aria-labelledby="disponible">
+    <div class="capitulo-cabeza">
+      <h2 id="disponible" class="titulo-fuerte">Obra disponible</h2>
+    </div>
+    <article class="ficha" aria-labelledby="bahia">
+      <figure class="obra">
+        <img src="../../src/pages/pagesStyles/paintingsImgs/Bahia.jpeg" width="937" height="1280" loading="lazy" decoding="async"
+          alt="Bahía: mujer de rostro hecho de manchas de color, con caracoles en el pelo, turbante a rayas y collares, sobre un fondo de trazos azules con estrellas de mar.">
+      </figure>
+      <div class="ficha-datos">
+        <h3 id="bahia">Bahía</h3>
+        <dl>
+          <dt>Técnica</dt><dd>Acrílico sobre bastidor de madera</dd>
+          <dt>Medida</dt><dd>80 × 60 cm</dd>
+          <dt>Estado</dt><dd>Disponible</dd>
+        </dl>
+        <div class="acciones">
+          <a class="btn" href="https://api.whatsapp.com/send?phone=542494245966&amp;text=Hola!%2C%20estoy%20interesado%20en%20Bah%C3%ADa%2C%20me%20gustaria%20saber%20el%20precio%20de%20esta%20obra%2C%20Ani." target="_blank" rel="noopener noreferrer">Consultar por WhatsApp<span class="sr-only"> (se abre en una pestaña nueva)</span></a>
+        </div>
+        <p class="ficha-nota">Te paso el precio y cómo es el envío a todo el país.</p>
+      </div>
+    </article>
+  </section>
+
+  <section class="capitulo lienzo" aria-labelledby="recorrido">
+    <div class="capitulo-cabeza">
+      <h2 id="recorrido" class="titulo-script">Mi recorrido</h2>
+      <p><span class="prov">Provisorio</span> <span class="placeholder">[En palabras de Ani: cómo pasó de su primera forma de pintar a la actual, y qué se mantuvo: las mujeres de ojos grandes, el color.]</span></p>
+    </div>
+    <ol class="recorrido-lista">
+      <li class="etapa">
+        <h3>[Nombre de la primera etapa] <span class="prov">Provisorio</span></h3>
+        <p class="placeholder">[Años] [Dos líneas de Ani sobre esa etapa.]</p>
+        <div class="etapa-obras">
+          <figure class="obra">
+            <img src="../../src/pages/pagesStyles/paintingsImgs/nuevosCuadros/JOVEN%20FRIDA.jpg" width="2043" height="2775" loading="lazy" decoding="async"
+              alt="Joven Frida: retrato de mujer con trenzas y moño rojo, cejas juntas y collar, sobre un fondo verde con rosas y mariposas monarca.">
+            <figcaption class="cartela"><span class="cartela-titulo">Joven Frida</span></figcaption>
+          </figure>
+          <figure class="obra">
+            <img src="../../src/pages/pagesStyles/paintingsImgs/nuevosCuadros/SELVA.jpg" width="2481" height="3509" loading="lazy" decoding="async"
+              alt="Selva: mujer con una corona de flores enormes y una rosa azul que le tapa un ojo, sobre un fondo rojo.">
+            <figcaption class="cartela"><span class="cartela-titulo">Selva</span></figcaption>
+          </figure>
+        </div>
+      </li>
+      <li class="etapa">
+        <h3>[Nombre de la etapa actual] <span class="prov">Provisorio</span></h3>
+        <p class="placeholder">[Años] [Dos líneas de Ani sobre lo que cambió: el gesto, la espátula, la intensidad.]</p>
+        <div class="etapa-obras">
+          <figure class="obra">
+            <img src="../../src/pages/pagesStyles/paintingsImgs/EUPHORIA.jpeg" width="1600" height="1576" loading="lazy" decoding="async"
+              alt="Euphoria: rostro de mujer de grandes ojos marrones, pintado con espátula en pinceladas gruesas de rosa, fucsia, celeste y negro.">
+            <figcaption class="cartela"><span class="cartela-titulo">Euphoria</span></figcaption>
+          </figure>
+          <figure class="obra">
+            <img src="../../src/pages/pagesStyles/paintingsImgs/Princesa-azul.jpeg" width="957" height="1280" loading="lazy" decoding="async"
+              alt="Princesa Azul: mujer de ojos celestes con corona y aros dorados, entre chorreados turquesa y un fondo negro.">
+            <figcaption class="cartela"><span class="cartela-titulo">Princesa Azul</span></figcaption>
+          </figure>
+        </div>
+      </li>
+    </ol>
+    <p class="recorrido-nota"><span class="prov">Provisorio</span> <span class="placeholder">Obras elegidas por nosotros como ejemplo: Ani confirma a qué etapa pertenece cada una.</span></p>
+    <p class="capitulo-pie"><a class="link" href="/sobre-mi">Conocé mi historia</a></p>
+  </section>
+
+  <section class="contacto" aria-labelledby="escribime">
+    <h2 id="escribime" class="titulo-fuerte">¿Te gustó una obra?</h2>
+    <p>Escribime por WhatsApp y te paso precio, medidas y envío. También pinto obras y agendas personalizadas.</p>
+    <div class="acciones">
+      <a class="btn" href="https://api.whatsapp.com/send?phone=542494245966&amp;text=Hola%20Ani%2C%20Fui%20redireccionado%2Fa%20de%20tu%20pagina%20web%20hacia%20tu%20contacto%2C%20como%20estas%3F" target="_blank" rel="noopener noreferrer">Escribime por WhatsApp<span class="sr-only"> (se abre en una pestaña nueva)</span></a>
+    </div>
+  </section>
+</main>
+
+<footer class="pie" data-inert-con-menu>
+  <div class="pie-contenido">
+    <p class="pie-firma">anicarlomagno</p>
+    <p>Envíos a todo el país.</p>
+    <ul>
+      <li><a href="https://www.instagram.com/anicarlomagno_painting/" target="_blank" rel="noopener noreferrer">Instagram<span class="sr-only"> (se abre en una pestaña nueva)</span></a></li>
+      <li><a href="/privacidad">Privacidad</a></li>
+      <li><a href="/terminos">Términos</a></li>
+    </ul>
+  </div>
+</footer>
+
+<a class="wsp" data-inert-con-menu href="https://api.whatsapp.com/send?phone=542494245966&amp;text=Hola%20Ani%2C%20Fui%20redireccionado%2Fa%20de%20tu%20pagina%20web%20hacia%20tu%20contacto%2C%20como%20estas%3F" target="_blank" rel="noopener noreferrer" aria-label="Escribile a Ani por WhatsApp (se abre en una pestaña nueva)">
+  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill-rule="evenodd" clip-rule="evenodd" d="M18.403 5.633A8.919 8.919 0 0 0 12.053 3c-4.948 0-8.976 4.027-8.978 8.977 0 1.582.413 3.126 1.198 4.488L3 21.116l4.759-1.249a8.981 8.981 0 0 0 4.29 1.093h.004c4.947 0 8.975-4.027 8.977-8.977a8.926 8.926 0 0 0-2.627-6.35m-6.35 13.812h-.003a7.446 7.446 0 0 1-3.798-1.041l-.272-.162-2.824.741.753-2.753-.177-.282a7.448 7.448 0 0 1-1.141-3.971c.002-4.114 3.349-7.461 7.465-7.461a7.413 7.413 0 0 1 5.275 2.188 7.42 7.42 0 0 1 2.183 5.279c-.002 4.114-3.349 7.462-7.461 7.462m4.093-5.589c-.225-.113-1.327-.655-1.533-.73-.205-.075-.354-.112-.504.112s-.58.729-.711.879-.262.168-.486.056-.947-.349-1.804-1.113c-.667-.595-1.117-1.329-1.248-1.554s-.014-.346.099-.458c.101-.1.224-.262.336-.393.112-.131.149-.224.224-.374s.038-.281-.019-.393c-.056-.113-.505-1.217-.692-1.666-.181-.435-.366-.377-.504-.383a9.65 9.65 0 0 0-.429-.008.826.826 0 0 0-.599.28c-.206.225-.785.767-.785 1.871s.804 2.171.916 2.321c.112.15 1.582 2.415 3.832 3.387.536.231.954.369 1.279.473.537.171 1.026.146 1.413.089.431-.064 1.327-.542 1.514-1.066.187-.524.187-.973.131-1.067-.056-.094-.207-.151-.43-.263"/></svg>
+</a>
+
+<script src="menu.js"></script>
+</body>
+</html>
