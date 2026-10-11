@@ -96,9 +96,10 @@ const FLOATING = `(async () => { ${LIB}
 })()`;
 
 const MOTION = `(() => [...document.querySelectorAll('*')].map((el) => { const s = getComputedStyle(el);
-  const anim = s.animationName !== 'none' && parseFloat(s.animationDuration) > 0.01;
+  const scrollDriven = Boolean(s.animationTimeline) && s.animationTimeline !== 'auto';
+  const anim = s.animationName !== 'none' && (parseFloat(s.animationDuration) > 0.01 || scrollDriven);
   const trans = s.transitionDuration.split(',').some((d) => parseFloat(d) > 0.01) && s.transitionProperty !== 'none';
-  return anim || trans ? { el: el.tagName.toLowerCase() + '.' + String(el.className).slice(0, 30), animation: anim ? s.animationName + ' ' + s.animationDuration : null,
+  return anim || trans ? { el: el.tagName.toLowerCase() + '.' + String(el.className).slice(0, 30), animation: anim ? s.animationName + ' ' + (scrollDriven ? s.animationTimeline : s.animationDuration) : null,
     transition: trans ? s.transitionProperty + ' ' + s.transitionDuration : null } : null; }).filter(Boolean))()`;
 
 const MENU = `(() => { ${LIB}
@@ -129,7 +130,8 @@ for (const file of PAGES) {
       const facts = await evaluate(page, FACTS);
       facts.floating = await evaluate(page, FLOATING);
       facts.motion = await evaluate(page, MOTION);
-      if (width === 390) {
+      const hasMenu = await evaluate(page, `Boolean(document.querySelector('[data-menu-button]'))`);
+      if (width === 390 && hasMenu) {
         await click(page, '[data-menu-button]');
         await sleep(300);
         facts.menuOpen = await evaluate(page, MENU);
@@ -152,10 +154,12 @@ for (const file of PAGES) {
     await goto(page, BASE + file, { maxMs: 20000 });
     await sleep(400);
     r.reducedMotion = await evaluate(page, MOTION);
-    await goto(page, 'about:blank', { maxMs: 2000 });
-    await goto(page, BASE + file + '#menu', { maxMs: 20000 });
-    await sleep(300);
-    r.menuFromHash = await evaluate(page, MENU);
+    if (await evaluate(page, `Boolean(document.querySelector('[data-menu-button]'))`)) {
+      await goto(page, 'about:blank', { maxMs: 2000 });
+      await goto(page, BASE + file + '#menu', { maxMs: 20000 });
+      await sleep(300);
+      r.menuFromHash = await evaluate(page, MENU);
+    }
   } catch (e) {
     r.reducedMotion = { error: e.message };
   } finally {
