@@ -59,7 +59,7 @@ typography:
   logo-hero-subtitle:
     fontFamily: Dancing Script
     fontSize: 30px
-    fontWeight: 400
+    fontWeight: 700
   logo-nav:
     fontFamily: Dancing Script
     fontSize: 16px

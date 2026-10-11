@@ -16,7 +16,7 @@ lienzo y texto base). Un valor de **un solo uso** sin familia queda literal y se
 
 | Categoría | Antes (distintos / usos) | Tokens | Quedan literales |
 |---|---|---|---|
-| Colores | 96 / 275 (+78 vía variables locales) | 52 `--color-*` | 46 de un solo uso (ver abajo) |
+| Colores | 96 / 275 (+78 vía variables locales) | 46 `--color-*` | 46 de un solo uso (ver abajo) |
 | Familias tipográficas | 9 / 21 | 3 `--font-*` | `Arial, Helvetica, sans-serif` (1) y las `@font-face` |
 | Radios | 21 / 70 (+18 vía variables) | 9 `--radius-*` | 2px, 20px, 50px, 1rem (1 c/u) |
 | Espaciado (margin/padding/gap) | 43 / 325 | 8 `--space-*` (rem) + 19 `--space-legacy-*` (px) | %, negativos y 12 valores de un uso |
