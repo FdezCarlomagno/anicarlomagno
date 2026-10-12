@@ -119,6 +119,9 @@ spacing:
   "6": 1.5rem
   "8": 2rem
   "12": 3rem
+  target: 2.75rem
+  nav: 3.5rem
+  float: 3rem
   legacy-2: 2px
   legacy-3: 3px
   legacy-4: 4px
@@ -268,6 +271,7 @@ Mobile first: el CSS base es para ~360–390 px y se amplía con `min-width: 768
 
 - **Escala de espaciado (`spacing.1…12` → `--space-1…--space-12`):** múltiplos de 0.25rem, sigue el tamaño de letra de
   la persona. Es la que se usa en todo trabajo nuevo.
+- **`target`, `nav`, `float` (Fase 6):** objetivo táctil mínimo (44 px), alto de la barra fija y lado de los botones flotantes.
 - **`legacy-*` (px fijos):** reflejan los valores en px que ya existían (20px es el más común, con 32 usos). Solo
   existen para que el CSS heredado use tokens sin moverse un píxel; desaparecen cuando cada componente se rediseña
   sobre la escala rem. No usarlos en código nuevo.

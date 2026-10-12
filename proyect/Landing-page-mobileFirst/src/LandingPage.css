@@ -62,7 +62,6 @@ html {
 }
 
 /* Over the photo backgrounds a violet ring would not stand out */
-.footer-navbar,
 .nameLogo {
     --focus-ring: var(--color-surface);
 }
@@ -107,110 +106,12 @@ html {
     white-space: nowrap;
 }
 
-nav {
-    height: 50px;
-    background-color: rgba(240, 248, 255, 0.836);
-    position: sticky;
-    top: 0;
-    display: flex;
-    z-index: 9999;
-    /*flex-direction: row-reverse;*/
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1;
-}
-
 .hideColumns {
     display: none;
 }
 
-.navLogo {
-    display: flex;
-    flex-direction: column;
-    color: var(--color-black);
-    margin-left: var(--space-legacy-24);
-    text-align: center;
-}
-
-.navLogo-name {
-    font-family: var(--font-script);
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.navLogo-subtitle {
-    font-size: 12px;
-    color: var(--color-accent);
-    font-family: var(--font-script-bare);
-    font-weight: bold;
-}
-
-.contH1Nav {
-    border-bottom: 2px solid var(--color-black);
-}
-
-.closedMenu {
-    display: none;
-}
-
-.openMenu {
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    flex-direction: column;
-    color: var(--color-accent);
-    gap: var(--space-legacy-10);
-    font-size: 20px;
-}
-
-nav li {
-    list-style-type: none;
-    font-size: 15px;
-    display: flex;
-    align-items: center;
-}
-
 /* The link fills its list item so the tap area stays the whole row */
-nav li a {
-    display: flex;
-    align-items: center;
-    flex-grow: 1;
-}
 
-.btnDisplayMenu {
-    font-size: 24px;
-    margin-right: var(--space-legacy-24);
-    z-index: 2;
-    border: none;
-    background-color: transparent;
-    color: var(--color-black);
-}
-
-.displayMenu {
-    position: fixed;
-    top: calc(50px);
-    /* Adjust according to your navbar height */
-    left: 50%;
-    overflow: hidden;
-    transform: translateX(-50%);
-    background-color: var(--color-surface);
-    width: 300px;
-    padding: var(--space-legacy-6);
-    padding-bottom: var(--space-legacy-15);
-    border-radius: 0 0 var(--radius-xs) var(--radius-xs);
-    z-index: 99999;
-    border-top: 4px solid var(--color-accent);
-    box-shadow: var(--shadow-menu);
-    -webkit-box-shadow: var(--shadow-menu);
-    -moz-box-shadow: var(--shadow-menu);
-}
-
-
-
-.displayMenu li {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.637);
-    width: 270px;
-}
 
 a {
     text-decoration: none;
@@ -345,21 +246,6 @@ a {
     text-align: center;
 }
 
-.whatsappIcon {
-    position: fixed;
-    display: flex;
-    bottom: 15px;
-    padding: var(--space-legacy-6);
-    left: 15px;
-    width: 50px;
-    height: 50px;
-    z-index: 9999;
-    border-radius: var(--radius-round);
-    background-color: var(--color-whatsapp);
-    box-shadow: 1px 6px 24px 0 rgba(7, 94, 84, 0.829);
-    transition: all var(--duration-200) var(--ease-in-out);
-}
-
 
 
 .secondSectionInfo {
@@ -392,63 +278,18 @@ a {
 
 /*SOCIAL MEDIA SECTION*/
 
-.socialMedia-section {
-    display: flex;
-    color: var(--color-surface);
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-bottom: 4rem;
-    margin-top: var(--space-8);
-    gap: var(--space-2);
-}
-
-.social-title {
-    font-size: 1.17em;
-    font-weight: bold;
-}
-
-.socialMedia-container ul {
-    display: flex;
-    gap: var(--space-8);
-
-}
-
-.socialMedia-container li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: var(--radius-round);
-    list-style-type: none;
-
-}
-
-.socialMedia-container a {
-    display: flex;
-    padding: var(--space-2);
-    border-radius: var(--radius-round);
-}
-
-.svg,
 .btnMyPaintings img {
     width: 20px;
     height: 20px;
     margin-right: var(--space-legacy-6);
 }
 
-/*FOOTER*/
+/*PAGE TITLE BAND*/
 
-footer,
 .titleBg {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60px;
-    background: rgb(132, 63, 251);
-    background: radial-gradient(circle, rgba(132, 63, 251, 1) 0%, rgba(250, 70, 252, 1) 100%);
-}
-
-.titleBg {
     height: 60px;
     background: url('../src/components/imgs/BG2.jpg') no-repeat center center / cover;
     padding: var(--space-legacy-10);
@@ -457,57 +298,6 @@ footer,
 .titleBg h1 {
     font-size: 24px;
     color: var(--color-surface);
-}
-
-footer p {
-    width: 65%;
-    text-align: center;
-    color: rgba(240, 248, 255, 0.685);
-    font-size: 13px;
-}
-
-footer {
-    height: auto;
-    min-height: 60px;
-    flex-direction: column;
-    padding: var(--space-2) var(--space-4) var(--space-4);
-    --focus-ring: var(--color-surface);
-}
-
-/* Undo the global sticky `nav` bar styles */
-.footer-legal {
-    position: static;
-    height: auto;
-    padding: 0;
-    background: none;
-    z-index: auto;
-}
-
-.footer-legal ul {
-    display: flex;
-    gap: var(--space-6);
-}
-
-.footer-legal li {
-    font-size: 14px;
-}
-
-.footer-legal a {
-    padding: var(--space-legacy-12) var(--space-legacy-4);
-    min-height: 44px;
-    color: var(--color-surface);
-    text-decoration: underline;
-}
-
-footer .footer-contact {
-    width: 90%;
-    margin-bottom: var(--space-2);
-    line-height: 1.8;
-}
-
-.footer-contact a {
-    color: var(--color-surface);
-    text-decoration: underline;
 }
 
 /*SECTION AGENDA*/
@@ -672,46 +462,6 @@ footer .footer-contact {
     transform: scale(1.03);
 }
 
-.my-icon {
-    color: var(--color-surface);
-}
-
-/* Define the slide-in animation */
-@keyframes slideInFromSide {
-    0% {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-.scrollToTopBtn {
-    text-align: center;
-    border: none;
-    border-radius: var(--radius-sm) 0 0 var(--radius-sm);
-    background: rgba(0, 0, 0, 0.4);
-    text-decoration: none;
-    position: fixed;
-    z-index: 99999;
-    bottom: 125px;
-    padding: var(--space-legacy-6);
-    right: 0px;
-    font-size: 24px;
-    width: 40px;
-    animation: slideInFromSide var(--duration-1000) var(--ease-in-out);
-    /* Apply the animation */
-}
-
-/* Additional styles for hover effect (optional) */
-.scrollToTopBtn:hover {
-    background: rgba(0, 0, 0, 0.6);
-    /* Darker background on hover */
-}
-
 .linkTo-aboutMe-btn {
     display: flex;
     align-items: center;
@@ -812,56 +562,7 @@ textarea {
 
 
 /*FOOTER NAVBAR*/
-.footer-navbar {
-    display: flex;
-    flex-direction: column;
-    height: 340px;
-    background: url('../src/components/imgs/BG2.jpg') no-repeat center center / cover;
-    margin-top: var(--space-12);
-}
-
-.footer-navbar .navbar img {
-    display: none;
-}
-
-.footer-navbar .navbar {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin: var(--space-8);
-    background-color: transparent;
-    color: var(--color-surface);
-}
-
-.footer-navbar-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--space-legacy-10);
-}
-
-.footer-navbar a:hover {
-    color: rgba(137, 43, 226, 0.596);
-}
-
 /*ENVIO SECTION*/
-
-.envioSection {
-    display: flex;
-    font-size: 16px;
-    align-items: center;
-    justify-content: center;
-    gap: var(--space-legacy-20);
-    margin: var(--space-8);
-}
-
-.envioSection img {
-    width: 30px;
-}
-
-.envioSection span {
-    color: var(--color-accent);
-}
 
 .text-left {
     text-align: left;
@@ -884,88 +585,8 @@ textarea {
 /*RESPONSIVE DESIGN*/
 
 @media(min-width: 768px) {
-    .envioSection img {
-        width: 40px;
-    }
-
-    .envioSection {
-        font-size: 30px;
-    }
-
-    .footer-navbar .navbar {
-        display: flex;
-        flex-direction: row;
-        background-color: transparent;
-        color: var(--color-surface);
-    }
-
-    .footer-navbar-list {
-        flex-direction: row;
-        gap: var(--space-legacy-20);
-    }
-
-    .footer-navbar {
-        height: 250px;
-        background: url('../src/components/imgs/BG2.jpg') no-repeat center center / cover;
-    }
-
-    .socialMedia-section {
-        margin-bottom: 0px;
-    }
-
     button:hover {
         cursor: pointer;
-    }
-
-    nav {
-        padding: var(--space-legacy-12);
-        z-index: 9999;
-    }
-
-    .navBar {
-        position: sticky;
-        top: 0;
-        height: 70px;
-    }
-
-    .navBar .navLogo-name {
-        font-size: 24px;
-    }
-
-    .navBar .navLogo-subtitle {
-        font-size: 16px;
-    }
-
-    .closedMenu {
-        display: flex;
-        margin-right: var(--space-legacy-24);
-        gap: var(--space-legacy-24);
-    }
-
-    .closedMenu li a {
-        display: flex;
-        align-items: center;
-    }
-
-    .closedMenu li {
-        font-size: 14px;
-    }
-
-    .closedMenu a {
-        transition: all var(--duration-100) var(--ease-in-out);
-    }
-
-    .closedMenu a:hover {
-        color: var(--color-accent);
-    }
-
-    .closedMenu a:active {
-        transform: scale(1);
-        color: rgb(182, 129, 233);
-    }
-
-    .btnDisplayMenu {
-        display: none;
     }
 
     .container {
@@ -1053,30 +674,14 @@ textarea {
     }
 
     .agendaContainer,
-    .viewOnInstagram .btnViewOnInstagram,
-    .socialMedia-section li {
+    .viewOnInstagram .btnViewOnInstagram {
         transition: all var(--duration-200) var(--ease-in-out);
     }
 
     .agendaContainer:hover,
-    .viewOnInstagram .btnViewOnInstagram:hover,
-    .socialMedia-section li:hover {
+    .viewOnInstagram .btnViewOnInstagram:hover {
         background-color: rgb(186, 112, 255);
         transform: scale(1.04);
-    }
-
-    .whatsappIcon {
-        transform: scale(1.2);
-        position: fixed;
-        z-index: 9999;
-        bottom: 30px;
-        left: 30px;
-    }
-
-    .whatsappIcon:hover {
-        cursor: pointer;
-        transform: scale(1.25);
-        background-color: var(--color-whatsapp-hover)
     }
 
     .titleAgendas {

@@ -126,6 +126,7 @@ Decision: El sitio sigue la dirección **C, Inmersiva** (`c-inmersiva.html`): la
 Alternatives: A, galería silenciosa (recomendada por el agente: más obra en el celular, más simple de mantener, sin rol nuevo de color; queda como plan B si C no funciona en el celular). B, editorial (rechazada: achica la obra en el celular y gasta la firma en seis lugares).
 Consequences: La tinta pasa a ser un rol de fondo de pleno derecho en `DESIGN.md`, con estados propios (foco blanco, enlaces blancos, botón claro sobre oscuro) en cada componente que caiga en zona oscura: más trabajo en las fases 6 a 10. La página queda más larga (6839 px contra 5956 px de A en 390). Riesgos a mirar en el celular: que la obra más clara (etapa naif) se vea menos favorecida sobre oscuro, y el peso de las imágenes a pantalla completa (Fase 5). Los hallazgos de contraste del pie y del botón de WhatsApp quedan resueltos por esta dirección. Siguen pendientes DL-007 a DL-010 (se aplican junto con las fases de implementación). La Fase 4c prueba dos variantes (`c1-oscura` y `c2-clara`) para ajustar cuánta oscuridad lleva.
 
+<<<<<<< HEAD
 ## DL-014 — Pipeline de imágenes: AVIF + JPEG con `sharp`, salida generada y no versionada (2026-10-11)
 Status: accepted (Fase 5, lote Home)
 Context: La Home transfería 13,5 MB en 390 px; 5,8 MB eran 36 imágenes sin redimensionar (las obras llegan a 2000–3900 px de ancho).
@@ -134,3 +135,12 @@ Alternatives: `vite-imagetools` (otra dependencia y build más lento), versionar
 Consequences: `sharp` es devDependency; el build corre el script (la primera vez tarda, después solo procesa lo nuevo). Cada lote nuevo se agrega a `LOTES`. Navegadores sin AVIF reciben el JPEG de 800 px. Falta la comparación lado a lado con Ani.
 
 Nota (Fase 5): el video del hero (7,9 MB) queda para la Fase 7. Valentín propone sacarlo y reemplazarlo por una obra (coincide con DL-013). Hasta entonces la Home no cumple el presupuesto de 1,5 MB.
+=======
+## DL-015 — Shell: menú, flotantes y pie (2026-10-11)
+Status: accepted (Fase 6)
+Context: La barra de navegación animaba la altura del menú, tenía objetivos de 20 px, no marcaba la ruta activa ni cerraba con Esc; los flotantes (WhatsApp, volver arriba) y el pie (con foto de fondo de 169 KB, un bloque de redes, otro de navegación, otro de envíos y otro de legales) eran cuatro piezas sueltas.
+Decision: `src/components/shell.css` reemplaza el CSS heredado de nav, flotantes y pie. Menú móvil como panel con botón "Menú"/"Cerrar" (texto, no ☰), `aria-expanded`, foco al primer enlace, Esc devuelve el foco al botón, clic afuera cierra, y lo que queda detrás (`data-inert-con-menu`: contenido, pie, flotantes, skip-link) pasa a `inert`. Desde 768 px los enlaces van en fila. Ruta activa con `NavLink` (`aria-current`, color y subrayado). Sin íconos en los enlaces ni animación de entrada del logo. WhatsApp: 48 px, glifo `--color-ink` sobre el verde (7.83:1, DL-010/DL-013) a la izquierda; volver arriba: 48 px, tinta, a la derecha, solo tras media pantalla de scroll; el pie deja espacio para que ninguno tape texto. Pie único sobre `--color-ink` (DL-013): firma, envíos, Navegá, Seguime, legales, contacto y copyright. Tokens nuevos en `spacing`: `target` 2.75rem, `nav` 3.5rem, `float` 3rem. Se eliminaron `FooterNavbar`, `Envio` y `SocialMedia`.
+Alternatives: `<dialog>` con `showModal()` (descartado por ahora: en escritorio los mismos enlaces van en línea); mantener el pie con foto (descartado: texto sobre imagen, 169 KB).
+Consequences: La barra pasa de 50 a 56 px. El pie reemplaza el degradé que fallaba contraste (DL-010). La variante C1/C2 no cambia el pie. Pendiente: revisión visual de Valentín en el celular y de Ani.
+
+>>>>>>> fase-6-shell
