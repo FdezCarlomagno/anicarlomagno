@@ -134,52 +134,6 @@ h1 {
     margin-top: 32px;
 }
 
-/*CHOOSE PAINTING STYLES*/
-
-.choosePainting {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 4%;
-}
-
-.choose-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: aliceblue;
-    padding: 2rem;
-    width: 250px;
-    border-radius: 6px;
-}
-
-.choosePainting-button-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 5%;
-}
-
-.choosePainting-button-container button {
-    width: 200px;
-    /* Ancho fijo */
-    padding: 10px 20px;
-    text-align: center;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: blueviolet;
-    transition: all 200ms ease-in-out;
-}
-
-.choosePainting-button-container button:hover {
-    transform: scale(1.03);
-    background-color: rgb(163, 74, 247);
-}
-
 #btnPainting {
     margin-bottom: 2rem;
     font-size: 24px;
@@ -316,27 +270,7 @@ h1 {
         left: 0;
     }
 
-    .choosePainting {
-        margin: 4%;
-    }
-
     .paintingContainer p {
         width: 260px;
-    }
-
-    .choosePainting-button-container {
-        display: flex;
-        flex-direction: row;
-    }
-
-    .choose-container {
-        width: fit-content;
-    }
-
-    .choosePainting-button-container button {
-        padding-left: 1rem;
-        padding-right: 1rem;
-        font-size: 24px;
-        font-weight: bold;
     }
 }
