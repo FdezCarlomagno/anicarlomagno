@@ -55,3 +55,9 @@ Status: accepted; implemented
 Context: DL-003 habia definido la frase como gratis.
 Decision: Regla de negocio actualizada por Valentin/Ani: la frase suma $2000 (`ADICION_DE_FRASE` en `AgendaPrices.js`) solo si la casilla esta tildada. Reemplaza DL-003.
 Consequences: El total (barra, resumen y mensaje de WhatsApp) incluye el adicional; el texto de la casilla lo avisa.
+
+## DL-007 - Rediseno de /mi-libro (Libros) y /laminas; retiro de agendas.css (2026-10-12)
+Status: accepted; implemented
+Context: Libros usaba dos bloques repetidos con precio superpuesto en rojo y un boton COMPRAR dentro de un h2. agendas.css solo quedaba para estas paginas y aportaba el reset global `box-sizing`.
+Decision: Libros pasa a dos secciones editoriales alternadas (carrusel + texto + precio + CTA a WhatsApp) con chips de salto. Se eliminan agendas.css y personalBook.css; el reset `box-sizing: border-box` se mueve a LandingPage.css. Mensajes de WhatsApp, telefono y precios (LibrosPrice.js) sin cambios.
+Consequences: Copy en voseo ("Coloreá y convertite"). La ruta sigue siendo /mi-libro.

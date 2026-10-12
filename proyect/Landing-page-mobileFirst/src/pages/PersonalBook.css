@@ -1,0 +1,169 @@
+/* /mi-libro (Libros) — mobile first. Prefijo .pb- */
+
+.pb {
+    --pb-accent: blueviolet;
+    --pb-accent-deep: #5b1fa6;
+    --pb-ink: #1d1626;
+    --pb-muted: #4a4256;
+    --pb-ease: cubic-bezier(0.22, 1, 0.36, 1);
+    color: var(--pb-ink);
+    padding-bottom: 32px;
+}
+
+:where(.pb) :where(h1, h2, p) { margin: 0; padding: 0; }
+
+.pb-hero { max-width: 1240px; margin: 0 auto; padding: 36px 20px 8px; }
+
+.pb-eyebrow { margin-bottom: 8px; font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--pb-accent-deep); }
+.pb-title { font-family: "Dancing Script", cursive; font-size: clamp(48px, 13vw, 84px); font-weight: 700; line-height: 1.02; text-align: left; }
+.pb-lead { max-width: 36rem; margin-top: 12px; font-size: 17px; line-height: 1.6; color: var(--pb-muted); }
+
+.pb-jump { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+
+.pb-chip {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0 18px;
+    border: 1.5px solid rgba(138, 43, 226, 0.4);
+    border-radius: 999px;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--pb-accent-deep);
+    transition: background 0.2s ease;
+}
+
+.pb-chip:focus-visible { outline: 3px solid var(--pb-accent); outline-offset: 3px; }
+
+/* ---- Portadas del hero (solo desktop): atajo visual a cada libro ---- */
+.pb-covers { display: none; }
+
+/* ---- Libro ---- */
+.pb-book {
+    display: grid;
+    gap: 28px;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 44px 20px;
+    scroll-margin-top: 80px;
+}
+
+.pb-book + .pb-book { border-top: 1px solid rgba(138, 43, 226, 0.18); }
+
+.pb-media { display: flex; justify-content: center; }
+.pb .pslider-slide { aspect-ratio: 3 / 4; }
+
+.pb-kind { margin-bottom: 6px; font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--pb-accent-deep); }
+.pb-book-title { font-family: "Dancing Script", cursive; font-size: clamp(34px, 9vw, 52px); font-weight: 700; line-height: 1.1; text-align: left; }
+
+.pb-price { display: inline-block; margin-top: 14px; padding: 6px 16px; border-radius: 999px; background: rgba(138, 43, 226, 0.1); color: var(--pb-accent-deep); }
+.pb-price strong { font-size: 22px; font-variant-numeric: tabular-nums; }
+
+.pb-text { display: grid; gap: 14px; margin-top: 18px; max-width: 34rem; }
+.pb-text p { font-size: 17px; line-height: 1.7; color: var(--pb-muted); }
+.pb-text span { font-weight: 700; color: var(--pb-accent-deep); }
+
+.pb-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    min-height: 52px;
+    margin-top: 24px;
+    padding: 0 28px;
+    border: 0;
+    border-radius: 999px;
+    background: var(--pb-accent);
+    box-shadow: 0 8px 22px rgba(138, 43, 226, 0.32);
+    font: inherit;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.25s ease, transform 0.25s var(--pb-ease);
+}
+
+.pb-btn svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; transition: transform 0.25s var(--pb-ease); }
+.pb-btn:focus-visible { outline: 3px solid var(--pb-accent); outline-offset: 3px; }
+
+.pb-promo { margin-top: 14px; font-size: 15px; color: var(--pb-muted); }
+.pb-promo strong { color: var(--pb-accent-deep); }
+
+.pb-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+@media (hover: hover) {
+    .pb-chip:hover { background: rgba(138, 43, 226, 0.08); }
+    .pb-btn:hover { background: rgb(106, 20, 190); transform: translateY(-2px); }
+    .pb-btn:hover svg { transform: translateX(4px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .pb-btn, .pb-btn svg, .pb-chip { transition: none; }
+    .pb-btn:hover { transform: none; }
+}
+
+@media (min-width: 640px) {
+    .pb-hero, .pb-book { padding-left: 24px; padding-right: 24px; }
+    .pb-btn { width: auto; }
+}
+
+@media (min-width: 960px) {
+    .pb-hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        align-items: center;
+        gap: clamp(32px, 5vw, 80px);
+        max-width: 1400px;
+        padding: 56px clamp(32px, 5vw, 80px) 24px;
+    }
+
+    .pb-covers { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+
+    .pb-cover { display: grid; gap: 12px; text-decoration: none; color: inherit; }
+
+    .pb-cover-mat {
+        display: grid;
+        place-items: center;
+        aspect-ratio: 3 / 4;
+        padding: 14px;
+        border-radius: 22px;
+        background: linear-gradient(160deg, #f4eefb, #ebe2f6);
+        overflow: hidden;
+        transition: transform 0.35s var(--pb-ease), box-shadow 0.35s var(--pb-ease);
+    }
+
+    .pb-cover-mat img { display: block; max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; border-radius: 6px; box-shadow: 0 10px 26px rgba(40, 15, 80, 0.25); }
+    .pb-cover-label { display: grid; gap: 2px; text-align: center; }
+    .pb-cover-label strong { font-size: 17px; }
+    .pb-cover-label span { font-size: 14px; color: var(--pb-muted); }
+    .pb-cover:focus-visible { outline: 3px solid var(--pb-accent); outline-offset: 4px; border-radius: 22px; }
+    .pb-cover:hover .pb-cover-mat { transform: translateY(-4px); box-shadow: 0 16px 34px rgba(60, 20, 120, 0.2); }
+
+    /* Cada libro vive en un panel: el contenido llena el ancho en vez de flotar en el blanco */
+    .pb-book {
+        max-width: 1400px;
+        margin: 24px auto;
+        padding: 56px clamp(32px, 5vw, 80px);
+        border: 0;
+        border-radius: 32px;
+        background: linear-gradient(160deg, rgba(244, 238, 251, 0.9), rgba(235, 226, 246, 0.55));
+        grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+        align-items: center;
+        gap: clamp(40px, 6vw, 96px);
+    }
+
+    .pb-book + .pb-book { border-top: 0; }
+    .pb-book.is-reverse { grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); }
+    .pb-book.is-reverse .pb-media { order: 2; }
+
+    .pb-media .pslider { width: min(100%, 460px); }
+    .pb-text { max-width: 38rem; }
+    .pb-text p { font-size: 18px; }
+}
+
+@media (min-width: 960px) and (prefers-reduced-motion: reduce) {
+    .pb-cover-mat { transition: none; }
+    .pb-cover:hover .pb-cover-mat { transform: none; }
+}

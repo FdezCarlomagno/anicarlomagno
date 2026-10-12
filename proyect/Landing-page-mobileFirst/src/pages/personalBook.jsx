@@ -1,181 +1,135 @@
-import './pagesStyles/agendas.css';
-import React from 'react';
-import { useInView } from 'react-intersection-observer';
-import { motion } from 'framer-motion';
-import './pagesStyles/personalBook.css';
+/* eslint-disable react/prop-types -- el proyecto no usa prop-types */
+import { useEffect } from 'react';
+import { motion, useReducedMotion } from 'framer-motion';
 import PaintingSlider from '../components/paintingsSlider';
 import imgs_Libro_Colorear from '../objects/libro-colorear.jsx';
 import imgs_Libro_Miradas from '../objects/libro-miradas.jsx';
-import { librosPrice } from '../components/config/LibrosPrice.js'
+import { librosPrice } from '../components/config/LibrosPrice.js';
+import './PersonalBook.css';
 
-const PersonalBook = () => {
-    const { ref: titleRef, inView: titleInView } = useInView({
-        triggerOnce: true,
-        threshold: 0.1,
-    });
+const formatPrice = (n) => `$${n.toLocaleString('es-AR')}`;
 
-    const { ref: sliderRef1, inView: sliderInView1 } = useInView({
-        triggerOnce: true,
-        threshold: 0.1,
-    });
+const BOOKS = [
+    {
+        id: 'miradas',
+        nav: 'Miradas que narran',
+        kind: 'Libro de relatos',
+        title: 'Miradas que narran',
+        images: imgs_Libro_Miradas,
+        price: librosPrice.MIRADAS_QUE_NARRAN,
+        item: 'Libro de relatos',
+        paragraphs: [
+            <>Aquí encontrarás relatos de una <span>mujer apasionada</span>, escritos a partir de cada vivencia transitada.</>,
+            <>Cuando lo tengas en tus manos también serán tus relatos, porque seguramente, en alguna de mis frases, en las mujeres que pinto, en las mujeres que elegí para que colorees, o en las palabras que escribí, hay <span>algo de vos</span>.</>,
+        ],
+        promo: <><strong>Consultá promos</strong> comprando más de un producto.</>,
+    },
+    {
+        id: 'colorear',
+        nav: 'Colores que cuentan historias',
+        kind: 'Libro para colorear',
+        title: 'Colores que cuentan historias',
+        images: imgs_Libro_Colorear,
+        price: librosPrice.LIBRO_PARA_COLOREAR,
+        item: 'Libro para colorear',
+        paragraphs: [
+            <>Este libro es una invitación a <span>expresarte</span>, donde cada imagen te permitirá crear una historia propia, llena de vida y color.</>,
+            <>Coloreá y convertite en parte de cada obra, sintiendo que cada trazo refleja tu <span>creatividad</span> y esencia.</>,
+        ],
+        promo: <><strong>Preguntá por descuentos</strong> en compras múltiples.</>,
+    },
+];
 
-    const { ref: sliderRef2, inView: sliderInView2 } = useInView({
-        triggerOnce: true,
-        threshold: 0.1,
-    });
-
-    const { ref: button1, inView: button1InView1 } = useInView({
-        triggerOnce: true,
-        threshold: 0.1,
-    });
-
-    const { ref: button2, inView: button1InView2 } = useInView({
-        triggerOnce: true,
-        threshold: 0.1,
-    });
-
-    const handleSubmit = (e, item) => {
-        e.preventDefault();
-        const message = `Hola! Ani, me gustaría encargarte tu ${item}. Muchas gracias!`;
-
-        const whatsappURL = `https://api.whatsapp.com/send?phone=542494245966&text=${encodeURIComponent(message)}`;
-        window.open(whatsappURL, '_blank');
+const Book = ({ book, index, reveal }) => {
+    // Mismo mensaje de WhatsApp que la versión anterior.
+    const order = () => {
+        const message = `Hola! Ani, me gustaría encargarte tu ${book.item}. Muchas gracias!`;
+        window.open(`https://api.whatsapp.com/send?phone=542494245966&text=${encodeURIComponent(message)}`, '_blank');
     };
 
     return (
-        <div>
-            <div className="titleBg">
-                <motion.h1
-                    ref={titleRef}
-                    initial={{ opacity: 0, y: -20 }}
-                    animate={titleInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 0.5 }}
-                    className='myPaintingsTitle'
-                >
-                    Libros
-                </motion.h1>
+        <motion.article
+            id={book.id}
+            className={`pb-book${index % 2 === 1 ? ' is-reverse' : ''}`}
+            aria-labelledby={`${book.id}-title`}
+            {...reveal}
+        >
+            <div className="pb-media">
+                <PaintingSlider paintings={book.images} label={`Fotos del libro ${book.title}`} />
             </div>
-            <main className="personalBook">
-                <div className='personalBook-container'>
-                    <div className='personalBook-img-container' ref={sliderRef1}>
-                        <div className='personalBook-price'><h4>${librosPrice.MIRADAS_QUE_NARRAN}</h4></div>
-                        <motion.div
-                            initial={{ opacity: 0, x: -100 }}
-                            animate={sliderInView1 ? { opacity: 1, x: 0 } : {}}
-                            transition={{ duration: 0.5 }}
-                        >
-                            <PaintingSlider paintings={imgs_Libro_Miradas} />
-                        </motion.div>
-                    </div>
-                    <motion.h2
-                        ref={button1}
-                        onClick={(e) => handleSubmit(e, "Libro de relatos")}
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={button1InView1 ? { opacity: 1, x: 0 } : {}}
-                        transition={{ duration: 0.5, delay: 0.2 }}
-                    >
-                        <motion.button
-                            className="buy-book-btn"
 
-                            whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 0.95 }}
-                        >
-                            COMPRAR
-                        </motion.button>
-                    </motion.h2>
+            <div className="pb-info">
+                <p className="pb-kind">{book.kind}</p>
+                <h2 id={`${book.id}-title`} className="pb-book-title">“{book.title}”</h2>
+                <p className="pb-price"><strong>{formatPrice(book.price)}</strong></p>
+                <div className="pb-text">
+                    {book.paragraphs.map((p, i) => <p key={i}>{p}</p>)}
                 </div>
-                <section className='section-agendaText'>
-                    <div className='section-agendaText-container'>
-                        <h3>"Miradas que narran"</h3>
-                        <div className='section-agendaText-flex-column'>
-                            <motion.p
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={titleInView ? { opacity: 1, y: 0 } : {}}
-                                transition={{ duration: 0.5 }}
-                            >
-                                Aquí encontrarás relatos de una <span>mujer apasionada</span>, escritos a partir de cada vivencia transitada.
-                            </motion.p>
-                            <motion.p
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={titleInView ? { opacity: 1, y: 0 } : {}}
-                                transition={{ duration: 0.5, delay: 0.1 }}
-                            >
-                                Cuando lo tengas en tus manos también serán tus relatos, porque seguramente, en alguna de mis frases, en las mujeres que pinto, en las mujeres que elegí para que colorees, o en las palabras que escribí, hay <span>algo de vos</span>.
-                            </motion.p>
-                            <div>
-                                <motion.p
-                                    initial={{ opacity: 0, y: 20 }}
-                                    animate={titleInView ? { opacity: 1, y: 0 } : {}}
-                                    transition={{ duration: 0.5, delay: 0.2 }}
-                                >
-                                    <strong>Consultá promos <span>comprando</span> más de un producto.</strong>
-                                </motion.p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </main>
-            <main className="personalBook section2">
-                <div className='personalBook-container'>
-                    <div className='personalBook-img-container' ref={sliderRef2}>
-                        <div className='personalBook-price'><h4>${librosPrice.LIBRO_PARA_COLOREAR}</h4></div>
-                        <motion.div
-                            initial={{ opacity: 0, x: -100 }}
-                            animate={sliderInView2 ? { opacity: 1, x: 0 } : {}}
-                            transition={{ duration: 0.5 }}
-                        >
-                            <PaintingSlider paintings={imgs_Libro_Colorear} />
-                        </motion.div>
-                    </div>
-                    <motion.h2
-                        ref={button2}
-                        onClick={(e) => handleSubmit(e, "Libro para colorear")}
-                        initial={{ opacity: 0, x: 20 }}
-                        animate={button1InView2 ? { opacity: 1, x: 0 } : {}}
-                        transition={{ duration: 0.5, delay: 0.2 }}
-                    >
-                        <motion.button
-                            className="buy-book-btn"
+                <button type="button" className="pb-btn" onClick={order}>
+                    Pedir por WhatsApp
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+                    <span className="pb-sr"> (se abre en una pestaña nueva)</span>
+                </button>
+                <p className="pb-promo">{book.promo}</p>
+            </div>
+        </motion.article>
+    );
+};
 
-                            whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 0.95 }}
-                        >
-                            COMPRAR
-                        </motion.button>
-                    </motion.h2>
+const PersonalBook = () => {
+    const reduce = useReducedMotion();
+    const reveal = reduce
+        ? {}
+        : {
+            initial: { opacity: 0, y: 18 },
+            whileInView: { opacity: 1, y: 0 },
+            viewport: { once: true, margin: '-60px' },
+            transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] },
+        };
+
+    useEffect(() => {
+        const previous = document.title;
+        document.title = 'Libros | Ani Carlomagno';
+        return () => { document.title = previous; };
+    }, []);
+
+    return (
+        <main className="pb">
+            <section className="pb-hero" aria-labelledby="pb-title">
+                <div className="pb-hero-text">
+                <p className="pb-eyebrow">Escritos y dibujados por Ani</p>
+                <h1 id="pb-title" className="pb-title">Libros</h1>
+                <p className="pb-lead">
+                    Dos libros para leer despacio y para colorear a tu manera. Elegí el que te llame y pedilo por WhatsApp.
+                </p>
+                <nav className="pb-jump" aria-label="Ir a un libro">
+                    {BOOKS.map((b) => (
+                        <a key={b.id} href={`#${b.id}`} className="pb-chip">{b.nav}</a>
+                    ))}
+                </nav>
                 </div>
-                <section className='section-agendaText'>
-                    <div className='section-agendaText-container'>
-                        <h3>"Colores que cuentan historias"</h3>
-                        <div className='section-agendaText-flex-column'>
-                            <motion.p
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={titleInView ? { opacity: 1, y: 0 } : {}}
-                                transition={{ duration: 0.5 }}
-                            >
-                                Este libro es una invitación a expresarte, donde cada imagen te permitirá crear una historia propia, llena de vida y color.
-                            </motion.p>
-                            <motion.p
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={titleInView ? { opacity: 1, y: 0 } : {}}
-                                transition={{ duration: 0.5, delay: 0.1 }}
-                            >
-                                Colorea y conviértete en parte de cada obra, sintiendo que cada trazo refleja tu creatividad y esencia.
-                            </motion.p>
-                            <div>
-                                <motion.p
-                                    initial={{ opacity: 0, y: 20 }}
-                                    animate={titleInView ? { opacity: 1, y: 0 } : {}}
-                                    transition={{ duration: 0.5, delay: 0.2 }}
-                                >
-                                    <strong>Preguntá por descuentos en compras múltiples.</strong>
-                                </motion.p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </main>
-        </div>
+
+                <ul className="pb-covers">
+                    {BOOKS.map((b) => (
+                        <li key={b.id}>
+                            <a href={`#${b.id}`} className="pb-cover" aria-label={`Ver ${b.title}`}>
+                                <span className="pb-cover-mat">
+                                    <img src={b.images[0].src} alt="" width="1200" height="1600" />
+                                </span>
+                                <span className="pb-cover-label">
+                                    <strong>{b.title}</strong>
+                                    <span>{b.kind} · {formatPrice(b.price)}</span>
+                                </span>
+                            </a>
+                        </li>
+                    ))}
+                </ul>
+            </section>
+
+            {BOOKS.map((book, i) => (
+                <Book key={book.id} book={book} index={i} reveal={reveal} />
+            ))}
+        </main>
     );
 };
 
