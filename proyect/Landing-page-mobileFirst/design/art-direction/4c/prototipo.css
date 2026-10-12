@@ -1,0 +1,197 @@
+/*
+ * Fase 4c: Dirección C (inmersiva), dos variantes con la misma estructura.
+ * Lo único que cambia entre ellas es el "muro": el fondo que va detrás de cada obra.
+ *   c1-oscura (html.tema-oscuro): muro tinta (--color-ink). Todo lo demás, claro.
+ *   c2-clara  (html.tema-claro):  muro aliceblue (--color-surface).
+ * El texto nunca va sobre el muro ni sobre la obra: título, cartela y botones viven en lienzos claros.
+ * Solo tokens de src/styles/tokens.css. Escala tipográfica y movimiento según DL-013 (DL-007 y DL-009 siguen abiertas).
+ */
+:root {
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-escena: 1.75rem;
+  --text-3xl: 2rem;
+  --text-firma: 2.75rem;
+  --gutter: var(--space-5);
+  --section: calc(var(--space-12) * 2);
+  --measure: 34rem;
+  --barra: 4.25rem;
+  /* Lo que la primera pantalla reserva para barra, paspartú, firma y botones (ver hero). */
+  --reserva-hero: 18.75rem;
+  --ease-out: cubic-bezier(0.2, 0, 0, 1);
+  --muro: var(--color-ink);
+}
+.tema-claro { --muro: var(--color-surface); }
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+html.menu-abierto { overflow: hidden; }
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: 1.6;
+  color: var(--color-ink);
+  background: var(--color-white);
+}
+img { display: block; max-width: 100%; height: auto; }
+h1, h2, h3, p, ol, ul, figure, blockquote, dl, dd { margin: 0; }
+a { color: var(--color-accent); text-underline-offset: 0.2em; }
+:focus-visible { outline: 3px solid var(--color-accent); outline-offset: 3px; }
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+.skip-link {
+  position: absolute; left: var(--gutter); top: var(--space-2); z-index: 30;
+  padding: var(--space-3) var(--space-4); background: var(--color-accent); color: var(--color-white);
+  transform: translateY(-200%);
+}
+.skip-link:focus { transform: none; }
+
+.proto-nota { padding: var(--space-3) var(--gutter); background: var(--color-gray-100); color: var(--color-gray-700); }
+.proto-nota a { display: inline-block; min-height: 44px; padding-block: var(--space-2); }
+.prov {
+  display: inline-block; padding: 0 var(--space-2);
+  border: 1px dashed var(--color-gray-600); border-radius: var(--radius-2xs);
+  background: var(--color-gray-100); color: var(--color-ink);
+  font: 600 var(--text-base)/1.6 var(--font-body);
+}
+.placeholder { color: var(--color-gray-700); }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; min-height: 48px;
+  padding: var(--space-3) var(--space-6); border-radius: var(--radius-pill);
+  background: var(--color-accent); color: var(--color-white); font-weight: 600; text-decoration: none;
+}
+.link { display: inline-flex; align-items: center; min-height: 44px; font-weight: 600; }
+.acciones { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2) var(--space-6); margin-top: var(--space-6); }
+.btn-menu {
+  min-width: 44px; min-height: 44px; padding: var(--space-2) var(--space-4);
+  border: 1px solid currentColor; border-radius: var(--radius-pill);
+  background: transparent; color: inherit;
+  font: 600 var(--text-base)/1 var(--font-body); cursor: pointer;
+}
+
+/*
+ * La obra: entera, sin radio ni filtros, sobre su muro. El ancho se calcula con la proporción real (--r, en el
+ * atributo style de cada img) para que nunca pase de --alto-max y el lugar quede reservado antes de cargar.
+ */
+.obra { --alto-max: 80svh; }
+.muro { display: grid; place-items: center; padding: var(--space-4); background: var(--muro); }
+.muro img { width: min(100%, calc(var(--alto-max) * var(--r))); }
+.cartela { display: grid; padding: var(--space-3) var(--gutter) 0; color: var(--color-gray-600); }
+.cartela-titulo { font-weight: 600; color: var(--color-ink); }
+
+/* Primera pantalla: la obra lo más grande que entre y, debajo, la firma y un solo botón principal */
+.barra { display: flex; justify-content: flex-end; align-items: center; min-height: var(--barra); padding: var(--space-3) var(--gutter); }
+.hero { display: flex; flex-direction: column; min-height: calc(100svh - var(--barra)); }
+.hero .obra { --alto-max: max(calc(100svh - var(--reserva-hero)), 24rem); display: flex; flex: 1; }
+.hero .muro { flex: 1; }
+.hero-texto { padding: var(--space-6) var(--gutter); }
+.firma { font-family: var(--font-script); font-weight: 700; line-height: 1; }
+.firma-nombre { display: block; font-size: var(--text-firma); }
+.firma-sub { display: block; margin-top: var(--space-1); font-size: var(--text-xl); color: var(--color-gray-700); }
+
+/* Escenas */
+.escena { padding-block: var(--section); }
+.escena-frase { padding: var(--section) var(--gutter) 0; }
+.escena-frase p { max-width: 22ch; font-size: var(--text-escena); line-height: 1.3; }
+.escena-frase figcaption { margin-top: var(--space-4); color: var(--color-gray-700); }
+.escena-cabeza { padding: 0 var(--gutter); max-width: var(--measure); }
+.escena-cabeza h2 { font-size: var(--text-3xl); line-height: 1.15; font-weight: 700; }
+.escena-cabeza p { margin-top: var(--space-4); }
+.escena-pie { padding: var(--space-8) var(--gutter) 0; }
+.escena-cabeza h1 { margin-top: var(--space-6); font-size: var(--text-3xl); line-height: 1.15; }
+.indice { list-style: none; padding: 0; margin-top: var(--space-8); display: grid; gap: var(--space-6); }
+.escena-cabeza .indice p { margin-top: 0; }
+.escena-cabeza .indice-nota { margin-top: var(--space-8); color: var(--color-gray-700); }
+.destacadas-obras { display: grid; gap: var(--space-12); margin-top: var(--space-8); }
+
+/* Tarjeta de obra: la obra sobre su muro, los datos y el pedido sobre blanco */
+.ficha { margin-top: var(--space-8); }
+.ficha .obra { --alto-max: 75svh; }
+.ficha-datos { padding: var(--space-4) var(--gutter) 0; }
+.ficha-datos h3 { font-size: var(--text-2xl); line-height: 1.25; font-weight: 700; }
+.ficha-datos dl { display: grid; grid-template-columns: auto 1fr; gap: var(--space-1) var(--space-4); margin-top: var(--space-3); }
+.ficha-datos dt { color: var(--color-gray-600); }
+.ficha-nota { margin-top: var(--space-3); color: var(--color-gray-600); }
+
+/* Mi recorrido: dos etapas, dos obras cada una; los muros se tocan para formar una sola franja */
+.recorrido-lista { list-style: none; padding: 0; margin-top: var(--space-8); display: grid; gap: var(--space-12); }
+.etapa-texto { padding: 0 var(--gutter); max-width: var(--measure); }
+.etapa h3 { font-size: var(--text-2xl); line-height: 1.25; font-weight: 700; }
+.etapa-texto p { margin-top: var(--space-2); }
+.etapa-obras { display: grid; grid-template-columns: 1fr 1fr; margin-top: var(--space-6); }
+.etapa-obras .obra { --alto-max: 100svh; display: grid; grid-row: span 2; grid-template-rows: subgrid; }
+.etapa-obras .muro { padding: var(--space-4) var(--space-2); }
+.etapa-obras .obra:first-child .muro { padding-left: var(--space-4); }
+.etapa-obras .obra:last-child .muro { padding-right: var(--space-4); }
+.etapa-obras .cartela { align-content: start; padding-inline: var(--space-4) var(--space-2); }
+.recorrido-nota { padding: var(--space-8) var(--gutter) 0; max-width: var(--measure); }
+
+.contacto { padding: var(--section) var(--gutter); }
+.contacto h2 { font-size: var(--text-escena); line-height: 1.25; font-weight: 700; max-width: 20ch; }
+.contacto p { margin-top: var(--space-4); max-width: var(--measure); font-size: var(--text-lg); }
+
+.pie { padding: var(--space-12) var(--gutter); background: var(--color-surface); }
+.pie-firma { font-family: var(--font-script); font-size: var(--text-2xl); font-weight: 700; }
+.pie p + p { margin-top: var(--space-2); color: var(--color-gray-700); }
+.pie ul { list-style: none; padding: 0; margin: var(--space-4) 0 0; display: flex; flex-wrap: wrap; gap: 0 var(--space-6); }
+.pie a { display: inline-flex; align-items: center; min-height: 44px; }
+
+/* Botón flotante: se esconde donde ya hay un pedido a la vista o donde taparía la obra del hero (prototipo.js) */
+.wsp {
+  position: fixed; right: var(--space-4); bottom: calc(var(--space-4) + env(safe-area-inset-bottom)); z-index: 10;
+  display: grid; place-items: center; width: 56px; height: 56px; border-radius: var(--radius-round);
+  background: var(--color-whatsapp); color: var(--color-ink); box-shadow: var(--shadow-sm);
+}
+.wsp svg { width: 30px; height: 30px; fill: currentColor; }
+.wsp-oculto { opacity: 0; visibility: hidden; }
+
+/* Menú abierto: diálogo claro a pantalla completa */
+.menu { position: fixed; inset: 0; z-index: 20; overflow-y: auto; padding: var(--space-3) var(--gutter) var(--space-8); background: var(--color-white); }
+.menu[hidden] { display: none; }
+.menu-cabeza { display: flex; justify-content: flex-end; }
+.menu ul { list-style: none; padding: 0; margin: var(--space-6) 0 0; }
+.menu li + li { border-top: 1px solid var(--color-gray-200); }
+.menu ul a { display: flex; align-items: center; min-height: 56px; color: var(--color-ink); text-decoration: none; font-size: var(--text-2xl); font-weight: 600; }
+.menu ul a[aria-current="page"] { color: var(--color-accent); text-decoration: underline; text-decoration-thickness: 2px; }
+
+/*
+ * Movimiento: un solo gesto, la entrada de las obras al llegar a ellas (300 ms, opacidad y desplazamiento).
+ * Lo dispara prototipo.js solo para lo que está debajo del primer pantallazo, así nada parpadea al cargar;
+ * arranca en 30 % de opacidad, nunca invisible, y sin JS o con reduced-motion no pasa nada.
+ */
+@media (prefers-reduced-motion: no-preference) {
+  [data-revela] { transition: opacity var(--duration-300) var(--ease-out), transform var(--duration-300) var(--ease-out); }
+  .revela-espera { opacity: 0.3; transform: translateY(var(--space-6)); }
+  .wsp { transition: opacity var(--duration-200) var(--ease-out), visibility var(--duration-200); }
+}
+
+@media (min-width: 768px) {
+  :root { --gutter: var(--space-8); --text-firma: 4rem; --text-escena: 2.25rem; }
+  .ficha { display: grid; grid-template-columns: 7fr 5fr; gap: var(--space-8); align-items: center; padding-right: var(--gutter); }
+  .ficha-datos { padding: 0; }
+  .recorrido-lista { grid-template-columns: 1fr 1fr; gap: var(--space-8); padding: 0 var(--gutter); }
+  .etapa-texto { padding: 0; }
+  .etapa-obras .cartela { padding-inline: var(--space-2); }
+}
+
+@media (min-width: 1024px) {
+  .hero { flex-direction: row; }
+  .hero .obra { --alto-max: calc(100svh - var(--barra) - var(--space-8) * 2); flex: 3 1 0; }
+  .hero .muro { padding: var(--space-8); }
+  .hero-texto { flex: 2 1 0; align-self: center; padding: var(--space-8) var(--gutter); }
+  .destacadas-obras { grid-template-columns: repeat(3, 1fr); grid-template-rows: auto auto; gap: 0 var(--space-4); padding-inline: var(--gutter); }
+  .destacadas-obras .obra { display: grid; grid-row: span 2; grid-template-rows: subgrid; }
+  .destacadas-obras .cartela { padding-inline: 0; }
+  .ancho { max-width: 80rem; margin-inline: auto; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
