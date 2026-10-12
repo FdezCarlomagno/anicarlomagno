@@ -1,81 +1,75 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import bookSvg from './assets/Book.svg';
-import diamondSvg from './assets/Diamond.svg';
-import homeSvg from './assets/Home.svg';
-import paintBrush from './assets/PaintBrush.svg';
-import Eye from './assets/Eye.svg';
-import Printer from './assets/Printer.svg';
-import { motion } from 'framer-motion';
-import toast, { Toaster } from 'react-hot-toast';
-import contactSvg from './assets/contact.svg'
-import { Image } from '@unpic/react'
+import { useEffect, useRef, useState } from 'react';
+import { Link, NavLink, useLocation } from 'react-router-dom';
+import { Toaster } from 'react-hot-toast';
+import './shell.css';
 
+const LINKS = [
+  { to: '/', label: 'Inicio', end: true },
+  { to: '/elegir', label: 'Obras' },
+  { to: '/agendas', label: 'Agendas y cuadernos' },
+  { to: '/mi-libro', label: 'Libros' },
+  { to: '/laminas', label: 'Láminas' },
+  { to: '/sobre-mi', label: 'Sobre mí' },
+  { to: '/contacto', label: 'Contacto' },
+];
+
+// What stays behind the open menu on mobile becomes inert: no focus, no clicks, hidden from screen readers.
+const BEHIND_MENU = '[data-inert-con-menu]';
 
 const NavBar = () => {
-  const [menu, setMenu] = useState(false);
+  const [open, setOpen] = useState(false);
+  const toggleRef = useRef(null);
+  const panelRef = useRef(null);
+  const { pathname } = useLocation();
 
-  const toggleMenu = () => {
-    setMenu(!menu);
-  };
+  useEffect(() => { setOpen(false); }, [pathname]);
 
-  const handleLink = () => {
-    setMenu(false);
-  };
+  useEffect(() => {
+    const behind = document.querySelectorAll(BEHIND_MENU);
+    behind.forEach((el) => { el.inert = open; });
+    if (!open) return undefined;
+    const timer = setTimeout(() => panelRef.current?.querySelector('a')?.focus(), 50);
+    const onKey = (e) => {
+      if (e.key === 'Escape') {
+        setOpen(false);
+        toggleRef.current?.focus();
+      }
+    };
+    document.addEventListener('keydown', onKey);
+    return () => {
+      clearTimeout(timer);
+      document.removeEventListener('keydown', onKey);
+      behind.forEach((el) => { el.inert = false; });
+    };
+  }, [open]);
 
   return (
-    <nav className='navBar'>
-      <Toaster/>
-      <Link to='/'>
-        <div className="navLogo">
-          <div className='contH1Nav'>
-            <motion.p
-              className="navLogo-name"
-              initial={{ scale: 0, x: -100 }}
-              animate={{ scale: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >anicarlomagno</motion.p>
-          </div>
-          <motion.p
-            className="navLogo-subtitle"
-            initial={{ scale: 0, x: 100 }}
-            animate={{ scale: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-          >artista plástica</motion.p>
-        </div>
+    <nav className="nav" aria-label="Principal">
+      <Toaster />
+      <Link to="/" className="nav-logo">
+        <span className="nav-logo-name">anicarlomagno</span>
+        <span className="nav-logo-sub">artista plástica</span>
       </Link>
       <button
+        ref={toggleRef}
         type="button"
-        className='btnDisplayMenu'
-        onClick={toggleMenu}
-        aria-label="Menú"
-        aria-expanded={menu}
+        className="nav-toggle"
+        aria-expanded={open}
         aria-controls="menu-principal"
-      >☰</button>
-      <motion.div
-        className={menu ? 'displayMenu' : 'closedMenu'}
-        initial={{ opacity: 0, height: 0 }}
-        animate={menu ? { opacity: 1, height: 'auto' } : { opacity: 1, height: 20}}
-        transition={{ duration: 0.5 }}
+        onClick={() => setOpen((v) => !v)}
       >
-        <motion.ul
-          id="menu-principal"
-          className={menu ? 'openMenu' : 'closedMenu'}
-          initial={{ opacity: 0, height: 0 }}
-          animate={menu ? { opacity: 1, height: 'auto' } : { opacity: 1, height: 20}}
-          transition={{ duration: 0.5 }}
-        >
-          <motion.li><Link onClick={handleLink} to="/"><Image className='svg' src={homeSvg} alt=""/>Inicio</Link></motion.li>
-          <motion.li><Link onClick={handleLink} to="/elegir"><Image className='svg' src={paintBrush} alt=""/>Obras</Link></motion.li>
-          <motion.li><Link onClick={handleLink} to="/agendas"><Image className='svg' src={bookSvg} alt=""/>Agendas y cuadernos</Link></motion.li>
-          <motion.li><Link onClick={handleLink} to="/mi-libro"><Image className='svg' src={Eye} alt=""/>Libros</Link></motion.li>
-          <motion.li><Link onClick={handleLink} to="/laminas"><Image className='svg' src={Printer} alt=""/>Láminas</Link></motion.li>
-          <motion.li><Link onClick={handleLink} to="/sobre-mi"><Image className='svg' src={diamondSvg} alt=""/>Sobre mí</Link></motion.li>
-          <motion.li><Link onClick={handleLink} to="/contacto"><Image className='svg' src={contactSvg} alt=""/>Contacto</Link></motion.li>
-        </motion.ul>
-      </motion.div>
+        {open ? 'Cerrar' : 'Menú'}
+      </button>
+      <div className="nav-backdrop" data-open={open} onClick={() => setOpen(false)} aria-hidden="true" />
+      <ul id="menu-principal" className="nav-links" data-open={open} ref={panelRef}>
+        {LINKS.map(({ to, label, end }) => (
+          <li key={to}>
+            <NavLink to={to} end={end}>{label}</NavLink>
+          </li>
+        ))}
+      </ul>
     </nav>
   );
-}
+};
 
 export default NavBar;

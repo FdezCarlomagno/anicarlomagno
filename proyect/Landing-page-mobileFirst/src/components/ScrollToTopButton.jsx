@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import '../LandingPage.css';
+import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import './shell.css';
 
 const ScrollToTopButton = () => {
     const [showButton, setShowButton] = useState(false);
@@ -11,35 +11,24 @@ const ScrollToTopButton = () => {
         window.scrollTo(0, 0);
     }, [location]);
 
-    const handleScroll = () => {
-        if (window.scrollY > window.innerHeight / 2) {
-            setShowButton(true);
-        } else {
-            setShowButton(false);
-        }
-    };
-
     useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-
-        // Cleanup event listener on component unmount
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
+        const handleScroll = () => setShowButton(window.scrollY > window.innerHeight / 2);
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
     const scrollToTop = () => {
         window.scrollTo({
             top: 0,
-            behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', // Hace que el scroll sea suave
+            behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
         });
     };
 
     return (
         showButton && (
-            <button onClick={scrollToTop} className="scrollToTopBtn" aria-label="Volver arriba">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 my-icon" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+            <button type="button" onClick={scrollToTop} className="scrollToTopBtn" data-inert-con-menu aria-label="Volver arriba">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" aria-hidden="true" focusable="false">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
                 </svg>
             </button>
         )
@@ -47,6 +36,3 @@ const ScrollToTopButton = () => {
 };
 
 export default ScrollToTopButton;
-
-
-

@@ -1,5 +1,4 @@
-import React from 'react';
-import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { MotionConfig } from 'framer-motion';
 import Home from './Home.jsx';
 import NavBar from './components/NavBar.jsx';
@@ -7,19 +6,14 @@ import Paintings from './pages/Paintings.jsx';
 import AboutMe from './pages/AboutMe.jsx';
 import Agendas from './pages/Agendas.jsx';
 import WhatsappIcon from './components/WhatsappIcon.jsx';
-import SocialMedia from './components/SocialMedia.jsx';
-import PaintingInfo from './components/PaintingInfo.jsx';
 import CustomAgenda from './components/customAgenda.jsx';
 import ChooseForm from './components/Choose.jsx';
 import CustomPainting from './components/customPainting.jsx';
 import PersonalBook from './pages/personalBook.jsx';
 import ScrollToTopButton from './components/ScrollToTopButton.jsx';
 import Laminas from './pages/Laminas.jsx';
-import FooterNavbar from './components/FooterNavbar.jsx';
-import Envio from './components/Envio.jsx';
+import Footer from './components/Footer.jsx';
 import Contact from './components/contact/ContactSection.jsx'
-import { EmailLink, WhatsappLink } from './content/legal/ContactLinks.jsx';
-import { OWNER_NAME } from './content/legal/contact.js';
 import { privacidad } from './content/legal/privacidad.jsx';
 import { terminos } from './content/legal/terminos.jsx';
 import LegalPage from './pages/LegalPage.jsx';
@@ -40,11 +34,11 @@ const LandingPage = () => {
       <RouteMeta />
       <MotionConfig reducedMotion="user">
         <div className="LandingPage">
-          <a className="skip-link" href="#contenido" onClick={skipToContent}>Saltar al contenido</a>
+          <a className="skip-link" data-inert-con-menu href="#contenido" onClick={skipToContent}>Saltar al contenido</a>
           <NavBar />
           <WhatsappIcon />
           <ScrollToTopButton />
-          <main id="contenido" tabIndex={-1}>
+          <main id="contenido" tabIndex={-1} data-inert-con-menu>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/obras-en-stock" element={<Paintings />} />
@@ -61,20 +55,7 @@ const LandingPage = () => {
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
-          <Envio />
-          <FooterNavbar />
-          <footer>
-            <nav className="footer-legal" aria-label="Legales">
-              <ul>
-                <li><Link to="/privacidad">Privacidad</Link></li>
-                <li><Link to="/terminos">Términos</Link></li>
-              </ul>
-            </nav>
-            <p className="footer-contact">
-              {OWNER_NAME} · <WhatsappLink /> · <EmailLink />
-            </p>
-            <p>Copyright © {new Date().getFullYear()} Analía Carlomagno</p>
-          </footer>
+          <Footer />
         </div>
       </MotionConfig>
     </BrowserRouter>

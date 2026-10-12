@@ -82,6 +82,10 @@
     --space-6: 1.5rem;
     --space-8: 2rem;
     --space-12: 3rem;
+    /* Phase 6: touch target (44px), sticky nav height, floating button size */
+    --space-target: 2.75rem;
+    --space-nav: 3.5rem;
+    --space-float: 3rem;
 
     /* Legacy fixed spacing (px) */
     --space-legacy-2: 2px;

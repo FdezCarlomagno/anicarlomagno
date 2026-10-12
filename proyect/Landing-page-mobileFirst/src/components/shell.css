@@ -1,0 +1,282 @@
+/*
+ * Phase 6: shell (navigation, floating buttons, footer). Mobile first; DL-013: ink only behind art and in the footer.
+ * Text on ink is white (15.52:1); the accent never goes on ink (2.61:1).
+ */
+
+/* ---------- Navigation ---------- */
+.nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: var(--space-nav);
+    padding: 0 var(--space-4);
+    background-color: var(--color-surface);
+    border-bottom: 1px solid var(--color-black-a12);
+}
+
+.nav-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: var(--space-target);
+    justify-content: center;
+    color: var(--color-black);
+    line-height: 1.1;
+}
+
+.nav-logo-name {
+    font-family: var(--font-script);
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-bottom: 2px solid var(--color-black);
+}
+
+.nav-logo-sub {
+    font-family: var(--font-script-bare);
+    font-size: 0.875rem;
+    font-weight: bold;
+    color: var(--color-accent);
+}
+
+.nav-toggle {
+    min-width: var(--space-target);
+    min-height: var(--space-target);
+    padding: 0 var(--space-4);
+    border: 2px solid var(--color-black);
+    border-radius: var(--radius-pill);
+    background: transparent;
+    color: var(--color-black);
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.nav-toggle[aria-expanded='true'] {
+    background: var(--color-black);
+    color: var(--color-surface);
+}
+
+.nav-backdrop {
+    position: fixed;
+    inset: var(--space-nav) 0 0 0;
+    background: var(--color-black-a30);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--duration-200) var(--ease-in-out), visibility var(--duration-200);
+}
+
+.nav-links {
+    position: fixed;
+    top: var(--space-nav);
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: var(--space-2) var(--space-4) var(--space-4);
+    list-style: none;
+    background: var(--color-surface);
+    border-top: 3px solid var(--color-accent);
+    box-shadow: var(--shadow-card);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--duration-200) var(--ease-in-out), visibility var(--duration-200);
+}
+
+.nav-backdrop[data-open='true'],
+.nav-links[data-open='true'] {
+    opacity: 1;
+    visibility: visible;
+}
+
+.nav-links a {
+    display: flex;
+    align-items: center;
+    min-height: var(--space-target);
+    padding: 0 var(--space-2);
+    color: var(--color-black);
+    font-size: 1.125rem;
+    border-bottom: 1px solid var(--color-black-a12);
+}
+
+.nav-links a[aria-current='page'] {
+    color: var(--color-accent);
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-offset: 0.25em;
+}
+
+@media (min-width: 768px) {
+    .nav {
+        padding: 0 var(--space-8);
+    }
+
+    .nav-toggle,
+    .nav-backdrop {
+        display: none;
+    }
+
+    .nav-links {
+        position: static;
+        display: flex;
+        gap: var(--space-4);
+        padding: 0;
+        background: none;
+        border: 0;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-links a {
+        padding: 0 var(--space-1);
+        font-size: 1rem;
+        border-bottom: 0;
+    }
+
+    .nav-links a:hover {
+        color: var(--color-accent);
+    }
+}
+
+/* ---------- Floating buttons ---------- */
+.whatsappIcon,
+.scrollToTopBtn {
+    position: fixed;
+    bottom: var(--space-4);
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--space-float);
+    height: var(--space-float);
+    padding: 0;
+    border: 0;
+    border-radius: var(--radius-round);
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+}
+
+.whatsappIcon {
+    left: var(--space-4);
+    background-color: var(--color-whatsapp);
+    color: var(--color-ink);
+    transition: background-color var(--duration-200) var(--ease-in-out);
+}
+
+.whatsappIcon:hover {
+    background-color: var(--color-whatsapp-hover);
+}
+
+.whatsappIcon svg {
+    width: 60%;
+    height: 60%;
+}
+
+.scrollToTopBtn {
+    right: var(--space-4);
+    background-color: var(--color-ink);
+    color: var(--color-white);
+}
+
+.scrollToTopBtn svg {
+    width: 55%;
+    height: 55%;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+    --focus-ring: var(--color-white);
+    margin-top: var(--space-12);
+    /* room so the floating buttons never cover the last lines */
+    padding: var(--space-8) var(--space-4) calc(var(--space-float) + var(--space-8));
+    background-color: var(--color-ink);
+    color: var(--color-white);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-8) var(--space-4);
+    max-width: 70rem;
+    margin: 0 auto;
+}
+
+.footer-brand {
+    grid-column: 1 / -1;
+}
+
+.footer h2 {
+    margin: 0 0 var(--space-2);
+}
+
+.footer-signature {
+    font-family: var(--font-script);
+    font-size: 2rem;
+}
+
+.footer-title {
+    font-size: 1rem;
+    color: var(--color-gray-300);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.footer ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer a {
+    display: inline-flex;
+    align-items: center;
+    min-width: var(--space-target);
+    min-height: var(--space-target);
+    color: var(--color-white);
+    text-decoration: underline;
+    text-underline-offset: 0.25em;
+}
+
+.footer a[aria-current='page'] {
+    font-weight: bold;
+}
+
+.footer-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-2);
+    max-width: 70rem;
+    margin: var(--space-8) auto 0;
+    padding-top: var(--space-4);
+    border-top: 1px solid var(--color-gray-700);
+    text-align: center;
+    font-size: 0.875rem;
+    color: var(--color-gray-300);
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.footer-bottom ul {
+    display: flex;
+    gap: var(--space-4);
+}
+
+@media (min-width: 768px) {
+    .footer {
+        padding-left: var(--space-8);
+        padding-right: var(--space-8);
+    }
+
+    .footer-grid {
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+
+    .footer-brand {
+        grid-column: auto;
+    }
+}
