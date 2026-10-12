@@ -22,14 +22,16 @@
 }
 
 /*APP*/
+/* `clip` (y no `hidden`) evita el scroll horizontal sin convertir body en contenedor
+   de scroll, que rompía el `position: sticky` de la navbar. */
 body {
-    overflow-x: hidden;
+    overflow-x: clip;
     min-height: 100vh;
 }
 
 html {
     overscroll-behavior: none;
-    overflow-x: hidden;
+    overflow-x: clip;
 }
 
 * {
@@ -117,32 +119,6 @@ a {
 
 /*SOCIAL MEDIA SECTION*/
 
-.socialMedia-section {
-    display: flex;
-    color: aliceblue;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 2rem;
-    gap: 0.5rem;
-}
-
-.socialMedia-container ul {
-    display: flex;
-    gap: 2rem;
-
-}
-
-.socialMedia-container li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    padding: 0.5rem;
-    list-style-type: none;
-
-}
-
 .svg {
     width: 20px;
     height: 20px;
@@ -151,7 +127,7 @@ a {
 
 /*FOOTER*/
 
-footer,
+/* El footer vive en components/Footer.css */
 .titleBg {
     display: flex;
     justify-content: center;
@@ -170,13 +146,6 @@ footer,
 .titleBg h1 {
     font-size: 24px;
     color: aliceblue;
-}
-
-footer p {
-    width: 65%;
-    text-align: center;
-    color: rgba(240, 248, 255, 0.685);
-    font-size: 13px;
 }
 
 .cuadro,
@@ -337,53 +306,6 @@ textarea {
 }
 
 /*FOOTER NAVBAR*/
-.footer-navbar {
-    display: flex;
-    flex-direction: column;
-    background: url('../src/components/imgs/BG2.jpg') no-repeat center center / cover;
-    margin-top: 3rem;
-    padding-bottom: 1.5rem;
-}
-
-.footer-navbar .navbar {
-    margin: 1rem 1.5rem 0;
-    color: aliceblue;
-}
-
-.footer-navbar .navbar ul {
-    list-style: none;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    column-gap: 16px;
-}
-
-.footer-navbar .navbar li {
-    border-bottom: 1px solid rgba(240, 248, 255, 0.35);
-}
-
-.footer-navbar .navbar a {
-    display: flex;
-    align-items: center;
-    min-height: 44px;
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 0.04em;
-    text-shadow: 0 1px 6px rgba(40, 10, 80, 0.55);
-    transition: opacity 150ms ease;
-}
-
-.footer-navbar .navbar img {
-    display: none;
-}
-
-.footer-navbar a:hover {
-    opacity: 0.75;
-}
-
-.footer-navbar .navbar a:focus-visible {
-    outline: 3px solid aliceblue;
-    outline-offset: 2px;
-}
 
 /*ENVIO SECTION*/
 
@@ -424,33 +346,8 @@ textarea {
         font-size: 30px;
     }
 
-    .footer-navbar .navbar ul {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        gap: 28px;
-    }
-
-    .footer-navbar .navbar li {
-        border-bottom: 0;
-    }
-
-    .footer-navbar {
-        min-height: 250px;
-        justify-content: center;
-    }
-
     button:hover {
         cursor: pointer;
-    }
-
-    .socialMedia-section li {
-        transition: all 200ms ease-in-out;
-    }
-
-    .socialMedia-section li:hover {
-        background-color: rgb(186, 112, 255);
-        transform: scale(1.04);
     }
 
     .whatsappIcon {

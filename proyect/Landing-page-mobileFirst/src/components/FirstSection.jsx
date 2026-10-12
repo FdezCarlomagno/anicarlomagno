@@ -44,8 +44,8 @@ const AboutBlock = ({ eyebrow, title, image, imageAlt, width, height, reverse, t
                 <motion.div
                     className="about-frame"
                     style={{ aspectRatio: `${width} / ${height}` }}
-                    initial={reduceMotion ? false : { clipPath: 'inset(0 0 100% 0 round 18px)' }}
-                    animate={mediaInView ? { clipPath: 'inset(0 0 0% 0 round 18px)' } : undefined}
+                    initial={reduceMotion ? false : { clipPath: 'inset(0 0 100% 0)' }}
+                    animate={mediaInView ? { clipPath: 'inset(0 0 0% 0)' } : undefined}
                     transition={{ duration: 1, ease: EASE }}
                 >
                     <motion.img

@@ -1,0 +1,184 @@
+/* Footer — oscuro y editorial: llamado a escribir, wordmark y columnas de links. */
+
+.ft {
+    --ft-bg: #1a1024;
+    --ft-ink: #f3ecfb;
+    --ft-muted: rgba(243, 236, 251, 0.62);
+    --ft-line: rgba(243, 236, 251, 0.14);
+    --ft-accent: rgb(214, 180, 252);
+    --ft-ease: cubic-bezier(0.22, 1, 0.36, 1);
+    margin-top: 3rem;
+    background:
+        radial-gradient(70% 60% at 85% 0%, rgba(138, 43, 226, 0.28), transparent 70%),
+        var(--ft-bg);
+    color: var(--ft-ink);
+}
+
+.ft-inner {
+    width: 100%;
+    padding: 56px 24px 28px;
+}
+
+/* ---- Llamado a escribir ---- */
+.ft-cta {
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--ft-line);
+}
+
+.ft-cta-eyebrow {
+    margin-bottom: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ft-accent);
+}
+
+.ft-cta-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    font-family: "Dancing Script", cursive;
+    font-size: clamp(36px, 10vw, 44px);
+    font-weight: 700;
+    line-height: 1.05;
+    color: var(--ft-ink);
+    transition: gap 0.4s var(--ft-ease), color 0.2s ease;
+}
+
+.ft-cta-link svg {
+    width: 0.55em;
+    height: 0.55em;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.ft-cta-link:hover { gap: 26px; color: var(--ft-accent); }
+
+/* ---- Grilla ---- */
+.ft-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 36px 20px;
+    padding: 40px 0;
+}
+
+.ft-brand { grid-column: 1 / -1; }
+
+.ft-wordmark {
+    margin-bottom: 10px;
+    font-family: "Dancing Script", cursive;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.ft-tagline {
+    max-width: 22rem;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--ft-muted);
+}
+
+.ft-col-title {
+    margin-bottom: 12px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ft-accent);
+}
+
+.ft-col ul {
+    list-style: none;
+}
+
+.ft-col a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    min-height: 44px;
+    font-size: 16px;
+    color: var(--ft-ink);
+    transition: color 0.2s ease;
+}
+
+.ft-col a svg {
+    width: 16px;
+    height: 16px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    opacity: 0.6;
+    transition: transform 0.3s var(--ft-ease), opacity 0.2s ease;
+}
+
+.ft-col a:hover { color: var(--ft-accent); }
+.ft-col a:hover svg { opacity: 1; transform: translate(2px, -2px); }
+
+.ft-cta-link:focus-visible,
+.ft-col a:focus-visible {
+    outline: 3px solid var(--ft-accent);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+.ft-sr {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+
+/* ---- Pie ---- */
+.ft-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 20px 0 0 64px; /* deja libre el botón flotante de WhatsApp */
+    border-top: 1px solid var(--ft-line);
+    font-size: 13px;
+    color: var(--ft-muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ft-cta-link,
+    .ft-col a svg { transition: none; }
+}
+
+@media (min-width: 768px) {
+    .ft-inner { padding: 64px clamp(32px, 5vw, 96px) 28px; }
+
+    .ft-cta-link { font-size: clamp(40px, 3.6vw, 56px); }
+
+    .ft-cta {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 32px;
+        padding-bottom: 44px;
+    }
+
+    .ft-cta-eyebrow { margin-bottom: 0; padding-bottom: 14px; }
+
+    .ft-grid {
+        grid-template-columns: 2fr repeat(3, minmax(0, 1fr));
+        gap: 40px;
+        padding: 48px 0;
+    }
+
+    .ft-brand { grid-column: auto; }
+
+    .ft-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+        padding-left: 88px;
+    }
+}

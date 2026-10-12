@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './Home.jsx';
 import NavBar from './components/NavBar.jsx';
@@ -6,15 +5,13 @@ import Paintings from './pages/Paintings.jsx';
 import AboutMe from './pages/AboutMe.jsx';
 import Agendas from './pages/Agendas.jsx';
 import WhatsappIcon from './components/WhatsappIcon.jsx';
-import SocialMedia from './components/SocialMedia.jsx';
-import PaintingInfo from './components/PaintingInfo.jsx';
 import CustomAgenda from './components/customAgenda.jsx';
 import ChooseForm from './components/Choose.jsx';
 import CustomPainting from './components/customPainting.jsx';
 import PersonalBook from './pages/personalBook.jsx';
 import ScrollToTopButton from './components/ScrollToTopButton.jsx';
 import Laminas from './pages/Laminas.jsx';
-import FooterNavbar from './components/FooterNavbar.jsx';
+import Footer from './components/Footer.jsx';
 import Envio from './components/Envio.jsx';
 import Contact from './components/contact/ContactSection.jsx'
 import './LandingPage.css';
@@ -42,10 +39,7 @@ const LandingPage = () => {
           <Route path="*" element={<Home />} /> {/* Ruta por defecto */}
         </Routes>
         <Envio />
-        <FooterNavbar />
-        <footer>
-          <p>Copyright © {new Date().getFullYear()} Analia Carlomagno</p>
-        </footer>
+        <Footer />
       </div>
     </BrowserRouter>
   );

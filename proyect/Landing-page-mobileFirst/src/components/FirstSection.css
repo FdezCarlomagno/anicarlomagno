@@ -74,10 +74,12 @@
 
 /* ---- Texto ---- */
 .about-text {
+    position: relative;
     max-width: 34rem;
     margin: 0 auto;
     padding-top: 12px;
 }
+
 
 .about-eyebrow {
     margin-bottom: 8px;
@@ -199,4 +201,37 @@
     .is-reverse .about-media { order: 2; }
 
     .about-body { font-size: 18px; }
+}
+
+/* Desktop ancho: foto y texto ocupan todo el ancho, con margen lateral. */
+@media (min-width: 1100px) {
+    .about {
+        max-width: none;
+        gap: 0;
+        padding: 64px 0 56px;
+    }
+
+    .about-block,
+    .about-block.is-reverse {
+        grid-template-columns: minmax(300px, 25vw) minmax(0, 1fr);
+        justify-content: stretch;
+        gap: clamp(56px, 7vw, 140px);
+        padding: 24px clamp(32px, 7vw, 160px);
+    }
+
+    .about-block.is-reverse {
+        grid-template-columns: minmax(0, 1fr) minmax(360px, 32vw);
+        padding: 72px clamp(32px, 7vw, 160px);
+    }
+
+    .about-block.is-tinted {
+        margin-top: 56px;
+        border-radius: 0;
+    }
+
+
+    .about-text { max-width: 44rem; }
+
+    .about-title { font-size: clamp(64px, 6vw, 96px); margin-bottom: 24px; }
+    .about-body { font-size: 20px; gap: 18px; }
 }
