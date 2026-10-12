@@ -67,3 +67,9 @@ Status: accepted; implemented
 Context: La pagina usaba iconos tipo emoji, tarjetas con degradado repetidas (numeros, estilo, trayectoria) y un "Leer mas" que ocultaba la historia.
 Decision: Apertura asimetrica (nombre en script + cita + retrato), numeros como tipografia entre filetes, "Mi estilo" y "Mi trayectoria" como listas con titulo a la izquierda, historia siempre visible alternando foto y texto, cierre con CTA a obras en stock y obra personalizada. Se eliminan los SVG-icono de las estadisticas y aboutMe.css. El padding de .titleBg que aboutMe.css pisaba globalmente (afectaba a /obras-en-stock) pasa a LandingPage.css para no cambiar esa pagina.
 Consequences: Textos sin cambios (salvo tildes/puntuacion); alts reescritos tras ver las fotos.
+
+## DL-009 - Rediseno de /contacto (2026-10-12)
+Status: accepted; implemented
+Context: Formulario con etiquetas con dos puntos, sin validacion visible, toasts y reseteo del formulario incluso si el envio fallaba.
+Decision: Encabezado + tarjeta con validacion en linea, estados enviando/exito/error (los datos se conservan si falla), y lateral con WhatsApp, Instagram y mapa. La llamada a EmailJS (service, template, parametros y clave publica) no se toco.
+Consequences: Se eliminan los CSS de contact/styles. WhatsApp usa el mismo telefono del sitio con un mensaje de consulta nuevo.
