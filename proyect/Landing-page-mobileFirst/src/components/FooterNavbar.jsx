@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import SocialMedia from './SocialMedia';
 import { Link } from 'react-router-dom'
 import bookSvg from './assets/Book.svg';
@@ -14,13 +13,15 @@ const FooterNavbar = () => {
     return (
         <div className="footer-navbar">
             <SocialMedia></SocialMedia>
-            <nav className='navbar'>
-                <Link to="/"><li><Image className='svg' src={homeSvg} alt="Home svg" />INICIO</li></Link>
-                <Link to="/elegir"><li><Image className='svg' src={paintBrush} alt="Paintbrush svg" />OBRAS</li></Link>
-                <Link to="/agendas"><li><Image className='svg' src={bookSvg} alt="Book svg" />AGENDAS Y CUADERNOS</li></Link>
-                <Link to="/mi-libro"><li><Image className='svg' src={Eye} alt="Eye svg" />LIBROS</li></Link>
-                <Link to="/laminas"><li><Image className='svg' src={Printer} alt="Printer svg" />LÁMINAS</li></Link>
-                <Link to="/sobre-mi"><li><Image className='svg' src={diamondSvg} alt="Diamond svg" />SOBRE MI</li></Link>
+            <nav className='navbar' aria-label='Secundaria'>
+              <ul>
+                <li><Link to="/"><Image className='svg' src={homeSvg} alt="" />INICIO</Link></li>
+                <li><Link to="/elegir"><Image className='svg' src={paintBrush} alt="" />OBRAS</Link></li>
+                <li><Link to="/agendas"><Image className='svg' src={bookSvg} alt="" />AGENDAS Y CUADERNOS</Link></li>
+                <li><Link to="/mi-libro"><Image className='svg' src={Eye} alt="" />LIBROS</Link></li>
+                <li><Link to="/laminas"><Image className='svg' src={Printer} alt="" />LÁMINAS</Link></li>
+                <li><Link to="/sobre-mi"><Image className='svg' src={diamondSvg} alt="" />SOBRE MI</Link></li>
+              </ul>
             </nav>
         </div>
     )

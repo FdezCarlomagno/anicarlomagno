@@ -1,0 +1,246 @@
+/* NavBar — mobile first. Menú a pantalla completa en mobile, links en fila en desktop. */
+
+.navBar {
+    --nav-h: 56px;
+    --nav-ink: #111;
+    --nav-accent: blueviolet;
+    --nav-bg: rgb(240, 248, 255);
+    --nav-ease: cubic-bezier(0.32, 0.72, 0, 1);
+    height: var(--nav-h);
+    position: sticky;
+    top: 0;
+    z-index: 100000; /* por encima de los botones flotantes (WhatsApp, volver arriba) */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(240, 248, 255, 0.836);
+}
+
+.navLogoLink {
+    position: relative;
+    z-index: 2;
+}
+
+/* ---- Botón hamburguesa → X ---- */
+.btnDisplayMenu {
+    position: relative;
+    z-index: 2;
+    width: 48px;
+    height: 48px;
+    margin-right: 12px;
+    display: grid;
+    place-items: center;
+    border: none;
+    background: transparent;
+    color: var(--nav-ink);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.btnDisplayMenu:focus-visible,
+.navMenuList a:focus-visible {
+    outline: 3px solid var(--nav-accent);
+    outline-offset: 2px;
+    border-radius: 8px;
+}
+
+.burger {
+    position: relative;
+    width: 24px;
+    height: 24px;
+}
+
+.burger span {
+    position: absolute;
+    left: 2px;
+    right: 2px;
+    height: 2px;
+    border-radius: 2px;
+    background: currentColor;
+    transition: transform 0.4s var(--nav-ease), top 0.4s var(--nav-ease);
+}
+
+.burger span:nth-child(1) { top: 8px; }
+.burger span:nth-child(2) { top: 14px; }
+
+.btnDisplayMenu.isOpen .burger span:nth-child(1) { top: 11px; transform: rotate(45deg); }
+.btnDisplayMenu.isOpen .burger span:nth-child(2) { top: 11px; transform: rotate(-45deg); }
+
+/* ---- Overlay a pantalla completa ---- */
+.navMenu {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    height: 100vh;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: calc(var(--nav-h) + 24px) 28px max(28px, env(safe-area-inset-bottom));
+    background:
+        radial-gradient(120% 60% at 100% 0%, rgba(138, 43, 226, 0.18), transparent 60%),
+        var(--nav-bg);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-12px);
+    transition:
+        opacity 0.35s var(--nav-ease),
+        transform 0.45s var(--nav-ease),
+        visibility 0s linear 0.45s;
+}
+
+.navMenu.isOpen {
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+    transition-delay: 0s;
+}
+
+.navMenuList {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.navMenuList li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.4s ease, transform 0.5s var(--nav-ease);
+}
+
+.navMenu.isOpen .navMenuList li {
+    opacity: 1;
+    transform: none;
+    transition-delay: calc(80ms + var(--i) * 45ms);
+}
+
+.navMenuList a {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-height: 56px;
+    color: var(--nav-ink);
+}
+
+.navMenuList a:active {
+    color: var(--nav-accent);
+}
+
+.navMenuNum {
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    color: var(--nav-accent);
+    min-width: 22px;
+}
+
+.navMenuLabel {
+    flex: 1;
+    font-size: clamp(18px, 5vw, 22px);
+    font-weight: 500;
+    line-height: 1.25;
+}
+
+.navMenuList .navMenuIcon {
+    width: 24px;
+    height: 24px;
+    margin: 0;
+    opacity: 0.55;
+}
+
+.navMenuFoot {
+    margin-top: 24px;
+    font-family: "Dancing Script", cursive;
+    font-size: 18px;
+    color: var(--nav-accent);
+    text-align: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .navMenu,
+    .navMenuList li,
+    .burger span {
+        transition-duration: 0.01ms !important;
+        transition-delay: 0s !important;
+    }
+}
+
+/* ---- Desktop: links en línea ---- */
+@media (min-width: 768px) {
+    .navBar {
+        --nav-h: 70px;
+        padding: 12px;
+    }
+
+    .navBar h1 {
+        font-size: 24px;
+    }
+
+    .navBar h2 {
+        font-size: 16px;
+    }
+
+    .btnDisplayMenu {
+        display: none;
+    }
+
+    .navMenu {
+        position: static;
+        inset: auto;
+        height: auto;
+        padding: 0;
+        margin-right: 24px;
+        flex-direction: row;
+        background: none;
+        overflow: visible;
+        visibility: visible;
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .navMenuList {
+        flex-direction: row;
+        gap: 24px;
+    }
+
+    .navMenuList li {
+        border: 0;
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .navMenuList a {
+        min-height: 0;
+        gap: 0;
+        font-size: 14px;
+        transition: color 100ms ease-in-out;
+    }
+
+    .navMenuList a:hover {
+        color: var(--nav-accent);
+    }
+
+    .navMenuNum,
+    .navMenuFoot {
+        display: none;
+    }
+
+    .navMenuLabel {
+        flex: none;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 0;
+        order: 2;
+    }
+
+    .navMenuList .navMenuIcon {
+        width: 20px;
+        height: 20px;
+        margin-right: 6px;
+        opacity: 1;
+    }
+}

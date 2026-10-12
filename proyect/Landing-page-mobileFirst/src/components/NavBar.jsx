@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import bookSvg from './assets/Book.svg';
 import diamondSvg from './assets/Diamond.svg';
@@ -7,26 +7,59 @@ import paintBrush from './assets/PaintBrush.svg';
 import Eye from './assets/Eye.svg';
 import Printer from './assets/Printer.svg';
 import { motion } from 'framer-motion';
-import toast, { Toaster } from 'react-hot-toast';
+import { Toaster } from 'react-hot-toast';
 import contactSvg from './assets/contact.svg'
 import { Image } from '@unpic/react'
+import './NavBar.css';
 
+const LINKS = [
+  { to: '/', label: 'Inicio', icon: homeSvg },
+  { to: '/elegir', label: 'Obras', icon: paintBrush },
+  { to: '/agendas', label: 'Agendas y cuadernos', icon: bookSvg },
+  { to: '/mi-libro', label: 'Libros', icon: Eye },
+  { to: '/laminas', label: 'Láminas', icon: Printer },
+  { to: '/sobre-mi', label: 'Sobre mí', icon: diamondSvg },
+  { to: '/contacto', label: 'Contacto', icon: contactSvg },
+];
 
 const NavBar = () => {
   const [menu, setMenu] = useState(false);
+  const toggleRef = useRef(null);
+  const firstLinkRef = useRef(null);
 
-  const toggleMenu = () => {
-    setMenu(!menu);
-  };
+  const closeMenu = () => setMenu(false);
 
-  const handleLink = () => {
-    setMenu(false);
-  };
+  // Mientras el menú está abierto: bloquea el scroll, cierra con Escape
+  // y devuelve el foco al botón al cerrar.
+  useEffect(() => {
+    if (!menu) return undefined;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    firstLinkRef.current?.focus();
+
+    const onKey = (e) => {
+      if (e.key === 'Escape') {
+        setMenu(false);
+        toggleRef.current?.focus();
+      }
+    };
+    // Si se agranda la ventana hasta desktop, el overlay deja de existir.
+    const mq = window.matchMedia('(min-width: 768px)');
+    const onMq = (e) => { if (e.matches) setMenu(false); };
+
+    document.addEventListener('keydown', onKey);
+    mq.addEventListener('change', onMq);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      document.removeEventListener('keydown', onKey);
+      mq.removeEventListener('change', onMq);
+    };
+  }, [menu]);
 
   return (
-    <nav className='navBar'>
+    <nav className='navBar' aria-label='Principal'>
       <Toaster/>
-      <Link to='/'>
+      <Link to='/' className='navLogoLink' onClick={closeMenu}>
         <div className="navLogo">
           <div className='contH1Nav'>
             <motion.h1
@@ -42,28 +75,39 @@ const NavBar = () => {
           >artista plástica</motion.h2>
         </div>
       </Link>
-      <button className='btnDisplayMenu' onClick={toggleMenu}>☰</button>
-      <motion.div
-        className={menu ? 'displayMenu' : 'closedMenu'}
-        initial={{ opacity: 0, height: 0 }}
-        animate={menu ? { opacity: 1, height: 'auto' } : { opacity: 1, height: 20}}
-        transition={{ duration: 0.5 }}
+
+      <button
+        ref={toggleRef}
+        type='button'
+        className={`btnDisplayMenu${menu ? ' isOpen' : ''}`}
+        onClick={() => setMenu((m) => !m)}
+        aria-expanded={menu}
+        aria-controls='nav-menu'
+        aria-label={menu ? 'Cerrar menú' : 'Abrir menú'}
       >
-        <motion.ul
-          className={menu ? 'openMenu' : 'closedMenu'}
-          initial={{ opacity: 0, height: 0 }}
-          animate={menu ? { opacity: 1, height: 'auto' } : { opacity: 1, height: 20}}
-          transition={{ duration: 0.5 }}
-        >
-          <Link onClick={handleLink} to="/"><motion.li><Image className='svg' src={homeSvg} alt="Home svg"/>Inicio</motion.li></Link>
-          <Link onClick={handleLink} to="/elegir"><motion.li><Image className='svg' src={paintBrush} alt="Paintbrush svg"/>Obras</motion.li></Link>
-          <Link onClick={handleLink} to="/agendas"><motion.li><Image className='svg' src={bookSvg} alt="Book svg"/>Agendas y cuadernos</motion.li></Link>
-          <Link onClick={handleLink} to="/mi-libro"><motion.li><Image className='svg' src={Eye} alt="Eye svg"/>Libros</motion.li></Link>
-          <Link onClick={handleLink} to="/laminas"><motion.li><Image className='svg' src={Printer} alt="Printer svg"/>Láminas</motion.li></Link>
-          <Link onClick={handleLink} to="/sobre-mi"><motion.li><Image className='svg' src={diamondSvg} alt="Diamond svg"/>Sobre mí</motion.li></Link>
-          <Link onClick={handleLink} to="/contacto"><motion.li><Image className='svg' src={contactSvg} alt="Diamond svg"/>Contacto</motion.li></Link>
-        </motion.ul>
-      </motion.div>
+        <span className='burger' aria-hidden='true'>
+          <span /><span />
+        </span>
+      </button>
+
+      <div id='nav-menu' className={`navMenu${menu ? ' isOpen' : ''}`}>
+        <ul className='navMenuList'>
+          {LINKS.map(({ to, label, icon }, i) => (
+            <li key={to} style={{ '--i': i }}>
+              <Link
+                to={to}
+                onClick={closeMenu}
+                ref={i === 0 ? firstLinkRef : undefined}
+              >
+                <span className='navMenuNum' aria-hidden='true'>{String(i + 1).padStart(2, '0')}</span>
+                <span className='navMenuLabel'>{label}</span>
+                <Image className='svg navMenuIcon' src={icon} alt='' width={24} height={24} />
+              </Link>
+            </li>
+          ))}
+        </ul>
+        <p className='navMenuFoot'>anicarlomagno · artista plástica</p>
+      </div>
     </nav>
   );
 }
