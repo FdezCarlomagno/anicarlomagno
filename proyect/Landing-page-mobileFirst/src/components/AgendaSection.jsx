@@ -9,7 +9,7 @@ import agenda6 from './imgs/agenda6.jpg';
 import agenda7 from './imgs/agenda7.jpg';
 import agenda8 from './imgs/agenda8.jpg';
 import { Link } from 'react-router-dom';
-import { Image } from "@unpic/react";
+import ArtworkImage from "./ArtworkImage.jsx";
 import agendaAlts from './agendaAlts.js';
 
 const Agenda = ({ source, imgNumber, agendaName, index }) => {
@@ -25,7 +25,7 @@ const Agenda = ({ source, imgNumber, agendaName, index }) => {
                 animate={isInView ? { opacity: 1, scale: 1 } : {}} // Animate to this state when in view
                 transition={{ duration: 0.5, delay: index * 0.1 }} // Staggered delay based on index
             >
-                <Image src={source} className={`imgAgenda${imgNumber}`} alt={agendaName} />
+                <ArtworkImage src={source} className={`imgAgenda${imgNumber}`} alt={agendaName} sizes="145px" />
             </motion.article>
         </Link>
     );
