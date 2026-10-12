@@ -11,7 +11,7 @@ function Home() {
 
   return (
     <>
-      <main>
+      <main id="main">
         <header>
           <Hero />
         </header>

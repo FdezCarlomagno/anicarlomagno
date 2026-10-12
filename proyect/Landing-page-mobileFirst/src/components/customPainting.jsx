@@ -164,7 +164,7 @@ const CustomPainting = () => {
     });
 
     return (
-        <main className="cp">
+        <main id="main" className="cp">
             <header className="cp-head">
                 <p className="cp-eyebrow">Obra personalizada</p>
                 <h1 className="cp-title">Pedí tu obra</h1>

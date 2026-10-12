@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types -- el proyecto no usa prop-types */
+ 
 import { Link } from 'react-router-dom';
 import { motion, useReducedMotion } from 'framer-motion';
 import almaImg from '../pages/pagesStyles/paintingsImgs/nuevosCuadros/ALMA.jpg';
@@ -37,7 +37,7 @@ const ChooseForm = () => {
     });
 
     return (
-        <main className="choose">
+        <main id="main" className="choose">
             <motion.header className="choose-head" {...reveal()}>
                 <p className="choose-eyebrow">Obras</p>
                 <h1 className="choose-title">¿Qué estás buscando?</h1>

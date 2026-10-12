@@ -31,7 +31,8 @@
     color: var(--nav-ink);
 }
 
-.navLogo h1 {
+.navLogo-name {
+    display: block;
     font-family: "Dancing Script", cursive;
     font-size: 24px;
     font-weight: 700;
@@ -40,7 +41,8 @@
     transition: color 0.25s ease;
 }
 
-.navLogo h2 {
+.navLogo-tag {
+    display: block;
     font-family: "Raleway", sans-serif;
     font-size: 9.5px;
     font-weight: 600;
@@ -50,7 +52,8 @@
     padding-left: 2px;
 }
 
-.navLogoLink:hover .navLogo h1 { color: var(--nav-accent); }
+.navLogoLink:hover .navLogo-name {
+    display: block; color: var(--nav-accent); }
 
 .navLogoLink:focus-visible {
     outline: 3px solid var(--nav-accent);
@@ -228,8 +231,10 @@
 
     .navLogoLink { margin-left: 0; }
 
-    .navLogo h1 { font-size: 30px; }
-    .navLogo h2 { font-size: 10px; }
+    .navLogo-name {
+    display: block; font-size: 30px; }
+    .navLogo-tag {
+    display: block; font-size: 10px; }
 
     .btnDisplayMenu {
         display: none;

@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types -- el proyecto no usa prop-types */
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useReducedMotion } from 'framer-motion';
 import portrait from '../components/imgs/aniHeader2.jpg';
@@ -56,14 +56,9 @@ const AboutMe = () => {
             transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] },
         };
 
-    useEffect(() => {
-        const previous = document.title;
-        document.title = 'Sobre mí | Ani Carlomagno';
-        return () => { document.title = previous; };
-    }, []);
 
     return (
-        <main className="ab">
+        <main id="main" className="ab">
             <section className="ab-hero" aria-labelledby="ab-name">
                 <div className="ab-hero-text">
                     <p className="ab-eyebrow">Sobre mí</p>

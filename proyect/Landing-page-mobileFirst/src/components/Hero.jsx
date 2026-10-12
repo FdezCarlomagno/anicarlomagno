@@ -1,24 +1,39 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useReducedMotion } from 'framer-motion';
 import { Image } from '@unpic/react';
-import poster from './imgs/aniHeader.jpg';
+// El poster vive en /public para poder pedirlo desde el HTML (preload) y mejorar el LCP.
+const poster = '/hero.jpg';
 import video from './assets/wspVideo-header.mp4';
 import paintBrush from './assets/WhitePaintBrush.svg';
 import './Hero.css';
 
-// Sin video para quien pide menos movimiento o ahorra datos: queda el poster.
+// Sin video para quien pide menos movimiento, ahorra datos o está en un teléfono
+// (son ~8 MB): queda el poster. En pantallas grandes se carga recién después de la carga de la página.
 const shouldSkipVideo = () => {
     if (typeof window === 'undefined') return false;
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const saveData = navigator.connection?.saveData === true;
-    return reduced || saveData;
+    const small = window.matchMedia('(max-width: 767px)').matches;
+    return reduced || saveData || small;
 };
 
 const Hero = () => {
     const reduceMotion = useReducedMotion();
-    const [playVideo] = useState(() => !shouldSkipVideo());
+    const [allowVideo] = useState(() => !shouldSkipVideo());
+    const [playVideo, setPlayVideo] = useState(false);
     const [videoReady, setVideoReady] = useState(false);
+
+    useEffect(() => {
+        if (!allowVideo) return undefined;
+        const start = () => setPlayVideo(true);
+        if (document.readyState === 'complete') {
+            const t = setTimeout(start, 300);
+            return () => clearTimeout(t);
+        }
+        window.addEventListener('load', start, { once: true });
+        return () => window.removeEventListener('load', start);
+    }, [allowVideo]);
 
     const reveal = (delay) => ({
         initial: reduceMotion ? false : { opacity: 0, y: 24 },
@@ -33,8 +48,8 @@ const Hero = () => {
                     className="hero-poster"
                     src={poster}
                     alt=""
-                    width="1200"
-                    height="800"
+                    width="1440"
+                    height="1795"
                     fetchPriority="high"
                 />
                 {playVideo && (
@@ -55,9 +70,9 @@ const Hero = () => {
                 <motion.p className="hero-eyebrow" {...reveal(0.1)}>
                     Artista plástica · Tandil
                 </motion.p>
-                <motion.h2 id="hero-title" className="hero-title" {...reveal(0.2)}>
+                <motion.h1 id="hero-title" className="hero-title" {...reveal(0.2)}>
                     Arte <em>pintado a mano</em>, agendas y láminas hechas en Tandil
-                </motion.h2>
+                </motion.h1>
                 <motion.div className="hero-actions" {...reveal(0.35)}>
                     <Link to="/obras-en-stock" className="hero-btn hero-btn--primary">
                         Ver mis obras

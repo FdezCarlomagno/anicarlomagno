@@ -1,5 +1,5 @@
-/* eslint-disable react/prop-types -- el proyecto no usa prop-types */
-import { useEffect, useMemo, useState } from 'react';
+ 
+import { useMemo, useState } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import cuadros from '../objects/newPaintings.jsx';
 import './Laminas.css';
@@ -22,11 +22,6 @@ const Laminas = () => {
     const [selected, setSelected] = useState(null);
     const [visible, setVisible] = useState(PAGE);
 
-    useEffect(() => {
-        const previous = document.title;
-        document.title = 'Láminas | Ani Carlomagno';
-        return () => { document.title = previous; };
-    }, []);
 
     const results = useMemo(() => {
         const q = normalize(query.trim());
@@ -46,7 +41,7 @@ const Laminas = () => {
     };
 
     return (
-        <main className="lm">
+        <main id="main" className="lm">
             <section className="lm-hero" aria-labelledby="lm-title">
                 <p className="lm-eyebrow">Impresas en papel fotográfico</p>
                 <h1 id="lm-title" className="lm-title">Láminas</h1>
@@ -101,7 +96,7 @@ const Laminas = () => {
                                         onClick={() => toggle(c)}
                                     >
                                         <span className="lm-mat">
-                                            <img src={c.src} alt={c.title} loading="lazy" decoding="async" />
+                                            <img src={c.src} alt="" loading="lazy" decoding="async" />
                                         </span>
                                         <span className="lm-name">{c.title}</span>
                                         <span className="lm-check" aria-hidden="true">

@@ -7,7 +7,6 @@ import paintBrush from './assets/PaintBrush.svg';
 import Eye from './assets/Eye.svg';
 import Printer from './assets/Printer.svg';
 import { motion } from 'framer-motion';
-import { Toaster } from 'react-hot-toast';
 import contactSvg from './assets/contact.svg'
 import { Image } from '@unpic/react'
 import './NavBar.css';
@@ -71,19 +70,20 @@ const NavBar = () => {
 
   return (
     <nav className={`navBar${scrolled ? ' is-scrolled' : ''}`} aria-label='Principal'>
-      <Toaster/>
-      <Link to='/' className='navLogoLink' onClick={closeMenu} aria-label='anicarlomagno, artista plástica — Inicio'>
+      <Link to='/' className='navLogoLink' onClick={closeMenu} aria-label='anicarlomagno artista plástica, ir al inicio'>
         <div className="navLogo">
-          <motion.h1
+          <motion.span
+            className="navLogo-name"
             initial={{ opacity: 0, y: -8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-          >anicarlomagno</motion.h1>
-          <motion.h2
+          >anicarlomagno</motion.span>{' '}
+          <motion.span
+            className="navLogo-tag"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-          >artista plástica</motion.h2>
+          >artista plástica</motion.span>
         </div>
       </Link>
 

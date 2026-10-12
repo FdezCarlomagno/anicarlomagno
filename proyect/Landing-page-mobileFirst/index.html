@@ -1,82 +1,89 @@
 <!DOCTYPE html>
-<html lang="es" translate="no">
+<html lang="es-AR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-  <meta name="google" content="notranslate">
-  <meta http-equiv="Content-Language" content="es">
+  <!-- Sin user-scalable=no: se permite el zoom (accesibilidad) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-  <!-- Preconexiones optimizadas -->
+  <!-- Conexiones tempranas a Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  
-  <!-- Fuentes combinadas en un solo request -->
-  <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Dancing+Script:wght@400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-  <!-- Meta tags SEO -->
-  <title>Analía Carlomagno | Artista Plástica Argentina</title>
-  <meta name="description" content="Sitio oficial de Analía Carlomagno, artista plástica argentina. Explora su obra: pinturas, esculturas y exposiciones internacionales.">
-  <meta name="keywords" content="Analía Carlomagno, artista plástica, arte contemporáneo, pinturas, esculturas, exposiciones de arte, arte argentino">
+  <!-- Imagen principal de la home (LCP): se pide desde el HTML, sin esperar al JavaScript. Solo en "/" -->
+  <script>
+    if (location.pathname === '/') {
+      var l = document.createElement('link');
+      l.rel = 'preload'; l.as = 'image'; l.href = '/hero.jpg'; l.setAttribute('fetchpriority', 'high');
+      document.head.appendChild(l);
+    }
+  </script>
+
+  <!-- Solo las familias y pesos que se usan (Dancing Script y Raleway). Carga sin bloquear el render. -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Raleway:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Raleway:wght@400;500;600;700;800&display=swap"></noscript>
+
+  <!-- SEO base. Por ruta, title/description/canonical se actualizan en src/seo/RouteMeta.jsx -->
+  <title>Ani Carlomagno | Artista plástica en Tandil</title>
+  <meta name="description" content="Obras pintadas a mano, agendas, cuadernos y láminas de Analía Carlomagno, artista plástica argentina. Pedidos por WhatsApp y envíos a todo el país.">
   <meta name="author" content="Analía Carlomagno">
   <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="canonical" href="https://anicarlomagno.vercel.app/">
 
-  <!-- Open Graph / Facebook -->
+  <!-- Open Graph -->
   <meta property="og:site_name" content="Ani Carlomagno">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://anicarlomagno.vercel.app/">
-  <meta property="og:title" content="Analía Carlomagno | Artista Plástica Argentina">
-  <meta property="og:description" content="Explora el universo artístico de Analía Carlomagno. Obras únicas, pinturas, esculturas y exposiciones destacadas.">
-  <meta property="og:image" content="https://anicarlomagno.vercel.app/images/og-image.jpg">
-  <meta property="og:locale" content="es_ES">
+  <meta property="og:title" content="Ani Carlomagno | Artista plástica en Tandil">
+  <meta property="og:description" content="Obras pintadas a mano, agendas, cuadernos y láminas de Analía Carlomagno, artista plástica argentina.">
+  <meta property="og:image" content="https://anicarlomagno.vercel.app/hero.jpg">
+  <meta property="og:image:width" content="1440">
+  <meta property="og:image:height" content="1795">
+  <meta property="og:image:alt" content="Retrato de Analía Carlomagno, artista plástica, sonriendo sobre un fondo rojo con destellos">
+  <meta property="og:locale" content="es_AR">
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Analía Carlomagno | Artista Plástica Argentina">
-  <meta name="twitter:description" content="Descubre la obra artística de Analía Carlomagno: pinturas, esculturas y exposiciones en Argentina y el mundo.">
-  <meta name="twitter:image" content="https://anicarlomagno.vercel.app/images/twitter-image.jpg">
-  <meta name="twitter:site" content="@anicarlomagno">
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Ani Carlomagno | Artista plástica en Tandil">
+  <meta name="twitter:description" content="Obras pintadas a mano, agendas, cuadernos y láminas de Analía Carlomagno.">
+  <meta name="twitter:image" content="https://anicarlomagno.vercel.app/hero.jpg">
 
-  <!-- Theme Color -->
-  <meta name="theme-color" content="#ffffff">
-
-  <!-- Canonical URL -->
-  <link rel="canonical" href="https://anicarlomagno.vercel.app/">
-
-  <!-- Schema.org JSON-LD: nombre del sitio (Google lo usa en lugar de "Vercel" en los resultados) -->
+  <!-- Datos estructurados: nombre del sitio (Google lo usa en lugar de "Vercel") -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Ani Carlomagno",
     "alternateName": ["anicarlomagno", "Analía Carlomagno"],
-    "url": "https://anicarlomagno.vercel.app/"
+    "url": "https://anicarlomagno.vercel.app/",
+    "inLanguage": "es-AR"
   }
   </script>
 
-  <!-- Schema.org JSON-LD: Perfil de artista -->
+  <!-- Datos estructurados: la artista -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Analía Carlomagno",
-    "alternateName": "Analia Carlomagno",
-    "jobTitle": "Artista Plástica",
-    "description": "Artista plástica argentina reconocida por sus pinturas, esculturas y exposiciones de arte contemporáneo.",
+    "alternateName": ["Analia Carlomagno", "Ani Carlomagno"],
+    "jobTitle": "Artista plástica",
+    "description": "Artista plástica argentina y docente. Pinta a mano obras, agendas, cuadernos y láminas.",
     "url": "https://anicarlomagno.vercel.app/",
-    "image": "https://anicarlomagno.vercel.app/images/og-image.jpg",
-    "sameAs": [
-      "https://www.instagram.com/anicarlomagno",
-      "https://www.facebook.com/anicarlomagno",
-      "https://twitter.com/anicarlomagno"
-    ],
-    "nationality": "Argentina"
+    "image": "https://anicarlomagno.vercel.app/hero.jpg",
+    "sameAs": ["https://www.instagram.com/anicarlomagno_painting/"],
+    "nationality": "Argentina",
+    "address": { "@type": "PostalAddress", "addressLocality": "Tandil", "addressRegion": "Buenos Aires", "addressCountry": "AR" }
   }
   </script>
 </head>
 
-<body class="no-translate">
-  <div id="root" role="main" aria-label="Sitio oficial de la artista plástica Analía Carlomagno"></div>
+<body>
+  <div id="root"></div>
+  <noscript>Este sitio necesita JavaScript para funcionar. Podés escribirle a Ani por WhatsApp o Instagram (@anicarlomagno_painting).</noscript>
   <script type="module" src="/src/main.jsx"></script>
 </body>
 </html>

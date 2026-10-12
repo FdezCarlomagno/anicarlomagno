@@ -1,7 +1,6 @@
 
 import url4 from '../objects/intAgendas/intAgenda4.jpeg'
 import Agenda9 from '../objects/intAgendas/intAgenda9.jpeg'
-import Agenda10 from '../objects/intAgendas/intAgenda10.jpeg'
 import Agenda16 from '../objects/intAgendas/intAgenda16.jpeg'
 import Agenda17 from '../objects/intAgendas/intAgenda17.jpeg'
 import Agenda18 from '../objects/intAgendas/intAgenda18.jpeg'

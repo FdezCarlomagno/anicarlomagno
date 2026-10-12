@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import ContactForm from './ContactForm';
 import GoogleMap from './GoogleMap';
 import './Contact.css';
@@ -7,14 +6,9 @@ const WHATSAPP_URL = `https://api.whatsapp.com/send?phone=542494245966&text=${en
 const INSTAGRAM_URL = 'https://www.instagram.com/anicarlomagno_painting/';
 
 const ContactSection = () => {
-  useEffect(() => {
-    const previous = document.title;
-    document.title = 'Contacto | Ani Carlomagno';
-    return () => { document.title = previous; };
-  }, []);
 
   return (
-    <main className="ct">
+    <main id="main" className="ct">
       <header className="ct-head">
         <p className="ct-eyebrow">Contacto</p>
         <h1 className="ct-title">Hablemos</h1>

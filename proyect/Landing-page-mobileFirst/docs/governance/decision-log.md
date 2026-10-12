@@ -73,3 +73,9 @@ Status: accepted; implemented
 Context: Formulario con etiquetas con dos puntos, sin validacion visible, toasts y reseteo del formulario incluso si el envio fallaba.
 Decision: Encabezado + tarjeta con validacion en linea, estados enviando/exito/error (los datos se conservan si falla), y lateral con WhatsApp, Instagram y mapa. La llamada a EmailJS (service, template, parametros y clave publica) no se toco.
 Consequences: Se eliminan los CSS de contact/styles. WhatsApp usa el mismo telefono del sitio con un mensaje de consulta nuevo.
+
+## DL-010 - Performance, SEO y accesibilidad globales (2026-10-12)
+Status: accepted; implemented
+Context: Lighthouse movil de base en la home: performance 68, accesibilidad 89, SEO 85 (viewport con user-scalable=no, sin robots.txt, og:image inexistente, sin h1 en la home, WhatsApp flotante no operable con teclado).
+Decision: index.html limpio (zoom permitido, es-AR, fuentes recortadas y sin bloquear el render, preload del hero, JSON-LD verificado, sin redes no confirmadas); RouteMeta con title/description/canonical/OG por ruta y noindex en rutas desconocidas; robots.txt y sitemap.xml; rutas con React.lazy; skip link, h1 real en la home, logo del navbar sin h1/h2, WhatsApp y volver arriba como controles accesibles, anuncio de cambio de ruta; video del hero solo en pantallas >= 768 px y despues del load; Envio y Footer dentro del Suspense (CLS). Imagenes: copias web en src/optimized generadas con scripts/optimize-images.py (los originales no se tocan) y un plugin de Vite que redirige los imports.
+Consequences: Se elimina codigo muerto (PaintingInfo, spinner, Toaster del navbar). Si se agregan imagenes grandes, volver a correr el script.

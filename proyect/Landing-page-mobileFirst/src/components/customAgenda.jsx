@@ -211,11 +211,6 @@ const CustomAgenda = () => {
     const cardRef = useRef(null);
     const shown = useRef(`${draft ? draft.step : 0}-false`);
 
-    useEffect(() => {
-        const previous = document.title;
-        document.title = 'Armá tu agenda o cuaderno | Ani Carlomagno';
-        return () => { document.title = previous; };
-    }, []);
 
     useEffect(() => {
         if (!done) writeDraft({ data, step });
@@ -330,7 +325,7 @@ const CustomAgenda = () => {
     const showMobilePreview = !done && (step === 2 || step === 3);
 
     return (
-        <main className="ca">
+        <main id="main" className="ca">
             <header className="ca-head">
                 <p className="ca-eyebrow">Agenda personalizada</p>
                 <h1 className="ca-title">Armá tu agenda o cuaderno</h1>

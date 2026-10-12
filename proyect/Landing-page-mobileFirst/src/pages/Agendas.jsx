@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types -- el proyecto no usa prop-types */
-import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useReducedMotion } from 'framer-motion';
 import PaintingSlider from '../components/paintingsSlider.jsx';
@@ -66,11 +65,6 @@ const Icon = ({ children }) => (
 const Agendas = () => {
     const reduce = useReducedMotion();
 
-    useEffect(() => {
-        const previous = document.title;
-        document.title = 'Agendas y cuadernos | Ani Carlomagno';
-        return () => { document.title = previous; };
-    }, []);
 
     const reveal = reduce
         ? {}
@@ -82,7 +76,7 @@ const Agendas = () => {
         };
 
     return (
-        <main className="ag">
+        <main id="main" className="ag">
             <section className="ag-hero" aria-labelledby="ag-title">
                 <div className="ag-hero-text">
                     <p className="ag-eyebrow">Hechas a mano, una por una</p>

@@ -96,7 +96,7 @@ const Paintings = () => {
     const hasActive = JSON.stringify(filters) !== JSON.stringify(DEFAULT_FILTERS);
 
     return (
-        <main className="paintings">
+        <main id="main" className="paintings">
             <div className="titleBg">
                 <h1 className='myPaintingsTitle'>Obras en stock</h1>
             </div>

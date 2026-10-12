@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import '../LandingPage.css';
 import { useLocation } from 'react-router-dom';
 
@@ -8,8 +8,9 @@ const ScrollToTopButton = () => {
     const location = useLocation();
 
     useEffect(() => {
-        window.scrollTo(0, 0);
-    }, [location]);
+        if (!location.hash) window.scrollTo(0, 0);
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- solo al cambiar de ruta, no al ir a un #ancla
+    }, [location.pathname]);
 
     const handleScroll = () => {
         if (window.scrollY > window.innerHeight / 2) {
@@ -37,9 +38,9 @@ const ScrollToTopButton = () => {
 
     return (
         showButton && (
-            <button onClick={scrollToTop} className="scrollToTopBtn">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 my-icon">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+            <button type="button" onClick={scrollToTop} className="scrollToTopBtn" aria-label="Volver arriba">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6 my-icon" aria-hidden="true" focusable="false">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
                 </svg>
             </button>
         )

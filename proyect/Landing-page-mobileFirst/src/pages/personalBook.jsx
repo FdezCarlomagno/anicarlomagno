@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types -- el proyecto no usa prop-types */
-import { useEffect } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 import PaintingSlider from '../components/paintingsSlider';
 import imgs_Libro_Colorear from '../objects/libro-colorear.jsx';
@@ -87,14 +86,9 @@ const PersonalBook = () => {
             transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] },
         };
 
-    useEffect(() => {
-        const previous = document.title;
-        document.title = 'Libros | Ani Carlomagno';
-        return () => { document.title = previous; };
-    }, []);
 
     return (
-        <main className="pb">
+        <main id="main" className="pb">
             <section className="pb-hero" aria-labelledby="pb-title">
                 <div className="pb-hero-text">
                 <p className="pb-eyebrow">Escritos y dibujados por Ani</p>
