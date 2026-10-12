@@ -5,9 +5,9 @@
     --ag-ink: #1d1626;
     --ag-muted: #4a4256;
     --ag-ease: cubic-bezier(0.22, 1, 0.36, 1);
-    max-width: 1120px;
+    max-width: 1280px;
     margin: 0 auto;
-    padding: clamp(40px, 9vw, 96px) 0;
+    padding: clamp(32px, 4.5vw, 44px) 0;
 }
 
 /* ---- Encabezado ---- */

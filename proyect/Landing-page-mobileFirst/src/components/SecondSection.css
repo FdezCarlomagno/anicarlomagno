@@ -1,0 +1,117 @@
+/* Soñadora compulsiva — texto editorial en dos columnas + banner de promos. */
+
+.dream {
+    --dr-accent: blueviolet;
+    --dr-ink: #1d1626;
+    --dr-muted: #4a4256;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: clamp(32px, 4.5vw, 44px) 24px 56px;
+}
+
+.dream-grid {
+    display: grid;
+    gap: 24px;
+}
+
+.dream-eyebrow {
+    margin-bottom: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--dr-accent);
+}
+
+.dream-title {
+    margin-bottom: 16px;
+    font-family: "Dancing Script", cursive;
+    font-size: clamp(42px, 12vw, 80px);
+    font-weight: 700;
+    line-height: 1.02;
+    color: var(--dr-ink);
+}
+
+.dream-quote {
+    padding-left: 16px;
+    border-left: 3px solid var(--dr-accent);
+    font-size: clamp(19px, 5vw, 24px);
+    line-height: 1.5;
+    font-weight: 500;
+    color: var(--dr-ink);
+}
+
+.dream-body {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--dr-muted);
+}
+
+.dream span {
+    font-weight: 700;
+    color: var(--dr-accent);
+}
+
+/* ---- Promos: una línea discreta entre dos filetes ---- */
+.dream-promo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 40px;
+    padding: 20px 0;
+    border-top: 1px solid rgba(29, 22, 38, 0.2);
+    border-bottom: 1px solid rgba(29, 22, 38, 0.2);
+}
+
+.dream-promo p {
+    font-size: 17px;
+    line-height: 1.5;
+    color: var(--dr-ink);
+}
+
+.dream-promo-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 44px;
+    font-weight: 700;
+    color: var(--dr-accent);
+    transition: gap 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.dream-promo-link svg {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.dream-promo-link:hover { gap: 14px; }
+.dream-promo-link:focus-visible { outline: 3px solid var(--dr-accent); outline-offset: 4px; border-radius: 4px; }
+
+@media (min-width: 768px) {
+    .dream-grid {
+        grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+        gap: clamp(40px, 6vw, 88px);
+        align-items: center;
+    }
+
+    .dream-body { font-size: 18px; }
+
+    .dream-promo {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 32px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .dream-promo-link { transition: none; }
+}

@@ -1,0 +1,181 @@
+/* Galería de obras (home) — masonry que aprovecha el ancho en desktop. */
+
+.gal {
+    --gal-accent: blueviolet;
+    --gal-ink: #1d1626;
+    --gal-muted: #4a4256;
+    --gal-ease: cubic-bezier(0.22, 1, 0.36, 1);
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: clamp(32px, 4.5vw, 44px) 20px;
+}
+
+/* ---- Encabezado ---- */
+.gal-head {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 28px;
+    text-align: center;
+}
+
+.gal-eyebrow {
+    margin-bottom: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gal-accent);
+}
+
+.gal-title {
+    font-family: "Dancing Script", cursive;
+    font-size: clamp(44px, 12vw, 72px);
+    font-weight: 700;
+    line-height: 1.05;
+    color: var(--gal-ink);
+}
+
+.gal-sub {
+    max-width: 30rem;
+    margin: 0 auto;
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--gal-muted);
+}
+
+.gal-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 44px;
+    margin-top: 6px;
+    font-weight: 700;
+    color: var(--gal-ink);
+    border-bottom: 2px solid var(--gal-accent);
+    transition: color 0.2s ease, gap 0.3s var(--gal-ease);
+}
+
+.gal-link svg {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.gal-link:hover { color: var(--gal-accent); gap: 14px; }
+.gal-link:focus-visible { outline: 3px solid var(--gal-accent); outline-offset: 4px; }
+
+/* ---- Masonry ---- */
+.gal-grid {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.gal-col {
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.gal-col-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.gal-item a {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: 16px;
+    background: #e9e1f3;
+    box-shadow: 0 8px 22px rgba(60, 20, 120, 0.14);
+    transition: box-shadow 0.4s var(--gal-ease), transform 0.4s var(--gal-ease);
+}
+
+.gal .gal-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    transition: transform 0.7s var(--gal-ease);
+}
+
+.gal-caption {
+    position: absolute;
+    inset: auto 0 0 0;
+    padding: 36px 14px 12px;
+    background: linear-gradient(0deg, rgba(15, 5, 30, 0.8), rgba(15, 5, 30, 0));
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.25;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.3s ease, transform 0.4s var(--gal-ease);
+}
+
+@media (hover: hover) {
+    .gal-item a:hover { box-shadow: 0 18px 40px rgba(60, 20, 120, 0.3); }
+    .gal-item a:hover img { transform: scale(1.05); }
+    .gal-item a:hover .gal-caption,
+    .gal-item a:focus-visible .gal-caption { opacity: 1; transform: none; }
+}
+
+.gal-item a:focus-visible { outline: 3px solid var(--gal-accent); outline-offset: 3px; }
+
+/* ---- Indicador de carga (sentinel del scroll infinito) ---- */
+.gal-sentinel {
+    display: flex;
+    justify-content: center;
+    padding: 24px 0 8px;
+}
+
+.gal-sentinel span {
+    width: 28px;
+    height: 28px;
+    border: 3px solid rgba(138, 43, 226, 0.2);
+    border-top-color: var(--gal-accent);
+    border-radius: 50%;
+    animation: gal-spin 0.9s linear infinite;
+}
+
+@keyframes gal-spin { to { transform: rotate(360deg); } }
+
+@media (prefers-reduced-motion: reduce) {
+    .gal-item a,
+    .gal .gal-item img,
+    .gal-caption { transition: none; }
+    .gal-sentinel span { animation-duration: 3s; }
+}
+
+@media (min-width: 768px) {
+    .gal { padding-inline: 32px; }
+
+    /* Título a la izquierda, bajada y link a la derecha: usa todo el ancho. */
+    .gal-head {
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 48px;
+        margin-bottom: 40px;
+        text-align: left;
+    }
+
+    .gal-head-side { max-width: 26rem; }
+    .gal-sub { margin: 0 0 8px; }
+
+    .gal-grid { gap: 20px; }
+    .gal-col-list { gap: 20px; }
+}
+
