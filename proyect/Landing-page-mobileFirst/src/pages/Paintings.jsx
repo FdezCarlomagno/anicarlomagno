@@ -1,4 +1,5 @@
-import React, { Fragment, useMemo } from 'react';
+/* eslint-disable react/prop-types -- el proyecto no usa prop-types */
+import { Fragment, useMemo } from 'react';
 import './pagesStyles/paintings.css';
 import Cuadro from '../components/Cuadro.jsx';
 import '../components/Cuadro.css';
