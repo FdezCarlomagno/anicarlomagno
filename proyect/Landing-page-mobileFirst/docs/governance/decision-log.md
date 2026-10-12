@@ -61,3 +61,9 @@ Status: accepted; implemented
 Context: Libros usaba dos bloques repetidos con precio superpuesto en rojo y un boton COMPRAR dentro de un h2. agendas.css solo quedaba para estas paginas y aportaba el reset global `box-sizing`.
 Decision: Libros pasa a dos secciones editoriales alternadas (carrusel + texto + precio + CTA a WhatsApp) con chips de salto. Se eliminan agendas.css y personalBook.css; el reset `box-sizing: border-box` se mueve a LandingPage.css. Mensajes de WhatsApp, telefono y precios (LibrosPrice.js) sin cambios.
 Consequences: Copy en voseo ("Coloreá y convertite"). La ruta sigue siendo /mi-libro.
+
+## DL-008 - Rediseno editorial de /sobre-mi (2026-10-12)
+Status: accepted; implemented
+Context: La pagina usaba iconos tipo emoji, tarjetas con degradado repetidas (numeros, estilo, trayectoria) y un "Leer mas" que ocultaba la historia.
+Decision: Apertura asimetrica (nombre en script + cita + retrato), numeros como tipografia entre filetes, "Mi estilo" y "Mi trayectoria" como listas con titulo a la izquierda, historia siempre visible alternando foto y texto, cierre con CTA a obras en stock y obra personalizada. Se eliminan los SVG-icono de las estadisticas y aboutMe.css. El padding de .titleBg que aboutMe.css pisaba globalmente (afectaba a /obras-en-stock) pasa a LandingPage.css para no cambiar esa pagina.
+Consequences: Textos sin cambios (salvo tildes/puntuacion); alts reescritos tras ver las fotos.

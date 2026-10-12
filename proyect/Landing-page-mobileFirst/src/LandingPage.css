@@ -141,7 +141,7 @@ a {
 .titleBg {
     height: 60px;
     background: url('../src/components/imgs/BG2.jpg') no-repeat center center / cover;
-    padding: 10px;
+    padding: 38px; /* antes lo pisaba aboutMe.css */
 }
 
 .titleBg h1 {
