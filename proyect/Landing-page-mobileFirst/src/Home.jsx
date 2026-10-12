@@ -1,11 +1,10 @@
-import Slider from './components/Slider.jsx'
+import Hero from './components/Hero.jsx'
 import './LandingPage.css'
 import FirstSection from './components/FirstSection.jsx'
 import SecondSection from './components/SecondSection.jsx'
 import AgendaSection from './components/AgendaSection.jsx'
 import igSvg from './components/assets/blackInstagram.svg'
 import PaintingImgsSection from './components/paintingImgsSection.jsx'
-import { motion } from 'framer-motion';
 import { Image } from '@unpic/react'
 
 
@@ -16,11 +15,9 @@ function Home() {
     <>
       <main>
         <header>
-          <div className="imageSlider">
-            <Slider />
-          </div>
+          <Hero />
         </header>
-        <section>
+        <section id="contenido">
           <FirstSection />
           <h2 className='titleAgendas'>Agendas</h2>
           <AgendaSection />

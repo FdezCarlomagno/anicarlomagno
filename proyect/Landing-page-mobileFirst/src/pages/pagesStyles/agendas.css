@@ -771,8 +771,8 @@ legend {
     flex-direction: column;
     align-items: center;
     gap: 30px;
-    padding: 1rem;
-    margin-bottom: 2rem;
+    padding: 1rem 1rem 0;
+    margin-bottom: 0.5rem;
 }
 
 .agendaPageContainer img {

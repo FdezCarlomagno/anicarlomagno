@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import '../pages/pagesStyles/agendas.css';
 import PaintingSlider from '../components/paintingsSlider.jsx';
@@ -18,10 +17,7 @@ import { Image } from '@unpic/react'
 
 const Agendas = () => {
     const containerStyles = {
-        width: '300px',
-        height: '450px',
         margin: '0 auto',
-        marginBottom: '10%',
     };
 
     // Use useInView for the text section

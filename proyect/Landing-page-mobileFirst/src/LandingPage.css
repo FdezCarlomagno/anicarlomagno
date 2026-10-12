@@ -73,23 +73,12 @@ a {
     color: inherit;
 }
 
-.container {
-    max-width: 768px;
-    width: 100%;
-}
-
 .column {
     display: flex;
     flex-direction: column;
     justify-content: center;
 
 }
-
-.slider img {
-    height: 100%;
-    width: 100%
-}
-
 
 .rightBottomCorner {
     border-radius: 0 0 10px 0;
@@ -98,60 +87,6 @@ a {
 .leftBottomCorner {
     border-radius: 0 0 0 10px;
 }
-
-.slider {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    width: 100%;
-}
-
-
-.nameLogo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    position: absolute;
-    /* Or relative, depending on your layout needs */
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    /* Center text within the logo */
-}
-
-
-.nameLogo h1 {
-    font-family: "Dancing Script", cursive;
-    font-weight: bold;
-    font-size: 50px;
-    color: aliceblue;
-}
-
-.nameLogo h2 {
-    margin-top: -20px;
-    font-family: "Dancing Script";
-    font-size: 30px;
-    margin-bottom: 12px;
-    color: rgb(202, 152, 248);
-
-}
-
-.btnMyPaintings {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    border-radius: 5px;
-    background-color: blueviolet;
-    color: aliceblue;
-    padding: 8px;
-    font-size: 16px;
-}
-
-
 
 /*FIRST SECTION*/
 
@@ -165,7 +100,6 @@ a {
     margin-bottom: 1rem;
     gap: 1rem;
 }
-
 
 .firstSection-container {
     display: flex;
@@ -215,8 +149,6 @@ a {
     box-shadow: 1px 6px 24px 0 rgba(7, 94, 84, 0.829);
     transition: all 200ms ease-in-out;
 }
-
-
 
 .secondSectionInfo {
     text-align: center;
@@ -274,8 +206,7 @@ a {
 
 }
 
-.svg,
-.btnMyPaintings img {
+.svg {
     width: 20px;
     height: 20px;
     margin-right: 6px;
@@ -383,44 +314,7 @@ footer p {
     animation-range: entry 10% cover 25%;
 }
 
-.slider img {
-    display: none;
-}
-
-.btnMyPaintings img {
-    display: block;
-}
-
-.video-wrapper {
-    position: relative;
-    width: 100%;
-}
-
-.video-wrapper video {
-    width: 100%;
-    display: block;
-    position: relative;
-}
-
-
 /* Overlay sutil */
-.video-wrapper::after {
-    content: "";
-    position: absolute;
-    z-index: 0;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    background: linear-gradient(
-        180deg,
-        rgba(0, 0, 0, 0.25) 0%,
-        rgba(0, 0, 0, 0.486) 100%
-    );
-
-}
-
 
 .overlay {
     position: absolute;
@@ -433,7 +327,6 @@ footer p {
             rgba(0, 0, 0, 0.7) 50%,
             rgba(0, 0, 0, 0.3) 100%);
 }
-
 
 .paintingContainerSlider,
 .paintingImgs-section,
@@ -559,20 +452,6 @@ textarea {
     align-items: center;
 }
 
-.btnMyPaintings img {
-    display: block;
-}
-
-.btnMyPaintings {
-    display: flex;
-    justify-content: center;
-    gap: 6px;
-    font-size: 16px;
-    padding: 6px;
-    padding-right: 0px;
-}
-
-
 /*ANIMATIONS*/
 
 @keyframes show {
@@ -586,7 +465,6 @@ textarea {
         scale: 100%;
     }
 }
-
 
 /*FOOTER NAVBAR*/
 .footer-navbar {
@@ -665,14 +543,10 @@ textarea {
     margin: 2rem;
 }
 
-
 .firstSection-info span {
     color: blueviolet;
     font-weight: bold;
 }
-
-
-
 
 /*RESPONSIVE DESIGN*/
 
@@ -703,47 +577,6 @@ textarea {
 
     button:hover {
         cursor: pointer;
-    }
-
-    .container {
-        max-width: 100%;
-        height: 400px;
-        overflow: hidden;
-        position: relative;
-    }
-
-    .slider img {
-        display: none;
-    }
-
-    .btnMyPaintings {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        font-size: 24px;
-        padding: 12px;
-        padding-right: 0px;
-    }
-
-    .btnMyPaintings img {
-        display: block;
-        transform: scale(1.2);
-    }
-
-
-    .nameLogo {
-        position: absolute;
-        top: 10%;
-        left: 32%;
-    }
-
-    .nameLogo h1 {
-        font-size: 80px;
-        color: white;
-    }
-
-    .nameLogo h2 {
-        font-size: 40px;
     }
 
     .firstSection {
@@ -851,13 +684,6 @@ textarea {
     .showInOffer {
         position: absolute;
         left: 12%;
-    }
-
-    .nameLogo {
-        /* Adjustments for desktop screens */
-        top: 22%;
-        left: 50%;
-        transform: translate(-50%, -50%);
     }
 
     .paintingImgs-section {

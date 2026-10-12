@@ -1,109 +1,121 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import cuadro1 from './imgs/cuadro1.jpg'
-import cuadro2 from './imgs/cuadro2.jpg'
-import cuadro3 from './imgs/cuadro3.jpg'
-import { Image } from '@unpic/react'
+/* eslint-disable react/prop-types -- el proyecto no usa prop-types */
+import { useCallback, useEffect, useRef, useState } from 'react'
+import './paintingsSlider.css'
 
+const prefersReducedMotion = () =>
+    typeof window !== 'undefined' &&
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
-const PaintingSlider = ({ paintings }) => {
+const PaintingSlider = ({ paintings, label = 'Galería de imágenes' }) => {
+    const trackRef = useRef(null)
     const [currentIndex, setCurrentIndex] = useState(0)
-    const [dotColor, setDotColor] = useState(false)
+    const total = paintings.length
 
-    const prevSlide = () => {
-        setCurrentIndex((prevIndex) => prevIndex === 0 ? paintings.length - 1 : prevIndex - 1)
+    // Mantiene el índice sincronizado con el scroll nativo (swipe, flechas, teclado).
+    useEffect(() => {
+        const track = trackRef.current
+        if (!track) return undefined
+        let frame = 0
+        const onScroll = () => {
+            cancelAnimationFrame(frame)
+            frame = requestAnimationFrame(() => {
+                const i = Math.round(track.scrollLeft / track.clientWidth)
+                setCurrentIndex(Math.min(Math.max(i, 0), total - 1))
+            })
+        }
+        track.addEventListener('scroll', onScroll, { passive: true })
+        return () => {
+            cancelAnimationFrame(frame)
+            track.removeEventListener('scroll', onScroll)
+        }
+    }, [total])
+
+    const goTo = useCallback((index) => {
+        const track = trackRef.current
+        if (!track) return
+        const target = (index + total) % total
+        track.scrollTo({
+            left: target * track.clientWidth,
+            behavior: prefersReducedMotion() ? 'auto' : 'smooth',
+        })
+    }, [total])
+
+    const onKeyDown = (e) => {
+        if (e.key === 'ArrowLeft') { e.preventDefault(); goTo(currentIndex - 1) }
+        if (e.key === 'ArrowRight') { e.preventDefault(); goTo(currentIndex + 1) }
     }
-    const nextSlide = () => {
-        setCurrentIndex((prevIndex) => prevIndex === paintings.length - 1 ? 0 : prevIndex + 1)
-    }
-
-    const sliderStyles = {
-        height: '100%',
-        position: 'relative',
-        marginBottom: '5%',
-    }
-
-    const leftArrowStyles = {
-        position: 'absolute',
-        top: '50%',
-        transform: 'translate(0, -50%)',
-        left: '16px',
-        fontSize: '40px',
-        color: '#fff',
-        zIndex: '1',
-        cursor: 'pointer',
-    }
-    const rightArrowStyles = {
-        position: 'absolute',
-        top: '50%',
-        transform: 'translate(0, -50%)',
-        right: '16px',
-        fontSize: '40px',
-        color: '#fff',
-        zIndex: '1',
-        cursor: 'pointer',
-    }
-
-    const dotsContainerStyles = {
-        display: "flex",
-        justifyContent: "center",
-    };
-
-    const dotStyle = {
-        margin: "0 3px",
-        cursor: "pointer",
-        width: "20px"
-    };
-
-    const goToSlide = (slideIndex) => {
-        setCurrentIndex(slideIndex);
-        setDotColor(!dotColor)
-    };
-
-    const paintingsStyles = {
-        width: '300px', // Ajusta el ancho fijo que prefieras
-        height: '500px', // Ajusta la altura fija que prefieras
-        borderRadius: '10px',
-        overflow: 'hidden',
-    };
-    
-    const imageStyles = {
-        width: '100%',
-        height: '100%',
-        objectFit: 'cover', // Esto asegura que la imagen se ajuste bien al contenedor
-        borderRadius: '10px',
-        transition: '0.3s ease-in-out',
-    };
 
     return (
-        <section className="paintingSlider" style={sliderStyles}>
-            <div style={leftArrowStyles} onClick={prevSlide}>❮</div>
-            <div style={rightArrowStyles} onClick={nextSlide}>❯</div>
-            
-            <div className='paintingContainerSlider' style={paintingsStyles}>
-                <Image
-                    src={paintings[currentIndex].src}
-                    alt={`Painting ${currentIndex + 1}`}
-                    style={imageStyles}
-                />
+        <section className="pslider" aria-roledescription="carrusel" aria-label={label}>
+            <div className="pslider-viewport">
+                <ul
+                    className="pslider-track"
+                    ref={trackRef}
+                    tabIndex={0}
+                    onKeyDown={onKeyDown}
+                    aria-live="polite"
+                >
+                    {paintings.map((painting, index) => (
+                        <li
+                            className="pslider-slide"
+                            key={index}
+                            aria-roledescription="diapositiva"
+                            aria-label={`${index + 1} de ${total}`}
+                        >
+                            <img
+                                src={painting.src}
+                                alt={`Imagen ${index + 1} de ${total}`}
+                                width="600"
+                                height="900"
+                                loading={index === 0 ? 'eager' : 'lazy'}
+                                decoding="async"
+                                draggable="false"
+                            />
+                        </li>
+                    ))}
+                </ul>
+
+                {total > 1 && (
+                    <>
+                        <button
+                            type="button"
+                            className="pslider-arrow pslider-arrow--prev"
+                            onClick={() => goTo(currentIndex - 1)}
+                            aria-label="Imagen anterior"
+                        >
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" /></svg>
+                        </button>
+                        <button
+                            type="button"
+                            className="pslider-arrow pslider-arrow--next"
+                            onClick={() => goTo(currentIndex + 1)}
+                            aria-label="Imagen siguiente"
+                        >
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" /></svg>
+                        </button>
+                        <span className="pslider-counter" aria-hidden="true">
+                            {currentIndex + 1} / {total}
+                        </span>
+                    </>
+                )}
             </div>
-            
-            <div style={dotsContainerStyles}>
-                {paintings.map((cuadro, index) => (
-                    <div
-                        key={index}
-                        style={{
-                            ...dotStyle,
-                            color: currentIndex === index ? 'blueviolet' : '#888',
-                        }}
-                        onClick={() => goToSlide(index)}
-                    >
-                        <div className='dot'>●</div>
-                    </div>
-                ))}
-            </div>
+
+            {total > 1 && (
+                <div className="pslider-dots">
+                    {paintings.map((_, index) => (
+                        <button
+                            type="button"
+                            key={index}
+                            className={`pslider-dot${currentIndex === index ? ' is-active' : ''}`}
+                            onClick={() => goTo(index)}
+                            aria-label={`Ir a la imagen ${index + 1}`}
+                            aria-current={currentIndex === index ? 'true' : undefined}
+                        />
+                    ))}
+                </div>
+            )}
         </section>
-    );
+    )
 }
 
-export default PaintingSlider;
+export default PaintingSlider
