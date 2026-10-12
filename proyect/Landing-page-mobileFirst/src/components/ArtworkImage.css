@@ -1,0 +1,11 @@
+/* <picture> must not add a box: legacy rules were written for an <img> that is a direct child. */
+picture {
+    display: contents;
+}
+
+/* width/height attributes only reserve space (no layout shift); sizes come from the CSS of each place.
+   Low specificity on purpose so legacy rules such as `.agendaContainer img` still win. */
+picture > img {
+    width: auto;
+    height: auto;
+}

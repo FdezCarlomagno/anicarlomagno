@@ -1,0 +1,730 @@
+{
+  "/src/components/imgs/agenda1.jpg": {
+    "slug": "components-imgs-agenda1",
+    "width": 720,
+    "height": 1280,
+    "widths": [
+      480,
+      720
+    ],
+    "fallback": 720
+  },
+  "/src/components/imgs/agenda2.jpg": {
+    "slug": "components-imgs-agenda2",
+    "width": 720,
+    "height": 1280,
+    "widths": [
+      480,
+      720
+    ],
+    "fallback": 720
+  },
+  "/src/components/imgs/agenda3.jpg": {
+    "slug": "components-imgs-agenda3",
+    "width": 720,
+    "height": 1280,
+    "widths": [
+      480,
+      720
+    ],
+    "fallback": 720
+  },
+  "/src/components/imgs/agenda4.jpg": {
+    "slug": "components-imgs-agenda4",
+    "width": 720,
+    "height": 1280,
+    "widths": [
+      480,
+      720
+    ],
+    "fallback": 720
+  },
+  "/src/components/imgs/agenda5.jpg": {
+    "slug": "components-imgs-agenda5",
+    "width": 720,
+    "height": 1280,
+    "widths": [
+      480,
+      720
+    ],
+    "fallback": 720
+  },
+  "/src/components/imgs/agenda6.jpg": {
+    "slug": "components-imgs-agenda6",
+    "width": 720,
+    "height": 1280,
+    "widths": [
+      480,
+      720
+    ],
+    "fallback": 720
+  },
+  "/src/components/imgs/agenda7.jpg": {
+    "slug": "components-imgs-agenda7",
+    "width": 720,
+    "height": 1280,
+    "widths": [
+      480,
+      720
+    ],
+    "fallback": 720
+  },
+  "/src/components/imgs/agenda8.jpg": {
+    "slug": "components-imgs-agenda8",
+    "width": 1238,
+    "height": 1280,
+    "widths": [
+      480,
+      800,
+      1200
+    ],
+    "fallback": 800
+  },
+  "/src/components/imgs/aniSection3.jpg": {
+    "slug": "components-imgs-anisection3",
+    "width": 960,
+    "height": 1280,
+    "widths": [
+      480,
+      800,
+      960
+    ],
+    "fallback": 800
+  },
+  "/src/components/imgs/aniSection7.jpg": {
+    "slug": "components-imgs-anisection7",
+    "width": 1280,
+    "height": 850,
+    "widths": [
+      480,
+      800,
+      1200
+    ],
+    "fallback": 800
+  },
+  "/src/pages/pagesStyles/paintingsImgs/Aurora.jpg": {
+    "slug": "pages-pagesstyles-paintingsimgs-aurora",
+    "width": 2693,
+    "height": 3659,
+    "widths": [
+      480,
+      800,
+      1200
+    ],
+    "fallback": 800
+  },
+  "/src/pages/pagesStyles/paintingsImgs/Bahia.jpeg": {
+    "slug": "pages-pagesstyles-paintingsimgs-bahia",
+    "width": 937,
+    "height": 1280,
+    "widths": [
+      480,
+      800,
+      937
+    ],
+    "fallback": 800
+  },
+  "/src/pages/pagesStyles/paintingsImgs/Butterfly-Queen.jpeg": {
+    "slug": "pages-pagesstyles-paintingsimgs-butterfly-queen",
+    "width": 1207,
+    "height": 1600,
+    "widths": [
+      480,
+      800,
+      1200
+    ],
+    "fallback": 800
+  },
+  "/src/pages/pagesStyles/paintingsImgs/Creacion.jpeg": {
+    "slug": "pages-pagesstyles-paintingsimgs-creacion",
+    "width": 1114,
+    "height": 1280,
+    "widths": [
+      480,
+      800,
+      1114
+    ],
+    "fallback": 800
+  },
+  "/src/pages/pagesStyles/paintingsImgs/cuadro1.jpg": {
+    "slug": "pages-pagesstyles-paintingsimgs-cuadro1",
+    "width": 1280,
+    "height": 1266,
+    "widths": [
+      480,
+      800,
+      1200
+    ],
+    "fallback": 800
+  },
+  "/src/pages/pagesStyles/paintingsImgs/cuadro10.jpeg": {
+    "slug": "pages-pagesstyles-paintingsimgs-cuadro10",
+    "width": 1595,
+    "height": 1600,
+    "widths": [
+      480,
+      800,
+      1200
+    ],
+    "fallback": 800
+  },
+  "/src/pages/pagesStyles/paintingsImgs/cuadro11.jpeg": {
+    "slug": "pages-pagesstyles-paintingsimgs-cuadro11",
+    "width": 1305,
+    "height": 1600,
+    "widths": [
+      480,
+      800,
+      1200
+    ],
+    "fallback": 800
+  },
+  "/src/pages/pagesStyles/paintingsImgs/cuadro2.jpg": {
+    "slug": "pages-pagesstyles-paintingsimgs-cuadro2",
+    "width": 970,
+    "height": 1280,
+    "widths": [
+      480,
+      800,
+      970
+    ],
+    "fallback": 800
+  },
+  "/src/pages/pagesStyles/paintingsImgs/cuadro3.jpg": {
+    "slug": "pages-pagesstyles-paintingsimgs-cuadro3",
+    "width": 860,
+    "height": 1280,
+    "widths": [
+      480,
+      800,
+      860
+    ],
+    "fallback": 800
+  },
+  "/src/pages/pagesStyles/paintingsImgs/cuadro5.jpeg": {
+    "slug": "pages-pagesstyles-paintingsimgs-cuadro5",
+    "width": 720,
+    "height": 1280,
+    "widths": [
+      480,
+      720
+    ],
+    "fallback": 720
+  },
+  "/src/pages/pagesStyles/paintingsImgs/cuadro6.jpeg": {
+    "slug": "pages-pagesstyles-paintingsimgs-cuadro6",
+    "width": 1599,
+    "height": 1600,
+    "widths": [
+      480,
+      800,
+      1200
+    ],
+    "fallback": 800
+  },
+  "/src/pages/pagesStyles/paintingsImgs/cuadro7.jpeg": {
+    "slug": "pages-pagesstyles-paintingsimgs-cuadro7",
+    "width": 978,
+    "height": 1600,
+    "widths": [
+      480,
+      800,
+      978
+    ],
+    "fallback": 800
+  },
+  "/src/pages/pagesStyles/paintingsImgs/cuadro8.jpeg": {
+    "slug": "pages-pagesstyles-paintingsimgs-cuadro8",
+    "width": 1037,
+    "height": 1600,
+    "widths": [
+      480,
+      800,
+      1037
+    ],
+    "fallback": 800
+  },
+  "/src/pages/pagesStyles/paintingsImgs/cuadro9.jpeg": {
+    "slug": "pages-pagesstyles-paintingsimgs-cuadro9",
+    "width": 939,
+    "height": 1600,
+    "widths": [
+      480,
+      800,
+      939
+    ],
+    "fallback": 800
+  },
+  "/src/pages/pagesStyles/paintingsImgs/El-velo-dorado.jpeg": {
+    "slug": "pages-pagesstyles-paintingsimgs-el-velo-dorado",
+    "width": 1290,
+    "height": 1275,
+    "widths": [
+      480,
+      800,
+      1200
+    ],
+    "fallback": 800
+  },
+  "/src/pages/pagesStyles/paintingsImgs/EUPHORIA.jpeg": {
+    "slug": "pages-pagesstyles-paintingsimgs-euphoria",
+    "width": 1600,
+    "height": 1576,
+    "widths": [
+      480,
+      800,
+      1200
+    ],
+    "fallback": 800
+  },
+  "/src/pages/pagesStyles/paintingsImgs/femme-deau-agenda.jpeg": {
+    "slug": "pages-pagesstyles-paintingsimgs-femme-deau-agenda",
+    "width": 1128,
+    "height": 1600,
+    "widths": [
+      480,
+      800,
+      1128
+    ],
+    "fallback": 800
+  },
+  "/src/pages/pagesStyles/paintingsImgs/Helena.jpeg": {
+    "slug": "pages-pagesstyles-paintingsimgs-helena",
+    "width": 1092,
+    "height": 1280,
+    "widths": [
+      480,
+      800,
+      1092
+    ],
+    "fallback": 800
+  },
+  "/src/pages/pagesStyles/paintingsImgs/Iris-agenda.jpeg": {
+    "slug": "pages-pagesstyles-paintingsimgs-iris-agenda",
+    "width": 769,
+    "height": 1024,
+    "widths": [
+      480,
+      769
+    ],
+    "fallback": 769
+  },
+  "/src/pages/pagesStyles/paintingsImgs/la-culpable-flores.jpeg": {
+    "slug": "pages-pagesstyles-paintingsimgs-la-culpable-flores",
+    "width": 1242,
+    "height": 1244,
+    "widths": [
+      480,
+      800,
+      1200
+    ],
+    "fallback": 800
+  },
+  "/src/pages/pagesStyles/paintingsImgs/la-culpable-mariposas.jpeg": {
+    "slug": "pages-pagesstyles-paintingsimgs-la-culpable-mariposas",
+    "width": 1242,
+    "height": 1228,
+    "widths": [
+      480,
+      800,
+      1200
+    ],
+    "fallback": 800
+  },
+  "/src/pages/pagesStyles/paintingsImgs/la-dama-de-rosa-mariposas.jpeg": {
+    "slug": "pages-pagesstyles-paintingsimgs-la-dama-de-rosa-mariposas",
+    "width": 1228,
+    "height": 1600,
+    "widths": [
+      480,
+      800,
+      1200
+    ],
+    "fallback": 800
+  },
+  "/src/pages/pagesStyles/paintingsImgs/la-dama-dorada.jpeg": {
+    "slug": "pages-pagesstyles-paintingsimgs-la-dama-dorada",
+    "width": 1200,
+    "height": 1600,
+    "widths": [
+      480,
+      800,
+      1200
+    ],
+    "fallback": 800
+  },
+  "/src/pages/pagesStyles/paintingsImgs/la-dame-fleurie.jpeg": {
+    "slug": "pages-pagesstyles-paintingsimgs-la-dame-fleurie",
+    "width": 960,
+    "height": 1280,
+    "widths": [
+      480,
+      800,
+      960
+    ],
+    "fallback": 800
+  },
+  "/src/pages/pagesStyles/paintingsImgs/Lucia.jpeg": {
+    "slug": "pages-pagesstyles-paintingsimgs-lucia",
+    "width": 1280,
+    "height": 1263,
+    "widths": [
+      480,
+      800,
+      1200
+    ],
+    "fallback": 800
+  },
+  "/src/pages/pagesStyles/paintingsImgs/Nerea.jpeg": {
+    "slug": "pages-pagesstyles-paintingsimgs-nerea",
+    "width": 3855,
+    "height": 3962,
+    "widths": [
+      480,
+      800,
+      1200
+    ],
+    "fallback": 800
+  },
+  "/src/pages/pagesStyles/paintingsImgs/nuevosCuadros/ALEJANDRA.jpg": {
+    "slug": "pages-pagesstyles-paintingsimgs-nuevoscuadros-alejandra",
+    "width": 2724,
+    "height": 3685,
+    "widths": [
+      480,
+      800,
+      1200
+    ],
+    "fallback": 800
+  },
+  "/src/pages/pagesStyles/paintingsImgs/nuevosCuadros/ALMA.jpg": {
+    "slug": "pages-pagesstyles-paintingsimgs-nuevoscuadros-alma",
+    "width": 1984,
+    "height": 2716,
+    "widths": [
+      480,
+      800,
+      1200
+    ],
+    "fallback": 800
+  },
+  "/src/pages/pagesStyles/paintingsImgs/nuevosCuadros/AMORES GATUNOS.jpg": {
+    "slug": "pages-pagesstyles-paintingsimgs-nuevoscuadros-amores-gatunos",
+    "width": 2725,
+    "height": 3701,
+    "widths": [
+      480,
+      800,
+      1200
+    ],
+    "fallback": 800
+  },
+  "/src/pages/pagesStyles/paintingsImgs/nuevosCuadros/BELLA.jpg": {
+    "slug": "pages-pagesstyles-paintingsimgs-nuevoscuadros-bella",
+    "width": 2043,
+    "height": 2775,
+    "widths": [
+      480,
+      800,
+      1200
+    ],
+    "fallback": 800
+  },
+  "/src/pages/pagesStyles/paintingsImgs/nuevosCuadros/BLUE FLOWER.jpg": {
+    "slug": "pages-pagesstyles-paintingsimgs-nuevoscuadros-blue-flower",
+    "width": 2043,
+    "height": 2775,
+    "widths": [
+      480,
+      800,
+      1200
+    ],
+    "fallback": 800
+  },
+  "/src/pages/pagesStyles/paintingsImgs/nuevosCuadros/CORAZON COSIDO.jpg": {
+    "slug": "pages-pagesstyles-paintingsimgs-nuevoscuadros-corazon-cosido",
+    "width": 2043,
+    "height": 2775,
+    "widths": [
+      480,
+      800,
+      1200
+    ],
+    "fallback": 800
+  },
+  "/src/pages/pagesStyles/paintingsImgs/nuevosCuadros/ENCANTO.jpg": {
+    "slug": "pages-pagesstyles-paintingsimgs-nuevoscuadros-encanto",
+    "width": 2043,
+    "height": 2775,
+    "widths": [
+      480,
+      800,
+      1200
+    ],
+    "fallback": 800
+  },
+  "/src/pages/pagesStyles/paintingsImgs/nuevosCuadros/FERNANDA1.jpg": {
+    "slug": "pages-pagesstyles-paintingsimgs-nuevoscuadros-fernanda1",
+    "width": 1984,
+    "height": 2716,
+    "widths": [
+      480,
+      800,
+      1200
+    ],
+    "fallback": 800
+  },
+  "/src/pages/pagesStyles/paintingsImgs/nuevosCuadros/FERNANDA2.jpg": {
+    "slug": "pages-pagesstyles-paintingsimgs-nuevoscuadros-fernanda2",
+    "width": 2043,
+    "height": 2775,
+    "widths": [
+      480,
+      800,
+      1200
+    ],
+    "fallback": 800
+  },
+  "/src/pages/pagesStyles/paintingsImgs/nuevosCuadros/FLAVIA.jpg": {
+    "slug": "pages-pagesstyles-paintingsimgs-nuevoscuadros-flavia",
+    "width": 1984,
+    "height": 2716,
+    "widths": [
+      480,
+      800,
+      1200
+    ],
+    "fallback": 800
+  },
+  "/src/pages/pagesStyles/paintingsImgs/nuevosCuadros/HANNA.jpg": {
+    "slug": "pages-pagesstyles-paintingsimgs-nuevoscuadros-hanna",
+    "width": 2043,
+    "height": 2775,
+    "widths": [
+      480,
+      800,
+      1200
+    ],
+    "fallback": 800
+  },
+  "/src/pages/pagesStyles/paintingsImgs/nuevosCuadros/HILO ROJO.jpg": {
+    "slug": "pages-pagesstyles-paintingsimgs-nuevoscuadros-hilo-rojo",
+    "width": 2645,
+    "height": 3622,
+    "widths": [
+      480,
+      800,
+      1200
+    ],
+    "fallback": 800
+  },
+  "/src/pages/pagesStyles/paintingsImgs/nuevosCuadros/INDIANA.jpg": {
+    "slug": "pages-pagesstyles-paintingsimgs-nuevoscuadros-indiana",
+    "width": 1949,
+    "height": 2776,
+    "widths": [
+      480,
+      800,
+      1200
+    ],
+    "fallback": 800
+  },
+  "/src/pages/pagesStyles/paintingsImgs/nuevosCuadros/JOVEN FRIDA.jpg": {
+    "slug": "pages-pagesstyles-paintingsimgs-nuevoscuadros-joven-frida",
+    "width": 2043,
+    "height": 2775,
+    "widths": [
+      480,
+      800,
+      1200
+    ],
+    "fallback": 800
+  },
+  "/src/pages/pagesStyles/paintingsImgs/nuevosCuadros/LA VIDA ES BELLA1.jpg": {
+    "slug": "pages-pagesstyles-paintingsimgs-nuevoscuadros-la-vida-es-bella1",
+    "width": 2043,
+    "height": 2775,
+    "widths": [
+      480,
+      800,
+      1200
+    ],
+    "fallback": 800
+  },
+  "/src/pages/pagesStyles/paintingsImgs/nuevosCuadros/LA VIDA ES BELLA2.jpg": {
+    "slug": "pages-pagesstyles-paintingsimgs-nuevoscuadros-la-vida-es-bella2",
+    "width": 1984,
+    "height": 2716,
+    "widths": [
+      480,
+      800,
+      1200
+    ],
+    "fallback": 800
+  },
+  "/src/pages/pagesStyles/paintingsImgs/nuevosCuadros/LA VIDA ES BELLA3.jpg": {
+    "slug": "pages-pagesstyles-paintingsimgs-nuevoscuadros-la-vida-es-bella3",
+    "width": 2043,
+    "height": 2775,
+    "widths": [
+      480,
+      800,
+      1200
+    ],
+    "fallback": 800
+  },
+  "/src/pages/pagesStyles/paintingsImgs/nuevosCuadros/LA VIDA ES BELLA4.jpg": {
+    "slug": "pages-pagesstyles-paintingsimgs-nuevoscuadros-la-vida-es-bella4",
+    "width": 2043,
+    "height": 2775,
+    "widths": [
+      480,
+      800,
+      1200
+    ],
+    "fallback": 800
+  },
+  "/src/pages/pagesStyles/paintingsImgs/nuevosCuadros/LIBERTE.jpg": {
+    "slug": "pages-pagesstyles-paintingsimgs-nuevoscuadros-liberte",
+    "width": 2043,
+    "height": 2775,
+    "widths": [
+      480,
+      800,
+      1200
+    ],
+    "fallback": 800
+  },
+  "/src/pages/pagesStyles/paintingsImgs/nuevosCuadros/LUCY1.jpg": {
+    "slug": "pages-pagesstyles-paintingsimgs-nuevoscuadros-lucy1",
+    "width": 2043,
+    "height": 2775,
+    "widths": [
+      480,
+      800,
+      1200
+    ],
+    "fallback": 800
+  },
+  "/src/pages/pagesStyles/paintingsImgs/nuevosCuadros/LUCY2.jpg": {
+    "slug": "pages-pagesstyles-paintingsimgs-nuevoscuadros-lucy2",
+    "width": 2008,
+    "height": 2772,
+    "widths": [
+      480,
+      800,
+      1200
+    ],
+    "fallback": 800
+  },
+  "/src/pages/pagesStyles/paintingsImgs/nuevosCuadros/ROSE.jpg": {
+    "slug": "pages-pagesstyles-paintingsimgs-nuevoscuadros-rose",
+    "width": 2043,
+    "height": 2775,
+    "widths": [
+      480,
+      800,
+      1200
+    ],
+    "fallback": 800
+  },
+  "/src/pages/pagesStyles/paintingsImgs/nuevosCuadros/SELVA.jpg": {
+    "slug": "pages-pagesstyles-paintingsimgs-nuevoscuadros-selva",
+    "width": 2481,
+    "height": 3509,
+    "widths": [
+      480,
+      800,
+      1200
+    ],
+    "fallback": 800
+  },
+  "/src/pages/pagesStyles/paintingsImgs/nuevosCuadros/SYLVINE.jpg": {
+    "slug": "pages-pagesstyles-paintingsimgs-nuevoscuadros-sylvine",
+    "width": 2725,
+    "height": 3701,
+    "widths": [
+      480,
+      800,
+      1200
+    ],
+    "fallback": 800
+  },
+  "/src/pages/pagesStyles/paintingsImgs/nuevosCuadros/SYLVINE2.jpg": {
+    "slug": "pages-pagesstyles-paintingsimgs-nuevoscuadros-sylvine2",
+    "width": 2043,
+    "height": 2775,
+    "widths": [
+      480,
+      800,
+      1200
+    ],
+    "fallback": 800
+  },
+  "/src/pages/pagesStyles/paintingsImgs/nuevosCuadros/VALENTINA.jpg": {
+    "slug": "pages-pagesstyles-paintingsimgs-nuevoscuadros-valentina",
+    "width": 2043,
+    "height": 2775,
+    "widths": [
+      480,
+      800,
+      1200
+    ],
+    "fallback": 800
+  },
+  "/src/pages/pagesStyles/paintingsImgs/nuevosCuadros/VIOLET.jpg": {
+    "slug": "pages-pagesstyles-paintingsimgs-nuevoscuadros-violet",
+    "width": 2043,
+    "height": 2775,
+    "widths": [
+      480,
+      800,
+      1200
+    ],
+    "fallback": 800
+  },
+  "/src/pages/pagesStyles/paintingsImgs/Princesa-azul.jpeg": {
+    "slug": "pages-pagesstyles-paintingsimgs-princesa-azul",
+    "width": 957,
+    "height": 1280,
+    "widths": [
+      480,
+      800,
+      957
+    ],
+    "fallback": 800
+  },
+  "/src/pages/pagesStyles/paintingsImgs/Scarlet.jpeg": {
+    "slug": "pages-pagesstyles-paintingsimgs-scarlet",
+    "width": 1168,
+    "height": 1280,
+    "widths": [
+      480,
+      800,
+      1168
+    ],
+    "fallback": 800
+  },
+  "/src/pages/pagesStyles/paintingsImgs/Vanessa.jpeg": {
+    "slug": "pages-pagesstyles-paintingsimgs-vanessa",
+    "width": 1598,
+    "height": 1600,
+    "widths": [
+      480,
+      800,
+      1200
+    ],
+    "fallback": 800
+  },
+  "/src/pages/pagesStyles/paintingsImgs/VEIL.jpeg": {
+    "slug": "pages-pagesstyles-paintingsimgs-veil",
+    "width": 1180,
+    "height": 1600,
+    "widths": [
+      480,
+      800,
+      1180
+    ],
+    "fallback": 800
+  }
+}

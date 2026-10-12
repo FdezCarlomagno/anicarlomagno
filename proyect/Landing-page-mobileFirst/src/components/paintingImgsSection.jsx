@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import cuadros from '../objects/newPaintings.jsx';
 import { useState, useMemo } from 'react'
-import { Image } from '@unpic/react'
+import ArtworkImage from './ArtworkImage.jsx'
 
 const PaintingImgsSection = () => {
     const [seeMore, setSeeMore] = useState(12);
@@ -19,7 +19,7 @@ const PaintingImgsSection = () => {
                 <Link to="/obras-en-stock">
                     {displayedCuadros.map((cuadro, index) => (
                         <div className='paintingImgs-box' key={index}>
-                            <Image src={cuadro.src} alt={cuadro.title} />
+                            <ArtworkImage src={cuadro.src} alt={cuadro.title} sizes="(min-width: 1280px) 380px, 175px" />
                         </div>
                     ))}
                 </Link>
