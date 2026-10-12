@@ -1,0 +1,133 @@
+/*
+ * Design tokens — mirror of DESIGN.md (1:1). Phase 4: every value reproduces the CSS that existed before,
+ * so swapping a literal for its token changes nothing on screen. Inventory: design/audits/tokens-inventory.md.
+ * New work uses the semantic tokens and the rem spacing scale; `*-legacy-*` tokens only mirror old px values
+ * and disappear as each component is redesigned.
+ */
+:root {
+    /* Accent: Ani's violet. Only interactive or brand-signature uses. */
+    --color-accent: blueviolet;
+    /* The legacy tints were written as rgb(137, 43, 226), one unit off blueviolet (138); kept as they were. */
+    --color-accent-a05: rgba(137, 43, 226, 0.05);
+    --color-accent-a10: rgba(137, 43, 226, 0.1);
+    --color-accent-a20: rgba(137, 43, 226, 0.2);
+    --color-accent-a27: rgba(137, 43, 226, 0.274);
+    --color-accent-a30: rgba(137, 43, 226, 0.3);
+    --color-accent-a80: rgba(137, 43, 226, 0.795);
+    --color-accent-a85: rgba(137, 43, 226, 0.85);
+    --color-accent-muted: rgba(156, 82, 224, 0.699);
+
+    /* Secondary purples (Sobre mí gradients, toast) */
+    --color-orchid: #a518cf;
+    --color-plum: #764ba2;
+    --color-periwinkle: #667eea;
+
+    /* Surfaces and base text */
+    --color-canvas: rgba(255, 255, 255, 0.87);
+    --color-surface: aliceblue;
+    --color-white: white;
+    --color-black: black;
+    --color-ink: #242424;
+
+    /* Neutral ramp */
+    --color-gray-800: #333;
+    --color-gray-700: #444;
+    --color-gray-600: #666;
+    --color-gray-550: gray;
+    --color-gray-500: #888;
+    --color-gray-300: #ccc;
+    --color-gray-200: #ddd;
+    --color-gray-100: #f0f0f0;
+    --color-gray-50: #f8f9fa;
+
+    /* Black alphas for shadows and overlays */
+    --color-black-a08: rgba(0, 0, 0, 0.08);
+    --color-black-a10: rgba(0, 0, 0, 0.1);
+    --color-black-a12: rgba(0, 0, 0, 0.12);
+    --color-black-a15: rgba(0, 0, 0, 0.15);
+    --color-black-a30: rgba(0, 0, 0, 0.3);
+
+    /* Feedback */
+    --color-error: #e74c3c;
+    --color-error-hover: #c0392b;
+    --color-error-a10: rgba(231, 76, 60, 0.1);
+    --color-error-surface: #f8d7da;
+    --color-error-text: #721c24;
+    --color-error-border: #f5c6cb;
+    --color-success: #27ae60;
+    --color-success-a10: rgba(39, 174, 96, 0.1);
+    --color-success-surface: #d4edda;
+    --color-success-text: #155724;
+    --color-success-border: #c3e6cb;
+
+    /* "Nuevo" badges (agendas) */
+    --color-mint: #35f59b;
+    --color-mint-light: #5aeebd;
+
+    /* Third-party brand */
+    --color-whatsapp: rgba(37, 211, 102, 1);
+    --color-whatsapp-hover: rgb(17, 179, 76);
+
+    /* Type families. --font-script-bare has no generic fallback, exactly as the rules that use it today. */
+    --font-body: "Raleway", sans-serif;
+    --font-script: "Dancing Script", cursive;
+    --font-script-bare: "Dancing Script";
+
+    /* Spacing scale (rem, follows the reader's font size) */
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-5: 1.25rem;
+    --space-6: 1.5rem;
+    --space-8: 2rem;
+    --space-12: 3rem;
+
+    /* Legacy fixed spacing (px) */
+    --space-legacy-2: 2px;
+    --space-legacy-3: 3px;
+    --space-legacy-4: 4px;
+    --space-legacy-5: 5px;
+    --space-legacy-6: 6px;
+    --space-legacy-8: 8px;
+    --space-legacy-10: 10px;
+    --space-legacy-12: 12px;
+    --space-legacy-14: 14px;
+    --space-legacy-15: 15px;
+    --space-legacy-16: 16px;
+    --space-legacy-20: 20px;
+    --space-legacy-24: 24px;
+    --space-legacy-25: 25px;
+    --space-legacy-30: 30px;
+    --space-legacy-32: 32px;
+    --space-legacy-40: 40px;
+    --space-legacy-50: 50px;
+    --space-legacy-60: 60px;
+
+    /* Radii */
+    --radius-2xs: 4px;
+    --radius-xs: 5px;
+    --radius-sm: 6px;
+    --radius-md: 8px;
+    --radius-lg: 10px;
+    --radius-xl: 12px;
+    --radius-2xl: 16px;
+    --radius-pill: 25px;
+    --radius-round: 50%;
+
+    /* Shadows */
+    --shadow-sm: 0 2px 8px var(--color-black-a10);
+    --shadow-card: 0 4px 20px var(--color-black-a08);
+    --shadow-menu: 1px 22px 34px 0px rgba(163, 6, 240, 0.75);
+
+    /* Motion */
+    --duration-100: 100ms;
+    --duration-200: 200ms;
+    --duration-300: 300ms;
+    --duration-400: 400ms;
+    --duration-500: 500ms;
+    --duration-1000: 1s;
+    --duration-toast: 3s;
+    --ease-default: ease;
+    --ease-in-out: ease-in-out;
+}

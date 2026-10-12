@@ -1,0 +1,592 @@
+{
+  "360": {
+    "title": "Fase 4c: dirección inmersiva, dos variantes | anicarlomagno",
+    "lang": "es-AR",
+    "robots": "noindex, nofollow",
+    "h1": 1,
+    "headings": [
+      "H1: Fase 4c: dirección inmersiva"
+    ],
+    "scrollWidth": 360,
+    "clientWidth": 360,
+    "overflowing": [],
+    "textUnder16": [],
+    "smallTargets": [],
+    "contrastFails": [],
+    "textOnMuro": [],
+    "contrastAll": [
+      {
+        "text": "anicarlomagno",
+        "color": "rgb(36, 36, 36)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 44,
+        "weight": 700,
+        "ratio": 15.52,
+        "min": 3,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "Dos variantes de la misma Home, con las mismas obr",
+        "color": "rgb(36, 36, 36)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 15.52,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "C1, oscura",
+        "color": "rgb(138, 43, 226)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 16,
+        "weight": 600,
+        "ratio": 5.96,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "Para comparar las dos etapas, mirá \"Mi recorrido\" ",
+        "color": "rgb(68, 68, 68)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 9.74,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      }
+    ],
+    "minContrast": 5.96,
+    "muro": null,
+    "images": [],
+    "imgProblems": [],
+    "stillWaiting": 0,
+    "pageHeight": 977,
+    "viewport": [
+      360,
+      740
+    ],
+    "loadState": {
+      "revealables": 0,
+      "waiting": 0,
+      "waitingInFirstScreen": 0,
+      "minOpacityWaiting": 1
+    },
+    "hero": null,
+    "transferAtLoad": {
+      "totalKB": 110,
+      "requests": 6
+    },
+    "transferFull": {
+      "totalKB": 110,
+      "requests": 6,
+      "list": [
+        {
+          "url": "fonts/raleway-latin.woff2",
+          "kb": 47.4
+        },
+        {
+          "url": "fonts/dancing-script-latin.woff2",
+          "kb": 42
+        },
+        {
+          "url": "4c/prototipo.css",
+          "kb": 11.3
+        },
+        {
+          "url": "estilos/tokens.css",
+          "kb": 4.6
+        },
+        {
+          "url": "estilos/fonts.css",
+          "kb": 2.6
+        },
+        {
+          "url": "4c/index.html",
+          "kb": 1.8
+        }
+      ]
+    },
+    "motion": []
+  },
+  "390": {
+    "title": "Fase 4c: dirección inmersiva, dos variantes | anicarlomagno",
+    "lang": "es-AR",
+    "robots": "noindex, nofollow",
+    "h1": 1,
+    "headings": [
+      "H1: Fase 4c: dirección inmersiva"
+    ],
+    "scrollWidth": 390,
+    "clientWidth": 390,
+    "overflowing": [],
+    "textUnder16": [],
+    "smallTargets": [],
+    "contrastFails": [],
+    "textOnMuro": [],
+    "contrastAll": [
+      {
+        "text": "anicarlomagno",
+        "color": "rgb(36, 36, 36)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 44,
+        "weight": 700,
+        "ratio": 15.52,
+        "min": 3,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "Dos variantes de la misma Home, con las mismas obr",
+        "color": "rgb(36, 36, 36)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 15.52,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "C1, oscura",
+        "color": "rgb(138, 43, 226)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 16,
+        "weight": 600,
+        "ratio": 5.96,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "Para comparar las dos etapas, mirá \"Mi recorrido\" ",
+        "color": "rgb(68, 68, 68)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 9.74,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      }
+    ],
+    "minContrast": 5.96,
+    "muro": null,
+    "images": [],
+    "imgProblems": [],
+    "stillWaiting": 0,
+    "pageHeight": 926,
+    "viewport": [
+      390,
+      844
+    ],
+    "loadState": {
+      "revealables": 0,
+      "waiting": 0,
+      "waitingInFirstScreen": 0,
+      "minOpacityWaiting": 1
+    },
+    "hero": null,
+    "transferAtLoad": {
+      "totalKB": 110,
+      "requests": 6
+    },
+    "transferFull": {
+      "totalKB": 110,
+      "requests": 6,
+      "list": [
+        {
+          "url": "fonts/raleway-latin.woff2",
+          "kb": 47.4
+        },
+        {
+          "url": "fonts/dancing-script-latin.woff2",
+          "kb": 42
+        },
+        {
+          "url": "4c/prototipo.css",
+          "kb": 11.3
+        },
+        {
+          "url": "estilos/tokens.css",
+          "kb": 4.6
+        },
+        {
+          "url": "estilos/fonts.css",
+          "kb": 2.6
+        },
+        {
+          "url": "4c/index.html",
+          "kb": 1.8
+        }
+      ]
+    },
+    "motion": []
+  },
+  "430": {
+    "title": "Fase 4c: dirección inmersiva, dos variantes | anicarlomagno",
+    "lang": "es-AR",
+    "robots": "noindex, nofollow",
+    "h1": 1,
+    "headings": [
+      "H1: Fase 4c: dirección inmersiva"
+    ],
+    "scrollWidth": 430,
+    "clientWidth": 430,
+    "overflowing": [],
+    "textUnder16": [],
+    "smallTargets": [],
+    "contrastFails": [],
+    "textOnMuro": [],
+    "contrastAll": [
+      {
+        "text": "anicarlomagno",
+        "color": "rgb(36, 36, 36)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 44,
+        "weight": 700,
+        "ratio": 15.52,
+        "min": 3,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "Dos variantes de la misma Home, con las mismas obr",
+        "color": "rgb(36, 36, 36)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 15.52,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "C1, oscura",
+        "color": "rgb(138, 43, 226)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 16,
+        "weight": 600,
+        "ratio": 5.96,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "Para comparar las dos etapas, mirá \"Mi recorrido\" ",
+        "color": "rgb(68, 68, 68)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 9.74,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      }
+    ],
+    "minContrast": 5.96,
+    "muro": null,
+    "images": [],
+    "imgProblems": [],
+    "stillWaiting": 0,
+    "pageHeight": 932,
+    "viewport": [
+      430,
+      932
+    ],
+    "loadState": {
+      "revealables": 0,
+      "waiting": 0,
+      "waitingInFirstScreen": 0,
+      "minOpacityWaiting": 1
+    },
+    "hero": null,
+    "transferAtLoad": {
+      "totalKB": 110,
+      "requests": 6
+    },
+    "transferFull": {
+      "totalKB": 110,
+      "requests": 6,
+      "list": [
+        {
+          "url": "fonts/raleway-latin.woff2",
+          "kb": 47.4
+        },
+        {
+          "url": "fonts/dancing-script-latin.woff2",
+          "kb": 42
+        },
+        {
+          "url": "4c/prototipo.css",
+          "kb": 11.3
+        },
+        {
+          "url": "estilos/tokens.css",
+          "kb": 4.6
+        },
+        {
+          "url": "estilos/fonts.css",
+          "kb": 2.6
+        },
+        {
+          "url": "4c/index.html",
+          "kb": 1.8
+        }
+      ]
+    },
+    "motion": []
+  },
+  "768": {
+    "title": "Fase 4c: dirección inmersiva, dos variantes | anicarlomagno",
+    "lang": "es-AR",
+    "robots": "noindex, nofollow",
+    "h1": 1,
+    "headings": [
+      "H1: Fase 4c: dirección inmersiva"
+    ],
+    "scrollWidth": 768,
+    "clientWidth": 768,
+    "overflowing": [],
+    "textUnder16": [],
+    "smallTargets": [],
+    "contrastFails": [],
+    "textOnMuro": [],
+    "contrastAll": [
+      {
+        "text": "anicarlomagno",
+        "color": "rgb(36, 36, 36)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 64,
+        "weight": 700,
+        "ratio": 15.52,
+        "min": 3,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "Dos variantes de la misma Home, con las mismas obr",
+        "color": "rgb(36, 36, 36)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 15.52,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "C1, oscura",
+        "color": "rgb(138, 43, 226)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 16,
+        "weight": 600,
+        "ratio": 5.96,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "Para comparar las dos etapas, mirá \"Mi recorrido\" ",
+        "color": "rgb(68, 68, 68)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 9.74,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      }
+    ],
+    "minContrast": 5.96,
+    "muro": null,
+    "images": [],
+    "imgProblems": [],
+    "stillWaiting": 0,
+    "pageHeight": 1024,
+    "viewport": [
+      768,
+      1024
+    ],
+    "loadState": {
+      "revealables": 0,
+      "waiting": 0,
+      "waitingInFirstScreen": 0,
+      "minOpacityWaiting": 1
+    },
+    "hero": null,
+    "transferAtLoad": {
+      "totalKB": 110,
+      "requests": 6
+    },
+    "transferFull": {
+      "totalKB": 110,
+      "requests": 6,
+      "list": [
+        {
+          "url": "fonts/raleway-latin.woff2",
+          "kb": 47.4
+        },
+        {
+          "url": "fonts/dancing-script-latin.woff2",
+          "kb": 42
+        },
+        {
+          "url": "4c/prototipo.css",
+          "kb": 11.3
+        },
+        {
+          "url": "estilos/tokens.css",
+          "kb": 4.6
+        },
+        {
+          "url": "estilos/fonts.css",
+          "kb": 2.6
+        },
+        {
+          "url": "4c/index.html",
+          "kb": 1.8
+        }
+      ]
+    },
+    "motion": []
+  },
+  "1280": {
+    "title": "Fase 4c: dirección inmersiva, dos variantes | anicarlomagno",
+    "lang": "es-AR",
+    "robots": "noindex, nofollow",
+    "h1": 1,
+    "headings": [
+      "H1: Fase 4c: dirección inmersiva"
+    ],
+    "scrollWidth": 1280,
+    "clientWidth": 1280,
+    "overflowing": [],
+    "textUnder16": [],
+    "smallTargets": [],
+    "contrastFails": [],
+    "textOnMuro": [],
+    "contrastAll": [
+      {
+        "text": "anicarlomagno",
+        "color": "rgb(36, 36, 36)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 64,
+        "weight": 700,
+        "ratio": 15.52,
+        "min": 3,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "Dos variantes de la misma Home, con las mismas obr",
+        "color": "rgb(36, 36, 36)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 15.52,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "C1, oscura",
+        "color": "rgb(138, 43, 226)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 16,
+        "weight": 600,
+        "ratio": 5.96,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "Para comparar las dos etapas, mirá \"Mi recorrido\" ",
+        "color": "rgb(68, 68, 68)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 9.74,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      }
+    ],
+    "minContrast": 5.96,
+    "muro": null,
+    "images": [],
+    "imgProblems": [],
+    "stillWaiting": 0,
+    "pageHeight": 806,
+    "viewport": [
+      1280,
+      800
+    ],
+    "loadState": {
+      "revealables": 0,
+      "waiting": 0,
+      "waitingInFirstScreen": 0,
+      "minOpacityWaiting": 1
+    },
+    "hero": null,
+    "transferAtLoad": {
+      "totalKB": 110,
+      "requests": 6
+    },
+    "transferFull": {
+      "totalKB": 110,
+      "requests": 6,
+      "list": [
+        {
+          "url": "fonts/raleway-latin.woff2",
+          "kb": 47.4
+        },
+        {
+          "url": "fonts/dancing-script-latin.woff2",
+          "kb": 42
+        },
+        {
+          "url": "4c/prototipo.css",
+          "kb": 11.3
+        },
+        {
+          "url": "estilos/tokens.css",
+          "kb": 4.6
+        },
+        {
+          "url": "estilos/fonts.css",
+          "kb": 2.6
+        },
+        {
+          "url": "4c/index.html",
+          "kb": 1.8
+        }
+      ]
+    },
+    "motion": []
+  }
+}
