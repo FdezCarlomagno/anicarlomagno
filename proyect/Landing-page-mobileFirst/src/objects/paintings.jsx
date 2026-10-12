@@ -32,9 +32,9 @@ import cuadro34 from '../pages/pagesStyles/paintingsImgs/Primavera.jpeg'
 const paintings = [
     { src: cuadro28, name: 'Dama de Bouquet', price: `$${4635}`, offer: false, description: 'Cuadro en acrilico, realizado sobre bastidor de madera.', size: '80x60', sold: false },
     { src: cuadro29, name: 'Diosa Floral', price: `$${4635}`, offer: false, description: 'Cuadro en acrilico, realizado sobre bastidor de madera.', size: '80x60', sold: false },
-    { src: cuadro30, name: 'Floralia', price: `$${4635}`, offer: false, description: 'Cuadro en acrilico, realizado sobre bastidor de madera.', size: '80x60', sold: false },
+    { src: cuadro30, name: 'Floralia', price: `$${4635}`, offer: false, description: 'Cuadro en acrilico, realizado sobre bastidor de madera.', size: '60x60', sold: false },
     { src: cuadro31, name: 'Jardín de Prisma', price: `$${4635}`, offer: false, description: 'Cuadro en acrilico, realizado sobre bastidor de madera.', size: '80x60', sold: false },
-    { src: cuadro32, name: 'Kiara', price: `$${4635}`, offer: false, description: 'Cuadro en acrilico, realizado sobre bastidor de madera.', size: '80x60', sold: false },
+    { src: cuadro32, name: 'Kiara', price: `$${4635}`, offer: false, description: 'Cuadro en acrilico, realizado sobre bastidor de madera.', size: '60x60', sold: false },
     { src: cuadro33, name: 'La Dama Argentina', price: `$${4635}`, offer: false, description: 'Cuadro en acrilico, realizado sobre bastidor de madera.', size: '80x60', sold: false },
     { src: cuadro34, name: 'Primavera', price: `$${4635}`, offer: false, description: 'Cuadro en acrilico, realizado sobre bastidor de madera.', size: '80x60', sold: false },
     { src: cuadro25, name: 'Femme d\'eau', price: `$${4635}`, offer: false, description: 'Acuarela sobre papel enmarcada con vidrio.', size: '50x70', sold: false },
