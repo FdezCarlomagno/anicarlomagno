@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types -- el proyecto no usa prop-types */
-import { Fragment, useMemo } from 'react';
+import { useMemo } from 'react';
 import './pagesStyles/paintings.css';
 import Cuadro from '../components/Cuadro.jsx';
 import '../components/Cuadro.css';
@@ -33,8 +33,7 @@ const AnimatedCuadro = ({ painting }) => {
     );
 };
 
-// Invitación a encargar una obra a medida, dentro de la grilla (no al final de la página).
-const CUSTOM_TILE_AT = 5;
+// Invitación a encargar una obra a medida: cierra la grilla, como una tarjeta más.
 
 const CustomTile = () => (
     <li className="pc-item">
@@ -113,13 +112,10 @@ const Paintings = () => {
             />
 
             <ul className="pc-grid">
-                {filteredPaintings.map((cuadro, i) => (
-                    <Fragment key={cuadro.name}>
-                        {i === CUSTOM_TILE_AT && <CustomTile />}
-                        <AnimatedCuadro painting={cuadro} />
-                    </Fragment>
+                {filteredPaintings.map((cuadro) => (
+                    <AnimatedCuadro key={cuadro.name} painting={cuadro} />
                 ))}
-                {filteredPaintings.length > 0 && filteredPaintings.length <= CUSTOM_TILE_AT && <CustomTile />}
+                {filteredPaintings.length > 0 && <CustomTile />}
             </ul>
 
             {filteredPaintings.length === 0 && (
