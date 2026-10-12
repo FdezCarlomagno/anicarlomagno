@@ -43,8 +43,11 @@ const NavBar = () => {
   // y devuelve el foco al botón al cerrar.
   useEffect(() => {
     if (!menu) return undefined;
-    const previousOverflow = document.body.style.overflow;
-    document.body.style.overflow = 'hidden';
+    // Se bloquea en <html>: con overflow-x: clip en html/body, un overflow en <body>
+    // lo convierte en contenedor de scroll y la barra sticky se va con la página.
+    const root = document.documentElement;
+    const previousOverflow = root.style.overflow;
+    root.style.overflow = 'hidden';
     firstLinkRef.current?.focus();
 
     const onKey = (e) => {
@@ -60,7 +63,7 @@ const NavBar = () => {
     document.addEventListener('keydown', onKey);
     mq.addEventListener('change', onMq);
     return () => {
-      document.body.style.overflow = previousOverflow;
+      root.style.overflow = previousOverflow;
       document.removeEventListener('keydown', onKey);
       mq.removeEventListener('change', onMq);
     };

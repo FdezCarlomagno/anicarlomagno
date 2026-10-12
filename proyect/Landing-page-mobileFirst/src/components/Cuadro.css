@@ -1,0 +1,299 @@
+/* Tarjeta de obra — galería moderna. La obra se muestra completa, sin recortes ni filtros. */
+
+.pc {
+    --pc-accent: blueviolet;
+    --pc-ink: #1d1626;
+    --pc-muted: #4a4256;
+    --pc-ease: cubic-bezier(0.22, 1, 0.36, 1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #fff;
+    border: 1px solid rgba(138, 43, 226, 0.14);
+    box-shadow: 0 8px 24px rgba(60, 20, 120, 0.08);
+    color: var(--pc-ink);
+    transition: transform 0.4s var(--pc-ease), box-shadow 0.4s var(--pc-ease);
+}
+
+.pc-media {
+    position: relative;
+    display: grid;
+    place-items: center;
+    flex: none;
+    aspect-ratio: 4 / 5;
+    min-height: 0;
+    overflow: hidden;
+    padding: 10px;
+    background: linear-gradient(160deg, #f4eefb, #ebe2f6);
+    line-height: 0;
+}
+
+.pc .pc-media img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 10px 24px rgba(40, 15, 80, 0.22);
+}
+
+.pc-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    line-height: 1.2;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.pc-badge.is-offer { background: rgba(255, 255, 255, 0.92); color: #9b1c1c; }
+.pc-badge.is-sold { background: rgba(29, 22, 38, 0.82); color: #fff; }
+
+.pc-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 20px;
+}
+
+.pc-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+}
+
+.pc .pc-name {
+    margin: 0;
+    font-family: "Dancing Script", cursive;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.1;
+    text-align: left;
+}
+
+.pc-size {
+    flex: none;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: rgba(138, 43, 226, 0.09);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--pc-accent);
+}
+
+.pc-tech {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--pc-muted);
+}
+
+.pc-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #1f9d55;
+}
+
+.pc-dot.is-sold { background: #8c8498; }
+
+.pc .pc-desc {
+    width: auto;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 15px;
+    line-height: 1.6;
+    text-align: left;
+    color: var(--pc-muted);
+}
+
+.pc-desc.is-clamped {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.pc .pc-more {
+    min-height: 44px;
+    margin: -10px 0 6px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    font: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--pc-accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    cursor: pointer;
+}
+
+.pc .pc-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    min-height: 48px;
+    margin-top: auto;
+    padding: 0 20px;
+    border: 1.5px solid var(--pc-accent);
+    border-radius: 999px;
+    background: var(--pc-accent);
+    font: inherit;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.25s ease, color 0.25s ease, transform 0.25s var(--pc-ease);
+}
+
+.pc-cta svg {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.pc.is-sold .pc-cta { background: transparent; color: var(--pc-accent); }
+
+.pc-sr {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+
+.pc-cta:focus-visible,
+.pc-more:focus-visible { outline: 3px solid var(--pc-accent); outline-offset: 3px; border-radius: 999px; }
+
+@media (hover: hover) {
+    .pc:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(60, 20, 120, 0.16); }
+    .pc .pc-cta:hover { background: rgb(106, 20, 190); border-color: rgb(106, 20, 190); color: #fff; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .pc,
+    .pc .pc-cta { transition: none; }
+    .pc:hover { transform: none; }
+}
+
+/* ---- Grilla de obras: filas parejas, la obra se ve completa sobre un paspartú ---- */
+.pc-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    max-width: 1320px;
+    margin: 12px auto 40px;
+    padding: 0 16px;
+    list-style: none;
+}
+
+.pc-item { min-width: 0; }
+
+@media (min-width: 640px) {
+    .pc-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 0 24px; }
+}
+
+@media (min-width: 1024px) {
+    .pc-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; padding: 0 32px; }
+}
+
+@media (min-width: 1500px) {
+    .pc-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+/* ---- Invitación a encargar una obra a medida, dentro de la grilla ---- */
+.pc-custom {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+    height: 100%;
+    min-height: 260px;
+    padding: 28px 24px;
+    border-radius: 20px;
+    background:
+        radial-gradient(120% 80% at 100% 0%, rgba(214, 180, 252, 0.35), transparent 60%),
+        linear-gradient(160deg, #3b1670, #1a1024);
+    color: #f3ecfb;
+    text-decoration: none;
+    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s ease;
+}
+
+.pc-custom-eyebrow {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgb(214, 180, 252);
+}
+
+.pc-custom-title {
+    font-family: "Dancing Script", cursive;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.pc-custom-text { font-size: 16px; line-height: 1.5; color: rgba(243, 236, 251, 0.78); }
+
+.pc-custom-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 44px;
+    margin-top: 6px;
+    font-weight: 700;
+    color: #fff;
+    border-bottom: 2px solid rgb(214, 180, 252);
+    transition: gap 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.pc-custom-cta svg {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.pc-custom:focus-visible { outline: 3px solid blueviolet; outline-offset: 4px; }
+
+@media (hover: hover) {
+    .pc-custom:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(60, 20, 120, 0.3); }
+    .pc-custom:hover .pc-custom-cta { gap: 14px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .pc-custom,
+    .pc-custom-cta { transition: none; }
+    .pc-custom:hover { transform: none; }
+}

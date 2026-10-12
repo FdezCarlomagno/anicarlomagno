@@ -1,104 +1,137 @@
-import React, { useEffect, useState } from 'react';
+import React, { Fragment, useMemo } from 'react';
 import './pagesStyles/paintings.css';
 import Cuadro from '../components/Cuadro.jsx';
+import '../components/Cuadro.css';
+import StockFilters from '../components/StockFilters.jsx';
 import paintings from '../objects/paintings.jsx';
-import { Link } from 'react-router-dom';
-import { useInView } from 'react-intersection-observer';
-import { motion } from 'framer-motion';
+import { Link, useSearchParams } from 'react-router-dom';
+import { motion, useReducedMotion } from 'framer-motion';
+import {
+    DEFAULT_FILTERS,
+    SHAPE_OPTIONS,
+    SORT_OPTIONS,
+    STATUS_OPTIONS,
+    TECHNIQUE_OPTIONS,
+    applyFilters,
+    enrich,
+} from './stockFilters.js';
 
-// Componente separado para el cuadro animado
+// Cada obra aparece con un fade-up suave al entrar en pantalla.
 const AnimatedCuadro = ({ painting }) => {
-    const [ref, inView] = useInView({
-        threshold: 0.05,
-        triggerOnce: true
-    });
-
+    const reduceMotion = useReducedMotion();
     return (
-        <motion.div
-            className="cuadro"
-            ref={ref}
-            initial={{ scale: 0.9, rotate: -5, y: 20 }}
-            animate={inView ? { scale: 1, rotate: 0, y: 0 } : {}}
-            transition={{ duration: 0.7 }}
+        <motion.li
+            className="pc-item"
+            initial={reduceMotion ? false : { opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.1 }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         >
             <Cuadro painting={painting} />
-        </motion.div>
+        </motion.li>
     );
 };
 
-const Paintings = () => {
-    const [filteredPaintings, setFilteredPaintings] = useState(paintings);
-    const [filter, setFilter] = useState('all');
+// Invitación a encargar una obra a medida, dentro de la grilla (no al final de la página).
+const CUSTOM_TILE_AT = 5;
 
-    const handleFilter = (filterType) => {
-        setFilter(filterType);
-        
-        switch(filterType) {
-            case 'available':
-                setFilteredPaintings(paintings.filter(cuadro => !cuadro.sold));
-                break;
-            case 'sold':
-                setFilteredPaintings(paintings.filter(cuadro => cuadro.sold));
-                break;
-            default:
-                setFilteredPaintings(paintings);
-                break;
-        }
+const CustomTile = () => (
+    <li className="pc-item">
+        <Link to="/obra-personalizada" className="pc-custom">
+            <span className="pc-custom-eyebrow">A tu medida</span>
+            <span className="pc-custom-title">¿Querés una obra única?</span>
+            <span className="pc-custom-text">La pinto a mano a partir de tus fotos. Contame tu idea.</span>
+            <span className="pc-custom-cta">
+                Encargar mi obra
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </span>
+        </Link>
+    </li>
+);
+
+const allPaintings = enrich(paintings);
+
+// Los filtros viven en la URL (?q=&estado=...): se pueden compartir y sobreviven al volver atrás.
+const readFilters = (params) => {
+    const pick = (value, allowed, fallback) => (allowed.includes(value) ? value : fallback);
+    return {
+        q: params.get('q') || '',
+        status: pick(params.get('estado'), STATUS_OPTIONS.map((o) => o.value), 'all'),
+        technique: pick(params.get('tecnica'), TECHNIQUE_OPTIONS, ''),
+        shape: pick(params.get('forma'), SHAPE_OPTIONS, ''),
+        discount: params.get('descuento') === '1',
+        sort: pick(params.get('orden'), SORT_OPTIONS.map((o) => o.value), 'default'),
     };
+};
 
-    // Efecto para inicializar con todas las pinturas
-    useEffect(() => {
-        setFilteredPaintings(paintings);
-    }, []);
+const writeFilters = (f) => {
+    const params = new URLSearchParams();
+    if (f.q) params.set('q', f.q);
+    if (f.status !== 'all') params.set('estado', f.status);
+    if (f.technique) params.set('tecnica', f.technique);
+    if (f.shape) params.set('forma', f.shape);
+    if (f.discount) params.set('descuento', '1');
+    if (f.sort !== 'default') params.set('orden', f.sort);
+    return params;
+};
+
+const Paintings = () => {
+    const [searchParams, setSearchParams] = useSearchParams();
+    const filters = readFilters(searchParams);
+
+    const update = (patch) => setSearchParams(writeFilters({ ...filters, ...patch }), { replace: true });
+    const reset = () => setSearchParams(writeFilters(DEFAULT_FILTERS), { replace: true });
+
+    const filteredPaintings = useMemo(
+        () => applyFilters(allPaintings, filters),
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        [searchParams],
+    );
+
+    const counts = {
+        all: allPaintings.length,
+        available: allPaintings.filter((p) => !p.sold).length,
+        sold: allPaintings.filter((p) => p.sold).length,
+    };
+    const hasActive = JSON.stringify(filters) !== JSON.stringify(DEFAULT_FILTERS);
 
     return (
         <main className="paintings">
             <div className="titleBg">
                 <h1 className='myPaintingsTitle'>Obras en stock</h1>
             </div>
-            
-            {/* Filtros */}
-            <div className="filters-container">
-                <button 
-                    className={`filter-btn ${filter === 'all' ? 'active' : ''}`}
-                    onClick={() => handleFilter('all')}
-                >
-                    Todas las obras
-                </button>
-                <button 
-                    className={`filter-btn ${filter === 'available' ? 'active' : ''}`}
-                    onClick={() => handleFilter('available')}
-                >
-                    Disponibles
-                </button>
-                <button 
-                    className={`filter-btn ${filter === 'sold' ? 'active' : ''}`}
-                    onClick={() => handleFilter('sold')}
-                >
-                    Vendidas
-                </button>
-            </div>
 
-            <div className="paintingsColumn">
-                {filteredPaintings.map((cuadro) => (
-                    <AnimatedCuadro 
-                        key={cuadro.name} 
-                        painting={cuadro} 
-                    />
+            <StockFilters
+                filters={filters}
+                counts={counts}
+                onChange={update}
+                onReset={reset}
+                resultCount={filteredPaintings.length}
+                total={allPaintings.length}
+                hasActive={hasActive}
+            />
+
+            <ul className="pc-grid">
+                {filteredPaintings.map((cuadro, i) => (
+                    <Fragment key={cuadro.name}>
+                        {i === CUSTOM_TILE_AT && <CustomTile />}
+                        <AnimatedCuadro painting={cuadro} />
+                    </Fragment>
                 ))}
-            </div>
+                {filteredPaintings.length > 0 && filteredPaintings.length <= CUSTOM_TILE_AT && <CustomTile />}
+            </ul>
 
             {filteredPaintings.length === 0 && (
-                <div className="no-results">
-                    <p>No se encontraron obras con este filtro.</p>
+                <div className="sf-empty">
+                    <p className="sf-empty-title">No encontramos obras con esos filtros</p>
+                    <p>Probá con otra búsqueda o sacá algún filtro.</p>
+                    <div className="sf-empty-actions">
+                        <button type="button" className="sf-empty-btn" onClick={reset}>Limpiar filtros</button>
+                        <Link to="/obra-personalizada">¿Buscás algo distinto? Encargá una a tu medida →</Link>
+                    </div>
                 </div>
             )}
 
-            <div className='titleAndbtn'>
-                <Link to='/obra-personalizada'>
-                    <button className='btnAgenda' id='btnPainting'>Quiero mi obra</button>
-                </Link>
-            </div>
         </main>
     );
 }
