@@ -16,7 +16,7 @@
   panel.querySelector('[data-menu-close]').addEventListener('click', () => setOpen(false));
   panel.addEventListener('click', (e) => { if (e.target.closest('a')) setOpen(false, false); });
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !panel.hidden) setOpen(false); });
-  if (location.hash === '#menu') setOpen(true, false);
+  if (location.hash === '#menu') requestAnimationFrame(() => setOpen(true));
 
   if (!('IntersectionObserver' in window)) return;
 

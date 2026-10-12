@@ -1,0 +1,2954 @@
+{
+  "360": {
+    "title": "Prototipo C2: inmersiva clara | anicarlomagno",
+    "lang": "es-AR",
+    "robots": "noindex, nofollow",
+    "h1": 1,
+    "headings": [
+      "H1: anicarlomagno artista plástica",
+      "H2: Obras destacadas",
+      "H2: Obra disponible",
+      "H3: La Dama Dorada",
+      "H2: Mi recorrido",
+      "H3: [Nombre de la primera etapa] Provisorio",
+      "H3: [Nombre de la etapa actual] Provisorio",
+      "H2: ¿Te gustó una obra?"
+    ],
+    "scrollWidth": 360,
+    "clientWidth": 360,
+    "overflowing": [],
+    "textUnder16": [],
+    "smallTargets": [],
+    "contrastFails": [],
+    "textOnMuro": [],
+    "contrastAll": [
+      {
+        "text": "Saltar al contenido",
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgb(138, 43, 226)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 5.96,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "Menú",
+        "color": "rgb(36, 36, 36)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 16,
+        "weight": 600,
+        "ratio": 15.52,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "anicarlomagno",
+        "color": "rgb(36, 36, 36)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 44,
+        "weight": 700,
+        "ratio": 15.52,
+        "min": 3,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "artista plástica",
+        "color": "rgb(68, 68, 68)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 20,
+        "weight": 700,
+        "ratio": 9.74,
+        "min": 3,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "Agendas y cuadernos",
+        "color": "rgb(138, 43, 226)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 16,
+        "weight": 600,
+        "ratio": 5.96,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "Ani, en la portada del sitio actual",
+        "color": "rgb(68, 68, 68)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 9.74,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "Provisorio",
+        "color": "rgb(36, 36, 36)",
+        "bg": "rgb(240, 240, 240)",
+        "size": 16,
+        "weight": 600,
+        "ratio": 13.62,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "Acrílico con espátula, 80 × 60 cm",
+        "color": "rgb(102, 102, 102)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 5.74,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "Prototipo C2: la misma escena con un fondo claro (",
+        "color": "rgb(68, 68, 68)",
+        "bg": "rgb(240, 240, 240)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 8.55,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "Ver las variantes",
+        "color": "rgb(138, 43, 226)",
+        "bg": "rgb(240, 240, 240)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 5.23,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "anicarlomagno",
+        "color": "rgb(36, 36, 36)",
+        "bg": "rgb(240, 248, 255)",
+        "size": 24,
+        "weight": 700,
+        "ratio": 14.47,
+        "min": 3,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "Envíos a todo el país.",
+        "color": "rgb(68, 68, 68)",
+        "bg": "rgb(240, 248, 255)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 9.08,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "Instagram (se abre en una pestaña nueva)",
+        "color": "rgb(138, 43, 226)",
+        "bg": "rgb(240, 248, 255)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 5.55,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      }
+    ],
+    "minContrast": 5.23,
+    "muro": {
+      "bg": "rgb(240, 248, 255)",
+      "pageBg": "rgb(255, 255, 255)",
+      "ratioVsPage": null
+    },
+    "images": [
+      {
+        "src": "Aurora.jpg",
+        "alt": "Aurora: mujer de ojo celeste y labios rojos, con mariposas de colores en el pelo, pintada con trazos gruesos sobre un fondo de franjas azules y negras.",
+        "wAttr": "2693",
+        "hAttr": "3659",
+        "loading": "auto",
+        "natural": [
+          2693,
+          3659
+        ],
+        "rendered": [
+          324,
+          440
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "filter": "none",
+        "radius": "0px",
+        "textOver": []
+      },
+      {
+        "src": "VEIL.jpeg",
+        "alt": "Veil: mujer de pelo largo con mariposas celestes y naranjas que le cubren los ojos, sobre un fondo de trazos rojizos.",
+        "wAttr": "1180",
+        "hAttr": "1600",
+        "loading": "lazy",
+        "natural": [
+          1180,
+          1600
+        ],
+        "rendered": [
+          328,
+          445
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "filter": "none",
+        "radius": "0px",
+        "textOver": []
+      },
+      {
+        "src": "Butterfly-Queen.jpeg",
+        "alt": "Butterfly Queen: mujer de ojo gris con una mariposa monarca sobre el otro ojo y la mano en el mentón, sobre un fondo azul con manchas fucsia.",
+        "wAttr": "1207",
+        "hAttr": "1600",
+        "loading": "lazy",
+        "natural": [
+          1207,
+          1600
+        ],
+        "rendered": [
+          328,
+          435
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "filter": "none",
+        "radius": "0px",
+        "textOver": []
+      },
+      {
+        "src": "Vanessa.jpeg",
+        "alt": "Vanessa: mujer con mariposas azules y amarillas sobre los ojos, pintada con trazos gruesos de colores sobre fondo negro.",
+        "wAttr": "1598",
+        "hAttr": "1600",
+        "loading": "lazy",
+        "natural": [
+          1598,
+          1600
+        ],
+        "rendered": [
+          328,
+          328
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "filter": "none",
+        "radius": "0px",
+        "textOver": []
+      },
+      {
+        "src": "la-dama-dorada.jpeg",
+        "alt": "La Dama Dorada: mujer de ojos grandes con corona, aros y mariposas en dorado, sobre un fondo turquesa con manchas de oro.",
+        "wAttr": "1200",
+        "hAttr": "1600",
+        "loading": "lazy",
+        "natural": [
+          1200,
+          1600
+        ],
+        "rendered": [
+          328,
+          437
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "filter": "none",
+        "radius": "0px",
+        "textOver": []
+      },
+      {
+        "src": "Lucia.jpeg",
+        "alt": "Lucía: mujer rubia de ojos azules con una corona de flores naranjas, mariposas y un pájaro en el hombro, sobre un fondo turquesa.",
+        "wAttr": "1280",
+        "hAttr": "1263",
+        "loading": "lazy",
+        "natural": [
+          1280,
+          1263
+        ],
+        "rendered": [
+          156,
+          154
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "filter": "none",
+        "radius": "0px",
+        "textOver": []
+      },
+      {
+        "src": "Helena.jpeg",
+        "alt": "Helena: mujer de pelo negro ondulado y escamas de sirena, rodeada de peces dorados, burbujas y estrellas de mar fucsia, sobre fondo azul.",
+        "wAttr": "1092",
+        "hAttr": "1280",
+        "loading": "lazy",
+        "natural": [
+          1092,
+          1280
+        ],
+        "rendered": [
+          156,
+          183
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "filter": "none",
+        "radius": "0px",
+        "textOver": []
+      },
+      {
+        "src": "EUPHORIA.jpeg",
+        "alt": "Euphoria: rostro de mujer de grandes ojos marrones, pintado con espátula en pinceladas gruesas de rosa, fucsia, celeste y negro.",
+        "wAttr": "1600",
+        "hAttr": "1576",
+        "loading": "lazy",
+        "natural": [
+          1600,
+          1576
+        ],
+        "rendered": [
+          156,
+          154
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "filter": "none",
+        "radius": "0px",
+        "textOver": []
+      },
+      {
+        "src": "Scarlet.jpeg",
+        "alt": "Scarlet: rostro de mujer en blanco y negro con ojos rosados, cruzado por pinceladas gruesas fucsia sobre un fondo de trazos negros y blancos.",
+        "wAttr": "1168",
+        "hAttr": "1280",
+        "loading": "lazy",
+        "natural": [
+          1168,
+          1280
+        ],
+        "rendered": [
+          156,
+          171
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "filter": "none",
+        "radius": "0px",
+        "textOver": []
+      }
+    ],
+    "imgProblems": [],
+    "stillWaiting": 0,
+    "pageHeight": 6442,
+    "viewport": [
+      360,
+      740
+    ],
+    "loadState": {
+      "revealables": 8,
+      "waiting": 8,
+      "waitingInFirstScreen": 0,
+      "minOpacityWaiting": 0.3
+    },
+    "hero": {
+      "viewport": [
+        360,
+        740
+      ],
+      "natural": [
+        2693,
+        3659
+      ],
+      "ratio": 0.736,
+      "rendered": [
+        324,
+        440
+      ],
+      "top": 89,
+      "bottom": 529,
+      "artworkVisiblePct": 100,
+      "viewportCoveredByArtworkPct": 53.5,
+      "muroBox": [
+        360,
+        482
+      ],
+      "ifCoverInMuroVisiblePct": 98.6,
+      "ifCoverFullViewportVisiblePct": 66.1,
+      "h1InFirstScreen": true,
+      "ctaInFirstScreen": true,
+      "downscale": 8.3
+    },
+    "transferAtLoad": {
+      "totalKB": 2547,
+      "requests": 10
+    },
+    "transferFull": {
+      "totalKB": 5109,
+      "requests": 16,
+      "list": [
+        {
+          "url": "obras/Aurora.jpg",
+          "kb": 1485
+        },
+        {
+          "url": "obras/Vanessa.jpeg",
+          "kb": 673.1
+        },
+        {
+          "url": "obras/EUPHORIA.jpeg",
+          "kb": 600.4
+        },
+        {
+          "url": "obras/VEIL.jpeg",
+          "kb": 509.6
+        },
+        {
+          "url": "obras/la-dama-dorada.jpeg",
+          "kb": 488
+        },
+        {
+          "url": "obras/Butterfly-Queen.jpeg",
+          "kb": 428.4
+        },
+        {
+          "url": "obras/Lucia.jpeg",
+          "kb": 298.2
+        },
+        {
+          "url": "obras/Helena.jpeg",
+          "kb": 251.8
+        },
+        {
+          "url": "obras/Scarlet.jpeg",
+          "kb": 251.5
+        },
+        {
+          "url": "fonts/raleway-latin.woff2",
+          "kb": 47.4
+        },
+        {
+          "url": "fonts/dancing-script-latin.woff2",
+          "kb": 42
+        },
+        {
+          "url": "4c/c2-clara.html",
+          "kb": 12.9
+        },
+        {
+          "url": "4c/prototipo.css",
+          "kb": 11.3
+        },
+        {
+          "url": "estilos/tokens.css",
+          "kb": 4.6
+        },
+        {
+          "url": "4c/prototipo.js",
+          "kb": 2.7
+        },
+        {
+          "url": "estilos/fonts.css",
+          "kb": 2.6
+        }
+      ]
+    },
+    "floating": {
+      "fixed": [
+        "wsp wsp-oculto"
+      ],
+      "steps": 32,
+      "visibleSteps": 18,
+      "shownAtTop": false,
+      "coveredTargets": {},
+      "coveredText": {
+        "span: Acrílico sobre bastidor (medida a confirmar)": 1,
+        "span: Vendida": 2,
+        "dd: Acrílico sobre bastidor de madera, detalles en dor": 1,
+        "dd: 80 × 60 cm": 1,
+        "dd: Disponible": 1,
+        "span: Helena": 1,
+        "p: [Años] [Dos líneas de Ani sobre lo que cambió: el ": 1,
+        "span: Obras elegidas por rasgos de estilo, no por fecha:": 1
+      },
+      "coveredAtPageEnd": []
+    },
+    "motion": [
+      {
+        "el": "figure.obra",
+        "animation": null,
+        "transition": "opacity, transform 0.3s, 0.3s"
+      },
+      {
+        "el": "figure.obra",
+        "animation": null,
+        "transition": "opacity, transform 0.3s, 0.3s"
+      },
+      {
+        "el": "figure.obra",
+        "animation": null,
+        "transition": "opacity, transform 0.3s, 0.3s"
+      },
+      {
+        "el": "figure.obra",
+        "animation": null,
+        "transition": "opacity, transform 0.3s, 0.3s"
+      },
+      {
+        "el": "figure.obra",
+        "animation": null,
+        "transition": "opacity, transform 0.3s, 0.3s"
+      },
+      {
+        "el": "figure.obra",
+        "animation": null,
+        "transition": "opacity, transform 0.3s, 0.3s"
+      },
+      {
+        "el": "figure.obra",
+        "animation": null,
+        "transition": "opacity, transform 0.3s, 0.3s"
+      },
+      {
+        "el": "figure.obra",
+        "animation": null,
+        "transition": "opacity, transform 0.3s, 0.3s"
+      },
+      {
+        "el": "a.wsp wsp-oculto",
+        "animation": null,
+        "transition": "opacity, visibility 0.2s, 0.2s"
+      }
+    ]
+  },
+  "390": {
+    "title": "Prototipo C2: inmersiva clara | anicarlomagno",
+    "lang": "es-AR",
+    "robots": "noindex, nofollow",
+    "h1": 1,
+    "headings": [
+      "H1: anicarlomagno artista plástica",
+      "H2: Obras destacadas",
+      "H2: Obra disponible",
+      "H3: La Dama Dorada",
+      "H2: Mi recorrido",
+      "H3: [Nombre de la primera etapa] Provisorio",
+      "H3: [Nombre de la etapa actual] Provisorio",
+      "H2: ¿Te gustó una obra?"
+    ],
+    "scrollWidth": 390,
+    "clientWidth": 390,
+    "overflowing": [],
+    "textUnder16": [],
+    "smallTargets": [],
+    "contrastFails": [],
+    "textOnMuro": [],
+    "contrastAll": [
+      {
+        "text": "Saltar al contenido",
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgb(138, 43, 226)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 5.96,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "Menú",
+        "color": "rgb(36, 36, 36)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 16,
+        "weight": 600,
+        "ratio": 15.52,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "anicarlomagno",
+        "color": "rgb(36, 36, 36)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 44,
+        "weight": 700,
+        "ratio": 15.52,
+        "min": 3,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "artista plástica",
+        "color": "rgb(68, 68, 68)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 20,
+        "weight": 700,
+        "ratio": 9.74,
+        "min": 3,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "Agendas y cuadernos",
+        "color": "rgb(138, 43, 226)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 16,
+        "weight": 600,
+        "ratio": 5.96,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "Ani, en la portada del sitio actual",
+        "color": "rgb(68, 68, 68)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 9.74,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "Provisorio",
+        "color": "rgb(36, 36, 36)",
+        "bg": "rgb(240, 240, 240)",
+        "size": 16,
+        "weight": 600,
+        "ratio": 13.62,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "Acrílico con espátula, 80 × 60 cm",
+        "color": "rgb(102, 102, 102)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 5.74,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "Prototipo C2: la misma escena con un fondo claro (",
+        "color": "rgb(68, 68, 68)",
+        "bg": "rgb(240, 240, 240)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 8.55,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "Ver las variantes",
+        "color": "rgb(138, 43, 226)",
+        "bg": "rgb(240, 240, 240)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 5.23,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "anicarlomagno",
+        "color": "rgb(36, 36, 36)",
+        "bg": "rgb(240, 248, 255)",
+        "size": 24,
+        "weight": 700,
+        "ratio": 14.47,
+        "min": 3,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "Envíos a todo el país.",
+        "color": "rgb(68, 68, 68)",
+        "bg": "rgb(240, 248, 255)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 9.08,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "Instagram (se abre en una pestaña nueva)",
+        "color": "rgb(138, 43, 226)",
+        "bg": "rgb(240, 248, 255)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 5.55,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      }
+    ],
+    "minContrast": 5.23,
+    "muro": {
+      "bg": "rgb(240, 248, 255)",
+      "pageBg": "rgb(255, 255, 255)",
+      "ratioVsPage": null
+    },
+    "images": [
+      {
+        "src": "Aurora.jpg",
+        "alt": "Aurora: mujer de ojo celeste y labios rojos, con mariposas de colores en el pelo, pintada con trazos gruesos sobre un fondo de franjas azules y negras.",
+        "wAttr": "2693",
+        "hAttr": "3659",
+        "loading": "auto",
+        "natural": [
+          2693,
+          3659
+        ],
+        "rendered": [
+          358,
+          486
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "filter": "none",
+        "radius": "0px",
+        "textOver": []
+      },
+      {
+        "src": "VEIL.jpeg",
+        "alt": "Veil: mujer de pelo largo con mariposas celestes y naranjas que le cubren los ojos, sobre un fondo de trazos rojizos.",
+        "wAttr": "1180",
+        "hAttr": "1600",
+        "loading": "lazy",
+        "natural": [
+          1180,
+          1600
+        ],
+        "rendered": [
+          358,
+          485
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "filter": "none",
+        "radius": "0px",
+        "textOver": []
+      },
+      {
+        "src": "Butterfly-Queen.jpeg",
+        "alt": "Butterfly Queen: mujer de ojo gris con una mariposa monarca sobre el otro ojo y la mano en el mentón, sobre un fondo azul con manchas fucsia.",
+        "wAttr": "1207",
+        "hAttr": "1600",
+        "loading": "lazy",
+        "natural": [
+          1207,
+          1600
+        ],
+        "rendered": [
+          358,
+          475
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "filter": "none",
+        "radius": "0px",
+        "textOver": []
+      },
+      {
+        "src": "Vanessa.jpeg",
+        "alt": "Vanessa: mujer con mariposas azules y amarillas sobre los ojos, pintada con trazos gruesos de colores sobre fondo negro.",
+        "wAttr": "1598",
+        "hAttr": "1600",
+        "loading": "lazy",
+        "natural": [
+          1598,
+          1600
+        ],
+        "rendered": [
+          358,
+          358
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "filter": "none",
+        "radius": "0px",
+        "textOver": []
+      },
+      {
+        "src": "la-dama-dorada.jpeg",
+        "alt": "La Dama Dorada: mujer de ojos grandes con corona, aros y mariposas en dorado, sobre un fondo turquesa con manchas de oro.",
+        "wAttr": "1200",
+        "hAttr": "1600",
+        "loading": "lazy",
+        "natural": [
+          1200,
+          1600
+        ],
+        "rendered": [
+          358,
+          477
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "filter": "none",
+        "radius": "0px",
+        "textOver": []
+      },
+      {
+        "src": "Lucia.jpeg",
+        "alt": "Lucía: mujer rubia de ojos azules con una corona de flores naranjas, mariposas y un pájaro en el hombro, sobre un fondo turquesa.",
+        "wAttr": "1280",
+        "hAttr": "1263",
+        "loading": "lazy",
+        "natural": [
+          1280,
+          1263
+        ],
+        "rendered": [
+          171,
+          169
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "filter": "none",
+        "radius": "0px",
+        "textOver": []
+      },
+      {
+        "src": "Helena.jpeg",
+        "alt": "Helena: mujer de pelo negro ondulado y escamas de sirena, rodeada de peces dorados, burbujas y estrellas de mar fucsia, sobre fondo azul.",
+        "wAttr": "1092",
+        "hAttr": "1280",
+        "loading": "lazy",
+        "natural": [
+          1092,
+          1280
+        ],
+        "rendered": [
+          171,
+          200
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "filter": "none",
+        "radius": "0px",
+        "textOver": []
+      },
+      {
+        "src": "EUPHORIA.jpeg",
+        "alt": "Euphoria: rostro de mujer de grandes ojos marrones, pintado con espátula en pinceladas gruesas de rosa, fucsia, celeste y negro.",
+        "wAttr": "1600",
+        "hAttr": "1576",
+        "loading": "lazy",
+        "natural": [
+          1600,
+          1576
+        ],
+        "rendered": [
+          171,
+          168
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "filter": "none",
+        "radius": "0px",
+        "textOver": []
+      },
+      {
+        "src": "Scarlet.jpeg",
+        "alt": "Scarlet: rostro de mujer en blanco y negro con ojos rosados, cruzado por pinceladas gruesas fucsia sobre un fondo de trazos negros y blancos.",
+        "wAttr": "1168",
+        "hAttr": "1280",
+        "loading": "lazy",
+        "natural": [
+          1168,
+          1280
+        ],
+        "rendered": [
+          171,
+          187
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "filter": "none",
+        "radius": "0px",
+        "textOver": []
+      }
+    ],
+    "imgProblems": [],
+    "stillWaiting": 0,
+    "pageHeight": 6668,
+    "viewport": [
+      390,
+      844
+    ],
+    "loadState": {
+      "revealables": 8,
+      "waiting": 8,
+      "waitingInFirstScreen": 0,
+      "minOpacityWaiting": 0.3
+    },
+    "hero": {
+      "viewport": [
+        390,
+        844
+      ],
+      "natural": [
+        2693,
+        3659
+      ],
+      "ratio": 0.736,
+      "rendered": [
+        358,
+        486
+      ],
+      "top": 118,
+      "bottom": 604,
+      "artworkVisiblePct": 100,
+      "viewportCoveredByArtworkPct": 52.9,
+      "muroBox": [
+        390,
+        586
+      ],
+      "ifCoverInMuroVisiblePct": 90.4,
+      "ifCoverFullViewportVisiblePct": 62.8,
+      "h1InFirstScreen": true,
+      "ctaInFirstScreen": true,
+      "downscale": 7.5
+    },
+    "transferAtLoad": {
+      "totalKB": 2118,
+      "requests": 9
+    },
+    "transferFull": {
+      "totalKB": 5110,
+      "requests": 16,
+      "list": [
+        {
+          "url": "obras/Aurora.jpg",
+          "kb": 1485
+        },
+        {
+          "url": "obras/Vanessa.jpeg",
+          "kb": 673.1
+        },
+        {
+          "url": "obras/EUPHORIA.jpeg",
+          "kb": 600.4
+        },
+        {
+          "url": "obras/VEIL.jpeg",
+          "kb": 509.6
+        },
+        {
+          "url": "obras/la-dama-dorada.jpeg",
+          "kb": 488
+        },
+        {
+          "url": "obras/Butterfly-Queen.jpeg",
+          "kb": 428.4
+        },
+        {
+          "url": "obras/Lucia.jpeg",
+          "kb": 298.2
+        },
+        {
+          "url": "obras/Helena.jpeg",
+          "kb": 251.8
+        },
+        {
+          "url": "obras/Scarlet.jpeg",
+          "kb": 251.5
+        },
+        {
+          "url": "fonts/raleway-latin.woff2",
+          "kb": 47.4
+        },
+        {
+          "url": "fonts/dancing-script-latin.woff2",
+          "kb": 42
+        },
+        {
+          "url": "4c/c2-clara.html",
+          "kb": 12.9
+        },
+        {
+          "url": "4c/prototipo.css",
+          "kb": 11.3
+        },
+        {
+          "url": "estilos/tokens.css",
+          "kb": 4.6
+        },
+        {
+          "url": "4c/prototipo.js",
+          "kb": 2.7
+        },
+        {
+          "url": "estilos/fonts.css",
+          "kb": 2.6
+        }
+      ]
+    },
+    "floating": {
+      "fixed": [
+        "wsp wsp-oculto"
+      ],
+      "steps": 29,
+      "visibleSteps": 15,
+      "shownAtTop": false,
+      "coveredTargets": {},
+      "coveredText": {
+        "span: Acrílico con espátula, 80 × 60 cm": 1,
+        "span: Vendida": 2,
+        "span: Acrílico sobre bastidor (medida a confirmar)": 1,
+        "span: (medida a confirmar)": 1,
+        "h2: Obra disponible": 1,
+        "dd: Acrílico sobre bastidor de madera, detalles en dor": 1,
+        "dd: 80 × 60 cm": 1,
+        "h3: [Nombre de la etapa actual] Provisorio": 1,
+        "span: Obras elegidas por rasgos de estilo, no por fecha:": 1
+      },
+      "coveredAtPageEnd": []
+    },
+    "motion": [
+      {
+        "el": "figure.obra",
+        "animation": null,
+        "transition": "opacity, transform 0.3s, 0.3s"
+      },
+      {
+        "el": "figure.obra",
+        "animation": null,
+        "transition": "opacity, transform 0.3s, 0.3s"
+      },
+      {
+        "el": "figure.obra",
+        "animation": null,
+        "transition": "opacity, transform 0.3s, 0.3s"
+      },
+      {
+        "el": "figure.obra",
+        "animation": null,
+        "transition": "opacity, transform 0.3s, 0.3s"
+      },
+      {
+        "el": "figure.obra",
+        "animation": null,
+        "transition": "opacity, transform 0.3s, 0.3s"
+      },
+      {
+        "el": "figure.obra",
+        "animation": null,
+        "transition": "opacity, transform 0.3s, 0.3s"
+      },
+      {
+        "el": "figure.obra",
+        "animation": null,
+        "transition": "opacity, transform 0.3s, 0.3s"
+      },
+      {
+        "el": "figure.obra",
+        "animation": null,
+        "transition": "opacity, transform 0.3s, 0.3s"
+      },
+      {
+        "el": "a.wsp wsp-oculto",
+        "animation": null,
+        "transition": "opacity, visibility 0.2s, 0.2s"
+      }
+    ],
+    "menuOpen": {
+      "ariaExpanded": "true",
+      "panelVisible": true,
+      "role": "dialog",
+      "ariaModal": "true",
+      "coversViewport": true,
+      "focused": "button: Cerrar",
+      "mainInert": true,
+      "wspInert": true,
+      "links": [
+        {
+          "text": "Cerrar",
+          "w": 81,
+          "h": 44,
+          "contrast": 15.52
+        },
+        {
+          "text": "Inicio",
+          "w": 350,
+          "h": 56,
+          "contrast": 5.96
+        },
+        {
+          "text": "Obras",
+          "w": 350,
+          "h": 56,
+          "contrast": 15.52
+        },
+        {
+          "text": "Agendas y cuadernos",
+          "w": 350,
+          "h": 56,
+          "contrast": 15.52
+        },
+        {
+          "text": "Libros",
+          "w": 350,
+          "h": 56,
+          "contrast": 15.52
+        },
+        {
+          "text": "Láminas",
+          "w": 350,
+          "h": 56,
+          "contrast": 15.52
+        },
+        {
+          "text": "Sobre mí",
+          "w": 350,
+          "h": 56,
+          "contrast": 15.52
+        },
+        {
+          "text": "Contacto",
+          "w": 350,
+          "h": 56,
+          "contrast": 15.52
+        },
+        {
+          "text": "Escribime por WhatsApp (se abre en una pestaña nue",
+          "w": 235,
+          "h": 50,
+          "contrast": 5.96
+        }
+      ],
+      "scrollWidth": 390,
+      "clientWidth": 390
+    },
+    "menuAfterEsc": {
+      "ariaExpanded": "false",
+      "panelVisible": false,
+      "role": "dialog",
+      "ariaModal": "true",
+      "coversViewport": false,
+      "focused": "button: Menú",
+      "mainInert": false,
+      "wspInert": false,
+      "links": [
+        {
+          "text": "Cerrar",
+          "w": 0,
+          "h": 0,
+          "contrast": 15.52
+        },
+        {
+          "text": "Inicio",
+          "w": 0,
+          "h": 0,
+          "contrast": 5.96
+        },
+        {
+          "text": "Obras",
+          "w": 0,
+          "h": 0,
+          "contrast": 15.52
+        },
+        {
+          "text": "Agendas y cuadernos",
+          "w": 0,
+          "h": 0,
+          "contrast": 15.52
+        },
+        {
+          "text": "Libros",
+          "w": 0,
+          "h": 0,
+          "contrast": 15.52
+        },
+        {
+          "text": "Láminas",
+          "w": 0,
+          "h": 0,
+          "contrast": 15.52
+        },
+        {
+          "text": "Sobre mí",
+          "w": 0,
+          "h": 0,
+          "contrast": 15.52
+        },
+        {
+          "text": "Contacto",
+          "w": 0,
+          "h": 0,
+          "contrast": 15.52
+        },
+        {
+          "text": "Escribime por WhatsApp (se abre en una pestaña nue",
+          "w": 0,
+          "h": 0,
+          "contrast": 5.96
+        }
+      ],
+      "scrollWidth": 390,
+      "clientWidth": 390
+    }
+  },
+  "430": {
+    "title": "Prototipo C2: inmersiva clara | anicarlomagno",
+    "lang": "es-AR",
+    "robots": "noindex, nofollow",
+    "h1": 1,
+    "headings": [
+      "H1: anicarlomagno artista plástica",
+      "H2: Obras destacadas",
+      "H2: Obra disponible",
+      "H3: La Dama Dorada",
+      "H2: Mi recorrido",
+      "H3: [Nombre de la primera etapa] Provisorio",
+      "H3: [Nombre de la etapa actual] Provisorio",
+      "H2: ¿Te gustó una obra?"
+    ],
+    "scrollWidth": 430,
+    "clientWidth": 430,
+    "overflowing": [],
+    "textUnder16": [],
+    "smallTargets": [],
+    "contrastFails": [],
+    "textOnMuro": [],
+    "contrastAll": [
+      {
+        "text": "Saltar al contenido",
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgb(138, 43, 226)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 5.96,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "Menú",
+        "color": "rgb(36, 36, 36)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 16,
+        "weight": 600,
+        "ratio": 15.52,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "anicarlomagno",
+        "color": "rgb(36, 36, 36)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 44,
+        "weight": 700,
+        "ratio": 15.52,
+        "min": 3,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "artista plástica",
+        "color": "rgb(68, 68, 68)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 20,
+        "weight": 700,
+        "ratio": 9.74,
+        "min": 3,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "Agendas y cuadernos",
+        "color": "rgb(138, 43, 226)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 16,
+        "weight": 600,
+        "ratio": 5.96,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "Ani, en la portada del sitio actual",
+        "color": "rgb(68, 68, 68)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 9.74,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "Provisorio",
+        "color": "rgb(36, 36, 36)",
+        "bg": "rgb(240, 240, 240)",
+        "size": 16,
+        "weight": 600,
+        "ratio": 13.62,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "Acrílico con espátula, 80 × 60 cm",
+        "color": "rgb(102, 102, 102)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 5.74,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "Prototipo C2: la misma escena con un fondo claro (",
+        "color": "rgb(68, 68, 68)",
+        "bg": "rgb(240, 240, 240)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 8.55,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "Ver las variantes",
+        "color": "rgb(138, 43, 226)",
+        "bg": "rgb(240, 240, 240)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 5.23,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "anicarlomagno",
+        "color": "rgb(36, 36, 36)",
+        "bg": "rgb(240, 248, 255)",
+        "size": 24,
+        "weight": 700,
+        "ratio": 14.47,
+        "min": 3,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "Envíos a todo el país.",
+        "color": "rgb(68, 68, 68)",
+        "bg": "rgb(240, 248, 255)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 9.08,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "Instagram (se abre en una pestaña nueva)",
+        "color": "rgb(138, 43, 226)",
+        "bg": "rgb(240, 248, 255)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 5.55,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      }
+    ],
+    "minContrast": 5.23,
+    "muro": {
+      "bg": "rgb(240, 248, 255)",
+      "pageBg": "rgb(255, 255, 255)",
+      "ratioVsPage": null
+    },
+    "images": [
+      {
+        "src": "Aurora.jpg",
+        "alt": "Aurora: mujer de ojo celeste y labios rojos, con mariposas de colores en el pelo, pintada con trazos gruesos sobre un fondo de franjas azules y negras.",
+        "wAttr": "2693",
+        "hAttr": "3659",
+        "loading": "auto",
+        "natural": [
+          2693,
+          3659
+        ],
+        "rendered": [
+          398,
+          541
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "filter": "none",
+        "radius": "0px",
+        "textOver": []
+      },
+      {
+        "src": "VEIL.jpeg",
+        "alt": "Veil: mujer de pelo largo con mariposas celestes y naranjas que le cubren los ojos, sobre un fondo de trazos rojizos.",
+        "wAttr": "1180",
+        "hAttr": "1600",
+        "loading": "lazy",
+        "natural": [
+          1180,
+          1600
+        ],
+        "rendered": [
+          398,
+          540
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "filter": "none",
+        "radius": "0px",
+        "textOver": []
+      },
+      {
+        "src": "Butterfly-Queen.jpeg",
+        "alt": "Butterfly Queen: mujer de ojo gris con una mariposa monarca sobre el otro ojo y la mano en el mentón, sobre un fondo azul con manchas fucsia.",
+        "wAttr": "1207",
+        "hAttr": "1600",
+        "loading": "lazy",
+        "natural": [
+          1207,
+          1600
+        ],
+        "rendered": [
+          398,
+          528
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "filter": "none",
+        "radius": "0px",
+        "textOver": []
+      },
+      {
+        "src": "Vanessa.jpeg",
+        "alt": "Vanessa: mujer con mariposas azules y amarillas sobre los ojos, pintada con trazos gruesos de colores sobre fondo negro.",
+        "wAttr": "1598",
+        "hAttr": "1600",
+        "loading": "lazy",
+        "natural": [
+          1598,
+          1600
+        ],
+        "rendered": [
+          398,
+          398
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "filter": "none",
+        "radius": "0px",
+        "textOver": []
+      },
+      {
+        "src": "la-dama-dorada.jpeg",
+        "alt": "La Dama Dorada: mujer de ojos grandes con corona, aros y mariposas en dorado, sobre un fondo turquesa con manchas de oro.",
+        "wAttr": "1200",
+        "hAttr": "1600",
+        "loading": "lazy",
+        "natural": [
+          1200,
+          1600
+        ],
+        "rendered": [
+          398,
+          531
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "filter": "none",
+        "radius": "0px",
+        "textOver": []
+      },
+      {
+        "src": "Lucia.jpeg",
+        "alt": "Lucía: mujer rubia de ojos azules con una corona de flores naranjas, mariposas y un pájaro en el hombro, sobre un fondo turquesa.",
+        "wAttr": "1280",
+        "hAttr": "1263",
+        "loading": "lazy",
+        "natural": [
+          1280,
+          1263
+        ],
+        "rendered": [
+          191,
+          188
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "filter": "none",
+        "radius": "0px",
+        "textOver": []
+      },
+      {
+        "src": "Helena.jpeg",
+        "alt": "Helena: mujer de pelo negro ondulado y escamas de sirena, rodeada de peces dorados, burbujas y estrellas de mar fucsia, sobre fondo azul.",
+        "wAttr": "1092",
+        "hAttr": "1280",
+        "loading": "lazy",
+        "natural": [
+          1092,
+          1280
+        ],
+        "rendered": [
+          191,
+          224
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "filter": "none",
+        "radius": "0px",
+        "textOver": []
+      },
+      {
+        "src": "EUPHORIA.jpeg",
+        "alt": "Euphoria: rostro de mujer de grandes ojos marrones, pintado con espátula en pinceladas gruesas de rosa, fucsia, celeste y negro.",
+        "wAttr": "1600",
+        "hAttr": "1576",
+        "loading": "lazy",
+        "natural": [
+          1600,
+          1576
+        ],
+        "rendered": [
+          191,
+          188
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "filter": "none",
+        "radius": "0px",
+        "textOver": []
+      },
+      {
+        "src": "Scarlet.jpeg",
+        "alt": "Scarlet: rostro de mujer en blanco y negro con ojos rosados, cruzado por pinceladas gruesas fucsia sobre un fondo de trazos negros y blancos.",
+        "wAttr": "1168",
+        "hAttr": "1280",
+        "loading": "lazy",
+        "natural": [
+          1168,
+          1280
+        ],
+        "rendered": [
+          191,
+          209
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "filter": "none",
+        "radius": "0px",
+        "textOver": []
+      }
+    ],
+    "imgProblems": [],
+    "stillWaiting": 0,
+    "pageHeight": 6898,
+    "viewport": [
+      430,
+      932
+    ],
+    "loadState": {
+      "revealables": 8,
+      "waiting": 8,
+      "waitingInFirstScreen": 0,
+      "minOpacityWaiting": 0.3
+    },
+    "hero": {
+      "viewport": [
+        430,
+        932
+      ],
+      "natural": [
+        2693,
+        3659
+      ],
+      "ratio": 0.736,
+      "rendered": [
+        398,
+        541
+      ],
+      "top": 135,
+      "bottom": 676,
+      "artworkVisiblePct": 100,
+      "viewportCoveredByArtworkPct": 53.7,
+      "muroBox": [
+        430,
+        674
+      ],
+      "ifCoverInMuroVisiblePct": 86.6,
+      "ifCoverFullViewportVisiblePct": 62.7,
+      "h1InFirstScreen": true,
+      "ctaInFirstScreen": true,
+      "downscale": 6.8
+    },
+    "transferAtLoad": {
+      "totalKB": 2118,
+      "requests": 9
+    },
+    "transferFull": {
+      "totalKB": 5110,
+      "requests": 16,
+      "list": [
+        {
+          "url": "obras/Aurora.jpg",
+          "kb": 1485
+        },
+        {
+          "url": "obras/Vanessa.jpeg",
+          "kb": 673.1
+        },
+        {
+          "url": "obras/EUPHORIA.jpeg",
+          "kb": 600.4
+        },
+        {
+          "url": "obras/VEIL.jpeg",
+          "kb": 509.6
+        },
+        {
+          "url": "obras/la-dama-dorada.jpeg",
+          "kb": 488
+        },
+        {
+          "url": "obras/Butterfly-Queen.jpeg",
+          "kb": 428.4
+        },
+        {
+          "url": "obras/Lucia.jpeg",
+          "kb": 298.2
+        },
+        {
+          "url": "obras/Helena.jpeg",
+          "kb": 251.8
+        },
+        {
+          "url": "obras/Scarlet.jpeg",
+          "kb": 251.5
+        },
+        {
+          "url": "fonts/raleway-latin.woff2",
+          "kb": 47.4
+        },
+        {
+          "url": "fonts/dancing-script-latin.woff2",
+          "kb": 42
+        },
+        {
+          "url": "4c/c2-clara.html",
+          "kb": 12.9
+        },
+        {
+          "url": "4c/prototipo.css",
+          "kb": 11.3
+        },
+        {
+          "url": "estilos/tokens.css",
+          "kb": 4.6
+        },
+        {
+          "url": "4c/prototipo.js",
+          "kb": 2.7
+        },
+        {
+          "url": "estilos/fonts.css",
+          "kb": 2.6
+        }
+      ]
+    },
+    "floating": {
+      "fixed": [
+        "wsp wsp-oculto"
+      ],
+      "steps": 27,
+      "visibleSteps": 14,
+      "shownAtTop": false,
+      "coveredTargets": {},
+      "coveredText": {
+        "span: Vendida": 1,
+        "h3: La Dama Dorada": 1,
+        "dd: Acrílico sobre bastidor de madera, detalles en dor": 1,
+        "p: [Años] [Dos líneas de Ani sobre lo que cambió: el ": 1
+      },
+      "coveredAtPageEnd": []
+    },
+    "motion": [
+      {
+        "el": "figure.obra",
+        "animation": null,
+        "transition": "opacity, transform 0.3s, 0.3s"
+      },
+      {
+        "el": "figure.obra",
+        "animation": null,
+        "transition": "opacity, transform 0.3s, 0.3s"
+      },
+      {
+        "el": "figure.obra",
+        "animation": null,
+        "transition": "opacity, transform 0.3s, 0.3s"
+      },
+      {
+        "el": "figure.obra",
+        "animation": null,
+        "transition": "opacity, transform 0.3s, 0.3s"
+      },
+      {
+        "el": "figure.obra",
+        "animation": null,
+        "transition": "opacity, transform 0.3s, 0.3s"
+      },
+      {
+        "el": "figure.obra",
+        "animation": null,
+        "transition": "opacity, transform 0.3s, 0.3s"
+      },
+      {
+        "el": "figure.obra",
+        "animation": null,
+        "transition": "opacity, transform 0.3s, 0.3s"
+      },
+      {
+        "el": "figure.obra",
+        "animation": null,
+        "transition": "opacity, transform 0.3s, 0.3s"
+      },
+      {
+        "el": "a.wsp wsp-oculto",
+        "animation": null,
+        "transition": "opacity, visibility 0.2s, 0.2s"
+      }
+    ]
+  },
+  "768": {
+    "title": "Prototipo C2: inmersiva clara | anicarlomagno",
+    "lang": "es-AR",
+    "robots": "noindex, nofollow",
+    "h1": 1,
+    "headings": [
+      "H1: anicarlomagno artista plástica",
+      "H2: Obras destacadas",
+      "H2: Obra disponible",
+      "H3: La Dama Dorada",
+      "H2: Mi recorrido",
+      "H3: [Nombre de la primera etapa] Provisorio",
+      "H3: [Nombre de la etapa actual] Provisorio",
+      "H2: ¿Te gustó una obra?"
+    ],
+    "scrollWidth": 768,
+    "clientWidth": 768,
+    "overflowing": [],
+    "textUnder16": [],
+    "smallTargets": [],
+    "contrastFails": [],
+    "textOnMuro": [],
+    "contrastAll": [
+      {
+        "text": "Saltar al contenido",
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgb(138, 43, 226)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 5.96,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "Menú",
+        "color": "rgb(36, 36, 36)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 16,
+        "weight": 600,
+        "ratio": 15.52,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "anicarlomagno",
+        "color": "rgb(36, 36, 36)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 64,
+        "weight": 700,
+        "ratio": 15.52,
+        "min": 3,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "artista plástica",
+        "color": "rgb(68, 68, 68)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 20,
+        "weight": 700,
+        "ratio": 9.74,
+        "min": 3,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "Agendas y cuadernos",
+        "color": "rgb(138, 43, 226)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 16,
+        "weight": 600,
+        "ratio": 5.96,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "Ani, en la portada del sitio actual",
+        "color": "rgb(68, 68, 68)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 9.74,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "Provisorio",
+        "color": "rgb(36, 36, 36)",
+        "bg": "rgb(240, 240, 240)",
+        "size": 16,
+        "weight": 600,
+        "ratio": 13.62,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "Acrílico con espátula, 80 × 60 cm",
+        "color": "rgb(102, 102, 102)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 5.74,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "Prototipo C2: la misma escena con un fondo claro (",
+        "color": "rgb(68, 68, 68)",
+        "bg": "rgb(240, 240, 240)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 8.55,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "Ver las variantes",
+        "color": "rgb(138, 43, 226)",
+        "bg": "rgb(240, 240, 240)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 5.23,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "anicarlomagno",
+        "color": "rgb(36, 36, 36)",
+        "bg": "rgb(240, 248, 255)",
+        "size": 24,
+        "weight": 700,
+        "ratio": 14.47,
+        "min": 3,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "Envíos a todo el país.",
+        "color": "rgb(68, 68, 68)",
+        "bg": "rgb(240, 248, 255)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 9.08,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "Instagram (se abre en una pestaña nueva)",
+        "color": "rgb(138, 43, 226)",
+        "bg": "rgb(240, 248, 255)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 5.55,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      }
+    ],
+    "minContrast": 5.23,
+    "muro": {
+      "bg": "rgb(240, 248, 255)",
+      "pageBg": "rgb(255, 255, 255)",
+      "ratioVsPage": null
+    },
+    "images": [
+      {
+        "src": "Aurora.jpg",
+        "alt": "Aurora: mujer de ojo celeste y labios rojos, con mariposas de colores en el pelo, pintada con trazos gruesos sobre un fondo de franjas azules y negras.",
+        "wAttr": "2693",
+        "hAttr": "3659",
+        "loading": "auto",
+        "natural": [
+          2693,
+          3659
+        ],
+        "rendered": [
+          533,
+          724
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "filter": "none",
+        "radius": "0px",
+        "textOver": []
+      },
+      {
+        "src": "VEIL.jpeg",
+        "alt": "Veil: mujer de pelo largo con mariposas celestes y naranjas que le cubren los ojos, sobre un fondo de trazos rojizos.",
+        "wAttr": "1180",
+        "hAttr": "1600",
+        "loading": "lazy",
+        "natural": [
+          1180,
+          1600
+        ],
+        "rendered": [
+          604,
+          819
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "filter": "none",
+        "radius": "0px",
+        "textOver": []
+      },
+      {
+        "src": "Butterfly-Queen.jpeg",
+        "alt": "Butterfly Queen: mujer de ojo gris con una mariposa monarca sobre el otro ojo y la mano en el mentón, sobre un fondo azul con manchas fucsia.",
+        "wAttr": "1207",
+        "hAttr": "1600",
+        "loading": "lazy",
+        "natural": [
+          1207,
+          1600
+        ],
+        "rendered": [
+          618,
+          819
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "filter": "none",
+        "radius": "0px",
+        "textOver": []
+      },
+      {
+        "src": "Vanessa.jpeg",
+        "alt": "Vanessa: mujer con mariposas azules y amarillas sobre los ojos, pintada con trazos gruesos de colores sobre fondo negro.",
+        "wAttr": "1598",
+        "hAttr": "1600",
+        "loading": "lazy",
+        "natural": [
+          1598,
+          1600
+        ],
+        "rendered": [
+          736,
+          737
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "filter": "none",
+        "radius": "0px",
+        "textOver": []
+      },
+      {
+        "src": "la-dama-dorada.jpeg",
+        "alt": "La Dama Dorada: mujer de ojos grandes con corona, aros y mariposas en dorado, sobre un fondo turquesa con manchas de oro.",
+        "wAttr": "1200",
+        "hAttr": "1600",
+        "loading": "lazy",
+        "natural": [
+          1200,
+          1600
+        ],
+        "rendered": [
+          379,
+          505
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "filter": "none",
+        "radius": "0px",
+        "textOver": []
+      },
+      {
+        "src": "Lucia.jpeg",
+        "alt": "Lucía: mujer rubia de ojos azules con una corona de flores naranjas, mariposas y un pájaro en el hombro, sobre un fondo turquesa.",
+        "wAttr": "1280",
+        "hAttr": "1263",
+        "loading": "lazy",
+        "natural": [
+          1280,
+          1263
+        ],
+        "rendered": [
+          144,
+          142
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "filter": "none",
+        "radius": "0px",
+        "textOver": []
+      },
+      {
+        "src": "Helena.jpeg",
+        "alt": "Helena: mujer de pelo negro ondulado y escamas de sirena, rodeada de peces dorados, burbujas y estrellas de mar fucsia, sobre fondo azul.",
+        "wAttr": "1092",
+        "hAttr": "1280",
+        "loading": "lazy",
+        "natural": [
+          1092,
+          1280
+        ],
+        "rendered": [
+          144,
+          169
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "filter": "none",
+        "radius": "0px",
+        "textOver": []
+      },
+      {
+        "src": "EUPHORIA.jpeg",
+        "alt": "Euphoria: rostro de mujer de grandes ojos marrones, pintado con espátula en pinceladas gruesas de rosa, fucsia, celeste y negro.",
+        "wAttr": "1600",
+        "hAttr": "1576",
+        "loading": "lazy",
+        "natural": [
+          1600,
+          1576
+        ],
+        "rendered": [
+          144,
+          142
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "filter": "none",
+        "radius": "0px",
+        "textOver": []
+      },
+      {
+        "src": "Scarlet.jpeg",
+        "alt": "Scarlet: rostro de mujer en blanco y negro con ojos rosados, cruzado por pinceladas gruesas fucsia sobre un fondo de trazos negros y blancos.",
+        "wAttr": "1168",
+        "hAttr": "1280",
+        "loading": "lazy",
+        "natural": [
+          1168,
+          1280
+        ],
+        "rendered": [
+          144,
+          158
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "filter": "none",
+        "radius": "0px",
+        "textOver": []
+      }
+    ],
+    "imgProblems": [],
+    "stillWaiting": 0,
+    "pageHeight": 7084,
+    "viewport": [
+      768,
+      1024
+    ],
+    "loadState": {
+      "revealables": 8,
+      "waiting": 8,
+      "waitingInFirstScreen": 0,
+      "minOpacityWaiting": 0.3
+    },
+    "hero": {
+      "viewport": [
+        768,
+        1024
+      ],
+      "natural": [
+        2693,
+        3659
+      ],
+      "ratio": 0.736,
+      "rendered": [
+        533,
+        724
+      ],
+      "top": 84,
+      "bottom": 808,
+      "artworkVisiblePct": 100,
+      "viewportCoveredByArtworkPct": 49.1,
+      "muroBox": [
+        768,
+        756
+      ],
+      "ifCoverInMuroVisiblePct": 72.4,
+      "ifCoverFullViewportVisiblePct": 98.1,
+      "h1InFirstScreen": true,
+      "ctaInFirstScreen": true,
+      "downscale": 5.1
+    },
+    "transferAtLoad": {
+      "totalKB": 2118,
+      "requests": 9
+    },
+    "transferFull": {
+      "totalKB": 5109,
+      "requests": 16,
+      "list": [
+        {
+          "url": "obras/Aurora.jpg",
+          "kb": 1485
+        },
+        {
+          "url": "obras/Vanessa.jpeg",
+          "kb": 673.1
+        },
+        {
+          "url": "obras/EUPHORIA.jpeg",
+          "kb": 600.4
+        },
+        {
+          "url": "obras/VEIL.jpeg",
+          "kb": 509.6
+        },
+        {
+          "url": "obras/la-dama-dorada.jpeg",
+          "kb": 488
+        },
+        {
+          "url": "obras/Butterfly-Queen.jpeg",
+          "kb": 428.4
+        },
+        {
+          "url": "obras/Lucia.jpeg",
+          "kb": 298.2
+        },
+        {
+          "url": "obras/Helena.jpeg",
+          "kb": 251.8
+        },
+        {
+          "url": "obras/Scarlet.jpeg",
+          "kb": 251.5
+        },
+        {
+          "url": "fonts/raleway-latin.woff2",
+          "kb": 47.4
+        },
+        {
+          "url": "fonts/dancing-script-latin.woff2",
+          "kb": 42
+        },
+        {
+          "url": "4c/c2-clara.html",
+          "kb": 12.9
+        },
+        {
+          "url": "4c/prototipo.css",
+          "kb": 11.3
+        },
+        {
+          "url": "estilos/tokens.css",
+          "kb": 4.6
+        },
+        {
+          "url": "4c/prototipo.js",
+          "kb": 2.7
+        },
+        {
+          "url": "estilos/fonts.css",
+          "kb": 2.6
+        }
+      ]
+    },
+    "floating": {
+      "fixed": [
+        "wsp wsp-oculto"
+      ],
+      "steps": 25,
+      "visibleSteps": 12,
+      "shownAtTop": false,
+      "coveredTargets": {},
+      "coveredText": {
+        "span: Butterfly Queen": 1,
+        "span: Acrílico sobre bastidor (medida a confirmar)": 1,
+        "dd: Acrílico sobre bastidor de madera, detalles en dor": 1,
+        "dd: 80 × 60 cm": 1
+      },
+      "coveredAtPageEnd": []
+    },
+    "motion": [
+      {
+        "el": "figure.obra",
+        "animation": null,
+        "transition": "opacity, transform 0.3s, 0.3s"
+      },
+      {
+        "el": "figure.obra",
+        "animation": null,
+        "transition": "opacity, transform 0.3s, 0.3s"
+      },
+      {
+        "el": "figure.obra",
+        "animation": null,
+        "transition": "opacity, transform 0.3s, 0.3s"
+      },
+      {
+        "el": "figure.obra",
+        "animation": null,
+        "transition": "opacity, transform 0.3s, 0.3s"
+      },
+      {
+        "el": "figure.obra",
+        "animation": null,
+        "transition": "opacity, transform 0.3s, 0.3s"
+      },
+      {
+        "el": "figure.obra",
+        "animation": null,
+        "transition": "opacity, transform 0.3s, 0.3s"
+      },
+      {
+        "el": "figure.obra",
+        "animation": null,
+        "transition": "opacity, transform 0.3s, 0.3s"
+      },
+      {
+        "el": "figure.obra",
+        "animation": null,
+        "transition": "opacity, transform 0.3s, 0.3s"
+      },
+      {
+        "el": "a.wsp wsp-oculto",
+        "animation": null,
+        "transition": "opacity, visibility 0.2s, 0.2s"
+      }
+    ]
+  },
+  "1280": {
+    "title": "Prototipo C2: inmersiva clara | anicarlomagno",
+    "lang": "es-AR",
+    "robots": "noindex, nofollow",
+    "h1": 1,
+    "headings": [
+      "H1: anicarlomagno artista plástica",
+      "H2: Obras destacadas",
+      "H2: Obra disponible",
+      "H3: La Dama Dorada",
+      "H2: Mi recorrido",
+      "H3: [Nombre de la primera etapa] Provisorio",
+      "H3: [Nombre de la etapa actual] Provisorio",
+      "H2: ¿Te gustó una obra?"
+    ],
+    "scrollWidth": 1280,
+    "clientWidth": 1280,
+    "overflowing": [],
+    "textUnder16": [],
+    "smallTargets": [],
+    "contrastFails": [],
+    "textOnMuro": [],
+    "contrastAll": [
+      {
+        "text": "Saltar al contenido",
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgb(138, 43, 226)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 5.96,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "Menú",
+        "color": "rgb(36, 36, 36)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 16,
+        "weight": 600,
+        "ratio": 15.52,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "anicarlomagno",
+        "color": "rgb(36, 36, 36)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 64,
+        "weight": 700,
+        "ratio": 15.52,
+        "min": 3,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "artista plástica",
+        "color": "rgb(68, 68, 68)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 20,
+        "weight": 700,
+        "ratio": 9.74,
+        "min": 3,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "Agendas y cuadernos",
+        "color": "rgb(138, 43, 226)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 16,
+        "weight": 600,
+        "ratio": 5.96,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "Ani, en la portada del sitio actual",
+        "color": "rgb(68, 68, 68)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 9.74,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "Provisorio",
+        "color": "rgb(36, 36, 36)",
+        "bg": "rgb(240, 240, 240)",
+        "size": 16,
+        "weight": 600,
+        "ratio": 13.62,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "Acrílico con espátula, 80 × 60 cm",
+        "color": "rgb(102, 102, 102)",
+        "bg": "rgb(255, 255, 255)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 5.74,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "Prototipo C2: la misma escena con un fondo claro (",
+        "color": "rgb(68, 68, 68)",
+        "bg": "rgb(240, 240, 240)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 8.55,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "Ver las variantes",
+        "color": "rgb(138, 43, 226)",
+        "bg": "rgb(240, 240, 240)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 5.23,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "anicarlomagno",
+        "color": "rgb(36, 36, 36)",
+        "bg": "rgb(240, 248, 255)",
+        "size": 24,
+        "weight": 700,
+        "ratio": 14.47,
+        "min": 3,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "Envíos a todo el país.",
+        "color": "rgb(68, 68, 68)",
+        "bg": "rgb(240, 248, 255)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 9.08,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      },
+      {
+        "text": "Instagram (se abre en una pestaña nueva)",
+        "color": "rgb(138, 43, 226)",
+        "bg": "rgb(240, 248, 255)",
+        "size": 16,
+        "weight": 400,
+        "ratio": 5.55,
+        "min": 4.5,
+        "pass": true,
+        "onImage": false,
+        "onMuro": false
+      }
+    ],
+    "minContrast": 5.23,
+    "muro": {
+      "bg": "rgb(240, 248, 255)",
+      "pageBg": "rgb(255, 255, 255)",
+      "ratioVsPage": null
+    },
+    "images": [
+      {
+        "src": "Aurora.jpg",
+        "alt": "Aurora: mujer de ojo celeste y labios rojos, con mariposas de colores en el pelo, pintada con trazos gruesos sobre un fondo de franjas azules y negras.",
+        "wAttr": "2693",
+        "hAttr": "3659",
+        "loading": "auto",
+        "natural": [
+          2693,
+          3659
+        ],
+        "rendered": [
+          492,
+          668
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "filter": "none",
+        "radius": "0px",
+        "textOver": []
+      },
+      {
+        "src": "VEIL.jpeg",
+        "alt": "Veil: mujer de pelo largo con mariposas celestes y naranjas que le cubren los ojos, sobre un fondo de trazos rojizos.",
+        "wAttr": "1180",
+        "hAttr": "1600",
+        "loading": "lazy",
+        "natural": [
+          1180,
+          1600
+        ],
+        "rendered": [
+          363,
+          492
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "filter": "none",
+        "radius": "0px",
+        "textOver": []
+      },
+      {
+        "src": "Butterfly-Queen.jpeg",
+        "alt": "Butterfly Queen: mujer de ojo gris con una mariposa monarca sobre el otro ojo y la mano en el mentón, sobre un fondo azul con manchas fucsia.",
+        "wAttr": "1207",
+        "hAttr": "1600",
+        "loading": "lazy",
+        "natural": [
+          1207,
+          1600
+        ],
+        "rendered": [
+          363,
+          481
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "filter": "none",
+        "radius": "0px",
+        "textOver": []
+      },
+      {
+        "src": "Vanessa.jpeg",
+        "alt": "Vanessa: mujer con mariposas azules y amarillas sobre los ojos, pintada con trazos gruesos de colores sobre fondo negro.",
+        "wAttr": "1598",
+        "hAttr": "1600",
+        "loading": "lazy",
+        "natural": [
+          1598,
+          1600
+        ],
+        "rendered": [
+          363,
+          363
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "filter": "none",
+        "radius": "0px",
+        "textOver": []
+      },
+      {
+        "src": "la-dama-dorada.jpeg",
+        "alt": "La Dama Dorada: mujer de ojos grandes con corona, aros y mariposas en dorado, sobre un fondo turquesa con manchas de oro.",
+        "wAttr": "1200",
+        "hAttr": "1600",
+        "loading": "lazy",
+        "natural": [
+          1200,
+          1600
+        ],
+        "rendered": [
+          450,
+          600
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "filter": "none",
+        "radius": "0px",
+        "textOver": []
+      },
+      {
+        "src": "Lucia.jpeg",
+        "alt": "Lucía: mujer rubia de ojos azules con una corona de flores naranjas, mariposas y un pájaro en el hombro, sobre un fondo turquesa.",
+        "wAttr": "1280",
+        "hAttr": "1263",
+        "loading": "lazy",
+        "natural": [
+          1280,
+          1263
+        ],
+        "rendered": [
+          272,
+          268
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "filter": "none",
+        "radius": "0px",
+        "textOver": []
+      },
+      {
+        "src": "Helena.jpeg",
+        "alt": "Helena: mujer de pelo negro ondulado y escamas de sirena, rodeada de peces dorados, burbujas y estrellas de mar fucsia, sobre fondo azul.",
+        "wAttr": "1092",
+        "hAttr": "1280",
+        "loading": "lazy",
+        "natural": [
+          1092,
+          1280
+        ],
+        "rendered": [
+          272,
+          319
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "filter": "none",
+        "radius": "0px",
+        "textOver": []
+      },
+      {
+        "src": "EUPHORIA.jpeg",
+        "alt": "Euphoria: rostro de mujer de grandes ojos marrones, pintado con espátula en pinceladas gruesas de rosa, fucsia, celeste y negro.",
+        "wAttr": "1600",
+        "hAttr": "1576",
+        "loading": "lazy",
+        "natural": [
+          1600,
+          1576
+        ],
+        "rendered": [
+          272,
+          268
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "filter": "none",
+        "radius": "0px",
+        "textOver": []
+      },
+      {
+        "src": "Scarlet.jpeg",
+        "alt": "Scarlet: rostro de mujer en blanco y negro con ojos rosados, cruzado por pinceladas gruesas fucsia sobre un fondo de trazos negros y blancos.",
+        "wAttr": "1168",
+        "hAttr": "1280",
+        "loading": "lazy",
+        "natural": [
+          1168,
+          1280
+        ],
+        "rendered": [
+          272,
+          298
+        ],
+        "aspectDiffPct": 0,
+        "objectFit": "fill",
+        "filter": "none",
+        "radius": "0px",
+        "textOver": []
+      }
+    ],
+    "imgProblems": [],
+    "stillWaiting": 0,
+    "pageHeight": 4809,
+    "viewport": [
+      1280,
+      800
+    ],
+    "loadState": {
+      "revealables": 8,
+      "waiting": 8,
+      "waitingInFirstScreen": 0,
+      "minOpacityWaiting": 0.3
+    },
+    "hero": {
+      "viewport": [
+        1280,
+        800
+      ],
+      "natural": [
+        2693,
+        3659
+      ],
+      "ratio": 0.736,
+      "rendered": [
+        492,
+        668
+      ],
+      "top": 100,
+      "bottom": 768,
+      "artworkVisiblePct": 100,
+      "viewportCoveredByArtworkPct": 32.1,
+      "muroBox": [
+        730,
+        732
+      ],
+      "ifCoverInMuroVisiblePct": 73.8,
+      "ifCoverFullViewportVisiblePct": 46,
+      "h1InFirstScreen": true,
+      "ctaInFirstScreen": true,
+      "downscale": 5.5
+    },
+    "transferAtLoad": {
+      "totalKB": 3220,
+      "requests": 11
+    },
+    "transferFull": {
+      "totalKB": 5110,
+      "requests": 16,
+      "list": [
+        {
+          "url": "obras/Aurora.jpg",
+          "kb": 1485
+        },
+        {
+          "url": "obras/Vanessa.jpeg",
+          "kb": 673.1
+        },
+        {
+          "url": "obras/EUPHORIA.jpeg",
+          "kb": 600.4
+        },
+        {
+          "url": "obras/VEIL.jpeg",
+          "kb": 509.6
+        },
+        {
+          "url": "obras/la-dama-dorada.jpeg",
+          "kb": 488
+        },
+        {
+          "url": "obras/Butterfly-Queen.jpeg",
+          "kb": 428.4
+        },
+        {
+          "url": "obras/Lucia.jpeg",
+          "kb": 298.2
+        },
+        {
+          "url": "obras/Helena.jpeg",
+          "kb": 251.8
+        },
+        {
+          "url": "obras/Scarlet.jpeg",
+          "kb": 251.5
+        },
+        {
+          "url": "fonts/raleway-latin.woff2",
+          "kb": 47.4
+        },
+        {
+          "url": "fonts/dancing-script-latin.woff2",
+          "kb": 42
+        },
+        {
+          "url": "4c/c2-clara.html",
+          "kb": 12.9
+        },
+        {
+          "url": "4c/prototipo.css",
+          "kb": 11.3
+        },
+        {
+          "url": "estilos/tokens.css",
+          "kb": 4.6
+        },
+        {
+          "url": "4c/prototipo.js",
+          "kb": 2.7
+        },
+        {
+          "url": "estilos/fonts.css",
+          "kb": 2.6
+        }
+      ]
+    },
+    "floating": {
+      "fixed": [
+        "wsp wsp-oculto"
+      ],
+      "steps": 22,
+      "visibleSteps": 8,
+      "shownAtTop": false,
+      "coveredTargets": {},
+      "coveredText": {},
+      "coveredAtPageEnd": []
+    },
+    "motion": [
+      {
+        "el": "figure.obra",
+        "animation": null,
+        "transition": "opacity, transform 0.3s, 0.3s"
+      },
+      {
+        "el": "figure.obra",
+        "animation": null,
+        "transition": "opacity, transform 0.3s, 0.3s"
+      },
+      {
+        "el": "figure.obra",
+        "animation": null,
+        "transition": "opacity, transform 0.3s, 0.3s"
+      },
+      {
+        "el": "figure.obra",
+        "animation": null,
+        "transition": "opacity, transform 0.3s, 0.3s"
+      },
+      {
+        "el": "figure.obra",
+        "animation": null,
+        "transition": "opacity, transform 0.3s, 0.3s"
+      },
+      {
+        "el": "figure.obra",
+        "animation": null,
+        "transition": "opacity, transform 0.3s, 0.3s"
+      },
+      {
+        "el": "figure.obra",
+        "animation": null,
+        "transition": "opacity, transform 0.3s, 0.3s"
+      },
+      {
+        "el": "figure.obra",
+        "animation": null,
+        "transition": "opacity, transform 0.3s, 0.3s"
+      },
+      {
+        "el": "a.wsp wsp-oculto",
+        "animation": null,
+        "transition": "opacity, visibility 0.2s, 0.2s"
+      }
+    ]
+  },
+  "reducedMotion": {
+    "animated": [],
+    "load": {
+      "revealables": 8,
+      "waiting": 0,
+      "waitingInFirstScreen": 0,
+      "minOpacityWaiting": 1
+    }
+  },
+  "menuFromHash": {
+    "ariaExpanded": "true",
+    "panelVisible": true,
+    "role": "dialog",
+    "ariaModal": "true",
+    "coversViewport": true,
+    "focused": "body: Saltar al contenido Cerrar Inicio Obras Agendas y ",
+    "mainInert": true,
+    "wspInert": true,
+    "links": [
+      {
+        "text": "Cerrar",
+        "w": 81,
+        "h": 44,
+        "contrast": 15.52
+      },
+      {
+        "text": "Inicio",
+        "w": 350,
+        "h": 56,
+        "contrast": 5.96
+      },
+      {
+        "text": "Obras",
+        "w": 350,
+        "h": 56,
+        "contrast": 15.52
+      },
+      {
+        "text": "Agendas y cuadernos",
+        "w": 350,
+        "h": 56,
+        "contrast": 15.52
+      },
+      {
+        "text": "Libros",
+        "w": 350,
+        "h": 56,
+        "contrast": 15.52
+      },
+      {
+        "text": "Láminas",
+        "w": 350,
+        "h": 56,
+        "contrast": 15.52
+      },
+      {
+        "text": "Sobre mí",
+        "w": 350,
+        "h": 56,
+        "contrast": 15.52
+      },
+      {
+        "text": "Contacto",
+        "w": 350,
+        "h": 56,
+        "contrast": 15.52
+      },
+      {
+        "text": "Escribime por WhatsApp (se abre en una pestaña nue",
+        "w": 235,
+        "h": 50,
+        "contrast": 5.96
+      }
+    ],
+    "scrollWidth": 390,
+    "clientWidth": 390
+  }
+}
