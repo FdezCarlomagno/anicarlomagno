@@ -37,3 +37,9 @@ Status: accepted; implemented 2026-10-11
 Context: La Fase 0 detectó que `ADICION_DE_FRASE: 3000` se suma al total cuando se tilda "Agregar frase personalizada" (`AgendaForm.jsx:127-129`), y que al destildar la casilla el texto de la frase igual viaja en el mensaje.
 Decision: Regla de negocio (Valentín/Ani): la frase es gratis. El comportamiento actual (cobrar $3000) es incorrecto.
 Consequences: Corregido en `AgendaPrices.js` y `AgendaForm.jsx` (precio y mensaje), verificando antes/después con los 3 casos de `design/audits/2026-10-critical-flows.md`; incluir la frase en el mensaje solo si la casilla está tildada. Actualizar `product-overview.md` al aplicar el cambio.
+
+## DL-004 - Rediseno de /agendas y nombre del sitio en Google (2026-10-12)
+Status: accepted; implemented
+Context: /agendas era un carrusel suelto, un boton gigante al final y una grilla de tapas sin contexto. Google mostraba "Vercel" como nombre del sitio.
+Decision: Hero de 2 columnas en desktop (texto + carrusel), CTA arriba y repetido, beneficios, lista de precios leida de `AgendaPrices.js` (sin cambiar valores), tapas con `object-fit: contain` enlazadas a /agenda-personalizada y cierre con CTA. Titulo de pestana por pagina. Nombre del sitio: JSON-LD `WebSite` (name "Ani Carlomagno") + `og:site_name`.
+Consequences: Google tarda dias/semanas en recrawlear; se acelera pidiendo reindexar en Search Console. `og:image`/`twitter:image` apuntan a /images/*.jpg que no existen en `public/` (pendiente).

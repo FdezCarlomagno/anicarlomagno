@@ -96,15 +96,8 @@
     padding: 1rem;
 }
 
-.titleAndbtn {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-}
-
 /* Botones con diseño consistente */
-.btnAgenda, .buy-book-btn, .btn-submit {
+.buy-book-btn, .btn-submit {
     padding: 12px 40px;
     border: none;
     border-radius: 50px;
@@ -117,18 +110,13 @@
     box-shadow: 0 2px 8px rgba(137, 43, 226, 0.3);
 }
 
-.btnAgenda {
-    margin-top: 2rem;
-    transition: all 100ms ease-in-out;
-}
-
-.btnAgenda:hover, .buy-book-btn:hover, .btn-submit:hover {
+.buy-book-btn:hover, .btn-submit:hover {
     background-color: var(--primary-hover);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(137, 43, 226, 0.4);
 }
 
-.btnAgenda:active, .buy-book-btn:active, .btn-submit:active {
+.buy-book-btn:active, .btn-submit:active {
     transform: translateY(0);
 }
 
@@ -1087,11 +1075,6 @@ legend {
 @media(min-width: 1024px) {
     .agendaCustomization {
         gap: 5rem;
-    }
-
-    .btnAgenda {
-        font-size: 1.5rem;
-        padding: 14px 60px;
     }
 
     .title-agenda-customization h1 {
