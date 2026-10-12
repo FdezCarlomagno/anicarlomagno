@@ -19,7 +19,47 @@
 .navLogoLink {
     position: relative;
     z-index: 2;
+    margin-left: 24px;
 }
+
+/* ---- Logo: wordmark en una línea + bajada en versalitas ---- */
+.navLogo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1px;
+    color: var(--nav-ink);
+}
+
+.navLogo h1 {
+    font-family: "Dancing Script", cursive;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.01em;
+    transition: color 0.25s ease;
+}
+
+.navLogo h2 {
+    font-family: "Raleway", sans-serif;
+    font-size: 9.5px;
+    font-weight: 600;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: var(--nav-accent);
+    padding-left: 2px;
+}
+
+.navLogoLink:hover .navLogo h1 { color: var(--nav-accent); }
+
+.navLogoLink:focus-visible {
+    outline: 3px solid var(--nav-accent);
+    outline-offset: 4px;
+    border-radius: 6px;
+}
+
+/* Link de la página actual */
+.navMenuList a[aria-current='page'] .navMenuLabel { color: var(--nav-accent); }
 
 /* ---- Botón hamburguesa → X ---- */
 .btnDisplayMenu {
@@ -167,20 +207,29 @@
     }
 }
 
-/* ---- Desktop: links en línea ---- */
+/* ---- Desktop: barra de vidrio, links en línea con subrayado animado ---- */
 @media (min-width: 768px) {
     .navBar {
-        --nav-h: 70px;
-        padding: 12px;
+        --nav-h: 76px;
+        padding: 0 32px;
+        background-color: rgba(240, 248, 255, 0.72);
+        -webkit-backdrop-filter: saturate(180%) blur(14px);
+        backdrop-filter: saturate(180%) blur(14px);
+        border-bottom: 1px solid transparent;
+        transition: height 0.3s var(--nav-ease), box-shadow 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
     }
 
-    .navBar h1 {
-        font-size: 24px;
+    .navBar.is-scrolled {
+        --nav-h: 60px;
+        background-color: rgba(240, 248, 255, 0.9);
+        border-bottom-color: rgba(138, 43, 226, 0.12);
+        box-shadow: 0 6px 24px rgba(60, 20, 120, 0.08);
     }
 
-    .navBar h2 {
-        font-size: 16px;
-    }
+    .navLogoLink { margin-left: 0; }
+
+    .navLogo h1 { font-size: 30px; }
+    .navLogo h2 { font-size: 10px; }
 
     .btnDisplayMenu {
         display: none;
@@ -191,7 +240,7 @@
         inset: auto;
         height: auto;
         padding: 0;
-        margin-right: 24px;
+        margin: 0;
         flex-direction: row;
         background: none;
         overflow: visible;
@@ -203,7 +252,8 @@
 
     .navMenuList {
         flex-direction: row;
-        gap: 24px;
+        align-items: center;
+        gap: 4px;
     }
 
     .navMenuList li {
@@ -214,33 +264,75 @@
     }
 
     .navMenuList a {
-        min-height: 0;
+        position: relative;
+        min-height: 44px;
+        padding: 0 14px;
         gap: 0;
-        font-size: 14px;
-        transition: color 100ms ease-in-out;
+        font-size: 15px;
+        font-weight: 500;
+        border-radius: 999px;
+        transition: color 0.2s ease, background-color 0.2s ease;
     }
 
-    .navMenuList a:hover {
+    /* Subrayado que crece desde el centro */
+    .navMenuList a:not(.navCta)::after {
+        content: '';
+        position: absolute;
+        left: 14px;
+        right: 14px;
+        bottom: 8px;
+        height: 2px;
+        border-radius: 2px;
+        background: var(--nav-accent);
+        transform: scaleX(0);
+        transition: transform 0.3s var(--nav-ease);
+    }
+
+    .navMenuList a:not(.navCta):hover,
+    .navMenuList a[aria-current='page']:not(.navCta) {
         color: var(--nav-accent);
     }
 
+    .navMenuList a:not(.navCta):hover::after,
+    .navMenuList a[aria-current='page']:not(.navCta)::after {
+        transform: scaleX(1);
+    }
+
+    /* "Contacto" como botón: es la acción principal */
+    .navMenuList .navCta {
+        margin-left: 10px;
+        padding: 0 22px;
+        font-weight: 600;
+        color: #fff;
+        background: var(--nav-accent);
+        box-shadow: 0 6px 18px rgba(138, 43, 226, 0.35);
+    }
+
+    .navMenuList .navCta:hover {
+        background: rgb(150, 60, 235);
+    }
+
+    .navMenuList .navCta .navMenuLabel,
+    .navMenuList .navCta[aria-current='page'] .navMenuLabel { color: #fff; }
+
+    /* Sin íconos en desktop: la barra queda limpia */
     .navMenuNum,
-    .navMenuFoot {
+    .navMenuFoot,
+    .navMenuList .navMenuIcon {
         display: none;
     }
 
     .navMenuLabel {
         flex: none;
-        font-size: 14px;
-        font-weight: 400;
+        font-size: inherit;
+        font-weight: inherit;
         letter-spacing: 0;
-        order: 2;
+        line-height: 1;
     }
+}
 
-    .navMenuList .navMenuIcon {
-        width: 20px;
-        height: 20px;
-        margin-right: 6px;
-        opacity: 1;
-    }
+@media (min-width: 768px) and (prefers-reduced-motion: reduce) {
+    .navBar,
+    .navMenuList a,
+    .navMenuList a::after { transition: none; }
 }

@@ -1,0 +1,202 @@
+/* Quién soy / Mis pasiones — mobile first. */
+
+.about {
+    --about-accent: blueviolet;
+    --about-ink: #1d1626;
+    --about-muted: #4a4256;
+    --about-ease: cubic-bezier(0.22, 1, 0.36, 1);
+    display: flex;
+    flex-direction: column;
+    gap: clamp(40px, 9vw, 96px);
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: clamp(48px, 10vw, 112px) 24px;
+}
+
+.about-block {
+    display: grid;
+    gap: 32px;
+    align-items: center;
+}
+
+.about-block.is-tinted {
+    padding: 28px 20px 36px;
+    border-radius: 28px;
+    background: linear-gradient(160deg, rgba(138, 43, 226, 0.09), rgba(138, 43, 226, 0.03));
+}
+
+/* ---- Imagen ---- */
+.about-media {
+    position: relative;
+    width: min(88%, 400px);
+    margin: 0 auto;
+}
+
+/* La foto vertical pesa mucho: más chica para que mande el texto. */
+.about-media.is-portrait {
+    width: min(62%, 250px);
+}
+
+.about-frame {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 18px;
+    background: #e9e1f3;
+    box-shadow: 0 18px 40px rgba(60, 20, 120, 0.22);
+}
+
+/* Especificidad alta para ganarle a los `img {}` globales de otras páginas. */
+.about .about-frame img {
+    display: block;
+    width: 100%;
+    height: 112%;       /* sobra para el parallax */
+    margin: -6% 0;
+    object-fit: cover;
+    border-radius: 0;
+    max-width: none;
+}
+
+/* Bloque violeta desplazado: acento de marca, detrás de la foto. */
+.about-shape {
+    position: absolute;
+    z-index: 0;
+    inset: 22px -16px -22px 16px;
+    border-radius: 18px;
+    background: var(--about-accent);
+    opacity: 0.9;
+}
+
+.is-reverse .about-shape {
+    inset: 22px 16px -22px -16px;
+    background: rgb(186, 112, 255);
+}
+
+/* ---- Texto ---- */
+.about-text {
+    max-width: 34rem;
+    margin: 0 auto;
+    padding-top: 12px;
+}
+
+.about-eyebrow {
+    margin-bottom: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--about-accent);
+}
+
+.about-title {
+    margin-bottom: 16px;
+    font-family: "Dancing Script", cursive;
+    font-size: clamp(40px, 11vw, 56px);
+    font-weight: 700;
+    line-height: 1.05;
+    color: var(--about-ink);
+}
+
+.about-body {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--about-muted);
+}
+
+.about-body span {
+    font-weight: 700;
+    color: var(--about-accent);
+}
+
+.about-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+.about-chips li {
+    padding: 8px 16px;
+    border-radius: 999px;
+    border: 1px solid rgba(138, 43, 226, 0.35);
+    background: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--about-accent);
+}
+
+.about-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 44px;
+    margin-top: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--about-ink);
+    border-bottom: 2px solid var(--about-accent);
+    transition: color 0.2s ease, gap 0.3s var(--about-ease);
+}
+
+.about-link svg {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.about-link:hover {
+    color: var(--about-accent);
+    gap: 14px;
+}
+
+.about-link:focus-visible {
+    outline: 3px solid var(--about-accent);
+    outline-offset: 4px;
+    border-radius: 4px;
+}
+
+@media (min-width: 768px) {
+    .about {
+        max-width: 1040px;
+        gap: clamp(40px, 6vw, 72px);
+    }
+
+    /* Columnas a medida del contenido, juntas y centradas: sin huecos laterales. */
+    .about-block {
+        grid-template-columns: 300px minmax(0, 34rem);
+        justify-content: center;
+        gap: clamp(40px, 5vw, 64px);
+    }
+
+    .about-block.is-reverse {
+        grid-template-columns: minmax(0, 34rem) 380px;
+    }
+
+    .about-block.is-tinted {
+        padding: 44px clamp(28px, 5vw, 56px);
+    }
+
+    .about-media,
+    .about-text {
+        margin: 0;
+    }
+
+    .about-media,
+    .about-media.is-portrait {
+        width: 100%;
+        max-width: none;
+    }
+
+    .is-reverse .about-media { order: 2; }
+
+    .about-body { font-size: 18px; }
+}

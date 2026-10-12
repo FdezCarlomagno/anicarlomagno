@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import bookSvg from './assets/Book.svg';
 import diamondSvg from './assets/Diamond.svg';
 import homeSvg from './assets/Home.svg';
@@ -19,7 +19,7 @@ const LINKS = [
   { to: '/mi-libro', label: 'Libros', icon: Eye },
   { to: '/laminas', label: 'Láminas', icon: Printer },
   { to: '/sobre-mi', label: 'Sobre mí', icon: diamondSvg },
-  { to: '/contacto', label: 'Contacto', icon: contactSvg },
+  { to: '/contacto', label: 'Contacto', icon: contactSvg, cta: true },
 ];
 
 const NavBar = () => {
@@ -27,7 +27,17 @@ const NavBar = () => {
   const toggleRef = useRef(null);
   const firstLinkRef = useRef(null);
 
+  const [scrolled, setScrolled] = useState(false);
+
   const closeMenu = () => setMenu(false);
+
+  // La barra se compacta y gana sombra al bajar.
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   // Mientras el menú está abierto: bloquea el scroll, cierra con Escape
   // y devuelve el foco al botón al cerrar.
@@ -57,21 +67,19 @@ const NavBar = () => {
   }, [menu]);
 
   return (
-    <nav className='navBar' aria-label='Principal'>
+    <nav className={`navBar${scrolled ? ' is-scrolled' : ''}`} aria-label='Principal'>
       <Toaster/>
-      <Link to='/' className='navLogoLink' onClick={closeMenu}>
+      <Link to='/' className='navLogoLink' onClick={closeMenu} aria-label='anicarlomagno, artista plástica — Inicio'>
         <div className="navLogo">
-          <div className='contH1Nav'>
-            <motion.h1
-              initial={{ scale: 0, x: -100 }}
-              animate={{ scale: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >anicarlomagno</motion.h1>
-          </div>
+          <motion.h1
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+          >anicarlomagno</motion.h1>
           <motion.h2
-            initial={{ scale: 0, x: 100 }}
-            animate={{ scale: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
           >artista plástica</motion.h2>
         </div>
       </Link>
@@ -92,17 +100,19 @@ const NavBar = () => {
 
       <div id='nav-menu' className={`navMenu${menu ? ' isOpen' : ''}`}>
         <ul className='navMenuList'>
-          {LINKS.map(({ to, label, icon }, i) => (
+          {LINKS.map(({ to, label, icon, cta }, i) => (
             <li key={to} style={{ '--i': i }}>
-              <Link
+              <NavLink
                 to={to}
+                end={to === '/'}
+                className={cta ? 'navCta' : undefined}
                 onClick={closeMenu}
                 ref={i === 0 ? firstLinkRef : undefined}
               >
                 <span className='navMenuNum' aria-hidden='true'>{String(i + 1).padStart(2, '0')}</span>
                 <span className='navMenuLabel'>{label}</span>
                 <Image className='svg navMenuIcon' src={icon} alt='' width={24} height={24} />
-              </Link>
+              </NavLink>
             </li>
           ))}
         </ul>

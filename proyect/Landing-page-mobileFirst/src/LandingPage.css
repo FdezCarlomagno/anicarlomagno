@@ -45,29 +45,6 @@ html {
     display: none;
 }
 
-.navLogo {
-    display: flex;
-    flex-direction: column;
-    color: black;
-    margin-left: 24px;
-    text-align: center;
-}
-
-.navLogo h1 {
-    font-family: "Dancing Script", cursive;
-    font-size: 16px;
-}
-
-.navLogo h2 {
-    font-size: 12px;
-    color: blueviolet;
-    font-family: "Dancing Script";
-}
-
-.contH1Nav {
-    border-bottom: 2px solid black;
-}
-
 a {
     text-decoration: none;
     color: inherit;
@@ -90,7 +67,6 @@ a {
 
 /*FIRST SECTION*/
 
-.firstSection,
 .secondSection {
     display: flex;
     flex-direction: column;
@@ -99,40 +75,6 @@ a {
     margin-top: 1rem;
     margin-bottom: 1rem;
     gap: 1rem;
-}
-
-.firstSection-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-    line-height: 2;
-}
-
-.imgAniSection1,
-.imgAniSection2 {
-    width: 60%;
-    height: 50%;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    box-shadow: 21px 22px 0px -4px blueviolet;
-    -webkit-box-shadow: 21px 22px 0px -4px blueviolet;
-    -moz-box-shadow: 21px 22px 0px -4px blueviolet;
-}
-
-.imgAniSection2 {
-    width: 100%;
-    box-shadow: -23px -21px 0px -4px blueviolet;
-    -webkit-box-shadow: -23px -21px 0px -4px blueviolet;
-    -moz-box-shadow: -23px -21px 0px -4px blueviolet;
-}
-
-.firstSection h3 {
-    font-size: 2rem;
-    font-family: "Dancing script";
-    text-align: center;
 }
 
 .whatsappIcon {
@@ -301,7 +243,6 @@ footer p {
     padding: 10px;
 }
 
-#firstSection-container2,
 .titleAgendas,
 .viewOnInstagram,
 .cuadro,
@@ -437,11 +378,6 @@ footer p {
     transform: translateX(0);
 }
 
-#firstSection-container2 .showSeeMore {
-    width: 16px;
-    height: 16px;
-}
-
 textarea {
     resize: none;
 }
@@ -543,11 +479,6 @@ textarea {
     margin: 2rem;
 }
 
-.firstSection-info span {
-    color: blueviolet;
-    font-weight: bold;
-}
-
 /*RESPONSIVE DESIGN*/
 
 @media(min-width: 768px) {
@@ -577,49 +508,6 @@ textarea {
 
     button:hover {
         cursor: pointer;
-    }
-
-    .firstSection {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-    }
-
-    .firstSection-info div {
-        font-size: 20px;
-    }
-
-    .firstSection-container {
-        display: flex;
-        justify-content: center;
-        flex-direction: row;
-        gap: 40px;
-        margin-top: 1rem;
-    }
-
-    .firstSection-container img {
-        width: 30%;
-        height: 30%;
-    }
-
-    .firstSection-container h3 {
-        font-size: 2.5rem;
-        text-align: left;
-    }
-
-    .firstSection-container p {
-        font-size: 2rem;
-    }
-
-    #firstSection-container2 {
-        display: flex;
-        flex-direction: row-reverse;
-        gap: 70px;
-    }
-
-    #firstSection-container2 img {
-        width: 40%;
-        height: 40%;
     }
 
     .agendaContainer,

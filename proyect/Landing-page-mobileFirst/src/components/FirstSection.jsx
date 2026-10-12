@@ -1,117 +1,124 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
+/* eslint-disable react/prop-types -- el proyecto no usa prop-types */
+import { useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { motion, useInView, useReducedMotion, useScroll, useTransform } from 'framer-motion';
 import aniSection from './imgs/aniSection3.jpg';
 import aniSection2 from './imgs/aniSection7.jpg';
-import arrowRight from '../components/assets/arrowRight.svg';
+import './FirstSection.css';
 
-const fadeInUp = {
-    initial: { opacity: 0, y: 50 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.8, ease: 'easeOut' },
-};
+const EASE = [0.22, 1, 0.36, 1];
+const VIEWPORT = { once: true, amount: 0.25 };
 
-const FirstSection = () => {
-    const [ref1, inView1] = useInView({ triggerOnce: true, threshold: 0.1 });
-    const [ref2, inView2] = useInView({ triggerOnce: true, threshold: 0.1 });
+const ArrowIcon = () => (
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+);
+
+// Bloque imagen + texto. La imagen se revela con una máscara y tiene un parallax suave.
+const AboutBlock = ({ eyebrow, title, image, imageAlt, width, height, reverse, tinted, chips, children }) => {
+    const reduceMotion = useReducedMotion();
+    const mediaRef = useRef(null);
+    const { scrollYProgress } = useScroll({ target: mediaRef, offset: ['start end', 'end start'] });
+    // Se observa el contenedor (no el marco): un elemento con clip-path cerrado no intersecta.
+    const mediaInView = useInView(mediaRef, { once: true, amount: 0.25 });
+    const imgY = useTransform(scrollYProgress, [0, 1], reduceMotion ? ['0%', '0%'] : ['-6%', '6%']);
+
+    const textContainer = {
+        hidden: {},
+        show: { transition: { staggerChildren: reduceMotion ? 0 : 0.12, delayChildren: 0.1 } },
+    };
+    const textItem = {
+        hidden: reduceMotion ? { opacity: 0 } : { opacity: 0, y: 22 },
+        show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: EASE } },
+    };
 
     return (
-        <section className='firstSection'>
-            {/* First Container */}
-            <div className="firstSection-container" ref={ref1}>
-                <motion.img
-                    className='imgAniSection1'
-                    src={aniSection}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={inView1 ? { opacity: 1, scale: 1 } : {}}
-                    transition={{ duration: 1 }}
-                    alt="Artistic representation"
+        <article className={`about-block${reverse ? ' is-reverse' : ''}${tinted ? ' is-tinted' : ''}`}>
+            <div className={`about-media${height > width ? ' is-portrait' : ''}`} ref={mediaRef}>
+                <motion.span
+                    className="about-shape"
+                    aria-hidden="true"
+                    initial={reduceMotion ? false : { opacity: 0, scale: 0.9 }}
+                    animate={mediaInView ? { opacity: 1, scale: 1 } : undefined}
+                    transition={{ duration: 0.9, delay: 0.25, ease: EASE }}
                 />
                 <motion.div
-                    className="firstSection-info"
-                    variants={fadeInUp}
-                    initial="initial"
-                    animate={inView1 ? "animate" : "initial"}
+                    className="about-frame"
+                    style={{ aspectRatio: `${width} / ${height}` }}
+                    initial={reduceMotion ? false : { clipPath: 'inset(0 0 100% 0 round 18px)' }}
+                    animate={mediaInView ? { clipPath: 'inset(0 0 0% 0 round 18px)' } : undefined}
+                    transition={{ duration: 1, ease: EASE }}
                 >
-                    <motion.h3
-                        initial={{ x: -50, opacity: 0 }}
-                        animate={inView1 ? { x: 0, opacity: 1 } : {}}
-                        transition={{ duration: 0.6 }}
-                    >
-                        Quién soy
-                    </motion.h3>
-                    <motion.div
-                        className="flex-column"
-                        initial={{ opacity: 0 }}
-                        animate={inView1 ? { opacity: 1 } : {}}
-                        transition={{ delay: 0.2, duration: 0.8 }}
-                    >
-                        <div>
-                            Soy <span>Ani Carlomagno</span>, artista plástica y docente de Tandil.
-                        </div>
-                        <div>
-                            Pinto mujeres de <span>ojos grandes</span>, un símbolo de mi propio camino hacia la <span>visibilidad</span> y la <span>expresión</span> de las vivencias que me han marcado.
-                        </div>
-                        <Link to="/sobre-mi">
-                            <motion.button
-                                className='linkTo-aboutMe-btn'
-                                whileHover={{ scale: 1.1 }}
-                                whileTap={{ scale: 0.95 }}
-                            >
-                                Saber más 
-                            </motion.button>
-                        </Link>
-                    </motion.div>
+                    <motion.img
+                        src={image}
+                        alt={imageAlt}
+                        width={width}
+                        height={height}
+                        loading="lazy"
+                        decoding="async"
+                        style={{ y: imgY }}
+                    />
                 </motion.div>
             </div>
 
-            {/* Second Container */}
-            <div className="firstSection-container" id='firstSection-container2' ref={ref2}>
-                <motion.img
-                    className='imgAniSection2'
-                    src={aniSection2}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={inView2 ? { opacity: 1, scale: 1 } : {}}
-                    transition={{ duration: 1 }}
-                    alt="Artistic passion"
-                />
-                <motion.div
-                    className="firstSection-info"
-                    variants={fadeInUp}
-                    initial="initial"
-                    animate={inView2 ? "animate" : "initial"}
-                >
-                    <motion.h3
-                        initial={{ x: 50, opacity: 0 }}
-                        animate={inView2 ? { x: 0, opacity: 1 } : {}}
-                        transition={{ duration: 0.6 }}
-                    >
-                        Mis pasiones
-                    </motion.h3>
-                    <motion.div
-                        className="flex-column"
-                        initial={{ opacity: 0 }}
-                        animate={inView2 ? { opacity: 1 } : {}}
-                        transition={{ delay: 0.2, duration: 0.8 }}
-                    >
-                        <div>
-                            Me apasiona profundamente la <span>pintura</span> y la <span>docencia</span>, dos lenguajes mágicos a través de los cuales transmito mi amor por el <span>arte</span> y la <span>música</span>.
-                        </div>
-                        <Link to="/sobre-mi">
-                            <motion.button
-                                className='linkTo-aboutMe-btn'
-                                whileHover={{ scale: 1.1 }}
-                                whileTap={{ scale: 0.95 }}
-                            >
-                                Saber más
-                            </motion.button>
-                        </Link>
-                    </motion.div>
+            <motion.div
+                className="about-text"
+                variants={textContainer}
+                initial="hidden"
+                whileInView="show"
+                viewport={VIEWPORT}
+            >
+                <motion.p className="about-eyebrow" variants={textItem}>{eyebrow}</motion.p>
+                <motion.h2 className="about-title" variants={textItem}>{title}</motion.h2>
+                <motion.div className="about-body" variants={textItem}>{children}</motion.div>
+                {chips && (
+                    <motion.ul className="about-chips" variants={textItem}>
+                        {chips.map((chip) => <li key={chip}>{chip}</li>)}
+                    </motion.ul>
+                )}
+                <motion.div variants={textItem}>
+                    <Link to="/sobre-mi" className="about-link">
+                        Saber más <ArrowIcon />
+                    </Link>
                 </motion.div>
-            </div>
-        </section>
+            </motion.div>
+        </article>
     );
 };
+
+const FirstSection = () => (
+    <section className="about" aria-label="Sobre Ani Carlomagno">
+        <AboutBlock
+            eyebrow="01 · Mi historia"
+            title="Quién soy"
+            image={aniSection}
+            imageAlt="Ani Carlomagno pintando un retrato de mujer en su taller"
+            width={960}
+            height={1280}
+        >
+            <p>
+                Soy <span>Ani Carlomagno</span>, artista plástica y docente de Tandil.
+            </p>
+            <p>
+                Pinto mujeres de <span>ojos grandes</span>, un símbolo de mi propio camino hacia la <span>visibilidad</span> y la <span>expresión</span> de las vivencias que me han marcado.
+            </p>
+        </AboutBlock>
+
+        <AboutBlock
+            reverse
+            tinted
+            eyebrow="02 · Lo que me mueve"
+            title="Mis pasiones"
+            image={aniSection2}
+            imageAlt="Ani Carlomagno rodeada de sus cuadros"
+            width={1280}
+            height={850}
+            chips={['Pintura', 'Docencia', 'Arte', 'Música']}
+        >
+            <p>
+                Me apasiona profundamente la <span>pintura</span> y la <span>docencia</span>, dos lenguajes mágicos a través de los cuales transmito mi amor por el <span>arte</span> y la <span>música</span>.
+            </p>
+        </AboutBlock>
+    </section>
+);
 
 export default FirstSection;
