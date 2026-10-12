@@ -4,5 +4,6 @@ export const agendaPrices = {
     AGENDA_SEMANAL: 23900,
     CUADERNO: 16900,
     CUADERNO_A4: 35900,
+    ADICION_DE_FRASE: 2000,
     SIN_PRECIO: 0
 }

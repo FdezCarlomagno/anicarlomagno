@@ -43,3 +43,15 @@ Status: accepted; implemented
 Context: /agendas era un carrusel suelto, un boton gigante al final y una grilla de tapas sin contexto. Google mostraba "Vercel" como nombre del sitio.
 Decision: Hero de 2 columnas en desktop (texto + carrusel), CTA arriba y repetido, beneficios, lista de precios leida de `AgendaPrices.js` (sin cambiar valores), tapas con `object-fit: contain` enlazadas a /agenda-personalizada y cierre con CTA. Titulo de pestana por pagina. Nombre del sitio: JSON-LD `WebSite` (name "Ani Carlomagno") + `og:site_name`.
 Consequences: Google tarda dias/semanas en recrawlear; se acelera pidiendo reindexar en Search Console. `og:image`/`twitter:image` apuntan a /images/*.jpg que no existen en `public/` (pendiente).
+
+## DL-005 - /agenda-personalizada como stepper de 4 pasos con vista previa (2026-10-12)
+Status: accepted; implemented
+Context: El formulario era una pagina larga con todos los campos juntos, toasts, sonido y reseteo automatico.
+Decision: Pasos Producto > Tapa > Detalles > Revision, vista previa en vivo (sticky en desktop, compacta en mobile), barra inferior con total y boton principal, borrador en localStorage, estado de exito. Se reemplazan AgendaForm, AgendaPreview y SavedAgenda; se elimina el CSS legacy de agendas.css que quedo sin uso. El mensaje de WhatsApp, el telefono y los precios (AgendaPrices.js) no cambian; la frase sigue sin costo (DL-003).
+Consequences: La ubicacion del nombre ahora tiene valor por defecto (abajo a la derecha) en vez de obligar a elegir. La vista previa muestra la obra completa (contain), no recortada.
+
+## DL-006 - La frase personalizada vuelve a tener costo: +$2000 (2026-10-12)
+Status: accepted; implemented
+Context: DL-003 habia definido la frase como gratis.
+Decision: Regla de negocio actualizada por Valentin/Ani: la frase suma $2000 (`ADICION_DE_FRASE` en `AgendaPrices.js`) solo si la casilla esta tildada. Reemplaza DL-003.
+Consequences: El total (barra, resumen y mensaje de WhatsApp) incluye el adicional; el texto de la casilla lo avisa.

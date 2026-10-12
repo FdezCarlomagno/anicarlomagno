@@ -1,3 +1,4 @@
+import './pagesStyles/agendas.css';
 import React, { useState } from 'react';
 import Imgs from '../components/DropDownImgs.jsx';
 import '../pages/pagesStyles/laminas.css';
