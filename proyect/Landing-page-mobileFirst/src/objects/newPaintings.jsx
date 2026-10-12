@@ -55,10 +55,24 @@ import cuadro55 from '../pages/pagesStyles/paintingsImgs/la-dame-fleurie.jpeg'
 import cuadro56 from '../pages/pagesStyles/paintingsImgs/femme-deau-agenda.jpeg'
 import cuadro57 from '../pages/pagesStyles/paintingsImgs/Creacion.jpeg'
 import cuadro58 from '../pages/pagesStyles/paintingsImgs/Bahia.jpeg'
+import cuadro59 from '../pages/pagesStyles/paintingsImgs/Dama-de-bouquet.jpeg'
+import cuadro60 from '../pages/pagesStyles/paintingsImgs/Diosa-floral.jpeg'
+import cuadro61 from '../pages/pagesStyles/paintingsImgs/Floralia.jpeg'
+import cuadro62 from '../pages/pagesStyles/paintingsImgs/Jardin-de-prisma.jpeg'
+import cuadro63 from '../pages/pagesStyles/paintingsImgs/Kiara.jpeg'
+import cuadro64 from '../pages/pagesStyles/paintingsImgs/La-dama-argentina.jpeg'
+import cuadro65 from '../pages/pagesStyles/paintingsImgs/Primavera.jpeg'
 
 
 
 const cuadros = [
+    { src: cuadro59, title: 'Dama de Bouquet' },
+    { src: cuadro60, title: 'Diosa Floral' },
+    { src: cuadro61, title: 'Floralia' },
+    { src: cuadro62, title: 'Jardín de Prisma' },
+    { src: cuadro63, title: 'Kiara' },
+    { src: cuadro64, title: 'La Dama Argentina' },
+    { src: cuadro65, title: 'Primavera' },
     {src: cuadro56, title: "Femme d'eau"},
     {src: cuadro57, title: "Creación"},
     {src: cuadro58, title: "Bahía"},
