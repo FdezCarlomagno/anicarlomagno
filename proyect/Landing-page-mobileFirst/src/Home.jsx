@@ -3,9 +3,7 @@ import './LandingPage.css'
 import FirstSection from './components/FirstSection.jsx'
 import SecondSection from './components/SecondSection.jsx'
 import AgendaSection from './components/AgendaSection.jsx'
-import igSvg from './components/assets/blackInstagram.svg'
 import PaintingImgsSection from './components/paintingImgsSection.jsx'
-import { Image } from '@unpic/react'
 
 
 function Home() {
@@ -19,11 +17,7 @@ function Home() {
         </header>
         <section id="contenido">
           <FirstSection />
-          <h2 className='titleAgendas'>Agendas</h2>
           <AgendaSection />
-          <div className="viewOnInstagram">
-            <button className='btnViewOnInstagram'><a href="https://www.instagram.com/stories/highlights/17931595102459109/" target='blank'><Image src={igSvg} />Ver en instagram</a></button>
-          </div>
           
         </section>
         <section className='father-paintingsSection'>

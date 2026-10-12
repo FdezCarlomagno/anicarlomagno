@@ -108,16 +108,11 @@ a {
     margin-bottom: 20px;
 }
 
-.secondSectionInfo h2,
-.titleAgendas {
+.secondSectionInfo h2 {
     margin-top: 10px;
     font-size: 2rem;
     font-family: "Dancing Script";
     text-align: center;
-}
-
-.titleAgendas {
-    font-size: 40px;
 }
 
 /*SOCIAL MEDIA SECTION*/
@@ -184,67 +179,6 @@ footer p {
     font-size: 13px;
 }
 
-/*SECTION AGENDA*/
-
-.sectionAgenda {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 10px;
-    padding: 30px;
-    padding-bottom: 1rem;
-
-}
-
-.agendaSlider {
-    display: flex;
-    align-items: center;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    gap: 24px;
-    border-top: 3px solid blueviolet;
-    border-bottom: 3px solid blueviolet;
-    width: fit-content;
-    height: fit-content;
-    padding: 30px;
-}
-
-.agendaContainer img {
-    border: none;
-    border-radius: 16px;
-    height: 100%;
-}
-
-.agendaContainer {
-    background-color: rgba(137, 43, 226, 0.274);
-    border-radius: 10px;
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    font-size: 15px;
-    text-align: center;
-}
-
-.viewOnInstagram,
-.viewOnInstagram button a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 7px;
-    color: black;
-}
-
-.viewOnInstagram button {
-    background-color: rgba(137, 43, 226, 0.274);
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-}
-
-.titleAgendas,
-.viewOnInstagram,
 .cuadro,
 .paintingImgs-box {
     view-timeline-name: --reveal;
@@ -510,14 +444,10 @@ textarea {
         cursor: pointer;
     }
 
-    .agendaContainer,
-    .viewOnInstagram button,
     .socialMedia-section li {
         transition: all 200ms ease-in-out;
     }
 
-    .agendaContainer:hover,
-    .viewOnInstagram button:hover,
     .socialMedia-section li:hover {
         background-color: rgb(186, 112, 255);
         transform: scale(1.04);
@@ -535,10 +465,6 @@ textarea {
         cursor: pointer;
         transform: scale(1.25);
         background-color: rgb(17, 179, 76)
-    }
-
-    .titleAgendas {
-        font-size: 3rem;
     }
 
     video {
@@ -592,26 +518,4 @@ textarea {
         margin-top: 10px;
     }
 
-    .agendaContainer img {
-    width: 100%;
-        border: none;
-    }
-    
-    .agendaContainer:hover {
-        cursor: pointer;
-        transform: scale(1.04) !important;
-    }
-
-    .agendaContainer {
-        background-color: rgba(137, 43, 226, 0.274);
-        border-radius: 16px;
-        width: 200px;
-        height: auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        font-size: 15px;
-        text-align: center;
-    }
 }

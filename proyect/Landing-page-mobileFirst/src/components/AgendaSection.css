@@ -1,0 +1,272 @@
+/* Agendas (home) — carrusel con scroll-snap, mobile first. */
+
+.agsec {
+    --ag-accent: blueviolet;
+    --ag-ink: #1d1626;
+    --ag-muted: #4a4256;
+    --ag-ease: cubic-bezier(0.22, 1, 0.36, 1);
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: clamp(40px, 9vw, 96px) 0;
+}
+
+/* ---- Encabezado ---- */
+.agsec-head {
+    padding: 0 24px;
+    text-align: center;
+}
+
+.agsec-eyebrow {
+    margin-bottom: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ag-accent);
+}
+
+.agsec-title {
+    margin-bottom: 12px;
+    font-family: "Dancing Script", cursive;
+    font-size: clamp(44px, 12vw, 64px);
+    font-weight: 700;
+    line-height: 1.05;
+    color: var(--ag-ink);
+}
+
+.agsec-sub {
+    max-width: 30rem;
+    margin: 0 auto;
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--ag-muted);
+}
+
+/* ---- Carrusel ---- */
+.agsec-stage {
+    position: relative;
+    margin-top: 32px;
+}
+
+.agsec-track {
+    display: flex;
+    gap: 16px;
+    margin: 0;
+    padding: 12px 24px 28px;
+    list-style: none;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 24px;
+    scrollbar-width: none;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+    /* Desvanecido en los bordes: sugiere que hay más para ver. */
+    -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 20px, #000 calc(100% - 28px), transparent 100%);
+    mask-image: linear-gradient(90deg, transparent 0, #000 20px, #000 calc(100% - 28px), transparent 100%);
+}
+
+.agsec-track::-webkit-scrollbar { display: none; }
+
+.agsec-track:focus-visible {
+    outline: 3px solid var(--ag-accent);
+    outline-offset: -3px;
+}
+
+.agsec-card {
+    flex: 0 0 auto;
+    width: clamp(190px, 56vw, 240px);
+    scroll-snap-align: start;
+}
+
+.agsec-card a {
+    position: relative;
+    display: block;
+    aspect-ratio: 9 / 16;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #e9e1f3;
+    box-shadow: 0 10px 28px rgba(60, 20, 120, 0.18);
+    transition: transform 0.4s var(--ag-ease), box-shadow 0.4s var(--ag-ease);
+}
+
+.agsec .agsec-card img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    object-fit: cover;
+    transition: transform 0.6s var(--ag-ease);
+    user-select: none;
+}
+
+.agsec-card-cta {
+    position: absolute;
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    padding: 10px 0;
+    border-radius: 999px;
+    background: rgba(20, 10, 40, 0.55);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.3s ease, transform 0.4s var(--ag-ease);
+}
+
+@media (hover: hover) {
+    .agsec-card a:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 18px 40px rgba(60, 20, 120, 0.3);
+    }
+    .agsec-card a:hover img { transform: scale(1.06); }
+    .agsec-card a:hover .agsec-card-cta,
+    .agsec-card a:focus-visible .agsec-card-cta { opacity: 1; transform: none; }
+}
+
+.agsec-card a:focus-visible {
+    outline: 3px solid var(--ag-accent);
+    outline-offset: 3px;
+}
+
+/* ---- Flechas (solo desktop) ---- */
+.agsec-arrow {
+    display: none;
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    width: 48px;
+    height: 48px;
+    margin-top: -38px;
+    padding: 0;
+    place-items: center;
+    border: 1px solid rgba(138, 43, 226, 0.25);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.92);
+    color: var(--ag-accent);
+    box-shadow: 0 8px 22px rgba(60, 20, 120, 0.18);
+    cursor: pointer;
+    transition: opacity 0.2s ease, transform 0.2s var(--ag-ease), background 0.2s ease;
+}
+
+.agsec-arrow svg {
+    width: 22px;
+    height: 22px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2.4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.agsec-arrow--prev { left: 8px; }
+.agsec-arrow--next { right: 8px; }
+.agsec-arrow:hover:not(:disabled) { background: var(--ag-accent); color: #fff; }
+.agsec-arrow:active:not(:disabled) { transform: scale(0.92); }
+.agsec-arrow:disabled { opacity: 0; pointer-events: none; }
+.agsec-arrow:focus-visible { outline: 3px solid var(--ag-accent); outline-offset: 3px; }
+
+/* ---- Progreso + pista ---- */
+.agsec-progress {
+    width: min(160px, 40%);
+    height: 4px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 4px;
+    background: rgba(138, 43, 226, 0.18);
+}
+
+.agsec-progress span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    background: var(--ag-accent);
+    transform-origin: left center;
+    transition: transform 0.15s linear;
+}
+
+.agsec-hint {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 13px;
+    color: var(--ag-muted);
+}
+
+/* ---- Acciones ---- */
+.agsec-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 28px 24px 0;
+}
+
+.agsec-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 52px;
+    padding: 0 28px;
+    border-radius: 999px;
+    border: 1.5px solid transparent;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.25s var(--ag-ease), background 0.2s ease, border-color 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.agsec-btn:active { transform: scale(0.97); }
+.agsec-btn:focus-visible { outline: 3px solid var(--ag-accent); outline-offset: 3px; }
+
+.agsec-btn--primary {
+    background: var(--ag-accent);
+    color: #fff;
+    box-shadow: 0 8px 24px rgba(138, 43, 226, 0.35);
+}
+.agsec-btn--primary:hover { background: rgb(150, 60, 235); }
+
+.agsec-btn--ghost {
+    color: var(--ag-ink);
+    border-color: rgba(29, 22, 38, 0.3);
+}
+.agsec-btn--ghost:hover { border-color: var(--ag-accent); color: var(--ag-accent); }
+.agsec-btn--ghost img { width: 20px; height: 20px; margin: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+    .agsec-card a,
+    .agsec .agsec-card img,
+    .agsec-card-cta,
+    .agsec-progress span,
+    .agsec-arrow { transition: none; }
+}
+
+@media (min-width: 768px) {
+    .agsec-stage { padding: 0 56px; }
+
+    .agsec-track {
+        padding-inline: 8px;
+        scroll-padding-inline: 8px;
+        gap: 20px;
+        -webkit-mask-image: none;
+        mask-image: none;
+    }
+
+    .agsec-card { width: 240px; }
+
+    .agsec-arrow { display: grid; }
+    .agsec-arrow--prev { left: 4px; }
+    .agsec-arrow--next { right: 4px; }
+
+    .agsec-hint { display: none; }
+
+    .agsec-actions {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
