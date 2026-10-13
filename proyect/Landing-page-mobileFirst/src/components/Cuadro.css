@@ -297,3 +297,17 @@
     .pc-custom-cta { transition: none; }
     .pc-custom:hover { transform: none; }
 }
+
+/* Botón que abre el visor: ocupa toda la imagen, sin cambiar su apariencia */
+.pc-zoom {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: zoom-in;
+}
+
+.pc-zoom:focus-visible { outline: 3px solid var(--pc-accent); outline-offset: -3px; }

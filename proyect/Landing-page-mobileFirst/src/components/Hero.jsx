@@ -50,8 +50,8 @@ const Hero = () => {
                     className="hero-poster"
                     src={poster}
                     alt=""
-                    width="1440"
-                    height="1795"
+                    width="900"
+                    height="1600"
                     fetchPriority="high"
                 />
                 {videoSrc && (

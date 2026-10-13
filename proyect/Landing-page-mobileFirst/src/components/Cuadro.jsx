@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types -- el proyecto no usa prop-types */
 import { useState } from 'react';
+import Lightbox from './Lightbox.jsx';
 import './Cuadro.css';
 
 const LONG_TEXT = 110;
@@ -7,6 +8,7 @@ const LONG_TEXT = 110;
 // Tarjeta de obra. Recibe una obra "enriquecida" (ver pages/stockFilters.js).
 const Cuadro = ({ painting }) => {
     const [expanded, setExpanded] = useState(false);
+    const [zoomOpen, setZoomOpen] = useState(false);
     const isLong = (painting.description || '').length > LONG_TEXT;
     const badge = painting.sold ? 'Vendida' : painting.offer ? '40% OFF' : null;
 
@@ -19,7 +21,15 @@ const Cuadro = ({ painting }) => {
     return (
         <article className={`pc${painting.sold ? ' is-sold' : ''}`}>
             <div className="pc-media">
-                <img src={painting.src} alt={`Pintura "${painting.name}" de Ani Carlomagno`} loading="lazy" decoding="async" />
+                <button
+                    type="button"
+                    className="pc-zoom"
+                    onClick={() => setZoomOpen(true)}
+                    aria-haspopup="dialog"
+                >
+                    <img src={painting.src} alt={`Pintura "${painting.name}" de Ani Carlomagno`} loading="lazy" decoding="async" />
+                    <span className="pc-sr">Ver {painting.name} en grande</span>
+                </button>
                 {badge && (
                     <span className={`pc-badge${painting.sold ? ' is-sold' : ' is-offer'}`}>{badge}</span>
                 )}
@@ -60,6 +70,15 @@ const Cuadro = ({ painting }) => {
                     <span className="pc-sr"> por {painting.name} (WhatsApp, se abre en una pestaña nueva)</span>
                 </button>
             </div>
+
+            {zoomOpen && (
+                <Lightbox
+                    src={painting.src}
+                    alt={`Pintura "${painting.name}" de Ani Carlomagno`}
+                    title={painting.name}
+                    onClose={() => setZoomOpen(false)}
+                />
+            )}
         </article>
     );
 };
