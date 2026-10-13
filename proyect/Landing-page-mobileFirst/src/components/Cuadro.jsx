@@ -19,7 +19,7 @@ const Cuadro = ({ painting }) => {
     return (
         <article className={`pc${painting.sold ? ' is-sold' : ''}`}>
             <div className="pc-media">
-                <img src={painting.src} alt={painting.name} loading="lazy" decoding="async" />
+                <img src={painting.src} alt={`Pintura "${painting.name}" de Ani Carlomagno`} loading="lazy" decoding="async" />
                 {badge && (
                     <span className={`pc-badge${painting.sold ? ' is-sold' : ' is-offer'}`}>{badge}</span>
                 )}

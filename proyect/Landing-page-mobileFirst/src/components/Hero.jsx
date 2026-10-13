@@ -73,8 +73,11 @@ const Hero = () => {
                     Artista plástica · Tandil
                 </motion.p>
                 <motion.h1 id="hero-title" className="hero-title" {...reveal(0.2)}>
-                    Arte <em>pintado a mano</em>, agendas y láminas hechas en Tandil
+                    Obras <em>con alma</em>, para los momentos que querés guardar
                 </motion.h1>
+                <motion.h2 className="hero-subtitle" {...reveal(0.28)}>
+                    Pintar es dejar que <em>una parte de mí</em> permanezca en el mundo.
+                </motion.h2>
                 <motion.div className="hero-actions" {...reveal(0.35)}>
                     <Link to="/obras-en-stock" className="hero-btn hero-btn--primary">
                         Ver mis obras

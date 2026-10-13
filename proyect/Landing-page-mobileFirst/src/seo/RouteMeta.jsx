@@ -8,8 +8,8 @@ const NAME = 'Ani Carlomagno';
 // así que cada ruta actualiza <title>, la meta description, el canonical y Open Graph.
 const META = {
   '/': {
-    title: 'Ani Carlomagno | Artista plástica en Tandil',
-    description: 'Obras pintadas a mano, agendas, cuadernos y láminas de Analía Carlomagno, artista plástica argentina. Pedidos por WhatsApp y envíos a todo el país.',
+    title: 'Ani Carlomagno, artista plástica | Cuadros y obras en Tandil',
+    description: 'Cuadros y obras con alma pintados a mano por Ani Carlomagno, artista plástica de Tandil: mujeres de ojos grandes, agendas y láminas. Envíos a todo el país.',
   },
   '/elegir': {
     title: 'Obras: en stock o a medida | Ani Carlomagno',

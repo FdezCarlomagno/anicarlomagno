@@ -76,7 +76,7 @@
 }
 
 .hero-title {
-    margin-bottom: 24px;
+    margin-bottom: 14px;
     font-size: clamp(34px, 10vw, 46px);
     font-weight: 700;
     line-height: 1.12;
@@ -89,6 +89,23 @@
     font-family: "Dancing Script", cursive;
     font-style: normal;
     font-size: 1.18em;
+    color: rgb(214, 180, 252);
+}
+
+.hero-subtitle {
+    margin-bottom: 24px;
+    font-size: clamp(17px, 4.8vw, 20px);
+    font-weight: 400;
+    line-height: 1.45;
+    text-wrap: balance;
+    color: rgba(240, 248, 255, 0.92);
+    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.4);
+}
+
+.hero-subtitle em {
+    font-family: "Dancing Script", cursive;
+    font-style: normal;
+    font-size: 1.2em;
     color: rgb(214, 180, 252);
 }
 
@@ -228,6 +245,10 @@
 
     .hero-title {
         font-size: clamp(44px, 5vw, 64px);
+    }
+
+    .hero-subtitle {
+        font-size: 22px;
     }
 
     .hero-actions {

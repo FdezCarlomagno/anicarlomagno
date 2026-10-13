@@ -96,7 +96,7 @@ const PaintingImgsSection = () => {
                                     <Link to="/obras-en-stock" aria-label={`Ver obras: ${cuadro.title}`}>
                                         <img
                                             src={cuadro.src}
-                                            alt={cuadro.title}
+                                            alt={`Pintura "${cuadro.title}" de Ani Carlomagno`}
                                             loading="lazy"
                                             decoding="async"
                                         />
