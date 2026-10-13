@@ -5,28 +5,30 @@ import { Image } from '@unpic/react';
 // El poster vive en /public para poder pedirlo desde el HTML (preload) y mejorar el LCP.
 const poster = '/hero.jpg';
 import video from './assets/wspVideo-header.mp4';
+import videoMobile from './assets/wspVideo-header-mobile.mp4';
 import paintBrush from './assets/WhitePaintBrush.svg';
 import './Hero.css';
 
-// Sin video para quien pide menos movimiento, ahorra datos o está en un teléfono
-// (son ~8 MB): queda el poster. En pantallas grandes se carga recién después de la carga de la página.
+// Sin video para quien pide menos movimiento o ahorra datos: queda el poster.
+// Para el resto se carga recién después de la carga de la página.
 const shouldSkipVideo = () => {
     if (typeof window === 'undefined') return false;
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const saveData = navigator.connection?.saveData === true;
-    const small = window.matchMedia('(max-width: 767px)').matches;
-    return reduced || saveData || small;
+    return reduced || saveData;
 };
 
 const Hero = () => {
     const reduceMotion = useReducedMotion();
     const [allowVideo] = useState(() => !shouldSkipVideo());
-    const [playVideo, setPlayVideo] = useState(false);
+    const [videoSrc, setVideoSrc] = useState(null);
     const [videoReady, setVideoReady] = useState(false);
 
     useEffect(() => {
         if (!allowVideo) return undefined;
-        const start = () => setPlayVideo(true);
+        // En teléfonos se sirve una versión liviana (~1,6 MB en vez de ~8 MB). Se elige al
+        // arrancar (ya con el layout final) y no en el primer render.
+        const start = () => setVideoSrc(window.matchMedia('(max-width: 767px)').matches ? videoMobile : video);
         if (document.readyState === 'complete') {
             const t = setTimeout(start, 300);
             return () => clearTimeout(t);
@@ -52,10 +54,10 @@ const Hero = () => {
                     height="1795"
                     fetchPriority="high"
                 />
-                {playVideo && (
+                {videoSrc && (
                     <video
                         className={`hero-video${videoReady ? ' is-ready' : ''}`}
-                        src={video}
+                        src={videoSrc}
                         autoPlay
                         loop
                         muted

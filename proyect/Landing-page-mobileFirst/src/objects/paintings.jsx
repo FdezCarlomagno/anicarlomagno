@@ -72,7 +72,7 @@ const paintings = [
 
     { src: cuadro18, name: 'Lucía', price: `$${1231}`, offer: true, description: 'Cuadro en acrilico, realizado sobre bastidor de madera.', size: '60x60', sold: true },
 
-    { src: cuadro19, name: 'Pricesa Azul', price: `$${1231}`, offer: true, description: 'Cuadro en acrilico, realizado sobre bastidor de madera.', size: '50x70', sold: true },
+    { src: cuadro19, name: 'Princesa Azul', price: `$${1231}`, offer: true, description: 'Cuadro en acrilico, realizado sobre bastidor de madera.', size: '50x70', sold: true },
 
     { src: cuadro20, name: 'Scarlet', price: `$${1231}`, offer: true, description: 'Cuadro en acrilico, realizado sobre bastidor de madera.', size: '45x55', sold: true },
 
