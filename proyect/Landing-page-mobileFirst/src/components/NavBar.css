@@ -64,6 +64,23 @@
 /* Link de la página actual */
 .navMenuList a[aria-current='page'] .navMenuLabel { color: var(--nav-accent); }
 
+/* ---- Instagram: ícono solo, pegado a la derecha ---- */
+.navIg {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    margin-left: auto;
+    color: var(--nav-ink);
+    -webkit-tap-highlight-color: transparent;
+}
+
+.navIg svg { width: 24px; height: 24px; }
+.navIg:hover { color: var(--nav-accent); }
+.navIg:focus-visible { outline: 3px solid var(--nav-accent); outline-offset: 2px; border-radius: 8px; }
+
 /* ---- Botón hamburguesa → X ---- */
 .btnDisplayMenu {
     position: relative;
@@ -239,6 +256,9 @@
     .btnDisplayMenu {
         display: none;
     }
+
+    .navBar .navMenu { margin-left: auto; }
+    .navIg { order: 3; margin-left: 12px; }
 
     .navMenu {
         position: static;

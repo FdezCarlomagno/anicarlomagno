@@ -108,6 +108,22 @@
 
 .ag-promo strong { color: var(--ag-accent-deep); }
 
+.ag-ig {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 44px;
+    margin-top: 4px;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--ag-accent-deep);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.ag-ig svg { width: 20px; height: 20px; flex: none; }
+.ag-ig:focus-visible { outline: 3px solid var(--ag-accent); outline-offset: 3px; border-radius: 6px; }
+
 /* ---- Secciones ---- */
 .ag-section { padding: 48px 20px; max-width: 1240px; margin: 0 auto; }
 .ag-section--tint { max-width: none; background: var(--ag-tint); }

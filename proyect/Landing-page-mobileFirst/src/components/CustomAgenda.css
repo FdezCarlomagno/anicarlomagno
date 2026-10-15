@@ -302,9 +302,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 12px;
+    gap: 8px;
     margin: 0 -16px;
-    padding: 12px 16px max(12px, env(safe-area-inset-bottom)) 76px; /* deja libre el botón flotante de WhatsApp */
+    padding: 12px 12px max(12px, env(safe-area-inset-bottom)) 68px; /* deja libre el botón flotante de WhatsApp */
     border-top: 1px solid var(--ca-line);
     border-radius: 0 0 24px 24px;
     background: rgba(255, 255, 255, 0.96);
@@ -316,8 +316,9 @@
 .ca-bar-total span { font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ca-muted); }
 .ca-bar-total strong { font-size: 20px; font-weight: 800; font-variant-numeric: tabular-nums; color: var(--ca-accent-deep); }
 
-.ca-actions { display: flex; gap: 8px; }
-.ca-bar .ca-btn { padding: 0 16px; white-space: nowrap; }
+.ca-actions { display: flex; gap: 6px; min-width: 0; }
+.ca .ca-bar .ca-btn { padding: 0 12px; gap: 6px; font-size: 14px; white-space: nowrap; }
+.ca .ca-bar .ca-btn svg { display: none; } /* sin flecha en pantallas angostas: no entra junto al botón de WhatsApp */
 .ca-actions.is-column { flex-direction: column; align-items: stretch; }
 
 .ca .ca-btn {
@@ -426,7 +427,8 @@
     .ca-options.is-two { grid-template-columns: 1fr 1fr; }
     .ca-positions { grid-template-columns: repeat(4, minmax(0, 1fr)); }
     .ca-bar { margin: 0 -28px; padding: 14px 28px; }
-    .ca-bar .ca-btn { padding: 0 22px; }
+    .ca .ca-bar .ca-btn { padding: 0 22px; font-size: 16px; gap: 8px; }
+    .ca .ca-bar .ca-btn svg { display: inline; }
     .ca-actions.is-column { flex-direction: row; flex-wrap: wrap; justify-content: center; }
 }
 

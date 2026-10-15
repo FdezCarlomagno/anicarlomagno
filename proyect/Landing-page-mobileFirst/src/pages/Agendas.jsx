@@ -25,6 +25,8 @@ const COVERS = [
     { src: a8, width: 1238, height: 1280 },
 ];
 
+const INSTAGRAM_URL = 'https://www.instagram.com/anicarlomagno_painting/';
+
 const formatPrice = (n) => `$${n.toLocaleString('es-AR')}`;
 
 const PRODUCTS = [
@@ -87,7 +89,7 @@ const Agendas = () => {
                     </p>
                     <div className="ag-actions">
                         <Link to="/agenda-personalizada" className="ag-btn ag-btn--primary">
-                            Armar la mía
+                            Armar mi tapa
                             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
                         </Link>
                         <a href="#precios" className="ag-btn ag-btn--ghost">Ver precios</a>
@@ -95,6 +97,13 @@ const Agendas = () => {
                     <p className="ag-promo">
                         <strong>Consultá promos</strong> comprando más de un producto.
                     </p>
+                    <a className="ag-ig" href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
+                            <rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.2" cy="6.8" r="0.6" fill="currentColor" />
+                        </svg>
+                        Mirá cómo las hago en Instagram
+                        <span className="sr-only"> (se abre en una pestaña nueva)</span>
+                    </a>
                 </div>
 
                 <div className="ag-hero-media">
@@ -141,7 +150,7 @@ const Agendas = () => {
                         ¿Llevás más de uno? Consultame por las promos.
                     </p>
                     <Link to="/agenda-personalizada" className="ag-btn ag-btn--primary">
-                        Elegir y armar la mía
+                        Elegir y armar mi tapa
                         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
                     </Link>
                 </div>
@@ -153,12 +162,12 @@ const Agendas = () => {
                         <h2 id="ag-covers-title" className="ag-h2">Algunas tapas</h2>
                         <p className="ag-sub">Cada una es única. Elegí la que te guste y armá la tuya.</p>
                     </div>
-                    <Link to="/agenda-personalizada" className="ag-btn ag-btn--ghost">Armar la mía</Link>
+                    <Link to="/agenda-personalizada" className="ag-btn ag-btn--ghost">Armar mi tapa</Link>
                 </div>
                 <ul className="ag-covers">
                     {COVERS.map((c, i) => (
                         <li key={c.src}>
-                            <Link to="/agenda-personalizada" className="ag-cover" aria-label={`Armar mi agenda con la tapa ${i + 1}`}>
+                            <Link to="/agenda-personalizada" className="ag-cover" aria-label={`Armar mi tapa: opción ${i + 1}`}>
                                 <img
                                     src={c.src}
                                     width={c.width}
@@ -167,7 +176,7 @@ const Agendas = () => {
                                     loading="lazy"
                                     decoding="async"
                                 />
-                                <span className="ag-cover-tag" aria-hidden="true">Armar la mía →</span>
+                                <span className="ag-cover-tag" aria-hidden="true">Armar mi tapa →</span>
                             </Link>
                         </li>
                     ))}

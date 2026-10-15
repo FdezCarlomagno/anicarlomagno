@@ -1,53 +1,54 @@
 import { useState, useEffect } from 'react';
-import '../LandingPage.css';
 import { useLocation } from 'react-router-dom';
+import './ScrollToTopButton.css';
 
 const ScrollToTopButton = () => {
-    const [showButton, setShowButton] = useState(false);
-
+    const [visible, setVisible] = useState(false);
     const location = useLocation();
 
+    // Al cambiar de ruta (no de #ancla) arrancamos arriba.
     useEffect(() => {
         if (!location.hash) window.scrollTo(0, 0);
     // eslint-disable-next-line react-hooks/exhaustive-deps -- solo al cambiar de ruta, no al ir a un #ancla
     }, [location.pathname]);
 
-    const handleScroll = () => {
-        if (window.scrollY > window.innerHeight / 2) {
-            setShowButton(true);
-        } else {
-            setShowButton(false);
-        }
-    };
-
+    // Scroll pasivo y agrupado por frame; solo actualiza el estado si cambia.
     useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-
-        // Cleanup event listener on component unmount
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
+        let frame = 0;
+        const update = () => {
+            frame = 0;
+            setVisible(window.scrollY > window.innerHeight / 2);
         };
-    }, []);
+        const onScroll = () => {
+            if (!frame) frame = requestAnimationFrame(update);
+        };
+        update();
+        window.addEventListener('scroll', onScroll, { passive: true });
+        return () => {
+            window.removeEventListener('scroll', onScroll);
+            if (frame) cancelAnimationFrame(frame);
+        };
+    }, [location.pathname]);
 
     const scrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth', // Hace que el scroll sea suave
-        });
+        const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
     };
 
     return (
-        showButton && (
-            <button type="button" onClick={scrollToTop} className="scrollToTopBtn" aria-label="Volver arriba">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6 my-icon" aria-hidden="true" focusable="false">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
-                </svg>
-            </button>
-        )
+        <button
+            type="button"
+            onClick={scrollToTop}
+            className={`scroll-top${visible ? ' is-visible' : ''}`}
+            aria-label="Volver arriba"
+            tabIndex={visible ? 0 : -1}
+            aria-hidden={visible ? undefined : true}
+        >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
+                <path d="m5 15 7-7 7 7" />
+            </svg>
+        </button>
     );
 };
 
 export default ScrollToTopButton;
-
-
-

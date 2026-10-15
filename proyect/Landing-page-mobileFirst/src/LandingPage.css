@@ -226,29 +226,6 @@ a {
     }
 }
 
-.scrollToTopBtn {
-    text-align: center;
-    border: none;
-    border-radius: 6px 0 0 6px;
-    background: rgba(0, 0, 0, 0.4);
-    text-decoration: none;
-    position: fixed;
-    z-index: 99999;
-    bottom: 125px;
-    padding: 6px;
-    right: 0px;
-    font-size: 24px;
-    width: 40px;
-    animation: slideInFromSide 1s ease-in-out;
-    /* Apply the animation */
-}
-
-/* Additional styles for hover effect (optional) */
-.scrollToTopBtn:hover {
-    background: rgba(0, 0, 0, 0.6);
-    /* Darker background on hover */
-}
-
 .linkTo-aboutMe-btn {
     display: flex;
     align-items: center;
@@ -420,8 +397,7 @@ textarea {
 /* ---- Accesibilidad global ---- */
 .whatsappIcon { text-decoration: none; }
 .whatsappIcon img { width: 100%; height: 100%; }
-.whatsappIcon:focus-visible,
-.scrollToTopBtn:focus-visible { outline: 3px solid #fff; outline-offset: 2px; box-shadow: 0 0 0 6px blueviolet; }
+.whatsappIcon:focus-visible { outline: 3px solid #fff; outline-offset: 2px; box-shadow: 0 0 0 6px blueviolet; }
 
 .sr-only {
     position: absolute;

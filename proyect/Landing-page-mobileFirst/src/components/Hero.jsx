@@ -87,10 +87,6 @@ const Hero = () => {
                         Agendas y cuadernos
                     </Link>
                 </motion.div>
-                <motion.ul className="hero-perks" {...reveal(0.5)}>
-                    <li>Envíos a todo el país</li>
-                    <li>Pedidos por WhatsApp</li>
-                </motion.ul>
             </div>
 
             <a className="hero-scroll" href="#contenido" aria-label="Seguir bajando">

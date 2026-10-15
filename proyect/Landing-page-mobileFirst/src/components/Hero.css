@@ -10,7 +10,7 @@
     align-items: flex-end;
     min-height: min(82vh, 640px);
     min-height: min(82svh, 640px);
-    padding: 0 24px 76px;
+    padding: 0 24px 40px;
     overflow: hidden;
     color: var(--hero-ink);
     background: #1a1024;
@@ -171,40 +171,15 @@
     outline-offset: 3px;
 }
 
-.hero-perks {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px 16px;
-    margin-top: 18px;
-    padding: 0;
-    list-style: none;
-    font-size: 13px;
-    color: rgba(240, 248, 255, 0.85);
-}
-
-.hero-perks li {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
-
-.hero-perks li::before {
-    content: '';
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background: rgb(214, 180, 252);
-}
-
-/* Pista de scroll */
+/* Pista de scroll (solo desktop: en mobile compite con los botones flotantes) */
 .hero-scroll {
+    display: none;
     position: absolute;
     left: 50%;
     bottom: 12px;
     width: 44px;
     height: 44px;
     margin-left: -22px;
-    display: grid;
     place-items: center;
     color: #fff;
     opacity: 0.85;
@@ -251,6 +226,8 @@
     .hero-subtitle {
         font-size: 22px;
     }
+
+    .hero-scroll { display: grid; }
 
     .hero-actions {
         flex-direction: row;
