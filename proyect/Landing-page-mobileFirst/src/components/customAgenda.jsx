@@ -30,7 +30,7 @@ const PRODUCTS = [
     { value: 'agenda-perpetua', label: 'Perpetua', note: 'Sin fecha: empezás cuando quieras', price: agendaPrices.AGENDA_PERPETUA, size: '15,5 × 21,5 cm' },
     { value: 'agenda-semanal', label: `Semanal ${new Date().getFullYear() + 1}`, note: 'Una semana por vez', price: agendaPrices.AGENDA_SEMANAL, size: '15,5 × 21,5 cm' },
     { value: 'agenda-docente', label: 'Agenda docente', note: 'Pensada para el aula', price: agendaPrices.AGENDA_DOCENTE, size: '15,5 × 21,5 cm' },
-    { value: 'cuaderno', label: 'Cuaderno', note: 'Para escribir y dibujar', price: agendaPrices.CUADERNO, size: '15,5 × 21,5 cm' },
+    { value: 'cuaderno', label: 'Cuaderno A5', note: 'Para escribir y dibujar', price: agendaPrices.CUADERNO, size: '15,5 × 21,5 cm' },
     { value: 'cuaderno-a4', label: 'Cuaderno A4', note: 'Más grande, más espacio', price: agendaPrices.CUADERNO_A4, size: '21 × 29,7 cm', isNew: true },
 ];
 

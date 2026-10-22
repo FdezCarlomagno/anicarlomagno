@@ -30,7 +30,7 @@ const INSTAGRAM_URL = 'https://www.instagram.com/anicarlomagno_painting/';
 const formatPrice = (n) => `$${n.toLocaleString('es-AR')}`;
 
 const PRODUCTS = [
-    { name: 'Cuaderno', note: 'Para escribir, dibujar y soñar', price: agendaPrices.CUADERNO },
+    { name: 'Cuaderno A5', note: 'Para escribir, dibujar y soñar', price: agendaPrices.CUADERNO },
     { name: 'Agenda semanal', note: 'Una semana por vez, con espacio para todo', price: agendaPrices.AGENDA_SEMANAL },
     { name: 'Agenda perpetua', note: 'Sin fecha: empezás cuando quieras', price: agendaPrices.AGENDA_PERPETUA },
     { name: 'Agenda docente', note: 'Pensada para el día a día en el aula', price: agendaPrices.AGENDA_DOCENTE },
