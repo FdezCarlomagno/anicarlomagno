@@ -1,0 +1,85 @@
+/* 404 — mobile-first, centrado. */
+
+.notFound {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+    padding: 64px 24px;
+    text-align: center;
+}
+
+.notFound-code {
+    margin: 0 0 8px;
+    font-family: "Dancing Script", cursive;
+    font-size: clamp(88px, 28vw, 160px);
+    font-weight: 700;
+    line-height: 1;
+    color: rgb(138, 43, 226);
+}
+
+.notFound-title {
+    margin: 0 0 12px;
+    font-size: clamp(24px, 6vw, 32px);
+    line-height: 1.2;
+}
+
+.notFound-text {
+    max-width: 34rem;
+    margin: 0 0 32px;
+    line-height: 1.6;
+}
+
+.notFound-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 320px;
+}
+
+.notFound-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 0 24px;
+    border: 2px solid rgb(138, 43, 226);
+    border-radius: 999px;
+    font-weight: 600;
+    color: rgb(138, 43, 226);
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.notFound-btn:hover,
+.notFound-btn:focus-visible {
+    background: rgb(138, 43, 226);
+    color: #fff;
+}
+
+.notFound-btn:focus-visible {
+    outline: 3px solid rgb(214, 180, 252);
+    outline-offset: 2px;
+}
+
+.notFound-btn--primary {
+    background: rgb(138, 43, 226);
+    color: #fff;
+}
+
+.notFound-btn--primary:hover,
+.notFound-btn--primary:focus-visible {
+    background: rgb(110, 30, 190);
+    border-color: rgb(110, 30, 190);
+}
+
+@media (min-width: 600px) {
+    .notFound-actions {
+        flex-direction: row;
+        justify-content: center;
+        max-width: none;
+        width: auto;
+    }
+}

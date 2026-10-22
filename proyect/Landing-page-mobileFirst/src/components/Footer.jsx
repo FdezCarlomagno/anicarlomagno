@@ -1,13 +1,14 @@
 /* eslint-disable react/prop-types -- el proyecto no usa prop-types */
 import { Link } from 'react-router-dom';
+import { FEATURES } from './config/features.js';
 import './Footer.css';
 
 const SHOP = [
     { to: '/obras-en-stock', label: 'Obras' },
     { to: '/agendas', label: 'Agendas y cuadernos' },
     { to: '/mi-libro', label: 'Libros' },
-    { to: '/laminas', label: 'Láminas' },
-];
+    { to: '/laminas', label: 'Láminas', enabled: FEATURES.laminas },
+].filter(({ enabled = true }) => enabled);
 
 const EXPLORE = [
     { to: '/', label: 'Inicio' },

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
+import { FEATURES } from '../components/config/features.js';
 
 const SITE = 'https://anicarlomagno.vercel.app';
 const NAME = 'Ani Carlomagno';
@@ -49,7 +50,12 @@ const META = {
   },
 };
 
-const setMeta = (selector, attr, value, create) => {
+const NOT_FOUND = {
+  title: 'Página no encontrada | Ani Carlomagno',
+  description: 'Esta página no existe. Volvé al inicio o mirá las obras en stock de Ani Carlomagno.',
+};
+
+const setMeta =(selector, attr, value, create) => {
   let el = document.head.querySelector(selector);
   if (!el && create) {
     el = document.createElement(create.tag);
@@ -65,8 +71,8 @@ const RouteMeta = () => {
 
   useEffect(() => {
     const path = pathname.replace(/\/+$/, '') || '/';
-    const known = META[path];
-    const meta = known || META['/'];
+    const known = path === '/laminas' && !FEATURES.laminas ? undefined : META[path];
+    const meta = known || (META[path] ? META['/'] : NOT_FOUND);
     // Rutas desconocidas muestran la home: no deben competir con ella en buscadores.
     const canonical = `${SITE}${known ? (path === '/' ? '/' : path) : '/'}`;
 

@@ -9,6 +9,7 @@ import Printer from './assets/Printer.svg';
 import { motion } from 'framer-motion';
 import contactSvg from './assets/contact.svg'
 import { Image } from '@unpic/react'
+import { FEATURES } from './config/features.js';
 import './NavBar.css';
 
 const INSTAGRAM_URL = 'https://www.instagram.com/anicarlomagno_painting/';
@@ -18,10 +19,10 @@ const LINKS = [
   { to: '/elegir', label: 'Obras', icon: paintBrush },
   { to: '/agendas', label: 'Agendas y cuadernos', icon: bookSvg },
   { to: '/mi-libro', label: 'Libros', icon: Eye },
-  { to: '/laminas', label: 'Láminas', icon: Printer },
+  { to: '/laminas', label: 'Láminas', icon: Printer, enabled: FEATURES.laminas },
   { to: '/sobre-mi', label: 'Sobre mí', icon: diamondSvg },
   { to: '/contacto', label: 'Contacto', icon: contactSvg, cta: true },
-];
+].filter(({ enabled = true }) => enabled);
 
 const NavBar = () => {
   const [menu, setMenu] = useState(false);

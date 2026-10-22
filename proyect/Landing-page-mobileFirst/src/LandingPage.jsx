@@ -1,5 +1,6 @@
 import { lazy, Suspense } from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import { FEATURES } from './components/config/features.js';
 import Home from './Home.jsx';
 import NavBar from './components/NavBar.jsx';
 import WhatsappIcon from './components/WhatsappIcon.jsx';
@@ -18,6 +19,7 @@ const ChooseForm = lazy(() => import('./components/Choose.jsx'));
 const CustomPainting = lazy(() => import('./components/customPainting.jsx'));
 const PersonalBook = lazy(() => import('./pages/personalBook.jsx'));
 const Laminas = lazy(() => import('./pages/Laminas.jsx'));
+const NotFound = lazy(() => import('./pages/NotFound.jsx'));
 const Contact = lazy(() => import('./components/contact/ContactSection.jsx'));
 
 // Salto al contenido: el <main> de cada página recibe el foco.
@@ -50,9 +52,9 @@ const LandingPage = () => {
             <Route path="/sobre-mi" element={<AboutMe />} />
             <Route path="/agenda-personalizada" element={<CustomAgenda />} />
             <Route path="/mi-libro" element={<PersonalBook />} />
-            <Route path="/laminas" element={<Laminas />} />
+            <Route path="/laminas" element={FEATURES.laminas ? <Laminas /> : <Navigate to="/" replace />} />
             <Route path='/contacto' element={<Contact />}/>
-            <Route path="*" element={<Home />} /> {/* Ruta por defecto */}
+            <Route path="*" element={<NotFound />} />
           </Routes>
           <Envio />
           <Footer />
