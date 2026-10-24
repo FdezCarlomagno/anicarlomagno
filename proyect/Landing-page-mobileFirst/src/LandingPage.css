@@ -34,8 +34,9 @@ html {
     overflow-x: clip;
 }
 
+/* "Inter" se carga solo con los dígitos (ver index.html): los números salen en Inter y el resto en Raleway. */
 * {
-    font-family: "Raleway", sans-serif;
+    font-family: "Inter", "Raleway", sans-serif;
 }
 
 * {
