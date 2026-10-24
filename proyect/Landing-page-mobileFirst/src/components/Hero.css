@@ -66,13 +66,76 @@
     max-width: 560px;
 }
 
+/* Aviso de lo nuevo: en el lugar del eyebrow, chico para no competir con el botón principal */
+.hero-news {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 44px;
+    margin-bottom: 14px;
+    padding: 6px 14px 6px 6px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 999px;
+    background: rgba(15, 5, 30, 0.4);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* El detalle solo cuando entra en una línea: en teléfonos queda "Nuevo · Objetos de autor" */
+.hero-news-detail {
+    display: none;
+    font-weight: 400;
+    color: rgba(240, 248, 255, 0.85);
+}
+
+@media (min-width: 480px) {
+    .hero-news-detail { display: inline; }
+}
+
+.hero-news-tag {
+    flex: none;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #5b1fa6;
+}
+
+.hero-news svg {
+    flex: none;
+    width: 16px;
+    height: 16px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2.2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.hero-news:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 3px;
+}
+
+@media (hover: hover) {
+    .hero-news:hover { background: rgba(15, 5, 30, 0.6); }
+}
+
 .hero-eyebrow {
     margin-bottom: 12px;
-    font-size: 12px;
-    font-weight: 600;
+    font-size: 13px;
+    font-weight: 700;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: rgb(214, 180, 252);
+    color: rgb(232, 214, 254);
+    text-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
 }
 
 .hero-title {
@@ -209,18 +272,19 @@
 }
 
 @media (min-width: 768px) {
+    /* Texto anclado abajo a la izquierda (como un título de cine): la obra del video queda libre arriba */
     .hero {
-        align-items: center;
+        align-items: flex-end;
         min-height: min(78vh, 680px);
-        padding: 0 8vw 64px;
+        padding: 0 8vw 72px;
     }
 
     .hero-content {
-        max-width: 640px;
+        max-width: 600px;
     }
 
     .hero-title {
-        font-size: clamp(44px, 5vw, 64px);
+        font-size: clamp(40px, 4.2vw, 58px);
     }
 
     .hero-subtitle {
@@ -236,7 +300,7 @@
 
     .hero-media::after {
         background:
-            linear-gradient(90deg, rgba(15, 5, 30, 0.85) 0%, rgba(15, 5, 30, 0.5) 45%, rgba(15, 5, 30, 0.05) 80%),
-            linear-gradient(0deg, rgba(15, 5, 30, 0.45) 0%, rgba(15, 5, 30, 0) 40%);
+            linear-gradient(90deg, rgba(15, 5, 30, 0.8) 0%, rgba(15, 5, 30, 0.4) 45%, rgba(15, 5, 30, 0) 75%),
+            linear-gradient(0deg, rgba(15, 5, 30, 0.7) 0%, rgba(15, 5, 30, 0) 55%);
     }
 }

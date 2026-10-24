@@ -7,6 +7,7 @@ const poster = '/hero.jpg';
 import video from './assets/wspVideo-header.mp4';
 import videoMobile from './assets/wspVideo-header-mobile.mp4';
 import paintBrush from './assets/WhitePaintBrush.svg';
+import { FEATURES } from './config/features.js';
 import './Hero.css';
 
 // Sin video para quien pide menos movimiento o ahorra datos: queda el poster.
@@ -69,15 +70,26 @@ const Hero = () => {
             </div>
 
             <div className="hero-content">
-                <motion.p className="hero-eyebrow" {...reveal(0.1)}>
-                    Artista plástica · Tandil
-                </motion.p>
+                {/* Lo nuevo ocupa el lugar del eyebrow: se lee primero sin sumar altura al bloque de texto */}
+                {FEATURES.objetos ? (
+                    <motion.div {...reveal(0.1)}>
+                        <Link to="/objetos-de-autor" className="hero-news">
+                            <span className="hero-news-tag">Nuevo</span>{' '}
+                            <span>Objetos de autor<span className="hero-news-detail">: remeras, tazas y libros</span></span>
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+                        </Link>
+                    </motion.div>
+                ) : (
+                    <motion.p className="hero-eyebrow" {...reveal(0.1)}>
+                        Artista plástica · Tandil
+                    </motion.p>
+                )}
                 <motion.h1 id="hero-title" className="hero-title" {...reveal(0.2)}>
                     Obras <em>con alma</em>, para los momentos que querés guardar
                 </motion.h1>
-                <motion.h2 className="hero-subtitle" {...reveal(0.28)}>
+                <motion.p className="hero-subtitle" {...reveal(0.28)}>
                     Pintar es dejar que <em>una parte de mí</em> permanezca en el mundo.
-                </motion.h2>
+                </motion.p>
                 <motion.div className="hero-actions" {...reveal(0.35)}>
                     <Link to="/obras-en-stock" className="hero-btn hero-btn--primary">
                         Ver mis obras
