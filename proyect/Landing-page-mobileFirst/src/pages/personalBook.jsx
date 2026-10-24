@@ -1,4 +1,6 @@
 /* eslint-disable react/prop-types -- el proyecto no usa prop-types */
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { motion, useReducedMotion } from 'framer-motion';
 import PaintingSlider from '../components/paintingsSlider';
 import imgs_Libro_Colorear from '../objects/libro-colorear.jsx';
@@ -77,6 +79,13 @@ const Book = ({ book, index, reveal }) => {
 
 const PersonalBook = () => {
     const reduce = useReducedMotion();
+    const { hash } = useLocation();
+
+    // Al llegar desde otra página con #ancla (p. ej. /mi-libro#colorear), ir a ese libro.
+    useEffect(() => {
+        if (hash) document.getElementById(hash.slice(1))?.scrollIntoView();
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- solo al montar la página
+    }, []);
     const reveal = reduce
         ? {}
         : {

@@ -4,6 +4,8 @@ import FirstSection from './components/FirstSection.jsx'
 import SecondSection from './components/SecondSection.jsx'
 import AgendaSection from './components/AgendaSection.jsx'
 import PaintingImgsSection from './components/paintingImgsSection.jsx'
+import ObjetosTeaser from './components/ObjetosTeaser.jsx'
+import { FEATURES } from './components/config/features.js'
 
 
 function Home() {
@@ -18,7 +20,7 @@ function Home() {
         <section id="contenido">
           <FirstSection />
           <AgendaSection />
-          
+          {FEATURES.objetos && <ObjetosTeaser />}
         </section>
         <section className='father-paintingsSection'>
         <PaintingImgsSection />

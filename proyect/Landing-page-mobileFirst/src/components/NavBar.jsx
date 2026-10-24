@@ -18,7 +18,9 @@ const LINKS = [
   { to: '/', label: 'Inicio', icon: homeSvg },
   { to: '/elegir', label: 'Obras', icon: paintBrush },
   { to: '/agendas', label: 'Agendas y cuadernos', icon: bookSvg },
-  { to: '/mi-libro', label: 'Libros', icon: Eye },
+  { to: '/objetos-de-autor', label: 'Objetos de autor', icon: Eye, badge: 'Nuevo', enabled: FEATURES.objetos },
+  // Con Objetos de autor encendido, Libros se encuentra ahí y en el footer.
+  { to: '/mi-libro', label: 'Libros', icon: Eye, enabled: !FEATURES.objetos },
   { to: '/laminas', label: 'Láminas', icon: Printer, enabled: FEATURES.laminas },
   { to: '/sobre-mi', label: 'Sobre mí', icon: diamondSvg },
   { to: '/contacto', label: 'Contacto', icon: contactSvg, cta: true },
@@ -59,7 +61,7 @@ const NavBar = () => {
       }
     };
     // Si se agranda la ventana hasta desktop, el overlay deja de existir.
-    const mq = window.matchMedia('(min-width: 768px)');
+    const mq = window.matchMedia('(min-width: 1100px)');
     const onMq = (e) => { if (e.matches) setMenu(false); };
 
     document.addEventListener('keydown', onKey);
@@ -118,7 +120,7 @@ const NavBar = () => {
 
       <div id='nav-menu' className={`navMenu${menu ? ' isOpen' : ''}`}>
         <ul className='navMenuList'>
-          {LINKS.map(({ to, label, icon, cta }, i) => (
+          {LINKS.map(({ to, label, icon, cta, badge }, i) => (
             <li key={to} style={{ '--i': i }}>
               <NavLink
                 to={to}
@@ -128,7 +130,10 @@ const NavBar = () => {
                 ref={i === 0 ? firstLinkRef : undefined}
               >
                 <span className='navMenuNum' aria-hidden='true'>{String(i + 1).padStart(2, '0')}</span>
-                <span className='navMenuLabel'>{label}</span>
+                <span className='navMenuLabel'>
+                  {label}
+                  {badge && <>{' '}<span className='navBadge'>{badge}</span></>}
+                </span>
                 <Image className='svg navMenuIcon' src={icon} alt='' width={24} height={24} />
               </NavLink>
             </li>

@@ -6,6 +6,7 @@ import './Footer.css';
 const SHOP = [
     { to: '/obras-en-stock', label: 'Obras' },
     { to: '/agendas', label: 'Agendas y cuadernos' },
+    { to: '/objetos-de-autor', label: 'Objetos de autor', enabled: FEATURES.objetos },
     { to: '/mi-libro', label: 'Libros' },
     { to: '/laminas', label: 'Láminas', enabled: FEATURES.laminas },
 ].filter(({ enabled = true }) => enabled);
