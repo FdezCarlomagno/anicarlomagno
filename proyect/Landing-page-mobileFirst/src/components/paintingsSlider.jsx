@@ -64,9 +64,9 @@ const PaintingSlider = ({ paintings, label = 'Galería de imágenes' }) => {
                         >
                             <img
                                 src={painting.src}
-                                alt={`Imagen ${index + 1} de ${total}`}
-                                width="600"
-                                height="900"
+                                alt={painting.alt ?? `Imagen ${index + 1} de ${total}`}
+                                width={painting.width ?? 600}
+                                height={painting.height ?? 900}
                                 loading={index === 0 ? 'eager' : 'lazy'}
                                 decoding="async"
                                 draggable="false"

@@ -19,6 +19,7 @@ const ChooseForm = lazy(() => import('./components/Choose.jsx'));
 const CustomPainting = lazy(() => import('./components/customPainting.jsx'));
 const PersonalBook = lazy(() => import('./pages/personalBook.jsx'));
 const Laminas = lazy(() => import('./pages/Laminas.jsx'));
+const ObjetosDeAutor = lazy(() => import('./pages/ObjetosDeAutor.jsx'));
 const NotFound = lazy(() => import('./pages/NotFound.jsx'));
 const Contact = lazy(() => import('./components/contact/ContactSection.jsx'));
 
@@ -53,6 +54,7 @@ const LandingPage = () => {
             <Route path="/agenda-personalizada" element={<CustomAgenda />} />
             <Route path="/mi-libro" element={<PersonalBook />} />
             <Route path="/laminas" element={FEATURES.laminas ? <Laminas /> : <Navigate to="/" replace />} />
+            <Route path="/objetos-de-autor" element={FEATURES.objetos ? <ObjetosDeAutor /> : <Navigate to="/" replace />} />
             <Route path='/contacto' element={<Contact />}/>
             <Route path="*" element={<NotFound />} />
           </Routes>

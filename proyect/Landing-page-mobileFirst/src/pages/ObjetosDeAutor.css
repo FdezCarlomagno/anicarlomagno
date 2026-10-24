@@ -1,0 +1,318 @@
+/* /objetos-de-autor — mobile first. Prefijo .oda- */
+
+.oda {
+    --oda-accent: blueviolet;
+    --oda-accent-deep: #5b1fa6;
+    --oda-ink: #1d1626;
+    --oda-muted: #4a4256;
+    --oda-line: rgba(138, 43, 226, 0.3);
+    --oda-tint: rgba(138, 43, 226, 0.08);
+    --oda-panel: linear-gradient(160deg, rgba(244, 238, 251, 0.9), rgba(235, 226, 246, 0.55));
+    --oda-error: #b3261e;
+    --oda-ease: cubic-bezier(0.22, 1, 0.36, 1);
+    color: var(--oda-ink);
+    padding-bottom: 40px;
+}
+
+:where(.oda) :where(h1, h2, h3, p, ul, figure, fieldset) { margin: 0; padding: 0; }
+:where(.oda) :where(ul) { list-style: none; }
+
+.oda [id] { scroll-margin-top: 84px; }
+
+/* ---- Apertura ---- */
+.oda-hero { max-width: 1240px; margin: 0 auto; padding: 36px 20px 12px; }
+
+.oda-eyebrow { margin-bottom: 8px; font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--oda-accent-deep); }
+
+.oda-new {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 999px;
+    background: var(--oda-accent-deep);
+    color: #fff;
+}
+
+.oda-h1 { font-family: "Dancing Script", cursive; font-size: clamp(48px, 13vw, 88px); font-weight: 700; line-height: 1.02; text-align: left; }
+.oda-lead { max-width: 36rem; margin-top: 12px; font-size: 17px; line-height: 1.6; color: var(--oda-muted); }
+
+.oda-jump { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+
+.oda-chip {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0 18px;
+    border: 1.5px solid var(--oda-line);
+    border-radius: 999px;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--oda-accent-deep);
+    transition: background 0.2s ease;
+}
+
+/* ---- Paneles de producto ---- */
+.oda-panel {
+    display: grid;
+    gap: 28px;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.oda-media { display: grid; gap: 12px; justify-items: center; }
+.oda-media > * { width: 100%; }
+.oda-media > .oda-choice { margin-top: 8px; }
+.oda .pslider-slide { aspect-ratio: 3 / 4; }
+/* Son fotos de la remera puesta, no la obra: se encuadran para llenar el marco */
+.oda .pslider .pslider-slide img { object-fit: cover; object-position: 50% 62%; }
+
+.oda-kind,
+.oda-tag { margin-bottom: 6px; font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--oda-accent-deep); }
+
+.oda-title { font-family: "Dancing Script", cursive; font-size: clamp(34px, 9vw, 52px); font-weight: 700; line-height: 1.1; text-align: left; }
+
+.oda-text { display: grid; gap: 14px; margin-top: 16px; max-width: 34rem; }
+.oda-text p { font-size: 17px; line-height: 1.7; color: var(--oda-muted); }
+.oda-text span { font-weight: 700; color: var(--oda-accent-deep); }
+
+.oda-facts { display: grid; gap: 8px; margin-top: 18px; }
+.oda-facts li { position: relative; padding-left: 22px; font-size: 16px; line-height: 1.5; color: var(--oda-muted); }
+.oda-facts li::before { content: ""; position: absolute; left: 4px; top: 0.6em; width: 8px; height: 8px; border-radius: 50%; background: var(--oda-accent); }
+
+.oda-price { display: inline-block; margin-top: 18px; padding: 6px 16px; border-radius: 999px; background: rgba(138, 43, 226, 0.1); color: var(--oda-accent-deep); }
+.oda-price strong { font-size: 22px; font-variant-numeric: tabular-nums; }
+
+/* ---- Elección: pastillas con radios reales ---- */
+.oda-order { display: grid; gap: 20px; margin-top: 24px; }
+
+.oda-choice { border: 0; min-width: 0; }
+.oda-choice-legend { margin-bottom: 10px; padding: 0; font-size: 15px; font-weight: 700; }
+.oda-choice-hint { font-weight: 500; color: var(--oda-muted); }
+.oda-choice-options { display: flex; flex-wrap: wrap; gap: 8px; }
+
+.oda-pill { position: relative; display: inline-flex; }
+
+.oda-pill input {
+    position: absolute;
+    inset: 0;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.oda-pill-face {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 44px;
+    min-width: 44px;
+    justify-content: center;
+    padding: 0 16px;
+    border: 1.5px solid var(--oda-line);
+    border-radius: 999px;
+    background: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--oda-ink);
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    pointer-events: none;
+}
+
+.oda-pill input:checked + .oda-pill-face {
+    border-color: var(--oda-accent-deep);
+    background: var(--oda-accent-deep);
+    color: #fff;
+}
+
+.oda-pill input:focus-visible + .oda-pill-face { outline: 3px solid var(--oda-accent); outline-offset: 3px; }
+
+.oda-choice.has-error .oda-pill-face { border-color: var(--oda-error); }
+.oda-choice-error { margin-top: 8px; font-size: 15px; font-weight: 600; color: var(--oda-error); }
+
+.oda-swatch {
+    width: 18px;
+    height: 18px;
+    flex: none;
+    border-radius: 50%;
+    background: var(--a);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.25);
+}
+
+.oda-swatch.is-duo { background: linear-gradient(135deg, var(--a) 50%, var(--b) 50%); }
+.oda-pill input:checked + .oda-pill-face .oda-swatch { box-shadow: 0 0 0 2px #fff; }
+
+/* ---- Botones ---- */
+.oda-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    min-height: 52px;
+    padding: 0 28px;
+    border: 0;
+    border-radius: 999px;
+    background: var(--oda-accent);
+    box-shadow: 0 8px 22px rgba(138, 43, 226, 0.32);
+    font: inherit;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.25s ease, transform 0.25s var(--oda-ease);
+}
+
+.oda-btn svg,
+.oda-libro-cta svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; transition: transform 0.25s var(--oda-ease); }
+
+.oda-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0 8px;
+    border: 0;
+    background: none;
+    font: inherit;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--oda-accent-deep);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    cursor: pointer;
+}
+
+.oda-chip:focus-visible,
+.oda-btn:focus-visible,
+.oda-link:focus-visible,
+.oda-shot-btn:focus-visible,
+.oda-libro:focus-visible,
+.oda-bridge a:focus-visible { outline: 3px solid var(--oda-accent); outline-offset: 3px; }
+
+.oda-note { font-size: 15px; color: var(--oda-muted); text-align: center; }
+
+.oda-bridge { margin-top: 24px; padding-top: 18px; border-top: 1px solid var(--oda-line); font-size: 16px; color: var(--oda-muted); }
+.oda-bridge a { display: inline-block; padding: 10px 0; font-weight: 700; color: var(--oda-accent-deep); text-underline-offset: 4px; }
+
+.oda-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* ---- Colección Hecha en Argentina ---- */
+.oda-coleccion { padding-top: 24px; }
+
+.oda-coleccion-head { max-width: 1240px; margin: 0 auto; padding: 32px 20px 0; border-top: 1px solid var(--oda-line); }
+.oda-coleccion-title { font-family: "Dancing Script", cursive; font-size: clamp(42px, 11vw, 68px); font-weight: 700; line-height: 1.05; text-align: left; }
+
+/* Par "así es / así queda puesta": dos columnas también en 360 px */
+.oda-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; animation: oda-fade 0.35s var(--oda-ease); }
+
+.oda-shot { display: grid; gap: 8px; }
+.oda-shot figcaption { font-size: 14px; font-weight: 700; color: var(--oda-muted); text-align: center; }
+
+.oda-shot-btn {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    border-radius: 16px;
+    background: #f1ecf6;
+    overflow: hidden;
+    cursor: zoom-in;
+}
+
+.oda-shot-btn img { display: block; width: 100%; height: auto; }
+.oda-pair .oda-shot-btn img { aspect-ratio: 3 / 4; object-fit: cover; }
+
+/* ---- Taza ---- */
+.oda-taza {
+    display: grid;
+    gap: 20px;
+    max-width: 1240px;
+    margin: 8px auto 0;
+    padding: 0 20px 40px;
+}
+
+.oda-taza-media { max-width: 336px; }
+.oda-taza-text { margin-top: 12px; max-width: 32rem; font-size: 17px; line-height: 1.6; color: var(--oda-muted); }
+.oda-taza-actions { display: grid; gap: 8px; margin-top: 20px; }
+
+/* ---- Libros ---- */
+.oda-libros { max-width: 1240px; margin: 0 auto; padding: 32px 20px 8px; border-top: 1px solid var(--oda-line); }
+.oda-libros-list { display: grid; gap: 14px; margin-top: 18px; }
+
+.oda-libro {
+    display: grid;
+    grid-template-columns: 96px minmax(0, 1fr);
+    align-items: center;
+    gap: 16px;
+    padding: 12px;
+    border-radius: 20px;
+    background: var(--oda-panel);
+    text-decoration: none;
+    color: inherit;
+}
+
+.oda-libro-cover { display: block; border-radius: 8px; overflow: hidden; }
+.oda-libro-cover img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: contain; background: #fff; }
+.oda-libro-body { display: grid; gap: 2px; }
+.oda-libro-kind { font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--oda-accent-deep); }
+.oda-libro-title { font-size: 18px; line-height: 1.3; }
+.oda-libro-price { font-size: 15px; color: var(--oda-muted); font-variant-numeric: tabular-nums; }
+.oda-libro-cta { display: inline-flex; align-items: center; gap: 6px; margin-top: 6px; font-size: 15px; font-weight: 700; color: var(--oda-accent-deep); }
+
+@keyframes oda-fade { from { opacity: 0; } to { opacity: 1; } }
+
+@media (hover: hover) {
+    .oda-chip:hover { background: var(--oda-tint); }
+    .oda-pill input:not(:checked):hover + .oda-pill-face { background: var(--oda-tint); }
+    .oda-btn:hover { background: rgb(106, 20, 190); transform: translateY(-2px); }
+    .oda-btn:hover svg,
+    .oda-libro:hover .oda-libro-cta svg { transform: translateX(4px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .oda-btn, .oda-btn svg, .oda-chip, .oda-pill-face, .oda-libro-cta svg { transition: none; }
+    .oda-btn:hover { transform: none; }
+    .oda-pair { animation: none; }
+}
+
+@media (min-width: 640px) {
+    .oda-hero, .oda-panel, .oda-coleccion-head, .oda-taza, .oda-libros { padding-left: 24px; padding-right: 24px; }
+    .oda-btn { width: auto; justify-self: start; }
+    .oda-pintadas .oda-media .pslider { width: min(100%, 368px); }
+    .oda-note { text-align: left; }
+    .oda-taza-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; }
+    .oda-libros-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .oda-libro { grid-template-columns: 120px minmax(0, 1fr); }
+}
+
+@media (min-width: 960px) {
+    .oda-hero { max-width: 1400px; padding: 56px clamp(32px, 5vw, 80px) 24px; }
+
+    .oda-panel {
+        max-width: 1400px;
+        margin: 24px auto;
+        padding: 56px clamp(32px, 5vw, 80px);
+        border-radius: 32px;
+        background: var(--oda-panel);
+        grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+        align-items: center;
+        gap: clamp(40px, 6vw, 96px);
+    }
+
+    .oda-text p { font-size: 18px; }
+
+    .oda-coleccion-head { max-width: 1400px; padding: 48px clamp(32px, 5vw, 80px) 0; }
+    .oda-estampada { grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); align-items: start; }
+    .oda-estampada .oda-media { width: 80%; justify-self: center; }
+
+    .oda-taza {
+        max-width: 1400px;
+        grid-template-columns: minmax(0, 0.6fr) minmax(0, 1fr);
+        align-items: center;
+        gap: clamp(32px, 5vw, 80px);
+        padding: 16px clamp(32px, 5vw, 80px) 48px;
+    }
+
+    .oda-libros { max-width: 1400px; padding: 48px clamp(32px, 5vw, 80px) 8px; }
+}

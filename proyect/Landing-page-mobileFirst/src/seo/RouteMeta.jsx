@@ -36,6 +36,10 @@ const META = {
     title: 'Libros | Ani Carlomagno',
     description: '“Miradas que narran” y “Colores que cuentan historias”: dos libros de Ani Carlomagno para leer y para colorear.',
   },
+  '/objetos-de-autor': {
+    title: 'Objetos de autor: remeras y tazas | Ani Carlomagno',
+    description: 'Remeras pintadas a mano, remeras estampadas y tazas con la obra de Ani Carlomagno, y sus libros. Elegí paleta, color y talle y pedilo por WhatsApp.',
+  },
   '/laminas': {
     title: 'Láminas A4 en papel fotográfico | Ani Carlomagno',
     description: 'Láminas A4 impresas en papel fotográfico con obras de Ani Carlomagno, listas para enmarcar. Elegí la tuya y pedila por WhatsApp.',
@@ -71,7 +75,8 @@ const RouteMeta = () => {
 
   useEffect(() => {
     const path = pathname.replace(/\/+$/, '') || '/';
-    const known = path === '/laminas' && !FEATURES.laminas ? undefined : META[path];
+    const hidden = (path === '/laminas' && !FEATURES.laminas) || (path === '/objetos-de-autor' && !FEATURES.objetos);
+    const known = hidden ? undefined : META[path];
     const meta = known || (META[path] ? META['/'] : NOT_FOUND);
     // Rutas desconocidas muestran la home: no deben competir con ella en buscadores.
     const canonical = `${SITE}${known ? (path === '/' ? '/' : path) : '/'}`;
