@@ -225,6 +225,7 @@
 }
 
 .oda-swatch.is-duo { background: linear-gradient(135deg, var(--a) 50%, var(--b) 50%); }
+.oda-swatch.is-trio { background: linear-gradient(180deg, var(--a) 33.4%, var(--b) 33.4% 66.6%, var(--c) 66.6%); }
 .oda-pill input:checked + .oda-pill-face .oda-swatch { box-shadow: 0 0 0 2px #fff; }
 
 /* ---- Botones ---- */

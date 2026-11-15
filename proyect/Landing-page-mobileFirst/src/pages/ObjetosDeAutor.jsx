@@ -183,8 +183,10 @@ const Pintadas = ({ reveal }) => {
     const talle = useTalle();
     const idBase = useId();
     const mediaRef = useRef(null);
-    const enFotos = diseno.paletas[0];
     const paletaElegida = diseno.paletas.find((x) => x.id === paleta);
+    // Si el diseño tiene fotos propias, son de su primera paleta. Si no, cada paleta trae las suyas.
+    const fotos = diseno.fotos ?? paletaElegida.fotos;
+    const enFotos = diseno.fotos ? diseno.paletas[0] : paletaElegida;
 
     const selectDiseno = useCallback((id) => {
         setDisenoId(id);
@@ -241,9 +243,9 @@ const Pintadas = ({ reveal }) => {
                     aria-labelledby={`${idBase}-tab-${disenoId}`}
                 >
                     <PaintingSlider
-                        key={disenoId}
-                        paintings={diseno.fotos}
-                        label={`Fotos de la remera ${diseno.label}`}
+                        key={`${disenoId}-${diseno.fotos ? '' : paleta}`}
+                        paintings={fotos}
+                        label={`Fotos de la remera ${diseno.label}${diseno.fotos ? '' : `, ${paletaElegida.label.toLowerCase()}`}`}
                     />
                 </div>
             </div>
@@ -271,7 +273,11 @@ const Pintadas = ({ reveal }) => {
                         value={paleta}
                         onChange={setPaleta}
                         renderMark={(opt) => opt.swatch && (
-                            <span className="oda-swatch is-duo" aria-hidden="true" style={{ '--a': opt.swatch[0], '--b': opt.swatch[1] }} />
+                            <span
+                                className={`oda-swatch ${opt.swatch.length === 3 ? 'is-trio' : 'is-duo'}`}
+                                aria-hidden="true"
+                                style={{ '--a': opt.swatch[0], '--b': opt.swatch[1], '--c': opt.swatch[2] }}
+                            />
                         )}
                     />
                     {paleta !== enFotos.id && (

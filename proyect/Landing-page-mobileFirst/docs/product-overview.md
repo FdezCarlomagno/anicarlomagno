@@ -31,7 +31,7 @@ Traffic is assumed to be mostly mobile (the project is mobile-first by design) *
 | Agendas & notebooks | `/agendas`, `/agenda-personalizada` | Types and ARS prices below; cover design chosen from gallery, paper white/cream 80 g, optional name (color + position) and quote |
 | Art prints ("Láminas") | `/laminas` | A4 (21 × 29.7 cm) photographic paper; pick one → WhatsApp; promos when buying more than one product |
 | Books | `/mi-libro` | "Miradas que narran" (stories) and "Colores que cuentan historias" (coloring book), ARS 25 900 each |
-| Objetos de autor | `/objetos-de-autor` | Behind `FEATURES.objetos`. Hand-painted t-shirt (one-off). The buyer picks a design from the "Elegí el diseño" tabs ("Mujer argentina", "Frida"; the page moves to the next tab once after 15 s if untouched), then a palette and a size. Frida also takes an optional birth year that replaces the painted "1978", and offers palettes that have no photos yet (painted to order). The page also sells the printed t-shirt "Hecha en Argentina" (white, grey or black, plus size) and a mug, and links to the books. Data in `src/objects/objetosDeAutor.jsx` (`DISENOS`, `COLORES`, `TAZA`) |
+| Objetos de autor | `/objetos-de-autor` | Behind `FEATURES.objetos`. Hand-painted t-shirt (one-off). The buyer picks a design from the "Elegí el diseño" tabs ("Mujer argentina", "Frida en trazo"; the page moves to the next tab once after 15 s if untouched), then a palette and a size. Frida en trazo has four stripe palettes (turquesa y lavanda; verde, amarillo y celeste; fucsia, rosa y turquesa; naranja, amarillo y rojo), each with its own photos, so the carousel changes with the palette. It also takes an optional birth year that replaces the painted "1978". The page also sells the printed t-shirt "Hecha en Argentina" (white, grey or black, plus size) and a mug, and links to the books. Data in `src/objects/objetosDeAutor.jsx` (`DISENOS`, `COLORES`, `TAZA`) |
 | About | `/sobre-mi` | Stats (+1000 works sold, +20 years creating, +15 teaching), style, timeline, story |
 | Contact | `/contacto` | EmailJS form + Google Map + social links |
 
@@ -55,7 +55,7 @@ never duplicate prices in copy or components):
 5. **Floating WhatsApp button** on every page — `WhatsappIcon.jsx`.
 6. **Print consult** — `Laminas.jsx`: prefilled message with the print name.
 7. **Objetos de autor orders** — `pages/ObjetosDeAutor.jsx`: hand-painted t-shirt message carries price, design,
-   palette, the birth year when given (Frida) and size; printed t-shirt carries color and size; size is required (focus moves to the group, button never disabled).
+   palette, the birth year when given (Frida en trazo) and size; printed t-shirt carries color and size; size is required (focus moves to the group, button never disabled).
 
 ## Information architecture
 

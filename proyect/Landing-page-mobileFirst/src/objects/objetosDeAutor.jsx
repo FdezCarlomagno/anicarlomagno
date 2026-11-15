@@ -5,6 +5,9 @@ import pintadaCelesteRoma from '../components/imgs/objetos/pintada-celeste-roma.
 import pintadaCelesteTaller from '../components/imgs/objetos/pintada-celeste-taller.jpg';
 import pintadaFridaPuesta from '../components/imgs/objetos/pintada-frida-puesta.jpg';
 import pintadaFridaSola from '../components/imgs/objetos/pintada-frida-sola.jpg';
+import pintadaFridaVerde from '../components/imgs/objetos/pintada-frida-verde.jpg';
+import pintadaFridaFucsia from '../components/imgs/objetos/pintada-frida-fucsia.jpg';
+import pintadaFridaNaranja from '../components/imgs/objetos/pintada-frida-naranja.jpg';
 import estampadaBlanca from '../components/imgs/objetos/estampada-blanca.jpg';
 import estampadaBlancaPuesta from '../components/imgs/objetos/estampada-blanca-puesta.jpg';
 import estampadaGris from '../components/imgs/objetos/estampada-gris.jpg';
@@ -14,7 +17,8 @@ import estampadaNegraFlorencia from '../components/imgs/objetos/estampada-negra-
 import taza from '../components/imgs/objetos/taza-hecha-en-argentina.jpg';
 
 // Diseños de la remera pintada a mano. Cada uno es una pestaña con su carrusel y sus paletas.
-// La primera paleta de cada diseño es la que se ve en las fotos.
+// Un diseño con `fotos` muestra esas fotos con cualquier paleta, y la primera paleta es la que se ve en ellas.
+// Un diseño sin `fotos` usa las de cada paleta.
 // El orden importa: la página arranca en el primero y, si nadie toca nada, pasa sola al siguiente.
 const OTRA_PALETA = { id: 'otra', label: 'Otra, la charlamos', swatch: null };
 
@@ -37,19 +41,45 @@ export const DISENOS = [
     },
     {
         id: 'frida',
-        label: 'Frida',
+        label: 'Frida en trazo',
         nuevo: true,
         // Año pintado arriba del retrato. Se puede pedir con el año de nacimiento de quien compra.
         anio: '1978',
-        fotos: [
-            { src: pintadaFridaPuesta, width: 900, height: 1600, alt: 'Ani en el mar con la remera Frida: retrato de Frida con turbante en trazo azul, entre franjas turquesa y lavanda, y el año 1978 arriba' },
-            { src: pintadaFridaSola, width: 1600, height: 1600, alt: 'La remera Frida extendida sobre una mesa de madera: retrato en trazo azul entre franjas turquesa y lavanda' },
-        ],
+        // Cada paleta trae sus fotos: el carrusel muestra las de la paleta elegida.
         paletas: [
-            { id: 'turquesa', label: 'Turquesa y lavanda', swatch: ['#2fbfae', '#7f8fe3'] },
-            // Todavía no tiene fotos y se pinta a pedido. Cuando haya fotos, cada paleta puede traer las suyas.
-            { id: 'fucsia-celeste', label: 'Fucsia y celeste', swatch: ['#e0338f', '#3fb8e0'] },
-            OTRA_PALETA,
+            {
+                id: 'turquesa',
+                label: 'Turquesa y lavanda',
+                swatch: ['#2fbfae', '#7f8fe3'],
+                fotos: [
+                    { src: pintadaFridaPuesta, width: 900, height: 1600, alt: 'Ani en el mar con la remera Frida en trazo: retrato de Frida con turbante en trazo azul, entre franjas turquesa y lavanda, y el año 1978 arriba' },
+                    { src: pintadaFridaSola, width: 1600, height: 1600, alt: 'La remera Frida en trazo extendida sobre una mesa de madera: retrato en trazo azul entre franjas turquesa y lavanda' },
+                ],
+            },
+            {
+                id: 'verde',
+                label: 'Verde, amarillo y celeste',
+                swatch: ['#3a9b3f', '#f0c419', '#5ab4e5'],
+                fotos: [
+                    { src: pintadaFridaVerde, width: 1600, height: 1600, alt: 'La remera Frida en trazo sobre una mesa de madera: retrato en trazo azul entre franjas verdes, amarillas y celestes, con el año 1978 arriba' },
+                ],
+            },
+            {
+                id: 'fucsia',
+                label: 'Fucsia, rosa y turquesa',
+                swatch: ['#d6337f', '#ec8fbd', '#2bb7b3'],
+                fotos: [
+                    { src: pintadaFridaFucsia, width: 1600, height: 1600, alt: 'La remera Frida en trazo sobre una mesa de madera: retrato en trazo azul entre franjas fucsia, rosa y turquesa, con el año 1978 en blanco arriba' },
+                ],
+            },
+            {
+                id: 'naranja',
+                label: 'Naranja, amarillo y rojo',
+                swatch: ['#f07a2e', '#f5b335', '#e0413a'],
+                fotos: [
+                    { src: pintadaFridaNaranja, width: 1600, height: 1600, alt: 'La remera Frida en trazo sobre una mesa de madera: retrato en trazo azul entre franjas naranjas, amarillas y rojas, con el año 1978 arriba' },
+                ],
+            },
         ],
     },
 ];
