@@ -20,7 +20,7 @@ const ObjetosTeaser = () => {
             <motion.div className="odt-media" {...reveal()}>
                 <img
                     src={remeraPintada}
-                    alt="Ani con una remera blanca pintada a mano, con franjas celestes y pan de oro"
+                    alt="Ani con la remera Mujer argentina, pintada a mano con franjas celestes y dorado"
                     width="1254"
                     height="1254"
                     loading="lazy"
@@ -32,7 +32,7 @@ const ObjetosTeaser = () => {
                 <p className="odt-eyebrow"><span>Nuevo</span></p>
                 <h2 id="odt-title" className="odt-title">Objetos de autor</h2>
                 <p className="odt-sub">
-                    Mi obra, fuera del lienzo: remeras pintadas a mano, remeras estampadas, tazas y mis libros.
+                    Remeras pintadas a mano, remeras estampadas, tazas y mis libros.
                 </p>
                 <Link to="/objetos-de-autor" className="odt-btn">
                     Ver objetos de autor

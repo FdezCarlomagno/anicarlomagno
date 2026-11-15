@@ -175,8 +175,7 @@ a {
 }
 
 .paintingContainerSlider,
-.paintingImgs-section,
-.father-paintingsSection {
+.paintingImgs-section {
     margin-top: 4px;
     view-timeline-name: none;
     animation-name: none;

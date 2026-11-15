@@ -28,9 +28,6 @@ const SecondSection = () => {
                     <p>
                         Pinto para que se vea a quienes nadie mira. Mis mujeres son esas <span>almas invisibles</span>. Quiero que mis obras y mis relatos crucen fronteras y lleguen a quien necesita sentirse vista.
                     </p>
-                    <p>
-                        Trabajo todos los días para <span>cumplir mis metas</span>. Pintar es mi manera de contar el mundo como lo veo.
-                    </p>
                 </motion.div>
             </div>
 

@@ -44,30 +44,37 @@
     color: var(--gal-muted);
 }
 
-.gal-link {
+.gal-btn {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    min-height: 44px;
-    margin-top: 6px;
+    justify-content: center;
+    gap: 10px;
+    min-height: 52px;
+    padding: 0 28px;
+    border-radius: 999px;
+    background: var(--gal-accent);
+    box-shadow: 0 8px 22px rgba(138, 43, 226, 0.32);
     font-weight: 700;
-    color: var(--gal-ink);
-    border-bottom: 2px solid var(--gal-accent);
-    transition: color 0.2s ease, gap 0.3s var(--gal-ease);
+    color: #fff;
+    text-decoration: none;
+    transition: background 0.25s ease, transform 0.25s var(--gal-ease);
 }
 
-.gal-link svg {
+.gal-btn svg {
     width: 20px;
     height: 20px;
     fill: none;
     stroke: currentColor;
-    stroke-width: 2;
+    stroke-width: 2.2;
     stroke-linecap: round;
     stroke-linejoin: round;
 }
 
-.gal-link:hover { color: var(--gal-accent); gap: 14px; }
-.gal-link:focus-visible { outline: 3px solid var(--gal-accent); outline-offset: 4px; }
+.gal-btn:focus-visible { outline: 3px solid var(--gal-accent); outline-offset: 3px; }
+
+@media (hover: hover) {
+    .gal-btn:hover { background: rgb(106, 20, 190); transform: translateY(-2px); }
+}
 
 /* ---- Masonry ---- */
 .gal-grid {
@@ -134,35 +141,21 @@
 
 .gal-item a:focus-visible { outline: 3px solid var(--gal-accent); outline-offset: 3px; }
 
-/* ---- Indicador de carga (sentinel del scroll infinito) ---- */
-.gal-sentinel {
-    display: flex;
-    justify-content: center;
-    padding: 24px 0 8px;
-}
-
-.gal-sentinel span {
-    width: 28px;
-    height: 28px;
-    border: 3px solid rgba(138, 43, 226, 0.2);
-    border-top-color: var(--gal-accent);
-    border-radius: 50%;
-    animation: gal-spin 0.9s linear infinite;
-}
-
-@keyframes gal-spin { to { transform: rotate(360deg); } }
+/* ---- Al catálogo ---- */
+.gal-more { display: flex; justify-content: center; margin-top: 28px; }
 
 @media (prefers-reduced-motion: reduce) {
     .gal-item a,
     .gal .gal-item img,
-    .gal-caption { transition: none; }
-    .gal-sentinel span { animation-duration: 3s; }
+    .gal-caption,
+    .gal-btn { transition: none; }
+    .gal-btn:hover { transform: none; }
 }
 
 @media (min-width: 768px) {
     .gal { padding-inline: 32px; }
 
-    /* Título a la izquierda, bajada y link a la derecha: usa todo el ancho. */
+    /* Título a la izquierda, bajada a la derecha: usa todo el ancho. */
     .gal-head {
         flex-direction: row;
         align-items: flex-end;
@@ -172,8 +165,7 @@
         text-align: left;
     }
 
-    .gal-head-side { max-width: 26rem; }
-    .gal-sub { margin: 0 0 8px; }
+    .gal-sub { max-width: 26rem; margin: 0 0 8px; text-align: right; }
 
     .gal-grid { gap: 20px; }
     .gal-col-list { gap: 20px; }

@@ -60,7 +60,7 @@ never duplicate prices in copy or components):
 ## Information architecture
 
 ```
-/                    Home: slider → "Quién soy" → "Mis pasiones" → Agendas strip → Instagram highlights → paintings → CTA block
+/                    Home: hero → "Mis obras" (8 paintings on phones, 9 or 12 wider, then "Ver todas las obras") → Objetos de autor teaser → Agendas strip → "Quién soy" → "Soñadora compulsiva" with the promo line
 /elegir              Fork: Obra personalizada | Obras en stock
 /obras-en-stock      Catalog (filters)          /obra-personalizada   Form
 /agendas             Gallery + CTA              /agenda-personalizada Form (AgendaForm)

@@ -17,13 +17,12 @@ function Home() {
         <header>
           <Hero />
         </header>
+        {/* Primero las obras, después lo nuevo y los productos, al final quién es Ani */}
         <section id="contenido">
-          <FirstSection />
-          <AgendaSection />
+          <PaintingImgsSection />
           {FEATURES.objetos && <ObjetosTeaser />}
-        </section>
-        <section className='father-paintingsSection'>
-        <PaintingImgsSection />
+          <AgendaSection />
+          <FirstSection />
         </section>
         <SecondSection />
       </main>

@@ -3,7 +3,6 @@ import { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useInView, useReducedMotion, useScroll, useTransform } from 'framer-motion';
 import aniSection from './imgs/aniSection3.jpg';
-import aniSection2 from './imgs/aniSection7.jpg';
 import './FirstSection.css';
 
 const EASE = [0.22, 1, 0.36, 1];
@@ -14,7 +13,7 @@ const ArrowIcon = () => (
 );
 
 // Bloque imagen + texto. La imagen se revela con una máscara y tiene un parallax suave.
-const AboutBlock = ({ eyebrow, title, image, imageAlt, width, height, reverse, tinted, chips, children }) => {
+const AboutBlock = ({ eyebrow, title, image, imageAlt, width, height, children }) => {
     const reduceMotion = useReducedMotion();
     const mediaRef = useRef(null);
     const { scrollYProgress } = useScroll({ target: mediaRef, offset: ['start end', 'end start'] });
@@ -32,7 +31,7 @@ const AboutBlock = ({ eyebrow, title, image, imageAlt, width, height, reverse, t
     };
 
     return (
-        <article className={`about-block${reverse ? ' is-reverse' : ''}${tinted ? ' is-tinted' : ''}`}>
+        <article className="about-block">
             <div className={`about-media${height > width ? ' is-portrait' : ''}`} ref={mediaRef}>
                 <motion.span
                     className="about-shape"
@@ -70,11 +69,6 @@ const AboutBlock = ({ eyebrow, title, image, imageAlt, width, height, reverse, t
                 <motion.p className="about-eyebrow" variants={textItem}>{eyebrow}</motion.p>
                 <motion.h2 className="about-title" variants={textItem}>{title}</motion.h2>
                 <motion.div className="about-body" variants={textItem}>{children}</motion.div>
-                {chips && (
-                    <motion.ul className="about-chips" variants={textItem}>
-                        {chips.map((chip) => <li key={chip}>{chip}</li>)}
-                    </motion.ul>
-                )}
                 <motion.div variants={textItem}>
                     <Link to="/sobre-mi" className="about-link">
                         Saber más <ArrowIcon />
@@ -88,7 +82,7 @@ const AboutBlock = ({ eyebrow, title, image, imageAlt, width, height, reverse, t
 const FirstSection = () => (
     <section className="about" aria-label="Sobre Ani Carlomagno">
         <AboutBlock
-            eyebrow="01 · Mi historia"
+            eyebrow="Mi historia"
             title="Quién soy"
             image={aniSection}
             imageAlt="Ani Carlomagno pintando un retrato de mujer en su taller"
@@ -96,26 +90,10 @@ const FirstSection = () => (
             height={1280}
         >
             <p>
-                Soy <span>Ani Carlomagno</span>, artista plástica y docente de Tandil.
+                Soy <span>Ani Carlomagno</span>, artista plástica y docente de Tandil. Me apasionan la pintura, la docencia y la música.
             </p>
             <p>
                 Pinto mujeres de <span>ojos grandes</span>. Son mi forma de hacerme <span>visible</span> y de contar lo que viví.
-            </p>
-        </AboutBlock>
-
-        <AboutBlock
-            reverse
-            tinted
-            eyebrow="02 · Lo que me mueve"
-            title="Mis pasiones"
-            image={aniSection2}
-            imageAlt="Ani Carlomagno rodeada de sus cuadros"
-            width={1280}
-            height={850}
-            chips={['Pintura', 'Docencia', 'Arte', 'Música']}
-        >
-            <p>
-                Me apasionan la <span>pintura</span> y la <span>docencia</span>. Con las dos transmito mi amor por el <span>arte</span> y la <span>música</span>.
             </p>
         </AboutBlock>
     </section>
