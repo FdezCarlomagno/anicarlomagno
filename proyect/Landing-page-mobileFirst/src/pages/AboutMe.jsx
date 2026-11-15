@@ -14,17 +14,17 @@ const FACTS = [
 ];
 
 const STYLE = [
-    { title: 'Colores saturados', text: 'Llenos de vida y emoción.', color: '#d6336c' },
-    { title: 'Alto contraste', text: 'Drama visual que cautiva.', color: '#5b1fa6' },
-    { title: 'Texturas ricas', text: 'Profundidad en cada trazo.', color: '#e8590c' },
-    { title: 'Poesía visual', text: 'Cada obra cuenta una historia.', color: '#0b7285' },
+    { title: 'Colores saturados', text: 'Puros y a plena intensidad.', color: '#d6336c' },
+    { title: 'Alto contraste', text: 'Claros y oscuros bien marcados.', color: '#5b1fa6' },
+    { title: 'Texturas ricas', text: 'Espátula, foil dorado, hilo y lentejuelas.', color: '#e8590c' },
+    { title: 'Poesía visual', text: 'Cada obra tiene un nombre y una historia.', color: '#0b7285' },
 ];
 
 const JOURNEY = [
     { when: 'Comienzo', title: 'Centro Polivalente de Arte', text: 'Donde todo comenzó.', color: '#d6336c' },
-    { when: 'Evolución', title: 'Nace mi estilo', text: 'Mujeres de ojos grandes, ventanas al alma.', color: '#5b1fa6' },
+    { when: 'Evolución', title: 'Nace mi estilo', text: 'Aparecen las mujeres de ojos grandes.', color: '#5b1fa6' },
     { when: '2013', title: 'La Noche de los Museos', text: 'Participo hasta hoy.', color: '#e8590c' },
-    { when: 'Presente', title: 'Arte sin fronteras', text: 'Obras por todo el país y más allá.', color: '#0b7285' },
+    { when: 'Presente', title: 'Obras que viajan', text: 'Mis cuadros están en casas de todo el país y del exterior.', color: '#0b7285' },
 ];
 
 const Story = ({ title, image, alt, reverse, lead, more, reveal }) => {

@@ -20,7 +20,7 @@ const BOOKS = [
         price: librosPrice.MIRADAS_QUE_NARRAN,
         item: 'Libro de relatos',
         paragraphs: [
-            <>Aquí encontrarás relatos de una <span>mujer apasionada</span>, escritos a partir de cada vivencia transitada.</>,
+            <>Acá vas a encontrar relatos de una <span>mujer apasionada</span>, escritos a partir de lo que viví.</>,
             <>Cuando lo tengas en tus manos también serán tus relatos, porque seguramente, en alguna de mis frases, en las mujeres que pinto, en las mujeres que elegí para que colorees, o en las palabras que escribí, hay <span>algo de vos</span>.</>,
         ],
         promo: <><strong>Consultá promos</strong> comprando más de un producto.</>,
@@ -34,10 +34,10 @@ const BOOKS = [
         price: librosPrice.LIBRO_PARA_COLOREAR,
         item: 'Libro para colorear',
         paragraphs: [
-            <>Este libro es una invitación a <span>expresarte</span>, donde cada imagen te permitirá crear una historia propia, llena de vida y color.</>,
-            <>Coloreá y convertite en parte de cada obra, sintiendo que cada trazo refleja tu <span>creatividad</span> y esencia.</>,
+            <>Son mis mujeres, dibujadas para que vos les pongas el color. Cada una puede contar la <span>historia</span> que quieras.</>,
+            <>No hay una forma correcta de pintarlas. Elegí los colores, mezclá y probá. El resultado es <span>tuyo</span>.</>,
         ],
-        promo: <><strong>Preguntá por descuentos</strong> en compras múltiples.</>,
+        promo: <><strong>Consultá promos</strong> comprando más de un producto.</>,
     },
 ];
 
@@ -61,7 +61,7 @@ const Book = ({ book, index, reveal }) => {
 
             <div className="pb-info">
                 <p className="pb-kind">{book.kind}</p>
-                <h2 id={`${book.id}-title`} className="pb-book-title">“{book.title}”</h2>
+                <h2 id={`${book.id}-title`} className="pb-book-title">{book.title}</h2>
                 <p className="pb-price"><strong>{formatPrice(book.price)}</strong></p>
                 <div className="pb-text">
                     {book.paragraphs.map((p, i) => <p key={i}>{p}</p>)}

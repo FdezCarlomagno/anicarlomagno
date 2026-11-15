@@ -34,11 +34,11 @@ const META = {
   },
   '/mi-libro': {
     title: 'Libros | Ani Carlomagno',
-    description: '“Miradas que narran” y “Colores que cuentan historias”: dos libros de Ani Carlomagno para leer y para colorear.',
+    description: '"Miradas que narran" y "Colores que cuentan historias", dos libros de Ani Carlomagno para leer y para colorear.',
   },
   '/objetos-de-autor': {
     title: 'Objetos de autor: remeras y tazas | Ani Carlomagno',
-    description: 'Remeras pintadas a mano, remeras estampadas y tazas con la obra de Ani Carlomagno, y sus libros. Elegí paleta, color y talle y pedilo por WhatsApp.',
+    description: 'Remeras pintadas a mano, remeras estampadas y tazas con la obra de Ani Carlomagno, y sus libros. Elegí diseño, color y talle, y pedilo por WhatsApp.',
   },
   '/laminas': {
     title: 'Láminas A4 en papel fotográfico | Ani Carlomagno',

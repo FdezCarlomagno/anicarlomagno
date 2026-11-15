@@ -20,16 +20,16 @@ const SecondSection = () => {
                     <p className="dream-eyebrow">Mi manera de ver</p>
                     <h2 id="dream-title" className="dream-title">Soñadora compulsiva</h2>
                     <p className="dream-quote">
-                        Mi vida está llena de <span>sueños</span> y <span>aspiraciones</span>, entrelazados con una <span>pasión ardiente</span> por mi arte.
+                        Tengo muchos <span>sueños</span>, y casi todos pasan por <span>mi arte</span>.
                     </p>
                 </motion.div>
 
                 <motion.div className="dream-body" {...reveal(0.15)}>
                     <p>
-                        Cada <span>trazo</span> y <span>color</span> en mis obras busca dar voz a las <span>almas invisibles</span>, con la esperanza de que mis relatos atraviesen fronteras y lleguen a corazones necesitados de ser vistos.
+                        Pinto para que se vea a quienes nadie mira. Mis mujeres son esas <span>almas invisibles</span>. Quiero que mis obras y mis relatos crucen fronteras y lleguen a quien necesita sentirse vista.
                     </p>
                     <p>
-                        Me esfuerzo por <span>cumplir mis metas</span>, impulsada por una <span>dedicación</span> que transforma mi mundo en un vibrante poema visual.
+                        Trabajo todos los días para <span>cumplir mis metas</span>. Pintar es mi manera de contar el mundo como lo veo.
                     </p>
                 </motion.div>
             </div>

@@ -5,7 +5,7 @@ const Envio = () => {
     return (
         <section className="envioSection">
             <Image src={Truck} alt="" />
-            <p>Realizamos envíos a<span> todo el país</span></p>
+            <p>Hacemos envíos a<span> todo el país</span></p>
         </section>
 
     )

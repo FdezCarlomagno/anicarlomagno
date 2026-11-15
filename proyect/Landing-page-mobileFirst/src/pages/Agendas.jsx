@@ -34,13 +34,13 @@ const PRODUCTS = [
     { name: 'Agenda semanal', note: 'Una semana por vez, con espacio para todo', price: agendaPrices.AGENDA_SEMANAL },
     { name: 'Agenda perpetua', note: 'Sin fecha: empezás cuando quieras', price: agendaPrices.AGENDA_PERPETUA },
     { name: 'Agenda docente', note: 'Pensada para el día a día en el aula', price: agendaPrices.AGENDA_DOCENTE },
-    { name: 'Cuaderno A4', note: 'Más grande, más espacio para crear', price: agendaPrices.CUADERNO_A4, isNew: true },
+    { name: 'Cuaderno A4', note: 'Tamaño A4, el doble de espacio que una agenda', price: agendaPrices.CUADERNO_A4, isNew: true },
 ];
 
 const FEATURES = [
     {
         title: 'Tapa y contratapa duras',
-        text: 'Con anillo doble de metal: abren planas y duran todo el año.',
+        text: 'El anillo doble de metal las deja abrir planas y aguanta todo el año.',
         icon: <path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3V4zM5 17a3 3 0 0 1 3-3h11" />,
     },
     {
@@ -55,7 +55,7 @@ const FEATURES = [
     },
     {
         title: 'Interior renovado cada año',
-        text: 'Cada año nuevo cambian los diseños: siempre hay algo distinto.',
+        text: 'Los diseños de adentro cambian todos los años.',
         icon: <path d="M20 12a8 8 0 1 1-2.3-5.7M20 4v5h-5" />,
     },
 ];
@@ -85,7 +85,7 @@ const Agendas = () => {
                     <h1 id="ag-title" className="ag-title">Agendas y cuadernos</h1>
                     <p className="ag-lead">
                         Páginas llenas de arte para acompañarte cada día. Elegí la tapa, el papel y
-                        el nombre que querés ver en la tapa: yo me ocupo del resto.
+                        el nombre que querés ver en ella. Yo me ocupo del resto.
                     </p>
                     <div className="ag-actions">
                         <Link to="/agenda-personalizada" className="ag-btn ag-btn--primary">

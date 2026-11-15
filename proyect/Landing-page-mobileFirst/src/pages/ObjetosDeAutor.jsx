@@ -252,7 +252,7 @@ const Pintadas = ({ reveal }) => {
                 <p className="oda-kind">Remera pintada a mano · Pieza única</p>
                 <h2 id="pintadas-title" className="oda-title">El alma de la pintura, en tu ropa</h2>
                 <div className="oda-text">
-                    <p>No es un dibujo sobre tu remera: es <span>pintura viva</span>. La pinto a mano, trazo por trazo, con el mismo gesto con el que pinto un cuadro.</p>
+                    <p>La pinto a mano, <span>trazo por trazo</span>, con el mismo gesto con el que pinto un cuadro.</p>
                     <p>Por eso no hay dos iguales. La tuya va a ser <span>solo tuya</span>.</p>
                 </div>
                 <ul className="oda-facts">
@@ -424,7 +424,7 @@ const Coleccion = ({ reveal }) => {
                 <div className="oda-taza-info">
                     <p className="oda-tag">Diseño 01</p>
                     <h3 id="taza-title" className="oda-title">También en taza</h3>
-                    <p className="oda-taza-text">El mismo diseño, para acompañarte en cada café. Es el primero de una serie: se vienen más.</p>
+                    <p className="oda-taza-text">El mismo diseño, en una taza para todos los días. Es el primero de una serie y se vienen más.</p>
                     <p className="oda-price"><strong>{formatPrice(objetosPrices.TAZA)}</strong></p>
                     <div className="oda-taza-actions">
                         <button type="button" className="oda-btn" onClick={orderTaza}>
@@ -484,7 +484,7 @@ const ObjetosDeAutor = () => {
             <section className="oda-hero" aria-labelledby="oda-title">
                 <p className="oda-eyebrow"><span className="oda-new">Nuevo</span></p>
                 <h1 id="oda-title" className="oda-h1">Objetos de autor</h1>
-                <p className="oda-lead">Mi obra, fuera del lienzo: para usar, regalar y llevar puesta.</p>
+                <p className="oda-lead">Mi obra, fuera del lienzo, en cosas para usar o regalar.</p>
                 <nav className="oda-jump" aria-label="Ir a una sección">
                     {JUMPS.map((j) => (
                         <a key={j.href} href={j.href} className="oda-chip">{j.label}</a>

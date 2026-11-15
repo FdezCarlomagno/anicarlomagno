@@ -99,7 +99,7 @@ const FirstSection = () => (
                 Soy <span>Ani Carlomagno</span>, artista plástica y docente de Tandil.
             </p>
             <p>
-                Pinto mujeres de <span>ojos grandes</span>, un símbolo de mi propio camino hacia la <span>visibilidad</span> y la <span>expresión</span> de las vivencias que me han marcado.
+                Pinto mujeres de <span>ojos grandes</span>. Son mi forma de hacerme <span>visible</span> y de contar lo que viví.
             </p>
         </AboutBlock>
 
@@ -115,7 +115,7 @@ const FirstSection = () => (
             chips={['Pintura', 'Docencia', 'Arte', 'Música']}
         >
             <p>
-                Me apasiona profundamente la <span>pintura</span> y la <span>docencia</span>, dos lenguajes mágicos a través de los cuales transmito mi amor por el <span>arte</span> y la <span>música</span>.
+                Me apasionan la <span>pintura</span> y la <span>docencia</span>. Con las dos transmito mi amor por el <span>arte</span> y la <span>música</span>.
             </p>
         </AboutBlock>
     </section>

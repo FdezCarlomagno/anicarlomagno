@@ -13,7 +13,7 @@ const ContactSection = () => {
         <p className="ct-eyebrow">Contacto</p>
         <h1 className="ct-title">Hablemos</h1>
         <p className="ct-lead">
-          ¿Una consulta, una idea para una obra o simplemente ganas de saludar? Escribime por el medio que prefieras.
+          ¿Una consulta, una idea para una obra o ganas de saludar? Escribime por el medio que prefieras.
         </p>
       </header>
 
