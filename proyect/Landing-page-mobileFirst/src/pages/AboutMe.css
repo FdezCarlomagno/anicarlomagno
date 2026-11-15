@@ -73,7 +73,8 @@
 .ab-story { display: grid; gap: 24px; padding: 28px 0 40px; }
 .ab-story + .ab-story { border-top: 1px solid var(--ab-line); }
 
-.ab-story-img { display: block; width: 100%; max-width: 360px; height: auto; margin: 0 auto; border-radius: 20px; box-shadow: 0 14px 36px rgba(60, 20, 120, 0.2); }
+/* En el teléfono las fotos verticales (9:16) ocupaban casi una pantalla: se muestran en 4:5, centradas en Ani. En desktop se ven enteras. */
+.ab-story-img { display: block; width: 100%; max-width: 360px; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 35%; margin: 0 auto; border-radius: 20px; box-shadow: 0 14px 36px rgba(60, 20, 120, 0.2); }
 
 .ab-story-text { display: grid; gap: 14px; align-content: start; max-width: 38rem; }
 .ab-story-text h3 { font-family: "Dancing Script", cursive; font-size: clamp(32px, 8vw, 44px); font-weight: 700; line-height: 1.1; }
@@ -151,7 +152,7 @@
     .ab-story { grid-template-columns: minmax(0, 360px) minmax(0, 1fr); align-items: center; gap: clamp(40px, 6vw, 96px); padding: 40px 0 56px; }
     .ab-story.is-reverse { grid-template-columns: minmax(0, 1fr) minmax(0, 360px); }
     .ab-story.is-reverse .ab-story-img { order: 2; }
-    .ab-story-img { margin: 0; max-width: none; }
+    .ab-story-img { margin: 0; max-width: none; aspect-ratio: auto; }
     .ab-story-text p { font-size: 18px; }
 
     .ab-cta {

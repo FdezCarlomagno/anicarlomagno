@@ -139,12 +139,6 @@ const AboutMe = () => {
                                 El <strong>arte</strong> ha sido mi eje central, y elegí la <strong>docencia</strong> para
                                 transmitir desde el alma los lenguajes <strong>musical y visual</strong>.
                             </p>
-                            <p>
-                                A pesar de los altibajos, me apasiona profundamente todo lo que emprendo y deseo
-                                que mis mujeres y relatos <strong>traspasen fronteras</strong> antes de que mi piel se
-                                arrugue demasiado. Pongo mi corazón entero en estas palabras, con la esperanza de
-                                alcanzar y resonar en los <strong>corazones ajenos</strong>.
-                            </p>
                         </>
                     )}
                 />
@@ -183,7 +177,7 @@ const AboutMe = () => {
                 <h2 id="ab-cta-title" className="ab-cta-title">Llevate un pedacito de mi mundo</h2>
                 <p>Mirá las obras que ya están pintadas o contame la que te gustaría tener.</p>
                 <div className="ab-cta-actions">
-                    <Link to="/obras-en-stock" className="ab-btn ab-btn--light">Ver obras en stock</Link>
+                    <Link to="/obras-en-stock" className="ab-btn ab-btn--light">Ver obras</Link>
                     <Link to="/obra-personalizada" className="ab-btn ab-btn--outline">Encargar una obra</Link>
                 </div>
             </motion.section>
