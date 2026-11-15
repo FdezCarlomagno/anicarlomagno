@@ -150,7 +150,7 @@ const DesignTabs = ({ value, onChange, idBase, pending }) => {
                         onKeyDown={(e) => onKeyDown(e, i)}
                     >
                         {d.label}
-                        {d.nuevo && <span className="oda-tab-new">Nuevo</span>}
+                        {d.nuevo && <span className="oda-tab-new"> Nuevo</span>}
                     </button>
                 );
             })}
@@ -230,6 +230,12 @@ const Pintadas = ({ reveal }) => {
             onFocus={stop}
             {...reveal}
         >
+            <header className="oda-head">
+                <p className="oda-kind">Pieza única</p>
+                <h2 id="pintadas-title" className="oda-title">Remera pintada a mano</h2>
+                <p className="oda-price"><strong>{formatPrice(objetosPrices.REMERA_PINTADA)}</strong></p>
+            </header>
+
             <div className="oda-media" ref={setMediaRef}>
                 <DesignTabs
                     value={disenoId}
@@ -251,23 +257,15 @@ const Pintadas = ({ reveal }) => {
             </div>
 
             <div className="oda-info">
-                <p className="oda-kind">Remera pintada a mano · Pieza única</p>
-                <h2 id="pintadas-title" className="oda-title">El alma de la pintura, en tu ropa</h2>
-                <div className="oda-text">
-                    <p>La pinto a mano, <span>trazo por trazo</span>, con el mismo gesto con el que pinto un cuadro.</p>
-                    <p>Por eso no hay dos iguales. La tuya va a ser <span>solo tuya</span>.</p>
-                </div>
+                <p className="oda-text">La pinto a mano, <span>trazo por trazo</span>, como un cuadro. No hay dos iguales.</p>
                 <ul className="oda-facts">
                     <li>Algodón blanco, manga corta y cuello redondo</li>
                     <li>Pintura para tela, resistente al lavado</li>
-                    <li>Vos elegís el diseño y la paleta</li>
                 </ul>
-                <p className="oda-price"><strong>{formatPrice(objetosPrices.REMERA_PINTADA)}</strong></p>
 
                 <div className="oda-order">
                     <Choice
                         legend="Paleta"
-                        hint={`diseño ${diseno.label}`}
                         name="paleta"
                         options={diseno.paletas}
                         value={paleta}
@@ -369,10 +367,15 @@ const Coleccion = ({ reveal }) => {
             <motion.header className="oda-coleccion-head" {...reveal}>
                 <p className="oda-eyebrow">Colección</p>
                 <h2 id="coleccion-title" className="oda-coleccion-title">Hecha en Argentina</h2>
-                <p className="oda-lead">Una de mis mujeres, con los colores de casa. Para llevarla todos los días, en remera o en taza.</p>
+                <p className="oda-lead">Una de mis mujeres, con los colores de casa, en remera o en taza.</p>
             </motion.header>
 
             <motion.article className="oda-panel oda-estampada" aria-labelledby="estampada-title" {...reveal}>
+                <header className="oda-head">
+                    <h3 id="estampada-title" className="oda-title">Remera estampada</h3>
+                    <p className="oda-price"><strong>{formatPrice(objetosPrices.REMERA_ESTAMPADA)}</strong></p>
+                </header>
+
                 <div className="oda-media">
                     <div className="oda-pair" key={color.id}>
                         <Shot img={color.sola} caption="Así es" onOpen={setZoom} />
@@ -392,13 +395,9 @@ const Coleccion = ({ reveal }) => {
                 </div>
 
                 <div className="oda-info">
-                    <p className="oda-kind">Remera estampada</p>
-                    <h3 id="estampada-title" className="oda-title">Remera Hecha en Argentina</h3>
                     <ul className="oda-facts">
-                        <li>Blanca, gris o negra</li>
                         <li>Estampado DTF, de colores firmes</li>
                     </ul>
-                    <p className="oda-price"><strong>{formatPrice(objetosPrices.REMERA_ESTAMPADA)}</strong></p>
 
                     <div className="oda-order">
                         <Choice
@@ -416,10 +415,6 @@ const Coleccion = ({ reveal }) => {
                             Pedí tu remera estampada <Arrow /><NewTab />
                         </button>
                     </div>
-
-                    <p className="oda-bridge">
-                        ¿Querés una que sea solo tuya? <a href="#pintadas">Mirá las pintadas a mano</a>
-                    </p>
                 </div>
             </motion.article>
 
@@ -428,18 +423,17 @@ const Coleccion = ({ reveal }) => {
                     <Shot img={TAZA} onOpen={setZoom} />
                 </div>
                 <div className="oda-taza-info">
-                    <p className="oda-tag">Diseño 01</p>
-                    <h3 id="taza-title" className="oda-title">También en taza</h3>
-                    <p className="oda-taza-text">El mismo diseño, en una taza para todos los días. Es el primero de una serie y se vienen más.</p>
+                    <h3 id="taza-title" className="oda-title">Taza</h3>
+                    <p className="oda-taza-text">El mismo diseño. Es la primera de una serie.</p>
                     <p className="oda-price"><strong>{formatPrice(objetosPrices.TAZA)}</strong></p>
-                    <div className="oda-taza-actions">
-                        <button type="button" className="oda-btn" onClick={orderTaza}>
-                            Pedí tu taza <Arrow /><NewTab />
-                        </button>
-                        <button type="button" className="oda-link" onClick={notify}>
-                            Avisame cuando haya diseños nuevos<NewTab />
-                        </button>
-                    </div>
+                </div>
+                <div className="oda-taza-actions">
+                    <button type="button" className="oda-btn" onClick={orderTaza}>
+                        Pedí tu taza <Arrow /><NewTab />
+                    </button>
+                    <button type="button" className="oda-link" onClick={notify}>
+                        Avisame cuando haya diseños nuevos<NewTab />
+                    </button>
                 </div>
             </motion.article>
 

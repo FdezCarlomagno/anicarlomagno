@@ -54,11 +54,15 @@
 /* ---- Paneles de producto ---- */
 .oda-panel {
     display: grid;
-    gap: 28px;
+    gap: 20px;
     max-width: 1240px;
     margin: 0 auto;
     padding: 40px 20px;
 }
+
+/* Nombre y precio van primero: es lo que se ve antes de las fotos en el teléfono */
+.oda-head { display: grid; justify-items: start; }
+.oda-head .oda-price { margin-top: 10px; }
 
 .oda-media { display: grid; gap: 12px; justify-items: center; }
 .oda-media > * { width: 100%; }
@@ -125,15 +129,15 @@
 .oda-tab[aria-selected="true"] { background: var(--oda-accent-deep); color: #fff; }
 .oda-tab:focus-visible { outline: 3px solid var(--oda-accent); outline-offset: 2px; }
 
+/* "Nuevo" no entra al lado del nombre en la pestaña: queda para lectores de pantalla. La página ya lo dice arriba. */
 .oda-tab-new {
-    padding: 2px 8px;
-    border-radius: 999px;
-    background: var(--oda-tint);
-    font-size: 11px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
 }
-.oda-tab[aria-selected="true"] .oda-tab-new { background: rgba(255, 255, 255, 0.2); }
 
 /* Aviso de que la pestaña siguiente se abre sola: se va llenando de abajo */
 .oda-tab.is-pending::after {
@@ -152,20 +156,19 @@
 
 @keyframes oda-progress { to { transform: scaleX(1); } }
 
-.oda-kind,
-.oda-tag { margin-bottom: 6px; font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--oda-accent-deep); }
+.oda-kind { margin-bottom: 6px; font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--oda-accent-deep); }
 
 .oda-title { font-family: "Dancing Script", cursive; font-size: clamp(34px, 9vw, 52px); font-weight: 700; line-height: 1.1; text-align: left; }
 
-.oda-text { display: grid; gap: 14px; margin-top: 16px; max-width: 34rem; }
-.oda-text p { font-size: 17px; line-height: 1.7; color: var(--oda-muted); }
+.oda-text { max-width: 34rem; font-size: 17px; line-height: 1.6; color: var(--oda-muted); }
 .oda-text span { font-weight: 700; color: var(--oda-accent-deep); }
 
-.oda-facts { display: grid; gap: 8px; margin-top: 18px; }
+.oda-facts { display: grid; gap: 6px; }
+.oda-text + .oda-facts { margin-top: 12px; }
 .oda-facts li { position: relative; padding-left: 22px; font-size: 16px; line-height: 1.5; color: var(--oda-muted); }
 .oda-facts li::before { content: ""; position: absolute; left: 4px; top: 0.6em; width: 8px; height: 8px; border-radius: 50%; background: var(--oda-accent); }
 
-.oda-price { display: inline-block; margin-top: 18px; padding: 6px 16px; border-radius: 999px; background: rgba(138, 43, 226, 0.1); color: var(--oda-accent-deep); }
+.oda-price { display: inline-block; padding: 6px 16px; border-radius: 999px; background: rgba(138, 43, 226, 0.1); color: var(--oda-accent-deep); }
 .oda-price strong { font-size: 22px; font-variant-numeric: tabular-nums; }
 
 /* ---- Elección: pastillas con radios reales ---- */
@@ -273,13 +276,9 @@
 .oda-btn:focus-visible,
 .oda-link:focus-visible,
 .oda-shot-btn:focus-visible,
-.oda-libro:focus-visible,
-.oda-bridge a:focus-visible { outline: 3px solid var(--oda-accent); outline-offset: 3px; }
+.oda-libro:focus-visible { outline: 3px solid var(--oda-accent); outline-offset: 3px; }
 
 .oda-note { font-size: 15px; color: var(--oda-muted); text-align: center; }
-
-.oda-bridge { margin-top: 24px; padding-top: 18px; border-top: 1px solid var(--oda-line); font-size: 16px; color: var(--oda-muted); }
-.oda-bridge a { display: inline-block; padding: 10px 0; font-weight: 700; color: var(--oda-accent-deep); text-underline-offset: 4px; }
 
 .oda-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
@@ -309,18 +308,22 @@
 .oda-shot-btn img { display: block; width: 100%; height: auto; }
 .oda-pair .oda-shot-btn img { aspect-ratio: 3 / 4; object-fit: cover; }
 
-/* ---- Taza ---- */
+/* ---- Taza: tarjeta compacta, foto al costado ---- */
 .oda-taza {
     display: grid;
-    gap: 20px;
+    grid-template-columns: minmax(0, 0.42fr) minmax(0, 0.58fr);
+    grid-template-areas: "media info" "actions actions";
+    align-items: center;
+    gap: 16px;
     max-width: 1240px;
-    margin: 8px auto 0;
-    padding: 0 20px 40px;
+    margin: 0 auto;
+    padding: 8px 20px 40px;
 }
 
-.oda-taza-media { max-width: 336px; }
-.oda-taza-text { margin-top: 12px; max-width: 32rem; font-size: 17px; line-height: 1.6; color: var(--oda-muted); }
-.oda-taza-actions { display: grid; gap: 8px; margin-top: 20px; }
+.oda-taza-media { grid-area: media; }
+.oda-taza-info { grid-area: info; display: grid; justify-items: start; gap: 8px; }
+.oda-taza-text { max-width: 32rem; font-size: 16px; line-height: 1.5; color: var(--oda-muted); }
+.oda-taza-actions { grid-area: actions; display: grid; gap: 8px; }
 
 /* ---- Libros ---- */
 .oda-libros { max-width: 1240px; margin: 0 auto; padding: 32px 20px 8px; border-top: 1px solid var(--oda-line); }
@@ -387,19 +390,39 @@
         gap: clamp(40px, 6vw, 96px);
     }
 
-    .oda-text p { font-size: 18px; }
+    .oda-text { font-size: 18px; }
+
+    /* Foto a la izquierda; nombre, precio y pedido a la derecha */
+    .oda-panel { row-gap: 0; }
+    .oda-panel > .oda-media { grid-area: media; }
+    .oda-panel > .oda-head { grid-area: head; }
+    .oda-panel > .oda-info { grid-area: info; margin-top: 24px; }
+    .oda-pintadas {
+        grid-template-areas: "media ." "media head" "media info" "media .";
+        grid-template-rows: 1fr auto auto 1fr;
+    }
 
     .oda-coleccion-head { max-width: 1400px; padding: 48px clamp(32px, 5vw, 80px) 0; }
-    .oda-estampada { grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); align-items: start; }
+    .oda-estampada {
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+        grid-template-areas: "media head" "media info" "media .";
+        grid-template-rows: auto auto 1fr;
+        align-items: start;
+    }
     .oda-estampada .oda-media { width: 80%; justify-self: center; }
 
     .oda-taza {
         max-width: 1400px;
-        grid-template-columns: minmax(0, 0.6fr) minmax(0, 1fr);
-        align-items: center;
-        gap: clamp(32px, 5vw, 80px);
+        grid-template-columns: minmax(0, 0.45fr) minmax(0, 1fr);
+        grid-template-areas: "media info" "media actions";
+        grid-template-rows: 1fr 1fr;
+        column-gap: clamp(32px, 5vw, 80px);
+        row-gap: 20px;
         padding: 16px clamp(32px, 5vw, 80px) 48px;
     }
+    .oda-taza-media { max-width: 336px; }
+    .oda-taza-info { align-self: end; }
+    .oda-taza-actions { align-self: start; }
 
     .oda-libros { max-width: 1400px; padding: 48px clamp(32px, 5vw, 80px) 8px; }
 }
