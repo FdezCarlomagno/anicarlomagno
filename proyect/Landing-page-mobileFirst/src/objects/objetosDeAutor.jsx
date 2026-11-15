@@ -14,13 +14,14 @@ import estampadaNegraFlorencia from '../components/imgs/objetos/estampada-negra-
 import taza from '../components/imgs/objetos/taza-hecha-en-argentina.jpg';
 
 // Diseños de la remera pintada a mano. Cada uno es una pestaña con su carrusel y sus paletas.
+// La primera paleta de cada diseño es la que se ve en las fotos.
 // El orden importa: la página arranca en el primero y, si nadie toca nada, pasa sola al siguiente.
 const OTRA_PALETA = { id: 'otra', label: 'Otra, la charlamos', swatch: null };
 
 export const DISENOS = [
     {
-        id: 'pan-de-oro',
-        label: 'Pan de oro',
+        id: 'mujer-argentina',
+        label: 'Mujer argentina',
         fotos: [
             { src: pintadaCelesteEstudio, width: 1254, height: 1254, alt: 'Ani con una remera blanca pintada a mano: rostro de mujer entre franjas celestes y una banda de pan de oro sobre los ojos' },
             { src: pintadaFucsiaRetrato, width: 900, height: 1600, alt: 'La misma remera pintada a mano en paleta fucsia, con trazos azules y dorado' },
@@ -38,12 +39,16 @@ export const DISENOS = [
         id: 'frida',
         label: 'Frida',
         nuevo: true,
+        // Año pintado arriba del retrato. Se puede pedir con el año de nacimiento de quien compra.
+        anio: '1978',
         fotos: [
             { src: pintadaFridaPuesta, width: 900, height: 1600, alt: 'Ani en el mar con la remera Frida: retrato de Frida con turbante en trazo azul, entre franjas turquesa y lavanda, y el año 1978 arriba' },
             { src: pintadaFridaSola, width: 1600, height: 1600, alt: 'La remera Frida extendida sobre una mesa de madera: retrato en trazo azul entre franjas turquesa y lavanda' },
         ],
         paletas: [
             { id: 'turquesa', label: 'Turquesa y lavanda', swatch: ['#2fbfae', '#7f8fe3'] },
+            // Todavía no tiene fotos y se pinta a pedido. Cuando haya fotos, cada paleta puede traer las suyas.
+            { id: 'fucsia-celeste', label: 'Fucsia y celeste', swatch: ['#e0338f', '#3fb8e0'] },
             OTRA_PALETA,
         ],
     },

@@ -129,7 +129,9 @@ const DesignTabs = ({ value, onChange, idBase, pending }) => {
         tabs.current[next]?.focus();
     };
     return (
-        <div className="oda-tabs" role="tablist" aria-label="Diseño">
+        <>
+        <p id={`${idBase}-tabs-label`} className="oda-tabs-label">Elegí el diseño</p>
+        <div className="oda-tabs" role="tablist" aria-labelledby={`${idBase}-tabs-label`}>
             {DISENOS.map((d, i) => {
                 const selected = d.id === value;
                 return (
@@ -153,7 +155,20 @@ const DesignTabs = ({ value, onChange, idBase, pending }) => {
                 );
             })}
         </div>
+        </>
     );
+};
+
+const ANIO_MIN = 1900;
+
+// Año opcional de Frida. Vacío vale. Si hay algo, tiene que ser un año de 4 cifras entre 1900 y hoy.
+const anioError = (anio) => {
+    if (!anio) return null;
+    const n = Number(anio);
+    if (anio.length !== 4 || n < ANIO_MIN || n > new Date().getFullYear()) {
+        return `Escribí un año de 4 cifras, entre ${ANIO_MIN} y ${new Date().getFullYear()}.`;
+    }
+    return null;
 };
 
 const Pintadas = ({ reveal }) => {
@@ -162,9 +177,14 @@ const Pintadas = ({ reveal }) => {
     const diseno = DISENOS[index];
     const nextId = DISENOS[index + 1]?.id ?? null;
     const [paleta, setPaleta] = useState(diseno.paletas[0].id);
+    const [anio, setAnio] = useState('');
+    const [anioErr, setAnioErr] = useState(null);
+    const anioRef = useRef(null);
     const talle = useTalle();
     const idBase = useId();
     const mediaRef = useRef(null);
+    const enFotos = diseno.paletas[0];
+    const paletaElegida = diseno.paletas.find((x) => x.id === paleta);
 
     const selectDiseno = useCallback((id) => {
         setDisenoId(id);
@@ -186,9 +206,16 @@ const Pintadas = ({ reveal }) => {
     const setMediaRef = useCallback((el) => { mediaRef.current = el; inViewRef(el); }, [inViewRef]);
 
     const order = () => {
+        const conAnio = diseno.anio ? anio : '';
+        const err = anioError(conAnio);
+        if (err) {
+            setAnioErr(err);
+            anioRef.current?.focus();
+            return;
+        }
         if (!talle.validate()) return;
-        const p = diseno.paletas.find((x) => x.id === paleta);
-        openWhatsapp(`Hola Ani! Quiero una remera pintada a mano (${formatPrice(objetosPrices.REMERA_PINTADA)}). Diseño: ${diseno.label}. Paleta: ${p.label.toLowerCase()}. Talle: ${talleText(talle.talle)}. ¡Gracias!`);
+        const anioText = conAnio ? ` Año: ${conAnio}.` : '';
+        openWhatsapp(`Hola Ani! Quiero una remera pintada a mano (${formatPrice(objetosPrices.REMERA_PINTADA)}). Diseño: ${diseno.label}. Paleta: ${paletaElegida.label.toLowerCase()}.${anioText} Talle: ${talleText(talle.talle)}. ¡Gracias!`);
     };
 
     return (
@@ -247,6 +274,38 @@ const Pintadas = ({ reveal }) => {
                             <span className="oda-swatch is-duo" aria-hidden="true" style={{ '--a': opt.swatch[0], '--b': opt.swatch[1] }} />
                         )}
                     />
+                    {paleta !== enFotos.id && (
+                        <p className="oda-field-hint" aria-live="polite">
+                            {paleta === 'otra'
+                                ? 'Contame la combinación que querés por WhatsApp.'
+                                : `Las fotos muestran ${enFotos.label.toLowerCase()}. La tuya la pinto en ${paletaElegida.label.toLowerCase()}.`}
+                        </p>
+                    )}
+                    {diseno.anio && (
+                        <div className={`oda-field${anioErr ? ' has-error' : ''}`}>
+                            <label htmlFor={`${idBase}-anio`} className="oda-choice-legend">
+                                Tu año de nacimiento<span className="oda-choice-hint"> · opcional</span>
+                            </label>
+                            <p id={`${idBase}-anio-hint`} className="oda-field-hint">
+                                Lo pinto arriba del retrato, en lugar del {diseno.anio}.
+                            </p>
+                            <input
+                                ref={anioRef}
+                                id={`${idBase}-anio`}
+                                className="oda-input"
+                                type="text"
+                                inputMode="numeric"
+                                autoComplete="bday-year"
+                                maxLength={4}
+                                placeholder={diseno.anio}
+                                value={anio}
+                                onChange={(e) => { setAnio(e.target.value.replace(/\D/g, '').slice(0, 4)); setAnioErr(null); }}
+                                aria-invalid={anioErr ? 'true' : undefined}
+                                aria-describedby={`${idBase}-anio-hint${anioErr ? ` ${idBase}-anio-error` : ''}`}
+                            />
+                            {anioErr && <p id={`${idBase}-anio-error`} className="oda-choice-error">{anioErr}</p>}
+                        </div>
+                    )}
                     <Choice
                         legend="Talle"
                         hint="elegí uno"
