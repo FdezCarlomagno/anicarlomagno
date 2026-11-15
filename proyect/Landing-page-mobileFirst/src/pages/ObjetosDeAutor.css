@@ -67,6 +67,68 @@
 /* Son fotos de la remera puesta, no la obra: se encuadran para llenar el marco */
 .oda .pslider .pslider-slide img { object-fit: cover; object-position: 50% 62%; }
 
+/* Pestañas de diseño (remera pintada): control segmentado arriba del carrusel */
+.oda-tabs {
+    display: grid;
+    grid-auto-columns: minmax(0, 1fr);
+    grid-auto-flow: column;
+    gap: 4px;
+    padding: 4px;
+    border: 1.5px solid var(--oda-line);
+    border-radius: 999px;
+    background: #fff;
+}
+
+.oda-tab {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 44px;
+    padding: 0 14px;
+    overflow: hidden;
+    border: 0;
+    border-radius: 999px;
+    background: transparent;
+    font: inherit;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--oda-accent-deep);
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.oda-tab[aria-selected="true"] { background: var(--oda-accent-deep); color: #fff; }
+.oda-tab:focus-visible { outline: 3px solid var(--oda-accent); outline-offset: 2px; }
+
+.oda-tab-new {
+    padding: 2px 8px;
+    border-radius: 999px;
+    background: var(--oda-tint);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+.oda-tab[aria-selected="true"] .oda-tab-new { background: rgba(255, 255, 255, 0.2); }
+
+/* Aviso de que la pestaña siguiente se abre sola: se va llenando de abajo */
+.oda-tab.is-pending::after {
+    content: "";
+    position: absolute;
+    left: 14px;
+    right: 14px;
+    bottom: 5px;
+    height: 3px;
+    border-radius: 3px;
+    background: var(--oda-accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: oda-progress var(--oda-auto-ms) linear forwards;
+}
+
+@keyframes oda-progress { to { transform: scaleX(1); } }
+
 .oda-kind,
 .oda-tag { margin-bottom: 6px; font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--oda-accent-deep); }
 
@@ -265,13 +327,14 @@
 @media (hover: hover) {
     .oda-chip:hover { background: var(--oda-tint); }
     .oda-pill input:not(:checked):hover + .oda-pill-face { background: var(--oda-tint); }
+    .oda-tab[aria-selected="false"]:hover { background: var(--oda-tint); }
     .oda-btn:hover { background: rgb(106, 20, 190); transform: translateY(-2px); }
     .oda-btn:hover svg,
     .oda-libro:hover .oda-libro-cta svg { transform: translateX(4px); }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .oda-btn, .oda-btn svg, .oda-chip, .oda-pill-face, .oda-libro-cta svg { transition: none; }
+    .oda-btn, .oda-btn svg, .oda-chip, .oda-pill-face, .oda-tab, .oda-libro-cta svg { transition: none; }
     .oda-btn:hover { transform: none; }
     .oda-pair { animation: none; }
 }
@@ -279,7 +342,7 @@
 @media (min-width: 640px) {
     .oda-hero, .oda-panel, .oda-coleccion-head, .oda-taza, .oda-libros { padding-left: 24px; padding-right: 24px; }
     .oda-btn { width: auto; justify-self: start; }
-    .oda-pintadas .oda-media .pslider { width: min(100%, 368px); }
+    .oda-pintadas .oda-media > * { width: min(100%, 368px); }
     .oda-note { text-align: left; }
     .oda-taza-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; }
     .oda-libros-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }

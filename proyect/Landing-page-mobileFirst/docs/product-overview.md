@@ -31,6 +31,7 @@ Traffic is assumed to be mostly mobile (the project is mobile-first by design) *
 | Agendas & notebooks | `/agendas`, `/agenda-personalizada` | Types and ARS prices below; cover design chosen from gallery, paper white/cream 80 g, optional name (color + position) and quote |
 | Art prints ("Láminas") | `/laminas` | A4 (21 × 29.7 cm) photographic paper; pick one → WhatsApp; promos when buying more than one product |
 | Books | `/mi-libro` | "Miradas que narran" (stories) and "Colores que cuentan historias" (coloring book), ARS 25 900 each |
+| Objetos de autor | `/objetos-de-autor` | Behind `FEATURES.objetos`. Hand-painted t-shirt (one-off; pick **design** — tabs "Pan de oro" / "Frida", the page moves to the next design once after 15 s if untouched — then palette and size), printed t-shirt "Hecha en Argentina" (white/grey/black + size), mug, and links to the books. Data in `src/objects/objetosDeAutor.jsx` (`DISENOS`, `COLORES`, `TAZA`) |
 | About | `/sobre-mi` | Stats (+1000 works sold, +20 years creating, +15 teaching), style, timeline, story |
 | Contact | `/contacto` | EmailJS form + Google Map + social links |
 
@@ -41,6 +42,7 @@ never duplicate prices in copy or components):
 - Cuaderno 16 900 · Cuaderno A4 35 900
 - **La frase personalizada no tiene costo adicional** (decisión de negocio, 2026-10-11). Corregido el 2026-10-11 (DL-003): se eliminó `ADICION_DE_FRASE` y el total no cambia al tildar la frase; la frase solo viaja en el mensaje si la casilla está tildada.
 - Libros: 25 900 each
+- Objetos de autor (`ObjetosPrices.js`): remera pintada a mano 49 900 (same price for every design) · remera estampada 34 900 · taza 19 900
 
 ## Core flows (what must never break)
 
@@ -52,6 +54,8 @@ never duplicate prices in copy or components):
 4. **Contact form** — `ContactForm.jsx` → EmailJS (`@emailjs/browser`) → toasts.
 5. **Floating WhatsApp button** on every page — `WhatsappIcon.jsx`.
 6. **Print consult** — `Laminas.jsx`: prefilled message with the print name.
+7. **Objetos de autor orders** — `pages/ObjetosDeAutor.jsx`: hand-painted t-shirt message carries price, design,
+   palette and size; printed t-shirt carries color and size; size is required (focus moves to the group, button never disabled).
 
 ## Information architecture
 
@@ -62,6 +66,7 @@ never duplicate prices in copy or components):
 /agendas             Gallery + CTA              /agenda-personalizada Form (AgendaForm)
 /mi-libro            Two books                  /laminas              Prints
 /sobre-mi            Bio                        /contacto             Form + map
+/objetos-de-autor    T-shirts, mug, books (flag FEATURES.objetos)
 Global: NavBar (sticky, hamburger on mobile), floating WhatsApp, scroll-to-top, "Envíos a todo el país" strip, FooterNavbar, footer
 ```
 

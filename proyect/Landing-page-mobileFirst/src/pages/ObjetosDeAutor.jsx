@@ -1,10 +1,11 @@
 /* eslint-disable react/prop-types -- el proyecto no usa prop-types */
-import { useEffect, useId, useRef, useState } from 'react';
+import { useCallback, useEffect, useId, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useReducedMotion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 import PaintingSlider from '../components/paintingsSlider';
 import Lightbox from '../components/Lightbox.jsx';
-import { PINTADAS, PALETAS, COLORES, TALLES, TAZA } from '../objects/objetosDeAutor.jsx';
+import { DISENOS, COLORES, TALLES, TAZA } from '../objects/objetosDeAutor.jsx';
 import { objetosPrices } from '../components/config/ObjetosPrices.js';
 import { librosPrice } from '../components/config/LibrosPrice.js';
 import imgs_Libro_Miradas from '../objects/libro-miradas.jsx';
@@ -96,20 +97,128 @@ const useTalle = () => {
     return { talle, select, error, groupRef, validate };
 };
 
+// Pasa sola al siguiente diseño una sola vez, con la sección a la vista y sin que nadie la toque.
+// Cualquier clic, tecla, foco o swipe dentro de la sección la frena para siempre.
+const AUTO_MS = 15000;
+
+const useAutoAdvance = (enabled, onAdvance) => {
+    const reduce = useReducedMotion();
+    const [armed, setArmed] = useState(true);
+    const { ref, inView } = useInView({ threshold: 0.5 });
+    const running = armed && enabled && !reduce && inView;
+
+    useEffect(() => {
+        if (!running) return undefined;
+        const t = setTimeout(() => { setArmed(false); onAdvance(); }, AUTO_MS);
+        return () => clearTimeout(t);
+    }, [running, onAdvance]);
+
+    const stop = useCallback(() => setArmed(false), []);
+    return { ref, running, stop };
+};
+
+// Pestañas con el patrón ARIA: flechas, Inicio y Fin mueven y activan.
+const DesignTabs = ({ value, onChange, idBase, pending }) => {
+    const tabs = useRef([]);
+    const onKeyDown = (e, i) => {
+        const keys = { ArrowRight: i + 1, ArrowLeft: i - 1, Home: 0, End: DISENOS.length - 1 };
+        if (!(e.key in keys)) return;
+        e.preventDefault();
+        const next = (keys[e.key] + DISENOS.length) % DISENOS.length;
+        onChange(DISENOS[next].id);
+        tabs.current[next]?.focus();
+    };
+    return (
+        <div className="oda-tabs" role="tablist" aria-label="Diseño">
+            {DISENOS.map((d, i) => {
+                const selected = d.id === value;
+                return (
+                    <button
+                        key={d.id}
+                        ref={(el) => { tabs.current[i] = el; }}
+                        type="button"
+                        role="tab"
+                        id={`${idBase}-tab-${d.id}`}
+                        aria-selected={selected}
+                        aria-controls={`${idBase}-panel`}
+                        tabIndex={selected ? 0 : -1}
+                        className={`oda-tab${pending === d.id ? ' is-pending' : ''}`}
+                        style={{ '--oda-auto-ms': `${AUTO_MS}ms` }}
+                        onClick={() => onChange(d.id)}
+                        onKeyDown={(e) => onKeyDown(e, i)}
+                    >
+                        {d.label}
+                        {d.nuevo && <span className="oda-tab-new">Nuevo</span>}
+                    </button>
+                );
+            })}
+        </div>
+    );
+};
+
 const Pintadas = ({ reveal }) => {
-    const [paleta, setPaleta] = useState(PALETAS[0].id);
+    const [disenoId, setDisenoId] = useState(DISENOS[0].id);
+    const index = DISENOS.findIndex((d) => d.id === disenoId);
+    const diseno = DISENOS[index];
+    const nextId = DISENOS[index + 1]?.id ?? null;
+    const [paleta, setPaleta] = useState(diseno.paletas[0].id);
     const talle = useTalle();
+    const idBase = useId();
+    const mediaRef = useRef(null);
+
+    const selectDiseno = useCallback((id) => {
+        setDisenoId(id);
+        setPaleta(DISENOS.find((d) => d.id === id).paletas[0].id);
+    }, []);
+
+    const advance = useCallback(() => { if (nextId) selectDiseno(nextId); }, [nextId, selectDiseno]);
+    const auto = useAutoAdvance(Boolean(nextId), advance);
+    const { ref: inViewRef, stop } = auto;
+
+    // El swipe del carrusel no burbujea como evento de React: se escucha en captura.
+    useEffect(() => {
+        const el = mediaRef.current;
+        if (!el) return undefined;
+        el.addEventListener('scroll', stop, { capture: true, passive: true });
+        return () => el.removeEventListener('scroll', stop, { capture: true });
+    }, [stop]);
+
+    const setMediaRef = useCallback((el) => { mediaRef.current = el; inViewRef(el); }, [inViewRef]);
 
     const order = () => {
         if (!talle.validate()) return;
-        const p = PALETAS.find((x) => x.id === paleta);
-        openWhatsapp(`Hola Ani! Quiero una remera pintada a mano (${formatPrice(objetosPrices.REMERA_PINTADA)}). Paleta: ${p.label.toLowerCase()}. Talle: ${talleText(talle.talle)}. ¡Gracias!`);
+        const p = diseno.paletas.find((x) => x.id === paleta);
+        openWhatsapp(`Hola Ani! Quiero una remera pintada a mano (${formatPrice(objetosPrices.REMERA_PINTADA)}). Diseño: ${diseno.label}. Paleta: ${p.label.toLowerCase()}. Talle: ${talleText(talle.talle)}. ¡Gracias!`);
     };
 
     return (
-        <motion.section id="pintadas" className="oda-panel oda-pintadas" aria-labelledby="pintadas-title" {...reveal}>
-            <div className="oda-media">
-                <PaintingSlider paintings={PINTADAS} label="Fotos de las remeras pintadas a mano" />
+        <motion.section
+            id="pintadas"
+            className="oda-panel oda-pintadas"
+            aria-labelledby="pintadas-title"
+            onClick={stop}
+            onKeyDown={stop}
+            onFocus={stop}
+            {...reveal}
+        >
+            <div className="oda-media" ref={setMediaRef}>
+                <DesignTabs
+                    value={disenoId}
+                    onChange={selectDiseno}
+                    idBase={idBase}
+                    pending={auto.running ? nextId : null}
+                />
+                <div
+                    id={`${idBase}-panel`}
+                    role="tabpanel"
+                    aria-labelledby={`${idBase}-tab-${disenoId}`}
+                >
+                    <PaintingSlider
+                        key={disenoId}
+                        paintings={diseno.fotos}
+                        label={`Fotos de la remera ${diseno.label}`}
+                    />
+                </div>
             </div>
 
             <div className="oda-info">
@@ -122,15 +231,16 @@ const Pintadas = ({ reveal }) => {
                 <ul className="oda-facts">
                     <li>Algodón blanco, manga corta y cuello redondo</li>
                     <li>Pintura para tela, resistente al lavado</li>
-                    <li>Vos elegís la paleta</li>
+                    <li>Vos elegís el diseño y la paleta</li>
                 </ul>
                 <p className="oda-price"><strong>{formatPrice(objetosPrices.REMERA_PINTADA)}</strong></p>
 
                 <div className="oda-order">
                     <Choice
                         legend="Paleta"
+                        hint={`diseño ${diseno.label}`}
                         name="paleta"
-                        options={PALETAS}
+                        options={diseno.paletas}
                         value={paleta}
                         onChange={setPaleta}
                         renderMark={(opt) => opt.swatch && (
@@ -149,7 +259,7 @@ const Pintadas = ({ reveal }) => {
                         groupRef={talle.groupRef}
                     />
                     <button type="button" className="oda-btn" onClick={order}>
-                        Pedí tu remera pintada a mano <Arrow /><NewTab />
+                        Pedí tu remera {diseno.label} <Arrow /><NewTab />
                     </button>
                     <p className="oda-note">Coordinamos los detalles por WhatsApp.</p>
                 </div>

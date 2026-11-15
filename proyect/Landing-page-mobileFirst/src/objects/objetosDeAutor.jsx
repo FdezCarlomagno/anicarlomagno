@@ -3,6 +3,8 @@ import pintadaCelesteRetrato from '../components/imgs/objetos/pintada-celeste-re
 import pintadaFucsiaRetrato from '../components/imgs/objetos/pintada-fucsia-retrato.jpg';
 import pintadaCelesteRoma from '../components/imgs/objetos/pintada-celeste-roma.jpg';
 import pintadaCelesteTaller from '../components/imgs/objetos/pintada-celeste-taller.jpg';
+import pintadaFridaPuesta from '../components/imgs/objetos/pintada-frida-puesta.jpg';
+import pintadaFridaSola from '../components/imgs/objetos/pintada-frida-sola.jpg';
 import estampadaBlanca from '../components/imgs/objetos/estampada-blanca.jpg';
 import estampadaBlancaPuesta from '../components/imgs/objetos/estampada-blanca-puesta.jpg';
 import estampadaGris from '../components/imgs/objetos/estampada-gris.jpg';
@@ -11,20 +13,40 @@ import estampadaNegra from '../components/imgs/objetos/estampada-negra.jpg';
 import estampadaNegraFlorencia from '../components/imgs/objetos/estampada-negra-florencia.jpg';
 import taza from '../components/imgs/objetos/taza-hecha-en-argentina.jpg';
 
-// Fotos de las remeras pintadas a mano, en el orden del carrusel.
-export const PINTADAS = [
-    { src: pintadaCelesteEstudio, width: 1254, height: 1254, alt: 'Ani con una remera blanca pintada a mano: rostro de mujer entre franjas celestes y una banda de pan de oro sobre los ojos' },
-    { src: pintadaFucsiaRetrato, width: 900, height: 1600, alt: 'La misma remera pintada a mano en paleta fucsia, con trazos azules y dorado' },
-    { src: pintadaCelesteRetrato, width: 900, height: 1600, alt: 'Ani frente a uno de sus cuadros, con la remera pintada a mano en paleta celeste' },
-    { src: pintadaCelesteRoma, width: 900, height: 1600, alt: 'Remera pintada a mano celeste, puesta, en la escalinata de Plaza de España en Roma' },
-    { src: pintadaCelesteTaller, width: 894, height: 1600, alt: 'Remera pintada a mano celeste sobre una mesa de taller con paletas y pinceles' },
-];
+// Diseños de la remera pintada a mano. Cada uno es una pestaña con su carrusel y sus paletas.
+// El orden importa: la página arranca en el primero y, si nadie toca nada, pasa sola al siguiente.
+const OTRA_PALETA = { id: 'otra', label: 'Otra, la charlamos', swatch: null };
 
-// Paletas que se pueden elegir para la remera pintada a mano.
-export const PALETAS = [
-    { id: 'celeste', label: 'Celeste y dorado', swatch: ['#3fb8e0', '#c9a227'] },
-    { id: 'fucsia', label: 'Fucsia y azul', swatch: ['#e0338f', '#2446a8'] },
-    { id: 'otra', label: 'Otra, la charlamos', swatch: null },
+export const DISENOS = [
+    {
+        id: 'pan-de-oro',
+        label: 'Pan de oro',
+        fotos: [
+            { src: pintadaCelesteEstudio, width: 1254, height: 1254, alt: 'Ani con una remera blanca pintada a mano: rostro de mujer entre franjas celestes y una banda de pan de oro sobre los ojos' },
+            { src: pintadaFucsiaRetrato, width: 900, height: 1600, alt: 'La misma remera pintada a mano en paleta fucsia, con trazos azules y dorado' },
+            { src: pintadaCelesteRetrato, width: 900, height: 1600, alt: 'Ani frente a uno de sus cuadros, con la remera pintada a mano en paleta celeste' },
+            { src: pintadaCelesteRoma, width: 900, height: 1600, alt: 'Remera pintada a mano celeste, puesta, en la escalinata de Plaza de España en Roma' },
+            { src: pintadaCelesteTaller, width: 894, height: 1600, alt: 'Remera pintada a mano celeste sobre una mesa de taller con paletas y pinceles' },
+        ],
+        paletas: [
+            { id: 'celeste', label: 'Celeste y dorado', swatch: ['#3fb8e0', '#c9a227'] },
+            { id: 'fucsia', label: 'Fucsia y azul', swatch: ['#e0338f', '#2446a8'] },
+            OTRA_PALETA,
+        ],
+    },
+    {
+        id: 'frida',
+        label: 'Frida',
+        nuevo: true,
+        fotos: [
+            { src: pintadaFridaPuesta, width: 900, height: 1600, alt: 'Ani en el mar con la remera Frida: retrato de Frida con turbante en trazo azul, entre franjas turquesa y lavanda, y el año 1978 arriba' },
+            { src: pintadaFridaSola, width: 1600, height: 1600, alt: 'La remera Frida extendida sobre una mesa de madera: retrato en trazo azul entre franjas turquesa y lavanda' },
+        ],
+        paletas: [
+            { id: 'turquesa', label: 'Turquesa y lavanda', swatch: ['#2fbfae', '#7f8fe3'] },
+            OTRA_PALETA,
+        ],
+    },
 ];
 
 // Remera estampada "Hecha en Argentina": una por color, sola y puesta.

@@ -98,3 +98,15 @@ Status: accepted; implemented (pedido explicito de Valentin)
 Context: Raleway trae numeros de estilo antiguo (alturas desparejas, el 9 cuelga) que se leen mal en precios y talles.
 Decision: Se carga Inter desde Google Fonts solo con los digitos (`text=0123456789`, pesos 400-800, asincrono como el resto) y se pone primera en las pilas de fuentes ("Inter", "Raleway", sans-serif): los digitos salen en Inter y todo lo demas sigue en Raleway. El precio de las obras en stock, que usaba Arial, pasa a la misma pila.
 Consequences: Peticion extra a Google Fonts de unos pocos KB. Si alguien tiene Inter instalada en su equipo, mientras carga la hoja podria ver el texto en Inter por un instante.
+
+## DL-014 - Remera pintada a mano: precio a $49.900 (2026-11-12)
+Status: accepted; implemented (pedido explicito de Valentin)
+Context: DL-011 fijo la remera pintada a mano en $54.900.
+Decision: El precio pasa a $49.900 (REMERA_PINTADA en src/components/config/ObjetosPrices.js). Reemplaza el valor de DL-011; el resto de esa decision no cambia.
+Consequences: Los mensajes de WhatsApp y la pagina toman el valor de la constante, sin otros cambios.
+
+## DL-015 - Remera pintada a mano: diseno Frida y pestanas de diseno (2026-11-15)
+Status: accepted; implemented (pedido explicito de Valentin)
+Context: Se suma un segundo diseno de remera pintada a mano, "Frida" (retrato con turbante en trazo azul entre franjas turquesa y lavanda, "1978"), con dos fotos: puesta en el mar y extendida sobre madera. Valentin propuso pestanas que pasen solas a la siguiente despues de 15-30 s.
+Decision: La remera pintada pasa a tener disenos (`DISENOS` en src/objects/objetosDeAutor.jsx), cada uno con sus fotos y sus paletas. El primero se llama "Pan de oro" (nombre de trabajo, por la banda dorada sobre los ojos); Frida lleva la etiqueta "Nuevo" y la paleta "Turquesa y lavanda" + "Otra, la charlamos". Arriba del carrusel hay un control segmentado con el patron ARIA de pestanas (flechas, Inicio, Fin). Auto-avance: con la seccion al menos 50% a la vista y sin interaccion, a los 15 s pasa UNA sola vez a la pestana siguiente (no hace loop); una barrita bajo la pestana siguiente se va llenando para avisar. Cualquier clic, tecla, foco o swipe dentro de la seccion lo cancela para siempre, y con prefers-reduced-motion no existe. El mensaje de WhatsApp suma "Diseno: <nombre>" y el boton dice "Pedi tu remera <nombre>". Mismo precio (REMERA_PINTADA). Fotos en src/components/imgs/objetos/pintada-frida-*.jpg; la extendida pasa por scripts/optimize-images.py (327 KB -> 175 KB); la puesta (135 KB, 900 px) no bajaba al recomprimir y queda como esta.
+Consequences: Un solo cambio automatico por visita evita que el producto cambie mientras alguien elige talle. Para WCAG 2.2.2 el mecanismo de pausa es la propia interaccion: tocar o enfocar la seccion frena el auto-avance. Un usuario de lector de pantalla que lea sin mover el foco puede ver el cambio de pestana sin haberlo pedido; es un solo cambio y el panel queda etiquetado con el diseno. Para sumar un tercer diseno alcanza con otra entrada en `DISENOS`. Si "Pan de oro" no es el nombre que Ani quiere, se cambia solo el `label`.
