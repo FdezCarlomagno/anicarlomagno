@@ -30,32 +30,33 @@ const INSTAGRAM_URL = 'https://www.instagram.com/anicarlomagno_painting/';
 const formatPrice = (n) => `$${n.toLocaleString('es-AR')}`;
 
 const PRODUCTS = [
-    { name: 'Cuaderno A5', note: 'Para escribir, dibujar y soñar', price: agendaPrices.CUADERNO },
+    { name: 'Cuaderno A5', note: 'Para escribir y dibujar', price: agendaPrices.CUADERNO },
     { name: 'Agenda semanal', note: 'Una semana por vez, con espacio para todo', price: agendaPrices.AGENDA_SEMANAL },
-    { name: 'Agenda perpetua', note: 'Sin fecha: empezás cuando quieras', price: agendaPrices.AGENDA_PERPETUA },
+    { name: 'Agenda perpetua', note: 'Sin fechas, la empezás cuando quieras', price: agendaPrices.AGENDA_PERPETUA },
     { name: 'Agenda docente', note: 'Pensada para el día a día en el aula', price: agendaPrices.AGENDA_DOCENTE },
     { name: 'Cuaderno A4', note: 'Tamaño A4, el doble de espacio que una agenda', price: agendaPrices.CUADERNO_A4, isNew: true },
 ];
 
+const FROM_PRICE = Math.min(...PRODUCTS.map((p) => p.price));
+
 const FEATURES = [
     {
-        title: 'Tapa y contratapa duras',
-        text: 'El anillo doble de metal las deja abrir planas y aguanta todo el año.',
+        title: 'Tapa dura y anillo doble',
+        text: 'Abren planas y aguantan todo el año.',
         icon: <path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3V4zM5 17a3 3 0 0 1 3-3h11" />,
     },
     {
-        title: 'Frases y relatos de Ani',
-        text: 'Escritos por ella, dedicados a quien los abre.',
+        title: 'Frases y relatos míos',
+        text: 'Los escribo yo, para quien la abre.',
         icon: <path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z" />,
     },
     {
-        title: 'Y un montón de extras',
+        title: 'Muchos extras',
         text: 'Calendario, stickers, imágenes para colorear, sobre, cinta de raso y señalador.',
         icon: <path d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.5 6.6 19.5l1.2-6L3.3 9.3l6.1-.7L12 3z" />,
     },
     {
-        title: 'Interior renovado cada año',
-        text: 'Los diseños de adentro cambian todos los años.',
+        title: 'Diseños de adentro nuevos cada año',
         icon: <path d="M20 12a8 8 0 1 1-2.3-5.7M20 4v5h-5" />,
     },
 ];
@@ -83,10 +84,8 @@ const Agendas = () => {
                 <div className="ag-hero-text">
                     <p className="ag-eyebrow">Hechas a mano, una por una</p>
                     <h1 id="ag-title" className="ag-title">Agendas y cuadernos</h1>
-                    <p className="ag-lead">
-                        Páginas llenas de arte para acompañarte cada día. Elegí la tapa, el papel y
-                        el nombre que querés ver en ella. Yo me ocupo del resto.
-                    </p>
+                    <p className="ag-lead">Elegí la tapa, el papel y el nombre. Yo me ocupo del resto.</p>
+                    <p className="ag-from">Desde <strong>{formatPrice(FROM_PRICE)}</strong></p>
                     <div className="ag-actions">
                         <Link to="/agenda-personalizada" className="ag-btn ag-btn--primary">
                             Armar mi tapa
@@ -94,16 +93,6 @@ const Agendas = () => {
                         </Link>
                         <a href="#precios" className="ag-btn ag-btn--ghost">Ver precios</a>
                     </div>
-                    <p className="ag-promo">
-                        <strong>Consultá promos</strong> comprando más de un producto.
-                    </p>
-                    <a className="ag-ig" href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
-                            <rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.2" cy="6.8" r="0.6" fill="currentColor" />
-                        </svg>
-                        Mirá cómo las hago en Instagram
-                        <span className="sr-only"> (se abre en una pestaña nueva)</span>
-                    </a>
                 </div>
 
                 <div className="ag-hero-media">
@@ -112,21 +101,18 @@ const Agendas = () => {
             </section>
 
             <motion.section className="ag-section" aria-labelledby="ag-feat-title" {...reveal}>
-                <h2 id="ag-feat-title" className="ag-h2">Páginas llenas de arte</h2>
+                <h2 id="ag-feat-title" className="ag-h2">Qué trae cada una</h2>
                 <ul className="ag-features">
                     {FEATURES.map((f) => (
                         <li key={f.title} className="ag-feature">
                             <span className="ag-feature-icon"><Icon>{f.icon}</Icon></span>
                             <div>
                                 <h3>{f.title}</h3>
-                                <p>{f.text}</p>
+                                {f.text && <p>{f.text}</p>}
                             </div>
                         </li>
                     ))}
                 </ul>
-                <p className="ag-closing">
-                    Cada una es una <strong>pequeña obra de arte</strong> que te acompaña todos los días del año.
-                </p>
             </motion.section>
 
             <motion.section id="precios" className="ag-section ag-section--tint" aria-labelledby="ag-price-title" {...reveal}>
@@ -150,20 +136,15 @@ const Agendas = () => {
                         ¿Llevás más de uno? Consultame por las promos.
                     </p>
                     <Link to="/agenda-personalizada" className="ag-btn ag-btn--primary">
-                        Elegir y armar mi tapa
+                        Armar mi tapa
                         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
                     </Link>
                 </div>
             </motion.section>
 
             <motion.section className="ag-section" aria-labelledby="ag-covers-title" {...reveal}>
-                <div className="ag-covers-head">
-                    <div>
-                        <h2 id="ag-covers-title" className="ag-h2">Algunas tapas</h2>
-                        <p className="ag-sub">Cada una es única. Elegí la que te guste y armá la tuya.</p>
-                    </div>
-                    <Link to="/agenda-personalizada" className="ag-btn ag-btn--ghost">Armar mi tapa</Link>
-                </div>
+                <h2 id="ag-covers-title" className="ag-h2">Algunas tapas</h2>
+                <p className="ag-sub">Tocá una para empezar a armar la tuya.</p>
                 <ul className="ag-covers">
                     {COVERS.map((c, i) => (
                         <li key={c.src}>
@@ -181,13 +162,20 @@ const Agendas = () => {
                         </li>
                     ))}
                 </ul>
+                <a className="ag-ig" href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
+                        <rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.2" cy="6.8" r="0.6" fill="currentColor" />
+                    </svg>
+                    Mirá cómo las hago en Instagram
+                    <span className="sr-only"> (se abre en una pestaña nueva)</span>
+                </a>
             </motion.section>
 
             <section className="ag-final" aria-labelledby="ag-final-title">
                 <h2 id="ag-final-title" className="ag-final-title">¿Ya sabés cuál querés?</h2>
                 <p>Armala en un par de minutos y mandame el pedido por WhatsApp.</p>
                 <Link to="/agenda-personalizada" className="ag-btn ag-btn--light">
-                    Armar mi agenda o cuaderno
+                    Armar mi pedido
                     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
                 </Link>
             </section>
