@@ -10,7 +10,7 @@ const NAME = 'Ani Carlomagno';
 const META = {
   '/': {
     title: 'Ani Carlomagno, artista plástica | Cuadros y obras en Tandil',
-    description: 'Cuadros y obras con alma pintados a mano por Ani Carlomagno, artista plástica de Tandil: mujeres de ojos grandes, agendas y láminas. Envíos a todo el país.',
+    description: 'Cuadros y obras con alma pintados a mano por Ani Carlomagno (anicarlomagno), artista plástica de Tandil: mujeres de ojos grandes, agendas y láminas. Envíos a todo el país.',
   },
   '/elegir': {
     title: 'Obras: en stock o a medida | Ani Carlomagno',
