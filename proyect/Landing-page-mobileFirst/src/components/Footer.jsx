@@ -44,7 +44,7 @@ const Footer = () => (
                 <div className="ft-brand">
                     <p className="ft-wordmark">anicarlomagno</p>
                     <p className="ft-tagline">
-                        Pintura, agendas y láminas hechas a mano en Tandil, Buenos Aires.
+                        Cuadros pintados a mano, agendas y libros, desde Tandil, Buenos Aires.
                     </p>
                 </div>
 

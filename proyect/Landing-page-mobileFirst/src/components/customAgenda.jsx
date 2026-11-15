@@ -618,7 +618,7 @@ const CustomAgenda = () => {
                                                         <dt>Personalización</dt>
                                                         <dd>
                                                             {hasName ? `Nombre: ${data.username.trim()}` : 'Sin nombre'}
-                                                            {data.checkbox && data.quote.trim() && <><br />Frase: “{data.quote.trim()}”</>}
+                                                            {data.checkbox && data.quote.trim() && <><br />Frase: {`"${data.quote.trim()}"`}</>}
                                                             {data.other.trim() && <><br />Comentarios: {data.other.trim()}</>}
                                                         </dd>
                                                         <button type="button" className="ca-edit" onClick={() => goTo(2, -1)}>Editar<span className="ca-sr"> personalización</span></button>
@@ -644,7 +644,7 @@ const CustomAgenda = () => {
                                 <div className="ca-bar">
                                     <div className="ca-bar-total" aria-live="polite">
                                         <span>Total</span>
-                                        <strong>{product ? formatPrice(price) : '—'}</strong>
+                                        <strong>{product ? formatPrice(price) : 'Sin elegir'}</strong>
                                     </div>
                                     <div className="ca-actions">
                                         {step > 0 && (
@@ -671,7 +671,7 @@ const CustomAgenda = () => {
                     <h2 className="ca-aside-title">Tu vista previa</h2>
                     <Preview data={data} />
                     <ul className="ca-trust">
-                        <li>Enviar el pedido es solo el primer paso: Ani lo confirma con vos por WhatsApp.</li>
+                        <li>Después de que mandes el pedido, Ani lo confirma con vos por WhatsApp.</li>
                         <li>Tu progreso se guarda si salís de la página.</li>
                     </ul>
                 </aside>

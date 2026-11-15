@@ -71,10 +71,10 @@ const ChooseForm = () => {
                 <h2 id="choose-style-title" className="choose-style-title">Retratos en estilo naif</h2>
                 <div className="choose-style-cols">
                     <p>
-                        Este estilo suaviza los rostros y los vuelve más ingenuos. Se caracteriza por la <span>saturación</span> de los <span>colores</span> y por el detalle especial en la mirada.
+                        Este estilo suaviza los rostros y los vuelve más ingenuos. Usa <span>colores</span> muy <span>saturados</span> y pone el detalle en la mirada.
                     </p>
                     <p>
-                        Mis obras reflejan el interior de las personas más que el exterior. Por eso, aunque necesito fotos para trabajar, es importante saber qué elementos hacen <span>única</span> a la persona que voy a retratar.
+                        Pinto más el interior de las personas que su aspecto. Por eso, además de las fotos, necesito que me cuentes qué hace <span>única</span> a la persona que voy a retratar.
                     </p>
                 </div>
                 <p className="choose-promo">

@@ -11,7 +11,7 @@ const normalize = (s) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, ''
 const formatPrice = (n) => `$${n.toLocaleString('es-AR')}`;
 
 const FEATURES = [
-    { title: 'Papel fotográfico', text: 'Impresión de alta calidad, con colores fieles a la obra.' },
+    { title: 'Papel fotográfico', text: 'Los colores se ven como en la obra original.' },
     { title: 'Tamaño A4', text: '21 × 29,7 cm, listas para enmarcar.' },
     { title: 'Para enmarcar o coleccionar', text: 'Elegí tus obras favoritas de Ani.' },
 ];
@@ -80,7 +80,7 @@ const Laminas = () => {
 
                 {results.length === 0 ? (
                     <div className="lm-empty">
-                        <p>No encontramos láminas con “{query.trim()}”.</p>
+                        <p>No encontramos láminas con {`"${query.trim()}"`}.</p>
                         <button type="button" className="lm-btn lm-btn--ghost" onClick={() => setQuery('')}>Ver todas</button>
                     </div>
                 ) : (
