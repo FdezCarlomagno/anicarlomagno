@@ -9,7 +9,7 @@
     flex-direction: column;
     height: 100%;
     overflow: hidden;
-    border-radius: 20px;
+    border-radius: 16px;
     background: #fff;
     border: 1px solid rgba(138, 43, 226, 0.14);
     box-shadow: 0 8px 24px rgba(60, 20, 120, 0.08);
@@ -25,7 +25,7 @@
     aspect-ratio: 4 / 5;
     min-height: 0;
     overflow: hidden;
-    padding: 10px;
+    padding: 8px;
     background: linear-gradient(160deg, #f4eefb, #ebe2f6);
     line-height: 0;
 }
@@ -43,11 +43,11 @@
 
 .pc-badge {
     position: absolute;
-    top: 12px;
-    left: 12px;
-    padding: 6px 12px;
+    top: 8px;
+    left: 8px;
+    padding: 4px 10px;
     border-radius: 999px;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 700;
     letter-spacing: 0.06em;
     text-transform: uppercase;
@@ -64,22 +64,23 @@
     flex-direction: column;
     flex: 1;
     align-items: flex-start;
-    gap: 8px;
-    padding: 20px;
+    gap: 6px;
+    padding: 12px;
 }
 
+/* En dos columnas el nombre va arriba y la medida debajo */
 .pc-head {
     display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
     width: 100%;
 }
 
 .pc .pc-name {
     margin: 0;
     font-family: "Dancing Script", cursive;
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 700;
     line-height: 1.1;
     text-align: left;
@@ -87,20 +88,21 @@
 
 .pc-size {
     flex: none;
-    padding: 4px 10px;
+    padding: 2px 8px;
     border-radius: 999px;
     background: rgba(138, 43, 226, 0.09);
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 700;
     color: var(--pc-accent);
 }
 
 .pc-tech {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    gap: 8px;
+    gap: 4px 8px;
     margin: 0;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 600;
     color: var(--pc-muted);
 }
@@ -119,49 +121,30 @@
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 15px;
-    line-height: 1.6;
+    font-size: 14px;
+    line-height: 1.5;
     text-align: left;
     color: var(--pc-muted);
-}
-
-.pc-desc.is-clamped {
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
-
-.pc .pc-more {
-    min-height: 44px;
-    margin: -10px 0 6px;
-    padding: 0;
-    border: 0;
-    background: transparent;
-    font: inherit;
-    font-size: 14px;
-    font-weight: 700;
-    color: var(--pc-accent);
-    text-decoration: underline;
-    text-underline-offset: 3px;
-    cursor: pointer;
 }
 
 .pc .pc-cta {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
+    gap: 6px;
     width: 100%;
-    min-height: 48px;
+    min-height: 44px;
     margin-top: auto;
-    padding: 0 20px;
+    padding: 0 10px;
     border: 1.5px solid var(--pc-accent);
     border-radius: 999px;
     background: var(--pc-accent);
     font: inherit;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+    text-decoration: none;
     color: #fff;
     cursor: pointer;
     transition: background 0.25s ease, color 0.25s ease, transform 0.25s var(--pc-ease);
@@ -188,8 +171,7 @@
     white-space: nowrap;
 }
 
-.pc-cta:focus-visible,
-.pc-more:focus-visible { outline: 3px solid var(--pc-accent); outline-offset: 3px; border-radius: 999px; }
+.pc-cta:focus-visible { outline: 3px solid var(--pc-accent); outline-offset: 3px; border-radius: 999px; }
 
 @media (hover: hover) {
     .pc:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(60, 20, 120, 0.16); }
@@ -202,21 +184,47 @@
     .pc:hover { transform: none; }
 }
 
+/* ---- Encabezado de /obras-en-stock: mismo patrón que Agendas, Láminas y Libros ---- */
+.pc-hero { max-width: 1320px; margin: 0 auto; padding: 28px 20px 4px; }
+.pc-eyebrow { margin: 0 0 8px; font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #5b1fa6; }
+.pc-title { margin: 0; font-family: "Dancing Script", cursive; font-size: clamp(48px, 13vw, 84px); font-weight: 700; line-height: 1.02; text-align: left; color: #1d1626; }
+.pc-lead { max-width: 34rem; margin: 12px 0 0; font-size: 17px; line-height: 1.6; color: #4a4256; }
+
+@media (min-width: 640px) {
+    .pc-hero { padding: 40px 24px 8px; }
+}
+
+@media (min-width: 1024px) {
+    .pc-hero { padding-inline: 32px; }
+}
+
 /* ---- Grilla de obras: filas parejas, la obra se ve completa sobre un paspartú ---- */
 .pc-grid {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 24px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
     max-width: 1320px;
     margin: 12px auto 40px;
-    padding: 0 16px;
+    padding: 0 12px;
     list-style: none;
 }
 
 .pc-item { min-width: 0; }
 
 @media (min-width: 640px) {
-    .pc-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 0 24px; }
+    .pc-grid { gap: 24px; padding: 0 24px; }
+    .pc { border-radius: 20px; }
+    .pc-media { padding: 10px; }
+    .pc-badge { top: 12px; left: 12px; padding: 6px 12px; font-size: 12px; }
+    .pc-body { gap: 8px; padding: 20px; }
+    .pc-head { flex-direction: row; align-items: baseline; justify-content: space-between; gap: 12px; }
+    .pc .pc-name { font-size: 30px; }
+    .pc-size { padding: 4px 10px; font-size: 13px; }
+    .pc-tech { font-size: 14px; }
+    .pc .pc-desc { font-size: 15px; line-height: 1.6; }
+    .pc .pc-cta { gap: 8px; min-height: 48px; padding: 0 20px; font-size: 16px; }
+    .pc-custom { padding: 28px 24px; }
+    .pc-custom-title { font-size: 36px; }
 }
 
 @media (min-width: 1024px) {
@@ -236,7 +244,7 @@
     gap: 10px;
     height: 100%;
     min-height: 260px;
-    padding: 28px 24px;
+    padding: 20px 16px;
     border-radius: 20px;
     background:
         radial-gradient(120% 80% at 100% 0%, rgba(214, 180, 252, 0.35), transparent 60%),
@@ -256,12 +264,12 @@
 
 .pc-custom-title {
     font-family: "Dancing Script", cursive;
-    font-size: 36px;
+    font-size: 28px;
     font-weight: 700;
     line-height: 1.1;
 }
 
-.pc-custom-text { font-size: 16px; line-height: 1.5; color: rgba(243, 236, 251, 0.78); }
+.pc-custom-text { font-size: 15px; line-height: 1.5; color: rgba(243, 236, 251, 0.78); }
 
 .pc-custom-cta {
     display: inline-flex;

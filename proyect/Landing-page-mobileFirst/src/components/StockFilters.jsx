@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types -- el proyecto no usa prop-types */
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import {
     SHAPE_OPTIONS,
     SORT_OPTIONS,
@@ -113,12 +112,9 @@ const StockFilters = ({ filters, counts, onChange, onReset, resultCount, total, 
                 <p role="status" aria-live="polite">
                     {resultCount === total ? `${total} obras` : `${resultCount} de ${total} obras`}
                 </p>
-                <div className="sf-meta-actions">
-                    {hasActive && (
-                        <button type="button" className="sf-reset" onClick={onReset}>Limpiar filtros</button>
-                    )}
-                    <Link to="/obra-personalizada" className="sf-custom-link">Encargar a medida →</Link>
-                </div>
+                {hasActive && (
+                    <button type="button" className="sf-reset" onClick={onReset}>Limpiar filtros</button>
+                )}
             </div>
         </section>
     );

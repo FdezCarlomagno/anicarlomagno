@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types -- el proyecto no usa prop-types */
 import { useMemo } from 'react';
-import './pagesStyles/paintings.css';
 import Cuadro from '../components/Cuadro.jsx';
 import '../components/Cuadro.css';
 import StockFilters from '../components/StockFilters.jsx';
@@ -97,9 +96,13 @@ const Paintings = () => {
 
     return (
         <main id="main" className="paintings">
-            <div className="titleBg">
-                <h1 className='myPaintingsTitle'>Obras en stock</h1>
-            </div>
+            <header className="pc-hero">
+                <p className="pc-eyebrow">Pintadas a mano</p>
+                <h1 className="pc-title">Obras</h1>
+                <p className="pc-lead">
+                    Consultá por WhatsApp la que te guste. Si ya está vendida, te pinto una a tu medida.
+                </p>
+            </header>
 
             <StockFilters
                 filters={filters}

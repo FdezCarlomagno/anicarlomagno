@@ -1,15 +1,12 @@
 /* eslint-disable react/prop-types -- el proyecto no usa prop-types */
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Lightbox from './Lightbox.jsx';
 import './Cuadro.css';
 
-const LONG_TEXT = 110;
-
 // Tarjeta de obra. Recibe una obra "enriquecida" (ver pages/stockFilters.js).
 const Cuadro = ({ painting }) => {
-    const [expanded, setExpanded] = useState(false);
     const [zoomOpen, setZoomOpen] = useState(false);
-    const isLong = (painting.description || '').length > LONG_TEXT;
     const badge = painting.sold ? 'Vendida' : painting.offer ? '40% OFF' : null;
 
     const handleConsultClick = (item) => {
@@ -46,29 +43,27 @@ const Cuadro = ({ painting }) => {
                     {painting.sold ? 'Vendida' : 'Disponible'} · {painting.technique}
                 </p>
 
-                <p className={`pc-desc${isLong && !expanded ? ' is-clamped' : ''}`}>{painting.description}</p>
-                {isLong && (
+                {painting.details && <p className="pc-desc">{painting.details}</p>}
+
+                {/* Una vendida no se puede comprar: en vez de preguntar el precio, se encarga una parecida */}
+                {painting.sold ? (
+                    <Link to="/obra-personalizada" className="pc-cta">
+                        Pedí una parecida
+                        <span className="pc-sr"> a {painting.name}</span>
+                    </Link>
+                ) : (
                     <button
                         type="button"
-                        className="pc-more"
-                        aria-expanded={expanded}
-                        onClick={() => setExpanded((v) => !v)}
+                        className="pc-cta"
+                        onClick={() => handleConsultClick(painting)}
                     >
-                        {expanded ? 'Ver menos' : 'Ver más'}
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M21 11.5a8.4 8.4 0 0 1-12.5 7.3L3 20l1.3-5A8.4 8.4 0 1 1 21 11.5z" />
+                        </svg>
+                        Consultar
+                        <span className="pc-sr"> por {painting.name} (WhatsApp, se abre en una pestaña nueva)</span>
                     </button>
                 )}
-
-                <button
-                    type="button"
-                    className="pc-cta"
-                    onClick={() => handleConsultClick(painting)}
-                >
-                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M21 11.5a8.4 8.4 0 0 1-12.5 7.3L3 20l1.3-5A8.4 8.4 0 1 1 21 11.5z" />
-                    </svg>
-                    Consultar
-                    <span className="pc-sr"> por {painting.name} (WhatsApp, se abre en una pestaña nueva)</span>
-                </button>
             </div>
 
             {zoomOpen && (

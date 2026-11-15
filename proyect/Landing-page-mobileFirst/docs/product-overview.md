@@ -26,7 +26,7 @@ Traffic is assumed to be mostly mobile (the project is mobile-first by design) *
 
 | Product | Route | Notes |
 |---|---|---|
-| Original paintings ("Obras en stock") | `/obras-en-stock` | Filter all / available / sold; some "40% OFF"; **no price shown**, CTA "Consultar" opens WhatsApp |
+| Original paintings ("Obras en stock") | `/obras-en-stock` | Filter all / available / sold; available paintings come first; some "40% OFF"; **no price shown**. Available: CTA "Consultar" opens WhatsApp. Sold: CTA "Pedí una parecida" goes to `/obra-personalizada` |
 | Custom painting | `/obra-personalizada` | Form: name, surname, width × height, description, optional reference photo → WhatsApp |
 | Agendas & notebooks | `/agendas`, `/agenda-personalizada` | Types and ARS prices below; cover design chosen from gallery, paper white/cream 80 g, optional name (color + position) and quote |
 | Art prints ("Láminas") | `/laminas` | A4 (21 × 29.7 cm) photographic paper; pick one → WhatsApp; promos when buying more than one product |

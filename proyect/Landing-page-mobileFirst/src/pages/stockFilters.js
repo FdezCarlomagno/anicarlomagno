@@ -55,6 +55,13 @@ const getSizeLabel = (p) => {
     return diameter ? `Ø ${diameter[1]} cm` : null;
 };
 
+// Lo que la tarjeta ya dice (material y diámetro) se saca de la descripción: queda lo propio de cada obra.
+const getDetails = (p) =>
+    (p.description || '')
+        .replace(/^Cuadro en acr[ií]lico[^.]*\./i, '')
+        .replace(/Di[aá]metro:\s*\d+\s*cm\.?/i, '')
+        .trim();
+
 export const enrich = (list) =>
     list.map((p, index) => ({
         ...p,
@@ -63,6 +70,7 @@ export const enrich = (list) =>
         shape: getShape(p),
         area: getArea(p),
         sizeLabel: getSizeLabel(p),
+        details: getDetails(p),
         discounted: Boolean(p.offer) && !p.sold,
     }));
 
@@ -90,5 +98,7 @@ export const applyFilters = (items, { q, status, technique, shape, discount, sor
     if (sort === 'size-desc') result.sort(bySize(-1));
     else if (sort === 'size-asc') result.sort(bySize(1));
     else if (sort === 'name') result.sort((a, b) => a.name.localeCompare(b.name, 'es'));
+    // "Destacadas": primero las que se pueden comprar, después las vendidas, en el orden de la lista.
+    else result.sort((a, b) => Number(a.sold) - Number(b.sold) || a.index - b.index);
     return result;
 };

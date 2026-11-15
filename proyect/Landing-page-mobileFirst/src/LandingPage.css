@@ -130,26 +130,6 @@ a {
 /*FOOTER*/
 
 /* El footer vive en components/Footer.css */
-.titleBg {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60px;
-    background: rgb(132, 63, 251);
-    background: radial-gradient(circle, rgba(132, 63, 251, 1) 0%, rgba(250, 70, 252, 1) 100%);
-}
-
-.titleBg {
-    height: 60px;
-    background: url('../src/components/imgs/BG2.jpg') no-repeat center center / cover;
-    padding: 38px; /* antes lo pisaba aboutMe.css */
-}
-
-.titleBg h1 {
-    font-size: 24px;
-    color: aliceblue;
-}
-
 .cuadro,
 .paintingImgs-box {
     view-timeline-name: --reveal;
