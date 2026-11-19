@@ -8,6 +8,12 @@ import pintadaFridaSola from '../components/imgs/objetos/pintada-frida-sola.jpg'
 import pintadaFridaVerde from '../components/imgs/objetos/pintada-frida-verde.jpg';
 import pintadaFridaFucsia from '../components/imgs/objetos/pintada-frida-fucsia.jpg';
 import pintadaFridaNaranja from '../components/imgs/objetos/pintada-frida-naranja.jpg';
+import floreceRosaTurquesaPuesta from '../components/imgs/objetos/florece-rosa-turquesa-puesta.jpg';
+import floreceRosaTurquesa from '../components/imgs/objetos/florece-rosa-turquesa.jpg';
+import floreceRojoVerdePuesta from '../components/imgs/objetos/florece-rojo-verde-puesta.jpg';
+import floreceRojoVerde from '../components/imgs/objetos/florece-rojo-verde.jpg';
+import floreceFucsiaGris from '../components/imgs/objetos/florece-fucsia-gris.jpg';
+import floreceBlancoNegro from '../components/imgs/objetos/florece-blanco-negro.jpg';
 import estampadaBlanca from '../components/imgs/objetos/estampada-blanca.jpg';
 import estampadaBlancaPuesta from '../components/imgs/objetos/estampada-blanca-puesta.jpg';
 import estampadaGris from '../components/imgs/objetos/estampada-gris.jpg';
@@ -26,6 +32,8 @@ export const DISENOS = [
     {
         id: 'mujer-argentina',
         label: 'Mujer argentina',
+        // Miniatura de la pestaña: una de las fotos del diseño, encuadrada con `pos`.
+        thumb: { src: pintadaCelesteEstudio, pos: '50% 60%' },
         fotos: [
             { src: pintadaCelesteEstudio, width: 1254, height: 1254, alt: 'Ani con una remera blanca pintada a mano: rostro de mujer entre franjas celestes y una banda de pan de oro sobre los ojos' },
             { src: pintadaFucsiaRetrato, width: 900, height: 1600, alt: 'La misma remera pintada a mano en paleta fucsia, con trazos azules y dorado' },
@@ -42,7 +50,7 @@ export const DISENOS = [
     {
         id: 'frida',
         label: 'Frida en trazo',
-        nuevo: true,
+        thumb: { src: pintadaFridaSola, pos: '50% 55%' },
         // Año pintado arriba del retrato. Se puede pedir con el año de nacimiento de quien compra.
         anio: '1978',
         // Cada paleta trae sus fotos: el carrusel muestra las de la paleta elegida.
@@ -78,6 +86,50 @@ export const DISENOS = [
                 swatch: ['#f07a2e', '#f5b335', '#e0413a'],
                 fotos: [
                     { src: pintadaFridaNaranja, width: 1600, height: 1600, alt: 'La remera Frida en trazo sobre una mesa de madera: retrato en trazo azul entre franjas naranjas, amarillas y rojas, con el año 1978 arriba' },
+                ],
+            },
+        ],
+    },
+    {
+        id: 'frida-florece',
+        label: 'Frida Florece',
+        thumb: { src: floreceRosaTurquesaPuesta, pos: '30% 62%' },
+        nuevo: true,
+        anio: '1978',
+        // Las paletas con foto puesta arrancan con ella: primero Ani, después la remera sola.
+        paletas: [
+            {
+                id: 'rosa-turquesa',
+                label: 'Rosa y turquesa',
+                swatch: ['#ec4f8d', '#3cc3d6'],
+                fotos: [
+                    { src: floreceRosaTurquesaPuesta, width: 900, height: 1600, alt: 'Ani con la remera Frida Florece en rosa y turquesa, junto a uno de sus cuadros de una mujer con flores y un globo de chicle' },
+                    { src: floreceRosaTurquesa, width: 1600, height: 1600, alt: 'La remera Frida Florece sobre una mesa de madera: retrato de Frida con turbante en trazo negro, rosas rosas de un lado y turquesas del otro, y el año 1978 arriba' },
+                ],
+            },
+            {
+                id: 'rojo-verde',
+                label: 'Rojo y verde',
+                swatch: ['#e32b2b', '#2f8a3c'],
+                fotos: [
+                    { src: floreceRojoVerdePuesta, width: 900, height: 1600, alt: 'Remera Frida Florece puesta, en la playa: retrato de Frida con turbante entre rosas rojas y hojas verdes, y el año 1978 arriba' },
+                    { src: floreceRojoVerde, width: 1199, height: 1312, alt: 'La remera Frida Florece sobre una mesa de madera: retrato de Frida con turbante en trazo negro entre rosas rojas y hojas verdes, con el año 1978 arriba' },
+                ],
+            },
+            {
+                id: 'fucsia-gris',
+                label: 'Fucsia y gris',
+                swatch: ['#d6176f', '#8a8a8a'],
+                fotos: [
+                    { src: floreceFucsiaGris, width: 1392, height: 1536, alt: 'La remera Frida Florece sobre una mesa de madera: retrato de Frida con turbante en trazo fucsia entre rosas grises, con el año 1978 en fucsia arriba' },
+                ],
+            },
+            {
+                id: 'blanco-negro',
+                label: 'Blanco y negro',
+                swatch: ['#1b1b1b', '#9a9a9a'],
+                fotos: [
+                    { src: floreceBlancoNegro, width: 1392, height: 1536, alt: 'La remera Frida Florece sobre una mesa de madera: retrato de Frida con turbante en trazo negro entre rosas en escala de grises, con el año 1978 arriba' },
                 ],
             },
         ],

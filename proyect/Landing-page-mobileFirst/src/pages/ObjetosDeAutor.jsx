@@ -149,8 +149,11 @@ const DesignTabs = ({ value, onChange, idBase, pending }) => {
                         onClick={() => onChange(d.id)}
                         onKeyDown={(e) => onKeyDown(e, i)}
                     >
-                        {d.label}
-                        {d.nuevo && <span className="oda-tab-new"> Nuevo</span>}
+                        <span className="oda-tab-thumb">
+                            <img src={d.thumb.src} alt="" width="96" height="96" loading="lazy" decoding="async" style={{ objectPosition: d.thumb.pos }} />
+                            {d.nuevo && <span className="oda-tab-new" aria-hidden="true">Nuevo</span>}
+                        </span>
+                        <span className="oda-tab-label">{d.label}{d.nuevo && <span className="oda-sr"> (nuevo)</span>}</span>
                     </button>
                 );
             })}

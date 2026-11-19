@@ -95,57 +95,80 @@
 .oda-input::placeholder { color: var(--oda-muted); opacity: 0.6; }
 .oda-input:focus-visible { outline: 3px solid var(--oda-accent); outline-offset: 2px; }
 .oda-field.has-error .oda-input { border-color: var(--oda-error); }
+/* Selector de diseño: tarjetas con miniatura. Si algún día hay más, se desliza de costado. */
 .oda-tabs {
     display: grid;
-    grid-auto-columns: minmax(0, 1fr);
     grid-auto-flow: column;
-    gap: 4px;
-    padding: 4px;
-    border: 1.5px solid var(--oda-line);
-    border-radius: 999px;
-    background: #fff;
+    grid-auto-columns: minmax(96px, 1fr);
+    gap: 10px;
+    padding: 4px 4px 8px;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    scrollbar-width: thin;
 }
 
 .oda-tab {
     position: relative;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    align-content: start;
+    justify-items: center;
     gap: 8px;
     min-height: 44px;
-    padding: 0 14px;
-    overflow: hidden;
+    padding: 0;
     border: 0;
-    border-radius: 999px;
     background: transparent;
     font: inherit;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 700;
-    color: var(--oda-accent-deep);
+    line-height: 1.25;
+    color: var(--oda-muted);
     cursor: pointer;
-    transition: background 0.2s ease, color 0.2s ease;
+    scroll-snap-align: start;
+    transition: color 0.2s ease;
 }
 
-.oda-tab[aria-selected="true"] { background: var(--oda-accent-deep); color: #fff; }
-.oda-tab:focus-visible { outline: 3px solid var(--oda-accent); outline-offset: 2px; }
+.oda-tab-thumb {
+    position: relative;
+    display: block;
+    width: 100%;
+    aspect-ratio: 1;
+    overflow: hidden;
+    border: 3px solid transparent;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 0 0 1.5px var(--oda-line);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
 
-/* "Nuevo" no entra al lado del nombre en la pestaña: queda para lectores de pantalla. La página ya lo dice arriba. */
+.oda-tab-thumb img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+.oda-tab-label { text-align: center; }
+
+.oda-tab[aria-selected="true"] { color: var(--oda-accent-deep); }
+.oda-tab[aria-selected="true"] .oda-tab-thumb { box-shadow: 0 0 0 3px var(--oda-accent-deep); }
+.oda-tab:focus-visible { outline: 3px solid var(--oda-accent); outline-offset: 3px; border-radius: 18px; }
+
 .oda-tab-new {
     position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    white-space: nowrap;
+    top: 6px;
+    left: 6px;
+    padding: 2px 8px;
+    border-radius: 999px;
+    background: var(--oda-accent-deep);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #fff;
 }
 
-/* Aviso de que la pestaña siguiente se abre sola: se va llenando de abajo */
+/* Aviso de que el diseño siguiente se abre solo: una barra bajo la miniatura que se va llenando */
 .oda-tab.is-pending::after {
     content: "";
     position: absolute;
-    left: 14px;
-    right: 14px;
-    bottom: 5px;
+    left: 6px;
+    right: 6px;
+    bottom: -6px;
     height: 3px;
     border-radius: 3px;
     background: var(--oda-accent);
@@ -354,14 +377,14 @@
 @media (hover: hover) {
     .oda-chip:hover { background: var(--oda-tint); }
     .oda-pill input:not(:checked):hover + .oda-pill-face { background: var(--oda-tint); }
-    .oda-tab[aria-selected="false"]:hover { background: var(--oda-tint); }
+    .oda-tab[aria-selected="false"]:hover .oda-tab-thumb { transform: translateY(-2px); }
     .oda-btn:hover { background: rgb(106, 20, 190); transform: translateY(-2px); }
     .oda-btn:hover svg,
     .oda-libro:hover .oda-libro-cta svg { transform: translateX(4px); }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .oda-btn, .oda-btn svg, .oda-chip, .oda-pill-face, .oda-tab, .oda-libro-cta svg { transition: none; }
+    .oda-btn, .oda-btn svg, .oda-chip, .oda-pill-face, .oda-tab, .oda-tab-thumb, .oda-libro-cta svg { transition: none; }
     .oda-btn:hover { transform: none; }
     .oda-pair { animation: none; }
 }
